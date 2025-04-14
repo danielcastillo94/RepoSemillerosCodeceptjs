@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "codeceptjs": "^3.7.3",
+    "playwright": "^1.51.1"
+  },
+  "name": "framework-code",
+  "version": "1.0.0",
+  "main": "codecept.conf.js",
+  "devDependencies": {
+    "mocha": "^11.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
