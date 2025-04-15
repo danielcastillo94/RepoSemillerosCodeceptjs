@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://rickandmortyapi.com/",
+      url: "https://www.telcel.com",
       show: true,
     },
   },
@@ -14,7 +14,7 @@ exports.config = {
   },
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js"],
+    steps: ["./steps/telcelSteps.js"],
   },
   name: "framework codeceptjs",
 };

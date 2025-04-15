@@ -2,10 +2,10 @@ const { I } = inject();
 
 Given('estoy en la página de Telcel', () => {
   I.amOnPage('/');
-  I.waitForElement('//input[@id="buscador-menu-input"]', 10);
 });
 
 When('busco {string}', (producto) => {
+  I.waitForElement('//input[@id="buscador-menu-input"]', 10);
   I.fillField('//input[@id="buscador-menu-input"]', producto);
   I.pressKey('Enter');
   I.waitForNavigation();
@@ -33,10 +33,16 @@ Given('estoy en la pagina Telcel y voy a la tienda', () => {
   I.wait(2);
 });
 
-Then('selecciono la marca', () => {
+When('selecciono la marca', () => {
   I.click(`//span[contains(text(), "SAMSUNG" )]`);
   I.wait(5);
 });
+
+Then('debería ver productos de la marca Samsung', () => {
+    I.waitForElement('//p[@class="cx-product-model ng-star-inserted"][1]', 10);
+    I.see('Samsung'); 
+  });
+  
 
 When('selecciono el primer producto de la lista', () => {
   I.waitForElement('(//div[@class="card-products--data"])[1]', 10);
@@ -54,18 +60,17 @@ Then('debería ver el producto en el carrito', () => {
   I.waitForElement('(//a[@class="cx-link"])[1]', 10);
   I.seeElement('(//a[@class="cx-link"])[1]');
 });
+ 
+When('selecciono la opción de pago de factura', () => {
+  I.wait(3);
+  I.click('//img[@title="icono pago de factura"]');
+  I.wait(4);
+});
 
-// When('selecciono la opción de pago de factura', () => {
-//   I.wait(6);
-//   I.click('title="icono pago de factura"');
-//   I.wait(3);
-// });
-
-// When('coloco el numero y lo confirmo', () => {
-//   I.fillField("//input[@placeholder='A 10 dígitos'])[1]", "5566778899")
-//   I.wait(3);
-//   I.fillField("//input[@placeholder='A 10 dígitos'])[2]", "5566778899")
-//   I.wait(2);
-//   I.click('//button[@class="btn btn-primary"]//[contains, text() "Continuar"]')
-//   I.wait(2);
-// });
+Then('coloco el numero', () => {
+    I.switchTo('.iframePackagesRoaming-SIN_LIMITE');
+    I.waitForElement('//input[@name="mdn"]',10);
+    I.click('//input[@name="mdn"]');
+    I.fillField('//input[@name="mdn"]', "5566778899");
+    
+});

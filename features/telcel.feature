@@ -13,7 +13,7 @@ Feature: Navegación en el sitio web de Telcel
   Scenario: Filtrar teléfonos por marca Samsung
     Given estoy en la pagina Telcel y voy a la tienda
     When selecciono telefonos y smartphones
-    Then selecciono la marca
+    When selecciono la marca
 
   Scenario: Seleccionar un producto y agregarlo al carrito
     Given estoy en la página de Telcel
@@ -22,10 +22,8 @@ Feature: Navegación en el sitio web de Telcel
     And agrego el producto al carrito
     Then debería ver el producto en el carrito
 
-  # Scenario: Navegar a la sección Factura
-  #   Given estoy en la página de Telcel
-  #   When selecciono la opción de pago de factura
-  #   When coloco el numero y lo confirmo
-  
-
+    Scenario: Navegar a la sección Factura
+    Given estoy en la página de Telcel
+    When selecciono la opción de pago de factura
+    Then coloco el numero
     
