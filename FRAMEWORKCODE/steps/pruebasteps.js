@@ -25,7 +25,7 @@ When("Presiono el boton de paga tu factura", () => {
 
 
 When("Escribo el número de teléfono", () => {
-    I.waitForEnabled('//input[@name="mdn"]', 10);
+    I.waitForEnabled('//input[@name="mdn"]', 5);
     I.click('//input[@name="mdn"]')
     I.fillField('//input[@name="mdn"]', '5522502546');
 });
@@ -79,6 +79,22 @@ When("presiono el boton de agregar al carrito", async () => {
 Then("presiono el boton de ir al carrito para ver si se agrego", async () => {
     I.click('//a[@class="btn btn-primary cart"]')
     I.wait(2)
+});
+
+When("Presiono el boton comparar del segundo dispositivo", async => {
+    I.click('(//a[(@class="btn btn--link")])[2]')
+    I.wait(2)
+});
+
+When("Selecciono una marca", async => {
+    I.click('(//span[@class="ng-arrow-wrapper"])[3]')
+    I.click('(//span[@class="ng-option-label ng-star-inserted"])[6]')
+    I.wait(2)
+});
+
+Then("Selecciono un modelo", async => {
+    I.click('(//span[@class="ng-arrow-wrapper"])[4]')
+    I.click('(//span[@class="ng-option-label ng-star-inserted"])[85]')
 });
 
 

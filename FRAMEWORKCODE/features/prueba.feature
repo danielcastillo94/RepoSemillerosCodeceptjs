@@ -27,3 +27,11 @@ Scenario: Agregar dos productos al carrito
     And presiono el boton de Lo quiero para el primer resultado
     And presiono el boton de agregar al carrito
     Then presiono el boton de ir al carrito para ver si se agrego
+
+
+@comparar
+Scenario: Comparar dos dispositivos celulares
+    Given Estoy en telcel
+    When Presiono el boton comparar del segundo dispositivo
+    And Selecciono una marca
+    Then Selecciono un modelo
