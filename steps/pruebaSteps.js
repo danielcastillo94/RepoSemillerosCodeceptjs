@@ -1,18 +1,16 @@
+const PruebaPage = require("../pages/pruebaPage");
 const { I } = inject();
 
 Given("Estoy en telcel", () => {
-  I.amOnPage("/");
-  I.wait(2);
+PruebaPage.home();
 });
 
 When(/^Buscar "([^"]*)"$/, (producto) => {
-  I.fillField("#buscador-menu-input", producto);
-  I.pressKey("Enter");
-  I.wait(2);
+PruebaPage.searchProduct(producto);
 });
 
-Then("ver los resultados de la busqueda", () => {
-  I.waitForElement('//span[text()="iphone"]', 5);
+Then(/^ver los resultados de la busqueda "([^"]*)"$/, (producto) => {
+  PruebaPage.waitForResults(producto);
 });
 
 Given("Mockeo la api de rickandmortyapi", () => {
@@ -69,3 +67,18 @@ Then("veo el titulo de la pagina", () => {
     I.wait(3)
   });
 
+
+  When("voy a factura", () => {
+    I.wait(2)
+    I.click('[alt="icon pago de factura"]')
+  });
+  
+  
+  Then("ingreso mi celular", () => {
+    I.switchTo('.iframePackagesRoaming-SIN_LIMITE')
+    I.waitForElement('[name="mdn"]',10)
+      I.fillField('[name="mdn"]', '123456789')
+      I.wait(5)
+    });
+  
+  

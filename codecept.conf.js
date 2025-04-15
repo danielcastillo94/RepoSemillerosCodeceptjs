@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://rickandmortyapi.com/",
+      url: "https://www.telcel.com",
       show: true,
     },
   },
