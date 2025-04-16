@@ -1,4 +1,5 @@
 Feature: Navegación en el sitio web de Telcel
+@telcel
 
   Scenario: Buscar un equipo en la página principal
     Given estoy en la página de Telcel
@@ -7,13 +8,16 @@ Feature: Navegación en el sitio web de Telcel
 
   Scenario: Acceder a la sección de teléfonos
     Given estoy en la página de Telcel
+    When voy al menu
     When selecciono telefonos y smartphones
     Then debería ver la lista de teléfonos disponibles
 
   Scenario: Filtrar teléfonos por marca Samsung
-    Given estoy en la pagina Telcel y voy a la tienda
+    Given estoy en la página de Telcel
+    When voy a la tienda
     When selecciono telefonos y smartphones
     When selecciono la marca
+    Then debería ver productos de la marca Samsung
 
   Scenario: Seleccionar un producto y agregarlo al carrito
     Given estoy en la página de Telcel
@@ -22,8 +26,10 @@ Feature: Navegación en el sitio web de Telcel
     And agrego el producto al carrito
     Then debería ver el producto en el carrito
 
-    Scenario: Navegar a la sección Factura
+  Scenario: Navegar a la sección Factura
     Given estoy en la página de Telcel
     When selecciono la opción de pago de factura
-    Then coloco el numero
-    
+    When coloco el numero "5566778899"
+    When confirmo el numero "5566778899"
+    Then no deberia dejar continuar
+  

@@ -1,76 +1,67 @@
+const TelcelPage = require('../pages/telcelPage');
+
 const { I } = inject();
 
 Given('estoy en la página de Telcel', () => {
-  I.amOnPage('/');
+  TelcelPage.goToHomePage();
 });
 
 When('busco {string}', (producto) => {
-  I.waitForElement('//input[@id="buscador-menu-input"]', 10);
-  I.fillField('//input[@id="buscador-menu-input"]', producto);
-  I.pressKey('Enter');
-  I.waitForNavigation();
+  TelcelPage.searchProduct(producto);
 });
 
 Then('debería ver resultados relacionados con {string}', (producto) => {
-  I.see(producto);
+  TelcelPage.verifySearchResult(producto);
 });
 
-When("selecciono telefonos y smartphones", () => {
-  I.moveCursorTo(`//a[@id="telcel-menu-principal-boton"]`);
-  I.click(`//a[contains(text(), "Equipos y Accesorios")]`);
-  I.wait(3);
-  I.click(`(//img[@class="responsive desktop ng-star-inserted"])[1]`);
-  I.wait(3);
+When('voy al menu', () => {
+  TelcelPage.openMainMenu();
+});
+
+When('selecciono telefonos y smartphones', () => {
+  TelcelPage.selectPhonesAndSmartphones();
 });
 
 Then('debería ver la lista de teléfonos disponibles', () => {
-  I.see('Smartphones');
+  TelcelPage.verifyPhoneList();
 });
 
-Given('estoy en la pagina Telcel y voy a la tienda', () => {
-  I.amOnPage('/');
-  I.click(`(//span[@class="text-option"])[3]`); 
-  I.wait(2);
+When('voy a la tienda', () => {
+  TelcelPage.goToStore();
 });
 
 When('selecciono la marca', () => {
-  I.click(`//span[contains(text(), "SAMSUNG" )]`);
-  I.wait(5);
+  TelcelPage.selectSamsungBrand();
 });
 
-Then('debería ver productos de la marca Samsung', () => {
-    I.waitForElement('//p[@class="cx-product-model ng-star-inserted"][1]', 10);
-    I.see('Samsung'); 
-  });
-  
+Then('debería ver productos de la marca Samsung', async () => {
+  await TelcelPage.verifySamsungProducts();
+});
 
 When('selecciono el primer producto de la lista', () => {
-  I.waitForElement('(//div[@class="card-products--data"])[1]', 10);
-  I.click('(//div[@class="card-products--data"])[1]');
-  I.wait(5);
+  TelcelPage.selectFirstProduct();
 });
 
 When('agrego el producto al carrito', () => {
-  I.click('//button[@class="btn btn-secondary addtominicart"]');
-  I.wait(5);
+  TelcelPage.addToCart();
 });
 
 Then('debería ver el producto en el carrito', () => {
-  I.click('//a[@class="btn btn-primary cart"]'); 
-  I.waitForElement('(//a[@class="cx-link"])[1]', 10);
-  I.seeElement('(//a[@class="cx-link"])[1]');
-});
- 
-When('selecciono la opción de pago de factura', () => {
-  I.wait(3);
-  I.click('//img[@title="icono pago de factura"]');
-  I.wait(4);
+  TelcelPage.verifyProductInCart();
 });
 
-Then('coloco el numero', () => {
-    I.switchTo('.iframePackagesRoaming-SIN_LIMITE');
-    I.waitForElement('//input[@name="mdn"]',10);
-    I.click('//input[@name="mdn"]');
-    I.fillField('//input[@name="mdn"]', "5566778899");
-    
+When('selecciono la opción de pago de factura', () => {
+  TelcelPage.selectBillPayment();
+});
+
+When('coloco el numero {string}', (numero) => {
+  TelcelPage.enterPhoneNumber(numero);
+});
+
+When('confirmo el numero {string}', (numero) => {
+  TelcelPage.confirmPhoneNumber(numero);
+});
+
+Then('no deberia dejar continuar', async () => {
+  await TelcelPage.shouldNotProceed();
 });
