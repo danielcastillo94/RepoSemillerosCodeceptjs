@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://www.telcel.com",
+      url: "https://www.youtube.com/",
       show: true,
     },
   },
@@ -14,7 +14,7 @@ exports.config = {
   },
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js", "validacionesYoutubeSteps.js"],
+    steps: ["./steps/pruebaSteps.js", "./steps/validacionesYoutubeSteps.js"],
   },
   name: "framework codeceptjs",
 };
