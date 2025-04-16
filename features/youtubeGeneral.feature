@@ -1,0 +1,1 @@
+Feature: Validaciones funcionales en la plataforma de YouTube
