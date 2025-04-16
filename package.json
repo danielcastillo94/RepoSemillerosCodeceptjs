@@ -8,9 +8,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "description": "",
   "devDependencies": {
     "codeceptjs": "^3.7.3",
     "playwright": "^1.51.1"
   }
+=======
+  "description": ""
+>>>>>>> e2c704f3260179865aa3554f0a3c9e0d2bca3570
 }
