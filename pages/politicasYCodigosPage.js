@@ -7,6 +7,8 @@ class PoliticasYCodigosPage {
         '//span[@class="telcel-controles-titulo-select-simulado" and text()="Selecciona tu estado"]',
       seleccionarModalidad:
         '//span[@class="telcel-controles-titulo-select-simulado" and text()="Selecciona tu modalidad"]',
+      buscarButton: "#telcel-boton-buscar",
+      divResultados: "//div[@class='telcel-soporte-telefono-regiones']",
     };
   }
 
@@ -19,21 +21,35 @@ class PoliticasYCodigosPage {
     console.log(`Acceso rápido seleccionado: ${acceso}`);
   }
 
-  seleccionarEstadoyModalidad(estado, modalidad) {
-    const selectorEstado = `a[data-etiqueta="${estado}"]`;
+  seleccionarOpcion(opcion, tipo) {
+    const selector = `a[data-etiqueta="${opcion}"]`;
+    let field = ""
+    if (tipo === "state") { field = this.fields.seleccionarEstado; }
+    else if (tipo === "modality") { field = this.fields.seleccionarModalidad; }
+    else { throw new Error("Tipo no válido"); }
 
-    I.waitForVisible(this.fields.seleccionarEstado, 10);
-    I.click(this.fields.seleccionarEstado);
+    I.waitForVisible(field, 10);
+    I.click(field);
     I.wait(2);
 
-    //I.scrollTo(selectorEstado);
-
-    I.waitForVisible(selectorEstado, 10);
-    I.click(selectorEstado);
+    I.scrollTo(selector);
+    I.waitForVisible(selector, 10);
+    I.click(selector);
 
     I.wait(2);
-}
+    }
 
+    clickBuscar() {
+        I.waitForVisible(this.fields.buscarButton, 10);
+        I.click(this.fields.buscarButton);
+        I.wait(2);
+        console.log("Realizando busqueda");
+    }
+
+    waitForResults() {
+        I.waitForElement(this.fields.divResultados, 10);
+        console.log("Resultados de búsqueda visibles");
+    }
 }
 
 module.exports = new PoliticasYCodigosPage();

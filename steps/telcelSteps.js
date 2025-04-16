@@ -45,5 +45,14 @@ When("selecciono el acceso rapido {string}", (acceso) => {
 });
 
 When("selecciono el estado {string} y la modalidad {string}", (estado, modalidad) => {
-  politicasYCodigosPage.seleccionarEstadoyModalidad(estado, modalidad);
+  politicasYCodigosPage.seleccionarOpcion(estado, "state");
+  politicasYCodigosPage.seleccionarOpcion(modalidad, "modality");
+});
+
+When("realizo la búsqueda", () => {
+  politicasYCodigosPage.clickBuscar();
+});
+
+Then("debo ver la region y los números de contacto", () => {
+  politicasYCodigosPage.waitForResults();
 });

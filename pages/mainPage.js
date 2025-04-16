@@ -1,5 +1,3 @@
-const { selectors } = require("playwright");
-
 const {I} = inject();
 
 class MainPage {
