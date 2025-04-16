@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-const { I } = inject();
-
-Given("Estoy en telcel", () => {
-  I.amOnPage("/");
-  I.wait(2);
-});
-
-When(/^Buscar "([^"]*)"$/, (producto) => {
-  I.fillField("#buscador-menu-input", producto);
-  I.pressKey("Enter");
-  I.wait(2);
-});
-
-Then("ver los resultados de la busqueda", () => {
-  I.waitForElement('//span[text()="iphone"]', 5);
-});
-=======
 const PruebaPage = require("../pages/pruebaPage");
 const { I } = inject();
 
@@ -100,4 +82,3 @@ Then("veo el titulo de la pagina", () => {
     });
   
   
->>>>>>> e2c704f3260179865aa3554f0a3c9e0d2bca3570
