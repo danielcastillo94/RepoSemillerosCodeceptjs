@@ -12,5 +12,8 @@
   "dependencies": {
     "codeceptjs": "^3.7.3",
     "playwright": "^1.51.1"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0"
   }
 }

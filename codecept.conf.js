@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://www.youtube.com/",
+      url: "https://www.youtube.com",
       show: true,
     },
   },
