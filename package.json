@@ -9,10 +9,13 @@
   "author": "",
   "license": "ISC",
   "description": "",
+<<<<<<< HEAD
   "dependencies": {
     "codeceptjs": "^3.7.3",
     "playwright": "^1.51.1"
   },
+=======
+>>>>>>> master
   "devDependencies": {
     "chai": "^5.2.0"
   }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { I } = inject();
 const busquedaVideo = require('../pages/busquedaVideo.js');
 const verificarResultado = require('../pages/verificarResultado.js')
@@ -27,3 +28,25 @@ Then("Verifico que el primer resultado contenga una duración en formato mm:ss",
     verificarResultado.verificarDuracion();
     pause();
 });
+=======
+const youtubeMainPage = require('../pages/youtubeMainPage');
+
+Given("abro la página de YouTube", async () => {
+    await youtubeMainPage.goToHome();
+});
+
+Given("realicé una búsqueda de videos", async () => {
+    await youtubeMainPage.searchVideo();
+});
+Then("abro los filtros de búsqueda", async () => {
+    await youtubeMainPage.selectFilters();
+});
+Then("selecciono el filtro Hoy", async () => {
+    await youtubeMainPage.selectHoyFilter();
+});
+
+Then("visualizo videos con fecha de publicación reciente", async () => {
+    await youtubeMainPage.validarVideosRecientes();
+});
+
+>>>>>>> master
