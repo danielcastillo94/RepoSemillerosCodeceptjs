@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { I } = inject();
 const busquedaVideo = require('../pages/busquedaVideo.js');
 const verificarResultado = require('../pages/verificarResultado.js')
@@ -28,7 +27,6 @@ Then("Verifico que el primer resultado contenga una duración en formato mm:ss",
     verificarResultado.verificarDuracion();
     pause();
 });
-=======
 const youtubeMainPage = require('../pages/youtubeMainPage');
 
 Given("abro la página de YouTube", async () => {
@@ -49,4 +47,3 @@ Then("visualizo videos con fecha de publicación reciente", async () => {
     await youtubeMainPage.validarVideosRecientes();
 });
 
->>>>>>> master
