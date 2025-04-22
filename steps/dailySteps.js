@@ -9,7 +9,6 @@ When("Presiono el boton de Explorar", () => {
     dailyPage.clickBoton();
 });
 
-Then("Valido si el href contiene explore", () => {
-    dailyPage.verificarHref();
-
+Then("Valido si el href contiene explore", async () => {
+    await dailyPage.verificarHref();
 });
