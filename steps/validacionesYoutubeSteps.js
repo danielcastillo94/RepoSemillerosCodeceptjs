@@ -35,6 +35,7 @@ Given("realicé una búsqueda de videos", async () => {
 Then("abro los filtros de búsqueda", async () => {
     await youtubeMainPage.selectFilters();
 });
+
 Then("selecciono el filtro Hoy", async () => {
     await youtubeMainPage.selectHoyFilter();
 });

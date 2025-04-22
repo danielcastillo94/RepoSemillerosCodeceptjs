@@ -28,6 +28,7 @@ class YoutubeMainPage {
     async selectFilters(){
         await I.waitForElement(this.fields.filterButton, 5);
         await I.click(this.fields.filterButton);
+        await I.waitForElement(this.fields.hoyFilter, 5); 
     }
 
     async selectHoyFilter(){

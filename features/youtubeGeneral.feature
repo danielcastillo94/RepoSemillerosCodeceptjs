@@ -2,6 +2,7 @@ Feature: Validaciones funcionales en la plataforma de YouTube
 
     Background: navegar a la página de YouTube
         Given abro la página de YouTube
+        
     @youtube
     Scenario: Validar fecha de publicación reciente
         Given realicé una búsqueda de videos

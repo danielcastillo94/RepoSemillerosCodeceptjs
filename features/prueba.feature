@@ -12,7 +12,6 @@ Scenario Outline: Prueba busqueda en telcel
     |samsung|
     |huawei|
 
-
 Scenario: Prueba mocking
 Given Mockeo la api de rickandmortyapi
 And Me encuentro en la pagina de rickandmortyapi
