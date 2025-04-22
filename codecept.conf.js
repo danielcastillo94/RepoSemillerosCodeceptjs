@@ -6,7 +6,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: "https://www.youtube.com",
-      show: true,
+      show: false,
     },
   },
   include: {

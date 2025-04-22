@@ -1,73 +1,79 @@
 const { I } = inject();
-const busquedaVideo = require('../pages/busquedaVideo.js');
-const verificarResultado = require('../pages/verificarResultado.js')
+const busquedaVideo = require("../pages/busquedaVideo.js");
+const verificarResultado = require("../pages/verificarResultado.js");
+const CanalPage = require("../pages/canalPage.js");
+
 Given("Estoy en la página principal de YouTube", () => {
-    //YoutubeHomePage.home
-    I.amOnPage("/"),
-    I.wait(2);
+  //YoutubeHomePage.home
+  I.amOnPage("/");
+  I.wait(2);
 });
 
-When("Escribo Falling In Reverse y presiono Enter en la barra de búsqueda", () => {
+When(
+  "Escribo Falling In Reverse y presiono Enter en la barra de búsqueda",
+  () => {
     busquedaVideo.fillBar();
-});
+  }
+);
 
 Then("Verifico que al menos un resultado contenga Falling In Reverse", () => {
-    verificarResultado.verificarVideoConTexto('Falling In Reverse');
+  verificarResultado.verificarVideoConTexto("Falling In Reverse");
 });
 
-Then("Verifico que el primer resultado muestre una miniatura visible", () =>{
-    verificarResultado.verificarMiniatura();
+Then("Verifico que el primer resultado muestre una miniatura visible", () => {
+  verificarResultado.verificarMiniatura();
 });
 
 Then("Verifico que el primer resultado muestre un título visible", () => {
-    verificarResultado.verificarTitulo();
+  verificarResultado.verificarTitulo();
 });
 
-Then("Verifico que el primer resultado contenga una duración en formato mm:ss", () => {
-    verificarResultado.verificarDuracion();
-    pause();
-const CanalPage = require('../pages/canalPage.js');
+Then(
+  "Verifico que el primer resultado contenga una duración en formato mm:ss",
+  async () => {
+    await verificarResultado.verificarDuracion();
+  }
+);
 
-Given('busco el video {string}', (video) => {
+Given("busco el video {string}", (video) => {
   CanalPage.buscarVideo(video);
 });
 
-When('hago clic en el nombre del canal del primer resultado', () => {
+When("hago clic en el nombre del canal del primer resultado", () => {
   CanalPage.irAlCanalDelPrimerVideo();
 });
 
-When('voy a la seccion videos', () => {
+When("voy a la seccion videos", () => {
   CanalPage.pestanaVideos();
-})
+});
 
-Then('debería ver el nombre del canal', () => {
+Then("debería ver el nombre del canal", () => {
   CanalPage.validarNombreDelCanal();
 });
 
-Then('debería ver la pestaña de Videos', () => {
+Then("debería ver la pestaña de Videos", () => {
   CanalPage.validarPestanaVideos();
 });
 
-Then('debería ver al menos un video con miniatura y título', () => {
+Then("debería ver al menos un video con miniatura y título", () => {
   CanalPage.validarVideosVisibles();
 });
-const youtubeMainPage = require('../pages/youtubeMainPage');
+const youtubeMainPage = require("../pages/youtubeMainPage");
 
 Given("abro la página de YouTube", async () => {
-    await youtubeMainPage.goToHome();
+  await youtubeMainPage.goToHome();
 });
 
 Given("realicé una búsqueda de videos", async () => {
-    await youtubeMainPage.searchVideo();
+  await youtubeMainPage.searchVideo();
 });
 Then("abro los filtros de búsqueda", async () => {
-    await youtubeMainPage.selectFilters();
+  await youtubeMainPage.selectFilters();
 });
 Then("selecciono el filtro Hoy", async () => {
-    await youtubeMainPage.selectHoyFilter();
+  await youtubeMainPage.selectHoyFilter();
 });
 
 Then("visualizo videos con fecha de publicación reciente", async () => {
-    await youtubeMainPage.validarVideosRecientes();
+  await youtubeMainPage.validarVideosRecientes();
 });
-
