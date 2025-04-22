@@ -6,7 +6,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: "https://www.youtube.com",
-      show: true,
+      show: false,
     },
   },
   include: {
@@ -14,7 +14,7 @@ exports.config = {
   },
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js", "./steps/validacionesYoutubeSteps.js"],
+    steps: ["./steps/pruebaSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js"],
   },
   name: "framework codeceptjs",
 };
