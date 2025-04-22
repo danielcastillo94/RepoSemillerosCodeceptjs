@@ -31,3 +31,4 @@ Then('debería ver videos con título y nombre del canal visible', async () => {
   I.seeElement('//*[@id="hero-title"]');
   I.seeElement('//*[@id="description"]/span[1]');
 });
+

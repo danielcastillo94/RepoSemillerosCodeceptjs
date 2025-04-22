@@ -1,3 +1,4 @@
+
 Feature: Validación del botón "Explorar" y navegación en YouTube
 
   Scenario: Usuario hace clic en "Explorar" y navega a la categoría Música
