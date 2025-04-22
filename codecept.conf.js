@@ -4,10 +4,10 @@ exports.config = {
   output: "./output",
   helpers: {
     Playwright: {
-      browser: "chromium",
-      url: "https://www.telcel.com",
-      show: true,
-    },
+      browser: 'chromium',
+      url: 'https://www.youtube.com',
+      show: true
+    }
   },
   include: {
     I: "./steps_file.js",

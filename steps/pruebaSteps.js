@@ -1,84 +1,33 @@
-const PruebaPage = require("../pages/pruebaPage");
+
+
 const { I } = inject();
 
-Given("Estoy en telcel", () => {
-PruebaPage.home();
+Given('el usuario está en la página principal de YouTube', async () => {
+  I.amOnPage('https://www.youtube.com');
+  I.waitForElement('button[aria-label="Guía"]', 10); 
+  I.click('button[aria-label="Guía"]'); 
+  I.wait(4);
 });
 
-When(/^Buscar "([^"]*)"$/, (producto) => {
-PruebaPage.searchProduct(producto);
+When('haces clic en el texto "Explorar"', async () => {
+  const xpathExplorar = '//*[@id="guide-section-title"][contains(text(), "Explorar")]';
+  I.waitForElement(xpathExplorar, 20);
+  I.scrollTo(xpathExplorar);
 });
 
-Then(/^ver los resultados de la busqueda "([^"]*)"$/, (producto) => {
-  PruebaPage.waitForResults(producto);
+Then('debería ver las categorías "Tendencias", "Música" y "Noticias"', async () => {
+  I.see('Tendencias');
+  I.see('Música');
+  I.see('Noticias');
 });
 
-Given("Mockeo la api de rickandmortyapi", () => {
-  I.mockRoute("https://rickandmortyapi.com/page-data/sq/d/2138676555.json", (route) => {
-    return route.fulfill({
-        status: 200,
-        contentType: "application/json",
-        body: JSON.stringify({
-        "data": {
-            "site": {
-                "siteMetadata": {
-                    "title": "HOLA",
-                    "shortTitle": "The Rick and Morty API",
-                    "description": "The Rick and Morty API is a REST and GraphQL API based on the television show Rick and Morty",
-                    "siteUrl": "https://rickandmortyapi.com",
-                    "image": "/images/site.jpeg",
-                    "userTwitter": "rickandmortyapi",
-                    "nav": [
-                        {
-                            "title": "Docs",
-                            "path": "/documentation"
-                        },
-                        {
-                            "title": "About",
-                            "path": "/about"
-                        }
-                    ],
-                    "github": {
-                        "site": "https://github.com/afuh/rick-and-morty-api-site",
-                        "api": "https://github.com/afuh/rick-and-morty-api"
-                    },
-                    "author": {
-                        "name": "Axel Fuhrmann",
-                        "site": "https://github.com/afuh"
-                    },
-                    "status": {
-                        "site": "https://status.rickandmortyapi.com"
-                    }
-                }
-            }
-        }
-    }),
-    });
-  });
+When('hacer clic en la categoría "Música"', async () => {
+  I.click('Música');
+  I.wait(4);
 });
 
-Given("Me encuentro en la pagina de rickandmortyapi", () => {
-  I.amOnPage("https://rickandmortyapi.com/");
+Then('debería ver videos con título y nombre del canal visible', async () => {
+  I.waitForElement('//*[@id="hero-title"]', 20);
+  I.seeElement('//*[@id="hero-title"]');
+  I.seeElement('//*[@id="description"]/span[1]');
 });
-
-
-Then("veo el titulo de la pagina", () => {
-    I.waitForElement('[class="hero__Title-sc-1h2eool-1 jiKqlM"]', 5)
-    I.wait(3)
-  });
-
-
-  When("voy a factura", () => {
-    I.wait(2)
-    I.click('[alt="icon pago de factura"]')
-  });
-  
-  
-  Then("ingreso mi celular", () => {
-    I.switchTo('.iframePackagesRoaming-SIN_LIMITE')
-    I.waitForElement('[name="mdn"]',10)
-      I.fillField('[name="mdn"]', '123456789')
-      I.wait(5)
-    });
-  
-  
