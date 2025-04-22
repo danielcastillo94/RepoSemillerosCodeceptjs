@@ -1,6 +1,5 @@
 Feature: Prueba pagina inicial de telcel
 
-
 @prueba
 Scenario Outline: Prueba busqueda en telcel
  Given Estoy en telcel
