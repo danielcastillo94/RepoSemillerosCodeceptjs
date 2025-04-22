@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://www.youtube.com',
+      url: 'https://www.youtube.com/',
       show: true
     }
   },
@@ -13,8 +13,8 @@ exports.config = {
     I: "./steps_file.js",
   },
   gherkin: {
-    features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js", "./steps/telcelSteps.js"],
+    features: "./features/prueba.feature",
+    steps: ["./steps/pruebaSteps.js",],
   },
   name: "framework codeceptjs",
 };

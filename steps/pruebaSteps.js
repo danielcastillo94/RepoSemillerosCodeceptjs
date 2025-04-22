@@ -9,7 +9,7 @@ Given('el usuario está en la página principal de YouTube', async () => {
   I.wait(4);
 });
 
-When('haces clic en el texto "Explorar"', async () => {
+When('haces clic en el botón "Explorar"', async () => {
   const xpathExplorar = '//*[@id="guide-section-title"][contains(text(), "Explorar")]';
   I.waitForElement(xpathExplorar, 20);
   I.scrollTo(xpathExplorar);
