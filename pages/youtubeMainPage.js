@@ -48,7 +48,6 @@ class YoutubeMainPage {
        const areEveryRecent = uploadDates.every(
          (date) => recentDatePattern.test(date) || lastDayPattern.test(date)
        );
-
        expect(areEveryRecent, "No todos los videos son recientes").to.be.true;
        console.log("Todos los videos son recientes");
     }
