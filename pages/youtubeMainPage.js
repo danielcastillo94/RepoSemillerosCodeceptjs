@@ -17,12 +17,12 @@ class YoutubeMainPage {
         I.wait(2);
     }
 
-    async searchVideo(){
+    async searchVideo(title){
         await I.waitForElement(this.fields.searchBar, 5);
-        await I.fillField(this.fields.searchBar, "bbng");
+        await I.fillField(this.fields.searchBar, title);
         await I.pressKey("Enter");
         await I.wait(2);
-        console.log("Buscando video...");
+        console.log("Buscando frase:" + title);
     }
 
     async selectFilters(){
