@@ -1,4 +1,5 @@
 
+
 Feature: Validación del botón "Explorar" y navegación en YouTube
 
   Scenario: Usuario hace clic en "Explorar" y navega a la categoría Música
@@ -7,3 +8,4 @@ Feature: Validación del botón "Explorar" y navegación en YouTube
     And debería ver las categorías "Tendencias", "Música" y "Noticias"
     When hacer clic en la categoría "Música"
     Then debería ver videos con título y nombre del canal visible
+
