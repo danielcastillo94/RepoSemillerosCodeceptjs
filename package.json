@@ -1,5 +1,5 @@
 {
-  "name": "youtube",
+  "name": "framework-codeceptjs",
   "version": "1.0.0",
   "main": "codecept.conf.js",
   "scripts": {
@@ -9,8 +9,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "codeceptjs": "^3.7.3",
-    "playwright": "^1.52.0"
+  "devDependencies": {
+    "chai": "^5.2.0"
   }
 }

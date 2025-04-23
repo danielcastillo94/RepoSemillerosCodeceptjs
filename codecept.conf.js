@@ -1,22 +1,20 @@
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './*_test.js',
-  output: './output',
+  tests: "./*_test.js",
+  output: "./output",
   helpers: {
     Playwright: {
-      browser: 'chromium',
-      url: 'http://localhost',
-      show: true
-    }
+      browser: "chromium",
+      url: "https://www.youtube.com",
+      show: false,
+    },
   },
   include: {
-    I: './steps_file.js',
-    validacionesYoutubeSteps: './steps/validacionesYoutubeSteps.js',
-    youtubeMainPage: './pages/youtubeMainPage.js',
+    I: "./steps_file.js",
   },
   gherkin: {
-    features: './features/*.feature',
-    steps: ['./steps/validacionesYoutubeSteps.js'],
+    features: "./features/*.feature",
+    steps: ["./steps/pruebaSteps.js", "./steps/validacionesYoutubeSteps.js"],
   },
-  name: 'Actividad youtube'
+  name: "framework codeceptjs",
 };
