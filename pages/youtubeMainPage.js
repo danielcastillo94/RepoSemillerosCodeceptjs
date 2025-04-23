@@ -16,7 +16,22 @@ class YoutubeMainPage {
         await I.amOnPage("/");
         I.wait(2);
     }
-
+   
+    verificarLogo() {
+      I.seeElement('a#logo'); // más preciso
+    }
+  
+    verificarCampoBusqueda() {
+      I.seeElement('input#search'); // ya es correcto
+    }
+  
+    verificarBotonIniciarSesion() {
+      I.seeElement('ytd-button-renderer#sign-in-button, tp-yt-paper-button[aria-label="Iniciar sesión"]');
+    }
+  
+    verificarMiniaturas() {
+      I.seeNumberOfElements('ytd-rich-grid-media', 10);
+    }  
     async searchVideo(){
         await I.waitForElement(this.fields.searchBar, 5);
         await I.fillField(this.fields.searchBar, "bbng");
@@ -53,26 +68,4 @@ class YoutubeMainPage {
     }
 }
 
-module.exports = new YoutubeMainPage();const { I } = inject();
-
-module.exports = {
-  goToHome() {
-    I.amOnPage("https://www.youtube.com");
-  },
-
-  verificarLogo() {
-    I.seeElement('a#logo'); // más preciso
-  },
-
-  verificarCampoBusqueda() {
-    I.seeElement('input#search'); // ya es correcto
-  },
-
-  verificarBotonIniciarSesion() {
-    I.seeElement('ytd-button-renderer#sign-in-button, tp-yt-paper-button[aria-label="Iniciar sesión"]');
-  },
-
-  verificarMiniaturas() {
-    I.seeNumberOfElements('ytd-rich-grid-media', 10);
-  }
-};
+module.exports = new YoutubeMainPage();
