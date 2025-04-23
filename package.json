@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "chai": "^5.2.0"
+    "chai": "^5.2.0",
+    "codeceptjs": "^3.7.3",
+    "playwright": "^1.52.0"
   }
 }
