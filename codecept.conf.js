@@ -1,3 +1,4 @@
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: "./*_test.js",
