@@ -1,5 +1,6 @@
 
 
+const PruebaPage = require("../pages/pruebaPage");
 const { I } = inject();
 
 Given('el usuario está en la página principal de YouTube', async () => {
@@ -24,13 +25,10 @@ Then('debería ver las categorías "Tendencias", "Música" y "Noticias"', async 
 When('hacer clic en la categoría "Música"', async () => {
   I.click('Música');
   I.wait(4);
-=======
-const PruebaPage = require("../pages/pruebaPage");
-const { I } = inject();
+});
 
 Given("Estoy en telcel", () => {
 PruebaPage.home();
->>>>>>> master
 });
 
 Then('debería ver videos con título y nombre del canal visible', async () => {
