@@ -1,25 +1,12 @@
 const { I } = inject();
-const busquedaVideo = require("../pages/busquedaVideo.js");
+
 const verificarResultado = require("../pages/verificarResultado.js");
 const CanalPage = require("../pages/canalPage.js");
 const youtubeMainPage = require('../pages/youtubeMainPage.js');
 const searchPage = require("../pages/searchPage.js");
 
-Given("Estoy en la página principal de YouTube", () => {
-  //YoutubeHomePage.home
-  I.amOnPage("/");
-  I.wait(2);
-});
-
-When(
-  "Escribo Falling In Reverse y presiono Enter en la barra de búsqueda",
-  () => {
-    busquedaVideo.fillBar();
-  }
-);
-
-Then("Verifico que al menos un resultado contenga Falling In Reverse", () => {
-  verificarResultado.verificarVideoConTexto("Falling In Reverse");
+Then("Verifico que al menos un resultado contenga {string}", (phrase) => {
+  verificarResultado.verificarVideoConTexto(phrase);
 });
 
 Then("Verifico que el primer resultado muestre una miniatura visible", () => {
@@ -36,10 +23,6 @@ Then(
     await verificarResultado.verificarDuracion();
   }
 );
-
-Given("busco el video {string}", (video) => {
-  CanalPage.buscarVideo(video);
-});
 
 When("hago clic en el nombre del canal del primer resultado", () => {
   CanalPage.irAlCanalDelPrimerVideo();
@@ -86,29 +69,21 @@ Given("abro la página de YouTube", async () => {
   I.wait(5); // ← espera de 5 segundos
 });
 
-Then("debería ver:", async (tabla) => {
-    const filas = tabla.rows;
+Then("debería ver: {string}", async (elemento) => {
   
-    for (let fila of filas) {
-      const [elemento, estado] = fila.cells;
-  
-      if (elemento === 'Logo de YouTube' && estado === 'visible') {
+      if (elemento === 'Logo de YouTube') {
         await youtubeMainPage.verificarLogo();
-      }
-  
-      if (elemento === 'Campo de búsqueda' && estado === 'visible') {
+      }else if(elemento === 'Campo de búsqueda') {
         await youtubeMainPage.verificarCampoBusqueda();
-      }
-  
-      if (elemento === 'Botón de "Iniciar sesión"' && estado === 'disponible') {
+      }else if (elemento === 'Botón de Iniciar sesión') {
         await youtubeMainPage.verificarBotonIniciarSesion();
-      }
-  
-      if (elemento === 'Al menos 10 miniaturas de video' && estado === 'visibles') {
+      }else if (elemento === 'Al menos 10 miniaturas de video') {
         await youtubeMainPage.verificarMiniaturas();
+      }else{
+        throw new Error(`Elemento no reconocido: ${elemento}`);
       }
-    }
-  });
+    });
+
 Then("verifico que el primer resultado contiene un campo con la duración",
   async () => {
     await searchPage.validateDurationSpan();
