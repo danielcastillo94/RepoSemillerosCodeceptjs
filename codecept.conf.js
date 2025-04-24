@@ -1,3 +1,4 @@
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: './*_test.js',
@@ -15,8 +16,8 @@ exports.config = {
     youtubeMainPage: './pages/youtubeMainPage.js',
   },
   gherkin: {
-    features: './features/*.feature',
-    steps: ['./steps/videoYoutubeSteps.js'],
+    features: "./features/*.feature",
+    steps: ["./steps/pruebaSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js"],
   },
   name: 'Actividad youtube'
 };
