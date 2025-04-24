@@ -23,3 +23,14 @@ jobs:
 
       - name: Ejecutar pruebas
         run: npm run features
+
+      - name: Generar reporte Allure
+        run: |
+          npm install -g allure-commandline --save-dev
+          allure generate output --clean -o allure-report
+
+      - name: Subir artefacto del reporte
+        uses: actions/upload-artifact@v3
+        with:
+          name: reporte-allure
+          path: allure-report
