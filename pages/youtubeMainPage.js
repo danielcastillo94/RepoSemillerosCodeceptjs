@@ -55,8 +55,8 @@ class YoutubeMainPage {
     async validarVideosRecientes(){
         await I.waitForElement(this.fields.uploadDates, 5);
         const uploadDates = await I.grabTextFromAll(this.fields.uploadDates);
-        const recentDatePattern = /hace \d+ horas/;
-        const lastDayPattern = /hace 1 día/;
+        const recentDatePattern = /^(?:Transmitido )?hace \d+ horas?/;
+        const lastDayPattern = /^(?:Transmitido )?hace 1 día/;
 
        console.log("Fechas de publicación de los videos:", uploadDates);
 
