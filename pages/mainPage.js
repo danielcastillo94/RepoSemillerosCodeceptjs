@@ -19,7 +19,7 @@ class MainPage {
     I.waitForVisible(this.fields.verPlanesButton, 5);
     I.click(this.fields.verPlanesButton);
     I.wait(2);
-    console.log("Click en el botón 'Ver todos los Planes' realizado");
+    I.say("Click en el botón 'Ver todos los Planes' realizado");
   }
 
     navegarASeccion(seccion) {
@@ -27,7 +27,7 @@ class MainPage {
         I.waitForVisible(this.fields.paquetesYRecargasButton, 5);
         I.click(this.fields.paquetesYRecargasButton);
         I.wait(2);
-        console.log(`Navegando a la sección ${seccion}`);
+        I.say(`Navegando a la sección ${seccion}`);
     }
 
     goTo(section) {
@@ -36,7 +36,7 @@ class MainPage {
         I.waitForVisible(selector, 5);
         I.click(selector);
         I.wait(2);
-        console.log("Navegando a la sección " + section);
+        I.say(`Navegando a la sección ${section}`);
     }
 }
 

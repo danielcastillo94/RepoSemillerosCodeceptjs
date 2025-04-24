@@ -22,13 +22,13 @@ class CanalPage {
 
   async validarNombreDelCanal() {
     const canal = await I.grabTextFrom(this.canalName);
-    console.log(`Nombre del canal encontrado: ${canal}`);
+    I.say(`Nombre del canal encontrado: ${canal}`);
     assert.ok(canal.length > 0, 'No se encontró el nombre del canal');
   }
 
   async validarPestanaVideos() {
     const pestana = await I.grabTextFrom(this.videosTab);
-    console.log(`Pestaña encontrada: ${pestana}`);
+    I.say(`Pestaña encontrada: ${pestana}`);
     assert.strictEqual(pestana.trim(), 'Videos', 'No se encontró la pestaña de Videos');
   }
 
@@ -42,12 +42,12 @@ class CanalPage {
     I.waitForElement(this.videoThumbnails, 10);
     const miniaturas = await I.grabNumberOfVisibleElements(this.videoThumbnails);
 
-    console.log(`Total de títulos encontrados: ${titulos.length}`);
-    console.log(`Total de miniaturas encontradas: ${miniaturas}`);
+    I.say(`Total de títulos encontrados: ${titulos.length}`);
+    I.say(`Total de miniaturas encontradas: ${miniaturas}`);
     
-    console.log(`\n Mostrando los primeros ${primerosCincoTitulos.length} títulos:`);
+    I.say(`\n Mostrando los primeros ${primerosCincoTitulos.length} títulos:`);
     primerosCincoTitulos.forEach((titulo, index) => {
-      console.log(` ${index + 1}. ${titulo}`);
+      I.say(` ${index + 1}. ${titulo}`);
     });
 
 }

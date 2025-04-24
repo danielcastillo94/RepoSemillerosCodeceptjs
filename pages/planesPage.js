@@ -11,7 +11,7 @@ class PlanesPage {
   verifyTelcelPlus() {
     I.waitForElement(this.fields.tituloTelcelPlus, 5);
     I.seeElement(this.fields.tituloTelcelPlus);
-    console.log("Verificación de Telcel Plus exitosa");
+    I.say("Verificación de Telcel Plus exitosa");
   }
 }
 

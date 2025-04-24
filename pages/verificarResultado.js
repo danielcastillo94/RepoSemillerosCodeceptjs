@@ -15,12 +15,12 @@ class verificarResultado {
 
         for (const titulo of titulos) {
             if (titulo.toLowerCase().includes(textoEsperado.toLowerCase())) {
-                console.log(`¡Video encontrado: ${titulo}`);
+                I.say(`¡Video encontrado: ${titulo}`);
                 return true;
             }
         }
 
-        console.log('No se encontró ningún video con el texto esperado.');
+        I.say('No se encontró ningún video con el texto esperado.');
         return false;
     }
 
@@ -28,9 +28,9 @@ class verificarResultado {
         await I.waitForElement(this.fields.miniatura, 10);  
         const src = await I.grabAttributeFrom(this.fields.miniatura, 'src');  
         if (src && src.trim() !== '') {  
-            console.log('Miniatura visible y cargada correctamente.');
+            I.say('Miniatura visible y cargada correctamente.');
         } else {
-            console.log('La miniatura no tiene un src válido.');
+            I.say('La miniatura no tiene un src válido.');
         }
     }
     
@@ -40,9 +40,9 @@ class verificarResultado {
         const titulo = await I.grabTextFrom(this.fields.nombreVideo);  
 
         if (titulo.trim() !== '') {  
-            console.log('Título visible: ', titulo);
+            I.say(`Título visible: ${titulo}`);
         } else {
-            console.log('El título no tiene texto visible.');
+            I.say('El título no tiene texto visible.');
         }
     }
 
@@ -53,9 +53,9 @@ class verificarResultado {
         const regex = /^\d{1,2}:\d{2}$/;  
 
         if (regex.test(duracion)) {  
-            console.log('Duración del video en formato correcto: ', duracion);
+            I.say('Duración del video en formato correcto: ', duracion);
         } else {
-            console.log('La duración del video no está en el formato correcto.');
+            I.say('La duración del video no está en el formato correcto.');
         }
     }
 }
