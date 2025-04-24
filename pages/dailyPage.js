@@ -17,7 +17,6 @@ class DailyPage {
     try {
       await I.usePlaywrightTo('Wait for network idle', async ({ page }) => {
         await page.waitForLoadState('networkidle', { timeout: 30000 });
-        console.log('Actividad de red completada (networkidle)');
         
         await page.waitForFunction(() => {
           const videos = document.querySelectorAll('.HomeVideoFeed__homeFeedItem___1CUT1');
