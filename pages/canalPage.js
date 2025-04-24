@@ -8,13 +8,6 @@ class CanalPage {
   videoThumbnails = '//a[@id="thumbnail"]//img';
   videoTitles = '//yt-formatted-string[@id="video-title"]';
 
-  buscarVideo(video) {
-    I.amOnPage('/');
-    I.fillField(this.searchField, video);
-    I.pressKey('Enter');
-    I.wait(3);
-  }
-
   irAlCanalDelPrimerVideo() {
     I.wait(2);
     I.click(this.canalLink);
