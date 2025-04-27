@@ -2,6 +2,12 @@ Feature: Validaciones funcionales dailyMotion
 
 @Carga
 Scenario: Validar carga de pagina de DailyMotion
-        Given navego a la pagina
+        Given Estoy en la pagina de Daily Motion 
         When espero a que el contenido cargue
         Then verifico que se cargue el contenido
+
+@enlaces
+Scenario: Validar el atributo href
+    Given Estoy en la pagina de Daily Motion 
+    When Presiono el boton de Explorar
+    Then Valido si el href contiene explore

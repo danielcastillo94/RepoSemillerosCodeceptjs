@@ -16,13 +16,28 @@ class YoutubeMainPage {
         await I.amOnPage("/");
         I.wait(2);
     }
-
-    async searchVideo(){
+   
+    async verificarLogo() {
+      await I.seeElement('a#logo'); // más preciso
+    }
+  
+    async verificarCampoBusqueda() {
+      await I.seeElement('input#search'); // ya es correcto
+    }
+  
+    async verificarBotonIniciarSesion() {
+      await I.seeElement('ytd-button-renderer#sign-in-button, tp-yt-paper-button[aria-label="Iniciar sesión"]');
+    }
+  
+    async verificarMiniaturas() {
+      await I.seeNumberOfElements('ytd-rich-grid-media', 10);
+    }  
+    async searchVideo(phrase){
         await I.waitForElement(this.fields.searchBar, 5);
-        await I.fillField(this.fields.searchBar, "bbng");
+        await I.fillField(this.fields.searchBar, phrase);
         await I.pressKey("Enter");
         await I.wait(2);
-        console.log("Buscando video...");
+        console.log("Buscando frase: " + phrase);
     }
 
     async selectFilters(){
