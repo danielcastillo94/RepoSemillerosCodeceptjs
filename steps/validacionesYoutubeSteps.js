@@ -55,6 +55,7 @@ Given("realizo una búsqueda con el texto {string}", async (phrase) => {
 Then("abro los filtros de búsqueda", async () => {
   await youtubeMainPage.selectFilters();
 });
+
 Then("selecciono el filtro Hoy", async () => {
   await youtubeMainPage.selectHoyFilter();
 });
