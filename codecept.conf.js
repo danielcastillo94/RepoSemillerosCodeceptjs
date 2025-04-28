@@ -14,7 +14,8 @@ exports.config = {
     I: "./steps_file.js",
   },
   gherkin: {
-    features: "./features/youtube.feature",
-    steps: ["./steps/youtube.js"]
+    features: "./features/*.feature",
+    steps: ["./steps/pruebaSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js","./steps/youtube.js"],
   },
-}
+  name: "framework codeceptjs",
+};

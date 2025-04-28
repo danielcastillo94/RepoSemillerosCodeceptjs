@@ -1,0 +1,36 @@
+name: CI - CodeceptJS Playwright
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 23
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalar navegadores de Playwright
+        run: npx playwright install --with-deps
+
+      - name: Ejecutar pruebas
+        run: npm run features
+
+      - name: Generar reporte Allure
+        run: |
+          npm install -g allure-commandline --save-dev
+          allure generate output --clean -o allure-report
+
+      - name: Subir artefacto del reporte
+        uses: actions/upload-artifact@v3
+        with:
+          name: reporte-allure
+          path: allure-report

@@ -1,23 +1,12 @@
 const { I } = inject();
-const busquedaVideo = require("../pages/busquedaVideo.js");
+
 const verificarResultado = require("../pages/verificarResultado.js");
 const CanalPage = require("../pages/canalPage.js");
+const youtubeMainPage = require('../pages/youtubeMainPage.js');
+const searchPage = require("../pages/searchPage.js");
 
-Given("Estoy en la página principal de YouTube", () => {
-  //YoutubeHomePage.home
-  I.amOnPage("/");
-  I.wait(2);
-});
-
-When(
-  "Escribo Falling In Reverse y presiono Enter en la barra de búsqueda",
-  () => {
-    busquedaVideo.fillBar();
-  }
-);
-
-Then("Verifico que al menos un resultado contenga Falling In Reverse", () => {
-  verificarResultado.verificarVideoConTexto("Falling In Reverse");
+Then("Verifico que al menos un resultado contenga {string}", (phrase) => {
+  verificarResultado.verificarVideoConTexto(phrase);
 });
 
 Then("Verifico que el primer resultado muestre una miniatura visible", () => {
@@ -34,10 +23,6 @@ Then(
     await verificarResultado.verificarDuracion();
   }
 );
-
-Given("busco el video {string}", (video) => {
-  CanalPage.buscarVideo(video);
-});
 
 When("hago clic en el nombre del canal del primer resultado", () => {
   CanalPage.irAlCanalDelPrimerVideo();
@@ -58,14 +43,14 @@ Then("debería ver la pestaña de Videos", () => {
 Then("debería ver al menos un video con miniatura y título", () => {
   CanalPage.validarVideosVisibles();
 });
-const youtubeMainPage = require("../pages/youtubeMainPage");
+
 
 Given("abro la página de YouTube", async () => {
   await youtubeMainPage.goToHome();
 });
 
-Given("realicé una búsqueda de videos", async () => {
-  await youtubeMainPage.searchVideo();
+Given("realizo una búsqueda con el texto {string}", async (phrase) => {
+  await youtubeMainPage.searchVideo(phrase);
 });
 Then("abro los filtros de búsqueda", async () => {
   await youtubeMainPage.selectFilters();
@@ -76,4 +61,37 @@ Then("selecciono el filtro Hoy", async () => {
 
 Then("visualizo videos con fecha de publicación reciente", async () => {
   await youtubeMainPage.validarVideosRecientes();
+});
+
+
+Given("abro la página de YouTube", async () => {
+  await youtubeMainPage.goToHome();
+  I.wait(5); // ← espera de 5 segundos
+});
+
+Then("debería ver: {string}", async (elemento) => {
+  
+      if (elemento === 'Logo de YouTube') {
+        await youtubeMainPage.verificarLogo();
+      }else if(elemento === 'Campo de búsqueda') {
+        await youtubeMainPage.verificarCampoBusqueda();
+      }else if (elemento === 'Botón de Iniciar sesión') {
+        await youtubeMainPage.verificarBotonIniciarSesion();
+      }else if (elemento === 'Al menos 10 miniaturas de video') {
+        await youtubeMainPage.verificarMiniaturas();
+      }else{
+        throw new Error(`Elemento no reconocido: ${elemento}`);
+      }
+    });
+
+Then("verifico que el primer resultado contiene un campo con la duración",
+  async () => {
+    await searchPage.validateDurationSpan();
+  }
+);
+Then("verifico que dicho campo está oculto", async () => {
+  await searchPage.validateHiddenDuration();
+});
+Then("verifico que la duración tiene un formato válido", async () => {
+  await searchPage.validateDurationFormat();
 });
