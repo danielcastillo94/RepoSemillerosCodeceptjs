@@ -13,16 +13,5 @@
   },
   "keywords": [],
   "author": "",
-<<<<<<< HEAD
   "license": "ISC"
 }
-=======
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "chai": "^5.2.0",
-    "codeceptjs": "^3.7.3",
-    "playwright": "^1.52.0"
-  }
-}
->>>>>>> f237f46429cd0fe9f2509b0a27e52d67cc68fdf8
