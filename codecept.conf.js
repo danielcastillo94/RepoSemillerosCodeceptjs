@@ -7,12 +7,14 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: "https://www.youtube.com",
-      show: false,
+      show: true,
     },
   },
   include: {
     I: "./steps_file.js",
   },
   gherkin: {
-    features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js", "./steps/validacionesYoutubeSteps.js"],
+    features: "./features/youtube.feature",
+    steps: ["./steps/youtube.js"]
+  },
+}
