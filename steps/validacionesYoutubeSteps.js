@@ -106,5 +106,10 @@ Then("debería ver:", async (tabla) => {
       if (elemento === 'Al menos 10 miniaturas de video' && estado === 'visibles') {
         await youtubeMainPage.verificarMiniaturas();
       }
+
+    Then("debería ver miniaturas con borde o sombra", async () => {
+        await youtubeMainPage.verificarEstiloMiniaturas();
+    });
+    
     }
   });
