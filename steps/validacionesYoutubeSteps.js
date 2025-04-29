@@ -3,6 +3,7 @@ const busquedaVideo = require("../pages/busquedaVideo.js");
 const verificarResultado = require("../pages/verificarResultado.js");
 const CanalPage = require("../pages/canalPage.js");
 const youtubeMainPage = require('../pages/youtubeMainPage.js');
+const searchPage = require("../pages/searchPage.js");
 
 Given("Estoy en la página principal de YouTube", () => {
   //YoutubeHomePage.home
@@ -65,8 +66,8 @@ Given("abro la página de YouTube", async () => {
   await youtubeMainPage.goToHome();
 });
 
-Given("realicé una búsqueda de videos", async () => {
-  await youtubeMainPage.searchVideo();
+Given("realizo una búsqueda con el texto {string}", async (phrase) => {
+  await youtubeMainPage.searchVideo(phrase);
 });
 Then("abro los filtros de búsqueda", async () => {
   await youtubeMainPage.selectFilters();
@@ -113,3 +114,14 @@ Then("debería ver:", async (tabla) => {
     
     }
   });
+Then("verifico que el primer resultado contiene un campo con la duración",
+  async () => {
+    await searchPage.validateDurationSpan();
+  }
+);
+Then("verifico que dicho campo está oculto", async () => {
+  await searchPage.validateHiddenDuration();
+});
+Then("verifico que la duración tiene un formato válido", async () => {
+  await searchPage.validateDurationFormat();
+});
