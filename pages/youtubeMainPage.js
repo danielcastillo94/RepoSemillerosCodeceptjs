@@ -9,51 +9,57 @@ class YoutubeMainPage {
           filterButton: "#filter-button",
           hoyFilter: '//yt-formatted-string[text()="Hoy"]',
           uploadDates: '//div[@id="metadata-line"]//span[2]',
+          loginButton: "//a[@aria-label='Acceder']",
+          minitures: "//ytd-thumbnail[@class='style-scope ytd-video-renderer']",
         };
     }
 
-    async goToHome(){
-        await I.amOnPage("/");
+    goToHome(){
+        I.amOnPage("/");
         I.wait(2);
     }
    
-    async verificarLogo() {
-      await I.seeElement('a#logo'); // más preciso
+    verificarLogo() {
+      I.seeElement('a#logo'); // más preciso
     }
   
-    async verificarCampoBusqueda() {
-      await I.seeElement('input#search'); // ya es correcto
+    verificarCampoBusqueda() {
+     I.seeElement(this.fields.searchBar); // ya es correcto
     }
   
-    async verificarBotonIniciarSesion() {
-      await I.seeElement('ytd-button-renderer#sign-in-button, tp-yt-paper-button[aria-label="Iniciar sesión"]');
+    verificarBotonIniciarSesion() {
+      I.seeElement(this.fields.loginButton);
     }
   
     async verificarMiniaturas() {
-      await I.seeNumberOfElements('ytd-rich-grid-media', 10);
+      const count = await I.grabNumberOfVisibleElements(this.fields.minitures);
+
+      expect(count).to.be.at.least(10, "No hay suficientes miniaturas de video visibles");
+
+      I.say(`Hay ${count} miniaturas de video visibles.`);
     }  
-    async searchVideo(phrase){
-        await I.waitForElement(this.fields.searchBar, 5);
-        await I.fillField(this.fields.searchBar, phrase);
-        await I.pressKey("Enter");
-        await I.wait(2);
+    searchVideo(phrase){
+        I.waitForElement(this.fields.searchBar, 5);
+        I.fillField(this.fields.searchBar, phrase);
+        I.pressKey("Enter");
+        I.wait(2);
         I.say(`Buscando frase: ${phrase}`);
     }
 
-    async selectFilters(){
-        await I.waitForElement(this.fields.filterButton, 5);
-        await I.click(this.fields.filterButton);
+    selectFilters(){
+        I.waitForElement(this.fields.filterButton, 5);
+        I.click(this.fields.filterButton);
     }
 
-    async selectHoyFilter(){
-        await I.waitForElement(this.fields.hoyFilter, 5);
-        await I.click(this.fields.hoyFilter);
-        await I.wait(2);
+    selectHoyFilter(){
+        I.waitForElement(this.fields.hoyFilter, 5);
+        I.click(this.fields.hoyFilter);
+        I.wait(2);
         I.say("Filtro de búsqueda aplicado.");
     }
 
     async validarVideosRecientes(){
-        await I.waitForElement(this.fields.uploadDates, 5);
+        I.waitForElement(this.fields.uploadDates, 5);
         const uploadDates = await I.grabTextFromAll(this.fields.uploadDates);
         const recentDatePattern = /^(?:Transmitido )?hace \d+ horas?/;
         const lastDayPattern = /^(?:Transmitido )?hace 1 día/;

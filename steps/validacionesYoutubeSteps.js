@@ -46,17 +46,17 @@ Then("debería ver al menos un video con miniatura y título", () => {
 
 
 Given("abro la página de YouTube", async () => {
-  await youtubeMainPage.goToHome();
+  youtubeMainPage.goToHome();
 });
 
 Given("realizo una búsqueda con el texto {string}", async (phrase) => {
-  await youtubeMainPage.searchVideo(phrase);
+  youtubeMainPage.searchVideo(phrase);
 });
 Then("abro los filtros de búsqueda", async () => {
-  await youtubeMainPage.selectFilters();
+  youtubeMainPage.selectFilters();
 });
 Then("selecciono el filtro Hoy", async () => {
-  await youtubeMainPage.selectHoyFilter();
+  youtubeMainPage.selectHoyFilter();
 });
 
 Then("visualizo videos con fecha de publicación reciente", async () => {
@@ -65,18 +65,18 @@ Then("visualizo videos con fecha de publicación reciente", async () => {
 
 
 Given("abro la página de YouTube", async () => {
-  await youtubeMainPage.goToHome();
+  youtubeMainPage.goToHome();
   I.wait(5); // ← espera de 5 segundos
 });
 
 Then("debería ver: {string}", async (elemento) => {
   
       if (elemento === 'Logo de YouTube') {
-        await youtubeMainPage.verificarLogo();
+        youtubeMainPage.verificarLogo();
       }else if(elemento === 'Campo de búsqueda') {
-        await youtubeMainPage.verificarCampoBusqueda();
+        youtubeMainPage.verificarCampoBusqueda();
       }else if (elemento === 'Botón de Iniciar sesión') {
-        await youtubeMainPage.verificarBotonIniciarSesion();
+        youtubeMainPage.verificarBotonIniciarSesion();
       }else if (elemento === 'Al menos 10 miniaturas de video') {
         await youtubeMainPage.verificarMiniaturas();
       }else{
