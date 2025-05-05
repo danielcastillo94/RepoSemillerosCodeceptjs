@@ -37,7 +37,7 @@ class YoutubeMainPage {
         await I.fillField(this.fields.searchBar, phrase);
         await I.pressKey("Enter");
         await I.wait(2);
-        console.log("Buscando frase: " + phrase);
+        I.say(`Buscando frase: ${phrase}`);
     }
 
     async selectFilters(){
@@ -49,22 +49,21 @@ class YoutubeMainPage {
         await I.waitForElement(this.fields.hoyFilter, 5);
         await I.click(this.fields.hoyFilter);
         await I.wait(2);
-        console.log("Filtro de búsqueda aplicado.");
+        I.say("Filtro de búsqueda aplicado.");
     }
 
     async validarVideosRecientes(){
         await I.waitForElement(this.fields.uploadDates, 5);
         const uploadDates = await I.grabTextFromAll(this.fields.uploadDates);
-        const recentDatePattern = /hace \d+ horas/;
-        const lastDayPattern = /hace 1 día/;
+        const recentDatePattern = /^(?:Transmitido )?hace \d+ horas?/;
+        const lastDayPattern = /^(?:Transmitido )?hace 1 día/;
 
-       console.log("Fechas de publicación de los videos:", uploadDates);
-
-       const areEveryRecent = uploadDates.every(
+        I.say(`Fechas de publicación de los videos: ${uploadDates}`);
+        const areEveryRecent = uploadDates.every(
          (date) => recentDatePattern.test(date) || lastDayPattern.test(date)
-       );
-       expect(areEveryRecent, "No todos los videos son recientes").to.be.true;
-       console.log("Todos los videos son recientes");
+        );
+        expect(areEveryRecent, "No todos los videos son recientes").to.be.true;
+        I.say("Todos los videos son recientes");
     }
 }
 

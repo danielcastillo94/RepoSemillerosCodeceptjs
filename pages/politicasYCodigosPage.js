@@ -18,7 +18,7 @@ class PoliticasYCodigosPage {
     I.waitForVisible(selector, 5);
     I.click(selector);
     I.wait(2);
-    console.log(`Acceso rápido seleccionado: ${acceso}`);
+    I.say(`Acceso rápido seleccionado: ${acceso}`);
   }
 
   seleccionarOpcion(opcion, tipo) {
@@ -43,12 +43,12 @@ class PoliticasYCodigosPage {
         I.waitForVisible(this.fields.buscarButton, 10);
         I.click(this.fields.buscarButton);
         I.wait(2);
-        console.log("Realizando busqueda");
+        I.say("Realizando busqueda");
     }
 
     waitForResults() {
         I.waitForElement(this.fields.divResultados, 10);
-        console.log("Resultados de búsqueda visibles");
+        I.say("Resultados de búsqueda visibles");
     }
 }
 

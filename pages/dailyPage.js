@@ -21,7 +21,7 @@ class dailyPage {
   //Revisar Emilio
   async verificarHref() {
     const href = await I.grabAttributeFrom(this.fields.ref, 'href');
-    console.log("HREF capturado:", href);
+    I.say(`HREF capturado: ${href}`);
     expect(href).to.include("/explore");
   }
 }
