@@ -16,6 +16,7 @@ Feature: Validaciones funcionales en la plataforma de YouTube
     And Verifico que el primer resultado muestre un título visible
     And Verifico que el primer resultado contenga una duración en formato mm:ss
   
+
   Scenario: Navegar al canal 
     Given realizo una búsqueda con el texto "Deportes"
     When hago clic en el nombre del canal del primer resultado
@@ -30,7 +31,8 @@ Feature: Validaciones funcionales en la plataforma de YouTube
     Then verifico que el primer resultado contiene un campo con la duración
     And verifico que dicho campo está oculto
     And verifico que la duración tiene un formato válido
-  
+    
+    
   Scenario Outline: Validación de carga inicial y elementos clave en la página de YouTube
     Then debería ver: "<elemento>"
 

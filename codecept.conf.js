@@ -6,8 +6,11 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'http://localhost',
+      url: 'https://www.telcel.com/',
       show: true
+    },
+    MiHelper: {
+      require: './helpers/MiHelper.js'
     }
   },
   include: {
@@ -15,10 +18,11 @@ exports.config = {
     validacionesYoutubeSteps: './steps/videoYoutubeSteps.js',
     youtubeMainPage: './pages/youtubeMainPage.js',
     youtubeVideoPage: './pages/youtubeVideoMainPage.js', 
+    youtubeLoginPage: './pages/youtubeLoginPage.js',
   },
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js",  "./steps/videoYoutubeSteps.js",],
+    steps: ["./steps/pruebaSteps.js", "./steps/loginSteps.js", "./steps/youtubeLoginSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js", './steps/telcelSteps.js', "./steps/videoYoutubeSteps.js",],
   },
   name: 'Actividad youtube'
 };

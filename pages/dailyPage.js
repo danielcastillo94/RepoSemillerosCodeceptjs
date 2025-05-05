@@ -18,6 +18,7 @@ class dailyPage {
     I.click(this.fields.boton);
   }
 
+  //Revisar Emilio
   async verificarHref() {
     const href = await I.grabAttributeFrom(this.fields.ref, 'href');
     console.log("HREF capturado:", href);
