@@ -30,7 +30,7 @@ jobs:
           allure generate output --clean -o allure-report
 
       - name: Subir artefacto del reporte
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: reporte-allure
           path: allure-report
