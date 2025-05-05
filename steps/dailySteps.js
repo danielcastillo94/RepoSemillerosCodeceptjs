@@ -12,3 +12,6 @@ When("Presiono el boton de Explorar", () => {
 Then("Valido si el href contiene explore", async () => {
     await dailyPage.verificarHref();
 });
+
+Then("Validar login correcto ", async () => {
+});
