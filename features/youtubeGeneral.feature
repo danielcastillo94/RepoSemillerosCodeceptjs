@@ -3,6 +3,7 @@ Feature: Validaciones funcionales en la plataforma de YouTube
   Background: navegar a la página de YouTube
     Given abro la página de YouTube
 
+
   Scenario: Validar fecha de publicación reciente
     Given realizo una búsqueda con el texto "bbng" 
     When abro los filtros de búsqueda
@@ -16,7 +17,7 @@ Feature: Validaciones funcionales en la plataforma de YouTube
     And Verifico que el primer resultado muestre un título visible
     And Verifico que el primer resultado contenga una duración en formato mm:ss
   
-
+@probando
   Scenario: Navegar al canal 
     Given realizo una búsqueda con el texto "Deportes"
     When hago clic en el nombre del canal del primer resultado
@@ -25,14 +26,14 @@ Feature: Validaciones funcionales en la plataforma de YouTube
     And debería ver la pestaña de Videos
     And debería ver al menos un video con miniatura y título
 
-
+@probando
   Scenario: Validación de duración de video en campo oculto 
     Given realizo una búsqueda con el texto "lofi-music"
     Then verifico que el primer resultado contiene un campo con la duración
     And verifico que dicho campo está oculto
     And verifico que la duración tiene un formato válido
     
-    
+    @probando
   Scenario Outline: Validación de carga inicial y elementos clave en la página de YouTube
     Then debería ver: "<elemento>"
 
