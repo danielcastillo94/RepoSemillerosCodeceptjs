@@ -32,6 +32,7 @@
           with:
             ref: gh-pages
             path: gh-pages
+            token: ${{ secrets.GH_TOKEN }}
 
         - name: Generar reporte de Allure
           uses: simple-elf/allure-report-action@v1.6
