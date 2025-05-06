@@ -1,36 +1,49 @@
-name: CI - CodeceptJS Playwright
-
-on: [push, pull_request]
+on: 
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
 
 jobs:
-  test:
+  codecept-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del repositorio
+      - name: Hacer checkout del repo
         uses: actions/checkout@v3
 
       - name: Instalar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 23
+          node-version: '23.6.1'
 
       - name: Instalar dependencias
         run: npm ci
 
       - name: Instalar navegadores de Playwright
-        run: npx playwright install --with-deps
+        run: npx playwright install chromium
 
       - name: Ejecutar pruebas
         run: npm run features
 
-      - name: Generar reporte Allure
-        run: |
-          npm install -g allure-commandline --save-dev
-          allure generate output --clean -o allure-report
-
-      - name: Subir artefacto del reporte
-        uses: actions/upload-artifact@v2
+      - name: Get Allure history
+        uses: actions/checkout@v3
+        if: always()
         with:
-          name: reporte-allure
-          path: allure-report
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Generar reporte de Allure
+        uses: simple-elf/allure-report-action@v1.6
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: gh-pages
+          allure_report: allure-history
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-history
