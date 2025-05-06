@@ -42,8 +42,8 @@
             allure_report: allure-history
 
         - name: Deploy report to Github Pages
-  if: always()
-  uses: peaceiris/actions-gh-pages@v3
-  with:
-    personal_token: ${{ secrets.GH_TOKEN }}
-    publish_dir: allure-history
+          if: always()
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+          personal_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: allure-history
