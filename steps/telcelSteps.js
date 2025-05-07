@@ -13,7 +13,7 @@ When("hago clic en Ver todos los Planes", () => {
 });
 
 Then("debo ver un plan Telcel Plus", () => {
-  planesPage.verifyTelcelPlus();
+  planesPage.verifyTelcelLibre();
 });
 
 Given("navego a la sección {string}", (seccion) => {

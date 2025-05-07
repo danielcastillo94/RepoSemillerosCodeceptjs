@@ -6,8 +6,10 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://www.telcel.com/',
+      url: 'https://www.telcel.com',
       show: false,
+
+      locale: "es-MX",
     },
     MiHelper: {
       require: './helpers/MiHelper.js'
