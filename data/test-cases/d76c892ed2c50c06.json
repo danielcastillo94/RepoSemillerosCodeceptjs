@@ -1,0 +1,427 @@
+{
+  "uid" : "d76c892ed2c50c06",
+  "name" : "Validar fecha de publicación reciente @probando",
+  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validar fecha de publicación reciente @probando",
+  "historyId" : "63761784782ed2e32087996bfafd4b49:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1746643221962,
+    "stop" : 1746643233138,
+    "duration" : 11176
+  },
+  "status" : "broken",
+  "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+  "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1746643221684,
+      "stop" : 1746643221960,
+      "duration" : 276
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: Before",
+    "time" : {
+      "start" : 1746643222011,
+      "stop" : 1746643225462,
+      "duration" : 3451
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given abro la página de YouTube",
+      "time" : {
+        "start" : 1746643222025,
+        "stop" : 1746643222027,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I am on page \"https://www.youtube.com\"",
+      "time" : {
+        "start" : 1746643222027,
+        "stop" : 1746643223339,
+        "duration" : 1312
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait for element \"input[name=\"search_query\"]\", 10",
+      "time" : {
+        "start" : 1746643223339,
+        "stop" : 1746643223461,
+        "duration" : 122
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 2",
+      "time" : {
+        "start" : 1746643223461,
+        "stop" : 1746643225461,
+        "duration" : 2000
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1746643221963,
+      "stop" : 1746643222011,
+      "duration" : 48
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+    "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+    "steps" : [ {
+      "name" : "Given realizo una búsqueda con el texto \"bbng\"",
+      "time" : {
+        "start" : 1746643225468,
+        "stop" : 1746643225469,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When abro los filtros de búsqueda",
+      "time" : {
+        "start" : 1746643225470,
+        "stop" : 1746643225470,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And selecciono el filtro Hoy",
+      "time" : {
+        "start" : 1746643225471,
+        "stop" : 1746643225472,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+      "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then visualizo videos con fecha de publicación reciente",
+      "time" : {
+        "start" : 1746643225474,
+        "stop" : 1746643227795,
+        "duration" : 2321
+      },
+      "status" : "broken",
+      "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+      "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+      "steps" : [ {
+        "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
+        "time" : {
+          "start" : 1746643225474,
+          "stop" : 1746643225478,
+          "duration" : 4
+        },
+        "status" : "broken",
+        "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+        "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"bbng\"",
+        "time" : {
+          "start" : 1746643225478,
+          "stop" : 1746643225648,
+          "duration" : 170
+        },
+        "status" : "broken",
+        "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+        "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "I press key \"Enter\"",
+        "time" : {
+          "start" : 1746643225648,
+          "stop" : 1746643225794,
+          "duration" : 146
+        },
+        "status" : "broken",
+        "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+        "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "I wait 2",
+        "time" : {
+          "start" : 1746643225794,
+          "stop" : 1746643227795,
+          "duration" : 2001
+        },
+        "status" : "broken",
+        "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+        "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      }, {
+        "name" : "I say \"Buscando frase: bbng\"",
+        "time" : {
+          "start" : 1746643227795,
+          "stop" : 1746643227795,
+          "duration" : 0
+        },
+        "status" : "broken",
+        "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+        "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I wait for element \"#filter-button\", 5",
+      "time" : {
+        "start" : 1746643227795,
+        "stop" : 1746643227804,
+        "duration" : 9
+      },
+      "status" : "broken",
+      "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+      "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "I click \"#filter-button\"",
+      "time" : {
+        "start" : 1746643227805,
+        "stop" : 1746643228026,
+        "duration" : 221
+      },
+      "status" : "broken",
+      "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+      "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "I wait for element \"//yt-formatted-string[text()=\"Hoy\"]\", 5",
+      "time" : {
+        "start" : 1746643228027,
+        "stop" : 1746643233028,
+        "duration" : 5001
+      },
+      "status" : "broken",
+      "statusMessage" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+      "statusTrace" : "Error: element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1746643233134,
+        "stop" : 1746643233134,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "94439a79685ef19d",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "94439a79685ef19d.png",
+        "type" : "image/png",
+        "size" : 225753
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 13,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1746643282802,
+      "stop" : 1746643282803,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1746643233138,
+      "stop" : 1746643233146,
+      "duration" : 8
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1296-243"
+  }, {
+    "name" : "thread",
+    "value" : "pid-2553-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.youtubeGeneral.feature"
+  }, {
+    "name" : "tag",
+    "value" : "probando"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validaciones funcionales en la plataforma de YouTube"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "probando" ]
+  },
+  "source" : "d76c892ed2c50c06.json",
+  "parameterValues" : [ ]
+}

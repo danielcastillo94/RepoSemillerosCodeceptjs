@@ -1,5 +1,175 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "element (//yt-formatted-string[text()=\"Hoy\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//yt-formatted-string[text()=\"Hoy\"]').first()\n",
+      "children" : [ {
+        "name" : "Validar fecha de publicación reciente @probando",
+        "uid" : "d76c892ed2c50c06",
+        "parentUid" : "5c64a279f5b0252622ff8b36a4f45dcb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643221962,
+          "stop" : 1746643233138,
+          "duration" : 11176
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5c64a279f5b0252622ff8b36a4f45dcb"
+    }, {
+      "name" : "Element \"//a[@aria-label='Acceder']\" is not visible on page.",
+      "children" : [ {
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"} @probando",
+        "uid" : "db742623e2e8bf87",
+        "parentUid" : "eb1f621eef560dc8730d711c02bb5c7c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643271172,
+          "stop" : 1746643277018,
+          "duration" : 5846
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "eb1f621eef560dc8730d711c02bb5c7c"
+    }, {
+      "name" : "element (//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Plus\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Plus\"]').first()\n",
+      "children" : [ {
+        "name" : "Buscar plan Telcel Plus",
+        "uid" : "2fdb1cea5d648275",
+        "parentUid" : "d18e3a073f26124dc0dc46f81d3f96b4",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643295710,
+          "stop" : 1746643307651,
+          "duration" : 11941
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d18e3a073f26124dc0dc46f81d3f96b4"
+    }, {
+      "name" : "No steps matching \"selecciono \"Regístrate\"\"",
+      "children" : [ {
+        "name" : "Registrarme como nuevo usuario",
+        "uid" : "f8d4e30c5bcafad1",
+        "parentUid" : "1502fd08a1d2a8c8ecbd8b0baf53dc5c",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643326047,
+          "stop" : 1746643334790,
+          "duration" : 8743
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1502fd08a1d2a8c8ecbd8b0baf53dc5c"
+    }, {
+      "name" : "No steps matching \"despliego el menú principal\"",
+      "children" : [ {
+        "name" : "Validar elementos del menú",
+        "uid" : "55f1f492272b60d8",
+        "parentUid" : "b75738728246849c3bb32f5a8ba7d6f8",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643334803,
+          "stop" : 1746643339068,
+          "duration" : 4265
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b75738728246849c3bb32f5a8ba7d6f8"
+    }, {
+      "name" : "No steps matching \"debería ver:\"",
+      "children" : [ {
+        "name" : "Verificar carga de elementos clave",
+        "uid" : "c2d2eb59c03a7344",
+        "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643363535,
+          "stop" : 1746643366960,
+          "duration" : 3425
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "259089c0497a8892213b9e9fa2f3b58b"
+    }, {
+      "name" : "element (button[aria-label=\"Guía\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('button[aria-label=\"Guía\"]').first()\n",
+      "children" : [ {
+        "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música",
+        "uid" : "7b2aace8065d30ba",
+        "parentUid" : "33be34e215f6b48fe1c7fbe1e9c059e1",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643366967,
+          "stop" : 1746643378427,
+          "duration" : 11460
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "33be34e215f6b48fe1c7fbe1e9c059e1"
+    }, {
+      "name" : "element ((//a[@aria-label=\"Acceder\"])[1]) still not visible after 20 sec\nlocator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('xpath=(//a[@aria-label=\"Acceder\"])[1]').first() to be visible\n",
+      "children" : [ {
+        "name" : "Validar el boton del login",
+        "uid" : "724d23f25c6fe7f9",
+        "parentUid" : "46a66b6ad7fe4534b15dcbe177060445",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643378436,
+          "stop" : 1746643399975,
+          "duration" : 21539
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar credenciales de login",
+        "uid" : "1e6908487ec5423",
+        "parentUid" : "46a66b6ad7fe4534b15dcbe177060445",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643399982,
+          "stop" : 1746643421425,
+          "duration" : 21443
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "46a66b6ad7fe4534b15dcbe177060445"
+    }, {
+      "name" : "Element \"a[href=\"/explore\"]\" was not found by text|CSS|XPath",
+      "children" : [ {
+        "name" : "Validar el atributo href @enlaces",
+        "uid" : "28c063aa76a4b4e0",
+        "parentUid" : "be27bee3afd4af2485d37bf98283069b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1746643421434,
+          "stop" : 1746643424470,
+          "duration" : 3036
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "be27bee3afd4af2485d37bf98283069b"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }
