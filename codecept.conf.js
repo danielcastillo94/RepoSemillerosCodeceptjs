@@ -6,10 +6,10 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://www.telcel.com/',
+      url: 'https://www.telcel.com',
       show: false,
 
-      locale: 'es-MX',
+      locale: "es-MX",
     },
     MiHelper: {
       require: './helpers/MiHelper.js'
@@ -25,6 +25,13 @@ exports.config = {
   gherkin: {
     features: "./features/*.feature",
     steps: ["./steps/pruebaSteps.js", "./steps/loginSteps.js", "./steps/youtubeLoginSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js", './steps/telcelSteps.js', "./steps/videoYoutubeSteps.js",],
+  },
+  plugins: {
+    allure: {
+      enabled: true,
+      require: "allure-codeceptjs",
+      resultsDir: "allure-results",
+    },
   },
   name: 'Actividad youtube'
 };
