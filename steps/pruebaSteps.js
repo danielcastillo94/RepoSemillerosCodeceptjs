@@ -4,9 +4,10 @@ const PruebaPage = require("../pages/pruebaPage");
 const { I } = inject();
 
 Given('el usuario está en la página principal de YouTube', async () => {
-  I.amOnPage('https://www.youtube.com/mx');
-  I.waitForElement('//button[@aria-label="Guía"]', 20); 
-  I.click('//button[@aria-label="Guía"]'); 
+  
+  I.amOnPage("https://www.youtube.com");
+  I.waitForElement('//div[@id="start"]/yt-icon-button[@id="guide-button"]', 20); 
+  I.click('//div[@id="start"]/yt-icon-button[@id="guide-button"]'); 
 });
 
 When('haces clic en el botón "Explorar"', async () => {
