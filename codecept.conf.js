@@ -8,6 +8,8 @@ exports.config = {
       browser: 'chromium',
       url: 'https://www.telcel.com/',
       show: false,
+
+      locale: 'es-MX',
     },
     MiHelper: {
       require: './helpers/MiHelper.js'

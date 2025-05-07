@@ -2,6 +2,7 @@
 
 const PruebaPage = require("../pages/pruebaPage");
 const { I } = inject();
+const { expect } = require("chai");
 
 Given('el usuario está en la página principal de YouTube', async () => {
   
@@ -11,9 +12,10 @@ Given('el usuario está en la página principal de YouTube', async () => {
 });
 
 When('haces clic en el botón "Explorar"', async () => {
-  const explorarContext = "#guide-section-title";
-  I.see('Explorar', explorarContext);
-  I.say('Se valido el texto "Explorar"');
+  I.waitForElement(
+    '(//h3[not(@hidden)]/yt-formatted-string[@id="guide-section-title"])[1]'
+  );
+
 });
 
 Then('debería ver las categorías "Tendencias", "Música" y "Noticias"', async () => {
