@@ -1,5 +1,224 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Validaciones funcionales en la plataforma de YouTube",
+    "children" : [ {
+      "name" : "Validar fecha de publicación reciente @probando",
+      "uid" : "5ecdd18937345681",
+      "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746657955579,
+        "stop" : 1746657963763,
+        "duration" : 8184
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validación de una búsqueda en YouTube @probando",
+      "uid" : "33e09f8cbb3c2348",
+      "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746657963774,
+        "stop" : 1746657969873,
+        "duration" : 6099
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Navegar al canal @probando",
+      "uid" : "f0678907f700229e",
+      "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746657969879,
+        "stop" : 1746657984271,
+        "duration" : 14392
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validación de duración de video en campo oculto @probando",
+      "uid" : "6fc6453f5af8e36a",
+      "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746657984300,
+        "stop" : 1746657990089,
+        "duration" : 5789
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"} @probando",
+      "uid" : "99f112997273e1aa",
+      "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746657990097,
+        "stop" : 1746657995917,
+        "duration" : 5820
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"} @probando",
+      "uid" : "21814691e07e6b66",
+      "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746657995925,
+        "stop" : 1746658001738,
+        "duration" : 5813
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"} @probando",
+      "uid" : "cc907629d3e67221",
+      "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658001745,
+        "stop" : 1746658007521,
+        "duration" : 5776
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"} @probando",
+      "uid" : "fad2295f3dd48811",
+      "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658007528,
+        "stop" : 1746658013359,
+        "duration" : 5831
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "c54abeb43e2e6c341a979d109d63cf8e"
+  }, {
+    "name" : "Validación de resultados relacionados",
+    "children" : [ {
+      "name" : "Validar título y videos relacionados",
+      "uid" : "44405af1413783cd",
+      "parentUid" : "6a9348e47752696bd72ae876b115e9f6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658013370,
+        "stop" : 1746658026277,
+        "duration" : 12907
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6a9348e47752696bd72ae876b115e9f6"
+  }, {
+    "name" : "Automatización de Telcel",
+    "children" : [ {
+      "name" : "Buscar plan Telcel Plus",
+      "uid" : "a6fd3c5b9e3f9934",
+      "parentUid" : "a33775243f021d8b3a19aacdf2004620",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658026285,
+        "stop" : 1746658032441,
+        "duration" : 6156
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Recargar saldo de $100",
+      "uid" : "cb057e44d265adce",
+      "parentUid" : "a33775243f021d8b3a19aacdf2004620",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658032451,
+        "stop" : 1746658052751,
+        "duration" : 20300
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validar sección Contáctanos",
+      "uid" : "2d10196bdb9c53cf",
+      "parentUid" : "a33775243f021d8b3a19aacdf2004620",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658052769,
+        "stop" : 1746658077047,
+        "duration" : 24278
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "a33775243f021d8b3a19aacdf2004620"
+  }, {
+    "name" : "Validación del botón \"Explorar\" y navegación en YouTube",
+    "children" : [ {
+      "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+      "uid" : "fc58dc3a7c562ac7",
+      "parentUid" : "ed25a67e165223eb323e270a69295234",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658077058,
+        "stop" : 1746658086979,
+        "duration" : 9921
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ed25a67e165223eb323e270a69295234"
+  }, {
+    "name" : "Validaciones del login en youtube",
+    "children" : [ {
+      "name" : "Validar el boton del login",
+      "uid" : "6af5d6f4151eb15c",
+      "parentUid" : "315f2d914890879d41a07b18a377f618",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658086986,
+        "stop" : 1746658095894,
+        "duration" : 8908
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "315f2d914890879d41a07b18a377f618"
+  }, {
+    "name" : "Validaciones funcionales en dailyMotion",
+    "children" : [ {
+      "name" : "Validar el atributo href @enlaces",
+      "uid" : "ab9ac761d0b761ac",
+      "parentUid" : "7f85788bc0a86b2148e4604f0126e3a9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1746658095902,
+        "stop" : 1746658099079,
+        "duration" : 3177
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7f85788bc0a86b2148e4604f0126e3a9"
+  } ],
   "name" : "suites"
 }
