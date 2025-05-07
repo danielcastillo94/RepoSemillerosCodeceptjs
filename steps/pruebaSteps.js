@@ -11,9 +11,9 @@ Given('el usuario está en la página principal de YouTube', async () => {
 });
 
 When('haces clic en el botón "Explorar"', async () => {
-  const xpathExplorar = '//*[@id="guide-section-title"][contains(text(), "Explorar")]';
-  I.waitForElement(xpathExplorar, 20);
-  I.scrollTo(xpathExplorar);
+  const explorarContext = "#guide-section-title";
+  I.see('Explorar', explorarContext);
+  I.say('Se valido el texto "Explorar"');
 });
 
 Then('debería ver las categorías "Tendencias", "Música" y "Noticias"', async () => {
