@@ -46,7 +46,7 @@ module.exports = {
     const selector = 'ytd-compact-video-renderer';
   
     // Espera a que aparezca al menos uno
-    I.waitForElement(selector, 10);
+    I.waitForElement(selector, 20);
   
     // Cuenta cuántos elementos están visibles
     const cantidad = await I.grabNumberOfVisibleElements(selector);

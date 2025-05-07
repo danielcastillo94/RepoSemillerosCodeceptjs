@@ -4,14 +4,14 @@ const { I } = inject();
 
 class youtubeLoginPage {
     constructor() {
-        this.fields ={
-            youtubeIcon: '(//yt-icon[@id="logo-icon"])[1]',
-            accederButton: '(//a[@aria-label="Acceder"])[1]',
-            iniciarSesionSpan: '//span[text()="Inicia sesión"]',
-            emailInput:'//input[@type="email"]',
-            siguienteButton: '//span[text()="Siguiente"]',
-            emailError: '//div[contains(text(), "No pudimos encontrar tu Cuenta")]',
-        }
+        this.fields = {
+          youtubeIcon: '(//yt-icon[@id="logo-icon"])[1]',
+          accederButton: '(//a[@aria-label="Acceder"])[1]',
+          emailInput: "#identifierId",
+          siguienteButton: "#identifierNext",
+          emailError:
+            '//div[contains(text(), "No pudimos encontrar tu Cuenta")]',
+        };
     }
 
   estoyEnYoutube(){
@@ -26,26 +26,23 @@ class youtubeLoginPage {
     }
 
     validarLoginPage(){
-        I.waitForElement(this.fields.iniciarSesionSpan, 20);
-        I.seeElement(this.fields.iniciarSesionSpan);
+        I.wait(5);
+        I.see("Inicia sesión");
     }
 
     async ingresarCredencialesIncorrectas(){
         I.waitForElement(this.fields.emailInput, 20);
-        //I.fillField(this.fields.emailInput, 'jorge@prueba.com')
-       await I.login('jorge@prueba.com')
+        I.fillField(this.fields.emailInput, 'jorge@prueba.com');
     }
 
     presionoBotonSiguiente(){
-       // I.waitForElement(this.fields.siguienteButton, 20);
-        //I.click(this.fields.siguienteButton);
-        I.wait(3);
+       I.waitForElement(this.fields.siguienteButton, 20);
+        I.click(this.fields.siguienteButton);
     }
 
     validarCorreoIncorrecto(){
-       // I.waitForElement(this.fields.emailError, 20);
-       // I.seeElement(this.fields.emailError);
-       I.esperarYValidar(this.fields.emailError);
+        I.wait(2);
+       I.see("No pudimos encontrar tu Cuenta de Google");
     }
 
 

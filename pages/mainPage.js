@@ -18,7 +18,6 @@ class MainPage {
     I.scrollTo(this.fields.verPlanesButton);
     I.waitForVisible(this.fields.verPlanesButton, 5);
     I.click(this.fields.verPlanesButton);
-    I.wait(2);
     I.say("Click en el botón 'Ver todos los Planes' realizado");
   }
 
