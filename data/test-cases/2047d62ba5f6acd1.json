@@ -1,22 +1,22 @@
 {
-  "uid" : "c35d7be20add7985",
+  "uid" : "2047d62ba5f6acd1",
   "name" : "Buscar plan Telcel Plus",
   "fullName" : "features/telcel.feature: Automatización de Telcel > Buscar plan Telcel Plus",
   "historyId" : "772b41fe9b993738be2de237826af37b:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1746658709772,
-    "stop" : 1746658715880,
-    "duration" : 6108
+    "start" : 1746659509024,
+    "stop" : 1746659516693,
+    "duration" : 7669
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1746658709771,
-      "stop" : 1746658709771,
-      "duration" : 0
+      "start" : 1746659509024,
+      "stop" : 1746659509053,
+      "duration" : 29
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1746658709772,
-      "stop" : 1746658709804,
-      "duration" : 32
+      "start" : 1746659509023,
+      "stop" : 1746659509023,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,8 +47,8 @@
     "steps" : [ {
       "name" : "Given estoy en la pagina de inicio de Telcel",
       "time" : {
-        "start" : 1746658709805,
-        "stop" : 1746658709805,
+        "start" : 1746659509055,
+        "stop" : 1746659509055,
         "duration" : 0
       },
       "status" : "passed",
@@ -62,9 +62,9 @@
     }, {
       "name" : "When hago clic en Ver todos los Planes",
       "time" : {
-        "start" : 1746658709807,
-        "stop" : 1746658709807,
-        "duration" : 0
+        "start" : 1746659509056,
+        "stop" : 1746659509057,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,9 +77,9 @@
     }, {
       "name" : "Then debo ver un plan Telcel Plus",
       "time" : {
-        "start" : 1746658709809,
-        "stop" : 1746658715880,
-        "duration" : 6071
+        "start" : 1746659509058,
+        "stop" : 1746659516693,
+        "duration" : 7635
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,9 +92,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1746658709809,
-        "stop" : 1746658712169,
-        "duration" : 2360
+        "start" : 1746659509059,
+        "stop" : 1746659511583,
+        "duration" : 2524
       },
       "status" : "passed",
       "steps" : [ ],
@@ -107,8 +107,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1746658712169,
-        "stop" : 1746658714169,
+        "start" : 1746659511583,
+        "stop" : 1746659513583,
         "duration" : 2000
       },
       "status" : "passed",
@@ -122,9 +122,9 @@
     }, {
       "name" : "I scroll to \".btn.btn-link.btn-lg\"",
       "time" : {
-        "start" : 1746658714169,
-        "stop" : 1746658714316,
-        "duration" : 147
+        "start" : 1746659513583,
+        "stop" : 1746659513718,
+        "duration" : 135
       },
       "status" : "passed",
       "steps" : [ ],
@@ -137,9 +137,9 @@
     }, {
       "name" : "I wait for visible \".btn.btn-link.btn-lg\", 5",
       "time" : {
-        "start" : 1746658714317,
-        "stop" : 1746658714320,
-        "duration" : 3
+        "start" : 1746659513718,
+        "stop" : 1746659513722,
+        "duration" : 4
       },
       "status" : "passed",
       "steps" : [ ],
@@ -152,9 +152,9 @@
     }, {
       "name" : "I click \".btn.btn-link.btn-lg\"",
       "time" : {
-        "start" : 1746658714320,
-        "stop" : 1746658714540,
-        "duration" : 220
+        "start" : 1746659513722,
+        "stop" : 1746659513957,
+        "duration" : 235
       },
       "status" : "passed",
       "steps" : [ ],
@@ -167,9 +167,9 @@
     }, {
       "name" : "I say \"Click en el botón 'Ver todos los Planes' realizado\"",
       "time" : {
-        "start" : 1746658714540,
-        "stop" : 1746658714541,
-        "duration" : 1
+        "start" : 1746659513957,
+        "stop" : 1746659513957,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -182,9 +182,9 @@
     }, {
       "name" : "I wait for element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\", 5",
       "time" : {
-        "start" : 1746658714541,
-        "stop" : 1746658715876,
-        "duration" : 1335
+        "start" : 1746659513957,
+        "stop" : 1746659516691,
+        "duration" : 2734
       },
       "status" : "passed",
       "steps" : [ ],
@@ -197,9 +197,9 @@
     }, {
       "name" : "I see element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\"",
       "time" : {
-        "start" : 1746658715876,
-        "stop" : 1746658715880,
-        "duration" : 4
+        "start" : 1746659516691,
+        "stop" : 1746659516693,
+        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
@@ -212,8 +212,8 @@
     }, {
       "name" : "I say \"Verificación de Telcel Plus exitosa\"",
       "time" : {
-        "start" : 1746658715880,
-        "stop" : 1746658715880,
+        "start" : 1746659516693,
+        "stop" : 1746659516693,
         "duration" : 0
       },
       "status" : "passed",
@@ -235,9 +235,9 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1746658715881,
-      "stop" : 1746658715893,
-      "duration" : 12
+      "start" : 1746659516694,
+      "stop" : 1746659516704,
+      "duration" : 10
     },
     "status" : "passed",
     "steps" : [ ],
@@ -250,8 +250,8 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1746658759166,
-      "stop" : 1746658759166,
+      "start" : 1746659561011,
+      "stop" : 1746659561011,
       "duration" : 0
     },
     "status" : "passed",
@@ -271,10 +271,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1336-113"
+    "value" : "fv-az1314-295"
   }, {
     "name" : "thread",
-    "value" : "pid-2518-worker-main"
+    "value" : "pid-2539-worker-main"
   }, {
     "name" : "package",
     "value" : "features.telcel.feature"
@@ -295,6 +295,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "c35d7be20add7985.json",
+  "source" : "2047d62ba5f6acd1.json",
   "parameterValues" : [ ]
 }

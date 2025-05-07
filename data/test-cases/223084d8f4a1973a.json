@@ -1,12 +1,12 @@
 {
-  "uid" : "58a52a1e1b6020a2",
-  "name" : "Validación de una búsqueda en YouTube @probando",
-  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validación de una búsqueda en YouTube @probando",
-  "historyId" : "584c173951398d38c9151232c626db43:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "223084d8f4a1973a",
+  "name" : "Validación de duración de video en campo oculto @probando",
+  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validación de duración de video en campo oculto @probando",
+  "historyId" : "71d50341b628dc9f91cf9b5ccbe39ff7:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1746658643048,
-    "stop" : 1746658649299,
-    "duration" : 6251
+    "start" : 1746659467187,
+    "stop" : 1746659472977,
+    "duration" : 5790
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1746658634260,
-      "stop" : 1746658634497,
-      "duration" : 237
+      "start" : 1746659438534,
+      "stop" : 1746659438688,
+      "duration" : 154
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,17 +29,17 @@
   }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1746658643083,
-      "stop" : 1746658646643,
-      "duration" : 3560
+      "start" : 1746659467217,
+      "stop" : 1746659470546,
+      "duration" : 3329
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1746658643089,
-        "stop" : 1746658643090,
-        "duration" : 1
+        "start" : 1746659467220,
+        "stop" : 1746659467220,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -52,9 +52,9 @@
     }, {
       "name" : "I am on page \"https://www.youtube.com\"",
       "time" : {
-        "start" : 1746658643091,
-        "stop" : 1746658644567,
-        "duration" : 1476
+        "start" : 1746659467220,
+        "stop" : 1746659468476,
+        "duration" : 1256
       },
       "status" : "passed",
       "steps" : [ ],
@@ -67,9 +67,9 @@
     }, {
       "name" : "I wait for element \"input[name=\"search_query\"]\", 10",
       "time" : {
-        "start" : 1746658644567,
-        "stop" : 1746658644641,
-        "duration" : 74
+        "start" : 1746659468476,
+        "stop" : 1746659468544,
+        "duration" : 68
       },
       "status" : "passed",
       "steps" : [ ],
@@ -82,8 +82,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1746658644641,
-        "stop" : 1746658646642,
+        "start" : 1746659468544,
+        "stop" : 1746659470545,
         "duration" : 2001
       },
       "status" : "passed",
@@ -104,9 +104,9 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1746658643049,
-      "stop" : 1746658643083,
-      "duration" : 34
+      "start" : 1746659467187,
+      "stop" : 1746659467217,
+      "duration" : 30
     },
     "status" : "passed",
     "steps" : [ ],
@@ -120,25 +120,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "When realizo una búsqueda con el texto \"Falling In Reverse\"",
+      "name" : "Given realizo una búsqueda con el texto \"lofi-music\"",
       "time" : {
-        "start" : 1746658646648,
-        "stop" : 1746658646648,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "Then Verifico que al menos un resultado contenga \"Falling In Reverse\"",
-      "time" : {
-        "start" : 1746658646651,
-        "stop" : 1746658646652,
+        "start" : 1746659470548,
+        "stop" : 1746659470549,
         "duration" : 1
       },
       "status" : "passed",
@@ -150,48 +135,18 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And Verifico que el primer resultado muestre una miniatura visible",
+      "name" : "Then verifico que el primer resultado contiene un campo con la duración",
       "time" : {
-        "start" : 1746658646653,
-        "stop" : 1746658646654,
-        "duration" : 1
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And Verifico que el primer resultado muestre un título visible",
-      "time" : {
-        "start" : 1746658646656,
-        "stop" : 1746658646656,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And Verifico que el primer resultado contenga una duración en formato mm:ss",
-      "time" : {
-        "start" : 1746658646658,
-        "stop" : 1746658649299,
-        "duration" : 2641
+        "start" : 1746659470552,
+        "stop" : 1746659472926,
+        "duration" : 2374
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
         "time" : {
-          "start" : 1746658646658,
-          "stop" : 1746658646661,
+          "start" : 1746659470552,
+          "stop" : 1746659470555,
           "duration" : 3
         },
         "status" : "passed",
@@ -203,11 +158,11 @@
         "shouldDisplayMessage" : false,
         "hasContent" : false
       }, {
-        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Falling In Reverse\"",
+        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"lofi-music\"",
         "time" : {
-          "start" : 1746658646662,
-          "stop" : 1746658647072,
-          "duration" : 410
+          "start" : 1746659470555,
+          "stop" : 1746659470813,
+          "duration" : 258
         },
         "status" : "passed",
         "steps" : [ ],
@@ -220,9 +175,9 @@
       }, {
         "name" : "I press key \"Enter\"",
         "time" : {
-          "start" : 1746658647072,
-          "stop" : 1746658647210,
-          "duration" : 138
+          "start" : 1746659470813,
+          "stop" : 1746659470925,
+          "duration" : 112
         },
         "status" : "passed",
         "steps" : [ ],
@@ -235,9 +190,9 @@
       }, {
         "name" : "I wait 2",
         "time" : {
-          "start" : 1746658647210,
-          "stop" : 1746658649210,
-          "duration" : 2000
+          "start" : 1746659470925,
+          "stop" : 1746659472926,
+          "duration" : 2001
         },
         "status" : "passed",
         "steps" : [ ],
@@ -248,10 +203,10 @@
         "shouldDisplayMessage" : false,
         "hasContent" : false
       }, {
-        "name" : "I say \"Buscando frase: Falling In Reverse\"",
+        "name" : "I say \"Buscando frase: lofi-music\"",
         "time" : {
-          "start" : 1746658649210,
-          "stop" : 1746658649210,
+          "start" : 1746659472926,
+          "stop" : 1746659472926,
           "duration" : 0
         },
         "status" : "passed",
@@ -270,26 +225,101 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
-      "name" : "I wait for element \"a#video-title\", 10",
+      "name" : "I wait for element \"(//span[@class=\"style-scope ytd-thumbnail-overlay-time-status-renderer\"])[1]\", 5",
       "time" : {
-        "start" : 1746658649211,
-        "stop" : 1746658649218,
+        "start" : 1746659472926,
+        "stop" : 1746659472948,
+        "duration" : 22
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And verifico que dicho campo está oculto",
+      "time" : {
+        "start" : 1746659472951,
+        "stop" : 1746659472951,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I say \"Existe el campo de duración\"",
+        "time" : {
+          "start" : 1746659472951,
+          "stop" : 1746659472951,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I grab attribute from (//span[@class=\"style-scope ytd-thumbnail-overlay-time-status-renderer\"])[1]/.., \"hidden\"",
+      "time" : {
+        "start" : 1746659472952,
+        "stop" : 1746659472966,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And verifico que la duración tiene un formato válido",
+      "time" : {
+        "start" : 1746659472970,
+        "stop" : 1746659472977,
         "duration" : 7
       },
       "status" : "passed",
-      "steps" : [ ],
+      "steps" : [ {
+        "name" : "I say \"El campo de duración está oculto\"",
+        "time" : {
+          "start" : 1746659472970,
+          "stop" : 1746659472970,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
+      "stepsCount" : 1,
       "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "hasContent" : true
     }, {
-      "name" : "I wait for element \"(//img[@class=\"yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded\"])[1]\", 10",
+      "name" : "I grab text from \"(//span[@class=\"style-scope ytd-thumbnail-overlay-time-status-renderer\"])[1]\"",
       "time" : {
-        "start" : 1746658649218,
-        "stop" : 1746658649220,
-        "duration" : 2
+        "start" : 1746659472970,
+        "stop" : 1746659472976,
+        "duration" : 6
       },
       "status" : "passed",
       "steps" : [ ],
@@ -300,100 +330,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait for element \"a#video-title\", 10",
+      "name" : "I say \"Texto de duración: 6:10:58\"",
       "time" : {
-        "start" : 1746658649220,
-        "stop" : 1746658649224,
-        "duration" : 4
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for element \"(//div[@class=\"badge-shape-wiz__text\"])[2]\", 10",
-      "time" : {
-        "start" : 1746658649224,
-        "stop" : 1746658649227,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I grab text from all \"a#video-title\"",
-      "time" : {
-        "start" : 1746658649228,
-        "stop" : 1746658649289,
-        "duration" : 61
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I grab attribute from \"(//img[@class=\"yt-core-image yt-core-image--fill-parent-height yt-core-image--fill-parent-width yt-core-image--content-mode-scale-aspect-fill yt-core-image--loaded\"])[1]\", \"src\"",
-      "time" : {
-        "start" : 1746658649289,
-        "stop" : 1746658649292,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I grab text from \"a#video-title\"",
-      "time" : {
-        "start" : 1746658649292,
-        "stop" : 1746658649295,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I grab text from \"(//div[@class=\"badge-shape-wiz__text\"])[2]\"",
-      "time" : {
-        "start" : 1746658649296,
-        "stop" : 1746658649298,
-        "duration" : 2
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I say \"¡Video encontrado: Falling In Reverse - \"Watch The World Burn\"\"",
-      "time" : {
-        "start" : 1746658649298,
-        "stop" : 1746658649298,
+        "start" : 1746659472977,
+        "stop" : 1746659472977,
         "duration" : 0
       },
       "status" : "passed",
@@ -405,40 +345,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I say \"Miniatura visible y cargada correctamente.\"",
+      "name" : "I say \"El formato de duración es válido:\"",
       "time" : {
-        "start" : 1746658649298,
-        "stop" : 1746658649298,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I say \"Título visible: \n            \n            Falling In Reverse - \"Watch The World Burn\"\n          \"",
-      "time" : {
-        "start" : 1746658649298,
-        "stop" : 1746658649298,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I say \"Duración del video en formato correcto: \"",
-      "time" : {
-        "start" : 1746658649298,
-        "stop" : 1746658649298,
+        "start" : 1746659472977,
+        "stop" : 1746659472977,
         "duration" : 0
       },
       "status" : "passed",
@@ -452,17 +362,17 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 22,
+    "stepsCount" : 16,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1746658649299,
-      "stop" : 1746658649305,
-      "duration" : 6
+      "start" : 1746659496143,
+      "stop" : 1746659496144,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -473,11 +383,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1746658696600,
-      "stop" : 1746658696600,
-      "duration" : 0
+      "start" : 1746659472978,
+      "stop" : 1746659472983,
+      "duration" : 5
     },
     "status" : "passed",
     "steps" : [ ],
@@ -496,10 +406,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1336-113"
+    "value" : "fv-az1314-295"
   }, {
     "name" : "thread",
-    "value" : "pid-2518-worker-main"
+    "value" : "pid-2539-worker-main"
   }, {
     "name" : "package",
     "value" : "features.youtubeGeneral.feature"
@@ -523,6 +433,6 @@
     "categories" : [ ],
     "tags" : [ "probando" ]
   },
-  "source" : "58a52a1e1b6020a2.json",
+  "source" : "223084d8f4a1973a.json",
   "parameterValues" : [ ]
 }
