@@ -5,10 +5,8 @@ const { I } = inject();
 
 Given('el usuario está en la página principal de YouTube', async () => {
   I.amOnPage('https://www.youtube.com');
-  const currUrl = await I.grabCurrentUrl();
-  console.log(`URL actual: ${currUrl}`);
-  I.waitForElement('button[aria-label="Guía"]', 20); 
-  I.click('button[aria-label="Guía"]'); 
+  I.waitForElement('//button[@aria-label="Guía"]', 20); 
+  I.click('//button[@aria-label="Guía"]'); 
 });
 
 When('haces clic en el botón "Explorar"', async () => {
