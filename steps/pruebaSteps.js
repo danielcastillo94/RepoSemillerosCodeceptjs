@@ -4,7 +4,7 @@ const PruebaPage = require("../pages/pruebaPage");
 const { I } = inject();
 
 Given('el usuario está en la página principal de YouTube', async () => {
-  I.amOnPage('https://www.youtube.com');
+  I.amOnPage('https://www.youtube.com/mx');
   I.waitForElement('//button[@aria-label="Guía"]', 20); 
   I.click('//button[@aria-label="Guía"]'); 
 });
