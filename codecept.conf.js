@@ -24,5 +24,12 @@ exports.config = {
     features: "./features/*.feature",
     steps: ["./steps/pruebaSteps.js", "./steps/loginSteps.js", "./steps/youtubeLoginSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js", './steps/telcelSteps.js', "./steps/videoYoutubeSteps.js",],
   },
+  plugins: {
+    allure: {
+      enabled: true,
+      require: "allure-codeceptjs",
+      resultsDir: "allure-results",
+    },
+  },
   name: 'Actividad youtube'
 };
