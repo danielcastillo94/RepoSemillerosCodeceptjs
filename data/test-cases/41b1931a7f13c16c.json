@@ -1,21 +1,36 @@
 {
-  "uid" : "6af5d6f4151eb15c",
-  "name" : "Validar el boton del login",
-  "fullName" : "features/loginYoutube.feature: Validaciones del login en youtube > Validar el boton del login",
-  "historyId" : "29a39961c2c415a7960495d3ba0f4fde:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "41b1931a7f13c16c",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"} @probando",
+  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"} @probando",
+  "historyId" : "2045fca6591eb01280d9981d9ec669fd:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1746658086986,
-    "stop" : 1746658095894,
-    "duration" : 8908
+    "start" : 1746658676327,
+    "stop" : 1746658682263,
+    "duration" : 5936
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1746658634260,
+      "stop" : 1746658634497,
+      "duration" : 237
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1746658086986,
-      "stop" : 1746658087013,
+      "start" : 1746658676327,
+      "stop" : 1746658676354,
       "duration" : 27
     },
     "status" : "passed",
@@ -27,28 +42,18 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1746658086985,
-      "stop" : 1746658086985,
-      "duration" : 0
+      "start" : 1746658676354,
+      "stop" : 1746658679831,
+      "duration" : 3477
     },
     "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  } ],
-  "testStage" : {
-    "status" : "passed",
     "steps" : [ {
-      "name" : "Given Estoy en la pagina de youtube",
+      "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1746658087015,
-        "stop" : 1746658087015,
+        "start" : 1746658676356,
+        "stop" : 1746658676356,
         "duration" : 0
       },
       "status" : "passed",
@@ -60,11 +65,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When Presiono el boton de login",
+      "name" : "I am on page \"https://www.youtube.com\"",
       "time" : {
-        "start" : 1746658087016,
-        "stop" : 1746658087016,
-        "duration" : 0
+        "start" : 1746658676356,
+        "stop" : 1746658677780,
+        "duration" : 1424
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,71 +80,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then Valido si la loginpage tiene el login",
+      "name" : "I wait for element \"input[name=\"search_query\"]\", 10",
       "time" : {
-        "start" : 1746658087017,
-        "stop" : 1746658095894,
-        "duration" : 8877
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I am on page \"https://www.youtube.com/\"",
-      "time" : {
-        "start" : 1746658087017,
-        "stop" : 1746658088305,
-        "duration" : 1288
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for element \"(//yt-icon[@id=\"logo-icon\"])[1]\", 20",
-      "time" : {
-        "start" : 1746658088305,
-        "stop" : 1746658088381,
-        "duration" : 76
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for visible \"(//a[@aria-label=\"Acceder\"])[1]\", 20",
-      "time" : {
-        "start" : 1746658088381,
-        "stop" : 1746658088436,
-        "duration" : 55
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I click \"(//a[@aria-label=\"Acceder\"])[1]\"",
-      "time" : {
-        "start" : 1746658088436,
-        "stop" : 1746658088890,
-        "duration" : 454
+        "start" : 1746658677780,
+        "stop" : 1746658677830,
+        "duration" : 50
       },
       "status" : "passed",
       "steps" : [ ],
@@ -152,9 +97,34 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1746658088891,
-        "stop" : 1746658090890,
-        "duration" : 1999
+        "start" : 1746658677830,
+        "stop" : 1746658679831,
+        "duration" : 2001
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given realizo una búsqueda con el texto \"lorem ipsum\"",
+      "time" : {
+        "start" : 1746658679834,
+        "stop" : 1746658679835,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -165,11 +135,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait 5",
+      "name" : "Then debería ver: \"Campo de búsqueda\"",
       "time" : {
-        "start" : 1746658090890,
-        "stop" : 1746658095891,
-        "duration" : 5001
+        "start" : 1746658679836,
+        "stop" : 1746658682262,
+        "duration" : 2426
       },
       "status" : "passed",
       "steps" : [ ],
@@ -180,10 +150,85 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I see \"Inicia sesión\"",
+      "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
       "time" : {
-        "start" : 1746658095891,
-        "stop" : 1746658095894,
+        "start" : 1746658679836,
+        "stop" : 1746658679839,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I fill field \"//input[@name=\"search_query\"]\", \"lorem ipsum\"",
+      "time" : {
+        "start" : 1746658679839,
+        "stop" : 1746658680117,
+        "duration" : 278
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I press key \"Enter\"",
+      "time" : {
+        "start" : 1746658680117,
+        "stop" : 1746658680258,
+        "duration" : 141
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 2",
+      "time" : {
+        "start" : 1746658680258,
+        "stop" : 1746658682259,
+        "duration" : 2001
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I say \"Buscando frase: lorem ipsum\"",
+      "time" : {
+        "start" : 1746658682259,
+        "stop" : 1746658682259,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see element \"//input[@name=\"search_query\"]\"",
+      "time" : {
+        "start" : 1746658682259,
+        "stop" : 1746658682262,
         "duration" : 3
       },
       "status" : "passed",
@@ -197,17 +242,17 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 10,
+    "stepsCount" : 8,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1746658095894,
-      "stop" : 1746658095901,
-      "duration" : 7
+      "start" : 1746658696600,
+      "stop" : 1746658696600,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -218,11 +263,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1746658095901,
-      "stop" : 1746658095901,
-      "duration" : 0
+      "start" : 1746658682263,
+      "stop" : 1746658682269,
+      "duration" : 6
     },
     "status" : "passed",
     "steps" : [ ],
@@ -241,16 +286,19 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az813-883"
+    "value" : "fv-az1336-113"
   }, {
     "name" : "thread",
-    "value" : "pid-2478-worker-main"
+    "value" : "pid-2518-worker-main"
   }, {
     "name" : "package",
-    "value" : "features.loginYoutube.feature"
+    "value" : "features.youtubeGeneral.feature"
+  }, {
+    "name" : "tag",
+    "value" : "probando"
   }, {
     "name" : "parentSuite",
-    "value" : "Validaciones del login en youtube"
+    "value" : "Validaciones funcionales en la plataforma de YouTube"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -263,8 +311,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ ]
+    "tags" : [ "probando" ]
   },
-  "source" : "6af5d6f4151eb15c.json",
+  "source" : "41b1931a7f13c16c.json",
   "parameterValues" : [ ]
 }

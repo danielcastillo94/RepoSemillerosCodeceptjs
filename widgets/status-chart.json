@@ -1,150 +1,150 @@
 [ {
-  "uid" : "a6fd3c5b9e3f9934",
-  "name" : "Buscar plan Telcel Plus",
-  "time" : {
-    "start" : 1746658026285,
-    "stop" : 1746658032441,
-    "duration" : 6156
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "cc907629d3e67221",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"} @probando",
-  "time" : {
-    "start" : 1746658001745,
-    "stop" : 1746658007521,
-    "duration" : 5776
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f0678907f700229e",
-  "name" : "Navegar al canal @probando",
-  "time" : {
-    "start" : 1746657969879,
-    "stop" : 1746657984271,
-    "duration" : 14392
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "44405af1413783cd",
-  "name" : "Validar título y videos relacionados",
-  "time" : {
-    "start" : 1746658013370,
-    "stop" : 1746658026277,
-    "duration" : 12907
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fc58dc3a7c562ac7",
-  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-  "time" : {
-    "start" : 1746658077058,
-    "stop" : 1746658086979,
-    "duration" : 9921
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ab9ac761d0b761ac",
+  "uid" : "54225a146da3a7e2",
   "name" : "Validar el atributo href @enlaces",
   "time" : {
-    "start" : 1746658095902,
-    "stop" : 1746658099079,
-    "duration" : 3177
+    "start" : 1746658774779,
+    "stop" : 1746658777753,
+    "duration" : 2974
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "6fc6453f5af8e36a",
+  "uid" : "bd4a8f654616e2b0",
   "name" : "Validación de duración de video en campo oculto @probando",
   "time" : {
-    "start" : 1746657984300,
-    "stop" : 1746657990089,
-    "duration" : 5789
+    "start" : 1746658663933,
+    "stop" : 1746658670090,
+    "duration" : 6157
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "99f112997273e1aa",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"} @probando",
+  "uid" : "36a0dcdd315ac8e7",
+  "name" : "Navegar al canal @probando",
   "time" : {
-    "start" : 1746657990097,
-    "stop" : 1746657995917,
-    "duration" : 5820
+    "start" : 1746658649306,
+    "stop" : 1746658663905,
+    "duration" : 14599
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "21814691e07e6b66",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"} @probando",
+  "uid" : "ec298dc31fd67415",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"} @probando",
   "time" : {
-    "start" : 1746657995925,
-    "stop" : 1746658001738,
-    "duration" : 5813
+    "start" : 1746658682270,
+    "stop" : 1746658690568,
+    "duration" : 8298
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "cb057e44d265adce",
-  "name" : "Recargar saldo de $100",
-  "time" : {
-    "start" : 1746658032451,
-    "stop" : 1746658052751,
-    "duration" : 20300
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6af5d6f4151eb15c",
-  "name" : "Validar el boton del login",
-  "time" : {
-    "start" : 1746658086986,
-    "stop" : 1746658095894,
-    "duration" : 8908
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5ecdd18937345681",
-  "name" : "Validar fecha de publicación reciente @probando",
-  "time" : {
-    "start" : 1746657955579,
-    "stop" : 1746657963763,
-    "duration" : 8184
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fad2295f3dd48811",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"} @probando",
-  "time" : {
-    "start" : 1746658007528,
-    "stop" : 1746658013359,
-    "duration" : 5831
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2d10196bdb9c53cf",
+  "uid" : "c0b751fb17d82001",
   "name" : "Validar sección Contáctanos",
   "time" : {
-    "start" : 1746658052769,
-    "stop" : 1746658077047,
-    "duration" : 24278
+    "start" : 1746658734743,
+    "stop" : 1746658759156,
+    "duration" : 24413
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "33e09f8cbb3c2348",
+  "uid" : "58a52a1e1b6020a2",
   "name" : "Validación de una búsqueda en YouTube @probando",
   "time" : {
-    "start" : 1746657963774,
-    "stop" : 1746657969873,
-    "duration" : 6099
+    "start" : 1746658643048,
+    "stop" : 1746658649299,
+    "duration" : 6251
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "31f9ee5fb6b0f4cb",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "time" : {
+    "start" : 1746658759168,
+    "stop" : 1746658765628,
+    "duration" : 6460
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "237ef819969bf861",
+  "name" : "Validar título y videos relacionados",
+  "time" : {
+    "start" : 1746658696604,
+    "stop" : 1746658709762,
+    "duration" : 13158
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "471af3b3532150f4",
+  "name" : "Validar el boton del login",
+  "time" : {
+    "start" : 1746658765637,
+    "stop" : 1746658774772,
+    "duration" : 9135
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a2c4c4a9a65bbe3c",
+  "name" : "Recargar saldo de $100",
+  "time" : {
+    "start" : 1746658715893,
+    "stop" : 1746658734725,
+    "duration" : 18832
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9ebe24e029343050",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"} @probando",
+  "time" : {
+    "start" : 1746658670098,
+    "stop" : 1746658676319,
+    "duration" : 6221
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c35d7be20add7985",
+  "name" : "Buscar plan Telcel Plus",
+  "time" : {
+    "start" : 1746658709772,
+    "stop" : 1746658715880,
+    "duration" : 6108
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cb9954b58e3ff85",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"} @probando",
+  "time" : {
+    "start" : 1746658690575,
+    "stop" : 1746658696594,
+    "duration" : 6019
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "41b1931a7f13c16c",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"} @probando",
+  "time" : {
+    "start" : 1746658676327,
+    "stop" : 1746658682263,
+    "duration" : 5936
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "232d7fe4f7099bdc",
+  "name" : "Validar fecha de publicación reciente @probando",
+  "time" : {
+    "start" : 1746658634499,
+    "stop" : 1746658643033,
+    "duration" : 8534
   },
   "status" : "passed",
   "severity" : "normal"
