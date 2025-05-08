@@ -1,15 +1,26 @@
 {
-  "total" : 6,
+  "total" : 7,
   "items" : [ {
+    "uid" : "5bab7746f6451e92df08cfa66df9145d",
+    "name" : "Validación de carga inicial y elementos clave en la página de YouTube",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
     "uid" : "c54abeb43e2e6c341a979d109d63cf8e",
     "name" : "Validaciones funcionales en la plataforma de YouTube",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 7,
       "unknown" : 0,
-      "total" : 8
+      "total" : 7
     }
   }, {
     "uid" : "a33775243f021d8b3a19aacdf2004620",

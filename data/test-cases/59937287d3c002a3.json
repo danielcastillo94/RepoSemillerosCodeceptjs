@@ -1,22 +1,22 @@
 {
-  "uid" : "825058077628ec9b",
+  "uid" : "59937287d3c002a3",
   "name" : "Validar el atributo href @enlaces",
   "fullName" : "features/dailyMotion.feature: Validaciones funcionales en dailyMotion > Validar el atributo href @enlaces",
   "historyId" : "db052455e3ef44994695ac24b2f1e2d2:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1746659576013,
-    "stop" : 1746659579236,
-    "duration" : 3223
+    "start" : 1746723599572,
+    "stop" : 1746723602652,
+    "duration" : 3080
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1746659576013,
-      "stop" : 1746659576040,
-      "duration" : 27
+      "start" : 1746723599571,
+      "stop" : 1746723599572,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1746659576013,
-      "stop" : 1746659576013,
-      "duration" : 0
+      "start" : 1746723599572,
+      "stop" : 1746723599601,
+      "duration" : 29
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,9 +47,9 @@
     "steps" : [ {
       "name" : "Given Estoy en la pagina de Daily Motion",
       "time" : {
-        "start" : 1746659576041,
-        "stop" : 1746659576042,
-        "duration" : 1
+        "start" : 1746723599603,
+        "stop" : 1746723599603,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -62,8 +62,8 @@
     }, {
       "name" : "When Presiono el boton de Explorar",
       "time" : {
-        "start" : 1746659576043,
-        "stop" : 1746659576043,
+        "start" : 1746723599604,
+        "stop" : 1746723599604,
         "duration" : 0
       },
       "status" : "passed",
@@ -77,17 +77,17 @@
     }, {
       "name" : "Then Valido si el href contiene explore",
       "time" : {
-        "start" : 1746659576044,
-        "stop" : 1746659579236,
-        "duration" : 3192
+        "start" : 1746723599605,
+        "stop" : 1746723602651,
+        "duration" : 3046
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "I am on page \"https://www.dailymotion.com/mx\"",
         "time" : {
-          "start" : 1746659576044,
-          "stop" : 1746659577088,
-          "duration" : 1044
+          "start" : 1746723599605,
+          "stop" : 1746723600502,
+          "duration" : 897
         },
         "status" : "passed",
         "steps" : [ ],
@@ -100,8 +100,8 @@
       }, {
         "name" : "I wait 2",
         "time" : {
-          "start" : 1746659577088,
-          "stop" : 1746659579088,
+          "start" : 1746723600503,
+          "stop" : 1746723602503,
           "duration" : 2000
         },
         "status" : "passed",
@@ -115,9 +115,9 @@
       }, {
         "name" : "I wait for element \"//main//a[@href=\"/mx\"]\", 20",
         "time" : {
-          "start" : 1746659579088,
-          "stop" : 1746659579091,
-          "duration" : 3
+          "start" : 1746723602503,
+          "stop" : 1746723602507,
+          "duration" : 4
         },
         "status" : "passed",
         "steps" : [ ],
@@ -130,9 +130,9 @@
       }, {
         "name" : "I click \"//main//a[@href=\"/mx\"]\"",
         "time" : {
-          "start" : 1746659579091,
-          "stop" : 1746659579232,
-          "duration" : 141
+          "start" : 1746723602507,
+          "stop" : 1746723602647,
+          "duration" : 140
         },
         "status" : "passed",
         "steps" : [ ],
@@ -145,8 +145,8 @@
       }, {
         "name" : "I grab attribute from \"//main//a[@href=\"/mx\"]\", \"href\"",
         "time" : {
-          "start" : 1746659579232,
-          "stop" : 1746659579235,
+          "start" : 1746723602647,
+          "stop" : 1746723602650,
           "duration" : 3
         },
         "status" : "passed",
@@ -167,8 +167,8 @@
     }, {
       "name" : "I say \"HREF capturado: /mx\"",
       "time" : {
-        "start" : 1746659579236,
-        "stop" : 1746659579236,
+        "start" : 1746723602651,
+        "stop" : 1746723602651,
         "duration" : 0
       },
       "status" : "passed",
@@ -188,11 +188,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1746659579236,
-      "stop" : 1746659579239,
-      "duration" : 3
+      "start" : 1746723602655,
+      "stop" : 1746723602655,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -203,11 +203,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1746659579239,
-      "stop" : 1746659579239,
-      "duration" : 0
+      "start" : 1746723602652,
+      "stop" : 1746723602655,
+      "duration" : 3
     },
     "status" : "passed",
     "steps" : [ ],
@@ -226,10 +226,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1314-295"
+    "value" : "fv-az1964-355"
   }, {
     "name" : "thread",
-    "value" : "pid-2539-worker-main"
+    "value" : "pid-2496-worker-main"
   }, {
     "name" : "package",
     "value" : "features.dailyMotion.feature"
@@ -253,6 +253,6 @@
     "categories" : [ ],
     "tags" : [ "enlaces" ]
   },
-  "source" : "825058077628ec9b.json",
+  "source" : "59937287d3c002a3.json",
   "parameterValues" : [ ]
 }
