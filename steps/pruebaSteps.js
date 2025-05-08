@@ -2,18 +2,20 @@
 
 const PruebaPage = require("../pages/pruebaPage");
 const { I } = inject();
+const { expect } = require("chai");
 
 Given('el usuario está en la página principal de YouTube', async () => {
-  I.amOnPage('https://www.youtube.com');
-  I.waitForElement('button[aria-label="Guía"]', 10); 
-  I.click('button[aria-label="Guía"]'); 
-  I.wait(4);
+  
+  I.amOnPage("https://www.youtube.com");
+  I.waitForElement('//div[@id="start"]/yt-icon-button[@id="guide-button"]', 20); 
+  I.click('//div[@id="start"]/yt-icon-button[@id="guide-button"]'); 
 });
 
 When('haces clic en el botón "Explorar"', async () => {
-  const xpathExplorar = '//*[@id="guide-section-title"][contains(text(), "Explorar")]';
-  I.waitForElement(xpathExplorar, 20);
-  I.scrollTo(xpathExplorar);
+  I.waitForElement(
+    '(//h3[not(@hidden)]/yt-formatted-string[@id="guide-section-title"])[1]'
+  );
+
 });
 
 Then('debería ver las categorías "Tendencias", "Música" y "Noticias"', async () => {

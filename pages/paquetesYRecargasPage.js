@@ -19,10 +19,9 @@ class PaquetesYRecargasPage {
 
     // Cambiar al contexto del iframe
     within({ frame: this.fields.iframe }, () => {
-      I.waitForVisible(this.fields.numeroInput, 10);
+      I.waitForVisible(this.fields.numeroInput, 20),
+      I.waitForVisible(this.fields.numeroValidator, 20),
       I.fillField(this.fields.numeroInput, numero);
-
-      I.waitForVisible(this.fields.numeroValidator, 10);
       I.fillField(this.fields.numeroValidator, numero);
     });
 

@@ -1,7 +1,7 @@
 #Angela
 
 Feature: Validación del botón "Explorar" y navegación en YouTube
-
+@test
   Scenario: Usuario hace clic en "Explorar" y navega a la categoría Música
     Given el usuario está en la página principal de YouTube
     When haces clic en el botón "Explorar"
