@@ -22,16 +22,21 @@ class YoutubeMainPage {
     }
   
     async verificarCampoBusqueda() {
-      await I.seeElement('input#search'); // ya es correcto
+      await I.seeElement('//input[@class="ytSearchboxComponentInput yt-searchbox-input title"]'); // ya es correcto
     }
   
     async verificarBotonIniciarSesion() {
-      await I.seeElement('ytd-button-renderer#sign-in-button, tp-yt-paper-button[aria-label="Iniciar sesión"]');
+      await I.seeElement('(//div[@class="yt-spec-touch-feedback-shape__fill"])[3]');
     }
   
     async verificarMiniaturas() {
-      await I.seeNumberOfElements('ytd-rich-grid-media', 10);
-    }  
+      const elements = await I.grabNumberOfVisibleElements('ytd-rich-grid-media');
+      if (elements >= 10) {
+        throw new Error(`Se esperaban al menos 10 miniaturas, pero solo se encontraron ${elements}`);
+      }
+    }
+    
+
     async searchVideo(phrase){
         await I.waitForElement(this.fields.searchBar, 5);
         await I.fillField(this.fields.searchBar, phrase);
