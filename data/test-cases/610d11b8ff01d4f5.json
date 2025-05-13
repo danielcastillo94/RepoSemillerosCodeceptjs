@@ -1,37 +1,22 @@
 {
-  "uid" : "7b93c79f60e296d8",
+  "uid" : "610d11b8ff01d4f5",
   "name" : "Validar título y videos relacionados",
   "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados > Validar título y videos relacionados",
   "historyId" : "b2b62854e2bdbec47b205eda12220677:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747161423884,
-    "stop" : 1747161439033,
-    "duration" : 15149
+    "start" : 1747161432845,
+    "stop" : 1747161445564,
+    "duration" : 12719
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747161423885,
-      "stop" : 1747161423916,
-      "duration" : 31
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747161423884,
-      "stop" : 1747161423884,
-      "duration" : 0
+      "start" : 1747161432844,
+      "stop" : 1747161432845,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,16 +29,16 @@
   }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747161423916,
-      "stop" : 1747161433159,
-      "duration" : 9243
+      "start" : 1747161432878,
+      "stop" : 1747161439916,
+      "duration" : 7038
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747161423918,
-        "stop" : 1747161423919,
+        "start" : 1747161432879,
+        "stop" : 1747161432880,
         "duration" : 1
       },
       "status" : "passed",
@@ -67,8 +52,8 @@
     }, {
       "name" : "When busco el video \"Falling In Reverse\"",
       "time" : {
-        "start" : 1747161423923,
-        "stop" : 1747161423923,
+        "start" : 1747161432883,
+        "stop" : 1747161432883,
         "duration" : 0
       },
       "status" : "passed",
@@ -82,9 +67,9 @@
     }, {
       "name" : "I am on page \"https://www.youtube.com\"",
       "time" : {
-        "start" : 1747161423923,
-        "stop" : 1747161427435,
-        "duration" : 3512
+        "start" : 1747161432883,
+        "stop" : 1747161434255,
+        "duration" : 1372
       },
       "status" : "passed",
       "steps" : [ ],
@@ -97,9 +82,9 @@
     }, {
       "name" : "I wait for element \"input[name=\"search_query\"]\", 10",
       "time" : {
-        "start" : 1747161427435,
-        "stop" : 1747161427439,
-        "duration" : 4
+        "start" : 1747161434256,
+        "stop" : 1747161434319,
+        "duration" : 63
       },
       "status" : "passed",
       "steps" : [ ],
@@ -112,8 +97,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747161427439,
-        "stop" : 1747161429439,
+        "start" : 1747161434319,
+        "stop" : 1747161436319,
         "duration" : 2000
       },
       "status" : "passed",
@@ -127,9 +112,9 @@
     }, {
       "name" : "I fill field \"input[name=\"search_query\"]\", \"Falling In Reverse\"",
       "time" : {
-        "start" : 1747161429439,
-        "stop" : 1747161432094,
-        "duration" : 2655
+        "start" : 1747161436319,
+        "stop" : 1747161438923,
+        "duration" : 2604
       },
       "status" : "passed",
       "steps" : [ ],
@@ -142,9 +127,9 @@
     }, {
       "name" : "I press key \"Enter\"",
       "time" : {
-        "start" : 1747161432094,
-        "stop" : 1747161432270,
-        "duration" : 176
+        "start" : 1747161438923,
+        "stop" : 1747161439062,
+        "duration" : 139
       },
       "status" : "passed",
       "steps" : [ ],
@@ -157,9 +142,9 @@
     }, {
       "name" : "I wait for element \"ytd-video-renderer\", 10",
       "time" : {
-        "start" : 1747161432270,
-        "stop" : 1747161433158,
-        "duration" : 888
+        "start" : 1747161439062,
+        "stop" : 1747161439915,
+        "duration" : 853
       },
       "status" : "passed",
       "steps" : [ ],
@@ -176,15 +161,30 @@
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747161432845,
+      "stop" : 1747161432878,
+      "duration" : 33
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "When entro al primer video de los resultados",
       "time" : {
-        "start" : 1747161433163,
-        "stop" : 1747161433164,
-        "duration" : 1
+        "start" : 1747161439918,
+        "stop" : 1747161439918,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -197,17 +197,17 @@
     }, {
       "name" : "Then debería ver el título 'Falling In Reverse - \"Watch The World Burn\"'",
       "time" : {
-        "start" : 1747161433167,
-        "stop" : 1747161438948,
-        "duration" : 5781
+        "start" : 1747161439920,
+        "stop" : 1747161445500,
+        "duration" : 5580
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "I wait for element \"(//ytd-video-renderer//a[@id=\"thumbnail\"])[1]\", 10",
         "time" : {
-          "start" : 1747161433168,
-          "stop" : 1747161433250,
-          "duration" : 82
+          "start" : 1747161439921,
+          "stop" : 1747161440001,
+          "duration" : 80
         },
         "status" : "passed",
         "steps" : [ ],
@@ -220,9 +220,9 @@
       }, {
         "name" : "I click \"(//ytd-video-renderer//a[@id=\"thumbnail\"])[1]\"",
         "time" : {
-          "start" : 1747161433250,
-          "stop" : 1747161433856,
-          "duration" : 606
+          "start" : 1747161440001,
+          "stop" : 1747161440439,
+          "duration" : 438
         },
         "status" : "passed",
         "steps" : [ ],
@@ -235,9 +235,9 @@
       }, {
         "name" : "I wait for element \"h1.ytd-watch-metadata yt-formatted-string\", 10",
         "time" : {
-          "start" : 1747161433856,
-          "stop" : 1747161433923,
-          "duration" : 67
+          "start" : 1747161440439,
+          "stop" : 1747161440482,
+          "duration" : 43
         },
         "status" : "passed",
         "steps" : [ ],
@@ -250,9 +250,9 @@
       }, {
         "name" : "I wait for element \"h1.style-scope.ytd-watch-metadata yt-formatted-string\", 10",
         "time" : {
-          "start" : 1747161433924,
-          "stop" : 1747161433936,
-          "duration" : 12
+          "start" : 1747161440482,
+          "stop" : 1747161440488,
+          "duration" : 6
         },
         "status" : "passed",
         "steps" : [ ],
@@ -265,9 +265,9 @@
       }, {
         "name" : "I wait 5",
         "time" : {
-          "start" : 1747161433936,
-          "stop" : 1747161438936,
-          "duration" : 5000
+          "start" : 1747161440488,
+          "stop" : 1747161445489,
+          "duration" : 5001
         },
         "status" : "passed",
         "steps" : [ ],
@@ -280,9 +280,9 @@
       }, {
         "name" : "I grab text from \"h1.style-scope.ytd-watch-metadata yt-formatted-string\"",
         "time" : {
-          "start" : 1747161438936,
-          "stop" : 1747161438948,
-          "duration" : 12
+          "start" : 1747161445489,
+          "stop" : 1747161445500,
+          "duration" : 11
         },
         "status" : "passed",
         "steps" : [ ],
@@ -302,17 +302,17 @@
     }, {
       "name" : "And deberían mostrarse al menos 5 videos recomendados en la barra lateral",
       "time" : {
-        "start" : 1747161438952,
-        "stop" : 1747161439032,
-        "duration" : 80
+        "start" : 1747161445502,
+        "stop" : 1747161445564,
+        "duration" : 62
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "I wait for element \"ytd-compact-video-renderer\", 20",
         "time" : {
-          "start" : 1747161438952,
-          "stop" : 1747161438959,
-          "duration" : 7
+          "start" : 1747161445502,
+          "stop" : 1747161445508,
+          "duration" : 6
         },
         "status" : "passed",
         "steps" : [ ],
@@ -325,9 +325,9 @@
       }, {
         "name" : "I grab number of visible elements \"ytd-compact-video-renderer\"",
         "time" : {
-          "start" : 1747161438959,
-          "stop" : 1747161439032,
-          "duration" : 73
+          "start" : 1747161445508,
+          "stop" : 1747161445563,
+          "duration" : 55
         },
         "status" : "passed",
         "steps" : [ ],
@@ -355,8 +355,8 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747161439040,
-      "stop" : 1747161439040,
+      "start" : 1747161445575,
+      "stop" : 1747161445575,
       "duration" : 0
     },
     "status" : "passed",
@@ -370,9 +370,9 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747161439033,
-      "stop" : 1747161439040,
-      "duration" : 7
+      "start" : 1747161445564,
+      "stop" : 1747161445575,
+      "duration" : 11
     },
     "status" : "passed",
     "steps" : [ ],
@@ -391,10 +391,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az2207-473"
+    "value" : "fv-az1755-634"
   }, {
     "name" : "thread",
-    "value" : "pid-2540-worker-main"
+    "value" : "pid-2478-worker-main"
   }, {
     "name" : "package",
     "value" : "features.videoYoutube.feature"
@@ -415,6 +415,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "7b93c79f60e296d8.json",
+  "source" : "610d11b8ff01d4f5.json",
   "parameterValues" : [ ]
 }

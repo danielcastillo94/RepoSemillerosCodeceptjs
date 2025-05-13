@@ -1,6 +1,17 @@
 {
   "total" : 7,
   "items" : [ {
+    "uid" : "a33775243f021d8b3a19aacdf2004620",
+    "name" : "Automatización de Telcel",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    }
+  }, {
     "uid" : "5bab7746f6451e92df08cfa66df9145d",
     "name" : "Validación de carga inicial y elementos clave en la página de YouTube",
     "statistic" : {
@@ -21,17 +32,6 @@
       "passed" : 8,
       "unknown" : 0,
       "total" : 8
-    }
-  }, {
-    "uid" : "a33775243f021d8b3a19aacdf2004620",
-    "name" : "Automatización de Telcel",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 3,
-      "unknown" : 0,
-      "total" : 3
     }
   }, {
     "uid" : "6a9348e47752696bd72ae876b115e9f6",
