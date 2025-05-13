@@ -13,7 +13,10 @@ exports.config = {
     },
     MiHelper: {
       require: './helpers/MiHelper.js'
-    }
+    },
+    NavigationHelper: {
+      require: './helpers/NavigationHelper.js',
+    },
   },
   include: {
     I: './steps_file.js',
