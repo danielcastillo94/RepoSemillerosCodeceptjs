@@ -5,11 +5,11 @@ const politicasYCodigosPage = require('../pages/politicasYCodigosPage');
 const { I } = inject();
 
 Given("estoy en la pagina de inicio de Telcel", () => {
-  mainPage.home();
+  I.openTelcelHomepage();
 });
 
 When("hago clic en Ver todos los Planes", () => {
-  mainPage.clickVerPlanes();
+  I.goToAllPlans();
 });
 
 Then("debo ver un plan Telcel Plus", () => {
