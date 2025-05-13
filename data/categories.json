@@ -3,33 +3,16 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
-      "children" : [ {
-        "name" : "Recargar saldo de $100",
-        "uid" : "c7df744f496d87f0",
-        "parentUid" : "c3d21dcc9bea16bb5fc9255eb0e44d15",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747161449300,
-          "stop" : 1747161461860,
-          "duration" : 12560
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "c3d21dcc9bea16bb5fc9255eb0e44d15"
-    }, {
       "name" : "No steps matching \"debería ver:\"",
       "children" : [ {
         "name" : "Verificar carga de elementos clave",
-        "uid" : "8dd55395ea4d7bb4",
+        "uid" : "31d04ff208dcea8e",
         "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
         "status" : "broken",
         "time" : {
-          "start" : 1747161484943,
-          "stop" : 1747161488519,
-          "duration" : 3576
+          "start" : 1747161952334,
+          "stop" : 1747161955828,
+          "duration" : 3494
         },
         "flaky" : false,
         "newFailed" : false,
