@@ -19,14 +19,13 @@ class PaquetesYRecargasPage {
 
     // Cambiar al contexto del iframe
     within({ frame: this.fields.iframe }, () => {
-      I.waitForVisible(this.fields.numeroInput, 10);
+      I.waitForVisible(this.fields.numeroInput, 20),
+      I.waitForVisible(this.fields.numeroValidator, 20),
       I.fillField(this.fields.numeroInput, numero);
-
-      I.waitForVisible(this.fields.numeroValidator, 10);
       I.fillField(this.fields.numeroValidator, numero);
     });
 
-    console.log(`Número ingresado dentro del iframe correctamente: ${numero}`);
+    I.say(`Número ingresado dentro del iframe correctamente: ${numero}`);
   }
 
   seleccionarOpcion(opcion) {
@@ -41,7 +40,7 @@ class PaquetesYRecargasPage {
       I.click(this.fields.siguienteButton);
     });
 
-    console.log(`Opción seleccionada: ${opcion}`);
+    I.say(`Opción seleccionada: ${opcion}`);
   }
 
   seleccionarMonto(monto) {
@@ -54,7 +53,7 @@ class PaquetesYRecargasPage {
       I.wait(2);
     });
 
-    console.log(`Monto seleccionado: ${monto}`);
+    I.say(`Monto seleccionado: ${monto}`);
   }
 
   async verificarResumenYFormulario() {
@@ -62,7 +61,7 @@ class PaquetesYRecargasPage {
     I.assertEqual(count, 2, "Se esperaban exactamente 2 elementos con la clase '.success-step'");
     I.waitForVisible(this.fields.formaPago, 10);
     I.wait(2);
-    console.log(`validoción de resumen y formulario de pago correctamente`);
+    I.say(`validoción de resumen y formulario de pago correctamente`);
 
   }
 }

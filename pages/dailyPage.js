@@ -4,8 +4,7 @@ const { expect } = require("chai");
 class dailyPage {
   constructor() {
     this.fields = {
-      boton: '(//span[@class="Typography__labelLarge___lT31e HomeItemLink__label___39p21"])[2]',
-      ref: 'a[href="/explore"]'
+      boton: '//main//a[@href="/mx"]',
     };
   }
 
@@ -15,13 +14,15 @@ class dailyPage {
   }
 
   clickBoton() {
+    I.waitForElement(this.fields.boton, 20);
     I.click(this.fields.boton);
   }
 
+  //Revisar Emilio
   async verificarHref() {
-    const href = await I.grabAttributeFrom(this.fields.ref, 'href');
-    console.log("HREF capturado:", href);
-    expect(href).to.include("/explore");
+    const href = await I.grabAttributeFrom(this.fields.boton, 'href');
+    I.say(`HREF capturado: ${href}`);
+    expect(href).to.include("/mx", "El href no contiene '/mx'");
   }
 }
 

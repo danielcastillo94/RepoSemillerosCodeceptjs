@@ -18,16 +18,17 @@ class MainPage {
     I.scrollTo(this.fields.verPlanesButton);
     I.waitForVisible(this.fields.verPlanesButton, 5);
     I.click(this.fields.verPlanesButton);
-    I.wait(2);
-    console.log("Click en el botón 'Ver todos los Planes' realizado");
+    I.say("Click en el botón 'Ver todos los Planes' realizado");
   }
 
-    navegarASeccion(seccion) {
+    async navegarASeccion(seccion) {
         I.scrollTo(this.fields.paquetesYRecargasButton);
         I.waitForVisible(this.fields.paquetesYRecargasButton, 5);
         I.click(this.fields.paquetesYRecargasButton);
-        I.wait(2);
-        console.log(`Navegando a la sección ${seccion}`);
+        I.usePlaywrightTo('espera a network idle en Paquetes y Recargas',async ({ page}) => {
+          await page.waitForLoadState('networkidle', { timeout: 10000 });
+        });
+        I.say(`Navegando a la sección ${seccion}`);
     }
 
     goTo(section) {
@@ -36,7 +37,7 @@ class MainPage {
         I.waitForVisible(selector, 5);
         I.click(selector);
         I.wait(2);
-        console.log("Navegando a la sección " + section);
+        I.say(`Navegando a la sección ${section}`);
     }
 }
 

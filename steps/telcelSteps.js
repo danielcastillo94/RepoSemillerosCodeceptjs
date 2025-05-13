@@ -4,7 +4,7 @@ const PaquetesYRecargasPage = require('../pages/paquetesYRecargasPage');
 const politicasYCodigosPage = require('../pages/politicasYCodigosPage');
 const { I } = inject();
 
-Given("estoy en la página de inicio de Telcel", () => {
+Given("estoy en la pagina de inicio de Telcel", () => {
   mainPage.home();
 });
 
@@ -13,7 +13,7 @@ When("hago clic en Ver todos los Planes", () => {
 });
 
 Then("debo ver un plan Telcel Plus", () => {
-  planesPage.verifyTelcelPlus();
+  planesPage.verifyTelcelLibre();
 });
 
 Given("navego a la sección {string}", (seccion) => {

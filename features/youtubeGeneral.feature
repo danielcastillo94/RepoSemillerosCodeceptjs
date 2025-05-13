@@ -1,3 +1,5 @@
+#Israel
+
 Feature: Validaciones funcionales en la plataforma de YouTube
   
   Background: navegar a la página de YouTube
@@ -15,7 +17,7 @@ Feature: Validaciones funcionales en la plataforma de YouTube
     And Verifico que el primer resultado muestre una miniatura visible
     And Verifico que el primer resultado muestre un título visible
     And Verifico que el primer resultado contenga una duración en formato mm:ss
-  
+
   Scenario: Navegar al canal 
     Given realizo una búsqueda con el texto "Deportes"
     When hago clic en el nombre del canal del primer resultado
@@ -24,14 +26,15 @@ Feature: Validaciones funcionales en la plataforma de YouTube
     And debería ver la pestaña de Videos
     And debería ver al menos un video con miniatura y título
 
-
   Scenario: Validación de duración de video en campo oculto 
     Given realizo una búsqueda con el texto "lofi-music"
     Then verifico que el primer resultado contiene un campo con la duración
     And verifico que dicho campo está oculto
     And verifico que la duración tiene un formato válido
-  
+    
+
   Scenario Outline: Validación de carga inicial y elementos clave en la página de YouTube
+    Given realizo una búsqueda con el texto "lorem ipsum"
     Then debería ver: "<elemento>"
 
     Examples:

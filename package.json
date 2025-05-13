@@ -1,22 +1,21 @@
-
-
 {
-  "name": "framework-codeceptjs",
+  "name": "actividad-youtube",
   "version": "1.0.0",
   "main": "codecept.conf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:workers": "codeceptjs run-workers 2",
-    "features": "codeceptjs run --features",
-      "allure:generate": "allure generate output --clean",
-  "allure:report": "allure open"
+    "features": "codeceptjs run --features --plugins allure",
+    "allure:generate": "allure generate output --clean",
+    "allure:report": "allure open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "chai": "^5.2.0",
+    "allure-codeceptjs": "^3.2.1",
+    "chai": "^4.5.0",
     "codeceptjs": "^3.7.3",
     "playwright": "^1.52.0"
   }
