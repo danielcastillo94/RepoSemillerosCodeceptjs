@@ -32,7 +32,7 @@ class youtubeLoginPage {
 
     async ingresarCredencialesIncorrectas(){
         I.waitForElement(this.fields.emailInput, 20);
-        I.fillField(this.fields.emailInput, 'jorge@prueba.com');
+        I.login('jorge@prueba.com')
     }
 
     presionoBotonSiguiente(){
