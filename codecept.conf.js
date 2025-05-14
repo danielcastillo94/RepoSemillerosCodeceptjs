@@ -7,16 +7,20 @@ exports.config = {
     Playwright: {
       browser: 'chromium',
       url: 'https://www.telcel.com',
-      show: true,
+      show: false,
 
       locale: "es-MX",
     },
     MiHelper: {
       require: './helpers/MiHelper.js'
-    }
+    },
+    DailyHelpers: {
+    require: './helpers/dailyHelper.js'
+    },
   },
   include: {
-    I: './steps_file.js',
+    I: './steps_file.js', 
+    dailyPage: './pages/dailyPage.js',
     validacionesYoutubeSteps: './steps/videoYoutubeSteps.js',
     youtubeMainPage: './pages/youtubeMainPage.js',
     youtubeVideoPage: './pages/youtubeVideoMainPage.js', 
