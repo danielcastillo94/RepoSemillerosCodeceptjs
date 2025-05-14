@@ -1,22 +1,22 @@
 {
-  "uid" : "5ce3457bfb80a0d1",
+  "uid" : "1b3385ea2896a2ba",
   "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
   "fullName" : "features/prueba.feature: Validación del botón \"Explorar\" y navegación en YouTube > Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
   "historyId" : "cb93a540f803c9ac4825d784f82ab297:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747161955836,
-    "stop" : 1747161962066,
-    "duration" : 6230
+    "start" : 1747249024867,
+    "stop" : 1747249031058,
+    "duration" : 6191
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747161955836,
-      "stop" : 1747161955868,
-      "duration" : 32
+      "start" : 1747249024866,
+      "stop" : 1747249024866,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747161955835,
-      "stop" : 1747161955835,
-      "duration" : 0
+      "start" : 1747249024867,
+      "stop" : 1747249024893,
+      "duration" : 26
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,8 +47,8 @@
     "steps" : [ {
       "name" : "Given el usuario está en la página principal de YouTube",
       "time" : {
-        "start" : 1747161955869,
-        "stop" : 1747161955870,
+        "start" : 1747249024894,
+        "stop" : 1747249024895,
         "duration" : 1
       },
       "status" : "passed",
@@ -62,8 +62,8 @@
     }, {
       "name" : "When haces clic en el botón \"Explorar\"",
       "time" : {
-        "start" : 1747161955870,
-        "stop" : 1747161955870,
+        "start" : 1747249024895,
+        "stop" : 1747249024895,
         "duration" : 0
       },
       "status" : "passed",
@@ -77,9 +77,9 @@
     }, {
       "name" : "And debería ver las categorías \"Tendencias\", \"Música\" y \"Noticias\"",
       "time" : {
-        "start" : 1747161955870,
-        "stop" : 1747161955871,
-        "duration" : 1
+        "start" : 1747249024896,
+        "stop" : 1747249024896,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,8 +92,8 @@
     }, {
       "name" : "When hacer clic en la categoría \"Música\"",
       "time" : {
-        "start" : 1747161955871,
-        "stop" : 1747161955872,
+        "start" : 1747249024896,
+        "stop" : 1747249024897,
         "duration" : 1
       },
       "status" : "passed",
@@ -107,9 +107,9 @@
     }, {
       "name" : "Then debería ver videos con título y nombre del canal visible",
       "time" : {
-        "start" : 1747161955872,
-        "stop" : 1747161962066,
-        "duration" : 6194
+        "start" : 1747249024897,
+        "stop" : 1747249031058,
+        "duration" : 6161
       },
       "status" : "passed",
       "steps" : [ ],
@@ -122,9 +122,9 @@
     }, {
       "name" : "I am on page \"https://www.youtube.com\"",
       "time" : {
-        "start" : 1747161955872,
-        "stop" : 1747161957196,
-        "duration" : 1324
+        "start" : 1747249024898,
+        "stop" : 1747249026212,
+        "duration" : 1314
       },
       "status" : "passed",
       "steps" : [ ],
@@ -137,9 +137,9 @@
     }, {
       "name" : "I wait for element \"//div[@id=\"start\"]/yt-icon-button[@id=\"guide-button\"]\", 20",
       "time" : {
-        "start" : 1747161957196,
-        "stop" : 1747161957291,
-        "duration" : 95
+        "start" : 1747249026212,
+        "stop" : 1747249026315,
+        "duration" : 103
       },
       "status" : "passed",
       "steps" : [ ],
@@ -152,9 +152,9 @@
     }, {
       "name" : "I click \"//div[@id=\"start\"]/yt-icon-button[@id=\"guide-button\"]\"",
       "time" : {
-        "start" : 1747161957291,
-        "stop" : 1747161957792,
-        "duration" : 501
+        "start" : 1747249026315,
+        "stop" : 1747249026762,
+        "duration" : 447
       },
       "status" : "passed",
       "steps" : [ ],
@@ -167,9 +167,9 @@
     }, {
       "name" : "I wait for element \"(//h3[not(@hidden)]/yt-formatted-string[@id=\"guide-section-title\"])[1]\"",
       "time" : {
-        "start" : 1747161957793,
-        "stop" : 1747161957809,
-        "duration" : 16
+        "start" : 1747249026762,
+        "stop" : 1747249026808,
+        "duration" : 46
       },
       "status" : "passed",
       "steps" : [ ],
@@ -182,9 +182,9 @@
     }, {
       "name" : "I see \"Tendencias\"",
       "time" : {
-        "start" : 1747161957810,
-        "stop" : 1747161957827,
-        "duration" : 17
+        "start" : 1747249026808,
+        "stop" : 1747249026826,
+        "duration" : 18
       },
       "status" : "passed",
       "steps" : [ ],
@@ -197,9 +197,9 @@
     }, {
       "name" : "I see \"Música\"",
       "time" : {
-        "start" : 1747161957828,
-        "stop" : 1747161957839,
-        "duration" : 11
+        "start" : 1747249026826,
+        "stop" : 1747249026842,
+        "duration" : 16
       },
       "status" : "passed",
       "steps" : [ ],
@@ -212,9 +212,9 @@
     }, {
       "name" : "I see \"Noticias\"",
       "time" : {
-        "start" : 1747161957839,
-        "stop" : 1747161957854,
-        "duration" : 15
+        "start" : 1747249026842,
+        "stop" : 1747249026853,
+        "duration" : 11
       },
       "status" : "passed",
       "steps" : [ ],
@@ -227,9 +227,9 @@
     }, {
       "name" : "I click \"Música\"",
       "time" : {
-        "start" : 1747161957854,
-        "stop" : 1747161958044,
-        "duration" : 190
+        "start" : 1747249026853,
+        "stop" : 1747249027034,
+        "duration" : 181
       },
       "status" : "passed",
       "steps" : [ ],
@@ -242,8 +242,8 @@
     }, {
       "name" : "I wait 4",
       "time" : {
-        "start" : 1747161958044,
-        "stop" : 1747161962044,
+        "start" : 1747249027034,
+        "stop" : 1747249031034,
         "duration" : 4000
       },
       "status" : "passed",
@@ -257,9 +257,9 @@
     }, {
       "name" : "I wait for element \"//*[@id=\"hero-title\"]\", 20",
       "time" : {
-        "start" : 1747161962045,
-        "stop" : 1747161962050,
-        "duration" : 5
+        "start" : 1747249031034,
+        "stop" : 1747249031041,
+        "duration" : 7
       },
       "status" : "passed",
       "steps" : [ ],
@@ -272,8 +272,8 @@
     }, {
       "name" : "I see element \"//*[@id=\"hero-title\"]\"",
       "time" : {
-        "start" : 1747161962051,
-        "stop" : 1747161962059,
+        "start" : 1747249031042,
+        "stop" : 1747249031050,
         "duration" : 8
       },
       "status" : "passed",
@@ -287,9 +287,9 @@
     }, {
       "name" : "I see element \"//*[@id=\"description\"]/span[1]\"",
       "time" : {
-        "start" : 1747161962059,
-        "stop" : 1747161962066,
-        "duration" : 7
+        "start" : 1747249031050,
+        "stop" : 1747249031058,
+        "duration" : 8
       },
       "status" : "passed",
       "steps" : [ ],
@@ -310,8 +310,8 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747161962072,
-      "stop" : 1747161962072,
+      "start" : 1747249031064,
+      "stop" : 1747249031064,
       "duration" : 0
     },
     "status" : "passed",
@@ -325,8 +325,8 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747161962066,
-      "stop" : 1747161962072,
+      "start" : 1747249031058,
+      "stop" : 1747249031064,
       "duration" : 6
     },
     "status" : "passed",
@@ -346,10 +346,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1718-550"
+    "value" : "fv-az787-319"
   }, {
     "name" : "thread",
-    "value" : "pid-2484-worker-main"
+    "value" : "pid-2541-worker-main"
   }, {
     "name" : "package",
     "value" : "features.prueba.feature"
@@ -373,6 +373,6 @@
     "categories" : [ ],
     "tags" : [ "test" ]
   },
-  "source" : "5ce3457bfb80a0d1.json",
+  "source" : "1b3385ea2896a2ba.json",
   "parameterValues" : [ ]
 }

@@ -6,13 +6,13 @@
       "name" : "No steps matching \"debería ver:\"",
       "children" : [ {
         "name" : "Verificar carga de elementos clave",
-        "uid" : "31d04ff208dcea8e",
+        "uid" : "9f398d03b5f3b8c",
         "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
         "status" : "broken",
         "time" : {
-          "start" : 1747161952334,
-          "stop" : 1747161955828,
-          "duration" : 3494
+          "start" : 1747249021352,
+          "stop" : 1747249024859,
+          "duration" : 3507
         },
         "flaky" : false,
         "newFailed" : false,

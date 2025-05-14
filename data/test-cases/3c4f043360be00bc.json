@@ -1,0 +1,223 @@
+{
+  "uid" : "3c4f043360be00bc",
+  "name" : "Validar el atributo href @enlaces",
+  "fullName" : "features/dailyMotion.feature: Validaciones funcionales en dailyMotion > Validar el atributo href @enlaces",
+  "historyId" : "db052455e3ef44994695ac24b2f1e2d2:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1747244963905,
+    "stop" : 1747244967729,
+    "duration" : 3824
+  },
+  "status" : "broken",
+  "statusMessage" : "I.verificarEnlaceContieneTexto is not a function",
+  "statusTrace" : "TypeError: I.verificarEnlaceContieneTexto is not a function\n    at /Users/emilioherrera/Documents/RepoSemillerosCodeceptjs/steps/dailySteps.js:28:13\n    at runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:15)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747244963906,
+      "stop" : 1747244964364,
+      "duration" : 458
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747244962534,
+      "stop" : 1747244963904,
+      "duration" : 1370
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "I.verificarEnlaceContieneTexto is not a function",
+    "statusTrace" : "TypeError: I.verificarEnlaceContieneTexto is not a function\n    at /Users/emilioherrera/Documents/RepoSemillerosCodeceptjs/steps/dailySteps.js:28:13\n    at runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:15)",
+    "steps" : [ {
+      "name" : "Given Estoy en la pagina de Daily Motion",
+      "time" : {
+        "start" : 1747244964376,
+        "stop" : 1747244967530,
+        "duration" : 3154
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I ir adaily motion",
+        "time" : {
+          "start" : 1747244964377,
+          "stop" : 1747244967529,
+          "duration" : 3152
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "When Presiono el boton de Explorar",
+      "time" : {
+        "start" : 1747244967533,
+        "stop" : 1747244967654,
+        "duration" : 121
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I click explorar",
+        "time" : {
+          "start" : 1747244967533,
+          "stop" : 1747244967654,
+          "duration" : 121
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Then Valido si el href contiene explore",
+      "time" : {
+        "start" : 1747244967656,
+        "stop" : 1747244967657,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "I.verificarEnlaceContieneTexto is not a function",
+      "statusTrace" : "TypeError: I.verificarEnlaceContieneTexto is not a function\n    at /Users/emilioherrera/Documents/RepoSemillerosCodeceptjs/steps/dailySteps.js:28:13\n    at runSteps (/Users/emilioherrera/Documents/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/mocha/gherkin.js:85:15)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1747244967728,
+        "stop" : 1747244967728,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "8ff683e06f26e9d",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "8ff683e06f26e9d.png",
+        "type" : "image/png",
+        "size" : 419352
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1747244967758,
+      "stop" : 1747244967758,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747244967730,
+      "stop" : 1747244967758,
+      "duration" : 28
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "MacBook-Air-de-Emilio.local"
+  }, {
+    "name" : "thread",
+    "value" : "pid-8004-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.dailyMotion.feature"
+  }, {
+    "name" : "tag",
+    "value" : "enlaces"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validaciones funcionales en dailyMotion"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "enlaces" ]
+  },
+  "source" : "3c4f043360be00bc.json",
+  "parameterValues" : [ ]
+}
