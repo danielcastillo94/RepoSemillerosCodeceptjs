@@ -34,6 +34,17 @@
       "total" : 3
     }
   }, {
+    "uid" : "6300100abe8ed0d86bf5ab61b9136637",
+    "name" : "Validaciones funcionales dailyMotion",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
     "uid" : "6a9348e47752696bd72ae876b115e9f6",
     "name" : "Validación de resultados relacionados",
     "statistic" : {
@@ -58,17 +69,6 @@
   }, {
     "uid" : "315f2d914890879d41a07b18a377f618",
     "name" : "Validaciones del login en youtube",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "7f85788bc0a86b2148e4604f0126e3a9",
-    "name" : "Validaciones funcionales en dailyMotion",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

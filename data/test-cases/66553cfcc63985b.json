@@ -1,12 +1,12 @@
 {
-  "uid" : "9f398d03b5f3b8c",
+  "uid" : "66553cfcc63985b",
   "name" : "Verificar carga de elementos clave",
   "fullName" : "features/requerimientoYoutube.feature: Validación de carga inicial y elementos clave en la página de YouTube > Verificar carga de elementos clave",
   "historyId" : "25b3cc5fb720c6a4042f5fa4521393ce:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747249021352,
-    "stop" : 1747249024859,
-    "duration" : 3507
+    "start" : 1747249144416,
+    "stop" : 1747249148039,
+    "duration" : 3623
   },
   "status" : "broken",
   "statusMessage" : "No steps matching \"debería ver:\"",
@@ -16,108 +16,108 @@
   "beforeStages" : [ {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747249021352,
-      "stop" : 1747249021382,
-      "duration" : 30
+      "start" : 1747249144416,
+      "stop" : 1747249144448,
+      "duration" : 32
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
-    "name" : "\"before each\" hook: Before",
-    "time" : {
-      "start" : 1747249021382,
-      "stop" : 1747249024767,
-      "duration" : 3385
-    },
-    "status" : "passed",
-    "steps" : [ {
-      "name" : "Given abro la página de YouTube",
-      "time" : {
-        "start" : 1747249021384,
-        "stop" : 1747249021384,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I am on page \"https://www.youtube.com\"",
-      "time" : {
-        "start" : 1747249021384,
-        "stop" : 1747249022710,
-        "duration" : 1326
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for element \"input[name=\"search_query\"]\", 10",
-      "time" : {
-        "start" : 1747249022710,
-        "stop" : 1747249022766,
-        "duration" : 56
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait 2",
-      "time" : {
-        "start" : 1747249022766,
-        "stop" : 1747249024767,
-        "duration" : 2001
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    } ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 4,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : true
+    "shouldDisplayMessage" : false
   }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747249021350,
-      "stop" : 1747249021350,
+      "start" : 1747249144415,
+      "stop" : 1747249144415,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "\"before each\" hook: Before",
+    "time" : {
+      "start" : 1747249144448,
+      "stop" : 1747249147956,
+      "duration" : 3508
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given abro la página de YouTube",
+      "time" : {
+        "start" : 1747249144451,
+        "stop" : 1747249144451,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I am on page \"https://www.youtube.com\"",
+      "time" : {
+        "start" : 1747249144452,
+        "stop" : 1747249145881,
+        "duration" : 1429
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I wait for element \"input[name=\"search_query\"]\", 10",
+      "time" : {
+        "start" : 1747249145881,
+        "stop" : 1747249145956,
+        "duration" : 75
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I wait 2",
+      "time" : {
+        "start" : 1747249145956,
+        "stop" : 1747249147955,
+        "duration" : 1999
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   } ],
   "testStage" : {
     "status" : "broken",
@@ -126,62 +126,62 @@
     "steps" : [ {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747249024857,
-        "stop" : 1747249024857,
+        "start" : 1747249148037,
+        "stop" : 1747249148037,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "1eedc6cf86a89521",
+        "uid" : "8f10b4e295a0f56c",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "1eedc6cf86a89521.png",
+        "source" : "8f10b4e295a0f56c.png",
         "type" : "image/png",
-        "size" : 27229
+        "size" : 27907
       } ],
       "parameters" : [ ],
+      "hasContent" : true,
       "stepsCount" : 0,
       "attachmentsCount" : 1,
-      "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "shouldDisplayMessage" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : true,
     "stepsCount" : 1,
     "attachmentsCount" : 1,
-    "shouldDisplayMessage" : true,
-    "hasContent" : true
+    "shouldDisplayMessage" : true
   },
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747249024859,
-      "stop" : 1747249024865,
+      "start" : 1747249148040,
+      "stop" : 1747249148046,
       "duration" : 6
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747249024865,
-      "stop" : 1747249024865,
+      "start" : 1747249148046,
+      "stop" : 1747249148046,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   } ],
   "labels" : [ {
     "name" : "language",
@@ -191,10 +191,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az787-319"
+    "value" : "fv-az1693-146"
   }, {
     "name" : "thread",
-    "value" : "pid-2541-worker-main"
+    "value" : "pid-2500-worker-main"
   }, {
     "name" : "package",
     "value" : "features.requerimientoYoutube.feature"
@@ -211,7 +211,16 @@
   "retry" : false,
   "extra" : {
     "severity" : "normal",
-    "retries" : [ ],
+    "retries" : [ {
+      "uid" : "a7fed9451d0fda20",
+      "status" : "broken",
+      "statusDetails" : "No steps matching \"debería ver:\"",
+      "time" : {
+        "start" : 1747243706782,
+        "stop" : 1747243714181,
+        "duration" : 7399
+      }
+    } ],
     "categories" : [ {
       "name" : "Test defects",
       "matchedStatuses" : [ ],
@@ -219,6 +228,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "9f398d03b5f3b8c.json",
+  "source" : "66553cfcc63985b.json",
   "parameterValues" : [ ]
 }

@@ -1,0 +1,266 @@
+{
+  "uid" : "1b5bc69447f09839",
+  "name" : "Validar el atributo href @enlaces",
+  "fullName" : "features/dailyMotion.feature: Validaciones funcionales dailyMotion > Validar el atributo href @enlaces",
+  "historyId" : "d3f6bec78be92900b74c610d7dcf1d6b:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1747249166716,
+    "stop" : 1747249169470,
+    "duration" : 2754
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747249163504,
+      "stop" : 1747249163504,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747249166716,
+      "stop" : 1747249166743,
+      "duration" : 27
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given Estoy en la pagina de Daily Motion",
+      "time" : {
+        "start" : 1747249166747,
+        "stop" : 1747249166747,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When Presiono el boton de Explorar",
+      "time" : {
+        "start" : 1747249166749,
+        "stop" : 1747249166749,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then Valido si el href contiene explore",
+      "time" : {
+        "start" : 1747249166752,
+        "stop" : 1747249169470,
+        "duration" : 2718
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I am on page \"https://www.dailymotion.com/mx\"",
+        "time" : {
+          "start" : 1747249166752,
+          "stop" : 1747249167314,
+          "duration" : 562
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "I wait 2",
+        "time" : {
+          "start" : 1747249167315,
+          "stop" : 1747249169315,
+          "duration" : 2000
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "I wait for element \"//main//a[@href=\"/mx\"]\", 20",
+        "time" : {
+          "start" : 1747249169315,
+          "stop" : 1747249169319,
+          "duration" : 4
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "I click \"//main//a[@href=\"/mx\"]\"",
+        "time" : {
+          "start" : 1747249169319,
+          "stop" : 1747249169464,
+          "duration" : 145
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "I grab attribute from \"//main//a[@href=\"/mx\"]\", \"href\"",
+        "time" : {
+          "start" : 1747249169465,
+          "stop" : 1747249169468,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "hasContent" : false,
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 5,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I say \"HREF capturado: /mx\"",
+      "time" : {
+        "start" : 1747249169470,
+        "stop" : 1747249169470,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 9,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747249169470,
+      "stop" : 1747249169473,
+      "duration" : 3
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1747249169474,
+      "stop" : 1747249169474,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1693-146"
+  }, {
+    "name" : "thread",
+    "value" : "pid-2500-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.dailyMotion.feature"
+  }, {
+    "name" : "tag",
+    "value" : "enlaces"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validaciones funcionales dailyMotion"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c55cea759232c897",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747243839807,
+        "stop" : 1747243845113,
+        "duration" : 5306
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "enlaces" ]
+  },
+  "source" : "1b5bc69447f09839.json",
+  "parameterValues" : [ ]
+}
