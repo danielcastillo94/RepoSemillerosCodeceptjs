@@ -9,7 +9,7 @@ exports.config = {
       show: true,
       locale: "es-MX"
     },
-    MiHelper: {
+    MiHelperYoutube: {
       require: './helpers/MiHelperYoutube.js'
     }
   },
