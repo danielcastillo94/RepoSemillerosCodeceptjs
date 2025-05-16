@@ -1,4 +1,3 @@
-
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: './*_test.js',
@@ -17,7 +16,11 @@ exports.config = {
     DailyHelpers: {
     require: './helpers/dailyHelper.js'
     },
+    MiHelperYoutube: {
+      require: './helpers/MiHelperYoutube.js'
+    },
   },
+  
   include: {
     I: './steps_file.js', 
     dailyPage: './pages/dailyPage.js',
@@ -27,15 +30,23 @@ exports.config = {
     youtubeLoginPage: './pages/youtubeLoginPage.js',
   },
   gherkin: {
-    features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js", "./steps/loginSteps.js", "./steps/youtubeLoginSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js", './steps/telcelSteps.js', "./steps/videoYoutubeSteps.js",],
+    features: './features/*.feature',
+    steps: [
+      './steps/pruebaSteps.js',
+      './steps/loginSteps.js',
+      './steps/youtubeLoginSteps.js',
+      './steps/validacionesYoutubeSteps.js',
+      './steps/dailySteps.js',
+      './steps/telcelSteps.js',
+      './steps/videoYoutubeSteps.js',
+    ]
   },
   plugins: {
     allure: {
       enabled: true,
-      require: "allure-codeceptjs",
-      resultsDir: "allure-results",
-    },
+      require: 'allure-codeceptjs',
+      resultsDir: 'allure-results'
+    }
   },
-  name: 'Actividad youtube'
+  name: 'Actividad YouTube'
 };
