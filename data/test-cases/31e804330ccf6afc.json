@@ -1,12 +1,12 @@
 {
-  "uid" : "f8ceffa6a37feb8d",
+  "uid" : "31e804330ccf6afc",
   "name" : "Validación de una búsqueda en YouTube",
   "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validación de una búsqueda en YouTube",
   "historyId" : "5c14a428710eabc30b831509f0f2ea31:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747419389624,
-    "stop" : 1747419400159,
-    "duration" : 10535
+    "start" : 1747419392797,
+    "stop" : 1747419403783,
+    "duration" : 10986
   },
   "status" : "broken",
   "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -16,17 +16,17 @@
   "beforeStages" : [ {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747419389656,
-      "stop" : 1747419394958,
-      "duration" : 5302
+      "start" : 1747419392831,
+      "stop" : 1747419398617,
+      "duration" : 5786
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747419389661,
-        "stop" : 1747419389661,
-        "duration" : 0
+        "start" : 1747419392834,
+        "stop" : 1747419392835,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -39,9 +39,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747419389662,
-        "stop" : 1747419391957,
-        "duration" : 2295
+        "start" : 1747419392835,
+        "stop" : 1747419395616,
+        "duration" : 2781
       },
       "status" : "passed",
       "steps" : [ ],
@@ -54,8 +54,8 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747419391957,
-        "stop" : 1747419394957,
+        "start" : 1747419395616,
+        "stop" : 1747419398616,
         "duration" : 3000
       },
       "status" : "passed",
@@ -74,11 +74,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : true
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747419376388,
-      "stop" : 1747419378797,
-      "duration" : 2409
+      "start" : 1747419392797,
+      "stop" : 1747419392831,
+      "duration" : 34
     },
     "status" : "passed",
     "steps" : [ ],
@@ -89,11 +89,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747419389624,
-      "stop" : 1747419389656,
-      "duration" : 32
+      "start" : 1747419378943,
+      "stop" : 1747419381514,
+      "duration" : 2571
     },
     "status" : "passed",
     "steps" : [ ],
@@ -111,9 +111,9 @@
     "steps" : [ {
       "name" : "When realizo una búsqueda con el texto \"Falling In Reverse\"",
       "time" : {
-        "start" : 1747419394962,
-        "stop" : 1747419394963,
-        "duration" : 1
+        "start" : 1747419398621,
+        "stop" : 1747419398621,
+        "duration" : 0
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -128,9 +128,9 @@
     }, {
       "name" : "Then Verifico que al menos un resultado contenga \"Falling In Reverse\"",
       "time" : {
-        "start" : 1747419394965,
-        "stop" : 1747419394965,
-        "duration" : 0
+        "start" : 1747419398625,
+        "stop" : 1747419398626,
+        "duration" : 1
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -145,9 +145,9 @@
     }, {
       "name" : "And Verifico que el primer resultado muestre una miniatura visible",
       "time" : {
-        "start" : 1747419394967,
-        "stop" : 1747419394968,
-        "duration" : 1
+        "start" : 1747419398627,
+        "stop" : 1747419398627,
+        "duration" : 0
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -162,8 +162,8 @@
     }, {
       "name" : "And Verifico que el primer resultado muestre un título visible",
       "time" : {
-        "start" : 1747419394970,
-        "stop" : 1747419394971,
+        "start" : 1747419398628,
+        "stop" : 1747419398629,
         "duration" : 1
       },
       "status" : "broken",
@@ -179,9 +179,9 @@
     }, {
       "name" : "And Verifico que el primer resultado contenga una duración en formato mm:ss",
       "time" : {
-        "start" : 1747419394972,
-        "stop" : 1747419399973,
-        "duration" : 5001
+        "start" : 1747419398630,
+        "stop" : 1747419403632,
+        "duration" : 5002
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -189,8 +189,8 @@
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
         "time" : {
-          "start" : 1747419394972,
-          "stop" : 1747419399973,
+          "start" : 1747419398631,
+          "stop" : 1747419403632,
           "duration" : 5001
         },
         "status" : "broken",
@@ -213,18 +213,18 @@
     }, {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747419400158,
-        "stop" : 1747419400158,
+        "start" : 1747419403781,
+        "stop" : 1747419403781,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "72e855aa643cad1b",
+        "uid" : "c0f5f81df3a6cfa9",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "72e855aa643cad1b.png",
+        "source" : "c0f5f81df3a6cfa9.png",
         "type" : "image/png",
-        "size" : 332366
+        "size" : 271521
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -242,9 +242,9 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747419400160,
-      "stop" : 1747419400177,
-      "duration" : 17
+      "start" : 1747419403783,
+      "stop" : 1747419403795,
+      "duration" : 12
     },
     "status" : "passed",
     "steps" : [ ],
@@ -257,9 +257,9 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747419463306,
-      "stop" : 1747419463307,
-      "duration" : 1
+      "start" : 1747419467993,
+      "stop" : 1747419467993,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -278,10 +278,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az802-962"
+    "value" : "fv-az1784-503"
   }, {
     "name" : "thread",
-    "value" : "pid-2530-worker-main"
+    "value" : "pid-2535-worker-main"
   }, {
     "name" : "package",
     "value" : "features.youtubeGeneral.feature"
@@ -306,6 +306,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "f8ceffa6a37feb8d.json",
+  "source" : "31e804330ccf6afc.json",
   "parameterValues" : [ ]
 }
