@@ -9,13 +9,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "50f61e78aa2bd668",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/50f61e78aa2bd668",
+      "uid" : "7d34fa88459149e6",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/7d34fa88459149e6",
       "status" : "passed",
       "time" : {
-        "start" : 1747417375668,
-        "stop" : 1747417381750,
-        "duration" : 6082
+        "start" : 1747417455218,
+        "stop" : 1747417461469,
+        "duration" : 6251
       }
     } ]
   },
@@ -29,13 +29,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "6e174fde0267f63f",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/6e174fde0267f63f",
+      "uid" : "b1e782e85bf85734",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/b1e782e85bf85734",
       "status" : "passed",
       "time" : {
-        "start" : 1747417362579,
-        "stop" : 1747417375658,
-        "duration" : 13079
+        "start" : 1747417442172,
+        "stop" : 1747417455204,
+        "duration" : 13032
       }
     } ]
   },
@@ -49,13 +49,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "b14c5dc494c80aab",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/b14c5dc494c80aab",
+      "uid" : "ad88044737879c97",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/ad88044737879c97",
       "status" : "passed",
       "time" : {
-        "start" : 1747417345045,
-        "stop" : 1747417350911,
-        "duration" : 5866
+        "start" : 1747417424499,
+        "stop" : 1747417430408,
+        "duration" : 5909
       }
     } ]
   },
@@ -69,13 +69,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "4dac76cf7f30c83f",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/4dac76cf7f30c83f",
+      "uid" : "c3c53b34054a8197",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/c3c53b34054a8197",
       "status" : "passed",
       "time" : {
-        "start" : 1747417350918,
-        "stop" : 1747417356722,
-        "duration" : 5804
+        "start" : 1747417430415,
+        "stop" : 1747417436235,
+        "duration" : 5820
       }
     } ]
   },
@@ -89,13 +89,33 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "9e974c1bf4d1763",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/9e974c1bf4d1763",
+      "uid" : "b664c58979278534",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/b664c58979278534",
       "status" : "passed",
       "time" : {
-        "start" : 1747417304176,
-        "stop" : 1747417312506,
-        "duration" : 8330
+        "start" : 1747417383793,
+        "stop" : 1747417392092,
+        "duration" : 8299
+      }
+    } ]
+  },
+  "e36777fcba9d3e5026a01482513aea1b:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "675cc481429c8d4f",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/675cc481429c8d4f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747417412690,
+        "stop" : 1747417418626,
+        "duration" : 5936
       }
     } ]
   },
@@ -109,33 +129,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c20fb5abdbfd8901",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/c20fb5abdbfd8901",
+      "uid" : "a53ba68e842fe46b",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/a53ba68e842fe46b",
       "status" : "passed",
       "time" : {
-        "start" : 1747417381760,
-        "stop" : 1747417403002,
-        "duration" : 21242
-      }
-    } ]
-  },
-  "db052455e3ef44994695ac24b2f1e2d2:d41d8cd98f00b204e9800998ecf8427e" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "e399b8740a06dad2",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/e399b8740a06dad2",
-      "status" : "passed",
-      "time" : {
-        "start" : 1747417446529,
-        "stop" : 1747417447447,
-        "duration" : 918
+        "start" : 1747417461483,
+        "stop" : 1747417482291,
+        "duration" : 20808
       }
     } ]
   },
@@ -149,13 +149,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "5572eb98d0537035",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/5572eb98d0537035",
+      "uid" : "ce3c23a90f51c449",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/ce3c23a90f51c449",
       "status" : "passed",
       "time" : {
-        "start" : 1747417403017,
-        "stop" : 1747417427865,
-        "duration" : 24848
+        "start" : 1747417482308,
+        "stop" : 1747417506801,
+        "duration" : 24493
       }
     } ]
   },
@@ -169,13 +169,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "39e386af1a66b092",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/39e386af1a66b092",
+      "uid" : "5dfd9fd49d6dafd",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/5dfd9fd49d6dafd",
       "status" : "passed",
       "time" : {
-        "start" : 1747417318682,
-        "stop" : 1747417333097,
-        "duration" : 14415
+        "start" : 1747417398174,
+        "stop" : 1747417412659,
+        "duration" : 14485
       }
     } ]
   },
@@ -189,13 +189,33 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "da1e631f216389c9",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/da1e631f216389c9",
+      "uid" : "26b7cbe994fc049a",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/26b7cbe994fc049a",
       "status" : "passed",
       "time" : {
-        "start" : 1747417356729,
-        "stop" : 1747417362569,
-        "duration" : 5840
+        "start" : 1747417436242,
+        "stop" : 1747417442161,
+        "duration" : 5919
+      }
+    } ]
+  },
+  "c92d07daf7c289ab0f4d5806ca2dee37:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6dd3834bab4429f9",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/6dd3834bab4429f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747417525437,
+        "stop" : 1747417526064,
+        "duration" : 627
       }
     } ]
   },
@@ -209,13 +229,34 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7b8faff6be26ca60",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/7b8faff6be26ca60",
+      "uid" : "232e5065cf282000",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/232e5065cf282000",
       "status" : "passed",
       "time" : {
-        "start" : 1747417431396,
-        "stop" : 1747417437532,
-        "duration" : 6136
+        "start" : 1747417510303,
+        "stop" : 1747417516505,
+        "duration" : 6202
+      }
+    } ]
+  },
+  "d3f6bec78be92900b74c610d7dcf1d6b:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "69765e08191f18af",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/69765e08191f18af",
+      "status" : "broken",
+      "statusDetails" : "No steps matching \"Presiono el boton de Explorar\"",
+      "time" : {
+        "start" : 1747417526068,
+        "stop" : 1747417526586,
+        "duration" : 518
       }
     } ]
   },
@@ -229,13 +270,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7556cab218f92dab",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/7556cab218f92dab",
+      "uid" : "68871a8c76d2a007",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/68871a8c76d2a007",
       "status" : "passed",
       "time" : {
-        "start" : 1747417339186,
-        "stop" : 1747417345039,
-        "duration" : 5853
+        "start" : 1747417418634,
+        "stop" : 1747417424492,
+        "duration" : 5858
       }
     } ]
   },
@@ -249,13 +290,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "7e55d11ac6d4f9c7",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/7e55d11ac6d4f9c7",
+      "uid" : "10757952cfcaca2",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/10757952cfcaca2",
       "status" : "passed",
       "time" : {
-        "start" : 1747417437538,
-        "stop" : 1747417446523,
-        "duration" : 8985
+        "start" : 1747417516513,
+        "stop" : 1747417525429,
+        "duration" : 8916
       }
     } ]
   },
@@ -269,13 +310,13 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "5311f3216002655f",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/5311f3216002655f",
+      "uid" : "859678750e9cddd2",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/859678750e9cddd2",
       "status" : "passed",
       "time" : {
-        "start" : 1747417312518,
-        "stop" : 1747417318676,
-        "duration" : 6158
+        "start" : 1747417392102,
+        "stop" : 1747417398165,
+        "duration" : 6063
       }
     } ]
   },
@@ -289,14 +330,14 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "e04eadbdd0d066e6",
-      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/77//#testresult/e04eadbdd0d066e6",
+      "uid" : "f212d9dad7207280",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/78//#testresult/f212d9dad7207280",
       "status" : "broken",
       "statusDetails" : "No steps matching \"debería ver:\"",
       "time" : {
-        "start" : 1747417427875,
-        "stop" : 1747417431386,
-        "duration" : 3511
+        "start" : 1747417506814,
+        "stop" : 1747417510294,
+        "duration" : 3480
       }
     } ]
   }

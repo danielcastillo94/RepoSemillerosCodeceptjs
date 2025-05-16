@@ -1,12 +1,12 @@
 {
-  "uid" : "e04eadbdd0d066e6",
+  "uid" : "f212d9dad7207280",
   "name" : "Verificar carga de elementos clave",
   "fullName" : "features/requerimientoYoutube.feature: Validación de carga inicial y elementos clave en la página de YouTube > Verificar carga de elementos clave",
   "historyId" : "25b3cc5fb720c6a4042f5fa4521393ce:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747417427875,
-    "stop" : 1747417431386,
-    "duration" : 3511
+    "start" : 1747417506814,
+    "stop" : 1747417510294,
+    "duration" : 3480
   },
   "status" : "broken",
   "statusMessage" : "No steps matching \"debería ver:\"",
@@ -14,25 +14,10 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747417427875,
-      "stop" : 1747417427906,
-      "duration" : 31
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747417427874,
-      "stop" : 1747417427874,
+      "start" : 1747417506813,
+      "stop" : 1747417506813,
       "duration" : 0
     },
     "status" : "passed",
@@ -46,16 +31,16 @@
   }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747417427906,
-      "stop" : 1747417431306,
-      "duration" : 3400
+      "start" : 1747417506845,
+      "stop" : 1747417510211,
+      "duration" : 3366
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747417427907,
-        "stop" : 1747417427908,
+        "start" : 1747417506847,
+        "stop" : 1747417506848,
         "duration" : 1
       },
       "status" : "passed",
@@ -69,9 +54,9 @@
     }, {
       "name" : "I am on page \"https://www.youtube.com\"",
       "time" : {
-        "start" : 1747417427908,
-        "stop" : 1747417429248,
-        "duration" : 1340
+        "start" : 1747417506848,
+        "stop" : 1747417508156,
+        "duration" : 1308
       },
       "status" : "passed",
       "steps" : [ ],
@@ -84,9 +69,9 @@
     }, {
       "name" : "I wait for element \"input[name=\"search_query\"]\", 10",
       "time" : {
-        "start" : 1747417429248,
-        "stop" : 1747417429305,
-        "duration" : 57
+        "start" : 1747417508156,
+        "stop" : 1747417508211,
+        "duration" : 55
       },
       "status" : "passed",
       "steps" : [ ],
@@ -99,9 +84,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417429305,
-        "stop" : 1747417431306,
-        "duration" : 2001
+        "start" : 1747417508212,
+        "stop" : 1747417510211,
+        "duration" : 1999
       },
       "status" : "passed",
       "steps" : [ ],
@@ -118,6 +103,21 @@
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747417506814,
+      "stop" : 1747417506845,
+      "duration" : 31
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "broken",
@@ -126,16 +126,16 @@
     "steps" : [ {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747417431385,
-        "stop" : 1747417431385,
+        "start" : 1747417510292,
+        "stop" : 1747417510292,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "9deece8e5219e07a",
+        "uid" : "5db73840b3f5ce2",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "9deece8e5219e07a.png",
+        "source" : "5db73840b3f5ce2.png",
         "type" : "image/png",
         "size" : 27239
       } ],
@@ -153,11 +153,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747417431394,
-      "stop" : 1747417431394,
-      "duration" : 0
+      "start" : 1747417510295,
+      "stop" : 1747417510301,
+      "duration" : 6
     },
     "status" : "passed",
     "steps" : [ ],
@@ -168,11 +168,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747417431386,
-      "stop" : 1747417431394,
-      "duration" : 8
+      "start" : 1747417510301,
+      "stop" : 1747417510301,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -191,10 +191,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1796-852"
+    "value" : "fv-az1315-148"
   }, {
     "name" : "thread",
-    "value" : "pid-2602-worker-main"
+    "value" : "pid-2511-worker-main"
   }, {
     "name" : "package",
     "value" : "features.requerimientoYoutube.feature"
@@ -219,6 +219,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "e04eadbdd0d066e6.json",
+  "source" : "f212d9dad7207280.json",
   "parameterValues" : [ ]
 }

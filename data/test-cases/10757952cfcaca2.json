@@ -1,22 +1,22 @@
 {
-  "uid" : "7e55d11ac6d4f9c7",
+  "uid" : "10757952cfcaca2",
   "name" : "Validar el boton del login",
   "fullName" : "features/loginYoutube.feature: Validaciones del login en youtube > Validar el boton del login",
   "historyId" : "29a39961c2c415a7960495d3ba0f4fde:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747417437538,
-    "stop" : 1747417446523,
-    "duration" : 8985
+    "start" : 1747417516513,
+    "stop" : 1747417525429,
+    "duration" : 8916
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747417437538,
-      "stop" : 1747417437565,
-      "duration" : 27
+      "start" : 1747417516513,
+      "stop" : 1747417516513,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747417437537,
-      "stop" : 1747417437538,
-      "duration" : 1
+      "start" : 1747417516514,
+      "stop" : 1747417516542,
+      "duration" : 28
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,8 +47,8 @@
     "steps" : [ {
       "name" : "Given Estoy en la pagina de youtube",
       "time" : {
-        "start" : 1747417437566,
-        "stop" : 1747417437566,
+        "start" : 1747417516543,
+        "stop" : 1747417516543,
         "duration" : 0
       },
       "status" : "passed",
@@ -62,8 +62,8 @@
     }, {
       "name" : "When Presiono el boton de login",
       "time" : {
-        "start" : 1747417437567,
-        "stop" : 1747417437567,
+        "start" : 1747417516544,
+        "stop" : 1747417516544,
         "duration" : 0
       },
       "status" : "passed",
@@ -77,9 +77,9 @@
     }, {
       "name" : "Then Valido si la loginpage tiene el login",
       "time" : {
-        "start" : 1747417437567,
-        "stop" : 1747417446522,
-        "duration" : 8955
+        "start" : 1747417516544,
+        "stop" : 1747417525429,
+        "duration" : 8885
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,9 +92,9 @@
     }, {
       "name" : "I am on page \"https://www.youtube.com/\"",
       "time" : {
-        "start" : 1747417437567,
-        "stop" : 1747417438936,
-        "duration" : 1369
+        "start" : 1747417516545,
+        "stop" : 1747417517832,
+        "duration" : 1287
       },
       "status" : "passed",
       "steps" : [ ],
@@ -107,9 +107,9 @@
     }, {
       "name" : "I wait for element \"(//yt-icon[@id=\"logo-icon\"])[1]\", 20",
       "time" : {
-        "start" : 1747417438936,
-        "stop" : 1747417439039,
-        "duration" : 103
+        "start" : 1747417517833,
+        "stop" : 1747417517904,
+        "duration" : 71
       },
       "status" : "passed",
       "steps" : [ ],
@@ -122,9 +122,9 @@
     }, {
       "name" : "I wait for visible \"(//a[@aria-label=\"Acceder\"])[1]\", 20",
       "time" : {
-        "start" : 1747417439039,
-        "stop" : 1747417439073,
-        "duration" : 34
+        "start" : 1747417517904,
+        "stop" : 1747417517926,
+        "duration" : 22
       },
       "status" : "passed",
       "steps" : [ ],
@@ -137,9 +137,9 @@
     }, {
       "name" : "I click \"(//a[@aria-label=\"Acceder\"])[1]\"",
       "time" : {
-        "start" : 1747417439073,
-        "stop" : 1747417439520,
-        "duration" : 447
+        "start" : 1747417517927,
+        "stop" : 1747417518426,
+        "duration" : 499
       },
       "status" : "passed",
       "steps" : [ ],
@@ -152,9 +152,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417439520,
-        "stop" : 1747417441519,
-        "duration" : 1999
+        "start" : 1747417518426,
+        "stop" : 1747417520427,
+        "duration" : 2001
       },
       "status" : "passed",
       "steps" : [ ],
@@ -167,9 +167,9 @@
     }, {
       "name" : "I wait 5",
       "time" : {
-        "start" : 1747417441519,
-        "stop" : 1747417446519,
-        "duration" : 5000
+        "start" : 1747417520427,
+        "stop" : 1747417525426,
+        "duration" : 4999
       },
       "status" : "passed",
       "steps" : [ ],
@@ -182,8 +182,8 @@
     }, {
       "name" : "I see \"Inicia sesión\"",
       "time" : {
-        "start" : 1747417446519,
-        "stop" : 1747417446522,
+        "start" : 1747417525426,
+        "stop" : 1747417525429,
         "duration" : 3
       },
       "status" : "passed",
@@ -205,8 +205,8 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747417446528,
-      "stop" : 1747417446528,
+      "start" : 1747417525436,
+      "stop" : 1747417525436,
       "duration" : 0
     },
     "status" : "passed",
@@ -220,9 +220,9 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747417446523,
-      "stop" : 1747417446528,
-      "duration" : 5
+      "start" : 1747417525430,
+      "stop" : 1747417525436,
+      "duration" : 6
     },
     "status" : "passed",
     "steps" : [ ],
@@ -241,10 +241,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1796-852"
+    "value" : "fv-az1315-148"
   }, {
     "name" : "thread",
-    "value" : "pid-2602-worker-main"
+    "value" : "pid-2511-worker-main"
   }, {
     "name" : "package",
     "value" : "features.loginYoutube.feature"
@@ -265,6 +265,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "7e55d11ac6d4f9c7.json",
+  "source" : "10757952cfcaca2.json",
   "parameterValues" : [ ]
 }

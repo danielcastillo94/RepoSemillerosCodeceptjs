@@ -1,12 +1,12 @@
 {
-  "uid" : "5572eb98d0537035",
-  "name" : "Validar sección Contáctanos",
-  "fullName" : "features/telcel.feature: Automatización de Telcel > Validar sección Contáctanos",
-  "historyId" : "e0d8ab1eb88d6b47d39fce21de533483:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "a53ba68e842fe46b",
+  "name" : "Recargar saldo de $100",
+  "fullName" : "features/telcel.feature: Automatización de Telcel > Recargar saldo de $100",
+  "historyId" : "34774030b9fee8e4f2c3d132b1c94586:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747417403017,
-    "stop" : 1747417427865,
-    "duration" : 24848
+    "start" : 1747417461483,
+    "stop" : 1747417482291,
+    "duration" : 20808
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747417375667,
-      "stop" : 1747417375668,
-      "duration" : 1
+      "start" : 1747417455217,
+      "stop" : 1747417455217,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,9 +29,9 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747417403017,
-      "stop" : 1747417403046,
-      "duration" : 29
+      "start" : 1747417461485,
+      "stop" : 1747417461516,
+      "duration" : 31
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,8 +47,38 @@
     "steps" : [ {
       "name" : "Given estoy en la pagina de inicio de Telcel",
       "time" : {
-        "start" : 1747417403047,
-        "stop" : 1747417403048,
+        "start" : 1747417461517,
+        "stop" : 1747417461517,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And navego a la sección \"Paquetes y Recargas\"",
+      "time" : {
+        "start" : 1747417461519,
+        "stop" : 1747417461519,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When ingreso el número \"5512345678\"",
+      "time" : {
+        "start" : 1747417461520,
+        "stop" : 1747417461521,
         "duration" : 1
       },
       "status" : "passed",
@@ -60,11 +90,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When hago clic en \"Políticas y códigos\"",
+      "name" : "And elijo la opción \"Recarga tu Saldo Amigo\"",
       "time" : {
-        "start" : 1747417403050,
-        "stop" : 1747417403051,
-        "duration" : 1
+        "start" : 1747417461522,
+        "stop" : 1747417461522,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,11 +105,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And selecciono el acceso rapido \"Contáctanos\"",
+      "name" : "And selecciono el monto de \"$100\"",
       "time" : {
-        "start" : 1747417403053,
-        "stop" : 1747417403054,
-        "duration" : 1
+        "start" : 1747417461523,
+        "stop" : 1747417461523,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,41 +120,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And selecciono el estado \"ciudad de méxico\" y la modalidad \"Plan de Renta\"",
+      "name" : "Then debo ver el resumen de la recarga y un formulario de pago",
       "time" : {
-        "start" : 1747417403056,
-        "stop" : 1747417403058,
-        "duration" : 2
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And realizo la búsqueda",
-      "time" : {
-        "start" : 1747417403059,
-        "stop" : 1747417403060,
-        "duration" : 1
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "Then debo ver la region y los números de contacto",
-      "time" : {
-        "start" : 1747417403063,
-        "stop" : 1747417427865,
-        "duration" : 24802
+        "start" : 1747417461524,
+        "stop" : 1747417482291,
+        "duration" : 20767
       },
       "status" : "passed",
       "steps" : [ ],
@@ -137,9 +137,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747417403063,
-        "stop" : 1747417405786,
-        "duration" : 2723
+        "start" : 1747417461525,
+        "stop" : 1747417463733,
+        "duration" : 2208
       },
       "status" : "passed",
       "steps" : [ ],
@@ -152,8 +152,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417405786,
-        "stop" : 1747417407786,
+        "start" : 1747417463733,
+        "stop" : 1747417465733,
         "duration" : 2000
       },
       "status" : "passed",
@@ -165,11 +165,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I scroll to \"a[data-nombreboton=\"Políticas y códigos\"]\"",
+      "name" : "I scroll to \"#paquetes-recarga\"",
       "time" : {
-        "start" : 1747417407786,
-        "stop" : 1747417407927,
-        "duration" : 141
+        "start" : 1747417465733,
+        "stop" : 1747417465865,
+        "duration" : 132
       },
       "status" : "passed",
       "steps" : [ ],
@@ -180,10 +180,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait for visible \"a[data-nombreboton=\"Políticas y códigos\"]\", 5",
+      "name" : "I wait for visible \"#paquetes-recarga\", 5",
       "time" : {
-        "start" : 1747417407927,
-        "stop" : 1747417407930,
+        "start" : 1747417465865,
+        "stop" : 1747417465868,
         "duration" : 3
       },
       "status" : "passed",
@@ -195,11 +195,206 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I click \"a[data-nombreboton=\"Políticas y códigos\"]\"",
+      "name" : "I click \"#paquetes-recarga\"",
       "time" : {
-        "start" : 1747417407931,
-        "stop" : 1747417410001,
-        "duration" : 2070
+        "start" : 1747417465868,
+        "stop" : 1747417466097,
+        "duration" : 229
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I use playwright to \"espera a network idle en Paquetes y Recargas\", async ({ page}) => {\n          await page.waitForLoadState('networkidle', { timeout: 10000 });\n        }",
+      "time" : {
+        "start" : 1747417466097,
+        "stop" : 1747417471794,
+        "duration" : 5697
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I say \"Navegando a la sección Paquetes y Recargas\"",
+      "time" : {
+        "start" : 1747417471794,
+        "stop" : 1747417471795,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait for element \"//iframe[contains(@class, \"iframePackagesRoaming-SIN_LIMITE\")]\", 20",
+      "time" : {
+        "start" : 1747417471795,
+        "stop" : 1747417471797,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Within \"{\"frame\":\"//iframe[contains(@class, \\\"iframePackagesRoaming-SIN_LIMITE\\\")]\"}\"",
+      "time" : {
+        "start" : 1747417471799,
+        "stop" : 1747417482291,
+        "duration" : 10492
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I wait for visible \"//input[@name=\"mdn\"]\", 20",
+        "time" : {
+          "start" : 1747417471799,
+          "stop" : 1747417472814,
+          "duration" : 1015
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I wait for visible \"//input[@name=\"confirmMdn\"]\", 20",
+        "time" : {
+          "start" : 1747417472815,
+          "stop" : 1747417473820,
+          "duration" : 1005
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I fill field \"//input[@name=\"mdn\"]\", \"5512345678\"",
+        "time" : {
+          "start" : 1747417473820,
+          "stop" : 1747417474073,
+          "duration" : 253
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I fill field \"//input[@name=\"confirmMdn\"]\", \"5512345678\"",
+        "time" : {
+          "start" : 1747417474073,
+          "stop" : 1747417474339,
+          "duration" : 266
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "I say \"Número ingresado dentro del iframe correctamente: 5512345678\"",
+      "time" : {
+        "start" : 1747417474340,
+        "stop" : 1747417474340,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait for visible \".form-field-text.text-placeholder\", 10",
+      "time" : {
+        "start" : 1747417474341,
+        "stop" : 1747417475348,
+        "duration" : 1007
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click \".form-field-text.text-placeholder\"",
+      "time" : {
+        "start" : 1747417475348,
+        "stop" : 1747417475579,
+        "duration" : 231
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait for visible \"//button[@class=\"select-option \" and text()=\"Recarga tu Saldo Amigo\"]\", 10",
+      "time" : {
+        "start" : 1747417475579,
+        "stop" : 1747417476585,
+        "duration" : 1006
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click \"//button[@class=\"select-option \" and text()=\"Recarga tu Saldo Amigo\"]\"",
+      "time" : {
+        "start" : 1747417476585,
+        "stop" : 1747417476721,
+        "duration" : 136
       },
       "status" : "passed",
       "steps" : [ ],
@@ -212,8 +407,128 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417410001,
-        "stop" : 1747417412000,
+        "start" : 1747417476721,
+        "stop" : 1747417478721,
+        "duration" : 2000
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait for element \"//button[@aria-label=\"Continuar al siguiente paso\"]\", 10",
+      "time" : {
+        "start" : 1747417478721,
+        "stop" : 1747417478725,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click \"//button[@aria-label=\"Continuar al siguiente paso\"]\"",
+      "time" : {
+        "start" : 1747417478726,
+        "stop" : 1747417478887,
+        "duration" : 161
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I say \"Opción seleccionada: Recarga tu Saldo Amigo\"",
+      "time" : {
+        "start" : 1747417478887,
+        "stop" : 1747417478887,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait for visible \"//div[contains(@class, \"btn-selectable\")]//button[.//span[text()=\"$100\"]]\", 10",
+      "time" : {
+        "start" : 1747417478888,
+        "stop" : 1747417479896,
+        "duration" : 1008
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click \"//div[contains(@class, \"btn-selectable\")]//button[.//span[text()=\"$100\"]]\"",
+      "time" : {
+        "start" : 1747417479896,
+        "stop" : 1747417480043,
+        "duration" : 147
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait for element \"//button[@aria-label=\"Continuar al siguiente paso\"]\", 10",
+      "time" : {
+        "start" : 1747417480044,
+        "stop" : 1747417480047,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I click \"//button[@aria-label=\"Continuar al siguiente paso\"]\"",
+      "time" : {
+        "start" : 1747417480047,
+        "stop" : 1747417480291,
+        "duration" : 244
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 2",
+      "time" : {
+        "start" : 1747417480291,
+        "stop" : 1747417482290,
         "duration" : 1999
       },
       "status" : "passed",
@@ -225,385 +540,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I say \"Navegando a la sección Políticas y códigos\"",
+      "name" : "I say \"Monto seleccionado: $100\"",
       "time" : {
-        "start" : 1747417412001,
-        "stop" : 1747417412001,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I scroll to \"//p[@class=\"telcel-accesos-rapidos--tarjeta-titulo\" and text()=\"Contáctanos\"]\"",
-      "time" : {
-        "start" : 1747417412001,
-        "stop" : 1747417412141,
-        "duration" : 140
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for visible \"//p[@class=\"telcel-accesos-rapidos--tarjeta-titulo\" and text()=\"Contáctanos\"]\", 5",
-      "time" : {
-        "start" : 1747417412141,
-        "stop" : 1747417412144,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I click \"//p[@class=\"telcel-accesos-rapidos--tarjeta-titulo\" and text()=\"Contáctanos\"]\"",
-      "time" : {
-        "start" : 1747417412144,
-        "stop" : 1747417412306,
-        "duration" : 162
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait 2",
-      "time" : {
-        "start" : 1747417412306,
-        "stop" : 1747417414306,
-        "duration" : 2000
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I say \"Acceso rápido seleccionado: Contáctanos\"",
-      "time" : {
-        "start" : 1747417414307,
-        "stop" : 1747417414307,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for visible \"//span[@class=\"telcel-controles-titulo-select-simulado\" and text()=\"Selecciona tu estado\"]\", 10",
-      "time" : {
-        "start" : 1747417414307,
-        "stop" : 1747417414309,
-        "duration" : 2
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I click \"//span[@class=\"telcel-controles-titulo-select-simulado\" and text()=\"Selecciona tu estado\"]\"",
-      "time" : {
-        "start" : 1747417414310,
-        "stop" : 1747417414473,
-        "duration" : 163
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait 2",
-      "time" : {
-        "start" : 1747417414473,
-        "stop" : 1747417416474,
-        "duration" : 2001
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I scroll to \"a[data-etiqueta=\"ciudad de méxico\"]\"",
-      "time" : {
-        "start" : 1747417416474,
-        "stop" : 1747417416593,
-        "duration" : 119
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for visible \"a[data-etiqueta=\"ciudad de méxico\"]\", 10",
-      "time" : {
-        "start" : 1747417416593,
-        "stop" : 1747417416596,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I click \"a[data-etiqueta=\"ciudad de méxico\"]\"",
-      "time" : {
-        "start" : 1747417416596,
-        "stop" : 1747417417915,
-        "duration" : 1319
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait 2",
-      "time" : {
-        "start" : 1747417417915,
-        "stop" : 1747417419916,
-        "duration" : 2001
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for visible \"//span[@class=\"telcel-controles-titulo-select-simulado\" and text()=\"Selecciona tu modalidad\"]\", 10",
-      "time" : {
-        "start" : 1747417419916,
-        "stop" : 1747417419918,
-        "duration" : 2
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I click \"//span[@class=\"telcel-controles-titulo-select-simulado\" and text()=\"Selecciona tu modalidad\"]\"",
-      "time" : {
-        "start" : 1747417419919,
-        "stop" : 1747417420056,
-        "duration" : 137
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait 2",
-      "time" : {
-        "start" : 1747417420056,
-        "stop" : 1747417422057,
-        "duration" : 2001
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I scroll to \"a[data-etiqueta=\"Plan de Renta\"]\"",
-      "time" : {
-        "start" : 1747417422057,
-        "stop" : 1747417422175,
-        "duration" : 118
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for visible \"a[data-etiqueta=\"Plan de Renta\"]\", 10",
-      "time" : {
-        "start" : 1747417422175,
-        "stop" : 1747417422177,
-        "duration" : 2
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I click \"a[data-etiqueta=\"Plan de Renta\"]\"",
-      "time" : {
-        "start" : 1747417422177,
-        "stop" : 1747417423695,
-        "duration" : 1518
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait 2",
-      "time" : {
-        "start" : 1747417423695,
-        "stop" : 1747417425696,
-        "duration" : 2001
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for visible \"#telcel-boton-buscar\", 10",
-      "time" : {
-        "start" : 1747417425696,
-        "stop" : 1747417425699,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I click \"#telcel-boton-buscar\"",
-      "time" : {
-        "start" : 1747417425699,
-        "stop" : 1747417425861,
-        "duration" : 162
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait 2",
-      "time" : {
-        "start" : 1747417425861,
-        "stop" : 1747417427861,
-        "duration" : 2000
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I say \"Realizando busqueda\"",
-      "time" : {
-        "start" : 1747417427861,
-        "stop" : 1747417427861,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for element \"//div[@class='telcel-soporte-telefono-regiones']\", 10",
-      "time" : {
-        "start" : 1747417427861,
-        "stop" : 1747417427864,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I say \"Resultados de búsqueda visibles\"",
-      "time" : {
-        "start" : 1747417427864,
-        "stop" : 1747417427864,
+        "start" : 1747417482291,
+        "stop" : 1747417482291,
         "duration" : 0
       },
       "status" : "passed",
@@ -617,7 +557,7 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 38,
+    "stepsCount" : 34,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -625,9 +565,9 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747417427865,
-      "stop" : 1747417427873,
-      "duration" : 8
+      "start" : 1747417482291,
+      "stop" : 1747417482308,
+      "duration" : 17
     },
     "status" : "passed",
     "steps" : [ ],
@@ -640,9 +580,9 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747417427873,
-      "stop" : 1747417427874,
-      "duration" : 1
+      "start" : 1747417506812,
+      "stop" : 1747417506812,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -661,10 +601,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1796-852"
+    "value" : "fv-az1315-148"
   }, {
     "name" : "thread",
-    "value" : "pid-2602-worker-main"
+    "value" : "pid-2511-worker-main"
   }, {
     "name" : "package",
     "value" : "features.telcel.feature"
@@ -685,6 +625,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "5572eb98d0537035.json",
+  "source" : "a53ba68e842fe46b.json",
   "parameterValues" : [ ]
 }

@@ -6,19 +6,36 @@
       "name" : "No steps matching \"debería ver:\"",
       "children" : [ {
         "name" : "Verificar carga de elementos clave",
-        "uid" : "e04eadbdd0d066e6",
+        "uid" : "f212d9dad7207280",
         "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
         "status" : "broken",
         "time" : {
-          "start" : 1747417427875,
-          "stop" : 1747417431386,
-          "duration" : 3511
+          "start" : 1747417506814,
+          "stop" : 1747417510294,
+          "duration" : 3480
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
       "uid" : "259089c0497a8892213b9e9fa2f3b58b"
+    }, {
+      "name" : "No steps matching \"Presiono el boton de Explorar\"",
+      "children" : [ {
+        "name" : "Validar el atributo href @enlaces",
+        "uid" : "69765e08191f18af",
+        "parentUid" : "7976f2ece142c00495c086b126b45811",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747417526068,
+          "stop" : 1747417526586,
+          "duration" : 518
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7976f2ece142c00495c086b126b45811"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],

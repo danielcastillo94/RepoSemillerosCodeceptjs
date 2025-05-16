@@ -1,45 +1,30 @@
 {
-  "uid" : "39e386af1a66b092",
+  "uid" : "5dfd9fd49d6dafd",
   "name" : "Navegar al canal",
   "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Navegar al canal",
   "historyId" : "c77d9f766a7fa4633a6ac07568b0972f:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747417318682,
-    "stop" : 1747417333097,
-    "duration" : 14415
+    "start" : 1747417398174,
+    "stop" : 1747417412659,
+    "duration" : 14485
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747417318682,
-      "stop" : 1747417318713,
-      "duration" : 31
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747417318713,
-      "stop" : 1747417322155,
-      "duration" : 3442
+      "start" : 1747417398208,
+      "stop" : 1747417401733,
+      "duration" : 3525
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747417318715,
-        "stop" : 1747417318715,
-        "duration" : 0
+        "start" : 1747417398210,
+        "stop" : 1747417398211,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -52,9 +37,9 @@
     }, {
       "name" : "I am on page \"https://www.youtube.com\"",
       "time" : {
-        "start" : 1747417318715,
-        "stop" : 1747417320075,
-        "duration" : 1360
+        "start" : 1747417398211,
+        "stop" : 1747417399612,
+        "duration" : 1401
       },
       "status" : "passed",
       "steps" : [ ],
@@ -67,9 +52,9 @@
     }, {
       "name" : "I wait for element \"input[name=\"search_query\"]\", 10",
       "time" : {
-        "start" : 1747417320076,
-        "stop" : 1747417320154,
-        "duration" : 78
+        "start" : 1747417399612,
+        "stop" : 1747417399732,
+        "duration" : 120
       },
       "status" : "passed",
       "steps" : [ ],
@@ -82,9 +67,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417320154,
-        "stop" : 1747417322155,
-        "duration" : 2001
+        "start" : 1747417399733,
+        "stop" : 1747417401732,
+        "duration" : 1999
       },
       "status" : "passed",
       "steps" : [ ],
@@ -102,11 +87,26 @@
     "shouldDisplayMessage" : false,
     "hasContent" : true
   }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747417398174,
+      "stop" : 1747417398208,
+      "duration" : 34
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747417303893,
-      "stop" : 1747417304174,
-      "duration" : 281
+      "start" : 1747417383560,
+      "stop" : 1747417383791,
+      "duration" : 231
     },
     "status" : "passed",
     "steps" : [ ],
@@ -122,8 +122,8 @@
     "steps" : [ {
       "name" : "Given realizo una búsqueda con el texto \"Deportes\"",
       "time" : {
-        "start" : 1747417322158,
-        "stop" : 1747417322159,
+        "start" : 1747417401736,
+        "stop" : 1747417401737,
         "duration" : 1
       },
       "status" : "passed",
@@ -137,8 +137,8 @@
     }, {
       "name" : "When hago clic en el nombre del canal del primer resultado",
       "time" : {
-        "start" : 1747417322161,
-        "stop" : 1747417322161,
+        "start" : 1747417401739,
+        "stop" : 1747417401739,
         "duration" : 0
       },
       "status" : "passed",
@@ -152,8 +152,8 @@
     }, {
       "name" : "When voy a la seccion videos",
       "time" : {
-        "start" : 1747417322163,
-        "stop" : 1747417322164,
+        "start" : 1747417401741,
+        "stop" : 1747417401742,
         "duration" : 1
       },
       "status" : "passed",
@@ -167,8 +167,8 @@
     }, {
       "name" : "Then debería ver el nombre del canal",
       "time" : {
-        "start" : 1747417322166,
-        "stop" : 1747417322166,
+        "start" : 1747417401745,
+        "stop" : 1747417401745,
         "duration" : 0
       },
       "status" : "passed",
@@ -182,8 +182,8 @@
     }, {
       "name" : "And debería ver la pestaña de Videos",
       "time" : {
-        "start" : 1747417322168,
-        "stop" : 1747417322168,
+        "start" : 1747417401746,
+        "stop" : 1747417401746,
         "duration" : 0
       },
       "status" : "passed",
@@ -197,9 +197,9 @@
     }, {
       "name" : "And debería ver al menos un video con miniatura y título",
       "time" : {
-        "start" : 1747417322170,
-        "stop" : 1747417333097,
-        "duration" : 10927
+        "start" : 1747417401748,
+        "stop" : 1747417412659,
+        "duration" : 10911
       },
       "status" : "passed",
       "steps" : [ ],
@@ -212,9 +212,9 @@
     }, {
       "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
       "time" : {
-        "start" : 1747417322171,
-        "stop" : 1747417322174,
-        "duration" : 3
+        "start" : 1747417401749,
+        "stop" : 1747417401753,
+        "duration" : 4
       },
       "status" : "passed",
       "steps" : [ ],
@@ -227,9 +227,9 @@
     }, {
       "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Deportes\"",
       "time" : {
-        "start" : 1747417322174,
-        "stop" : 1747417322412,
-        "duration" : 238
+        "start" : 1747417401753,
+        "stop" : 1747417401985,
+        "duration" : 232
       },
       "status" : "passed",
       "steps" : [ ],
@@ -242,9 +242,9 @@
     }, {
       "name" : "I press key \"Enter\"",
       "time" : {
-        "start" : 1747417322412,
-        "stop" : 1747417322542,
-        "duration" : 130
+        "start" : 1747417401985,
+        "stop" : 1747417402114,
+        "duration" : 129
       },
       "status" : "passed",
       "steps" : [ ],
@@ -257,9 +257,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417322542,
-        "stop" : 1747417324542,
-        "duration" : 2000
+        "start" : 1747417402114,
+        "stop" : 1747417404115,
+        "duration" : 2001
       },
       "status" : "passed",
       "steps" : [ ],
@@ -272,8 +272,8 @@
     }, {
       "name" : "I say \"Buscando frase: Deportes\"",
       "time" : {
-        "start" : 1747417324542,
-        "stop" : 1747417324542,
+        "start" : 1747417404115,
+        "stop" : 1747417404115,
         "duration" : 0
       },
       "status" : "passed",
@@ -287,8 +287,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417324542,
-        "stop" : 1747417326542,
+        "start" : 1747417404115,
+        "stop" : 1747417406115,
         "duration" : 2000
       },
       "status" : "passed",
@@ -302,9 +302,9 @@
     }, {
       "name" : "I click \"(//a[@id=\"channel-thumbnail\"])[1]\"",
       "time" : {
-        "start" : 1747417326543,
-        "stop" : 1747417326773,
-        "duration" : 230
+        "start" : 1747417406115,
+        "stop" : 1747417406348,
+        "duration" : 233
       },
       "status" : "passed",
       "steps" : [ ],
@@ -317,8 +317,8 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747417326773,
-        "stop" : 1747417329773,
+        "start" : 1747417406348,
+        "stop" : 1747417409348,
         "duration" : 3000
       },
       "status" : "passed",
@@ -332,9 +332,9 @@
     }, {
       "name" : "I wait for element \"//yt-tab-shape[@class=\"yt-tab-shape-wiz yt-tab-shape-wiz--host-clickable\"][2]\", 10",
       "time" : {
-        "start" : 1747417329773,
-        "stop" : 1747417329841,
-        "duration" : 68
+        "start" : 1747417409349,
+        "stop" : 1747417409402,
+        "duration" : 53
       },
       "status" : "passed",
       "steps" : [ ],
@@ -347,9 +347,9 @@
     }, {
       "name" : "I click \"//yt-tab-shape[@class=\"yt-tab-shape-wiz yt-tab-shape-wiz--host-clickable\"][2]\"",
       "time" : {
-        "start" : 1747417329841,
-        "stop" : 1747417330039,
-        "duration" : 198
+        "start" : 1747417409402,
+        "stop" : 1747417409618,
+        "duration" : 216
       },
       "status" : "passed",
       "steps" : [ ],
@@ -362,9 +362,9 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747417330039,
-        "stop" : 1747417333039,
-        "duration" : 3000
+        "start" : 1747417409619,
+        "stop" : 1747417412618,
+        "duration" : 2999
       },
       "status" : "passed",
       "steps" : [ ],
@@ -377,9 +377,9 @@
     }, {
       "name" : "I grab text from \"//h1[@class=\"dynamic-text-view-model-wiz__h1\"]\"",
       "time" : {
-        "start" : 1747417333039,
-        "stop" : 1747417333041,
-        "duration" : 2
+        "start" : 1747417412618,
+        "stop" : 1747417412621,
+        "duration" : 3
       },
       "status" : "passed",
       "steps" : [ ],
@@ -392,9 +392,9 @@
     }, {
       "name" : "I grab text from \"//yt-tab-shape[@class=\"yt-tab-shape-wiz yt-tab-shape-wiz--host-clickable\"][2]\"",
       "time" : {
-        "start" : 1747417333042,
-        "stop" : 1747417333044,
-        "duration" : 2
+        "start" : 1747417412621,
+        "stop" : 1747417412624,
+        "duration" : 3
       },
       "status" : "passed",
       "steps" : [ ],
@@ -407,8 +407,8 @@
     }, {
       "name" : "I wait for element \"//yt-formatted-string[@id=\"video-title\"]\", 10",
       "time" : {
-        "start" : 1747417333044,
-        "stop" : 1747417333046,
+        "start" : 1747417412624,
+        "stop" : 1747417412626,
         "duration" : 2
       },
       "status" : "passed",
@@ -422,9 +422,9 @@
     }, {
       "name" : "I grab text from all \"//yt-formatted-string[@id=\"video-title\"]\"",
       "time" : {
-        "start" : 1747417333047,
-        "stop" : 1747417333097,
-        "duration" : 50
+        "start" : 1747417412626,
+        "stop" : 1747417412659,
+        "duration" : 33
       },
       "status" : "passed",
       "steps" : [ ],
@@ -445,8 +445,8 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747417362575,
-      "stop" : 1747417362575,
+      "start" : 1747417442169,
+      "stop" : 1747417442169,
       "duration" : 0
     },
     "status" : "passed",
@@ -460,16 +460,16 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747417333098,
-      "stop" : 1747417333125,
-      "duration" : 27
+      "start" : 1747417412660,
+      "stop" : 1747417412686,
+      "duration" : 26
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "I grab number of visible elements \"//a[@id=\"thumbnail\"]//img\"",
       "time" : {
-        "start" : 1747417333101,
-        "stop" : 1747417333119,
+        "start" : 1747417412662,
+        "stop" : 1747417412680,
         "duration" : 18
       },
       "status" : "passed",
@@ -496,10 +496,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1796-852"
+    "value" : "fv-az1315-148"
   }, {
     "name" : "thread",
-    "value" : "pid-2602-worker-main"
+    "value" : "pid-2511-worker-main"
   }, {
     "name" : "package",
     "value" : "features.youtubeGeneral.feature"
@@ -520,6 +520,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "39e386af1a66b092.json",
+  "source" : "5dfd9fd49d6dafd.json",
   "parameterValues" : [ ]
 }
