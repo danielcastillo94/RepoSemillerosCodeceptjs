@@ -1,12 +1,12 @@
 {
-  "uid" : "20a5bc85979438a",
-  "name" : "Título incorrecto provoca error",
-  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Título incorrecto provoca error",
-  "historyId" : "5d4bf5b2424acc9adc73c006774ed167:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "5f81cab385037ce7",
+  "name" : "Validar título distinto de otro video",
+  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título distinto de otro video",
+  "historyId" : "e996e3e213ec2bb7040a7be8ce15cf31:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747419149571,
-    "stop" : 1747419170165,
-    "duration" : 20594
+    "start" : 1747419483773,
+    "stop" : 1747419504454,
+    "duration" : 20681
   },
   "status" : "broken",
   "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -14,11 +14,11 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747419149571,
-      "stop" : 1747419149601,
-      "duration" : 30
+      "start" : 1747419463316,
+      "stop" : 1747419463316,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,11 +29,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747419108008,
-      "stop" : 1747419108009,
-      "duration" : 1
+      "start" : 1747419483774,
+      "stop" : 1747419483805,
+      "duration" : 31
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,17 +46,17 @@
   }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747419149601,
-      "stop" : 1747419155044,
-      "duration" : 5443
+      "start" : 1747419483805,
+      "stop" : 1747419489333,
+      "duration" : 5528
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747419149602,
-        "stop" : 1747419149603,
-        "duration" : 1
+        "start" : 1747419483807,
+        "stop" : 1747419483807,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -69,9 +69,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747419149603,
-        "stop" : 1747419152044,
-        "duration" : 2441
+        "start" : 1747419483807,
+        "stop" : 1747419486332,
+        "duration" : 2525
       },
       "status" : "passed",
       "steps" : [ ],
@@ -84,8 +84,8 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747419152044,
-        "stop" : 1747419155044,
+        "start" : 1747419486333,
+        "stop" : 1747419489333,
         "duration" : 3000
       },
       "status" : "passed",
@@ -109,10 +109,10 @@
     "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
     "statusTrace" : "Error: element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n\n    at Playwright.waitForElement (node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
     "steps" : [ {
-      "name" : "When busco el video \"Neffex\"",
+      "name" : "When busco el video \"Metallica Nothing Else Matters\"",
       "time" : {
-        "start" : 1747419155047,
-        "stop" : 1747419155047,
+        "start" : 1747419489336,
+        "stop" : 1747419489336,
         "duration" : 0
       },
       "status" : "broken",
@@ -128,8 +128,8 @@
     }, {
       "name" : "And entro al primer video de los resultados",
       "time" : {
-        "start" : 1747419155048,
-        "stop" : 1747419155049,
+        "start" : 1747419489338,
+        "stop" : 1747419489339,
         "duration" : 1
       },
       "status" : "broken",
@@ -143,10 +143,10 @@
       "shouldDisplayMessage" : true,
       "hasContent" : true
     }, {
-      "name" : "Then debería ver el título \"Este título no existe\"",
+      "name" : "Then debería ver el título \"Metallica: Nothing Else Matters (Official Music Video)\"",
       "time" : {
-        "start" : 1747419155050,
-        "stop" : 1747419165051,
+        "start" : 1747419489340,
+        "stop" : 1747419499341,
         "duration" : 10001
       },
       "status" : "broken",
@@ -155,9 +155,9 @@
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
         "time" : {
-          "start" : 1747419155050,
-          "stop" : 1747419165051,
-          "duration" : 10001
+          "start" : 1747419489341,
+          "stop" : 1747419499341,
+          "duration" : 10000
         },
         "status" : "broken",
         "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -179,16 +179,16 @@
     }, {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747419170164,
-        "stop" : 1747419170164,
+        "start" : 1747419504453,
+        "stop" : 1747419504453,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "fcb379fb3ac0c86b",
+        "uid" : "6a479751b0968915",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "fcb379fb3ac0c86b.png",
+        "source" : "6a479751b0968915.png",
         "type" : "image/png",
         "size" : 184023
       } ],
@@ -208,8 +208,8 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747419170165,
-      "stop" : 1747419170177,
+      "start" : 1747419504454,
+      "stop" : 1747419504466,
       "duration" : 12
     },
     "status" : "passed",
@@ -223,9 +223,9 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747419170177,
-      "stop" : 1747419170178,
-      "duration" : 1
+      "start" : 1747419525014,
+      "stop" : 1747419525014,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -244,10 +244,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az816-655"
+    "value" : "fv-az802-962"
   }, {
     "name" : "thread",
-    "value" : "pid-2584-worker-main"
+    "value" : "pid-2530-worker-main"
   }, {
     "name" : "package",
     "value" : "features.videoYoutube.feature"
@@ -272,6 +272,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "20a5bc85979438a.json",
+  "source" : "5f81cab385037ce7.json",
   "parameterValues" : [ ]
 }

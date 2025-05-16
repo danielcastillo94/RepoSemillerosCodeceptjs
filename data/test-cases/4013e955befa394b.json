@@ -1,12 +1,12 @@
 {
-  "uid" : "8f689f245e1d3fb2",
-  "name" : "Validar título distinto de otro video",
-  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título distinto de otro video",
-  "historyId" : "e996e3e213ec2bb7040a7be8ce15cf31:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "4013e955befa394b",
+  "name" : "Validar título y videos relacionados correctamente",
+  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título y videos relacionados correctamente",
+  "historyId" : "fb2656ce6fc5bb2deb29542859e5842e:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747419129195,
-    "stop" : 1747419149558,
-    "duration" : 20363
+    "start" : 1747419463320,
+    "stop" : 1747419483761,
+    "duration" : 20441
   },
   "status" : "broken",
   "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -14,48 +14,18 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
-    "time" : {
-      "start" : 1747419108008,
-      "stop" : 1747419108009,
-      "duration" : 1
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747419129195,
-      "stop" : 1747419129228,
-      "duration" : 33
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747419129228,
-      "stop" : 1747419134440,
-      "duration" : 5212
+      "start" : 1747419463361,
+      "stop" : 1747419468628,
+      "duration" : 5267
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747419129230,
-        "stop" : 1747419129230,
+        "start" : 1747419463363,
+        "stop" : 1747419463363,
         "duration" : 0
       },
       "status" : "passed",
@@ -69,9 +39,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747419129230,
-        "stop" : 1747419131440,
-        "duration" : 2210
+        "start" : 1747419463363,
+        "stop" : 1747419465627,
+        "duration" : 2264
       },
       "status" : "passed",
       "steps" : [ ],
@@ -84,9 +54,9 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747419131440,
-        "stop" : 1747419134440,
-        "duration" : 3000
+        "start" : 1747419465628,
+        "stop" : 1747419468627,
+        "duration" : 2999
       },
       "status" : "passed",
       "steps" : [ ],
@@ -103,17 +73,47 @@
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747419463316,
+      "stop" : 1747419463316,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747419463321,
+      "stop" : 1747419463361,
+      "duration" : 40
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "broken",
     "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
     "statusTrace" : "Error: element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n\n    at Playwright.waitForElement (node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
     "steps" : [ {
-      "name" : "When busco el video \"Metallica Nothing Else Matters\"",
+      "name" : "When busco el video \"Falling In Reverse\"",
       "time" : {
-        "start" : 1747419134443,
-        "stop" : 1747419134443,
-        "duration" : 0
+        "start" : 1747419468631,
+        "stop" : 1747419468632,
+        "duration" : 1
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -128,9 +128,9 @@
     }, {
       "name" : "And entro al primer video de los resultados",
       "time" : {
-        "start" : 1747419134445,
-        "stop" : 1747419134445,
-        "duration" : 0
+        "start" : 1747419468633,
+        "stop" : 1747419468634,
+        "duration" : 1
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -143,11 +143,11 @@
       "shouldDisplayMessage" : true,
       "hasContent" : true
     }, {
-      "name" : "Then debería ver el título \"Metallica: Nothing Else Matters (Official Music Video)\"",
+      "name" : "Then debería ver el título \"Falling In Reverse - \\\"Watch The World Burn\\\"\"",
       "time" : {
-        "start" : 1747419134447,
-        "stop" : 1747419144448,
-        "duration" : 10001
+        "start" : 1747419468636,
+        "stop" : 1747419478638,
+        "duration" : 10002
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -155,8 +155,8 @@
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
         "time" : {
-          "start" : 1747419134447,
-          "stop" : 1747419144448,
+          "start" : 1747419468637,
+          "stop" : 1747419478638,
           "duration" : 10001
         },
         "status" : "broken",
@@ -179,16 +179,16 @@
     }, {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747419149557,
-        "stop" : 1747419149557,
+        "start" : 1747419483759,
+        "stop" : 1747419483759,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "5a38d7dbdb506d0f",
+        "uid" : "ad4b6c40b021b8e0",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "5a38d7dbdb506d0f.png",
+        "source" : "ad4b6c40b021b8e0.png",
         "type" : "image/png",
         "size" : 184023
       } ],
@@ -206,11 +206,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747419149558,
-      "stop" : 1747419149570,
-      "duration" : 12
+      "start" : 1747419525014,
+      "stop" : 1747419525014,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -221,11 +221,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747419170177,
-      "stop" : 1747419170178,
-      "duration" : 1
+      "start" : 1747419483761,
+      "stop" : 1747419483773,
+      "duration" : 12
     },
     "status" : "passed",
     "steps" : [ ],
@@ -244,10 +244,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az816-655"
+    "value" : "fv-az802-962"
   }, {
     "name" : "thread",
-    "value" : "pid-2584-worker-main"
+    "value" : "pid-2530-worker-main"
   }, {
     "name" : "package",
     "value" : "features.videoYoutube.feature"
@@ -272,6 +272,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "8f689f245e1d3fb2.json",
+  "source" : "4013e955befa394b.json",
   "parameterValues" : [ ]
 }

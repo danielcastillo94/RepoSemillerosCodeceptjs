@@ -1,12 +1,12 @@
 {
-  "uid" : "b3dc60b184f9e7e5",
+  "uid" : "46303de1952ae94b",
   "name" : "Validar el boton del login",
   "fullName" : "features/loginYoutube.feature: Validaciones del login en youtube > Validar el boton del login",
   "historyId" : "29a39961c2c415a7960495d3ba0f4fde:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747419233350,
-    "stop" : 1747419242245,
-    "duration" : 8895
+    "start" : 1747419590731,
+    "stop" : 1747419599700,
+    "duration" : 8969
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747419233350,
-      "stop" : 1747419233350,
+      "start" : 1747419590731,
+      "stop" : 1747419590731,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,9 +29,9 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747419233351,
-      "stop" : 1747419233381,
-      "duration" : 30
+      "start" : 1747419590731,
+      "stop" : 1747419590764,
+      "duration" : 33
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,8 +47,8 @@
     "steps" : [ {
       "name" : "Given Estoy en la pagina de youtube",
       "time" : {
-        "start" : 1747419233383,
-        "stop" : 1747419233383,
+        "start" : 1747419590766,
+        "stop" : 1747419590766,
         "duration" : 0
       },
       "status" : "passed",
@@ -62,8 +62,8 @@
     }, {
       "name" : "When Presiono el boton de login",
       "time" : {
-        "start" : 1747419233384,
-        "stop" : 1747419233384,
+        "start" : 1747419590767,
+        "stop" : 1747419590767,
         "duration" : 0
       },
       "status" : "passed",
@@ -77,9 +77,9 @@
     }, {
       "name" : "Then Valido si la loginpage tiene el login",
       "time" : {
-        "start" : 1747419233385,
-        "stop" : 1747419242245,
-        "duration" : 8860
+        "start" : 1747419590768,
+        "stop" : 1747419599700,
+        "duration" : 8932
       },
       "status" : "passed",
       "steps" : [ ],
@@ -92,9 +92,9 @@
     }, {
       "name" : "I am on page \"https://www.youtube.com/\"",
       "time" : {
-        "start" : 1747419233385,
-        "stop" : 1747419234679,
-        "duration" : 1294
+        "start" : 1747419590768,
+        "stop" : 1747419592097,
+        "duration" : 1329
       },
       "status" : "passed",
       "steps" : [ ],
@@ -107,9 +107,9 @@
     }, {
       "name" : "I wait for element \"(//yt-icon[@id=\"logo-icon\"])[1]\", 20",
       "time" : {
-        "start" : 1747419234679,
-        "stop" : 1747419234751,
-        "duration" : 72
+        "start" : 1747419592097,
+        "stop" : 1747419592110,
+        "duration" : 13
       },
       "status" : "passed",
       "steps" : [ ],
@@ -122,9 +122,9 @@
     }, {
       "name" : "I wait for visible \"(//a[@aria-label=\"Acceder\"])[1]\", 20",
       "time" : {
-        "start" : 1747419234752,
-        "stop" : 1747419234812,
-        "duration" : 60
+        "start" : 1747419592110,
+        "stop" : 1747419592250,
+        "duration" : 140
       },
       "status" : "passed",
       "steps" : [ ],
@@ -137,9 +137,9 @@
     }, {
       "name" : "I click \"(//a[@aria-label=\"Acceder\"])[1]\"",
       "time" : {
-        "start" : 1747419234812,
-        "stop" : 1747419235243,
-        "duration" : 431
+        "start" : 1747419592250,
+        "stop" : 1747419592697,
+        "duration" : 447
       },
       "status" : "passed",
       "steps" : [ ],
@@ -152,8 +152,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747419235243,
-        "stop" : 1747419237242,
+        "start" : 1747419592697,
+        "stop" : 1747419594696,
         "duration" : 1999
       },
       "status" : "passed",
@@ -167,8 +167,8 @@
     }, {
       "name" : "I wait 5",
       "time" : {
-        "start" : 1747419237242,
-        "stop" : 1747419242242,
+        "start" : 1747419594696,
+        "stop" : 1747419599696,
         "duration" : 5000
       },
       "status" : "passed",
@@ -182,9 +182,9 @@
     }, {
       "name" : "I see \"Inicia sesión\"",
       "time" : {
-        "start" : 1747419242242,
-        "stop" : 1747419242244,
-        "duration" : 2
+        "start" : 1747419599696,
+        "stop" : 1747419599700,
+        "duration" : 4
       },
       "status" : "passed",
       "steps" : [ ],
@@ -205,9 +205,9 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747419242245,
-      "stop" : 1747419242250,
-      "duration" : 5
+      "start" : 1747419599701,
+      "stop" : 1747419599707,
+      "duration" : 6
     },
     "status" : "passed",
     "steps" : [ ],
@@ -220,8 +220,8 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747419242250,
-      "stop" : 1747419242250,
+      "start" : 1747419599707,
+      "stop" : 1747419599707,
       "duration" : 0
     },
     "status" : "passed",
@@ -241,10 +241,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az816-655"
+    "value" : "fv-az802-962"
   }, {
     "name" : "thread",
-    "value" : "pid-2584-worker-main"
+    "value" : "pid-2530-worker-main"
   }, {
     "name" : "package",
     "value" : "features.loginYoutube.feature"
@@ -265,6 +265,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b3dc60b184f9e7e5.json",
+  "source" : "46303de1952ae94b.json",
   "parameterValues" : [ ]
 }
