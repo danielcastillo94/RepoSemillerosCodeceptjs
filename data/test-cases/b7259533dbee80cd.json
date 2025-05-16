@@ -1,12 +1,12 @@
 {
-  "uid" : "496914dfdedf5c33",
+  "uid" : "b7259533dbee80cd",
   "name" : "Verificar carga de elementos clave",
   "fullName" : "features/requerimientoYoutube.feature: Validación de carga inicial y elementos clave en la página de YouTube > Verificar carga de elementos clave",
   "historyId" : "25b3cc5fb720c6a4042f5fa4521393ce:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747419580560,
-    "stop" : 1747419586457,
-    "duration" : 5897
+    "start" : 1747419638852,
+    "stop" : 1747419644600,
+    "duration" : 5748
   },
   "status" : "broken",
   "statusMessage" : "No steps matching \"debería ver:\"",
@@ -16,9 +16,9 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747419580559,
-      "stop" : 1747419580560,
-      "duration" : 1
+      "start" : 1747419638852,
+      "stop" : 1747419638852,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,9 +31,9 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747419580560,
-      "stop" : 1747419580589,
-      "duration" : 29
+      "start" : 1747419638852,
+      "stop" : 1747419638880,
+      "duration" : 28
     },
     "status" : "passed",
     "steps" : [ ],
@@ -46,16 +46,16 @@
   }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747419580589,
-      "stop" : 1747419586294,
-      "duration" : 5705
+      "start" : 1747419638880,
+      "stop" : 1747419644433,
+      "duration" : 5553
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747419580591,
-        "stop" : 1747419580591,
+        "start" : 1747419638882,
+        "stop" : 1747419638882,
         "duration" : 0
       },
       "status" : "passed",
@@ -69,9 +69,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747419580591,
-        "stop" : 1747419583293,
-        "duration" : 2702
+        "start" : 1747419638882,
+        "stop" : 1747419641432,
+        "duration" : 2550
       },
       "status" : "passed",
       "steps" : [ ],
@@ -84,8 +84,8 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747419583293,
-        "stop" : 1747419586294,
+        "start" : 1747419641432,
+        "stop" : 1747419644433,
         "duration" : 3001
       },
       "status" : "passed",
@@ -111,18 +111,18 @@
     "steps" : [ {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747419586456,
-        "stop" : 1747419586456,
+        "start" : 1747419644599,
+        "stop" : 1747419644599,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "e9324db34f21b98d",
+        "uid" : "6f3f5cb7b3144c72",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "e9324db34f21b98d.png",
+        "source" : "6f3f5cb7b3144c72.png",
         "type" : "image/png",
-        "size" : 371123
+        "size" : 371090
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -140,8 +140,8 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747419586468,
-      "stop" : 1747419586469,
+      "start" : 1747419644611,
+      "stop" : 1747419644612,
       "duration" : 1
     },
     "status" : "passed",
@@ -155,8 +155,8 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747419586457,
-      "stop" : 1747419586468,
+      "start" : 1747419644600,
+      "stop" : 1747419644611,
       "duration" : 11
     },
     "status" : "passed",
@@ -176,10 +176,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1784-503"
+    "value" : "fv-az1786-193"
   }, {
     "name" : "thread",
-    "value" : "pid-2535-worker-main"
+    "value" : "pid-2549-worker-main"
   }, {
     "name" : "package",
     "value" : "features.requerimientoYoutube.feature"
@@ -204,6 +204,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "496914dfdedf5c33.json",
+  "source" : "b7259533dbee80cd.json",
   "parameterValues" : [ ]
 }

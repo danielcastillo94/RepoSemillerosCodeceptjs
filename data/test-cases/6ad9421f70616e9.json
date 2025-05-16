@@ -1,12 +1,12 @@
 {
-  "uid" : "9715b491bc865f0b",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
-  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
-  "historyId" : "15ecd91f52dd28ce13edd0d414de559f:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "6ad9421f70616e9",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+  "historyId" : "54aab66238b248e9e834ecd5064e4d90:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747419446043,
-    "stop" : 1747419457273,
-    "duration" : 11230
+    "start" : 1747419482653,
+    "stop" : 1747419493401,
+    "duration" : 10748
   },
   "status" : "broken",
   "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -14,18 +14,48 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747419439894,
+      "stop" : 1747419440132,
+      "duration" : 238
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747419482653,
+      "stop" : 1747419482686,
+      "duration" : 33
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747419446072,
-      "stop" : 1747419452112,
-      "duration" : 6040
+      "start" : 1747419482686,
+      "stop" : 1747419488231,
+      "duration" : 5545
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747419446074,
-        "stop" : 1747419446074,
+        "start" : 1747419482688,
+        "stop" : 1747419482688,
         "duration" : 0
       },
       "status" : "passed",
@@ -39,9 +69,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747419446074,
-        "stop" : 1747419449112,
-        "duration" : 3038
+        "start" : 1747419482688,
+        "stop" : 1747419485230,
+        "duration" : 2542
       },
       "status" : "passed",
       "steps" : [ ],
@@ -54,8 +84,8 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747419449112,
-        "stop" : 1747419452112,
+        "start" : 1747419485231,
+        "stop" : 1747419488231,
         "duration" : 3000
       },
       "status" : "passed",
@@ -73,36 +103,6 @@
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
-  }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747419446043,
-      "stop" : 1747419446072,
-      "duration" : 29
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
-    "time" : {
-      "start" : 1747419378943,
-      "stop" : 1747419381514,
-      "duration" : 2571
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "broken",
@@ -111,9 +111,9 @@
     "steps" : [ {
       "name" : "Given realizo una búsqueda con el texto \"lorem ipsum\"",
       "time" : {
-        "start" : 1747419452115,
-        "stop" : 1747419452115,
-        "duration" : 0
+        "start" : 1747419488233,
+        "stop" : 1747419488234,
+        "duration" : 1
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -126,11 +126,11 @@
       "shouldDisplayMessage" : true,
       "hasContent" : true
     }, {
-      "name" : "Then debería ver: \"Botón de Iniciar sesión\"",
+      "name" : "Then debería ver: \"Logo de YouTube\"",
       "time" : {
-        "start" : 1747419452116,
-        "stop" : 1747419452117,
-        "duration" : 1
+        "start" : 1747419488235,
+        "stop" : 1747419488235,
+        "duration" : 0
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -145,9 +145,9 @@
     }, {
       "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
       "time" : {
-        "start" : 1747419452117,
-        "stop" : 1747419457118,
-        "duration" : 5001
+        "start" : 1747419488236,
+        "stop" : 1747419493235,
+        "duration" : 4999
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -162,18 +162,18 @@
     }, {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747419457272,
-        "stop" : 1747419457272,
+        "start" : 1747419493400,
+        "stop" : 1747419493400,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "acd048fa67b2d32c",
+        "uid" : "7558b12a0907bbd5",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "acd048fa67b2d32c.png",
+        "source" : "7558b12a0907bbd5.png",
         "type" : "image/png",
-        "size" : 292995
+        "size" : 292596
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -191,9 +191,9 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747419457273,
-      "stop" : 1747419457287,
-      "duration" : 14
+      "start" : 1747419493401,
+      "stop" : 1747419493414,
+      "duration" : 13
     },
     "status" : "passed",
     "steps" : [ ],
@@ -206,8 +206,8 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747419467993,
-      "stop" : 1747419467993,
+      "start" : 1747419525482,
+      "stop" : 1747419525482,
       "duration" : 0
     },
     "status" : "passed",
@@ -227,10 +227,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1784-503"
+    "value" : "fv-az1786-193"
   }, {
     "name" : "thread",
-    "value" : "pid-2535-worker-main"
+    "value" : "pid-2549-worker-main"
   }, {
     "name" : "package",
     "value" : "features.youtubeGeneral.feature"
@@ -255,6 +255,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "9715b491bc865f0b.json",
+  "source" : "6ad9421f70616e9.json",
   "parameterValues" : [ ]
 }

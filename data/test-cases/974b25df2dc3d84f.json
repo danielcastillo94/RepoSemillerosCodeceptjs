@@ -1,12 +1,12 @@
 {
-  "uid" : "73b8047591cb560b",
+  "uid" : "974b25df2dc3d84f",
   "name" : "Validar carga de pagina de DailyMotion @Carga",
   "fullName" : "features/dailyMotion.feature: Validaciones funcionales dailyMotion > Validar carga de pagina de DailyMotion @Carga",
   "historyId" : "c92d07daf7c289ab0f4d5806ca2dee37:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747419602044,
-    "stop" : 1747419603444,
-    "duration" : 1400
+    "start" : 1747419660099,
+    "stop" : 1747419661358,
+    "duration" : 1259
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747419602044,
-      "stop" : 1747419602073,
+      "start" : 1747419660099,
+      "stop" : 1747419660128,
       "duration" : 29
     },
     "status" : "passed",
@@ -29,8 +29,8 @@
   }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747419602044,
-      "stop" : 1747419602044,
+      "start" : 1747419660098,
+      "stop" : 1747419660098,
       "duration" : 0
     },
     "status" : "passed",
@@ -47,23 +47,23 @@
     "steps" : [ {
       "name" : "Given Estoy en la pagina de Daily Motion",
       "time" : {
-        "start" : 1747419602075
+        "start" : 1747419660129
       },
       "status" : "unknown",
       "steps" : [ {
         "name" : "I pagina principal",
         "time" : {
-          "start" : 1747419602075,
-          "stop" : 1747419603444,
-          "duration" : 1369
+          "start" : 1747419660130,
+          "stop" : 1747419661358,
+          "duration" : 1228
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "I go to home",
           "time" : {
-            "start" : 1747419602075,
-            "stop" : 1747419603377,
-            "duration" : 1302
+            "start" : 1747419660130,
+            "stop" : 1747419661272,
+            "duration" : 1142
           },
           "status" : "passed",
           "steps" : [ ],
@@ -83,25 +83,25 @@
       }, {
         "name" : "Then verifico que se cargue el contenido",
         "time" : {
-          "start" : 1747419603378,
-          "stop" : 1747419603444,
-          "duration" : 66
+          "start" : 1747419661274,
+          "stop" : 1747419661358,
+          "duration" : 84
         },
         "status" : "passed",
         "steps" : [ {
           "name" : "I verifico contenido completo",
           "time" : {
-            "start" : 1747419603378,
-            "stop" : 1747419603444,
-            "duration" : 66
+            "start" : 1747419661274,
+            "stop" : 1747419661358,
+            "duration" : 84
           },
           "status" : "passed",
           "steps" : [ {
             "name" : "I verify all content visible",
             "time" : {
-              "start" : 1747419603378,
-              "stop" : 1747419603444,
-              "duration" : 66
+              "start" : 1747419661274,
+              "stop" : 1747419661357,
+              "duration" : 83
             },
             "status" : "passed",
             "steps" : [ ],
@@ -143,8 +143,8 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747419603445,
-      "stop" : 1747419603448,
+      "start" : 1747419661358,
+      "stop" : 1747419661361,
       "duration" : 3
     },
     "status" : "passed",
@@ -158,9 +158,9 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747419604232,
-      "stop" : 1747419604232,
-      "duration" : 0
+      "start" : 1747419661894,
+      "stop" : 1747419661895,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -179,10 +179,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1784-503"
+    "value" : "fv-az1786-193"
   }, {
     "name" : "thread",
-    "value" : "pid-2535-worker-main"
+    "value" : "pid-2549-worker-main"
   }, {
     "name" : "package",
     "value" : "features.dailyMotion.feature"
@@ -206,6 +206,6 @@
     "categories" : [ ],
     "tags" : [ "Carga" ]
   },
-  "source" : "73b8047591cb560b.json",
+  "source" : "974b25df2dc3d84f.json",
   "parameterValues" : [ ]
 }

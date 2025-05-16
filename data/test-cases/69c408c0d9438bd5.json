@@ -1,12 +1,12 @@
 {
-  "uid" : "9ac405d48094c898",
-  "name" : "Validar título distinto de otro video",
-  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título distinto de otro video",
-  "historyId" : "e996e3e213ec2bb7040a7be8ce15cf31:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "69c408c0d9438bd5",
+  "name" : "Validar título y videos relacionados correctamente",
+  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título y videos relacionados correctamente",
+  "historyId" : "fb2656ce6fc5bb2deb29542859e5842e:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747419488698,
-    "stop" : 1747419509151,
-    "duration" : 20453
+    "start" : 1747419525487,
+    "stop" : 1747419546264,
+    "duration" : 20777
   },
   "status" : "broken",
   "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -14,33 +14,18 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
-    "time" : {
-      "start" : 1747419467997,
-      "stop" : 1747419467997,
-      "duration" : 0
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747419488727,
-      "stop" : 1747419494048,
-      "duration" : 5321
+      "start" : 1747419525516,
+      "stop" : 1747419531154,
+      "duration" : 5638
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747419488728,
-        "stop" : 1747419488728,
+        "start" : 1747419525517,
+        "stop" : 1747419525517,
         "duration" : 0
       },
       "status" : "passed",
@@ -54,9 +39,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747419488728,
-        "stop" : 1747419491048,
-        "duration" : 2320
+        "start" : 1747419525517,
+        "stop" : 1747419528153,
+        "duration" : 2636
       },
       "status" : "passed",
       "steps" : [ ],
@@ -69,9 +54,9 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747419491048,
-        "stop" : 1747419494048,
-        "duration" : 3000
+        "start" : 1747419528153,
+        "stop" : 1747419531154,
+        "duration" : 3001
       },
       "status" : "passed",
       "steps" : [ ],
@@ -91,9 +76,24 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747419488698,
-      "stop" : 1747419488727,
+      "start" : 1747419525487,
+      "stop" : 1747419525516,
       "duration" : 29
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747419525486,
+      "stop" : 1747419525486,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -109,11 +109,11 @@
     "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
     "statusTrace" : "Error: element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n\n    at Playwright.waitForElement (node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
     "steps" : [ {
-      "name" : "When busco el video \"Metallica Nothing Else Matters\"",
+      "name" : "When busco el video \"Falling In Reverse\"",
       "time" : {
-        "start" : 1747419494051,
-        "stop" : 1747419494051,
-        "duration" : 0
+        "start" : 1747419531157,
+        "stop" : 1747419531158,
+        "duration" : 1
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -128,9 +128,9 @@
     }, {
       "name" : "And entro al primer video de los resultados",
       "time" : {
-        "start" : 1747419494053,
-        "stop" : 1747419494053,
-        "duration" : 0
+        "start" : 1747419531159,
+        "stop" : 1747419531160,
+        "duration" : 1
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -143,11 +143,11 @@
       "shouldDisplayMessage" : true,
       "hasContent" : true
     }, {
-      "name" : "Then debería ver el título \"Metallica: Nothing Else Matters (Official Music Video)\"",
+      "name" : "Then debería ver el título \"Falling In Reverse - \\\"Watch The World Burn\\\"\"",
       "time" : {
-        "start" : 1747419494055,
-        "stop" : 1747419504058,
-        "duration" : 10003
+        "start" : 1747419531162,
+        "stop" : 1747419541164,
+        "duration" : 10002
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -155,9 +155,9 @@
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
         "time" : {
-          "start" : 1747419494056,
-          "stop" : 1747419504058,
-          "duration" : 10002
+          "start" : 1747419531163,
+          "stop" : 1747419541164,
+          "duration" : 10001
         },
         "status" : "broken",
         "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -179,16 +179,16 @@
     }, {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747419509151,
-        "stop" : 1747419509151,
+        "start" : 1747419546263,
+        "stop" : 1747419546263,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "b443f763ec849fc6",
+        "uid" : "b0e3ef8e8d6eb0cd",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "b443f763ec849fc6.png",
+        "source" : "b0e3ef8e8d6eb0cd.png",
         "type" : "image/png",
         "size" : 184023
       } ],
@@ -208,9 +208,9 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747419509151,
-      "stop" : 1747419509164,
-      "duration" : 13
+      "start" : 1747419546264,
+      "stop" : 1747419546276,
+      "duration" : 12
     },
     "status" : "passed",
     "steps" : [ ],
@@ -223,8 +223,8 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747419529706,
-      "stop" : 1747419529706,
+      "start" : 1747419587574,
+      "stop" : 1747419587574,
       "duration" : 0
     },
     "status" : "passed",
@@ -244,10 +244,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1784-503"
+    "value" : "fv-az1786-193"
   }, {
     "name" : "thread",
-    "value" : "pid-2535-worker-main"
+    "value" : "pid-2549-worker-main"
   }, {
     "name" : "package",
     "value" : "features.videoYoutube.feature"
@@ -272,6 +272,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "9ac405d48094c898.json",
+  "source" : "69c408c0d9438bd5.json",
   "parameterValues" : [ ]
 }
