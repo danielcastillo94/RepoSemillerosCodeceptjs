@@ -1,1 +1,161 @@
-[ ]
+[ {
+  "uid" : "1cd48c7a2fcbca9",
+  "name" : "Validar el atributo href @enlaces",
+  "time" : {
+    "start" : 1747417787165,
+    "stop" : 1747417787986,
+    "duration" : 821
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "137a8824809dbe20",
+  "name" : "Buscar plan Telcel Plus",
+  "time" : {
+    "start" : 1747417713143,
+    "stop" : 1747417719386,
+    "duration" : 6243
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "689e913f08b5dfcf",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+  "time" : {
+    "start" : 1747417676356,
+    "stop" : 1747417682161,
+    "duration" : 5805
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "74fd5bbe0bed10c9",
+  "name" : "Navegar al canal",
+  "time" : {
+    "start" : 1747417651467,
+    "stop" : 1747417666336,
+    "duration" : 14869
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a1d6a4164016f060",
+  "name" : "Validar título y videos relacionados",
+  "time" : {
+    "start" : 1747417700082,
+    "stop" : 1747417713132,
+    "duration" : 13050
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ef32dc7b8bc99a8",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
+  "time" : {
+    "start" : 1747417688242,
+    "stop" : 1747417694114,
+    "duration" : 5872
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d4fa45b03513313c",
+  "name" : "Validar sección Contáctanos",
+  "time" : {
+    "start" : 1747417739458,
+    "stop" : 1747417763838,
+    "duration" : 24380
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "15a6887d3c23a038",
+  "name" : "Validación de una búsqueda en YouTube",
+  "time" : {
+    "start" : 1747417645300,
+    "stop" : 1747417651459,
+    "duration" : 6159
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "15aafe374707e279",
+  "name" : "Validar fecha de publicación reciente",
+  "time" : {
+    "start" : 1747417637008,
+    "stop" : 1747417645288,
+    "duration" : 8280
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f36a77e5bce50fee",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
+  "time" : {
+    "start" : 1747417682167,
+    "stop" : 1747417688236,
+    "duration" : 6069
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5d343c3f1a76c82b",
+  "name" : "Validar el boton del login",
+  "time" : {
+    "start" : 1747417773683,
+    "stop" : 1747417787158,
+    "duration" : 13475
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "167ba25d848502f1",
+  "name" : "Recargar saldo de $100",
+  "time" : {
+    "start" : 1747417719398,
+    "stop" : 1747417739442,
+    "duration" : 20044
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "eaef2465b22463d1",
+  "name" : "Verificar carga de elementos clave",
+  "time" : {
+    "start" : 1747417763850,
+    "stop" : 1747417767428,
+    "duration" : 3578
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "4239dfc185ba707b",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "time" : {
+    "start" : 1747417767436,
+    "stop" : 1747417773676,
+    "duration" : 6240
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e0e8f2cf3df47ffc",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
+  "time" : {
+    "start" : 1747417694121,
+    "stop" : 1747417700072,
+    "duration" : 5951
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1f6d15d3c9519e60",
+  "name" : "Validación de duración de video en campo oculto",
+  "time" : {
+    "start" : 1747417666401,
+    "stop" : 1747417676350,
+    "duration" : 9949
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
