@@ -1,12 +1,12 @@
 {
-  "uid" : "a53ba68e842fe46b",
+  "uid" : "a25fdbfaa3af74c5",
   "name" : "Recargar saldo de $100",
   "fullName" : "features/telcel.feature: Automatización de Telcel > Recargar saldo de $100",
   "historyId" : "34774030b9fee8e4f2c3d132b1c94586:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747417461483,
-    "stop" : 1747417482291,
-    "duration" : 20808
+    "start" : 1747417515928,
+    "stop" : 1747417534876,
+    "duration" : 18948
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747417455217,
-      "stop" : 1747417455217,
+      "start" : 1747417509135,
+      "stop" : 1747417509135,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,9 +29,9 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747417461485,
-      "stop" : 1747417461516,
-      "duration" : 31
+      "start" : 1747417515928,
+      "stop" : 1747417515965,
+      "duration" : 37
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,8 +47,8 @@
     "steps" : [ {
       "name" : "Given estoy en la pagina de inicio de Telcel",
       "time" : {
-        "start" : 1747417461517,
-        "stop" : 1747417461517,
+        "start" : 1747417515967,
+        "stop" : 1747417515967,
         "duration" : 0
       },
       "status" : "passed",
@@ -62,9 +62,9 @@
     }, {
       "name" : "And navego a la sección \"Paquetes y Recargas\"",
       "time" : {
-        "start" : 1747417461519,
-        "stop" : 1747417461519,
-        "duration" : 0
+        "start" : 1747417515969,
+        "stop" : 1747417515970,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,8 +77,8 @@
     }, {
       "name" : "When ingreso el número \"5512345678\"",
       "time" : {
-        "start" : 1747417461520,
-        "stop" : 1747417461521,
+        "start" : 1747417515971,
+        "stop" : 1747417515972,
         "duration" : 1
       },
       "status" : "passed",
@@ -92,8 +92,8 @@
     }, {
       "name" : "And elijo la opción \"Recarga tu Saldo Amigo\"",
       "time" : {
-        "start" : 1747417461522,
-        "stop" : 1747417461522,
+        "start" : 1747417515973,
+        "stop" : 1747417515973,
         "duration" : 0
       },
       "status" : "passed",
@@ -107,8 +107,8 @@
     }, {
       "name" : "And selecciono el monto de \"$100\"",
       "time" : {
-        "start" : 1747417461523,
-        "stop" : 1747417461523,
+        "start" : 1747417515974,
+        "stop" : 1747417515974,
         "duration" : 0
       },
       "status" : "passed",
@@ -122,9 +122,9 @@
     }, {
       "name" : "Then debo ver el resumen de la recarga y un formulario de pago",
       "time" : {
-        "start" : 1747417461524,
-        "stop" : 1747417482291,
-        "duration" : 20767
+        "start" : 1747417515975,
+        "stop" : 1747417534876,
+        "duration" : 18901
       },
       "status" : "passed",
       "steps" : [ ],
@@ -137,9 +137,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747417461525,
-        "stop" : 1747417463733,
-        "duration" : 2208
+        "start" : 1747417515976,
+        "stop" : 1747417518385,
+        "duration" : 2409
       },
       "status" : "passed",
       "steps" : [ ],
@@ -152,8 +152,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417463733,
-        "stop" : 1747417465733,
+        "start" : 1747417518385,
+        "stop" : 1747417520385,
         "duration" : 2000
       },
       "status" : "passed",
@@ -167,9 +167,9 @@
     }, {
       "name" : "I scroll to \"#paquetes-recarga\"",
       "time" : {
-        "start" : 1747417465733,
-        "stop" : 1747417465865,
-        "duration" : 132
+        "start" : 1747417520385,
+        "stop" : 1747417520518,
+        "duration" : 133
       },
       "status" : "passed",
       "steps" : [ ],
@@ -182,9 +182,9 @@
     }, {
       "name" : "I wait for visible \"#paquetes-recarga\", 5",
       "time" : {
-        "start" : 1747417465865,
-        "stop" : 1747417465868,
-        "duration" : 3
+        "start" : 1747417520518,
+        "stop" : 1747417520522,
+        "duration" : 4
       },
       "status" : "passed",
       "steps" : [ ],
@@ -197,9 +197,9 @@
     }, {
       "name" : "I click \"#paquetes-recarga\"",
       "time" : {
-        "start" : 1747417465868,
-        "stop" : 1747417466097,
-        "duration" : 229
+        "start" : 1747417520522,
+        "stop" : 1747417520788,
+        "duration" : 266
       },
       "status" : "passed",
       "steps" : [ ],
@@ -212,9 +212,9 @@
     }, {
       "name" : "I use playwright to \"espera a network idle en Paquetes y Recargas\", async ({ page}) => {\n          await page.waitForLoadState('networkidle', { timeout: 10000 });\n        }",
       "time" : {
-        "start" : 1747417466097,
-        "stop" : 1747417471794,
-        "duration" : 5697
+        "start" : 1747417520788,
+        "stop" : 1747417524352,
+        "duration" : 3564
       },
       "status" : "passed",
       "steps" : [ ],
@@ -227,9 +227,9 @@
     }, {
       "name" : "I say \"Navegando a la sección Paquetes y Recargas\"",
       "time" : {
-        "start" : 1747417471794,
-        "stop" : 1747417471795,
-        "duration" : 1
+        "start" : 1747417524352,
+        "stop" : 1747417524352,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -242,9 +242,9 @@
     }, {
       "name" : "I wait for element \"//iframe[contains(@class, \"iframePackagesRoaming-SIN_LIMITE\")]\", 20",
       "time" : {
-        "start" : 1747417471795,
-        "stop" : 1747417471797,
-        "duration" : 2
+        "start" : 1747417524352,
+        "stop" : 1747417524355,
+        "duration" : 3
       },
       "status" : "passed",
       "steps" : [ ],
@@ -257,16 +257,16 @@
     }, {
       "name" : "Within \"{\"frame\":\"//iframe[contains(@class, \\\"iframePackagesRoaming-SIN_LIMITE\\\")]\"}\"",
       "time" : {
-        "start" : 1747417471799,
-        "stop" : 1747417482291,
-        "duration" : 10492
+        "start" : 1747417524356,
+        "stop" : 1747417534876,
+        "duration" : 10520
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "I wait for visible \"//input[@name=\"mdn\"]\", 20",
         "time" : {
-          "start" : 1747417471799,
-          "stop" : 1747417472814,
+          "start" : 1747417524356,
+          "stop" : 1747417525371,
           "duration" : 1015
         },
         "status" : "passed",
@@ -280,9 +280,9 @@
       }, {
         "name" : "I wait for visible \"//input[@name=\"confirmMdn\"]\", 20",
         "time" : {
-          "start" : 1747417472815,
-          "stop" : 1747417473820,
-          "duration" : 1005
+          "start" : 1747417525371,
+          "stop" : 1747417526377,
+          "duration" : 1006
         },
         "status" : "passed",
         "steps" : [ ],
@@ -295,9 +295,9 @@
       }, {
         "name" : "I fill field \"//input[@name=\"mdn\"]\", \"5512345678\"",
         "time" : {
-          "start" : 1747417473820,
-          "stop" : 1747417474073,
-          "duration" : 253
+          "start" : 1747417526377,
+          "stop" : 1747417526632,
+          "duration" : 255
         },
         "status" : "passed",
         "steps" : [ ],
@@ -310,9 +310,9 @@
       }, {
         "name" : "I fill field \"//input[@name=\"confirmMdn\"]\", \"5512345678\"",
         "time" : {
-          "start" : 1747417474073,
-          "stop" : 1747417474339,
-          "duration" : 266
+          "start" : 1747417526632,
+          "stop" : 1747417526903,
+          "duration" : 271
         },
         "status" : "passed",
         "steps" : [ ],
@@ -332,8 +332,8 @@
     }, {
       "name" : "I say \"Número ingresado dentro del iframe correctamente: 5512345678\"",
       "time" : {
-        "start" : 1747417474340,
-        "stop" : 1747417474340,
+        "start" : 1747417526904,
+        "stop" : 1747417526904,
         "duration" : 0
       },
       "status" : "passed",
@@ -347,8 +347,8 @@
     }, {
       "name" : "I wait for visible \".form-field-text.text-placeholder\", 10",
       "time" : {
-        "start" : 1747417474341,
-        "stop" : 1747417475348,
+        "start" : 1747417526905,
+        "stop" : 1747417527912,
         "duration" : 1007
       },
       "status" : "passed",
@@ -362,9 +362,9 @@
     }, {
       "name" : "I click \".form-field-text.text-placeholder\"",
       "time" : {
-        "start" : 1747417475348,
-        "stop" : 1747417475579,
-        "duration" : 231
+        "start" : 1747417527912,
+        "stop" : 1747417528148,
+        "duration" : 236
       },
       "status" : "passed",
       "steps" : [ ],
@@ -377,9 +377,9 @@
     }, {
       "name" : "I wait for visible \"//button[@class=\"select-option \" and text()=\"Recarga tu Saldo Amigo\"]\", 10",
       "time" : {
-        "start" : 1747417475579,
-        "stop" : 1747417476585,
-        "duration" : 1006
+        "start" : 1747417528148,
+        "stop" : 1747417529155,
+        "duration" : 1007
       },
       "status" : "passed",
       "steps" : [ ],
@@ -392,9 +392,9 @@
     }, {
       "name" : "I click \"//button[@class=\"select-option \" and text()=\"Recarga tu Saldo Amigo\"]\"",
       "time" : {
-        "start" : 1747417476585,
-        "stop" : 1747417476721,
-        "duration" : 136
+        "start" : 1747417529155,
+        "stop" : 1747417529307,
+        "duration" : 152
       },
       "status" : "passed",
       "steps" : [ ],
@@ -407,8 +407,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417476721,
-        "stop" : 1747417478721,
+        "start" : 1747417529307,
+        "stop" : 1747417531307,
         "duration" : 2000
       },
       "status" : "passed",
@@ -422,8 +422,8 @@
     }, {
       "name" : "I wait for element \"//button[@aria-label=\"Continuar al siguiente paso\"]\", 10",
       "time" : {
-        "start" : 1747417478721,
-        "stop" : 1747417478725,
+        "start" : 1747417531307,
+        "stop" : 1747417531311,
         "duration" : 4
       },
       "status" : "passed",
@@ -437,9 +437,9 @@
     }, {
       "name" : "I click \"//button[@aria-label=\"Continuar al siguiente paso\"]\"",
       "time" : {
-        "start" : 1747417478726,
-        "stop" : 1747417478887,
-        "duration" : 161
+        "start" : 1747417531311,
+        "stop" : 1747417531471,
+        "duration" : 160
       },
       "status" : "passed",
       "steps" : [ ],
@@ -452,8 +452,8 @@
     }, {
       "name" : "I say \"Opción seleccionada: Recarga tu Saldo Amigo\"",
       "time" : {
-        "start" : 1747417478887,
-        "stop" : 1747417478887,
+        "start" : 1747417531471,
+        "stop" : 1747417531471,
         "duration" : 0
       },
       "status" : "passed",
@@ -467,9 +467,9 @@
     }, {
       "name" : "I wait for visible \"//div[contains(@class, \"btn-selectable\")]//button[.//span[text()=\"$100\"]]\", 10",
       "time" : {
-        "start" : 1747417478888,
-        "stop" : 1747417479896,
-        "duration" : 1008
+        "start" : 1747417531472,
+        "stop" : 1747417532478,
+        "duration" : 1006
       },
       "status" : "passed",
       "steps" : [ ],
@@ -482,9 +482,9 @@
     }, {
       "name" : "I click \"//div[contains(@class, \"btn-selectable\")]//button[.//span[text()=\"$100\"]]\"",
       "time" : {
-        "start" : 1747417479896,
-        "stop" : 1747417480043,
-        "duration" : 147
+        "start" : 1747417532478,
+        "stop" : 1747417532630,
+        "duration" : 152
       },
       "status" : "passed",
       "steps" : [ ],
@@ -497,9 +497,9 @@
     }, {
       "name" : "I wait for element \"//button[@aria-label=\"Continuar al siguiente paso\"]\", 10",
       "time" : {
-        "start" : 1747417480044,
-        "stop" : 1747417480047,
-        "duration" : 3
+        "start" : 1747417532630,
+        "stop" : 1747417532634,
+        "duration" : 4
       },
       "status" : "passed",
       "steps" : [ ],
@@ -512,9 +512,9 @@
     }, {
       "name" : "I click \"//button[@aria-label=\"Continuar al siguiente paso\"]\"",
       "time" : {
-        "start" : 1747417480047,
-        "stop" : 1747417480291,
-        "duration" : 244
+        "start" : 1747417532634,
+        "stop" : 1747417532875,
+        "duration" : 241
       },
       "status" : "passed",
       "steps" : [ ],
@@ -527,9 +527,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747417480291,
-        "stop" : 1747417482290,
-        "duration" : 1999
+        "start" : 1747417532875,
+        "stop" : 1747417534875,
+        "duration" : 2000
       },
       "status" : "passed",
       "steps" : [ ],
@@ -542,8 +542,8 @@
     }, {
       "name" : "I say \"Monto seleccionado: $100\"",
       "time" : {
-        "start" : 1747417482291,
-        "stop" : 1747417482291,
+        "start" : 1747417534875,
+        "stop" : 1747417534875,
         "duration" : 0
       },
       "status" : "passed",
@@ -563,11 +563,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747417482291,
-      "stop" : 1747417482308,
-      "duration" : 17
+      "start" : 1747417559801,
+      "stop" : 1747417559801,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -578,11 +578,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747417506812,
-      "stop" : 1747417506812,
-      "duration" : 0
+      "start" : 1747417534876,
+      "stop" : 1747417534893,
+      "duration" : 17
     },
     "status" : "passed",
     "steps" : [ ],
@@ -601,10 +601,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1315-148"
+    "value" : "fv-az1283-415"
   }, {
     "name" : "thread",
-    "value" : "pid-2511-worker-main"
+    "value" : "pid-2543-worker-main"
   }, {
     "name" : "package",
     "value" : "features.telcel.feature"
@@ -625,6 +625,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "a53ba68e842fe46b.json",
+  "source" : "a25fdbfaa3af74c5.json",
   "parameterValues" : [ ]
 }

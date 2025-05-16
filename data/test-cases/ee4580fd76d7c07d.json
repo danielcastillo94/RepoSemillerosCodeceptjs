@@ -1,12 +1,12 @@
 {
-  "uid" : "69765e08191f18af",
+  "uid" : "ee4580fd76d7c07d",
   "name" : "Validar el atributo href @enlaces",
   "fullName" : "features/dailyMotion.feature: Validaciones funcionales dailyMotion > Validar el atributo href @enlaces",
   "historyId" : "d3f6bec78be92900b74c610d7dcf1d6b:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747417526068,
-    "stop" : 1747417526586,
-    "duration" : 518
+    "start" : 1747417581253,
+    "stop" : 1747417581872,
+    "duration" : 619
   },
   "status" : "broken",
   "statusMessage" : "No steps matching \"Presiono el boton de Explorar\"",
@@ -14,11 +14,11 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747417526068,
-      "stop" : 1747417526094,
-      "duration" : 26
+      "start" : 1747417578815,
+      "stop" : 1747417578815,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,11 +29,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747417525437,
-      "stop" : 1747417525437,
-      "duration" : 0
+      "start" : 1747417581253,
+      "stop" : 1747417581280,
+      "duration" : 27
     },
     "status" : "passed",
     "steps" : [ ],
@@ -51,9 +51,9 @@
     "steps" : [ {
       "name" : "Given Estoy en la pagina de Daily Motion",
       "time" : {
-        "start" : 1747417526095,
-        "stop" : 1747417526453,
-        "duration" : 358
+        "start" : 1747417581281,
+        "stop" : 1747417581753,
+        "duration" : 472
       },
       "status" : "broken",
       "statusMessage" : "No steps matching \"Presiono el boton de Explorar\"",
@@ -61,9 +61,9 @@
       "steps" : [ {
         "name" : "I pagina principal",
         "time" : {
-          "start" : 1747417526096,
-          "stop" : 1747417526453,
-          "duration" : 357
+          "start" : 1747417581281,
+          "stop" : 1747417581753,
+          "duration" : 472
         },
         "status" : "broken",
         "statusMessage" : "No steps matching \"Presiono el boton de Explorar\"",
@@ -71,9 +71,9 @@
         "steps" : [ {
           "name" : "I go to home",
           "time" : {
-            "start" : 1747417526096,
-            "stop" : 1747417526450,
-            "duration" : 354
+            "start" : 1747417581281,
+            "stop" : 1747417581751,
+            "duration" : 470
           },
           "status" : "passed",
           "steps" : [ ],
@@ -100,16 +100,16 @@
     }, {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747417526586,
-        "stop" : 1747417526586,
+        "start" : 1747417581871,
+        "stop" : 1747417581871,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "67f230e9a018b87b",
+        "uid" : "a94481b8cf55b0cf",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "67f230e9a018b87b.png",
+        "source" : "a94481b8cf55b0cf.png",
         "type" : "image/png",
         "size" : 336699
       } ],
@@ -129,8 +129,8 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747417526590,
-      "stop" : 1747417526590,
+      "start" : 1747417581876,
+      "stop" : 1747417581876,
       "duration" : 0
     },
     "status" : "passed",
@@ -144,9 +144,9 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747417526587,
-      "stop" : 1747417526590,
-      "duration" : 3
+      "start" : 1747417581872,
+      "stop" : 1747417581876,
+      "duration" : 4
     },
     "status" : "passed",
     "steps" : [ ],
@@ -165,10 +165,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1315-148"
+    "value" : "fv-az1283-415"
   }, {
     "name" : "thread",
-    "value" : "pid-2511-worker-main"
+    "value" : "pid-2543-worker-main"
   }, {
     "name" : "package",
     "value" : "features.dailyMotion.feature"
@@ -196,6 +196,6 @@
     } ],
     "tags" : [ "enlaces" ]
   },
-  "source" : "69765e08191f18af.json",
+  "source" : "ee4580fd76d7c07d.json",
   "parameterValues" : [ ]
 }
