@@ -14,7 +14,8 @@ class MiHelperYoutube extends Helper {
         const textoActual = await page.$eval(selector, el => el.innerText.trim());
 
         if (textoActual.includes(textoEsperado)) return;
-      } catch (_) {}
+      } catch (_) {
+      }
     }
 
     throw new Error(`No se encontró el texto esperado: "${textoEsperado}" tras 5 intentos`);
@@ -22,6 +23,7 @@ class MiHelperYoutube extends Helper {
 
   async validarCantidadDeElementos(selector, minimo) {
     const { page } = this.helpers.Playwright;
+
     await page.waitForSelector(selector, { timeout: 10000 });
     const elementos = await page.$$(selector);
     const cantidad = elementos.length;
