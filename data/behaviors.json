@@ -1,5 +1,226 @@
 {
   "uid" : "b1a8273437954620fa374b796ffaacdd",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Validación de una búsqueda en YouTube",
+    "uid" : "c43ea8f9a1ce8be",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159505239,
+      "stop" : 1747159518350,
+      "duration" : 13111
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Navegar al canal",
+    "uid" : "1244e6bf884ba342",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159518497,
+      "stop" : 1747159536962,
+      "duration" : 18465
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validación de duración de video en campo oculto",
+    "uid" : "a1c5a8c50f3f926a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159537135,
+      "stop" : 1747159547605,
+      "duration" : 10470
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+    "uid" : "5cb592d55c25dd46",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159547830,
+      "stop" : 1747159558004,
+      "duration" : 10174
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
+    "uid" : "83c0aa853784eb1e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159558325,
+      "stop" : 1747159568734,
+      "duration" : 10409
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
+    "uid" : "2fbed93eee5682e3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159568903,
+      "stop" : 1747159579314,
+      "duration" : 10411
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
+    "uid" : "32f8d5414ca1286d",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159579634,
+      "stop" : 1747159590319,
+      "duration" : 10685
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validar título y videos relacionados",
+    "uid" : "139410fce8fe9ad1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159590716,
+      "stop" : 1747159613008,
+      "duration" : 22292
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Buscar plan Telcel Plus",
+    "uid" : "46c4cac8c6f4f910",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159613705,
+      "stop" : 1747159631050,
+      "duration" : 17345
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Recargar saldo de $100",
+    "uid" : "4563646f46632511",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1747159631620,
+      "stop" : 1747159666549,
+      "duration" : 34929
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validar sección Contáctanos",
+    "uid" : "371555d2862aed4e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159666870,
+      "stop" : 1747159726360,
+      "duration" : 59490
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Verificar carga de elementos clave",
+    "uid" : "89968506b423d3e6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1747159726846,
+      "stop" : 1747159736244,
+      "duration" : 9398
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Prueba usando custom steps",
+    "uid" : "2d0544046f2faca4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1747159753000,
+      "stop" : 1747159754626,
+      "duration" : 1626
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validar el atributo href @enlaces",
+    "uid" : "2a153adb5bda972b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747159754733,
+      "stop" : 1747159760038,
+      "duration" : 5305
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+    "uid" : "75f7d927f0ce2b20",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1747163200414,
+      "stop" : 1747163202047,
+      "duration" : 1633
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Usuario hace clic en \"Explorar\" y navega a Música desde prueba.feature @test @test",
+    "uid" : "76113634b7446e3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1747165355672,
+      "stop" : 1747165358479,
+      "duration" : 2807
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+    "uid" : "fef08e15ba459144",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1747330428025,
+      "stop" : 1747330444381,
+      "duration" : 16356
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ],
   "name" : "behaviors"
 }

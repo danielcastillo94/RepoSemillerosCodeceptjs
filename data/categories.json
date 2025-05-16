@@ -1,5 +1,90 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+      "children" : [ {
+        "name" : "Recargar saldo de $100",
+        "uid" : "4563646f46632511",
+        "parentUid" : "c3d21dcc9bea16bb5fc9255eb0e44d15",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747159631620,
+          "stop" : 1747159666549,
+          "duration" : 34929
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c3d21dcc9bea16bb5fc9255eb0e44d15"
+    }, {
+      "name" : "No steps matching \"debería ver:\"",
+      "children" : [ {
+        "name" : "Verificar carga de elementos clave",
+        "uid" : "89968506b423d3e6",
+        "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747159726846,
+          "stop" : 1747159736244,
+          "duration" : 9398
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "259089c0497a8892213b9e9fa2f3b58b"
+    }, {
+      "name" : "No steps matching \"imprimo el mensaje personalizado \"Iniciando prueba\"\"",
+      "children" : [ {
+        "name" : "Prueba usando custom steps",
+        "uid" : "2d0544046f2faca4",
+        "parentUid" : "1509d0273e95d954ba6515a2ff1ab551",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747159753000,
+          "stop" : 1747159754626,
+          "duration" : 1626
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1509d0273e95d954ba6515a2ff1ab551"
+    }, {
+      "name" : "No steps matching \"el usuario navega a la página principal de YouTube\"",
+      "children" : [ {
+        "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+        "uid" : "75f7d927f0ce2b20",
+        "parentUid" : "25a356a4289ef5164a95407ad327afaa",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747163200414,
+          "stop" : 1747163202047,
+          "duration" : 1633
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Usuario hace clic en \"Explorar\" y navega a Música desde prueba.feature @test @test",
+        "uid" : "76113634b7446e3",
+        "parentUid" : "25a356a4289ef5164a95407ad327afaa",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747165355672,
+          "stop" : 1747165358479,
+          "duration" : 2807
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "25a356a4289ef5164a95407ad327afaa"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }

@@ -1,9 +1,9 @@
 [ {
-  "buildOrder" : 69,
-  "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/69/",
+  "buildOrder" : 70,
+  "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/70/",
   "reportName" : "Allure Report with history",
   "data" : {
-    "run" : 0,
-    "retry" : 0
+    "run" : 17,
+    "retry" : 3
   }
 } ]

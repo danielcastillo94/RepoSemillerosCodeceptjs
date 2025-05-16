@@ -1,1 +1,171 @@
-[ ]
+[ {
+  "uid" : "371555d2862aed4e",
+  "name" : "Validar sección Contáctanos",
+  "time" : {
+    "start" : 1747159666870,
+    "stop" : 1747159726360,
+    "duration" : 59490
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fef08e15ba459144",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "time" : {
+    "start" : 1747330428025,
+    "stop" : 1747330444381,
+    "duration" : 16356
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5cb592d55c25dd46",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+  "time" : {
+    "start" : 1747159547830,
+    "stop" : 1747159558004,
+    "duration" : 10174
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "32f8d5414ca1286d",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
+  "time" : {
+    "start" : 1747159579634,
+    "stop" : 1747159590319,
+    "duration" : 10685
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "76113634b7446e3",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a Música desde prueba.feature @test @test",
+  "time" : {
+    "start" : 1747165355672,
+    "stop" : 1747165358479,
+    "duration" : 2807
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2a153adb5bda972b",
+  "name" : "Validar el atributo href @enlaces",
+  "time" : {
+    "start" : 1747159754733,
+    "stop" : 1747159760038,
+    "duration" : 5305
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a1c5a8c50f3f926a",
+  "name" : "Validación de duración de video en campo oculto",
+  "time" : {
+    "start" : 1747159537135,
+    "stop" : 1747159547605,
+    "duration" : 10470
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "89968506b423d3e6",
+  "name" : "Verificar carga de elementos clave",
+  "time" : {
+    "start" : 1747159726846,
+    "stop" : 1747159736244,
+    "duration" : 9398
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "75f7d927f0ce2b20",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "time" : {
+    "start" : 1747163200414,
+    "stop" : 1747163202047,
+    "duration" : 1633
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2fbed93eee5682e3",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
+  "time" : {
+    "start" : 1747159568903,
+    "stop" : 1747159579314,
+    "duration" : 10411
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2d0544046f2faca4",
+  "name" : "Prueba usando custom steps",
+  "time" : {
+    "start" : 1747159753000,
+    "stop" : 1747159754626,
+    "duration" : 1626
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c43ea8f9a1ce8be",
+  "name" : "Validación de una búsqueda en YouTube",
+  "time" : {
+    "start" : 1747159505239,
+    "stop" : 1747159518350,
+    "duration" : 13111
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4563646f46632511",
+  "name" : "Recargar saldo de $100",
+  "time" : {
+    "start" : 1747159631620,
+    "stop" : 1747159666549,
+    "duration" : 34929
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1244e6bf884ba342",
+  "name" : "Navegar al canal",
+  "time" : {
+    "start" : 1747159518497,
+    "stop" : 1747159536962,
+    "duration" : 18465
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "83c0aa853784eb1e",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
+  "time" : {
+    "start" : 1747159558325,
+    "stop" : 1747159568734,
+    "duration" : 10409
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "139410fce8fe9ad1",
+  "name" : "Validar título y videos relacionados",
+  "time" : {
+    "start" : 1747159590716,
+    "stop" : 1747159613008,
+    "duration" : 22292
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "46c4cac8c6f4f910",
+  "name" : "Buscar plan Telcel Plus",
+  "time" : {
+    "start" : 1747159613705,
+    "stop" : 1747159631050,
+    "duration" : 17345
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
