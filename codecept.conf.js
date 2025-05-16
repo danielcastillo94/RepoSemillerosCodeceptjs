@@ -26,7 +26,6 @@ exports.config = {
       './steps/dailySteps.js',
       './steps/telcelSteps.js',
       './steps/videoYoutubeSteps.js',
-      './steps/validacionCargaYoutubeSteps.js'
     ]
   },
   plugins: {
