@@ -1,43 +1,5 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "No steps matching \"debería ver:\"",
-      "children" : [ {
-        "name" : "Verificar carga de elementos clave",
-        "uid" : "defa4023b23d67c4",
-        "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747417559802,
-          "stop" : 1747417563430,
-          "duration" : 3628
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "259089c0497a8892213b9e9fa2f3b58b"
-    }, {
-      "name" : "No steps matching \"Presiono el boton de Explorar\"",
-      "children" : [ {
-        "name" : "Validar el atributo href @enlaces",
-        "uid" : "ee4580fd76d7c07d",
-        "parentUid" : "7976f2ece142c00495c086b126b45811",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747417581253,
-          "stop" : 1747417581872,
-          "duration" : 619
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "7976f2ece142c00495c086b126b45811"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  } ],
+  "children" : [ ],
   "name" : "categories"
 }
