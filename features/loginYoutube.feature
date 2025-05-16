@@ -1,17 +1,8 @@
-#
-
-Feature: Validaciones del login en youtube
-
-Scenario: Validar el boton del login
-    Given Estoy en la pagina de youtube
-    When Presiono el boton de login
-    Then Valido si la loginpage tiene el login
-
-# El escenario no se puede ejecutar por captcha requerido
-#Scenario: Validar credenciales de login
-#    Given Estoy en la pagina de youtube
-#    When Presiono el boton de login
-#    Then Valido si la loginpage tiene el login
-#    And Ingreso las credenciales de usuario y password incorrectas
-#    And Presiono el boton de siguiente
-#    Then Valido si el correo no es correcto
+Feature: Validación del botón "Explorar" y navegación en YouTube
+  @test
+  Scenario: Usuario hace clic en "Explorar" y navega a la categoría Música
+    Given el usuario está en la página principal de YouTube
+    When haces clic en el botón "Explorar"
+    And debería ver las categorías "Tendencias", "Música" y "Noticias"
+    When hacer clic en la categoría "Música"
+    Then debería ver videos con título y nombre del canal visible

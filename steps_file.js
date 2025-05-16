@@ -1,10 +1,15 @@
-// in this file you can append custom step methods to 'I' object
+const { I } = inject();
+const youtubeSteps = require('./steps/youtubeSteps');
 
 module.exports = function() {
   return actor({
-
-    // Define custom steps here, use 'this' to access default methods of I.
-    // It is recommended to place a general 'login' function here.
-
+    // Steps existentes...
+    
+    // Añadir los nuevos steps
+    navigateToYouTubeHome: youtubeSteps.navigateToYouTubeHome,
+    clickExploreButton: youtubeSteps.clickExploreButton,
+    verifyCategories: youtubeSteps.verifyCategories,
+    selectCategory: youtubeSteps.selectCategory,
+    verifyVideoElements: youtubeSteps.verifyVideoElements
   });
-}
+};

@@ -12,7 +12,7 @@ exports.config = {
       locale: "es-MX",
     },
     MiHelper: {
-      require: './helpers/MiHelper.js'
+      require: './helpers/YouTubeHelper'
     }
   },
   include: {
@@ -24,7 +24,7 @@ exports.config = {
   },
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js", "./steps/loginSteps.js", "./steps/youtubeLoginSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js", './steps/telcelSteps.js', "./steps/videoYoutubeSteps.js",],
+    steps: ["./steps/pruebaSteps.js", "./steps/loginSteps.js", "./steps/youtubeLoginSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js", './steps/telcelSteps.js', "./steps/videoYoutubeSteps.js","./steps_file.js",],
   },
   plugins: {
     allure: {
