@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "No steps matching \"debería ver:\"",
+      "children" : [ {
+        "name" : "Verificar carga de elementos clave",
+        "uid" : "e04eadbdd0d066e6",
+        "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747417427875,
+          "stop" : 1747417431386,
+          "duration" : 3511
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "259089c0497a8892213b9e9fa2f3b58b"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }
