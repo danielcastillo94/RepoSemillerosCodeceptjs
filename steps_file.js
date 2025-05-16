@@ -1,10 +1,19 @@
-// in this file you can append custom step methods to 'I' object
+const { container } = require('codeceptjs');
 
-module.exports = function() {
+module.exports = function () {
+  const dailyHelper = container.helpers().DailyHelper;
+
   return actor({
+    irADailyMotion: async () => {
+      return dailyHelper.irADailyMotion();
+    },
 
-    // Define custom steps here, use 'this' to access default methods of I.
-    // It is recommended to place a general 'login' function here.
+    clickEnSeguidos: async () => {
+      return dailyHelper.clickEnSeguidos();
+    },
 
+    validarEnlaceSeguidos: async () => {
+      return dailyHelper.validarEnlaceSeguidos();
+    }
   });
-}
+};
