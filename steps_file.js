@@ -1,10 +1,13 @@
-// in this file you can append custom step methods to 'I' object
+const { I } = inject();
 
-module.exports = function() {
+module.exports = function () {
   return actor({
+    PaginaPrincipal() {
+      return I.goToHome();
+    },
 
-    // Define custom steps here, use 'this' to access default methods of I.
-    // It is recommended to place a general 'login' function here.
-
+    verificoContenidoCompleto() {
+      return I.verifyAllContentVisible();
+    },
   });
-}
+};

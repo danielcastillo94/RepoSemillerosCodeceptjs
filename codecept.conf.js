@@ -5,16 +5,29 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://www.youtube.com',
-      show: true,
-      locale: "es-MX"
+      url: 'https://www.telcel.com',
+      show: false,
+
+      locale: "es-MX",
+    },
+    MiHelper: {
+      require: './helpers/MiHelper.js'
+    },
+    DailyHelpers: {
+    require: './helpers/dailyHelper.js'
     },
     MiHelperYoutube: {
       require: './helpers/MiHelperYoutube.js'
     },
   },
+  
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js', 
+    dailyPage: './pages/dailyPage.js',
+    validacionesYoutubeSteps: './steps/videoYoutubeSteps.js',
+    youtubeMainPage: './pages/youtubeMainPage.js',
+    youtubeVideoPage: './pages/youtubeVideoMainPage.js', 
+    youtubeLoginPage: './pages/youtubeLoginPage.js',
   },
   gherkin: {
     features: './features/*.feature',
