@@ -18,6 +18,6 @@ Feature: Validación de resultados relacionados en YouTube
     And deberían mostrarse al menos 5 videos recomendados en la barra lateral
 
   Scenario: Título incorrecto provoca error
-    When busco el video "neffex"
+    When busco el video "Neffex"
     And entro al primer video de los resultados
     Then debería ver el título "Este título no existe"

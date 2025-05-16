@@ -11,13 +11,13 @@ exports.config = {
     },
     MiHelperYoutube: {
       require: './helpers/MiHelperYoutube.js'
+    },
+    YoutubeHelper: {
+      require: './helpers/youtubeValidacionHelper.js'
     }
   },
   include: {
-    I: './steps_file.js',
-    youtubeMainPage: './pages/youtubeMainPage.js',
-    youtubeVideoPage: './pages/youtubeVideoMainPage.js',
-    youtubeLoginPage: './pages/youtubeLoginPage.js'
+    I: './steps_file.js'
   },
   gherkin: {
     features: './features/*.feature',
@@ -28,7 +28,8 @@ exports.config = {
       './steps/validacionesYoutubeSteps.js',
       './steps/dailySteps.js',
       './steps/telcelSteps.js',
-      './steps/videoYoutubeSteps.js'
+      './steps/videoYoutubeSteps.js',
+      './steps/validacionCargaYoutubeSteps.js'
     ]
   },
   plugins: {
