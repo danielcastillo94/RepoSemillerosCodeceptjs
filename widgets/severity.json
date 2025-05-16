@@ -1,181 +1,181 @@
 [ {
-  "uid" : "2eaea0a7df441aa0",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
-  "time" : {
-    "start" : 1747419055822,
-    "stop" : 1747419065871,
-    "duration" : 10049
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "b89af69067896503",
-  "name" : "Navegar al canal",
-  "time" : {
-    "start" : 1747419035615,
-    "stop" : 1747419045771,
-    "duration" : 10156
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "bbea4612457b8b48",
-  "name" : "Validar título y videos relacionados correctamente",
-  "time" : {
-    "start" : 1747419097936,
-    "stop" : 1747419124623,
-    "duration" : 26687
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "a22c00c99a6b7341",
-  "name" : "Título incorrecto provoca error",
-  "time" : {
-    "start" : 1747419144667,
-    "stop" : 1747419164669,
-    "duration" : 20002
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "17be4ce1865e90ea",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
-  "time" : {
-    "start" : 1747419065885,
-    "stop" : 1747419076657,
-    "duration" : 10772
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "69b987155a0b3b6b",
-  "name" : "Buscar plan Telcel Plus",
-  "time" : {
-    "start" : 1747419164684,
-    "stop" : 1747419170349,
-    "duration" : 5665
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "77a0ace9ba0632c5",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
-  "time" : {
-    "start" : 1747419087536,
-    "stop" : 1747419097919,
-    "duration" : 10383
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "96dd7dc99576ad8a",
-  "name" : "Validar título distinto de otro video",
-  "time" : {
-    "start" : 1747419124634,
-    "stop" : 1747419144654,
-    "duration" : 20020
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "e5050b87e7776a0e",
-  "name" : "Validación de una búsqueda en YouTube",
-  "time" : {
-    "start" : 1747419025526,
-    "stop" : 1747419035603,
-    "duration" : 10077
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "56ec69e8b5e69af5",
-  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-  "time" : {
-    "start" : 1747419219122,
-    "stop" : 1747419225368,
-    "duration" : 6246
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4f198caf04f46023",
-  "name" : "Validar el atributo href @enlaces",
-  "time" : {
-    "start" : 1747419234395,
-    "stop" : 1747419235299,
-    "duration" : 904
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "56f3622ce50ab9ea",
-  "name" : "Validar sección Contáctanos",
-  "time" : {
-    "start" : 1747419190271,
-    "stop" : 1747419214033,
-    "duration" : 23762
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "31172554775e1dcc",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
-  "time" : {
-    "start" : 1747419076672,
-    "stop" : 1747419087522,
-    "duration" : 10850
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "3354920472d348d",
+  "uid" : "65ea3944df220966",
   "name" : "Verificar carga de elementos clave",
   "time" : {
-    "start" : 1747419214044,
-    "stop" : 1747419219110,
-    "duration" : 5066
+    "start" : 1747419221502,
+    "stop" : 1747419227146,
+    "duration" : 5644
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "4013808a519238d3",
-  "name" : "Recargar saldo de $100",
-  "time" : {
-    "start" : 1747419170359,
-    "stop" : 1747419190253,
-    "duration" : 19894
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7e1c00eefed5dc39",
-  "name" : "Validar fecha de publicación reciente",
-  "time" : {
-    "start" : 1747419014511,
-    "stop" : 1747419025511,
-    "duration" : 11000
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "6ae24e39bcdf579c",
-  "name" : "Validación de duración de video en campo oculto",
-  "time" : {
-    "start" : 1747419045790,
-    "stop" : 1747419055807,
-    "duration" : 10017
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "e02565cf92d17f2f",
+  "uid" : "b3dc60b184f9e7e5",
   "name" : "Validar el boton del login",
   "time" : {
-    "start" : 1747419225375,
-    "stop" : 1747419234387,
-    "duration" : 9012
+    "start" : 1747419233350,
+    "stop" : 1747419242245,
+    "duration" : 8895
   },
   "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3db08f2adc4e7d4e",
+  "name" : "Validación de una búsqueda en YouTube",
+  "time" : {
+    "start" : 1747419033227,
+    "stop" : 1747419043992,
+    "duration" : 10765
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "97dd4f18c413859c",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
+  "time" : {
+    "start" : 1747419076254,
+    "stop" : 1747419087005,
+    "duration" : 10751
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a25a183725f0ca76",
+  "name" : "Validar el atributo href @enlaces",
+  "time" : {
+    "start" : 1747419242251,
+    "stop" : 1747419243285,
+    "duration" : 1034
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2895fcd9030f483",
+  "name" : "Validación de duración de video en campo oculto",
+  "time" : {
+    "start" : 1747419054661,
+    "stop" : 1747419065358,
+    "duration" : 10697
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2c4f2208b1e34c43",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+  "time" : {
+    "start" : 1747419065371,
+    "stop" : 1747419076240,
+    "duration" : 10869
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ce9357644d95ea02",
+  "name" : "Validar sección Contáctanos",
+  "time" : {
+    "start" : 1747419196763,
+    "stop" : 1747419221491,
+    "duration" : 24728
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "113c2c7b3a288ab3",
+  "name" : "Buscar plan Telcel Plus",
+  "time" : {
+    "start" : 1747419170179,
+    "stop" : 1747419176677,
+    "duration" : 6498
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "81f0e8158434dfe2",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "time" : {
+    "start" : 1747419227159,
+    "stop" : 1747419233343,
+    "duration" : 6184
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f1377fc4d7878fc",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
+  "time" : {
+    "start" : 1747419097547,
+    "stop" : 1747419107989,
+    "duration" : 10442
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2a4fdb7bf3700fc1",
+  "name" : "Validar fecha de publicación reciente",
+  "time" : {
+    "start" : 1747419022337,
+    "stop" : 1747419033212,
+    "duration" : 10875
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "83773024bbd5b769",
+  "name" : "Validar título y videos relacionados correctamente",
+  "time" : {
+    "start" : 1747419108010,
+    "stop" : 1747419129180,
+    "duration" : 21170
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e747effd3294b72e",
+  "name" : "Navegar al canal",
+  "time" : {
+    "start" : 1747419044006,
+    "stop" : 1747419054646,
+    "duration" : 10640
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "20a5bc85979438a",
+  "name" : "Título incorrecto provoca error",
+  "time" : {
+    "start" : 1747419149571,
+    "stop" : 1747419170165,
+    "duration" : 20594
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "730b164ecdafab3c",
+  "name" : "Recargar saldo de $100",
+  "time" : {
+    "start" : 1747419176689,
+    "stop" : 1747419196746,
+    "duration" : 20057
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4f4bc618ccb11e6b",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
+  "time" : {
+    "start" : 1747419087038,
+    "stop" : 1747419097534,
+    "duration" : 10496
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "8f689f245e1d3fb2",
+  "name" : "Validar título distinto de otro video",
+  "time" : {
+    "start" : 1747419129195,
+    "stop" : 1747419149558,
+    "duration" : 20363
+  },
+  "status" : "broken",
   "severity" : "normal"
 } ]
