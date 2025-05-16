@@ -12,9 +12,6 @@ exports.config = {
     MiHelperYoutube: {
       require: './helpers/MiHelperYoutube.js'
     },
-    YoutubeHelper: {
-      require: './helpers/youtubeValidacionHelper.js'
-    }
   },
   include: {
     I: './steps_file.js'
