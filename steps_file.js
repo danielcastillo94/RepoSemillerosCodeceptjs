@@ -23,6 +23,11 @@ const dailyHelper = container.helpers().DailyHelper;
 
     validarEnlaceSeguidos: async () => {
       return dailyHelper.validarEnlaceSeguidos();
+    },
+    async mobileRecharge(amount, phoneNumber) {
+      console.log("Recargando:", amount, "al número:", phoneNumber);
+      I.navigateRechargeSection();
+      I.fillRechargeForm(amount, phoneNumber);
     }
   });
 };

@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'https://www.telcel.com',
+      url: 'https://www.youtube.com',
       show: false,
 
       locale: "es-MX",
@@ -16,11 +16,17 @@ exports.config = {
     DailyHelpers: {
     require: './helpers/dailyHelper.js'
     },
+    NavigationHelper: {
+      require: './helpers/NavigationHelper.js'
+    },
     DailyHelper: {
     require: './helpers/HelperEmilio.js'
     },
     MiHelperYoutube: {
     require: './helpers/MiHelperYoutube.js'
+    },
+    RechargeHelper: {
+      require: './helpers/RechargeHelper.js',
     },
   },
   
