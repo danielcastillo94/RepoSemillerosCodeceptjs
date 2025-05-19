@@ -1,6 +1,6 @@
 const { I } = inject();
 
-Given('Estoy en la pagina de Daily Motion', async () => {
+Given('Estoy en la pagina de Daily', async () => {
   await I.PaginaPrincipal();
 });
 

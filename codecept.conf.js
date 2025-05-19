@@ -16,8 +16,11 @@ exports.config = {
     DailyHelpers: {
     require: './helpers/dailyHelper.js'
     },
+    DailyHelper: {
+    require: './helpers/HelperEmilio.js'
+    },
     MiHelperYoutube: {
-      require: './helpers/MiHelperYoutube.js'
+    require: './helpers/MiHelperYoutube.js'
     },
   },
   
@@ -30,16 +33,17 @@ exports.config = {
     youtubeLoginPage: './pages/youtubeLoginPage.js',
   },
   gherkin: {
-    features: './features/*.feature',
-    steps: [
-      './steps/pruebaSteps.js',
-      './steps/loginSteps.js',
-      './steps/youtubeLoginSteps.js',
-      './steps/validacionesYoutubeSteps.js',
-      './steps/dailySteps.js',
-      './steps/telcelSteps.js',
-      './steps/videoYoutubeSteps.js',
-    ]
+  features: './features/*.feature',
+  steps: [
+    './steps/pruebaSteps.js',
+    './steps/loginSteps.js',
+    './steps/youtubeLoginSteps.js',
+    './steps/validacionesYoutubeSteps.js',
+    './steps/dailySteps.js',
+    './steps/telcelSteps.js',
+    './steps/videoYoutubeSteps.js',
+    './steps/stepsEmilio.js'
+  ] 
   },
   plugins: {
     allure: {
