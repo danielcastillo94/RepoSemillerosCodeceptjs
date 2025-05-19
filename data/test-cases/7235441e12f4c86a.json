@@ -1,132 +1,132 @@
 {
-  "uid" : "64ad2c773993c2e2",
+  "uid" : "7235441e12f4c86a",
   "name" : "Validar el atributo href @enlaces",
-  "fullName" : "features/dailyMotion.feature: Validaciones funcionales en dailyMotion > Validar el atributo href @enlaces",
-  "historyId" : "db052455e3ef44994695ac24b2f1e2d2:d41d8cd98f00b204e9800998ecf8427e",
+  "fullName" : "features/dailyMotion.feature: Validaciones funcionales dailyMotion > Validar el atributo href @enlaces",
+  "historyId" : "d3f6bec78be92900b74c610d7dcf1d6b:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747679958497,
-    "stop" : 1747679959161,
-    "duration" : 664
+    "start" : 1747680159930,
+    "stop" : 1747680160390,
+    "duration" : 460
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747679958497,
-      "stop" : 1747679958527,
-      "duration" : 30
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "hasContent" : false,
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
-  }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747679958497,
-      "stop" : 1747679958497,
-      "duration" : 0
+      "start" : 1747680159071,
+      "stop" : 1747680159072,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747680159930,
+      "stop" : 1747680159957,
+      "duration" : 27
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "Given Estoy en la pagina de Daily Motion",
       "time" : {
-        "start" : 1747679958528,
-        "stop" : 1747679959087,
-        "duration" : 559
+        "start" : 1747680159960,
+        "stop" : 1747680160302,
+        "duration" : 342
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
     }, {
       "name" : "When Presiono el boton de Seguidos",
       "time" : {
-        "start" : 1747679959088,
-        "stop" : 1747679959154,
-        "duration" : 66
+        "start" : 1747680160304,
+        "stop" : 1747680160382,
+        "duration" : 78
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
     }, {
       "name" : "Then Valido el enlace de seguidos",
       "time" : {
-        "start" : 1747679959155,
-        "stop" : 1747679959160,
-        "duration" : 5
+        "start" : 1747680160383,
+        "stop" : 1747680160390,
+        "duration" : 7
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "hasContent" : true,
     "stepsCount" : 3,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
-    "time" : {
-      "start" : 1747679959161,
-      "stop" : 1747679959165,
-      "duration" : 4
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "hasContent" : false,
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
-  }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747679959165,
-      "stop" : 1747679959165,
+      "start" : 1747680160394,
+      "stop" : 1747680160394,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747680160390,
+      "stop" : 1747680160394,
+      "duration" : 4
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
   } ],
   "labels" : [ {
     "name" : "language",
@@ -136,10 +136,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1314-298"
+    "value" : "fv-az1390-408"
   }, {
     "name" : "thread",
-    "value" : "pid-2539-worker-main"
+    "value" : "pid-2577-worker-main"
   }, {
     "name" : "package",
     "value" : "features.dailyMotion.feature"
@@ -148,7 +148,7 @@
     "value" : "enlaces"
   }, {
     "name" : "parentSuite",
-    "value" : "Validaciones funcionales en dailyMotion"
+    "value" : "Validaciones funcionales dailyMotion"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -163,6 +163,6 @@
     "categories" : [ ],
     "tags" : [ "enlaces" ]
   },
-  "source" : "64ad2c773993c2e2.json",
+  "source" : "7235441e12f4c86a.json",
   "parameterValues" : [ ]
 }
