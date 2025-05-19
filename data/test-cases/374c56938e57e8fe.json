@@ -1,12 +1,12 @@
 {
-  "uid" : "6c32bb820f6ed4a4",
+  "uid" : "374c56938e57e8fe",
   "name" : "Validar sección Contáctanos",
   "fullName" : "features/telcel.feature: Automatización de Telcel > Validar sección Contáctanos",
   "historyId" : "e0d8ab1eb88d6b47d39fce21de533483:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747676300622,
-    "stop" : 1747676324966,
-    "duration" : 24344
+    "start" : 1747679908567,
+    "stop" : 1747679930874,
+    "duration" : 22307
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747676300622,
-      "stop" : 1747676300652,
-      "duration" : 30
+      "start" : 1747679908568,
+      "stop" : 1747679908602,
+      "duration" : 34
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,8 +29,8 @@
   }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747676275400,
-      "stop" : 1747676275400,
+      "start" : 1747679877757,
+      "stop" : 1747679877757,
       "duration" : 0
     },
     "status" : "passed",
@@ -47,9 +47,9 @@
     "steps" : [ {
       "name" : "Given estoy en la pagina de inicio de Telcel",
       "time" : {
-        "start" : 1747676300656,
-        "stop" : 1747676300656,
-        "duration" : 0
+        "start" : 1747679908604,
+        "stop" : 1747679908605,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -62,8 +62,8 @@
     }, {
       "name" : "When hago clic en \"Políticas y códigos\"",
       "time" : {
-        "start" : 1747676300658,
-        "stop" : 1747676300658,
+        "start" : 1747679908607,
+        "stop" : 1747679908607,
         "duration" : 0
       },
       "status" : "passed",
@@ -77,8 +77,8 @@
     }, {
       "name" : "And selecciono el acceso rapido \"Contáctanos\"",
       "time" : {
-        "start" : 1747676300660,
-        "stop" : 1747676300660,
+        "start" : 1747679908609,
+        "stop" : 1747679908609,
         "duration" : 0
       },
       "status" : "passed",
@@ -92,8 +92,8 @@
     }, {
       "name" : "And selecciono el estado \"ciudad de méxico\" y la modalidad \"Plan de Renta\"",
       "time" : {
-        "start" : 1747676300662,
-        "stop" : 1747676300663,
+        "start" : 1747679908611,
+        "stop" : 1747679908612,
         "duration" : 1
       },
       "status" : "passed",
@@ -107,9 +107,9 @@
     }, {
       "name" : "And realizo la búsqueda",
       "time" : {
-        "start" : 1747676300664,
-        "stop" : 1747676300664,
-        "duration" : 0
+        "start" : 1747679908613,
+        "stop" : 1747679908614,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -122,9 +122,9 @@
     }, {
       "name" : "Then debo ver la region y los números de contacto",
       "time" : {
-        "start" : 1747676300666,
-        "stop" : 1747676324966,
-        "duration" : 24300
+        "start" : 1747679908615,
+        "stop" : 1747679930874,
+        "duration" : 22259
       },
       "status" : "passed",
       "steps" : [ ],
@@ -135,26 +135,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I am on page \"/\"",
+      "name" : "I open telcel homepage",
       "time" : {
-        "start" : 1747676300666,
-        "stop" : 1747676302910,
-        "duration" : 2244
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait 2",
-      "time" : {
-        "start" : 1747676302910,
-        "stop" : 1747676304911,
-        "duration" : 2001
+        "start" : 1747679908615,
+        "stop" : 1747679911295,
+        "duration" : 2680
       },
       "status" : "passed",
       "steps" : [ ],
@@ -167,9 +152,9 @@
     }, {
       "name" : "I scroll to \"a[data-nombreboton=\"Políticas y códigos\"]\"",
       "time" : {
-        "start" : 1747676304911,
-        "stop" : 1747676305060,
-        "duration" : 149
+        "start" : 1747679911295,
+        "stop" : 1747679911438,
+        "duration" : 143
       },
       "status" : "passed",
       "steps" : [ ],
@@ -182,9 +167,9 @@
     }, {
       "name" : "I wait for visible \"a[data-nombreboton=\"Políticas y códigos\"]\", 5",
       "time" : {
-        "start" : 1747676305062,
-        "stop" : 1747676305075,
-        "duration" : 13
+        "start" : 1747679911438,
+        "stop" : 1747679911442,
+        "duration" : 4
       },
       "status" : "passed",
       "steps" : [ ],
@@ -197,9 +182,9 @@
     }, {
       "name" : "I click \"a[data-nombreboton=\"Políticas y códigos\"]\"",
       "time" : {
-        "start" : 1747676305075,
-        "stop" : 1747676307113,
-        "duration" : 2038
+        "start" : 1747679911442,
+        "stop" : 1747679913068,
+        "duration" : 1626
       },
       "status" : "passed",
       "steps" : [ ],
@@ -212,9 +197,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747676307114,
-        "stop" : 1747676309113,
-        "duration" : 1999
+        "start" : 1747679913068,
+        "stop" : 1747679915068,
+        "duration" : 2000
       },
       "status" : "passed",
       "steps" : [ ],
@@ -227,8 +212,8 @@
     }, {
       "name" : "I say \"Navegando a la sección Políticas y códigos\"",
       "time" : {
-        "start" : 1747676309114,
-        "stop" : 1747676309114,
+        "start" : 1747679915068,
+        "stop" : 1747679915068,
         "duration" : 0
       },
       "status" : "passed",
@@ -242,9 +227,9 @@
     }, {
       "name" : "I scroll to \"//p[@class=\"telcel-accesos-rapidos--tarjeta-titulo\" and text()=\"Contáctanos\"]\"",
       "time" : {
-        "start" : 1747676309114,
-        "stop" : 1747676309242,
-        "duration" : 128
+        "start" : 1747679915068,
+        "stop" : 1747679915185,
+        "duration" : 117
       },
       "status" : "passed",
       "steps" : [ ],
@@ -257,8 +242,8 @@
     }, {
       "name" : "I wait for visible \"//p[@class=\"telcel-accesos-rapidos--tarjeta-titulo\" and text()=\"Contáctanos\"]\", 5",
       "time" : {
-        "start" : 1747676309242,
-        "stop" : 1747676309244,
+        "start" : 1747679915185,
+        "stop" : 1747679915187,
         "duration" : 2
       },
       "status" : "passed",
@@ -272,9 +257,9 @@
     }, {
       "name" : "I click \"//p[@class=\"telcel-accesos-rapidos--tarjeta-titulo\" and text()=\"Contáctanos\"]\"",
       "time" : {
-        "start" : 1747676309245,
-        "stop" : 1747676309407,
-        "duration" : 162
+        "start" : 1747679915187,
+        "stop" : 1747679915357,
+        "duration" : 170
       },
       "status" : "passed",
       "steps" : [ ],
@@ -287,9 +272,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747676309407,
-        "stop" : 1747676311408,
-        "duration" : 2001
+        "start" : 1747679915357,
+        "stop" : 1747679917357,
+        "duration" : 2000
       },
       "status" : "passed",
       "steps" : [ ],
@@ -302,9 +287,9 @@
     }, {
       "name" : "I say \"Acceso rápido seleccionado: Contáctanos\"",
       "time" : {
-        "start" : 1747676311408,
-        "stop" : 1747676311408,
-        "duration" : 0
+        "start" : 1747679917357,
+        "stop" : 1747679917358,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -317,8 +302,8 @@
     }, {
       "name" : "I wait for visible \"//span[@class=\"telcel-controles-titulo-select-simulado\" and text()=\"Selecciona tu estado\"]\", 10",
       "time" : {
-        "start" : 1747676311409,
-        "stop" : 1747676311411,
+        "start" : 1747679917358,
+        "stop" : 1747679917360,
         "duration" : 2
       },
       "status" : "passed",
@@ -332,9 +317,9 @@
     }, {
       "name" : "I click \"//span[@class=\"telcel-controles-titulo-select-simulado\" and text()=\"Selecciona tu estado\"]\"",
       "time" : {
-        "start" : 1747676311412,
-        "stop" : 1747676311577,
-        "duration" : 165
+        "start" : 1747679917360,
+        "stop" : 1747679917520,
+        "duration" : 160
       },
       "status" : "passed",
       "steps" : [ ],
@@ -347,9 +332,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747676311577,
-        "stop" : 1747676313577,
-        "duration" : 2000
+        "start" : 1747679917520,
+        "stop" : 1747679919521,
+        "duration" : 2001
       },
       "status" : "passed",
       "steps" : [ ],
@@ -362,9 +347,9 @@
     }, {
       "name" : "I scroll to \"a[data-etiqueta=\"ciudad de méxico\"]\"",
       "time" : {
-        "start" : 1747676313577,
-        "stop" : 1747676313692,
-        "duration" : 115
+        "start" : 1747679919521,
+        "stop" : 1747679919652,
+        "duration" : 131
       },
       "status" : "passed",
       "steps" : [ ],
@@ -377,8 +362,8 @@
     }, {
       "name" : "I wait for visible \"a[data-etiqueta=\"ciudad de méxico\"]\", 10",
       "time" : {
-        "start" : 1747676313692,
-        "stop" : 1747676313695,
+        "start" : 1747679919652,
+        "stop" : 1747679919655,
         "duration" : 3
       },
       "status" : "passed",
@@ -392,9 +377,9 @@
     }, {
       "name" : "I click \"a[data-etiqueta=\"ciudad de méxico\"]\"",
       "time" : {
-        "start" : 1747676313695,
-        "stop" : 1747676315020,
-        "duration" : 1325
+        "start" : 1747679919655,
+        "stop" : 1747679920984,
+        "duration" : 1329
       },
       "status" : "passed",
       "steps" : [ ],
@@ -407,8 +392,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747676315020,
-        "stop" : 1747676317020,
+        "start" : 1747679920985,
+        "stop" : 1747679922985,
         "duration" : 2000
       },
       "status" : "passed",
@@ -422,8 +407,8 @@
     }, {
       "name" : "I wait for visible \"//span[@class=\"telcel-controles-titulo-select-simulado\" and text()=\"Selecciona tu modalidad\"]\", 10",
       "time" : {
-        "start" : 1747676317020,
-        "stop" : 1747676317023,
+        "start" : 1747679922985,
+        "stop" : 1747679922988,
         "duration" : 3
       },
       "status" : "passed",
@@ -437,9 +422,9 @@
     }, {
       "name" : "I click \"//span[@class=\"telcel-controles-titulo-select-simulado\" and text()=\"Selecciona tu modalidad\"]\"",
       "time" : {
-        "start" : 1747676317023,
-        "stop" : 1747676317152,
-        "duration" : 129
+        "start" : 1747679922988,
+        "stop" : 1747679923116,
+        "duration" : 128
       },
       "status" : "passed",
       "steps" : [ ],
@@ -452,9 +437,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747676317152,
-        "stop" : 1747676319153,
-        "duration" : 2001
+        "start" : 1747679923117,
+        "stop" : 1747679925117,
+        "duration" : 2000
       },
       "status" : "passed",
       "steps" : [ ],
@@ -467,9 +452,9 @@
     }, {
       "name" : "I scroll to \"a[data-etiqueta=\"Plan de Renta\"]\"",
       "time" : {
-        "start" : 1747676319153,
-        "stop" : 1747676319275,
-        "duration" : 122
+        "start" : 1747679925117,
+        "stop" : 1747679925234,
+        "duration" : 117
       },
       "status" : "passed",
       "steps" : [ ],
@@ -482,9 +467,9 @@
     }, {
       "name" : "I wait for visible \"a[data-etiqueta=\"Plan de Renta\"]\", 10",
       "time" : {
-        "start" : 1747676319275,
-        "stop" : 1747676319278,
-        "duration" : 3
+        "start" : 1747679925234,
+        "stop" : 1747679925236,
+        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
@@ -497,9 +482,9 @@
     }, {
       "name" : "I click \"a[data-etiqueta=\"Plan de Renta\"]\"",
       "time" : {
-        "start" : 1747676319278,
-        "stop" : 1747676320797,
-        "duration" : 1519
+        "start" : 1747679925236,
+        "stop" : 1747679926735,
+        "duration" : 1499
       },
       "status" : "passed",
       "steps" : [ ],
@@ -512,9 +497,9 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747676320798,
-        "stop" : 1747676322797,
-        "duration" : 1999
+        "start" : 1747679926735,
+        "stop" : 1747679928736,
+        "duration" : 2001
       },
       "status" : "passed",
       "steps" : [ ],
@@ -527,9 +512,9 @@
     }, {
       "name" : "I wait for visible \"#telcel-boton-buscar\", 10",
       "time" : {
-        "start" : 1747676322797,
-        "stop" : 1747676322801,
-        "duration" : 4
+        "start" : 1747679928736,
+        "stop" : 1747679928739,
+        "duration" : 3
       },
       "status" : "passed",
       "steps" : [ ],
@@ -542,9 +527,9 @@
     }, {
       "name" : "I click \"#telcel-boton-buscar\"",
       "time" : {
-        "start" : 1747676322801,
-        "stop" : 1747676322963,
-        "duration" : 162
+        "start" : 1747679928739,
+        "stop" : 1747679928870,
+        "duration" : 131
       },
       "status" : "passed",
       "steps" : [ ],
@@ -557,8 +542,8 @@
     }, {
       "name" : "I wait 2",
       "time" : {
-        "start" : 1747676322963,
-        "stop" : 1747676324963,
+        "start" : 1747679928871,
+        "stop" : 1747679930871,
         "duration" : 2000
       },
       "status" : "passed",
@@ -572,8 +557,8 @@
     }, {
       "name" : "I say \"Realizando busqueda\"",
       "time" : {
-        "start" : 1747676324963,
-        "stop" : 1747676324963,
+        "start" : 1747679930871,
+        "stop" : 1747679930871,
         "duration" : 0
       },
       "status" : "passed",
@@ -587,8 +572,8 @@
     }, {
       "name" : "I wait for element \"//div[@class='telcel-soporte-telefono-regiones']\", 10",
       "time" : {
-        "start" : 1747676324963,
-        "stop" : 1747676324966,
+        "start" : 1747679930871,
+        "stop" : 1747679930874,
         "duration" : 3
       },
       "status" : "passed",
@@ -602,8 +587,8 @@
     }, {
       "name" : "I say \"Resultados de búsqueda visibles\"",
       "time" : {
-        "start" : 1747676324966,
-        "stop" : 1747676324966,
+        "start" : 1747679930874,
+        "stop" : 1747679930874,
         "duration" : 0
       },
       "status" : "passed",
@@ -617,17 +602,17 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 38,
+    "stepsCount" : 37,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747676324966,
-      "stop" : 1747676324977,
-      "duration" : 11
+      "start" : 1747679930886,
+      "stop" : 1747679930886,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -638,11 +623,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747676324977,
-      "stop" : 1747676324977,
-      "duration" : 0
+      "start" : 1747679930875,
+      "stop" : 1747679930886,
+      "duration" : 11
     },
     "status" : "passed",
     "steps" : [ ],
@@ -661,10 +646,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1279-464"
+    "value" : "fv-az1927-793"
   }, {
     "name" : "thread",
-    "value" : "pid-2542-worker-main"
+    "value" : "pid-2577-worker-main"
   }, {
     "name" : "package",
     "value" : "features.telcel.feature"
@@ -685,6 +670,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "6c32bb820f6ed4a4.json",
+  "source" : "374c56938e57e8fe.json",
   "parameterValues" : [ ]
 }

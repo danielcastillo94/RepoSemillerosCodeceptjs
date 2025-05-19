@@ -1,22 +1,22 @@
 {
-  "uid" : "e9c517ffb11ad5ee",
-  "name" : "Buscar plan Telcel Plus",
-  "fullName" : "features/telcel.feature: Automatización de Telcel > Buscar plan Telcel Plus",
-  "historyId" : "772b41fe9b993738be2de237826af37b:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "3d981b9c42adcbe1",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "fullName" : "features/prueba.feature: Validación del botón \"Explorar\" y navegación en YouTube > Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "historyId" : "cb93a540f803c9ac4825d784f82ab297:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747676275401,
-    "stop" : 1747676281481,
-    "duration" : 6080
+    "start" : 1747679935441,
+    "stop" : 1747679941622,
+    "duration" : 6181
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747676275401,
-      "stop" : 1747676275435,
-      "duration" : 34
+      "start" : 1747679935441,
+      "stop" : 1747679935441,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747676275400,
-      "stop" : 1747676275400,
-      "duration" : 0
+      "start" : 1747679935441,
+      "stop" : 1747679935472,
+      "duration" : 31
     },
     "status" : "passed",
     "steps" : [ ],
@@ -45,10 +45,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Given estoy en la pagina de inicio de Telcel",
+      "name" : "Given el usuario está en la página principal de YouTube",
       "time" : {
-        "start" : 1747676275436,
-        "stop" : 1747676275437,
+        "start" : 1747679935473,
+        "stop" : 1747679935474,
         "duration" : 1
       },
       "status" : "passed",
@@ -60,10 +60,40 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When hago clic en Ver todos los Planes",
+      "name" : "When haces clic en el botón \"Explorar\"",
       "time" : {
-        "start" : 1747676275438,
-        "stop" : 1747676275439,
+        "start" : 1747679935474,
+        "stop" : 1747679935474,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And debería ver las categorías \"Tendencias\", \"Música\" y \"Noticias\"",
+      "time" : {
+        "start" : 1747679935475,
+        "stop" : 1747679935475,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When hacer clic en la categoría \"Música\"",
+      "time" : {
+        "start" : 1747679935475,
+        "stop" : 1747679935476,
         "duration" : 1
       },
       "status" : "passed",
@@ -75,11 +105,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then debo ver un plan Telcel Plus",
+      "name" : "Then debería ver videos con título y nombre del canal visible",
       "time" : {
-        "start" : 1747676275439,
-        "stop" : 1747676281481,
-        "duration" : 6042
+        "start" : 1747679935476,
+        "stop" : 1747679941621,
+        "duration" : 6145
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,11 +120,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I am on page \"/\"",
+      "name" : "I am on page \"https://www.youtube.com\"",
       "time" : {
-        "start" : 1747676275440,
-        "stop" : 1747676277800,
-        "duration" : 2360
+        "start" : 1747679935477,
+        "stop" : 1747679936794,
+        "duration" : 1317
       },
       "status" : "passed",
       "steps" : [ ],
@@ -105,11 +135,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait 2",
+      "name" : "I wait for element \"//div[@id=\"start\"]/yt-icon-button[@id=\"guide-button\"]\", 20",
       "time" : {
-        "start" : 1747676277800,
-        "stop" : 1747676279800,
-        "duration" : 2000
+        "start" : 1747679936795,
+        "stop" : 1747679936902,
+        "duration" : 107
       },
       "status" : "passed",
       "steps" : [ ],
@@ -120,11 +150,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I scroll to \".btn.btn-link.btn-lg\"",
+      "name" : "I click \"//div[@id=\"start\"]/yt-icon-button[@id=\"guide-button\"]\"",
       "time" : {
-        "start" : 1747676279800,
-        "stop" : 1747676279945,
-        "duration" : 145
+        "start" : 1747679936903,
+        "stop" : 1747679937390,
+        "duration" : 487
       },
       "status" : "passed",
       "steps" : [ ],
@@ -135,10 +165,55 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait for visible \".btn.btn-link.btn-lg\", 5",
+      "name" : "I wait for element \"(//h3[not(@hidden)]/yt-formatted-string[@id=\"guide-section-title\"])[1]\"",
       "time" : {
-        "start" : 1747676279945,
-        "stop" : 1747676279949,
+        "start" : 1747679937390,
+        "stop" : 1747679937402,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see \"Tendencias\"",
+      "time" : {
+        "start" : 1747679937403,
+        "stop" : 1747679937419,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see \"Música\"",
+      "time" : {
+        "start" : 1747679937419,
+        "stop" : 1747679937426,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see \"Noticias\"",
+      "time" : {
+        "start" : 1747679937426,
+        "stop" : 1747679937430,
         "duration" : 4
       },
       "status" : "passed",
@@ -150,11 +225,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I click \".btn.btn-link.btn-lg\"",
+      "name" : "I click \"Música\"",
       "time" : {
-        "start" : 1747676279949,
-        "stop" : 1747676280204,
-        "duration" : 255
+        "start" : 1747679937430,
+        "stop" : 1747679937600,
+        "duration" : 170
       },
       "status" : "passed",
       "steps" : [ ],
@@ -165,11 +240,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I say \"Click en el botón 'Ver todos los Planes' realizado\"",
+      "name" : "I wait 4",
       "time" : {
-        "start" : 1747676280204,
-        "stop" : 1747676280204,
-        "duration" : 0
+        "start" : 1747679937600,
+        "stop" : 1747679941600,
+        "duration" : 4000
       },
       "status" : "passed",
       "steps" : [ ],
@@ -180,11 +255,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait for element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\", 5",
+      "name" : "I wait for element \"//*[@id=\"hero-title\"]\", 20",
       "time" : {
-        "start" : 1747676280205,
-        "stop" : 1747676281477,
-        "duration" : 1272
+        "start" : 1747679941600,
+        "stop" : 1747679941607,
+        "duration" : 7
       },
       "status" : "passed",
       "steps" : [ ],
@@ -195,11 +270,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I see element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\"",
+      "name" : "I see element \"//*[@id=\"hero-title\"]\"",
       "time" : {
-        "start" : 1747676281477,
-        "stop" : 1747676281481,
-        "duration" : 4
+        "start" : 1747679941607,
+        "stop" : 1747679941614,
+        "duration" : 7
       },
       "status" : "passed",
       "steps" : [ ],
@@ -210,11 +285,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I say \"Verificación de Telcel Plus exitosa\"",
+      "name" : "I see element \"//*[@id=\"description\"]/span[1]\"",
       "time" : {
-        "start" : 1747676281481,
-        "stop" : 1747676281481,
-        "duration" : 0
+        "start" : 1747679941615,
+        "stop" : 1747679941621,
+        "duration" : 6
       },
       "status" : "passed",
       "steps" : [ ],
@@ -227,7 +302,7 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 12,
+    "stepsCount" : 17,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -235,8 +310,8 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747676324977,
-      "stop" : 1747676324977,
+      "start" : 1747679941628,
+      "stop" : 1747679941628,
       "duration" : 0
     },
     "status" : "passed",
@@ -250,9 +325,9 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747676281482,
-      "stop" : 1747676281496,
-      "duration" : 14
+      "start" : 1747679941622,
+      "stop" : 1747679941628,
+      "duration" : 6
     },
     "status" : "passed",
     "steps" : [ ],
@@ -271,16 +346,19 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1279-464"
+    "value" : "fv-az1927-793"
   }, {
     "name" : "thread",
-    "value" : "pid-2542-worker-main"
+    "value" : "pid-2577-worker-main"
   }, {
     "name" : "package",
-    "value" : "features.telcel.feature"
+    "value" : "features.prueba.feature"
+  }, {
+    "name" : "tag",
+    "value" : "test"
   }, {
     "name" : "parentSuite",
-    "value" : "Automatización de Telcel"
+    "value" : "Validación del botón \"Explorar\" y navegación en YouTube"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -293,8 +371,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ ]
+    "tags" : [ "test" ]
   },
-  "source" : "e9c517ffb11ad5ee.json",
+  "source" : "3d981b9c42adcbe1.json",
   "parameterValues" : [ ]
 }

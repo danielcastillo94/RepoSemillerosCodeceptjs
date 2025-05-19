@@ -1,12 +1,12 @@
 {
-  "uid" : "704337452ce71a33",
+  "uid" : "1d37ad44fe19a2cf",
   "name" : "Validar el atributo href @enlaces",
-  "fullName" : "features/dailyMotion.feature: Validaciones funcionales dailyMotion > Validar el atributo href @enlaces",
-  "historyId" : "d3f6bec78be92900b74c610d7dcf1d6b:d41d8cd98f00b204e9800998ecf8427e",
+  "fullName" : "features/dailyMotion.feature: Validaciones funcionales en dailyMotion > Validar el atributo href @enlaces",
+  "historyId" : "db052455e3ef44994695ac24b2f1e2d2:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747676347425,
-    "stop" : 1747676347981,
-    "duration" : 556
+    "start" : 1747679950844,
+    "stop" : 1747679951830,
+    "duration" : 986
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747676346428,
-      "stop" : 1747676346429,
-      "duration" : 1
+      "start" : 1747679950843,
+      "stop" : 1747679950843,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,9 +29,9 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747676347425,
-      "stop" : 1747676347450,
-      "duration" : 25
+      "start" : 1747679950844,
+      "stop" : 1747679950875,
+      "duration" : 31
     },
     "status" : "passed",
     "steps" : [ ],
@@ -47,9 +47,9 @@
     "steps" : [ {
       "name" : "Given Estoy en la pagina de Daily Motion",
       "time" : {
-        "start" : 1747676347453,
-        "stop" : 1747676347924,
-        "duration" : 471
+        "start" : 1747679950881,
+        "stop" : 1747679951733,
+        "duration" : 852
       },
       "status" : "passed",
       "steps" : [ ],
@@ -62,9 +62,9 @@
     }, {
       "name" : "When Presiono el boton de Seguidos",
       "time" : {
-        "start" : 1747676347926,
-        "stop" : 1747676347973,
-        "duration" : 47
+        "start" : 1747679951739,
+        "stop" : 1747679951820,
+        "duration" : 81
       },
       "status" : "passed",
       "steps" : [ ],
@@ -77,8 +77,8 @@
     }, {
       "name" : "Then Valido el enlace de seguidos",
       "time" : {
-        "start" : 1747676347974,
-        "stop" : 1747676347981,
+        "start" : 1747679951823,
+        "stop" : 1747679951830,
         "duration" : 7
       },
       "status" : "passed",
@@ -98,11 +98,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747676347981,
-      "stop" : 1747676347984,
-      "duration" : 3
+      "start" : 1747679951835,
+      "stop" : 1747679951835,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -113,11 +113,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747676347984,
-      "stop" : 1747676347984,
-      "duration" : 0
+      "start" : 1747679951830,
+      "stop" : 1747679951834,
+      "duration" : 4
     },
     "status" : "passed",
     "steps" : [ ],
@@ -136,10 +136,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1279-464"
+    "value" : "fv-az1927-793"
   }, {
     "name" : "thread",
-    "value" : "pid-2542-worker-main"
+    "value" : "pid-2577-worker-main"
   }, {
     "name" : "package",
     "value" : "features.dailyMotion.feature"
@@ -148,7 +148,7 @@
     "value" : "enlaces"
   }, {
     "name" : "parentSuite",
-    "value" : "Validaciones funcionales dailyMotion"
+    "value" : "Validaciones funcionales en dailyMotion"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -163,6 +163,6 @@
     "categories" : [ ],
     "tags" : [ "enlaces" ]
   },
-  "source" : "704337452ce71a33.json",
+  "source" : "1d37ad44fe19a2cf.json",
   "parameterValues" : [ ]
 }
