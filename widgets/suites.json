@@ -1,24 +1,13 @@
 {
   "total" : 7,
   "items" : [ {
-    "uid" : "c54abeb43e2e6c341a979d109d63cf8e",
-    "name" : "Validaciones funcionales en la plataforma de YouTube",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 8,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 8
-    }
-  }, {
     "uid" : "d2c76bc404a58ecc12ff3c04d6cba31b",
     "name" : "Validación de resultados relacionados en YouTube",
     "statistic" : {
       "failed" : 0,
-      "broken" : 3,
+      "broken" : 1,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 2,
       "unknown" : 0,
       "total" : 3
     }
@@ -34,15 +23,26 @@
       "total" : 1
     }
   }, {
+    "uid" : "c54abeb43e2e6c341a979d109d63cf8e",
+    "name" : "Validaciones funcionales en la plataforma de YouTube",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 7,
+      "unknown" : 0,
+      "total" : 7
+    }
+  }, {
     "uid" : "a33775243f021d8b3a19aacdf2004620",
     "name" : "Automatización de Telcel",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 3,
+      "passed" : 5,
       "unknown" : 0,
-      "total" : 3
+      "total" : 5
     }
   }, {
     "uid" : "6300100abe8ed0d86bf5ab61b9136637",

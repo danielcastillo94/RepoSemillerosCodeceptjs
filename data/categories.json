@@ -3,167 +3,33 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
+      "name" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
       "children" : [ {
-        "name" : "Validar fecha de publicación reciente",
-        "uid" : "7eb139f3aa15875d",
-        "parentUid" : "ee01a6a945453292500fec63086fab6d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747679941302,
-          "stop" : 1747679952097,
-          "duration" : 10795
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de una búsqueda en YouTube",
-        "uid" : "851463a7d9d434f5",
-        "parentUid" : "ee01a6a945453292500fec63086fab6d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747679952113,
-          "stop" : 1747679962763,
-          "duration" : 10650
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Navegar al canal",
-        "uid" : "faa761b9b3c1f88c",
-        "parentUid" : "ee01a6a945453292500fec63086fab6d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747679962776,
-          "stop" : 1747679973309,
-          "duration" : 10533
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de duración de video en campo oculto",
-        "uid" : "4c3adb82fd296",
-        "parentUid" : "ee01a6a945453292500fec63086fab6d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747679973322,
-          "stop" : 1747679984017,
-          "duration" : 10695
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
-        "uid" : "6dea243e5e5d815c",
-        "parentUid" : "ee01a6a945453292500fec63086fab6d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747679984033,
-          "stop" : 1747679994694,
-          "duration" : 10661
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
-        "uid" : "755e688c8a05f606",
-        "parentUid" : "ee01a6a945453292500fec63086fab6d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747679994713,
-          "stop" : 1747680005094,
-          "duration" : 10381
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
-        "uid" : "570cc5d73ddfa20b",
-        "parentUid" : "ee01a6a945453292500fec63086fab6d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747680005106,
-          "stop" : 1747680015908,
-          "duration" : 10802
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
-        "uid" : "c4b3fa1e45f59c9a",
-        "parentUid" : "ee01a6a945453292500fec63086fab6d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747680015921,
-          "stop" : 1747680026265,
-          "duration" : 10344
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "ee01a6a945453292500fec63086fab6d"
-    }, {
-      "name" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
-      "children" : [ {
-        "name" : "Validar título y videos relacionados correctamente",
-        "uid" : "f5ca8612f22d442d",
-        "parentUid" : "d64ed48f024ac9102b425429310a3e0e",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747680026283,
-          "stop" : 1747680046776,
-          "duration" : 20493
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validar título distinto de otro video",
-        "uid" : "8f9d30f5de4acf5",
-        "parentUid" : "d64ed48f024ac9102b425429310a3e0e",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747680046789,
-          "stop" : 1747680067597,
-          "duration" : 20808
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
         "name" : "Título incorrecto provoca error",
-        "uid" : "b1af39bda0c44117",
-        "parentUid" : "d64ed48f024ac9102b425429310a3e0e",
+        "uid" : "e71158cf4d10e5bc",
+        "parentUid" : "7cb806f98d27d18423c6f338ae3ad36d",
         "status" : "broken",
         "time" : {
-          "start" : 1747680067611,
-          "stop" : 1747680088344,
-          "duration" : 20733
+          "start" : 1747680361829,
+          "stop" : 1747680373747,
+          "duration" : 11918
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "d64ed48f024ac9102b425429310a3e0e"
+      "uid" : "7cb806f98d27d18423c6f338ae3ad36d"
     }, {
       "name" : "No steps matching \"debería ver:\"",
       "children" : [ {
         "name" : "Verificar carga de elementos clave",
-        "uid" : "4b1c5c2384186649",
+        "uid" : "c9d2f2e063b7ef6f",
         "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
         "status" : "broken",
         "time" : {
-          "start" : 1747680138171,
-          "stop" : 1747680143718,
-          "duration" : 5547
+          "start" : 1747680425973,
+          "stop" : 1747680430398,
+          "duration" : 4425
         },
         "flaky" : false,
         "newFailed" : false,

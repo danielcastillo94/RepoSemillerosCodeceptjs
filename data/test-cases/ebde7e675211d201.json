@@ -1,0 +1,345 @@
+{
+  "uid" : "ebde7e675211d201",
+  "name" : "Validar título distinto de otro video",
+  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título distinto de otro video",
+  "historyId" : "e996e3e213ec2bb7040a7be8ce15cf31:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1747680349493,
+    "stop" : 1747680361821,
+    "duration" : 12328
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747680349493,
+      "stop" : 1747680349525,
+      "duration" : 32
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747680337757,
+      "stop" : 1747680337757,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: Before",
+    "time" : {
+      "start" : 1747680349525,
+      "stop" : 1747680353862,
+      "duration" : 4337
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given abro la página de YouTube",
+      "time" : {
+        "start" : 1747680349527,
+        "stop" : 1747680349528,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I am on page \"/\"",
+      "time" : {
+        "start" : 1747680349528,
+        "stop" : 1747680350861,
+        "duration" : 1333
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 3",
+      "time" : {
+        "start" : 1747680350862,
+        "stop" : 1747680353862,
+        "duration" : 3000
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "When busco el video \"Metallica Nothing Else Matters\"",
+      "time" : {
+        "start" : 1747680353864,
+        "stop" : 1747680353864,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And entro al primer video de los resultados",
+      "time" : {
+        "start" : 1747680353866,
+        "stop" : 1747680353866,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then debería ver el título \"Metallica: Nothing Else Matters (Official Music Video)\"",
+      "time" : {
+        "start" : 1747680353868,
+        "stop" : 1747680361821,
+        "duration" : 7953
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
+        "time" : {
+          "start" : 1747680353869,
+          "stop" : 1747680353876,
+          "duration" : 7
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Metallica Nothing Else Matters\"",
+        "time" : {
+          "start" : 1747680353876,
+          "stop" : 1747680354555,
+          "duration" : 679
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I press key \"Enter\"",
+        "time" : {
+          "start" : 1747680354555,
+          "stop" : 1747680354688,
+          "duration" : 133
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
+        "time" : {
+          "start" : 1747680354688,
+          "stop" : 1747680356036,
+          "duration" : 1348
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
+        "time" : {
+          "start" : 1747680356036,
+          "stop" : 1747680356165,
+          "duration" : 129
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I click \"//ytd-video-renderer//a[@id=\"thumbnail\"]\"",
+        "time" : {
+          "start" : 1747680356165,
+          "stop" : 1747680356821,
+          "duration" : 656
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I wait 5",
+        "time" : {
+          "start" : 1747680356822,
+          "stop" : 1747680357989,
+          "duration" : 1167
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "And deberían mostrarse al menos 5 videos recomendados en la barra lateral",
+        "time" : {
+          "start" : 1747680357991,
+          "stop" : 1747680361821,
+          "duration" : 3830
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 8,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1747680373754,
+      "stop" : 1747680373754,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747680361822,
+      "stop" : 1747680361829,
+      "duration" : 7
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1361-149"
+  }, {
+    "name" : "thread",
+    "value" : "pid-2526-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.videoYoutube.feature"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validación de resultados relacionados en YouTube"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ebde7e675211d201.json",
+  "parameterValues" : [ ]
+}
