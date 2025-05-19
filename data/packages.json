@@ -6,104 +6,91 @@
       "name" : "youtubeGeneral.feature",
       "children" : [ {
         "name" : "Validar fecha de publicación reciente",
-        "uid" : "756d4d21064dd99e",
+        "uid" : "56fff079a9f3db6a",
         "parentUid" : "6716116f4b098bc7267d70125e4af3dc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679776153,
-          "stop" : 1747679785365,
-          "duration" : 9212
+          "start" : 1747679777983,
+          "stop" : 1747679787404,
+          "duration" : 9421
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validación de una búsqueda en YouTube",
-        "uid" : "7d3c81bc1dddc30d",
+        "uid" : "fd5b3b3b5bc1f24e",
         "parentUid" : "6716116f4b098bc7267d70125e4af3dc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679785375,
-          "stop" : 1747679792446,
-          "duration" : 7071
+          "start" : 1747679787415,
+          "stop" : 1747679794449,
+          "duration" : 7034
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Navegar al canal",
-        "uid" : "e12f7df0720227b8",
+        "uid" : "c017d614ce268472",
         "parentUid" : "6716116f4b098bc7267d70125e4af3dc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679792456,
-          "stop" : 1747679807832,
-          "duration" : 15376
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de duración de video en campo oculto",
-        "uid" : "25f69b0bd656107b",
-        "parentUid" : "6716116f4b098bc7267d70125e4af3dc",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747679807862,
-          "stop" : 1747679814591,
-          "duration" : 6729
+          "start" : 1747679794460,
+          "stop" : 1747679809896,
+          "duration" : 15436
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
-        "uid" : "679c33dc46376cb1",
+        "uid" : "f350738062c5393",
         "parentUid" : "6716116f4b098bc7267d70125e4af3dc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679814597,
-          "stop" : 1747679821312,
-          "duration" : 6715
+          "start" : 1747679816841,
+          "stop" : 1747679823654,
+          "duration" : 6813
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
-        "uid" : "54c66f16f5aad65f",
+        "uid" : "c2d9329170a5a99d",
         "parentUid" : "6716116f4b098bc7267d70125e4af3dc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679821319,
-          "stop" : 1747679828473,
-          "duration" : 7154
+          "start" : 1747679823662,
+          "stop" : 1747679830456,
+          "duration" : 6794
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
-        "uid" : "bd3b42e73325e8ed",
+        "uid" : "86cb4893ce42533a",
         "parentUid" : "6716116f4b098bc7267d70125e4af3dc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679828480,
-          "stop" : 1747679835282,
-          "duration" : 6802
+          "start" : 1747679830463,
+          "stop" : 1747679837212,
+          "duration" : 6749
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
-        "uid" : "f7f7a43c54dd38b9",
+        "uid" : "d3789e80c338d8af",
         "parentUid" : "6716116f4b098bc7267d70125e4af3dc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679835289,
-          "stop" : 1747679842100,
-          "duration" : 6811
+          "start" : 1747679837220,
+          "stop" : 1747679844028,
+          "duration" : 6808
         },
         "flaky" : false,
         "newFailed" : false,
@@ -114,39 +101,39 @@
       "name" : "videoYoutube.feature",
       "children" : [ {
         "name" : "Validar título y videos relacionados correctamente",
-        "uid" : "3c145789de878bcf",
+        "uid" : "a6822ee39967dc30",
         "parentUid" : "8274242778e61d94879dff717798ea48",
         "status" : "passed",
         "time" : {
-          "start" : 1747679842110,
-          "stop" : 1747679853718,
-          "duration" : 11608
+          "start" : 1747679844039,
+          "stop" : 1747679855667,
+          "duration" : 11628
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validar título distinto de otro video",
-        "uid" : "582c380439f49c8a",
+        "uid" : "f7b26f17c0f455a9",
         "parentUid" : "8274242778e61d94879dff717798ea48",
-        "status" : "passed",
+        "status" : "broken",
         "time" : {
-          "start" : 1747679853725,
-          "stop" : 1747679866012,
-          "duration" : 12287
+          "start" : 1747679855674,
+          "stop" : 1747679873936,
+          "duration" : 18262
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Título incorrecto provoca error",
-        "uid" : "26244f41eb9254c",
+        "uid" : "2c7ae37a65ac5ee8",
         "parentUid" : "8274242778e61d94879dff717798ea48",
         "status" : "broken",
         "time" : {
-          "start" : 1747679866020,
-          "stop" : 1747679877747,
-          "duration" : 11727
+          "start" : 1747679873943,
+          "stop" : 1747679885718,
+          "duration" : 11775
         },
         "flaky" : false,
         "newFailed" : false,
@@ -157,65 +144,65 @@
       "name" : "telcel.feature",
       "children" : [ {
         "name" : "Buscar plan Telcel Plus",
-        "uid" : "b12a86a7bde1891a",
+        "uid" : "f77b356d54a837bb",
         "parentUid" : "e0244f340c5481b42fde59248ba05efc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679877758,
-          "stop" : 1747679881810,
-          "duration" : 4052
+          "start" : 1747679885728,
+          "stop" : 1747679889361,
+          "duration" : 3633
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Mobile recharge of '$100'",
-        "uid" : "f16531693b2c856b",
+        "uid" : "7cda99061829206d",
         "parentUid" : "e0244f340c5481b42fde59248ba05efc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679881823,
-          "stop" : 1747679890770,
-          "duration" : 8947
+          "start" : 1747679889371,
+          "stop" : 1747679898224,
+          "duration" : 8853
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Mobile recharge of '$200'",
-        "uid" : "509290ed02ab3cee",
+        "uid" : "54a519d46cf9b8a9",
         "parentUid" : "e0244f340c5481b42fde59248ba05efc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679890788,
-          "stop" : 1747679899901,
-          "duration" : 9113
+          "start" : 1747679898241,
+          "stop" : 1747679907090,
+          "duration" : 8849
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Mobile recharge of '$300'",
-        "uid" : "753c3ba0102f0946",
+        "uid" : "bc3922fbcb54a2f",
         "parentUid" : "e0244f340c5481b42fde59248ba05efc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679899917,
-          "stop" : 1747679908552,
-          "duration" : 8635
+          "start" : 1747679907106,
+          "stop" : 1747679917040,
+          "duration" : 9934
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validar sección Contáctanos",
-        "uid" : "374c56938e57e8fe",
+        "uid" : "82f71b427ab7370f",
         "parentUid" : "e0244f340c5481b42fde59248ba05efc",
         "status" : "passed",
         "time" : {
-          "start" : 1747679908567,
-          "stop" : 1747679930874,
-          "duration" : 22307
+          "start" : 1747679917058,
+          "stop" : 1747679938728,
+          "duration" : 21670
         },
         "flaky" : false,
         "newFailed" : false,
@@ -226,13 +213,13 @@
       "name" : "requerimientoYoutube.feature",
       "children" : [ {
         "name" : "Verificar carga de elementos clave",
-        "uid" : "c0c3788ee9cf9a82",
+        "uid" : "ced812f78eedad43",
         "parentUid" : "ebb4d2307a7b6a4be2f0d8cae3e34fcb",
         "status" : "broken",
         "time" : {
-          "start" : 1747679930888,
-          "stop" : 1747679935432,
-          "duration" : 4544
+          "start" : 1747679938742,
+          "stop" : 1747679943234,
+          "duration" : 4492
         },
         "flaky" : false,
         "newFailed" : false,
@@ -243,13 +230,13 @@
       "name" : "prueba.feature",
       "children" : [ {
         "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-        "uid" : "3d981b9c42adcbe1",
+        "uid" : "a25eae3c79c31535",
         "parentUid" : "e83367221ade523a84c6cfdee7388bca",
         "status" : "passed",
         "time" : {
-          "start" : 1747679935441,
-          "stop" : 1747679941622,
-          "duration" : 6181
+          "start" : 1747679943243,
+          "stop" : 1747679949500,
+          "duration" : 6257
         },
         "flaky" : false,
         "newFailed" : false,
@@ -260,13 +247,13 @@
       "name" : "loginYoutube.feature",
       "children" : [ {
         "name" : "Validar el boton del login",
-        "uid" : "db74d0840dbc1fc1",
+        "uid" : "c0e42ba8c21d7de7",
         "parentUid" : "3d0b69278322dbc8f41c57fd8a950494",
         "status" : "passed",
         "time" : {
-          "start" : 1747679941630,
-          "stop" : 1747679950835,
-          "duration" : 9205
+          "start" : 1747679949507,
+          "stop" : 1747679958489,
+          "duration" : 8982
         },
         "flaky" : false,
         "newFailed" : false,
@@ -277,13 +264,13 @@
       "name" : "dailyMotion.feature",
       "children" : [ {
         "name" : "Validar el atributo href @enlaces",
-        "uid" : "1d37ad44fe19a2cf",
+        "uid" : "64ad2c773993c2e2",
         "parentUid" : "91a27eecd00fefd21bcabd38da85d8d2",
         "status" : "passed",
         "time" : {
-          "start" : 1747679950844,
-          "stop" : 1747679951830,
-          "duration" : 986
+          "start" : 1747679958497,
+          "stop" : 1747679959161,
+          "duration" : 664
         },
         "flaky" : false,
         "newFailed" : false,

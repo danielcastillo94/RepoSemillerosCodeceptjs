@@ -1,12 +1,12 @@
 {
-  "uid" : "3d981b9c42adcbe1",
+  "uid" : "a25eae3c79c31535",
   "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
   "fullName" : "features/prueba.feature: Validación del botón \"Explorar\" y navegación en YouTube > Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
   "historyId" : "cb93a540f803c9ac4825d784f82ab297:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747679935441,
-    "stop" : 1747679941622,
-    "duration" : 6181
+    "start" : 1747679943243,
+    "stop" : 1747679949500,
+    "duration" : 6257
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,329 +14,329 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747679935441,
-      "stop" : 1747679935441,
+      "start" : 1747679943242,
+      "stop" : 1747679943242,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747679935441,
-      "stop" : 1747679935472,
-      "duration" : 31
+      "start" : 1747679943243,
+      "stop" : 1747679943272,
+      "duration" : 29
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "Given el usuario está en la página principal de YouTube",
       "time" : {
-        "start" : 1747679935473,
-        "stop" : 1747679935474,
+        "start" : 1747679943272,
+        "stop" : 1747679943273,
         "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "When haces clic en el botón \"Explorar\"",
       "time" : {
-        "start" : 1747679935474,
-        "stop" : 1747679935474,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And debería ver las categorías \"Tendencias\", \"Música\" y \"Noticias\"",
-      "time" : {
-        "start" : 1747679935475,
-        "stop" : 1747679935475,
-        "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "When hacer clic en la categoría \"Música\"",
-      "time" : {
-        "start" : 1747679935475,
-        "stop" : 1747679935476,
+        "start" : 1747679943273,
+        "stop" : 1747679943274,
         "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "And debería ver las categorías \"Tendencias\", \"Música\" y \"Noticias\"",
+      "time" : {
+        "start" : 1747679943274,
+        "stop" : 1747679943274,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When hacer clic en la categoría \"Música\"",
+      "time" : {
+        "start" : 1747679943275,
+        "stop" : 1747679943275,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     }, {
       "name" : "Then debería ver videos con título y nombre del canal visible",
       "time" : {
-        "start" : 1747679935476,
-        "stop" : 1747679941621,
-        "duration" : 6145
+        "start" : 1747679943275,
+        "stop" : 1747679949500,
+        "duration" : 6225
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I am on page \"https://www.youtube.com\"",
       "time" : {
-        "start" : 1747679935477,
-        "stop" : 1747679936794,
-        "duration" : 1317
+        "start" : 1747679943276,
+        "stop" : 1747679944607,
+        "duration" : 1331
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I wait for element \"//div[@id=\"start\"]/yt-icon-button[@id=\"guide-button\"]\", 20",
       "time" : {
-        "start" : 1747679936795,
-        "stop" : 1747679936902,
-        "duration" : 107
+        "start" : 1747679944608,
+        "stop" : 1747679944697,
+        "duration" : 89
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I click \"//div[@id=\"start\"]/yt-icon-button[@id=\"guide-button\"]\"",
       "time" : {
-        "start" : 1747679936903,
-        "stop" : 1747679937390,
-        "duration" : 487
+        "start" : 1747679944697,
+        "stop" : 1747679945182,
+        "duration" : 485
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I wait for element \"(//h3[not(@hidden)]/yt-formatted-string[@id=\"guide-section-title\"])[1]\"",
       "time" : {
-        "start" : 1747679937390,
-        "stop" : 1747679937402,
-        "duration" : 12
+        "start" : 1747679945182,
+        "stop" : 1747679945254,
+        "duration" : 72
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I see \"Tendencias\"",
       "time" : {
-        "start" : 1747679937403,
-        "stop" : 1747679937419,
-        "duration" : 16
+        "start" : 1747679945254,
+        "stop" : 1747679945274,
+        "duration" : 20
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I see \"Música\"",
       "time" : {
-        "start" : 1747679937419,
-        "stop" : 1747679937426,
-        "duration" : 7
+        "start" : 1747679945274,
+        "stop" : 1747679945285,
+        "duration" : 11
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I see \"Noticias\"",
       "time" : {
-        "start" : 1747679937426,
-        "stop" : 1747679937430,
-        "duration" : 4
+        "start" : 1747679945285,
+        "stop" : 1747679945293,
+        "duration" : 8
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I click \"Música\"",
       "time" : {
-        "start" : 1747679937430,
-        "stop" : 1747679937600,
-        "duration" : 170
+        "start" : 1747679945293,
+        "stop" : 1747679945475,
+        "duration" : 182
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I wait 4",
       "time" : {
-        "start" : 1747679937600,
-        "stop" : 1747679941600,
-        "duration" : 4000
+        "start" : 1747679945475,
+        "stop" : 1747679949476,
+        "duration" : 4001
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I wait for element \"//*[@id=\"hero-title\"]\", 20",
       "time" : {
-        "start" : 1747679941600,
-        "stop" : 1747679941607,
-        "duration" : 7
+        "start" : 1747679949476,
+        "stop" : 1747679949484,
+        "duration" : 8
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I see element \"//*[@id=\"hero-title\"]\"",
       "time" : {
-        "start" : 1747679941607,
-        "stop" : 1747679941614,
-        "duration" : 7
+        "start" : 1747679949484,
+        "stop" : 1747679949492,
+        "duration" : 8
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I see element \"//*[@id=\"description\"]/span[1]\"",
       "time" : {
-        "start" : 1747679941615,
-        "stop" : 1747679941621,
+        "start" : 1747679949493,
+        "stop" : 1747679949499,
         "duration" : 6
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : true,
     "stepsCount" : 17,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : true
+    "shouldDisplayMessage" : false
   },
   "afterStages" : [ {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747679949500,
+      "stop" : 1747679949505,
+      "duration" : 5
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747679941628,
-      "stop" : 1747679941628,
+      "start" : 1747679949506,
+      "stop" : 1747679949506,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
-    "name" : "\"after each\" hook: codeceptjs.after",
-    "time" : {
-      "start" : 1747679941622,
-      "stop" : 1747679941628,
-      "duration" : 6
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   } ],
   "labels" : [ {
     "name" : "language",
@@ -346,10 +346,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1927-793"
+    "value" : "fv-az1314-298"
   }, {
     "name" : "thread",
-    "value" : "pid-2577-worker-main"
+    "value" : "pid-2539-worker-main"
   }, {
     "name" : "package",
     "value" : "features.prueba.feature"
@@ -373,6 +373,6 @@
     "categories" : [ ],
     "tags" : [ "test" ]
   },
-  "source" : "3d981b9c42adcbe1.json",
+  "source" : "a25eae3c79c31535.json",
   "parameterValues" : [ ]
 }

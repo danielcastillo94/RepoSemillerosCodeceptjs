@@ -1,12 +1,12 @@
 {
-  "uid" : "b12a86a7bde1891a",
+  "uid" : "f77b356d54a837bb",
   "name" : "Buscar plan Telcel Plus",
   "fullName" : "features/telcel.feature: Automatización de Telcel > Buscar plan Telcel Plus",
   "historyId" : "772b41fe9b993738be2de237826af37b:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747679877758,
-    "stop" : 1747679881810,
-    "duration" : 4052
+    "start" : 1747679885728,
+    "stop" : 1747679889361,
+    "duration" : 3633
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,194 +14,194 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747679877757,
-      "stop" : 1747679877757,
+      "start" : 1747679885727,
+      "stop" : 1747679885727,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747679877758,
-      "stop" : 1747679877800,
-      "duration" : 42
+      "start" : 1747679885728,
+      "stop" : 1747679885756,
+      "duration" : 28
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "Given estoy en la pagina de inicio de Telcel",
       "time" : {
-        "start" : 1747679877801,
-        "stop" : 1747679877801,
+        "start" : 1747679885758,
+        "stop" : 1747679885758,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "When hago clic en Ver todos los Planes",
       "time" : {
-        "start" : 1747679877802,
-        "stop" : 1747679877803,
-        "duration" : 1
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "Then debo ver un plan Telcel Plus",
-      "time" : {
-        "start" : 1747679877803,
-        "stop" : 1747679881809,
-        "duration" : 4006
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I open telcel homepage",
-      "time" : {
-        "start" : 1747679877804,
-        "stop" : 1747679880610,
-        "duration" : 2806
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I go to all plans",
-      "time" : {
-        "start" : 1747679880610,
-        "stop" : 1747679880766,
-        "duration" : 156
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I wait for element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\", 5",
-      "time" : {
-        "start" : 1747679880766,
-        "stop" : 1747679881806,
-        "duration" : 1040
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I see element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\"",
-      "time" : {
-        "start" : 1747679881806,
-        "stop" : 1747679881809,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I say \"Verificación de Telcel Plus exitosa\"",
-      "time" : {
-        "start" : 1747679881809,
-        "stop" : 1747679881809,
+        "start" : 1747679885759,
+        "stop" : 1747679885759,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then debo ver un plan Telcel Plus",
+      "time" : {
+        "start" : 1747679885760,
+        "stop" : 1747679889361,
+        "duration" : 3601
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I open telcel homepage",
+      "time" : {
+        "start" : 1747679885761,
+        "stop" : 1747679888063,
+        "duration" : 2302
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I go to all plans",
+      "time" : {
+        "start" : 1747679888063,
+        "stop" : 1747679888207,
+        "duration" : 144
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I wait for element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\", 5",
+      "time" : {
+        "start" : 1747679888207,
+        "stop" : 1747679889358,
+        "duration" : 1151
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I see element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\"",
+      "time" : {
+        "start" : 1747679889358,
+        "stop" : 1747679889360,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "I say \"Verificación de Telcel Plus exitosa\"",
+      "time" : {
+        "start" : 1747679889360,
+        "stop" : 1747679889360,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : true,
     "stepsCount" : 8,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : true
+    "shouldDisplayMessage" : false
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
-    "time" : {
-      "start" : 1747679881810,
-      "stop" : 1747679881822,
-      "duration" : 12
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747679930886,
-      "stop" : 1747679930886,
+      "start" : 1747679938740,
+      "stop" : 1747679938740,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747679889361,
+      "stop" : 1747679889371,
+      "duration" : 10
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   } ],
   "labels" : [ {
     "name" : "language",
@@ -211,10 +211,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1927-793"
+    "value" : "fv-az1314-298"
   }, {
     "name" : "thread",
-    "value" : "pid-2577-worker-main"
+    "value" : "pid-2539-worker-main"
   }, {
     "name" : "package",
     "value" : "features.telcel.feature"
@@ -235,6 +235,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b12a86a7bde1891a.json",
+  "source" : "f77b356d54a837bb.json",
   "parameterValues" : [ ]
 }

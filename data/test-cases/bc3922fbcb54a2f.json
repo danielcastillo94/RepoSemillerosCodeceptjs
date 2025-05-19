@@ -1,192 +1,192 @@
 {
-  "uid" : "753c3ba0102f0946",
+  "uid" : "bc3922fbcb54a2f",
   "name" : "Mobile recharge of '$300'",
   "fullName" : "features/telcel.feature: Automatización de Telcel > Mobile recharge of '$300' ",
   "historyId" : "315a2960223f7936aef6355e84e9f378:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747679899917,
-    "stop" : 1747679908552,
-    "duration" : 8635
+    "start" : 1747679907106,
+    "stop" : 1747679917040,
+    "duration" : 9934
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747679907106,
+      "stop" : 1747679907137,
+      "duration" : 31
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747679877757,
-      "stop" : 1747679877757,
+      "start" : 1747679885727,
+      "stop" : 1747679885727,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747679899918,
-      "stop" : 1747679899951,
-      "duration" : 33
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
       "name" : "Given estoy en la pagina de inicio de Telcel",
       "time" : {
-        "start" : 1747679899953,
-        "stop" : 1747679899953,
+        "start" : 1747679907140,
+        "stop" : 1747679907140,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "When recargo '$300' al numero '5512345678'",
       "time" : {
-        "start" : 1747679899956,
-        "stop" : 1747679899957,
+        "start" : 1747679907142,
+        "stop" : 1747679907143,
         "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "Then debo ver el resumen de la recarga y un formulario de pago",
       "time" : {
-        "start" : 1747679899958,
-        "stop" : 1747679908552,
-        "duration" : 8594
+        "start" : 1747679907144,
+        "stop" : 1747679917040,
+        "duration" : 9896
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I open telcel homepage",
       "time" : {
-        "start" : 1747679899958,
-        "stop" : 1747679902181,
-        "duration" : 2223
+        "start" : 1747679907144,
+        "stop" : 1747679910446,
+        "duration" : 3302
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : false,
       "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "shouldDisplayMessage" : false
     }, {
       "name" : "I mobile recharge \"$300\", \"5512345678\"",
       "time" : {
-        "start" : 1747679902181,
-        "stop" : 1747679908552,
-        "duration" : 6371
+        "start" : 1747679910446,
+        "stop" : 1747679917040,
+        "duration" : 6594
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "I navigate recharge section",
         "time" : {
-          "start" : 1747679902181,
-          "stop" : 1747679902182,
-          "duration" : 1
+          "start" : 1747679910446,
+          "stop" : 1747679910448,
+          "duration" : 2
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
+        "hasContent" : false,
         "stepsCount" : 0,
         "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "hasContent" : false
+        "shouldDisplayMessage" : false
       }, {
         "name" : "I fill recharge form \"$300\", \"5512345678\"",
         "time" : {
-          "start" : 1747679902183,
-          "stop" : 1747679908552,
-          "duration" : 6369
+          "start" : 1747679910448,
+          "stop" : 1747679917039,
+          "duration" : 6591
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ ],
+        "hasContent" : false,
         "stepsCount" : 0,
         "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "hasContent" : false
+        "shouldDisplayMessage" : false
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
+      "hasContent" : true,
       "stepsCount" : 2,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "shouldDisplayMessage" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : true,
     "stepsCount" : 7,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : true
+    "shouldDisplayMessage" : false
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
-    "time" : {
-      "start" : 1747679908553,
-      "stop" : 1747679908567,
-      "duration" : 14
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747679930886,
-      "stop" : 1747679930886,
+      "start" : 1747679938740,
+      "stop" : 1747679938740,
       "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
+    "hasContent" : false,
     "stepsCount" : 0,
     "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747679917040,
+      "stop" : 1747679917057,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
   } ],
   "labels" : [ {
     "name" : "language",
@@ -196,10 +196,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1927-793"
+    "value" : "fv-az1314-298"
   }, {
     "name" : "thread",
-    "value" : "pid-2577-worker-main"
+    "value" : "pid-2539-worker-main"
   }, {
     "name" : "package",
     "value" : "features.telcel.feature"
@@ -220,6 +220,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "753c3ba0102f0946.json",
+  "source" : "bc3922fbcb54a2f.json",
   "parameterValues" : [ ]
 }

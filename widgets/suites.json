@@ -5,9 +5,9 @@
     "name" : "Validación de resultados relacionados en YouTube",
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 2,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 3
     }
@@ -29,9 +29,9 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 7,
       "unknown" : 0,
-      "total" : 8
+      "total" : 7
     }
   }, {
     "uid" : "a33775243f021d8b3a19aacdf2004620",
