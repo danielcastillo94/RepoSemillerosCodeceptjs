@@ -1,12 +1,12 @@
 {
-  "uid" : "7862b2bbaff9d311",
+  "uid" : "e2eba9d79213dd0d",
   "name" : "Validar título y videos relacionados correctamente",
   "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título y videos relacionados correctamente",
   "historyId" : "fb2656ce6fc5bb2deb29542859e5842e:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747675808201,
-    "stop" : 1747675829015,
-    "duration" : 20814
+    "start" : 1747676213812,
+    "stop" : 1747676234405,
+    "duration" : 20593
   },
   "status" : "broken",
   "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -16,9 +16,24 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747675808200,
-      "stop" : 1747675808200,
+      "start" : 1747676213811,
+      "stop" : 1747676213811,
       "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747676213812,
+      "stop" : 1747676213844,
+      "duration" : 32
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,17 +46,17 @@
   }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747675808236,
-      "stop" : 1747675813913,
-      "duration" : 5677
+      "start" : 1747676213844,
+      "stop" : 1747676219304,
+      "duration" : 5460
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747675808237,
-        "stop" : 1747675808237,
-        "duration" : 0
+        "start" : 1747676213845,
+        "stop" : 1747676213846,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -54,9 +69,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747675808237,
-        "stop" : 1747675810913,
-        "duration" : 2676
+        "start" : 1747676213846,
+        "stop" : 1747676216304,
+        "duration" : 2458
       },
       "status" : "passed",
       "steps" : [ ],
@@ -69,9 +84,9 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747675810913,
-        "stop" : 1747675813913,
-        "duration" : 3000
+        "start" : 1747676216305,
+        "stop" : 1747676219304,
+        "duration" : 2999
       },
       "status" : "passed",
       "steps" : [ ],
@@ -88,21 +103,6 @@
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
-  }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747675808201,
-      "stop" : 1747675808235,
-      "duration" : 34
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "broken",
@@ -111,8 +111,8 @@
     "steps" : [ {
       "name" : "When busco el video \"Falling In Reverse\"",
       "time" : {
-        "start" : 1747675813915,
-        "stop" : 1747675813916,
+        "start" : 1747676219307,
+        "stop" : 1747676219308,
         "duration" : 1
       },
       "status" : "broken",
@@ -128,9 +128,9 @@
     }, {
       "name" : "And entro al primer video de los resultados",
       "time" : {
-        "start" : 1747675813918,
-        "stop" : 1747675813918,
-        "duration" : 0
+        "start" : 1747676219309,
+        "stop" : 1747676219310,
+        "duration" : 1
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -145,9 +145,9 @@
     }, {
       "name" : "Then debería ver el título \"Falling In Reverse - \\\"Watch The World Burn\\\"\"",
       "time" : {
-        "start" : 1747675813920,
-        "stop" : 1747675823921,
-        "duration" : 10001
+        "start" : 1747676219313,
+        "stop" : 1747676229315,
+        "duration" : 10002
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -155,8 +155,8 @@
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
         "time" : {
-          "start" : 1747675813920,
-          "stop" : 1747675823921,
+          "start" : 1747676219314,
+          "stop" : 1747676229315,
           "duration" : 10001
         },
         "status" : "broken",
@@ -179,16 +179,16 @@
     }, {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747675829014,
-        "stop" : 1747675829014,
+        "start" : 1747676234404,
+        "stop" : 1747676234404,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "3850f0cd4934ab36",
+        "uid" : "2dea96170702801d",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "3850f0cd4934ab36.png",
+        "source" : "2dea96170702801d.png",
         "type" : "image/png",
         "size" : 183868
       } ],
@@ -206,11 +206,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747675829015,
-      "stop" : 1747675829028,
-      "duration" : 13
+      "start" : 1747676275399,
+      "stop" : 1747676275399,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -221,11 +221,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747675870400,
-      "stop" : 1747675870400,
-      "duration" : 0
+      "start" : 1747676234405,
+      "stop" : 1747676234418,
+      "duration" : 13
     },
     "status" : "passed",
     "steps" : [ ],
@@ -244,10 +244,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1392-797"
+    "value" : "fv-az1279-464"
   }, {
     "name" : "thread",
-    "value" : "pid-2582-worker-main"
+    "value" : "pid-2542-worker-main"
   }, {
     "name" : "package",
     "value" : "features.videoYoutube.feature"
@@ -272,6 +272,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "7862b2bbaff9d311.json",
+  "source" : "e2eba9d79213dd0d.json",
   "parameterValues" : [ ]
 }

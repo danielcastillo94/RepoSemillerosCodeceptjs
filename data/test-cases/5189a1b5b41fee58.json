@@ -1,12 +1,12 @@
 {
-  "uid" : "ffb76df88403470c",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
-  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
-  "historyId" : "54aab66238b248e9e834ecd5064e4d90:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "5189a1b5b41fee58",
+  "name" : "Validación de duración de video en campo oculto",
+  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validación de duración de video en campo oculto",
+  "historyId" : "e36777fcba9d3e5026a01482513aea1b:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747675765334,
-    "stop" : 1747675776003,
-    "duration" : 10669
+    "start" : 1747676160487,
+    "stop" : 1747676171372,
+    "duration" : 10885
   },
   "status" : "broken",
   "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -14,18 +14,48 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747676128321,
+      "stop" : 1747676128593,
+      "duration" : 272
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747676160487,
+      "stop" : 1747676160515,
+      "duration" : 28
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747675765365,
-      "stop" : 1747675770828,
-      "duration" : 5463
+      "start" : 1747676160515,
+      "stop" : 1747676166193,
+      "duration" : 5678
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747675765367,
-        "stop" : 1747675765367,
+        "start" : 1747676160517,
+        "stop" : 1747676160517,
         "duration" : 0
       },
       "status" : "passed",
@@ -39,9 +69,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747675765367,
-        "stop" : 1747675767827,
-        "duration" : 2460
+        "start" : 1747676160517,
+        "stop" : 1747676163192,
+        "duration" : 2675
       },
       "status" : "passed",
       "steps" : [ ],
@@ -54,9 +84,9 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747675767827,
-        "stop" : 1747675770828,
-        "duration" : 3001
+        "start" : 1747676163193,
+        "stop" : 1747676166193,
+        "duration" : 3000
       },
       "status" : "passed",
       "steps" : [ ],
@@ -73,47 +103,17 @@
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
-  }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
-    "time" : {
-      "start" : 1747675765334,
-      "stop" : 1747675765365,
-      "duration" : 31
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
-  }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
-    "time" : {
-      "start" : 1747675722523,
-      "stop" : 1747675722764,
-      "duration" : 241
-    },
-    "status" : "passed",
-    "steps" : [ ],
-    "attachments" : [ ],
-    "parameters" : [ ],
-    "stepsCount" : 0,
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
-    "hasContent" : false
   } ],
   "testStage" : {
     "status" : "broken",
     "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
     "statusTrace" : "Error: element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n\n    at Playwright.waitForElement (node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
     "steps" : [ {
-      "name" : "Given realizo una búsqueda con el texto \"lorem ipsum\"",
+      "name" : "Given realizo una búsqueda con el texto \"lofi-music\"",
       "time" : {
-        "start" : 1747675770830,
-        "stop" : 1747675770831,
-        "duration" : 1
+        "start" : 1747676166196,
+        "stop" : 1747676166198,
+        "duration" : 2
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
@@ -126,54 +126,54 @@
       "shouldDisplayMessage" : true,
       "hasContent" : true
     }, {
-      "name" : "Then debería ver: \"Logo de YouTube\"",
+      "name" : "Then verifico que el primer resultado contiene un campo con la duración",
       "time" : {
-        "start" : 1747675770833,
-        "stop" : 1747675770833,
-        "duration" : 0
+        "start" : 1747676166201,
+        "stop" : 1747676171202,
+        "duration" : 5001
       },
       "status" : "broken",
       "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
       "statusTrace" : "Error: element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
-      "steps" : [ ],
+      "steps" : [ {
+        "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
+        "time" : {
+          "start" : 1747676166201,
+          "stop" : 1747676171202,
+          "duration" : 5001
+        },
+        "status" : "broken",
+        "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
+        "statusTrace" : "Error: element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "hasContent" : true
+      } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 0,
+      "stepsCount" : 1,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true,
-      "hasContent" : true
-    }, {
-      "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
-      "time" : {
-        "start" : 1747675770833,
-        "stop" : 1747675775833,
-        "duration" : 5000
-      },
-      "status" : "broken",
-      "statusMessage" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
-      "statusTrace" : "Error: element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n\n    at Playwright.waitForElement (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Playwright.js:2574:13)",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true,
+      "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
       "name" : "Main session - Last Seen Screenshot",
       "time" : {
-        "start" : 1747675776002,
-        "stop" : 1747675776002,
+        "start" : 1747676171371,
+        "stop" : 1747676171371,
         "duration" : 0
       },
       "status" : "unknown",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "989930d0a9579859",
+        "uid" : "b0cfe70a5ac9dde6",
         "name" : "Main session - Last Seen Screenshot",
-        "source" : "989930d0a9579859.png",
+        "source" : "b0cfe70a5ac9dde6.png",
         "type" : "image/png",
-        "size" : 332539
+        "size" : 373557
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -189,11 +189,11 @@
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747675776003,
-      "stop" : 1747675776017,
-      "duration" : 14
+      "start" : 1747676213807,
+      "stop" : 1747676213807,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -204,11 +204,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747675808196,
-      "stop" : 1747675808197,
-      "duration" : 1
+      "start" : 1747676171372,
+      "stop" : 1747676171386,
+      "duration" : 14
     },
     "status" : "passed",
     "steps" : [ ],
@@ -227,10 +227,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1392-797"
+    "value" : "fv-az1279-464"
   }, {
     "name" : "thread",
-    "value" : "pid-2582-worker-main"
+    "value" : "pid-2542-worker-main"
   }, {
     "name" : "package",
     "value" : "features.youtubeGeneral.feature"
@@ -255,6 +255,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "ffb76df88403470c.json",
+  "source" : "5189a1b5b41fee58.json",
   "parameterValues" : [ ]
 }
