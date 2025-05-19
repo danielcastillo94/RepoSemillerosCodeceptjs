@@ -13,6 +13,9 @@ exports.config = {
     MiHelper: {
       require: './helpers/MiHelper.js'
     },
+    DailyHelpers: {
+    require: './helpers/dailyHelper.js'
+    },
     DailyHelper: {
     require: './helpers/HelperEmilio.js'
     },
@@ -20,8 +23,14 @@ exports.config = {
     require: './helpers/MiHelperYoutube.js'
     },
   },
+  
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js', 
+    dailyPage: './pages/dailyPage.js',
+    validacionesYoutubeSteps: './steps/videoYoutubeSteps.js',
+    youtubeMainPage: './pages/youtubeMainPage.js',
+    youtubeVideoPage: './pages/youtubeVideoMainPage.js', 
+    youtubeLoginPage: './pages/youtubeLoginPage.js',
   },
   gherkin: {
   features: './features/*.feature',

@@ -1,6 +1,10 @@
-#Emilio
+#Emilio 
+Feature: Validaciones funcionales dailyMotion
 
-Feature: Validaciones funcionales en dailyMotion
+@Carga
+Scenario: Validar carga de pagina de DailyMotion
+        Given Estoy en la pagina de Daily
+        Then verifico que se cargue el contenido
 
 @enlaces
 Scenario: Validar el atributo href

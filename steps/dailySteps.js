@@ -1,32 +1,34 @@
 const { I } = inject();
-//const dailyPage = require("../pages/dailyPage.js");
 
-// Given("Estoy en la pagina de Daily Motion", () => {
-//     dailyPage.home();
+Given('Estoy en la pagina de Daily', async () => {
+  await I.PaginaPrincipal();
+});
+
+Then('verifico que se cargue el contenido', async () => {
+  await I.verificoContenidoCompleto();
+});
+
+// When('espero a que el contenido cargue', async () => {
+//   await I.waitPageLoaded(); 
+// });
+
+// Then('verifico que se cargue el contenido', async () => {
+//   await I.seeMinElements('//div[@class="HomeVideoFeed__homeFeedItem___1CUT1"]', 3);
+//   await I.seeElement('//div[@class="ResponsiveSubheader__subheader___1z-cj"]');
+// });
+
+// When('espero a que el contenido cargue', async () => {
+//   await dailyPage.waitForCompleteLoad(); 
+// });
+
+// Then('verifico que se cargue el contenido', async () => {
+//   await dailyPage.verifyContentLoaded();
 // });
 
 // When("Presiono el boton de Explorar", () => {
 //     dailyPage.clickBoton();
 // });
 
-// Then("Valido si el href contiene explore", async() => {
+// Then("Valido si el href contiene explore", async () => {
 //     await dailyPage.verificarHref();
 // });
-
-// const { I } = inject();
-// const dailyPage = require("../helpers/HelperEmilio.js");
-
-// Given("Estoy en la pagina de Daily Motion", async () => {
-//     await I.irADailyMotion();
-// });
-
-// When("Presiono el boton de Explorar", async () => {
-//     await I.clickExplorar();
-// });
-
-// Then("Valido si el href contiene explore", async () => {
-//     const href = await I.obtenerAtributo('//main//a[contains(.,"Explorar")]', 'href');
-//     console.log('HREF:', href);
-//     if (!href.includes('/mx')) throw new Error(`El href no contiene "/mx": ${href}`);
-// });
-
