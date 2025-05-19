@@ -1,5 +1,177 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "element (//input[@name=\"search_query\"]) still not present on page after 5 sec\nlocator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
+      "children" : [ {
+        "name" : "Validar fecha de publicación reciente",
+        "uid" : "79de1ab6b38277aa",
+        "parentUid" : "ee01a6a945453292500fec63086fab6d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674723393,
+          "stop" : 1747674734049,
+          "duration" : 10656
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de una búsqueda en YouTube",
+        "uid" : "891492d328298a7e",
+        "parentUid" : "ee01a6a945453292500fec63086fab6d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674734066,
+          "stop" : 1747674744418,
+          "duration" : 10352
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Navegar al canal",
+        "uid" : "8c68fec44ef9ec71",
+        "parentUid" : "ee01a6a945453292500fec63086fab6d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674744431,
+          "stop" : 1747674755351,
+          "duration" : 10920
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de duración de video en campo oculto",
+        "uid" : "2b1e76eb5edfa27a",
+        "parentUid" : "ee01a6a945453292500fec63086fab6d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674755366,
+          "stop" : 1747674766115,
+          "duration" : 10749
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+        "uid" : "ecad3a218e54b175",
+        "parentUid" : "ee01a6a945453292500fec63086fab6d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674766131,
+          "stop" : 1747674776828,
+          "duration" : 10697
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
+        "uid" : "b50da42365cb663f",
+        "parentUid" : "ee01a6a945453292500fec63086fab6d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674776845,
+          "stop" : 1747674787394,
+          "duration" : 10549
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
+        "uid" : "f72192e11a90601d",
+        "parentUid" : "ee01a6a945453292500fec63086fab6d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674787408,
+          "stop" : 1747674798143,
+          "duration" : 10735
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
+        "uid" : "bf59d687a82f19e",
+        "parentUid" : "ee01a6a945453292500fec63086fab6d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674798158,
+          "stop" : 1747674808584,
+          "duration" : 10426
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ee01a6a945453292500fec63086fab6d"
+    }, {
+      "name" : "element (//input[@name=\"search_query\"]) still not present on page after 10 sec\nlocator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('//input[@name=\"search_query\"]').first()\n",
+      "children" : [ {
+        "name" : "Validar título y videos relacionados correctamente",
+        "uid" : "680f015e0ff98336",
+        "parentUid" : "d64ed48f024ac9102b425429310a3e0e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674808606,
+          "stop" : 1747674829305,
+          "duration" : 20699
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar título distinto de otro video",
+        "uid" : "9a9fc16fc33085d9",
+        "parentUid" : "d64ed48f024ac9102b425429310a3e0e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674829319,
+          "stop" : 1747674849892,
+          "duration" : 20573
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Título incorrecto provoca error",
+        "uid" : "c74bbe3880a5a4df",
+        "parentUid" : "d64ed48f024ac9102b425429310a3e0e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674849904,
+          "stop" : 1747674870411,
+          "duration" : 20507
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d64ed48f024ac9102b425429310a3e0e"
+    }, {
+      "name" : "No steps matching \"debería ver:\"",
+      "children" : [ {
+        "name" : "Verificar carga de elementos clave",
+        "uid" : "532c5733ee5bdebc",
+        "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747674920890,
+          "stop" : 1747674926759,
+          "duration" : 5869
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "259089c0497a8892213b9e9fa2f3b58b"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }
