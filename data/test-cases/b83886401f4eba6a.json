@@ -1,22 +1,22 @@
 {
-  "uid" : "92bb9baecc8f3a69",
-  "name" : "Validar título y videos relacionados correctamente",
-  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título y videos relacionados correctamente",
-  "historyId" : "fb2656ce6fc5bb2deb29542859e5842e:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "b83886401f4eba6a",
+  "name" : "Validar título distinto de otro video",
+  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título distinto de otro video",
+  "historyId" : "e996e3e213ec2bb7040a7be8ce15cf31:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747680337758,
-    "stop" : 1747680349486,
-    "duration" : 11728
+    "start" : 1747680356613,
+    "stop" : 1747680368995,
+    "duration" : 12382
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747680337757,
-      "stop" : 1747680337757,
-      "duration" : 0
+      "start" : 1747680356613,
+      "stop" : 1747680356646,
+      "duration" : 33
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747680337758,
-      "stop" : 1747680337791,
-      "duration" : 33
+      "start" : 1747680344677,
+      "stop" : 1747680344678,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -44,17 +44,17 @@
   }, {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747680337791,
-      "stop" : 1747680342089,
-      "duration" : 4298
+      "start" : 1747680356646,
+      "stop" : 1747680361131,
+      "duration" : 4485
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747680337793,
-        "stop" : 1747680337794,
-        "duration" : 1
+        "start" : 1747680356648,
+        "stop" : 1747680356648,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -67,9 +67,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747680337794,
-        "stop" : 1747680339089,
-        "duration" : 1295
+        "start" : 1747680356648,
+        "stop" : 1747680358129,
+        "duration" : 1481
       },
       "status" : "passed",
       "steps" : [ ],
@@ -82,8 +82,8 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747680339089,
-        "stop" : 1747680342089,
+        "start" : 1747680358130,
+        "stop" : 1747680361130,
         "duration" : 3000
       },
       "status" : "passed",
@@ -105,10 +105,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "When busco el video \"Falling In Reverse\"",
+      "name" : "When busco el video \"Metallica Nothing Else Matters\"",
       "time" : {
-        "start" : 1747680342092,
-        "stop" : 1747680342092,
+        "start" : 1747680361133,
+        "stop" : 1747680361133,
         "duration" : 0
       },
       "status" : "passed",
@@ -122,8 +122,8 @@
     }, {
       "name" : "And entro al primer video de los resultados",
       "time" : {
-        "start" : 1747680342094,
-        "stop" : 1747680342094,
+        "start" : 1747680361135,
+        "stop" : 1747680361135,
         "duration" : 0
       },
       "status" : "passed",
@@ -135,19 +135,19 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then debería ver el título \"Falling In Reverse - \\\"Watch The World Burn\\\"\"",
+      "name" : "Then debería ver el título \"Metallica: Nothing Else Matters (Official Music Video)\"",
       "time" : {
-        "start" : 1747680342097,
-        "stop" : 1747680349485,
-        "duration" : 7388
+        "start" : 1747680361137,
+        "stop" : 1747680368995,
+        "duration" : 7858
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
         "time" : {
-          "start" : 1747680342098,
-          "stop" : 1747680342109,
-          "duration" : 11
+          "start" : 1747680361137,
+          "stop" : 1747680361146,
+          "duration" : 9
         },
         "status" : "passed",
         "steps" : [ ],
@@ -158,11 +158,11 @@
         "shouldDisplayMessage" : false,
         "hasContent" : false
       }, {
-        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Falling In Reverse\"",
+        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Metallica Nothing Else Matters\"",
         "time" : {
-          "start" : 1747680342110,
-          "stop" : 1747680342554,
-          "duration" : 444
+          "start" : 1747680361146,
+          "stop" : 1747680361781,
+          "duration" : 635
         },
         "status" : "passed",
         "steps" : [ ],
@@ -175,9 +175,9 @@
       }, {
         "name" : "I press key \"Enter\"",
         "time" : {
-          "start" : 1747680342554,
-          "stop" : 1747680342684,
-          "duration" : 130
+          "start" : 1747680361781,
+          "stop" : 1747680361918,
+          "duration" : 137
         },
         "status" : "passed",
         "steps" : [ ],
@@ -190,9 +190,9 @@
       }, {
         "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
         "time" : {
-          "start" : 1747680342684,
-          "stop" : 1747680343565,
-          "duration" : 881
+          "start" : 1747680361918,
+          "stop" : 1747680363246,
+          "duration" : 1328
         },
         "status" : "passed",
         "steps" : [ ],
@@ -205,9 +205,9 @@
       }, {
         "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
         "time" : {
-          "start" : 1747680343565,
-          "stop" : 1747680343666,
-          "duration" : 101
+          "start" : 1747680363246,
+          "stop" : 1747680363356,
+          "duration" : 110
         },
         "status" : "passed",
         "steps" : [ ],
@@ -220,9 +220,9 @@
       }, {
         "name" : "I click \"//ytd-video-renderer//a[@id=\"thumbnail\"]\"",
         "time" : {
-          "start" : 1747680343666,
-          "stop" : 1747680344485,
-          "duration" : 819
+          "start" : 1747680363356,
+          "stop" : 1747680363995,
+          "duration" : 639
         },
         "status" : "passed",
         "steps" : [ ],
@@ -235,9 +235,9 @@
       }, {
         "name" : "I wait 5",
         "time" : {
-          "start" : 1747680344485,
-          "stop" : 1747680345582,
-          "duration" : 1097
+          "start" : 1747680363995,
+          "stop" : 1747680365341,
+          "duration" : 1346
         },
         "status" : "passed",
         "steps" : [ ],
@@ -250,9 +250,9 @@
       }, {
         "name" : "And deberían mostrarse al menos 5 videos recomendados en la barra lateral",
         "time" : {
-          "start" : 1747680345585,
-          "stop" : 1747680349485,
-          "duration" : 3900
+          "start" : 1747680365342,
+          "stop" : 1747680368995,
+          "duration" : 3653
         },
         "status" : "passed",
         "steps" : [ ],
@@ -280,8 +280,8 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747680373754,
-      "stop" : 1747680373754,
+      "start" : 1747680381068,
+      "stop" : 1747680381068,
       "duration" : 0
     },
     "status" : "passed",
@@ -295,9 +295,9 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747680349486,
-      "stop" : 1747680349492,
-      "duration" : 6
+      "start" : 1747680368996,
+      "stop" : 1747680369003,
+      "duration" : 7
     },
     "status" : "passed",
     "steps" : [ ],
@@ -316,10 +316,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1361-149"
+    "value" : "fv-az1376-653"
   }, {
     "name" : "thread",
-    "value" : "pid-2526-worker-main"
+    "value" : "pid-2582-worker-main"
   }, {
     "name" : "package",
     "value" : "features.videoYoutube.feature"
@@ -340,6 +340,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "92bb9baecc8f3a69.json",
+  "source" : "b83886401f4eba6a.json",
   "parameterValues" : [ ]
 }

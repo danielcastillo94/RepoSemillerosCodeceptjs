@@ -1,273 +1,286 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
-    "name" : "fv-az1361-149",
+    "name" : "fv-az1376-653",
     "children" : [ {
-      "name" : "pid-2526-worker-main",
+      "name" : "pid-2582-worker-main",
       "children" : [ {
-        "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-        "uid" : "c0ea40cc3c31fba5",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "name" : "Validar sección Contáctanos",
+        "uid" : "8019dd9756d59ff2",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "passed",
         "time" : {
-          "start" : 1747680430407,
-          "stop" : 1747680436777,
-          "duration" : 6370
+          "start" : 1747680409881,
+          "stop" : 1747680432342,
+          "duration" : 22461
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Validar fecha de publicación reciente",
-        "uid" : "9db8744ee362c583",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "name" : "Validación de duración de video en campo oculto",
+        "uid" : "f95dd37c4d9ebd4",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "passed",
         "time" : {
-          "start" : 1747680271648,
-          "stop" : 1747680280872,
-          "duration" : 9224
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Mobile recharge of '$300'",
-        "uid" : "4a856820886a4710",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680394991,
-          "stop" : 1747680404022,
-          "duration" : 9031
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Navegar al canal",
-        "uid" : "10f194788704661e",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680288017,
-          "stop" : 1747680303310,
-          "duration" : 15293
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Título incorrecto provoca error",
-        "uid" : "e71158cf4d10e5bc",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "broken",
-        "time" : {
-          "start" : 1747680361829,
-          "stop" : 1747680373747,
-          "duration" : 11918
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validar el boton del login",
-        "uid" : "1916ed4684107fa3",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680436788,
-          "stop" : 1747680445813,
-          "duration" : 9025
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
-        "uid" : "44e1fa3692c8521a",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680330847,
-          "stop" : 1747680337746,
-          "duration" : 6899
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Mobile recharge of '$100'",
-        "uid" : "94da13d28d208187",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680377351,
-          "stop" : 1747680386203,
-          "duration" : 8852
+          "start" : 1747680309743,
+          "stop" : 1747680316684,
+          "duration" : 6941
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validación de una búsqueda en YouTube",
-        "uid" : "4354d7c787a2b535",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "uid" : "f6516b2858b8098b",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "passed",
         "time" : {
-          "start" : 1747680280885,
-          "stop" : 1747680288009,
-          "duration" : 7124
+          "start" : 1747680286644,
+          "stop" : 1747680294278,
+          "duration" : 7634
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
-        "uid" : "d663bcfc70a06c80",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "name" : "Mobile recharge of '$300'",
+        "uid" : "1e47198f638a2d40",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "passed",
         "time" : {
-          "start" : 1747680317117,
-          "stop" : 1747680323881,
-          "duration" : 6764
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validar carga de pagina de DailyMotion @Carga",
-        "uid" : "8cb520ddf8de277c",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680445823,
-          "stop" : 1747680447026,
-          "duration" : 1203
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
-        "uid" : "c269833870f4a0cf",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680310292,
-          "stop" : 1747680317110,
-          "duration" : 6818
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validar título y videos relacionados correctamente",
-        "uid" : "92bb9baecc8f3a69",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680337758,
-          "stop" : 1747680349486,
-          "duration" : 11728
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Buscar plan Telcel Plus",
-        "uid" : "af7f1f22c63179e6",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680373756,
-          "stop" : 1747680377336,
-          "duration" : 3580
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validar el atributo href @enlaces",
-        "uid" : "50286f974e789a44",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
-        "status" : "passed",
-        "time" : {
-          "start" : 1747680447031,
-          "stop" : 1747680447665,
-          "duration" : 634
+          "start" : 1747680401133,
+          "stop" : 1747680409864,
+          "duration" : 8731
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Mobile recharge of '$200'",
-        "uid" : "d8db8243a6b68a13",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "uid" : "bbb58a1a8b32cfc3",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "passed",
         "time" : {
-          "start" : 1747680386223,
-          "stop" : 1747680394972,
-          "duration" : 8749
+          "start" : 1747680393560,
+          "stop" : 1747680401114,
+          "duration" : 7554
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
-        "uid" : "5998e85a9e77ad3c",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+        "uid" : "636680914b29ef09",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "passed",
         "time" : {
-          "start" : 1747680323888,
-          "stop" : 1747680330840,
-          "duration" : 6952
+          "start" : 1747680316691,
+          "stop" : 1747680323685,
+          "duration" : 6994
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar el boton del login",
+        "uid" : "64ebc28a8142b2fb",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680443442,
+          "stop" : 1747680452505,
+          "duration" : 9063
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Verificar carga de elementos clave",
-        "uid" : "c9d2f2e063b7ef6f",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "uid" : "8bbad99e63a7133f",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "broken",
         "time" : {
-          "start" : 1747680425973,
-          "stop" : 1747680430398,
-          "duration" : 4425
+          "start" : 1747680432359,
+          "stop" : 1747680436978,
+          "duration" : 4619
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "Validar título distinto de otro video",
-        "uid" : "ebde7e675211d201",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "uid" : "b83886401f4eba6a",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "passed",
         "time" : {
-          "start" : 1747680349493,
-          "stop" : 1747680361821,
-          "duration" : 12328
+          "start" : 1747680356613,
+          "stop" : 1747680368995,
+          "duration" : 12382
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "Validar sección Contáctanos",
-        "uid" : "480fd15a0b660a06",
-        "parentUid" : "8f7d8c9c0ed6c49805583f552ceac954",
+        "name" : "Validar el atributo href @enlaces",
+        "uid" : "ca26ac2ffd9f8902",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
         "status" : "passed",
         "time" : {
-          "start" : 1747680404042,
-          "stop" : 1747680425961,
-          "duration" : 21919
+          "start" : 1747680453318,
+          "stop" : 1747680453904,
+          "duration" : 586
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Navegar al canal",
+        "uid" : "3ce183306b41ad25",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680294286,
+          "stop" : 1747680309709,
+          "duration" : 15423
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Título incorrecto provoca error",
+        "uid" : "163caa4ce34feb63",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747680369004,
+          "stop" : 1747680381061,
+          "duration" : 12057
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
+        "uid" : "2c20a1ecf4b56a9a",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680323693,
+          "stop" : 1747680330725,
+          "duration" : 7032
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar carga de pagina de DailyMotion @Carga",
+        "uid" : "218e370e2a31d7fa",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680452513,
+          "stop" : 1747680453314,
+          "duration" : 801
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
+        "uid" : "bd6da40a81377927",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680337738,
+          "stop" : 1747680344667,
+          "duration" : 6929
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Mobile recharge of '$100'",
+        "uid" : "4402f0bfd5816337",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680385109,
+          "stop" : 1747680393545,
+          "duration" : 8436
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Buscar plan Telcel Plus",
+        "uid" : "1fac3ec17ce8e3da",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680381070,
+          "stop" : 1747680385094,
+          "duration" : 4024
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar fecha de publicación reciente",
+        "uid" : "e18aaef8b0436941",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680276808,
+          "stop" : 1747680286632,
+          "duration" : 9824
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar título y videos relacionados correctamente",
+        "uid" : "ca2bcd0290db90c",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680344678,
+          "stop" : 1747680356606,
+          "duration" : 11928
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+        "uid" : "e1fbedd0894a3330",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680436987,
+          "stop" : 1747680443433,
+          "duration" : 6446
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
+        "uid" : "75aaf1abe4e9e010",
+        "parentUid" : "a93524e65feb507820c3eb8362c24d70",
+        "status" : "passed",
+        "time" : {
+          "start" : 1747680330732,
+          "stop" : 1747680337732,
+          "duration" : 7000
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8f7d8c9c0ed6c49805583f552ceac954"
+      "uid" : "a93524e65feb507820c3eb8362c24d70"
     } ],
-    "uid" : "03f5a8c2d4bae4c75ed01ef88ff4a896"
+    "uid" : "98ca25f2e78da9b77f99928b1ad0d535"
   } ],
   "name" : "timeline"
 }
