@@ -1,32 +1,30 @@
 {
-  "uid" : "163caa4ce34feb63",
-  "name" : "Título incorrecto provoca error",
-  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Título incorrecto provoca error",
-  "historyId" : "5d4bf5b2424acc9adc73c006774ed167:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "ec87a18a2cc8e8d2",
+  "name" : "Validar título distinto de otro video",
+  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título distinto de otro video",
+  "historyId" : "e996e3e213ec2bb7040a7be8ce15cf31:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747680369004,
-    "stop" : 1747680381061,
-    "duration" : 12057
+    "start" : 1747680572955,
+    "stop" : 1747680585056,
+    "duration" : 12101
   },
-  "status" : "broken",
-  "statusMessage" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
-  "statusTrace" : "Error: No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
+  "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747680369032,
-      "stop" : 1747680373504,
-      "duration" : 4472
+      "start" : 1747680572984,
+      "stop" : 1747680577360,
+      "duration" : 4376
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747680369034,
-        "stop" : 1747680369034,
-        "duration" : 0
+        "start" : 1747680572985,
+        "stop" : 1747680572986,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -39,9 +37,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747680369034,
-        "stop" : 1747680370504,
-        "duration" : 1470
+        "start" : 1747680572986,
+        "stop" : 1747680574359,
+        "duration" : 1373
       },
       "status" : "passed",
       "steps" : [ ],
@@ -54,9 +52,9 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747680370504,
-        "stop" : 1747680373504,
-        "duration" : 3000
+        "start" : 1747680574359,
+        "stop" : 1747680577360,
+        "duration" : 3001
       },
       "status" : "passed",
       "steps" : [ ],
@@ -74,11 +72,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : true
   }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747680369004,
-      "stop" : 1747680369032,
-      "duration" : 28
+      "start" : 1747680561180,
+      "stop" : 1747680561181,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -89,11 +87,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747680344677,
-      "stop" : 1747680344678,
-      "duration" : 1
+      "start" : 1747680572955,
+      "stop" : 1747680572984,
+      "duration" : 29
     },
     "status" : "passed",
     "steps" : [ ],
@@ -105,15 +103,13 @@
     "hasContent" : false
   } ],
   "testStage" : {
-    "status" : "broken",
-    "statusMessage" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
-    "statusTrace" : "Error: No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
+    "status" : "passed",
     "steps" : [ {
-      "name" : "When busco el video \"Neffex\"",
+      "name" : "When busco el video \"Metallica Nothing Else Matters\"",
       "time" : {
-        "start" : 1747680373506,
-        "stop" : 1747680373507,
-        "duration" : 1
+        "start" : 1747680577363,
+        "stop" : 1747680577363,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -126,8 +122,8 @@
     }, {
       "name" : "And entro al primer video de los resultados",
       "time" : {
-        "start" : 1747680373508,
-        "stop" : 1747680373508,
+        "start" : 1747680577365,
+        "stop" : 1747680577365,
         "duration" : 0
       },
       "status" : "passed",
@@ -139,20 +135,18 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then debería ver el título \"Este título no existe\"",
+      "name" : "Then debería ver el título \"Metallica: Nothing Else Matters (Official Music Video)\"",
       "time" : {
-        "start" : 1747680373510,
-        "stop" : 1747680380926,
-        "duration" : 7416
+        "start" : 1747680577366,
+        "stop" : 1747680585055,
+        "duration" : 7689
       },
-      "status" : "broken",
-      "statusMessage" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
-      "statusTrace" : "Error: No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
+      "status" : "passed",
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
         "time" : {
-          "start" : 1747680373510,
-          "stop" : 1747680373517,
+          "start" : 1747680577367,
+          "stop" : 1747680577374,
           "duration" : 7
         },
         "status" : "passed",
@@ -164,11 +158,11 @@
         "shouldDisplayMessage" : false,
         "hasContent" : false
       }, {
-        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Neffex\"",
+        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Metallica Nothing Else Matters\"",
         "time" : {
-          "start" : 1747680373517,
-          "stop" : 1747680373715,
-          "duration" : 198
+          "start" : 1747680577374,
+          "stop" : 1747680578035,
+          "duration" : 661
         },
         "status" : "passed",
         "steps" : [ ],
@@ -181,9 +175,9 @@
       }, {
         "name" : "I press key \"Enter\"",
         "time" : {
-          "start" : 1747680373715,
-          "stop" : 1747680373852,
-          "duration" : 137
+          "start" : 1747680578036,
+          "stop" : 1747680578169,
+          "duration" : 133
         },
         "status" : "passed",
         "steps" : [ ],
@@ -196,9 +190,9 @@
       }, {
         "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
         "time" : {
-          "start" : 1747680373852,
-          "stop" : 1747680374862,
-          "duration" : 1010
+          "start" : 1747680578169,
+          "stop" : 1747680579111,
+          "duration" : 942
         },
         "status" : "passed",
         "steps" : [ ],
@@ -211,9 +205,9 @@
       }, {
         "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
         "time" : {
-          "start" : 1747680374862,
-          "stop" : 1747680374975,
-          "duration" : 113
+          "start" : 1747680579111,
+          "stop" : 1747680579233,
+          "duration" : 122
         },
         "status" : "passed",
         "steps" : [ ],
@@ -226,9 +220,9 @@
       }, {
         "name" : "I click \"//ytd-video-renderer//a[@id=\"thumbnail\"]\"",
         "time" : {
-          "start" : 1747680374976,
-          "stop" : 1747680375923,
-          "duration" : 947
+          "start" : 1747680579233,
+          "stop" : 1747680580054,
+          "duration" : 821
         },
         "status" : "passed",
         "steps" : [ ],
@@ -241,9 +235,24 @@
       }, {
         "name" : "I wait 5",
         "time" : {
-          "start" : 1747680375923,
-          "stop" : 1747680380924,
-          "duration" : 5001
+          "start" : 1747680580054,
+          "stop" : 1747680581373,
+          "duration" : 1319
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "And deberían mostrarse al menos 5 videos recomendados en la barra lateral",
+        "time" : {
+          "start" : 1747680581375,
+          "stop" : 1747680585055,
+          "duration" : 3680
         },
         "status" : "passed",
         "steps" : [ ],
@@ -256,45 +265,24 @@
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 7,
+      "stepsCount" : 8,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true,
-      "hasContent" : true
-    }, {
-      "name" : "Main session - Last Seen Screenshot",
-      "time" : {
-        "start" : 1747680381059,
-        "stop" : 1747680381059,
-        "duration" : 0
-      },
-      "status" : "unknown",
-      "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "f6d781d26484779a",
-        "name" : "Main session - Last Seen Screenshot",
-        "source" : "f6d781d26484779a.png",
-        "type" : "image/png",
-        "size" : 267291
-      } ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 1,
       "shouldDisplayMessage" : false,
       "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 11,
-    "attachmentsCount" : 1,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747680381068,
-      "stop" : 1747680381068,
-      "duration" : 0
+      "start" : 1747680585056,
+      "stop" : 1747680585062,
+      "duration" : 6
     },
     "status" : "passed",
     "steps" : [ ],
@@ -305,11 +293,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747680381062,
-      "stop" : 1747680381068,
-      "duration" : 6
+      "start" : 1747680596927,
+      "stop" : 1747680596928,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -328,10 +316,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1376-653"
+    "value" : "fv-az1912-683"
   }, {
     "name" : "thread",
-    "value" : "pid-2582-worker-main"
+    "value" : "pid-2564-worker-main"
   }, {
     "name" : "package",
     "value" : "features.videoYoutube.feature"
@@ -349,13 +337,9 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ ],
-    "categories" : [ {
-      "name" : "Test defects",
-      "matchedStatuses" : [ ],
-      "flaky" : false
-    } ],
+    "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "163caa4ce34feb63.json",
+  "source" : "ec87a18a2cc8e8d2.json",
   "parameterValues" : [ ]
 }
