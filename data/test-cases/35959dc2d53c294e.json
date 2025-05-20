@@ -1,29 +1,31 @@
 {
-  "uid" : "ec87a18a2cc8e8d2",
-  "name" : "Validar título distinto de otro video",
-  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título distinto de otro video",
-  "historyId" : "e996e3e213ec2bb7040a7be8ce15cf31:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "35959dc2d53c294e",
+  "name" : "Validar título y videos relacionados correctamente",
+  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Validar título y videos relacionados correctamente",
+  "historyId" : "fb2656ce6fc5bb2deb29542859e5842e:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747680572955,
-    "stop" : 1747680585056,
-    "duration" : 12101
+    "start" : 1747763462720,
+    "stop" : 1747763474860,
+    "duration" : 12140
   },
-  "status" : "passed",
+  "status" : "broken",
+  "statusMessage" : "No se encontró el texto esperado: \"Falling In Reverse - \"Watch The World Burn\"\" tras 5 intentos",
+  "statusTrace" : "Error: No se encontró el texto esperado: \"Falling In Reverse - \"Watch The World Burn\"\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
     "name" : "\"before each\" hook: Before",
     "time" : {
-      "start" : 1747680572984,
-      "stop" : 1747680577360,
-      "duration" : 4376
+      "start" : 1747763462754,
+      "stop" : 1747763467203,
+      "duration" : 4449
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "Given abro la página de YouTube",
       "time" : {
-        "start" : 1747680572985,
-        "stop" : 1747680572986,
+        "start" : 1747763462756,
+        "stop" : 1747763462757,
         "duration" : 1
       },
       "status" : "passed",
@@ -37,9 +39,9 @@
     }, {
       "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1747680572986,
-        "stop" : 1747680574359,
-        "duration" : 1373
+        "start" : 1747763462757,
+        "stop" : 1747763464202,
+        "duration" : 1445
       },
       "status" : "passed",
       "steps" : [ ],
@@ -52,8 +54,8 @@
     }, {
       "name" : "I wait 3",
       "time" : {
-        "start" : 1747680574359,
-        "stop" : 1747680577360,
+        "start" : 1747763464202,
+        "stop" : 1747763467203,
         "duration" : 3001
       },
       "status" : "passed",
@@ -74,9 +76,9 @@
   }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747680561180,
-      "stop" : 1747680561181,
-      "duration" : 1
+      "start" : 1747763462719,
+      "stop" : 1747763462719,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -89,9 +91,9 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747680572955,
-      "stop" : 1747680572984,
-      "duration" : 29
+      "start" : 1747763462720,
+      "stop" : 1747763462754,
+      "duration" : 34
     },
     "status" : "passed",
     "steps" : [ ],
@@ -103,12 +105,14 @@
     "hasContent" : false
   } ],
   "testStage" : {
-    "status" : "passed",
+    "status" : "broken",
+    "statusMessage" : "No se encontró el texto esperado: \"Falling In Reverse - \"Watch The World Burn\"\" tras 5 intentos",
+    "statusTrace" : "Error: No se encontró el texto esperado: \"Falling In Reverse - \"Watch The World Burn\"\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
     "steps" : [ {
-      "name" : "When busco el video \"Metallica Nothing Else Matters\"",
+      "name" : "When busco el video \"Falling In Reverse\"",
       "time" : {
-        "start" : 1747680577363,
-        "stop" : 1747680577363,
+        "start" : 1747763467206,
+        "stop" : 1747763467206,
         "duration" : 0
       },
       "status" : "passed",
@@ -122,9 +126,9 @@
     }, {
       "name" : "And entro al primer video de los resultados",
       "time" : {
-        "start" : 1747680577365,
-        "stop" : 1747680577365,
-        "duration" : 0
+        "start" : 1747763467208,
+        "stop" : 1747763467209,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -135,18 +139,20 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then debería ver el título \"Metallica: Nothing Else Matters (Official Music Video)\"",
+      "name" : "Then debería ver el título \"Falling In Reverse - \\\"Watch The World Burn\\\"\"",
       "time" : {
-        "start" : 1747680577366,
-        "stop" : 1747680585055,
-        "duration" : 7689
+        "start" : 1747763467211,
+        "stop" : 1747763474757,
+        "duration" : 7546
       },
-      "status" : "passed",
+      "status" : "broken",
+      "statusMessage" : "No se encontró el texto esperado: \"Falling In Reverse - \"Watch The World Burn\"\" tras 5 intentos",
+      "statusTrace" : "Error: No se encontró el texto esperado: \"Falling In Reverse - \"Watch The World Burn\"\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
       "steps" : [ {
         "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
         "time" : {
-          "start" : 1747680577367,
-          "stop" : 1747680577374,
+          "start" : 1747763467212,
+          "stop" : 1747763467219,
           "duration" : 7
         },
         "status" : "passed",
@@ -158,11 +164,11 @@
         "shouldDisplayMessage" : false,
         "hasContent" : false
       }, {
-        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Metallica Nothing Else Matters\"",
+        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Falling In Reverse\"",
         "time" : {
-          "start" : 1747680577374,
-          "stop" : 1747680578035,
-          "duration" : 661
+          "start" : 1747763467219,
+          "stop" : 1747763467631,
+          "duration" : 412
         },
         "status" : "passed",
         "steps" : [ ],
@@ -175,9 +181,9 @@
       }, {
         "name" : "I press key \"Enter\"",
         "time" : {
-          "start" : 1747680578036,
-          "stop" : 1747680578169,
-          "duration" : 133
+          "start" : 1747763467631,
+          "stop" : 1747763467768,
+          "duration" : 137
         },
         "status" : "passed",
         "steps" : [ ],
@@ -190,9 +196,9 @@
       }, {
         "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
         "time" : {
-          "start" : 1747680578169,
-          "stop" : 1747680579111,
-          "duration" : 942
+          "start" : 1747763467768,
+          "stop" : 1747763468749,
+          "duration" : 981
         },
         "status" : "passed",
         "steps" : [ ],
@@ -205,9 +211,9 @@
       }, {
         "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
         "time" : {
-          "start" : 1747680579111,
-          "stop" : 1747680579233,
-          "duration" : 122
+          "start" : 1747763468750,
+          "stop" : 1747763468963,
+          "duration" : 213
         },
         "status" : "passed",
         "steps" : [ ],
@@ -220,9 +226,9 @@
       }, {
         "name" : "I click \"//ytd-video-renderer//a[@id=\"thumbnail\"]\"",
         "time" : {
-          "start" : 1747680579233,
-          "stop" : 1747680580054,
-          "duration" : 821
+          "start" : 1747763468963,
+          "stop" : 1747763469754,
+          "duration" : 791
         },
         "status" : "passed",
         "steps" : [ ],
@@ -235,24 +241,9 @@
       }, {
         "name" : "I wait 5",
         "time" : {
-          "start" : 1747680580054,
-          "stop" : 1747680581373,
-          "duration" : 1319
-        },
-        "status" : "passed",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "stepsCount" : 0,
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : false,
-        "hasContent" : false
-      }, {
-        "name" : "And deberían mostrarse al menos 5 videos recomendados en la barra lateral",
-        "time" : {
-          "start" : 1747680581375,
-          "stop" : 1747680585055,
-          "duration" : 3680
+          "start" : 1747763469754,
+          "stop" : 1747763474755,
+          "duration" : 5001
         },
         "status" : "passed",
         "steps" : [ ],
@@ -265,24 +256,45 @@
       } ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 8,
+      "stepsCount" : 7,
       "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1747763474858,
+        "stop" : 1747763474858,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "45765c3b59fa9696",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "45765c3b59fa9696.png",
+        "type" : "image/png",
+        "size" : 276859
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
       "shouldDisplayMessage" : false,
       "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 11,
-    "attachmentsCount" : 0,
+    "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747680585056,
-      "stop" : 1747680585062,
-      "duration" : 6
+      "start" : 1747763505789,
+      "stop" : 1747763505789,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -293,11 +305,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747680596927,
-      "stop" : 1747680596928,
-      "duration" : 1
+      "start" : 1747763474860,
+      "stop" : 1747763474867,
+      "duration" : 7
     },
     "status" : "passed",
     "steps" : [ ],
@@ -316,10 +328,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1912-683"
+    "value" : "fv-az1376-653"
   }, {
     "name" : "thread",
-    "value" : "pid-2564-worker-main"
+    "value" : "pid-2563-worker-main"
   }, {
     "name" : "package",
     "value" : "features.videoYoutube.feature"
@@ -337,9 +349,13 @@
   "extra" : {
     "severity" : "normal",
     "retries" : [ ],
-    "categories" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
     "tags" : [ ]
   },
-  "source" : "ec87a18a2cc8e8d2.json",
+  "source" : "35959dc2d53c294e.json",
   "parameterValues" : [ ]
 }

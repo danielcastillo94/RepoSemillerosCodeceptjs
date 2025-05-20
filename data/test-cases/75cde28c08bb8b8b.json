@@ -1,12 +1,12 @@
 {
-  "uid" : "4388745fb96d14e0",
-  "name" : "Buscar plan Telcel Plus",
-  "fullName" : "features/telcel.feature: Automatización de Telcel > Buscar plan Telcel Plus",
-  "historyId" : "772b41fe9b993738be2de237826af37b:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "75cde28c08bb8b8b",
+  "name" : "Validar el boton del login",
+  "fullName" : "features/loginYoutube.feature: Validaciones del login en youtube > Validar el boton del login",
+  "historyId" : "29a39961c2c415a7960495d3ba0f4fde:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1747680596930,
-    "stop" : 1747680600833,
-    "duration" : 3903
+    "start" : 1747763569396,
+    "stop" : 1747763578558,
+    "duration" : 9162
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1747680596929,
-      "stop" : 1747680596929,
+      "start" : 1747763569396,
+      "stop" : 1747763569396,
       "duration" : 0
     },
     "status" : "passed",
@@ -29,9 +29,9 @@
   }, {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1747680596930,
-      "stop" : 1747680596962,
-      "duration" : 32
+      "start" : 1747763569396,
+      "stop" : 1747763569427,
+      "duration" : 31
     },
     "status" : "passed",
     "steps" : [ ],
@@ -45,10 +45,25 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Given estoy en la pagina de inicio de Telcel",
+      "name" : "Given Estoy en la pagina de youtube",
       "time" : {
-        "start" : 1747680596963,
-        "stop" : 1747680596964,
+        "start" : 1747763569429,
+        "stop" : 1747763569429,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When Presiono el boton de login",
+      "time" : {
+        "start" : 1747763569429,
+        "stop" : 1747763569430,
         "duration" : 1
       },
       "status" : "passed",
@@ -60,11 +75,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When hago clic en Ver todos los Planes",
+      "name" : "Then Valido si la loginpage tiene el login",
       "time" : {
-        "start" : 1747680596964,
-        "stop" : 1747680596964,
-        "duration" : 0
+        "start" : 1747763569430,
+        "stop" : 1747763578558,
+        "duration" : 9128
       },
       "status" : "passed",
       "steps" : [ ],
@@ -75,11 +90,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then debo ver un plan Telcel Plus",
+      "name" : "I am on page \"https://www.youtube.com/\"",
       "time" : {
-        "start" : 1747680596965,
-        "stop" : 1747680600833,
-        "duration" : 3868
+        "start" : 1747763569431,
+        "stop" : 1747763570871,
+        "duration" : 1440
       },
       "status" : "passed",
       "steps" : [ ],
@@ -90,11 +105,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I open telcel homepage",
+      "name" : "I wait for element \"(//yt-icon[@id=\"logo-icon\"])[1]\", 20",
       "time" : {
-        "start" : 1747680596966,
-        "stop" : 1747680599412,
-        "duration" : 2446
+        "start" : 1747763570871,
+        "stop" : 1747763570935,
+        "duration" : 64
       },
       "status" : "passed",
       "steps" : [ ],
@@ -105,11 +120,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I go to all plans",
+      "name" : "I wait for visible \"(//a[@aria-label=\"Acceder\"])[1]\", 20",
       "time" : {
-        "start" : 1747680599412,
-        "stop" : 1747680599583,
-        "duration" : 171
+        "start" : 1747763570936,
+        "stop" : 1747763570954,
+        "duration" : 18
       },
       "status" : "passed",
       "steps" : [ ],
@@ -120,11 +135,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait for element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\", 5",
+      "name" : "I click \"(//a[@aria-label=\"Acceder\"])[1]\"",
       "time" : {
-        "start" : 1747680599583,
-        "stop" : 1747680600824,
-        "duration" : 1241
+        "start" : 1747763570954,
+        "stop" : 1747763571555,
+        "duration" : 601
       },
       "status" : "passed",
       "steps" : [ ],
@@ -135,11 +150,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I see element \"//h2[@class=\"content-title text-left f-z-28 text-center-xs ng-binding\" and text() = \"Telcel Libre\"]\"",
+      "name" : "I wait 2",
       "time" : {
-        "start" : 1747680600824,
-        "stop" : 1747680600832,
-        "duration" : 8
+        "start" : 1747763571555,
+        "stop" : 1747763573554,
+        "duration" : 1999
       },
       "status" : "passed",
       "steps" : [ ],
@@ -150,11 +165,26 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I say \"Verificación de Telcel Plus exitosa\"",
+      "name" : "I wait 5",
       "time" : {
-        "start" : 1747680600832,
-        "stop" : 1747680600832,
-        "duration" : 0
+        "start" : 1747763573555,
+        "stop" : 1747763578555,
+        "duration" : 5000
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see \"Inicia sesión\"",
+      "time" : {
+        "start" : 1747763578555,
+        "stop" : 1747763578558,
+        "duration" : 3
       },
       "status" : "passed",
       "steps" : [ ],
@@ -167,17 +197,17 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 8,
+    "stepsCount" : 10,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
   "afterStages" : [ {
-    "name" : "\"after each\" hook: codeceptjs.after",
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1747680600833,
-      "stop" : 1747680600846,
-      "duration" : 13
+      "start" : 1747763578566,
+      "stop" : 1747763578566,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -188,11 +218,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1747680651515,
-      "stop" : 1747680651515,
-      "duration" : 0
+      "start" : 1747763578558,
+      "stop" : 1747763578566,
+      "duration" : 8
     },
     "status" : "passed",
     "steps" : [ ],
@@ -211,16 +241,16 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1912-683"
+    "value" : "fv-az1376-653"
   }, {
     "name" : "thread",
-    "value" : "pid-2564-worker-main"
+    "value" : "pid-2563-worker-main"
   }, {
     "name" : "package",
-    "value" : "features.telcel.feature"
+    "value" : "features.loginYoutube.feature"
   }, {
     "name" : "parentSuite",
-    "value" : "Automatización de Telcel"
+    "value" : "Validaciones del login en youtube"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -235,6 +265,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "4388745fb96d14e0.json",
+  "source" : "75cde28c08bb8b8b.json",
   "parameterValues" : [ ]
 }
