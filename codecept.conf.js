@@ -5,17 +5,6 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: 'chromium',
-<<<<<<< HEAD
-      url: 'http://localhost',
-      show: true
-    }
-  },
-  include: {
-    I: './steps_file.js'
-  },
-  name: 'Proyecto4'
-}
-=======
       url: 'https://www.youtube.com',
       show: false,
 
@@ -71,4 +60,3 @@ exports.config = {
   },
   name: 'Actividad YouTube'
 };
->>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394
