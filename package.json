@@ -1,18 +1,37 @@
 {
+<<<<<<< HEAD
   "name": "proyecto4",
   "version": "1.0.0",
   "main": "codecept.conf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+  "name": "actividad-youtube",
+  "version": "1.0.0",
+  "main": "codecept.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:workers": "codeceptjs run-workers 2",
+    "features": "codeceptjs run --features --plugins allure",
+    "allure:generate": "allure generate output --clean",
+    "allure:report": "allure open"
+>>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+<<<<<<< HEAD
   "dependencies": {
     "codeceptjs": "^3.7.3"
   },
   "devDependencies": {
+=======
+  "devDependencies": {
+    "allure-codeceptjs": "^3.2.2",
+    "chai": "^4.5.0",
+    "codeceptjs": "^3.7.3",
+>>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394
     "playwright": "^1.52.0"
   }
 }

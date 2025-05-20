@@ -1,0 +1,50 @@
+  on: 
+    push:
+      branches: ["**"]
+    pull_request:
+        branches: ["**"]
+
+  jobs:
+    codecept-test:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Hacer checkout del repo
+          uses: actions/checkout@v3
+
+        - name: Instalar Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: '23.6.1'
+
+        - name: Instalar dependencias
+          run: npm ci
+
+        - name: Instalar navegadores de Playwright
+          run: npx playwright install chromium
+
+        - name: Ejecutar pruebas
+          run: npm run features
+
+        - name: Get Allure history
+          uses: actions/checkout@v3
+          if: always()
+          with:
+            ref: gh-pages
+            path: gh-pages
+            token: ${{ secrets.GH_TOKEN }}
+
+        - name: Generar reporte de Allure
+          uses: simple-elf/allure-report-action@v1.6
+          if: always()
+          with:
+            allure_results: allure-results
+            allure_history: gh-pages
+            allure_report: allure-history
+
+        - name: Deploy report to Github Pages
+          if: always()
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            personal_token: ${{ secrets.GH_TOKEN }}
+            publish_dir: allure-history
