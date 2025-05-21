@@ -11,6 +11,10 @@ exports.config = {
       locale: "es-MX",
     },
     MiHelper: {
+<<<<<<< HEAD
+      require: './helpers/YouTubeHelper'
+    }
+=======
       require: './helpers/MiHelper.js'
     },
     DailyHelpers: {
@@ -28,6 +32,7 @@ exports.config = {
     RechargeHelper: {
       require: './helpers/RechargeHelper.js',
     },
+>>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394
   },
   
   include: {
@@ -39,6 +44,10 @@ exports.config = {
     youtubeLoginPage: './pages/youtubeLoginPage.js',
   },
   gherkin: {
+<<<<<<< HEAD
+    features: "./features/*.feature",
+    steps: ["./steps/pruebaSteps.js", "./steps/loginSteps.js", "./steps/youtubeLoginSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js", './steps/telcelSteps.js', "./steps/videoYoutubeSteps.js","./steps_file.js",],
+=======
   features: './features/*.feature',
   steps: [
     './steps/pruebaSteps.js',
@@ -50,6 +59,7 @@ exports.config = {
     './steps/videoYoutubeSteps.js',
     './steps/stepsEmilio.js'
   ] 
+>>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394
   },
   plugins: {
     allure: {
@@ -58,5 +68,10 @@ exports.config = {
       resultsDir: 'allure-results'
     }
   },
+<<<<<<< HEAD
+  name: 'Actividad youtube'
+};
+=======
   name: 'Actividad YouTube'
 };
+>>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394

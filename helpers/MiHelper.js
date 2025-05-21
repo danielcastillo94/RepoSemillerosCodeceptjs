@@ -1,11 +1,13 @@
-const { Helper } = require('codeceptjs');
+const Helper = require('@codeceptjs/helper');
 
 class MiHelper extends Helper {
-  async esperarYValidar(selector, textoEsperado) {
+  async sayHello(name) {
+    console.log(`Hola, ${name}! Este mensaje viene del Custom Helper.`);
+  }
+
+  async getCurrentUrl() {
     const { page } = this.helpers.Playwright;
-
-    await page.waitForSelector(selector, { timeout: 10000 });
-
+    return page.url();
   }
 }
 
