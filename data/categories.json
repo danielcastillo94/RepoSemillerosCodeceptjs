@@ -6,7 +6,7 @@
       "name" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
       "children" : [ {
         "name" : "Recargar saldo de $100",
-        "uid" : "de97a9beef416247",
+        "uid" : "fed307f1fa1c872a",
         "parentUid" : "c3d21dcc9bea16bb5fc9255eb0e44d15",
         "status" : "broken",
         "time" : {
@@ -23,7 +23,7 @@
       "name" : "No steps matching \"debería ver:\"",
       "children" : [ {
         "name" : "Verificar carga de elementos clave",
-        "uid" : "4edf9aa8295b0e24",
+        "uid" : "2c65c2aa8567fc53",
         "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
         "status" : "broken",
         "time" : {
@@ -40,7 +40,7 @@
       "name" : "No steps matching \"imprimo el mensaje personalizado \"Iniciando prueba\"\"",
       "children" : [ {
         "name" : "Prueba usando custom steps",
-        "uid" : "e1f3ad3f11073a55",
+        "uid" : "3133ad84876990b2",
         "parentUid" : "1509d0273e95d954ba6515a2ff1ab551",
         "status" : "broken",
         "time" : {
@@ -57,7 +57,7 @@
       "name" : "No steps matching \"el usuario navega a la página principal de YouTube\"",
       "children" : [ {
         "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-        "uid" : "9a2bc105f7ed5e38",
+        "uid" : "5cec35486a34038a",
         "parentUid" : "25a356a4289ef5164a95407ad327afaa",
         "status" : "broken",
         "time" : {
@@ -74,7 +74,7 @@
       "name" : "No steps matching \"hace clic en el botón \"Explorar\"\"",
       "children" : [ {
         "name" : "Usuario hace clic en \"Explorar\" y navega a Música desde prueba.feature @test @test",
-        "uid" : "db93721678af000d",
+        "uid" : "3704ace6235e69ba",
         "parentUid" : "867535df888a7858a4439dd69a035633",
         "status" : "broken",
         "time" : {
@@ -87,7 +87,7 @@
         "parameters" : [ ]
       }, {
         "name" : "Usuario hace clic en \"Explorar\" y navega a Música desde prueba.feature @test @test",
-        "uid" : "ac6dbd7c36c7f660",
+        "uid" : "1200d1489bf0e03b",
         "parentUid" : "867535df888a7858a4439dd69a035633",
         "status" : "broken",
         "time" : {
