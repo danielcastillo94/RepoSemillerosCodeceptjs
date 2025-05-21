@@ -1,18 +1,23 @@
 #Hector
 
 Feature: Automatización de Telcel
+
     Scenario: Buscar plan Telcel Plus
         Given estoy en la pagina de inicio de Telcel
         When hago clic en Ver todos los Planes
         Then debo ver un plan Telcel Plus
-    Scenario: Recargar saldo de $100
+
+    Scenario Outline: Mobile recharge of '<amount>'
         Given estoy en la pagina de inicio de Telcel
-        And navego a la sección "Paquetes y Recargas"
-        When ingreso el número "5512345678"
-        And elijo la opción "Recarga tu Saldo Amigo"
-        And selecciono el monto de "$100"
+        When recargo '<amount>' al numero '<phone_number>'
         Then debo ver el resumen de la recarga y un formulario de pago
-        
+
+        Examples:
+            | amount  | phone_number |
+            | $100    | 5512345678   |
+            | $200    | 5512345678   |
+            | $300    | 5512345678   |
+
     # Not implemented yet
     #Scenario: Registrarme como nuevo usuario
     #    Given estoy en la pagina de inicio de Telcel

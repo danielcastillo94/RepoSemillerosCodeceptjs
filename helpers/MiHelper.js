@@ -1,6 +1,6 @@
 const Helper = require('@codeceptjs/helper');
 
-class MyHelper extends Helper {
+class MiHelper extends Helper {
   async sayHello(name) {
     console.log(`Hola, ${name}! Este mensaje viene del Custom Helper.`);
   }
@@ -11,4 +11,4 @@ class MyHelper extends Helper {
   }
 }
 
-module.exports = MyHelper;
+module.exports = MiHelper;

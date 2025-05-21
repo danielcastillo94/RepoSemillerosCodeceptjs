@@ -14,48 +14,6 @@ class PaquetesYRecargasPage {
     };
   }
 
-  ingresarNumero(numero) {
-    I.waitForElement(this.fields.iframe, 20);
-
-    // Cambiar al contexto del iframe
-    within({ frame: this.fields.iframe }, () => {
-      I.waitForVisible(this.fields.numeroInput, 20),
-      I.waitForVisible(this.fields.numeroValidator, 20),
-      I.fillField(this.fields.numeroInput, numero);
-      I.fillField(this.fields.numeroValidator, numero);
-    });
-
-    I.say(`Número ingresado dentro del iframe correctamente: ${numero}`);
-  }
-
-  seleccionarOpcion(opcion) {
-    within({ frame: this.fields.iframe }, () => {
-      const selector = `//button[@class="select-option " and text()="${opcion}"]`;
-      I.waitForVisible(this.fields.tipoCompra, 10);
-      I.click(this.fields.tipoCompra);
-      I.waitForVisible(selector, 10);
-      I.click(selector);
-      I.wait(2);
-      I.waitForElement(this.fields.siguienteButton, 10);
-      I.click(this.fields.siguienteButton);
-    });
-
-    I.say(`Opción seleccionada: ${opcion}`);
-  }
-
-  seleccionarMonto(monto) {
-    within({ frame: this.fields.iframe }, () => {
-      const selector = `//div[contains(@class, "btn-selectable")]//button[.//span[text()="${monto}"]]`;
-      I.waitForVisible(selector, 10);
-      I.click(selector);
-      I.waitForElement(this.fields.siguienteButton, 10);
-      I.click(this.fields.siguienteButton);
-      I.wait(2);
-    });
-
-    I.say(`Monto seleccionado: ${monto}`);
-  }
-
   async verificarResumenYFormulario() {
     const count = await I.grabNumberOfElements('.success-step');
     I.assertEqual(count, 2, "Se esperaban exactamente 2 elementos con la clase '.success-step'");
