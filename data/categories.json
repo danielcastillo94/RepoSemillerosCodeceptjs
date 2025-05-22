@@ -1,5 +1,60 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "No se encontró el texto esperado: \"Falling In Reverse - \"Watch The World Burn\"\" tras 5 intentos",
+      "children" : [ {
+        "name" : "Validar título y videos relacionados correctamente",
+        "uid" : "1137ca6db30ed3ea",
+        "parentUid" : "606071e845fcba6536e80c2b3043a886",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747939462029,
+          "stop" : 1747939473954,
+          "duration" : 11925
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "606071e845fcba6536e80c2b3043a886"
+    }, {
+      "name" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
+      "children" : [ {
+        "name" : "Título incorrecto provoca error",
+        "uid" : "be6af8f10316f1eb",
+        "parentUid" : "7cb806f98d27d18423c6f338ae3ad36d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747939485982,
+          "stop" : 1747939497705,
+          "duration" : 11723
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7cb806f98d27d18423c6f338ae3ad36d"
+    }, {
+      "name" : "No steps matching \"debería ver:\"",
+      "children" : [ {
+        "name" : "Verificar carga de elementos clave",
+        "uid" : "9c9a8ee4521d652b",
+        "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1747939548897,
+          "stop" : 1747939553357,
+          "duration" : 4460
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "259089c0497a8892213b9e9fa2f3b58b"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }

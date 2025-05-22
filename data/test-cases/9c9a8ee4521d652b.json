@@ -1,0 +1,209 @@
+{
+  "uid" : "9c9a8ee4521d652b",
+  "name" : "Verificar carga de elementos clave",
+  "fullName" : "features/requerimientoYoutube.feature: Validación de carga inicial y elementos clave en la página de YouTube > Verificar carga de elementos clave",
+  "historyId" : "25b3cc5fb720c6a4042f5fa4521393ce:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1747939548897,
+    "stop" : 1747939553357,
+    "duration" : 4460
+  },
+  "status" : "broken",
+  "statusMessage" : "No steps matching \"debería ver:\"",
+  "statusTrace" : "Error: No steps matching \"debería ver:\"\n    at matchStep (node_modules/codeceptjs/lib/mocha/bdd.js:50:9)\n    at runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:63:18)\n    at Test.<anonymous> (node_modules/codeceptjs/lib/mocha/gherkin.js:148:50)\n    at test.fn (node_modules/codeceptjs/lib/mocha/asyncWrapper.js:81:10)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before each\" hook: Before",
+    "time" : {
+      "start" : 1747939548929,
+      "stop" : 1747939553272,
+      "duration" : 4343
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given abro la página de YouTube",
+      "time" : {
+        "start" : 1747939548931,
+        "stop" : 1747939548931,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I am on page \"/\"",
+      "time" : {
+        "start" : 1747939548931,
+        "stop" : 1747939550271,
+        "duration" : 1340
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 3",
+      "time" : {
+        "start" : 1747939550271,
+        "stop" : 1747939553271,
+        "duration" : 3000
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747939548897,
+      "stop" : 1747939548897,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747939548897,
+      "stop" : 1747939548929,
+      "duration" : 32
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "No steps matching \"debería ver:\"",
+    "statusTrace" : "Error: No steps matching \"debería ver:\"\n    at matchStep (node_modules/codeceptjs/lib/mocha/bdd.js:50:9)\n    at runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:63:18)\n    at Test.<anonymous> (node_modules/codeceptjs/lib/mocha/gherkin.js:148:50)\n    at test.fn (node_modules/codeceptjs/lib/mocha/asyncWrapper.js:81:10)",
+    "steps" : [ {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1747939553357,
+        "stop" : 1747939553357,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7257bafc739d05d8",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "7257bafc739d05d8.png",
+        "type" : "image/png",
+        "size" : 27229
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1747939553363,
+      "stop" : 1747939553363,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747939553357,
+      "stop" : 1747939553363,
+      "duration" : 6
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "fv-az813-791"
+  }, {
+    "name" : "thread",
+    "value" : "pid-2535-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.requerimientoYoutube.feature"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validación de carga inicial y elementos clave en la página de YouTube"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "9c9a8ee4521d652b.json",
+  "parameterValues" : [ ]
+}
