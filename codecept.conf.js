@@ -48,7 +48,9 @@ exports.config = {
     './steps/dailySteps.js',
     './steps/telcelSteps.js',
     './steps/videoYoutubeSteps.js',
-    './steps/stepsEmilio.js'
+    './steps/stepsEmilio.js',
+    './steps/emilioUploadSteps.js',
+    './steps/emilioDownloadSteps.js'
   ] 
   },
   plugins: {
