@@ -1,0 +1,160 @@
+{
+  "uid" : "c6dc02ecac6d5cb5",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "fullName" : "features/prueba.feature: Validación del botón \"Explorar\" y navegación en YouTube > Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "historyId" : "cb93a540f803c9ac4825d784f82ab297:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1747163200414,
+    "stop" : 1747163202047,
+    "duration" : 1633
+  },
+  "status" : "broken",
+  "statusMessage" : "No steps matching \"el usuario navega a la página principal de YouTube\"",
+  "statusTrace" : "Error: No steps matching \"el usuario navega a la página principal de YouTube\"\n    at matchStep (node_modules\\codeceptjs\\lib\\mocha\\bdd.js:50:9)\n    at runSteps (node_modules\\codeceptjs\\lib\\mocha\\gherkin.js:63:18)\n    at Test.<anonymous> (node_modules\\codeceptjs\\lib\\mocha\\gherkin.js:148:50)\n    at test.fn (node_modules\\codeceptjs\\lib\\mocha\\asyncWrapper.js:81:10)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747163199464,
+      "stop" : 1747163200409,
+      "duration" : 945
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747163200415,
+      "stop" : 1747163201770,
+      "duration" : 1355
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "No steps matching \"el usuario navega a la página principal de YouTube\"",
+    "statusTrace" : "Error: No steps matching \"el usuario navega a la página principal de YouTube\"\n    at matchStep (node_modules\\codeceptjs\\lib\\mocha\\bdd.js:50:9)\n    at runSteps (node_modules\\codeceptjs\\lib\\mocha\\gherkin.js:63:18)\n    at Test.<anonymous> (node_modules\\codeceptjs\\lib\\mocha\\gherkin.js:148:50)\n    at test.fn (node_modules\\codeceptjs\\lib\\mocha\\asyncWrapper.js:81:10)",
+    "steps" : [ {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1747163202001,
+        "stop" : 1747163202001,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6c0df2656578815d",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "6c0df2656578815d.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true,
+    "stepsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747163202051,
+      "stop" : 1747163202146,
+      "duration" : 95
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1747163202146,
+      "stop" : 1747163202147,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "HDFSALVADORH"
+  }, {
+    "name" : "thread",
+    "value" : "pid-17404-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.prueba.feature"
+  }, {
+    "name" : "tag",
+    "value" : "test"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validación del botón \"Explorar\" y navegación en YouTube"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e4ea67a1b74aab89",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159736455,
+        "stop" : 1747159752716,
+        "duration" : 16261
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "test" ]
+  },
+  "source" : "c6dc02ecac6d5cb5.json",
+  "parameterValues" : [ ]
+}

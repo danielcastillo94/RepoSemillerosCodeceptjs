@@ -1,0 +1,341 @@
+{
+  "uid" : "f7a0754e698dfcc1",
+  "name" : "Recargar saldo de $100",
+  "fullName" : "features/telcel.feature: Automatización de Telcel > Recargar saldo de $100",
+  "historyId" : "34774030b9fee8e4f2c3d132b1c94586:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1747159631620,
+    "stop" : 1747159666549,
+    "duration" : 34929
+  },
+  "status" : "broken",
+  "statusMessage" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+  "statusTrace" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\pages\\mainPage.js:29:22\n    at Playwright._useTo (node_modules\\@codeceptjs\\helper\\dist\\index.js:142:16)\n    at Playwright.usePlaywrightTo (node_modules\\codeceptjs\\lib\\helper\\Playwright.js:697:17)\n    at HelperStep.run (node_modules\\codeceptjs\\lib\\step\\helper.js:28:49)\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\record.js:45:26",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1747159631620,
+      "stop" : 1747159633981,
+      "duration" : 2361
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1747159613703,
+      "stop" : 1747159613703,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+    "statusTrace" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\pages\\mainPage.js:29:22\n    at Playwright._useTo (node_modules\\@codeceptjs\\helper\\dist\\index.js:142:16)\n    at Playwright.usePlaywrightTo (node_modules\\codeceptjs\\lib\\helper\\Playwright.js:697:17)\n    at HelperStep.run (node_modules\\codeceptjs\\lib\\step\\helper.js:28:49)\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\record.js:45:26",
+    "steps" : [ {
+      "name" : "Given estoy en la pagina de inicio de Telcel",
+      "time" : {
+        "start" : 1747159633985,
+        "stop" : 1747159633986,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "And navego a la sección \"Paquetes y Recargas\"",
+      "time" : {
+        "start" : 1747159633989,
+        "stop" : 1747159633992,
+        "duration" : 3
+      },
+      "status" : "broken",
+      "statusMessage" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+      "statusTrace" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\pages\\mainPage.js:29:22\n    at Playwright._useTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\@codeceptjs\\helper\\dist\\index.js:142:16)\n    at Playwright.usePlaywrightTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\helper\\Playwright.js:697:17)\n    at HelperStep.run (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\helper.js:28:49)\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\record.js:45:26",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "When ingreso el número \"5512345678\"",
+      "time" : {
+        "start" : 1747159633995,
+        "stop" : 1747159633996,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+      "statusTrace" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\pages\\mainPage.js:29:22\n    at Playwright._useTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\@codeceptjs\\helper\\dist\\index.js:142:16)\n    at Playwright.usePlaywrightTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\helper\\Playwright.js:697:17)\n    at HelperStep.run (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\helper.js:28:49)\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\record.js:45:26",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "And elijo la opción \"Recarga tu Saldo Amigo\"",
+      "time" : {
+        "start" : 1747159634000,
+        "stop" : 1747159634001,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+      "statusTrace" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\pages\\mainPage.js:29:22\n    at Playwright._useTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\@codeceptjs\\helper\\dist\\index.js:142:16)\n    at Playwright.usePlaywrightTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\helper\\Playwright.js:697:17)\n    at HelperStep.run (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\helper.js:28:49)\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\record.js:45:26",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "And selecciono el monto de \"$100\"",
+      "time" : {
+        "start" : 1747159634006,
+        "stop" : 1747159634007,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+      "statusTrace" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\pages\\mainPage.js:29:22\n    at Playwright._useTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\@codeceptjs\\helper\\dist\\index.js:142:16)\n    at Playwright.usePlaywrightTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\helper\\Playwright.js:697:17)\n    at HelperStep.run (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\helper.js:28:49)\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\record.js:45:26",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Then debo ver el resumen de la recarga y un formulario de pago",
+      "time" : {
+        "start" : 1747159634015,
+        "stop" : 1747159634016,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+      "statusTrace" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\pages\\mainPage.js:29:22\n    at Playwright._useTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\@codeceptjs\\helper\\dist\\index.js:142:16)\n    at Playwright.usePlaywrightTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\helper\\Playwright.js:697:17)\n    at HelperStep.run (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\helper.js:28:49)\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\record.js:45:26",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "I am on page \"/\"",
+      "time" : {
+        "start" : 1747159634016,
+        "stop" : 1747159648829,
+        "duration" : 14813
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "I wait 2",
+      "time" : {
+        "start" : 1747159648829,
+        "stop" : 1747159650861,
+        "duration" : 2032
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "I scroll to \"#paquetes-recarga\"",
+      "time" : {
+        "start" : 1747159650861,
+        "stop" : 1747159651039,
+        "duration" : 178
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "I wait for visible \"#paquetes-recarga\", 5",
+      "time" : {
+        "start" : 1747159651040,
+        "stop" : 1747159651048,
+        "duration" : 8
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "I click \"#paquetes-recarga\"",
+      "time" : {
+        "start" : 1747159651048,
+        "stop" : 1747159651869,
+        "duration" : 821
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "I use playwright to \"espera a network idle en Paquetes y Recargas\", async ({ page}) => {\r\n          await page.waitForLoadState('networkidle', { timeout: 10000 });\r\n        }",
+      "time" : {
+        "start" : 1747159651870,
+        "stop" : 1747159661902,
+        "duration" : 10032
+      },
+      "status" : "broken",
+      "statusMessage" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+      "statusTrace" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\pages\\mainPage.js:29:22\n    at Playwright._useTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\@codeceptjs\\helper\\dist\\index.js:142:16)\n    at Playwright.usePlaywrightTo (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\helper\\Playwright.js:697:17)\n    at HelperStep.run (C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\helper.js:28:49)\n    at C:\\Users\\HUGO SALVADOR\\RepoSemillerosCodeceptjs\\node_modules\\codeceptjs\\lib\\step\\record.js:45:26",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1747159666539,
+        "stop" : 1747159666539,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f1a6741877d79ae9",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "f1a6741877d79ae9.png",
+        "type" : "image/png",
+        "size" : 84437
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 13
+  },
+  "afterStages" : [ {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1747159666553,
+      "stop" : 1747159666869,
+      "duration" : 316
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  }, {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1747159726674,
+      "stop" : 1747159726674,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "HDFSALVADORH"
+  }, {
+    "name" : "thread",
+    "value" : "pid-7120-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.telcel.feature"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Automatización de Telcel"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f7a0754e698dfcc1.json",
+  "parameterValues" : [ ]
+}
