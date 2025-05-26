@@ -1,0 +1,361 @@
+{
+  "uid" : "3a9dd0783186e9d3",
+  "name" : "Título incorrecto provoca error",
+  "fullName" : "features/videoYoutube.feature: Validación de resultados relacionados en YouTube > Título incorrecto provoca error",
+  "historyId" : "5d4bf5b2424acc9adc73c006774ed167:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1748286429298,
+    "stop" : 1748286441143,
+    "duration" : 11845
+  },
+  "status" : "broken",
+  "statusMessage" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
+  "statusTrace" : "Error: No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before each\" hook: Before",
+    "time" : {
+      "start" : 1748286429332,
+      "stop" : 1748286433691,
+      "duration" : 4359
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given abro la página de YouTube",
+      "time" : {
+        "start" : 1748286429333,
+        "stop" : 1748286429334,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I am on page \"/\"",
+      "time" : {
+        "start" : 1748286429334,
+        "stop" : 1748286430692,
+        "duration" : 1358
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I wait 3",
+      "time" : {
+        "start" : 1748286430692,
+        "stop" : 1748286433691,
+        "duration" : 2999
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1748286429301,
+      "stop" : 1748286429332,
+      "duration" : 31
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1748286405327,
+      "stop" : 1748286405327,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
+    "statusTrace" : "Error: No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
+    "steps" : [ {
+      "name" : "When busco el video \"Neffex\"",
+      "time" : {
+        "start" : 1748286433693,
+        "stop" : 1748286433694,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And entro al primer video de los resultados",
+      "time" : {
+        "start" : 1748286433695,
+        "stop" : 1748286433696,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then debería ver el título \"Este título no existe\"",
+      "time" : {
+        "start" : 1748286433699,
+        "stop" : 1748286441045,
+        "duration" : 7346
+      },
+      "status" : "broken",
+      "statusMessage" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
+      "statusTrace" : "Error: No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos\n    at MiHelperYoutube.esperarYValidarTexto (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/helpers/MiHelperYoutube.js:20:11)\n    at async /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:31:3\n    at async runSteps (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/mocha/gherkin.js:85:9)",
+      "steps" : [ {
+        "name" : "I wait for element \"//input[@name=\"search_query\"]\", 10",
+        "time" : {
+          "start" : 1748286433699,
+          "stop" : 1748286433706,
+          "duration" : 7
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Neffex\"",
+        "time" : {
+          "start" : 1748286433706,
+          "stop" : 1748286433900,
+          "duration" : 194
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I press key \"Enter\"",
+        "time" : {
+          "start" : 1748286433900,
+          "stop" : 1748286434043,
+          "duration" : 143
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
+        "time" : {
+          "start" : 1748286434043,
+          "stop" : 1748286435096,
+          "duration" : 1053
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I wait for element \"//ytd-video-renderer//a[@id=\"thumbnail\"]\", 10",
+        "time" : {
+          "start" : 1748286435096,
+          "stop" : 1748286435220,
+          "duration" : 124
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I click \"//ytd-video-renderer//a[@id=\"thumbnail\"]\"",
+        "time" : {
+          "start" : 1748286435220,
+          "stop" : 1748286436045,
+          "duration" : 825
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I wait 5",
+        "time" : {
+          "start" : 1748286436045,
+          "stop" : 1748286441045,
+          "duration" : 5000
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 7,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748286441142,
+        "stop" : 1748286441142,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5d11964e4ef54cd8",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "5d11964e4ef54cd8.png",
+        "type" : "image/png",
+        "size" : 266982
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1748286441149,
+      "stop" : 1748286441149,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1748286441143,
+      "stop" : 1748286441149,
+      "duration" : 6
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1701-280"
+  }, {
+    "name" : "thread",
+    "value" : "pid-2546-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.videoYoutube.feature"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validación de resultados relacionados en YouTube"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3a9dd0783186e9d3.json",
+  "parameterValues" : [ ]
+}

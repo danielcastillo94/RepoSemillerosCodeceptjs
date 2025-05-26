@@ -1,41 +1,30 @@
 {
-  "total" : 7,
+  "total" : 8,
   "items" : [ {
-    "uid" : "ed25a67e165223eb323e270a69295234",
-    "name" : "Validación del botón \"Explorar\" y navegación en YouTube",
+    "uid" : "d2c76bc404a58ecc12ff3c04d6cba31b",
+    "name" : "Validación de resultados relacionados en YouTube",
     "statistic" : {
       "failed" : 0,
-      "broken" : 3,
+      "broken" : 2,
       "skipped" : 0,
       "passed" : 1,
-      "unknown" : 0,
-      "total" : 4
-    }
-  }, {
-    "uid" : "a33775243f021d8b3a19aacdf2004620",
-    "name" : "Automatización de Telcel",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 2,
       "unknown" : 0,
       "total" : 3
     }
   }, {
-    "uid" : "5bab7746f6451e92df08cfa66df9145d",
-    "name" : "Validación de carga inicial y elementos clave en la página de YouTube",
+    "uid" : "2e83a92139e169587bd33c1c06763ff8",
+    "name" : "Cargar y descargar un archivo",
     "statistic" : {
       "failed" : 0,
       "broken" : 1,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     }
   }, {
-    "uid" : "1a85855463aca3ea10b8fe0fcb3372b8",
-    "name" : "Login",
+    "uid" : "5bab7746f6451e92df08cfa66df9145d",
+    "name" : "Validación de carga inicial y elementos clave en la página de YouTube",
     "statistic" : {
       "failed" : 0,
       "broken" : 1,
@@ -56,8 +45,30 @@
       "total" : 7
     }
   }, {
-    "uid" : "6a9348e47752696bd72ae876b115e9f6",
-    "name" : "Validación de resultados relacionados",
+    "uid" : "a33775243f021d8b3a19aacdf2004620",
+    "name" : "Automatización de Telcel",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "6300100abe8ed0d86bf5ab61b9136637",
+    "name" : "Validaciones funcionales dailyMotion",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "ed25a67e165223eb323e270a69295234",
+    "name" : "Validación del botón \"Explorar\" y navegación en YouTube",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -67,8 +78,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "7f85788bc0a86b2148e4604f0126e3a9",
-    "name" : "Validaciones funcionales en dailyMotion",
+    "uid" : "315f2d914890879d41a07b18a377f618",
+    "name" : "Validaciones del login en youtube",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
