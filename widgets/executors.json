@@ -2,9 +2,9 @@
   "name" : "GitHub Actions",
   "type" : "github",
   "url" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs",
-  "buildOrder" : 100,
-  "buildName" : "GitHub Actions Run #15144385557",
-  "buildUrl" : "https://github.com/danielcastillo94/RepoSemillerosCodeceptjs/actions/runs/15144385557",
+  "buildOrder" : 108,
+  "buildName" : "GitHub Actions Run #15260153534",
+  "buildUrl" : "https://github.com/danielcastillo94/RepoSemillerosCodeceptjs/actions/runs/15260153534",
   "reportName" : "Allure Report with history",
-  "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/100/"
+  "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/108/"
 } ]
