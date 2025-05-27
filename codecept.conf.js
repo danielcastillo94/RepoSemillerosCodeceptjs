@@ -3,10 +3,10 @@ exports.config = {
   tests: './*_test.js',
   output: './output',
   helpers: {
-    Playwright: {
-      browser: 'chromium',
+    Puppeteer: {
       url: 'https://www.youtube.com',
       show: true,
+      windowSize: '1200x900',
       locale: "es-MX"
     },
     MiHelperYoutube: {
@@ -26,6 +26,7 @@ exports.config = {
       './steps/dailySteps.js',
       './steps/telcelSteps.js',
       './steps/videoYoutubeSteps.js',
+      './steps/armandoCargaDescargaMockeoSteps.js'
     ]
   },
   plugins: {
