@@ -5,6 +5,7 @@ const CanalPage = require("../pages/canalPage.js");
 const youtubeMainPage = require('../pages/youtubeMainPage.js');
 const searchPage = require("../pages/searchPage.js");
 
+// --- Otros steps que tenías (los puedes conservar si los usas) ---
 Then("Verifico que al menos un resultado contenga {string}", (phrase) => {
   verificarResultado.verificarVideoConTexto(phrase);
 });
@@ -44,46 +45,29 @@ Then("debería ver al menos un video con miniatura y título", () => {
   CanalPage.validarVideosVisibles();
 });
 
-
 Given("abro la página de YouTube", async () => {
-  youtubeMainPage.goToHome();
+  await youtubeMainPage.goToHome();
+  I.wait(5); // espera 5 segundos
 });
 
-Given("realizo una búsqueda con el texto {string}", async (phrase) => {
-  youtubeMainPage.searchVideo(phrase);
-});
-Then("abro los filtros de búsqueda", async () => {
-  youtubeMainPage.selectFilters();
-});
-Then("selecciono el filtro Hoy", async () => {
-  youtubeMainPage.selectHoyFilter();
+// --- Aquí los steps que coinciden con tu feature EXACTAMENTE ---
+Then('debería ver el logo de YouTube', () => {
+  return youtubeMainPage.verificarLogo();
 });
 
-Then("visualizo videos con fecha de publicación reciente", async () => {
-  await youtubeMainPage.validarVideosRecientes();
+Then('debería ver el campo de búsqueda', () => {
+  return youtubeMainPage.verificarCampoBusqueda();
 });
 
-
-Given("abro la página de YouTube", async () => {
-  youtubeMainPage.goToHome();
-  I.wait(5); // ← espera de 5 segundos
+Then('debería ver el botón de "Iniciar sesión"', () => {
+  return youtubeMainPage.verificarBotonIniciarSesion();
 });
 
-Then("debería ver: {string}", async (elemento) => {
-  
-      if (elemento === 'Logo de YouTube') {
-        youtubeMainPage.verificarLogo();
-      }else if(elemento === 'Campo de búsqueda') {
-        youtubeMainPage.verificarCampoBusqueda();
-      }else if (elemento === 'Botón de Iniciar sesión') {
-        youtubeMainPage.verificarBotonIniciarSesion();
-      }else if (elemento === 'Al menos 10 miniaturas de video') {
-        await youtubeMainPage.verificarMiniaturas();
-      }else{
-        throw new Error(`Elemento no reconocido: ${elemento}`);
-      }
-    });
+Then('deberían mostrarse al menos 10 miniaturas de video', async () => {
+  await youtubeMainPage.verificarMiniaturas();
+});
 
+// --- Más steps que tenías, por si los usas ---
 Then("verifico que el primer resultado contiene un campo con la duración",
   async () => {
     await searchPage.validateDurationSpan();
