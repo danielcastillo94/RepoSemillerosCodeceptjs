@@ -29,10 +29,6 @@ When('hacer clic en la categoría "Música"', async () => {
   I.wait(4);
 });
 
-Given("Estoy en telcel", () => {
-PruebaPage.home();
-});
-
 Then('debería ver videos con título y nombre del canal visible', async () => {
   I.waitForElement('//*[@id="hero-title"]', 20);
   I.seeElement('//*[@id="hero-title"]');
