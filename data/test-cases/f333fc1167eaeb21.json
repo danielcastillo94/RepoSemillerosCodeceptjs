@@ -1,12 +1,12 @@
 {
-  "uid" : "cb7f3413107dd9d7",
-  "name" : "Validar fecha de publicación reciente",
-  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validar fecha de publicación reciente",
-  "historyId" : "e5d831e0117feef5ab849b56ffc6acd1:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "f333fc1167eaeb21",
+  "name" : "Validar mockeo de datos en YouTube",
+  "fullName" : "features/armandoCargaDescargaMockeo.feature: Validar carga, descarga y mockeo de datos > Validar mockeo de datos en YouTube",
+  "historyId" : "03c4d36ea1c4ab0bc19113164393f95f:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1748365049948,
-    "stop" : 1748365050443,
-    "duration" : 495
+    "start" : 1748365482208,
+    "stop" : 1748365482715,
+    "duration" : 507
   },
   "status" : "broken",
   "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
@@ -16,9 +16,9 @@
   "beforeStages" : [ {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1748365049948,
-      "stop" : 1748365050412,
-      "duration" : 464
+      "start" : 1748365482208,
+      "stop" : 1748365482708,
+      "duration" : 500
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,9 +31,9 @@
   }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1748365049945,
-      "stop" : 1748365049946,
-      "duration" : 1
+      "start" : 1748365481318,
+      "stop" : 1748365481318,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -43,18 +43,17 @@
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : false
-  }, {
-    "name" : "\"before each\" hook: Before",
-    "time" : {
-      "start" : 1748365050412
-    },
+  } ],
+  "testStage" : {
     "status" : "broken",
+    "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
+    "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
     "steps" : [ {
-      "name" : "Given abro la página de YouTube",
+      "name" : "Given estoy en la página de YouTube",
       "time" : {
-        "start" : 1748365050428,
-        "stop" : 1748365050429,
-        "duration" : 1
+        "start" : 1748365482710,
+        "stop" : 1748365482710,
+        "duration" : 0
       },
       "status" : "broken",
       "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
@@ -67,53 +66,70 @@
       "shouldDisplayMessage" : true,
       "hasContent" : true
     }, {
-      "name" : "I abrir youtube",
+      "name" : "When mockeo la respuesta de la API de YouTube",
       "time" : {
-        "start" : 1748365050430,
-        "stop" : 1748365050433,
-        "duration" : 3
+        "start" : 1748365482711,
+        "stop" : 1748365482711,
+        "duration" : 0
       },
       "status" : "broken",
       "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
       "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-      "steps" : [ {
-        "name" : "I am on page \"/\"",
-        "time" : {
-          "start" : 1748365050430,
-          "stop" : 1748365050431,
-          "duration" : 1
-        },
-        "status" : "broken",
-        "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
-        "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "stepsCount" : 0,
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : true,
-        "hasContent" : true
-      } ],
+      "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then debería ver el título \"Mocked Title\"",
+      "time" : {
+        "start" : 1748365482713,
+        "stop" : 1748365482713,
+        "duration" : 0
+      },
+      "status" : "broken",
+      "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
+      "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "I am on page \"https://www.youtube.com/\"",
+      "time" : {
+        "start" : 1748365482713,
+        "stop" : 1748365482714,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
+      "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
       "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 3,
+    "stepsCount" : 4,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
-  } ],
+  },
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1748365050438,
-      "stop" : 1748365050438,
-      "duration" : 0
+      "start" : 1748365482715,
+      "stop" : 1748365482716,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -126,8 +142,8 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1748365050440,
-      "stop" : 1748365050440,
+      "start" : 1748365482717,
+      "stop" : 1748365482717,
       "duration" : 0
     },
     "status" : "passed",
@@ -147,16 +163,16 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1690-80"
+    "value" : "fv-az788-957"
   }, {
     "name" : "thread",
-    "value" : "pid-2529-worker-main"
+    "value" : "pid-2326-worker-main"
   }, {
     "name" : "package",
-    "value" : "features.youtubeGeneral.feature"
+    "value" : "features.armandoCargaDescargaMockeo.feature"
   }, {
     "name" : "parentSuite",
-    "value" : "Validaciones funcionales en la plataforma de YouTube"
+    "value" : "Validar carga, descarga y mockeo de datos"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -175,6 +191,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "cb7f3413107dd9d7.json",
+  "source" : "f333fc1167eaeb21.json",
   "parameterValues" : [ ]
 }

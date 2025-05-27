@@ -4,13 +4,13 @@
     "name" : "Validaciones funcionales en la plataforma de YouTube",
     "children" : [ {
       "name" : "Validar fecha de publicación reciente",
-      "uid" : "cb7f3413107dd9d7",
+      "uid" : "84016156c25382b5",
       "parentUid" : "c54abeb43e2e6c341a979d109d63cf8e",
       "status" : "broken",
       "time" : {
-        "start" : 1748365049948,
-        "stop" : 1748365050443,
-        "duration" : 495
+        "start" : 1748365477184,
+        "stop" : 1748365477701,
+        "duration" : 517
       },
       "flaky" : false,
       "newFailed" : false,
@@ -21,13 +21,13 @@
     "name" : "Validación de resultados relacionados en YouTube",
     "children" : [ {
       "name" : "Validar título y videos relacionados correctamente",
-      "uid" : "c8360ee2220dd90d",
+      "uid" : "1bbe5a3855c201b7",
       "parentUid" : "d2c76bc404a58ecc12ff3c04d6cba31b",
       "status" : "broken",
       "time" : {
-        "start" : 1748365050443,
-        "stop" : 1748365050746,
-        "duration" : 303
+        "start" : 1748365477702,
+        "stop" : 1748365478028,
+        "duration" : 326
       },
       "flaky" : false,
       "newFailed" : false,
@@ -38,39 +38,65 @@
     "name" : "Automatización de Telcel",
     "children" : [ {
       "name" : "Buscar plan Telcel Plus",
-      "uid" : "7ffb6aa1e89c5d4c",
+      "uid" : "fa0fdfca83c63bd",
       "parentUid" : "a33775243f021d8b3a19aacdf2004620",
       "status" : "broken",
       "time" : {
-        "start" : 1748365050747,
-        "stop" : 1748365051053,
-        "duration" : 306
+        "start" : 1748365478028,
+        "stop" : 1748365478377,
+        "duration" : 349
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "Recargar saldo de $100",
-      "uid" : "bfc8653b315002f4",
+      "name" : "Mobile recharge of '$100'",
+      "uid" : "c8f4b00a5522120d",
       "parentUid" : "a33775243f021d8b3a19aacdf2004620",
       "status" : "broken",
       "time" : {
-        "start" : 1748365051058,
-        "stop" : 1748365051383,
+        "start" : 1748365478379,
+        "stop" : 1748365478697,
+        "duration" : 318
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Mobile recharge of '$200'",
+      "uid" : "3e6352365881eb86",
+      "parentUid" : "a33775243f021d8b3a19aacdf2004620",
+      "status" : "broken",
+      "time" : {
+        "start" : 1748365478698,
+        "stop" : 1748365479023,
         "duration" : 325
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "Validar sección Contáctanos",
-      "uid" : "5e7ece234a10929f",
+      "name" : "Mobile recharge of '$300'",
+      "uid" : "e05fcb895b3ce165",
       "parentUid" : "a33775243f021d8b3a19aacdf2004620",
       "status" : "broken",
       "time" : {
-        "start" : 1748365051384,
-        "stop" : 1748365051697,
-        "duration" : 313
+        "start" : 1748365479025,
+        "stop" : 1748365479341,
+        "duration" : 316
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validar sección Contáctanos",
+      "uid" : "85ee2a91b5ac4a54",
+      "parentUid" : "a33775243f021d8b3a19aacdf2004620",
+      "status" : "broken",
+      "time" : {
+        "start" : 1748365479342,
+        "stop" : 1748365479676,
+        "duration" : 334
       },
       "flaky" : false,
       "newFailed" : false,
@@ -81,13 +107,13 @@
     "name" : "Validación de carga inicial y elementos clave en la página de YouTube",
     "children" : [ {
       "name" : "Verificar carga de elementos clave",
-      "uid" : "96229d5c29343524",
+      "uid" : "1e550725558f93c",
       "parentUid" : "5bab7746f6451e92df08cfa66df9145d",
       "status" : "broken",
       "time" : {
-        "start" : 1748365051699,
-        "stop" : 1748365052003,
-        "duration" : 304
+        "start" : 1748365479679,
+        "stop" : 1748365480057,
+        "duration" : 378
       },
       "flaky" : false,
       "newFailed" : false,
@@ -98,13 +124,13 @@
     "name" : "Validación del botón \"Explorar\" y navegación en YouTube",
     "children" : [ {
       "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-      "uid" : "de0c219dad399bfb",
+      "uid" : "7006a539b94d2a58",
       "parentUid" : "ed25a67e165223eb323e270a69295234",
       "status" : "broken",
       "time" : {
-        "start" : 1748365052004,
-        "stop" : 1748365052311,
-        "duration" : 307
+        "start" : 1748365480058,
+        "stop" : 1748365480360,
+        "duration" : 302
       },
       "flaky" : false,
       "newFailed" : false,
@@ -115,13 +141,13 @@
     "name" : "Validaciones del login en youtube",
     "children" : [ {
       "name" : "Validar el boton del login",
-      "uid" : "1c3628a07c63a0f0",
+      "uid" : "f4954014d6c62662",
       "parentUid" : "315f2d914890879d41a07b18a377f618",
       "status" : "broken",
       "time" : {
-        "start" : 1748365052312,
-        "stop" : 1748365052609,
-        "duration" : 297
+        "start" : 1748365480362,
+        "stop" : 1748365480675,
+        "duration" : 313
       },
       "flaky" : false,
       "newFailed" : false,
@@ -129,59 +155,72 @@
     } ],
     "uid" : "315f2d914890879d41a07b18a377f618"
   }, {
-    "name" : "Validaciones funcionales en dailyMotion",
+    "name" : "Validaciones funcionales dailyMotion",
     "children" : [ {
-      "name" : "Validar el atributo href @enlaces",
-      "uid" : "963c3edecb24f9b1",
-      "parentUid" : "7f85788bc0a86b2148e4604f0126e3a9",
+      "name" : "Validar carga de pagina de DailyMotion @Carga",
+      "uid" : "8c9f48b89ed0a5e1",
+      "parentUid" : "6300100abe8ed0d86bf5ab61b9136637",
       "status" : "broken",
       "time" : {
-        "start" : 1748365052612,
-        "stop" : 1748365052919,
-        "duration" : 307
+        "start" : 1748365480677,
+        "stop" : 1748365480995,
+        "duration" : 318
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Validar el atributo href @enlaces",
+      "uid" : "b1f6e9974e3a1f7d",
+      "parentUid" : "6300100abe8ed0d86bf5ab61b9136637",
+      "status" : "broken",
+      "time" : {
+        "start" : 1748365480996,
+        "stop" : 1748365481313,
+        "duration" : 317
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "7f85788bc0a86b2148e4604f0126e3a9"
+    "uid" : "6300100abe8ed0d86bf5ab61b9136637"
   }, {
     "name" : "Validar carga, descarga y mockeo de datos",
     "children" : [ {
       "name" : "Validar carga de archivo",
-      "uid" : "b185a4134f89cda9",
+      "uid" : "2912a0f2a089f426",
       "parentUid" : "6f536b7dc14a75a94777f36790ac17d7",
       "status" : "broken",
       "time" : {
-        "start" : 1748365052922,
-        "stop" : 1748365053229,
-        "duration" : 307
+        "start" : 1748365481318,
+        "stop" : 1748365481770,
+        "duration" : 452
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Validar descarga de archivo",
-      "uid" : "51f4f5863a52bec3",
+      "uid" : "e9dce7ef38ef3989",
       "parentUid" : "6f536b7dc14a75a94777f36790ac17d7",
       "status" : "broken",
       "time" : {
-        "start" : 1748365053230,
-        "stop" : 1748365053550,
-        "duration" : 320
+        "start" : 1748365481771,
+        "stop" : 1748365482207,
+        "duration" : 436
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Validar mockeo de datos en YouTube",
-      "uid" : "1faa71f0da214f63",
+      "uid" : "f333fc1167eaeb21",
       "parentUid" : "6f536b7dc14a75a94777f36790ac17d7",
       "status" : "broken",
       "time" : {
-        "start" : 1748365053551,
-        "stop" : 1748365053855,
-        "duration" : 304
+        "start" : 1748365482208,
+        "stop" : 1748365482715,
+        "duration" : 507
       },
       "flaky" : false,
       "newFailed" : false,

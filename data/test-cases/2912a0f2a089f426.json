@@ -1,12 +1,12 @@
 {
-  "uid" : "963c3edecb24f9b1",
-  "name" : "Validar el atributo href @enlaces",
-  "fullName" : "features/dailyMotion.feature: Validaciones funcionales en dailyMotion > Validar el atributo href @enlaces",
-  "historyId" : "db052455e3ef44994695ac24b2f1e2d2:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "2912a0f2a089f426",
+  "name" : "Validar carga de archivo",
+  "fullName" : "features/armandoCargaDescargaMockeo.feature: Validar carga, descarga y mockeo de datos > Validar carga de archivo",
+  "historyId" : "45a06b80daf396fa29b98759c3f1ca64:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1748365052612,
-    "stop" : 1748365052919,
-    "duration" : 307
+    "start" : 1748365481318,
+    "stop" : 1748365481770,
+    "duration" : 452
   },
   "status" : "broken",
   "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
@@ -16,9 +16,9 @@
   "beforeStages" : [ {
     "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1748365052612,
-      "stop" : 1748365052913,
-      "duration" : 301
+      "start" : 1748365481318,
+      "stop" : 1748365481760,
+      "duration" : 442
     },
     "status" : "passed",
     "steps" : [ ],
@@ -31,8 +31,8 @@
   }, {
     "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1748365052611,
-      "stop" : 1748365052611,
+      "start" : 1748365481318,
+      "stop" : 1748365481318,
       "duration" : 0
     },
     "status" : "passed",
@@ -49,10 +49,10 @@
     "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
     "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
     "steps" : [ {
-      "name" : "Given Estoy en la pagina de Daily Motion",
+      "name" : "Given estoy en la página de carga de archivo",
       "time" : {
-        "start" : 1748365052915,
-        "stop" : 1748365052916,
+        "start" : 1748365481763,
+        "stop" : 1748365481764,
         "duration" : 1
       },
       "status" : "broken",
@@ -66,55 +66,55 @@
       "shouldDisplayMessage" : true,
       "hasContent" : true
     }, {
-      "name" : "When Presiono el boton de Explorar",
+      "name" : "When subo el archivo \"testfile.txt\"",
       "time" : {
-        "start" : 1748365052916,
-        "stop" : 1748365052917,
-        "duration" : 1
-      },
-      "status" : "broken",
-      "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
-      "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : true,
-      "hasContent" : true
-    }, {
-      "name" : "Then Valido si el href contiene explore",
-      "time" : {
-        "start" : 1748365052918,
-        "stop" : 1748365052918,
+        "start" : 1748365481766,
+        "stop" : 1748365481766,
         "duration" : 0
       },
       "status" : "broken",
       "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
       "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-      "steps" : [ {
-        "name" : "I am on page \"https://www.dailymotion.com/mx\"",
-        "time" : {
-          "start" : 1748365052918,
-          "stop" : 1748365052918,
-          "duration" : 0
-        },
-        "status" : "broken",
-        "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
-        "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
-        "steps" : [ ],
-        "attachments" : [ ],
-        "parameters" : [ ],
-        "stepsCount" : 0,
-        "attachmentsCount" : 0,
-        "shouldDisplayMessage" : true,
-        "hasContent" : true
-      } ],
+      "steps" : [ ],
       "attachments" : [ ],
       "parameters" : [ ],
-      "stepsCount" : 1,
+      "stepsCount" : 0,
       "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then debería ver que el archivo se cargó correctamente",
+      "time" : {
+        "start" : 1748365481768,
+        "stop" : 1748365481768,
+        "duration" : 0
+      },
+      "status" : "broken",
+      "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
+      "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "I am on page \"https://demoqa.com/upload-download\"",
+      "time" : {
+        "start" : 1748365481768,
+        "stop" : 1748365481769,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
+      "statusTrace" : "TypeError: Cannot read properties of undefined (reading 'goto')\n    at Puppeteer.amOnPage (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/helper/Puppeteer.js:682:21)\n    at HelperStep.run (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/helper.js:28:49)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/step/record.js:45:26\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
       "hasContent" : true
     } ],
     "attachments" : [ ],
@@ -127,9 +127,9 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1748365052920,
-      "stop" : 1748365052920,
-      "duration" : 0
+      "start" : 1748365481770,
+      "stop" : 1748365481771,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -142,8 +142,8 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1748365052921,
-      "stop" : 1748365052921,
+      "start" : 1748365482717,
+      "stop" : 1748365482717,
       "duration" : 0
     },
     "status" : "passed",
@@ -163,19 +163,16 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1690-80"
+    "value" : "fv-az788-957"
   }, {
     "name" : "thread",
-    "value" : "pid-2529-worker-main"
+    "value" : "pid-2326-worker-main"
   }, {
     "name" : "package",
-    "value" : "features.dailyMotion.feature"
-  }, {
-    "name" : "tag",
-    "value" : "enlaces"
+    "value" : "features.armandoCargaDescargaMockeo.feature"
   }, {
     "name" : "parentSuite",
-    "value" : "Validaciones funcionales en dailyMotion"
+    "value" : "Validar carga, descarga y mockeo de datos"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -192,8 +189,8 @@
       "matchedStatuses" : [ ],
       "flaky" : false
     } ],
-    "tags" : [ "enlaces" ]
+    "tags" : [ ]
   },
-  "source" : "963c3edecb24f9b1.json",
+  "source" : "2912a0f2a089f426.json",
   "parameterValues" : [ ]
 }

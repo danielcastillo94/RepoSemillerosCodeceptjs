@@ -1,12 +1,12 @@
 {
-  "uid" : "1c3628a07c63a0f0",
+  "uid" : "f4954014d6c62662",
   "name" : "Validar el boton del login",
   "fullName" : "features/loginYoutube.feature: Validaciones del login en youtube > Validar el boton del login",
   "historyId" : "29a39961c2c415a7960495d3ba0f4fde:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1748365052312,
-    "stop" : 1748365052609,
-    "duration" : 297
+    "start" : 1748365480362,
+    "stop" : 1748365480675,
+    "duration" : 313
   },
   "status" : "broken",
   "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
@@ -14,11 +14,11 @@
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1748365052313,
-      "stop" : 1748365052604,
-      "duration" : 291
+      "start" : 1748365480361,
+      "stop" : 1748365480362,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,11 +29,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1748365052312,
-      "stop" : 1748365052312,
-      "duration" : 0
+      "start" : 1748365480362,
+      "stop" : 1748365480669,
+      "duration" : 307
     },
     "status" : "passed",
     "steps" : [ ],
@@ -51,8 +51,8 @@
     "steps" : [ {
       "name" : "Given Estoy en la pagina de youtube",
       "time" : {
-        "start" : 1748365052605,
-        "stop" : 1748365052606,
+        "start" : 1748365480670,
+        "stop" : 1748365480671,
         "duration" : 1
       },
       "status" : "broken",
@@ -68,9 +68,9 @@
     }, {
       "name" : "When Presiono el boton de login",
       "time" : {
-        "start" : 1748365052607,
-        "stop" : 1748365052607,
-        "duration" : 0
+        "start" : 1748365480671,
+        "stop" : 1748365480672,
+        "duration" : 1
       },
       "status" : "broken",
       "statusMessage" : "Cannot read properties of undefined (reading 'goto')",
@@ -85,8 +85,8 @@
     }, {
       "name" : "Then Valido si la loginpage tiene el login",
       "time" : {
-        "start" : 1748365052608,
-        "stop" : 1748365052608,
+        "start" : 1748365480673,
+        "stop" : 1748365480673,
         "duration" : 0
       },
       "status" : "broken",
@@ -102,8 +102,8 @@
     }, {
       "name" : "I am on page \"https://www.youtube.com/\"",
       "time" : {
-        "start" : 1748365052608,
-        "stop" : 1748365052608,
+        "start" : 1748365480673,
+        "stop" : 1748365480673,
         "duration" : 0
       },
       "status" : "broken",
@@ -127,9 +127,9 @@
   "afterStages" : [ {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1748365052610,
-      "stop" : 1748365052610,
-      "duration" : 0
+      "start" : 1748365480675,
+      "stop" : 1748365480676,
+      "duration" : 1
     },
     "status" : "passed",
     "steps" : [ ],
@@ -142,9 +142,9 @@
   }, {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1748365052609,
-      "stop" : 1748365052610,
-      "duration" : 1
+      "start" : 1748365480675,
+      "stop" : 1748365480675,
+      "duration" : 0
     },
     "status" : "passed",
     "steps" : [ ],
@@ -163,10 +163,10 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1690-80"
+    "value" : "fv-az788-957"
   }, {
     "name" : "thread",
-    "value" : "pid-2529-worker-main"
+    "value" : "pid-2326-worker-main"
   }, {
     "name" : "package",
     "value" : "features.loginYoutube.feature"
@@ -191,6 +191,6 @@
     } ],
     "tags" : [ ]
   },
-  "source" : "1c3628a07c63a0f0.json",
+  "source" : "f4954014d6c62662.json",
   "parameterValues" : [ ]
 }
