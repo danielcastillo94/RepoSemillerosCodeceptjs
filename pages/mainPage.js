@@ -21,16 +21,6 @@ class MainPage {
     I.say("Click en el botón 'Ver todos los Planes' realizado");
   }
 
-    async navegarASeccion(seccion) {
-        I.scrollTo(this.fields.paquetesYRecargasButton);
-        I.waitForVisible(this.fields.paquetesYRecargasButton, 5);
-        I.click(this.fields.paquetesYRecargasButton);
-        I.usePlaywrightTo('espera a network idle en Paquetes y Recargas',async ({ page}) => {
-          await page.waitForLoadState('networkidle', { timeout: 10000 });
-        });
-        I.say(`Navegando a la sección ${seccion}`);
-    }
-
     goTo(section) {
         const selector  = `a[data-nombreboton="${section}"]`;
         I.scrollTo(selector);

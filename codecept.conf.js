@@ -5,29 +5,50 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'https://www.youtube.com',
-      show: true,
-      windowSize: '1200x900',
-      locale: "es-MX"
+      show: false,
+
+      locale: "es-MX",
+    },
+    MiHelper: {
+      require: './helpers/MiHelper.js'
+    },
+    DailyHelpers: {
+    require: './helpers/dailyHelper.js'
+    },
+    NavigationHelper: {
+      require: './helpers/NavigationHelper.js'
+    },
+    DailyHelper: {
+    require: './helpers/HelperEmilio.js'
     },
     MiHelperYoutube: {
-      require: './helpers/MiHelperYoutube.js'
+    require: './helpers/MiHelperYoutube.js'
+    },
+    RechargeHelper: {
+      require: './helpers/RechargeHelper.js',
     },
   },
+  
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js', 
+    dailyPage: './pages/dailyPage.js',
+    validacionesYoutubeSteps: './steps/videoYoutubeSteps.js',
+    youtubeMainPage: './pages/youtubeMainPage.js',
+    youtubeVideoPage: './pages/youtubeVideoMainPage.js', 
+    youtubeLoginPage: './pages/youtubeLoginPage.js',
   },
   gherkin: {
-    features: './features/*.feature',
-    steps: [
-      './steps/pruebaSteps.js',
-      './steps/loginSteps.js',
-      './steps/youtubeLoginSteps.js',
-      './steps/validacionesYoutubeSteps.js',
-      './steps/dailySteps.js',
-      './steps/telcelSteps.js',
-      './steps/videoYoutubeSteps.js',
-      './steps/armandoCargaDescargaMockeoSteps.js'
-    ]
+  features: './features/*.feature',
+  steps: [
+    './steps/pruebaSteps.js',
+    './steps/loginSteps.js',
+    './steps/youtubeLoginSteps.js',
+    './steps/validacionesYoutubeSteps.js',
+    './steps/dailySteps.js',
+    './steps/telcelSteps.js',
+    './steps/videoYoutubeSteps.js',
+    './steps/stepsEmilio.js'
+  ] 
   },
   plugins: {
     allure: {
