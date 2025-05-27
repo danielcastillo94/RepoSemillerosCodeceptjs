@@ -1,221 +1,121 @@
 [ {
-  "uid" : "775c64c18ab1d121",
-  "name" : "Validar el atributo href @enlaces",
-  "time" : {
-    "start" : 1748286551169,
-    "stop" : 1748286551927,
-    "duration" : 758
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f864a7163e8ae5ab",
-  "name" : "Verificar carga de elementos clave",
-  "time" : {
-    "start" : 1748286491773,
-    "stop" : 1748286496261,
-    "duration" : 4488
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "c842d30e7caa9f2f",
-  "name" : "Mobile recharge of '$100'",
-  "time" : {
-    "start" : 1748286444877,
-    "stop" : 1748286453597,
-    "duration" : 8720
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8bed9c00ad084a55",
-  "name" : "Validar título distinto de otro video",
-  "time" : {
-    "start" : 1748286417037,
-    "stop" : 1748286429291,
-    "duration" : 12254
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3a035bde6918130a",
-  "name" : "Usuario descarga un archivo exitosamente @download",
-  "time" : {
-    "start" : 1748286514686,
-    "stop" : 1748286549725,
-    "duration" : 35039
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "62410a446be21e3a",
-  "name" : "Mobile recharge of '$300'",
-  "time" : {
-    "start" : 1748286460838,
-    "stop" : 1748286469447,
-    "duration" : 8609
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4036e6794e1fb6ff",
-  "name" : "Validación de una búsqueda en YouTube",
-  "time" : {
-    "start" : 1748286348603,
-    "stop" : 1748286355714,
-    "duration" : 7111
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "964d79a4a87f6263",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
-  "time" : {
-    "start" : 1748286378063,
-    "stop" : 1748286384898,
-    "duration" : 6835
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "853f0cc58b85266b",
-  "name" : "Validar sección Contáctanos",
-  "time" : {
-    "start" : 1748286469464,
-    "stop" : 1748286491761,
-    "duration" : 22297
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ed5ce294f0be5820",
-  "name" : "Validar el boton del login",
-  "time" : {
-    "start" : 1748286502516,
-    "stop" : 1748286511582,
-    "duration" : 9066
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a3542191df19b992",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
-  "time" : {
-    "start" : 1748286398508,
-    "stop" : 1748286405318,
-    "duration" : 6810
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3a9dd0783186e9d3",
-  "name" : "Título incorrecto provoca error",
-  "time" : {
-    "start" : 1748286429298,
-    "stop" : 1748286441143,
-    "duration" : 11845
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "3060b4efaf9bfd44",
-  "name" : "Usuario sube un archivo exitosamente @upload",
-  "time" : {
-    "start" : 1748286511590,
-    "stop" : 1748286514665,
-    "duration" : 3075
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d91cab495ff11811",
-  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-  "time" : {
-    "start" : 1748286496271,
-    "stop" : 1748286502507,
-    "duration" : 6236
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "da5b6f423e1d2a22",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
-  "time" : {
-    "start" : 1748286391712,
-    "stop" : 1748286398499,
-    "duration" : 6787
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "872cfe9dda5c9d0",
-  "name" : "Validar título y videos relacionados correctamente",
-  "time" : {
-    "start" : 1748286405328,
-    "stop" : 1748286417030,
-    "duration" : 11702
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "24477a60825eeb33",
-  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
-  "time" : {
-    "start" : 1748286384905,
-    "stop" : 1748286391705,
-    "duration" : 6800
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "9b9a3ca706267260",
-  "name" : "Validar carga de pagina de DailyMotion @Carga",
-  "time" : {
-    "start" : 1748286549767,
-    "stop" : 1748286551164,
-    "duration" : 1397
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c869242f61fdaaa4",
-  "name" : "Mobile recharge of '$200'",
-  "time" : {
-    "start" : 1748286453616,
-    "stop" : 1748286460820,
-    "duration" : 7204
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8e5d7eec2a836643",
-  "name" : "Buscar plan Telcel Plus",
-  "time" : {
-    "start" : 1748286441151,
-    "stop" : 1748286444864,
-    "duration" : 3713
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b47bdbe109bfd123",
-  "name" : "Navegar al canal",
-  "time" : {
-    "start" : 1748286355723,
-    "stop" : 1748286371126,
-    "duration" : 15403
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6a266700726d2492",
+  "uid" : "cb7f3413107dd9d7",
   "name" : "Validar fecha de publicación reciente",
   "time" : {
-    "start" : 1748286339428,
-    "stop" : 1748286348593,
-    "duration" : 9165
+    "start" : 1748365049948,
+    "stop" : 1748365050443,
+    "duration" : 495
   },
-  "status" : "passed",
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "de0c219dad399bfb",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "time" : {
+    "start" : 1748365052004,
+    "stop" : 1748365052311,
+    "duration" : 307
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "963c3edecb24f9b1",
+  "name" : "Validar el atributo href @enlaces",
+  "time" : {
+    "start" : 1748365052612,
+    "stop" : 1748365052919,
+    "duration" : 307
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "7ffb6aa1e89c5d4c",
+  "name" : "Buscar plan Telcel Plus",
+  "time" : {
+    "start" : 1748365050747,
+    "stop" : 1748365051053,
+    "duration" : 306
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c8360ee2220dd90d",
+  "name" : "Validar título y videos relacionados correctamente",
+  "time" : {
+    "start" : 1748365050443,
+    "stop" : 1748365050746,
+    "duration" : 303
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1faa71f0da214f63",
+  "name" : "Validar mockeo de datos en YouTube",
+  "time" : {
+    "start" : 1748365053551,
+    "stop" : 1748365053855,
+    "duration" : 304
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "5e7ece234a10929f",
+  "name" : "Validar sección Contáctanos",
+  "time" : {
+    "start" : 1748365051384,
+    "stop" : 1748365051697,
+    "duration" : 313
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1c3628a07c63a0f0",
+  "name" : "Validar el boton del login",
+  "time" : {
+    "start" : 1748365052312,
+    "stop" : 1748365052609,
+    "duration" : 297
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "bfc8653b315002f4",
+  "name" : "Recargar saldo de $100",
+  "time" : {
+    "start" : 1748365051058,
+    "stop" : 1748365051383,
+    "duration" : 325
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "51f4f5863a52bec3",
+  "name" : "Validar descarga de archivo",
+  "time" : {
+    "start" : 1748365053230,
+    "stop" : 1748365053550,
+    "duration" : 320
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "96229d5c29343524",
+  "name" : "Verificar carga de elementos clave",
+  "time" : {
+    "start" : 1748365051699,
+    "stop" : 1748365052003,
+    "duration" : 304
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b185a4134f89cda9",
+  "name" : "Validar carga de archivo",
+  "time" : {
+    "start" : 1748365052922,
+    "stop" : 1748365053229,
+    "duration" : 307
+  },
+  "status" : "broken",
   "severity" : "normal"
 } ]

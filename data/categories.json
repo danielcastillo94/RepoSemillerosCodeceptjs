@@ -3,73 +3,165 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "No se encontró el texto esperado: \"Falling In Reverse - \"Watch The World Burn\"\" tras 5 intentos",
+      "name" : "Cannot read properties of undefined (reading 'goto')",
       "children" : [ {
+        "name" : "Validar fecha de publicación reciente",
+        "uid" : "cb7f3413107dd9d7",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365049948,
+          "stop" : 1748365050443,
+          "duration" : 495
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
         "name" : "Validar título y videos relacionados correctamente",
-        "uid" : "872cfe9dda5c9d0",
-        "parentUid" : "606071e845fcba6536e80c2b3043a886",
+        "uid" : "c8360ee2220dd90d",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
         "status" : "broken",
         "time" : {
-          "start" : 1748286405328,
-          "stop" : 1748286417030,
-          "duration" : 11702
+          "start" : 1748365050443,
+          "stop" : 1748365050746,
+          "duration" : 303
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "606071e845fcba6536e80c2b3043a886"
-    }, {
-      "name" : "No se encontró el texto esperado: \"Este título no existe\" tras 5 intentos",
-      "children" : [ {
-        "name" : "Título incorrecto provoca error",
-        "uid" : "3a9dd0783186e9d3",
-        "parentUid" : "7cb806f98d27d18423c6f338ae3ad36d",
+      }, {
+        "name" : "Buscar plan Telcel Plus",
+        "uid" : "7ffb6aa1e89c5d4c",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
         "status" : "broken",
         "time" : {
-          "start" : 1748286429298,
-          "stop" : 1748286441143,
-          "duration" : 11845
+          "start" : 1748365050747,
+          "stop" : 1748365051053,
+          "duration" : 306
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
-      } ],
-      "uid" : "7cb806f98d27d18423c6f338ae3ad36d"
-    }, {
-      "name" : "No steps matching \"debería ver:\"",
-      "children" : [ {
+      }, {
+        "name" : "Recargar saldo de $100",
+        "uid" : "bfc8653b315002f4",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365051058,
+          "stop" : 1748365051383,
+          "duration" : 325
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar sección Contáctanos",
+        "uid" : "5e7ece234a10929f",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365051384,
+          "stop" : 1748365051697,
+          "duration" : 313
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
         "name" : "Verificar carga de elementos clave",
-        "uid" : "f864a7163e8ae5ab",
-        "parentUid" : "259089c0497a8892213b9e9fa2f3b58b",
+        "uid" : "96229d5c29343524",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
         "status" : "broken",
         "time" : {
-          "start" : 1748286491773,
-          "stop" : 1748286496261,
-          "duration" : 4488
+          "start" : 1748365051699,
+          "stop" : 1748365052003,
+          "duration" : 304
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+        "uid" : "de0c219dad399bfb",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365052004,
+          "stop" : 1748365052311,
+          "duration" : 307
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar el boton del login",
+        "uid" : "1c3628a07c63a0f0",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365052312,
+          "stop" : 1748365052609,
+          "duration" : 297
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar el atributo href @enlaces",
+        "uid" : "963c3edecb24f9b1",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365052612,
+          "stop" : 1748365052919,
+          "duration" : 307
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar carga de archivo",
+        "uid" : "b185a4134f89cda9",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365052922,
+          "stop" : 1748365053229,
+          "duration" : 307
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar descarga de archivo",
+        "uid" : "51f4f5863a52bec3",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365053230,
+          "stop" : 1748365053550,
+          "duration" : 320
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar mockeo de datos en YouTube",
+        "uid" : "1faa71f0da214f63",
+        "parentUid" : "5d0ec3040f97790f65fb543488720d03",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748365053551,
+          "stop" : 1748365053855,
+          "duration" : 304
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "259089c0497a8892213b9e9fa2f3b58b"
-    }, {
-      "name" : "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://demoqa.com/upload-download\", waiting until \"load\"\n",
-      "children" : [ {
-        "name" : "Usuario descarga un archivo exitosamente @download",
-        "uid" : "3a035bde6918130a",
-        "parentUid" : "ff7769961aa3e646714291d342f19a2d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1748286514686,
-          "stop" : 1748286549725,
-          "duration" : 35039
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "ff7769961aa3e646714291d342f19a2d"
+      "uid" : "5d0ec3040f97790f65fb543488720d03"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],
