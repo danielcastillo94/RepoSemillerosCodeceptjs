@@ -1,1 +1,368 @@
-{ }
+{
+  "772b41fe9b993738be2de237826af37b:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "8c5d0dc566bed623",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/8c5d0dc566bed623",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159613705,
+        "stop" : 1747159631050,
+        "duration" : 17345
+      }
+    } ]
+  },
+  "b2b62854e2bdbec47b205eda12220677:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7eb53110879d698a",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/7eb53110879d698a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159590716,
+        "stop" : 1747159613008,
+        "duration" : 22292
+      }
+    } ]
+  },
+  "0dc7682922114c9b25ffb829ad109290:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "aeb4e06d6094ab6e",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/aeb4e06d6094ab6e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747851786469,
+        "stop" : 1747851799800,
+        "duration" : 13331
+      }
+    } ]
+  },
+  "276adc455050bd8270fb8d0083127457:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "443626e7b89fc7f8",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/443626e7b89fc7f8",
+      "status" : "broken",
+      "statusDetails" : "No steps matching \"imprimo el mensaje personalizado \"Iniciando prueba\"\"",
+      "time" : {
+        "start" : 1747159753000,
+        "stop" : 1747159754626,
+        "duration" : 1626
+      }
+    } ]
+  },
+  "5859bdc5079fb5c8fc016fe51efffcbe:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4aac84fe93289e22",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/4aac84fe93289e22",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159558325,
+        "stop" : 1747159568734,
+        "duration" : 10409
+      }
+    } ]
+  },
+  "15ecd91f52dd28ce13edd0d414de559f:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "97d9e21db3b1e919",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/97d9e21db3b1e919",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159568903,
+        "stop" : 1747159579314,
+        "duration" : 10411
+      }
+    } ]
+  },
+  "e36777fcba9d3e5026a01482513aea1b:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a231c6a2571fc5da",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/a231c6a2571fc5da",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159537135,
+        "stop" : 1747159547605,
+        "duration" : 10470
+      }
+    } ]
+  },
+  "34774030b9fee8e4f2c3d132b1c94586:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "681c08fdd1ee9456",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/681c08fdd1ee9456",
+      "status" : "broken",
+      "statusDetails" : "page.waitForLoadState: Timeout 10000ms exceeded.\n=========================== logs ===========================\n  \"domcontentloaded\" event fired\n  \"load\" event fired\n============================================================",
+      "time" : {
+        "start" : 1747159631620,
+        "stop" : 1747159666549,
+        "duration" : 34929
+      }
+    } ]
+  },
+  "db052455e3ef44994695ac24b2f1e2d2:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9cfae715b430e1f1",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/9cfae715b430e1f1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159754733,
+        "stop" : 1747159760038,
+        "duration" : 5305
+      }
+    } ]
+  },
+  "e0d8ab1eb88d6b47d39fce21de533483:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "133fac869f1acd87",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/133fac869f1acd87",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159666870,
+        "stop" : 1747159726360,
+        "duration" : 59490
+      }
+    } ]
+  },
+  "c77d9f766a7fa4633a6ac07568b0972f:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9f2a9ab6d08350cc",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/9f2a9ab6d08350cc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159518497,
+        "stop" : 1747159536962,
+        "duration" : 18465
+      }
+    } ]
+  },
+  "151cee41a8ca93b15b07283a08d3a221:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b72d3dd86ee54b9",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/b72d3dd86ee54b9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159579634,
+        "stop" : 1747159590319,
+        "duration" : 10685
+      }
+    } ]
+  },
+  "8aa7d2019475f2cc7629b62ce34ac937:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "84c4be195e05bf2",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/84c4be195e05bf2",
+      "status" : "broken",
+      "statusDetails" : "No steps matching \"hace clic en el botón \"Explorar\"\"",
+      "time" : {
+        "start" : 1747851654238,
+        "stop" : 1747851661568,
+        "duration" : 7330
+      }
+    } ]
+  },
+  "cb93a540f803c9ac4825d784f82ab297:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "63f8478efa54407e",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/63f8478efa54407e",
+      "status" : "broken",
+      "statusDetails" : "No steps matching \"el usuario navega a la página principal de YouTube\"",
+      "time" : {
+        "start" : 1747163200414,
+        "stop" : 1747163202047,
+        "duration" : 1633
+      }
+    } ]
+  },
+  "54aab66238b248e9e834ecd5064e4d90:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6c81b7809c608486",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/6c81b7809c608486",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159547830,
+        "stop" : 1747159558004,
+        "duration" : 10174
+      }
+    } ]
+  },
+  "9ffbe6c8f182ca54fdb4bd768a3534fc:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b3501c236749670e",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/b3501c236749670e",
+      "status" : "broken",
+      "statusDetails" : "No steps matching \"hace clic en el botón \"Explorar\"\"",
+      "time" : {
+        "start" : 1747851645446,
+        "stop" : 1747851653675,
+        "duration" : 8229
+      }
+    } ]
+  },
+  "5c14a428710eabc30b831509f0f2ea31:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d12408c74559f281",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/d12408c74559f281",
+      "status" : "passed",
+      "time" : {
+        "start" : 1747159505239,
+        "stop" : 1747159518350,
+        "duration" : 13111
+      }
+    } ]
+  },
+  "25b3cc5fb720c6a4042f5fa4521393ce:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "8114ac152939984b",
+      "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/114//#testresult/8114ac152939984b",
+      "status" : "broken",
+      "statusDetails" : "No steps matching \"debería ver:\"",
+      "time" : {
+        "start" : 1747159726846,
+        "stop" : 1747159736244,
+        "duration" : 9398
+      }
+    } ]
+  }
+}
