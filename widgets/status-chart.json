@@ -1,1 +1,251 @@
-[ ]
+[ {
+  "uid" : "d055e3a61ec95546",
+  "name" : "Mobile recharge of '$300'",
+  "time" : {
+    "start" : 1748545153230,
+    "stop" : 1748545162444,
+    "duration" : 9214
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f4d6f82c60d9ac0d",
+  "name" : "Validación de una búsqueda en YouTube",
+  "time" : {
+    "start" : 1748545034844,
+    "stop" : 1748545042046,
+    "duration" : 7202
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2f51cab2493b3dc3",
+  "name" : "Validar título distinto de otro video",
+  "time" : {
+    "start" : 1748545104064,
+    "stop" : 1748545116163,
+    "duration" : 12099
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "535b883ec2be5270",
+  "name" : "Validar el atributo href @enlaces",
+  "time" : {
+    "start" : 1748545229684,
+    "stop" : 1748545230099,
+    "duration" : 415
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4093d992f0fdcec2",
+  "name" : "Validar sección Contáctanos",
+  "time" : {
+    "start" : 1748545162463,
+    "stop" : 1748545184437,
+    "duration" : 21974
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "caef9f1f45541721",
+  "name" : "Usuario sube un archivo exitosamente @upload",
+  "time" : {
+    "start" : 1748545204330,
+    "stop" : 1748545206187,
+    "duration" : 1857
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "134dfe125158a434",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Al menos 10 miniaturas de video\"}",
+  "time" : {
+    "start" : 1748545085119,
+    "stop" : 1748545091949,
+    "duration" : 6830
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6ae4b915fa4fc0fe",
+  "name" : "Usuario descarga un archivo exitosamente @download",
+  "time" : {
+    "start" : 1748545206203,
+    "stop" : 1748545207613,
+    "duration" : 1410
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e965e4aaf1c51f10",
+  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+  "time" : {
+    "start" : 1748545188879,
+    "stop" : 1748545195249,
+    "duration" : 6370
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f9316ddda102505",
+  "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"musica\"} @mock",
+  "time" : {
+    "start" : 1748545207629,
+    "stop" : 1748545214792,
+    "duration" : 7163
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "276364644a532426",
+  "name" : "Título incorrecto provoca error",
+  "time" : {
+    "start" : 1748545116170,
+    "stop" : 1748545128089,
+    "duration" : 11919
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "940d7d086ba631c3",
+  "name" : "Navegar al canal",
+  "time" : {
+    "start" : 1748545042057,
+    "stop" : 1748545057556,
+    "duration" : 15499
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a125911363214d4f",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Botón de Iniciar sesión\"}",
+  "time" : {
+    "start" : 1748545078242,
+    "stop" : 1748545085112,
+    "duration" : 6870
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bab772dedd50a522",
+  "name" : "Validar título y videos relacionados correctamente",
+  "time" : {
+    "start" : 1748545091960,
+    "stop" : 1748545104057,
+    "duration" : 12097
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9124a6551d100b3e",
+  "name" : "Validar el boton del login",
+  "time" : {
+    "start" : 1748545195258,
+    "stop" : 1748545204320,
+    "duration" : 9062
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d1a9cf371f68f4df",
+  "name" : "Mobile recharge of '$100'",
+  "time" : {
+    "start" : 1748545132090,
+    "stop" : 1748545143680,
+    "duration" : 11590
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3309c5d7ca6cee18",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Logo de YouTube\"}",
+  "time" : {
+    "start" : 1748545064639,
+    "stop" : 1748545071492,
+    "duration" : 6853
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "752b5610a7baa6ac",
+  "name" : "Validación de carga inicial y elementos clave en la página de YouTube {\"elemento\":\"Campo de búsqueda\"}",
+  "time" : {
+    "start" : 1748545071498,
+    "stop" : 1748545078236,
+    "duration" : 6738
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8fd2532a9a1e497d",
+  "name" : "Validar carga de pagina de DailyMotion @Carga",
+  "time" : {
+    "start" : 1748545229035,
+    "stop" : 1748545229680,
+    "duration" : 645
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "62ad72a72edff4ea",
+  "name" : "Mobile recharge of '$200'",
+  "time" : {
+    "start" : 1748545143698,
+    "stop" : 1748545153212,
+    "duration" : 9514
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d196c6dd6e136799",
+  "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"comedia\"} @mock",
+  "time" : {
+    "start" : 1748545221911,
+    "stop" : 1748545229026,
+    "duration" : 7115
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "764b45240a130c00",
+  "name" : "Verificar carga de elementos clave",
+  "time" : {
+    "start" : 1748545184451,
+    "stop" : 1748545188872,
+    "duration" : 4421
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "85e764e1cc319104",
+  "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"gatos\"} @mock",
+  "time" : {
+    "start" : 1748545214800,
+    "stop" : 1748545221896,
+    "duration" : 7096
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c8df8116452a7b72",
+  "name" : "Buscar plan Telcel Plus",
+  "time" : {
+    "start" : 1748545128097,
+    "stop" : 1748545132076,
+    "duration" : 3979
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "29a6a5ed3d59402c",
+  "name" : "Validar fecha de publicación reciente",
+  "time" : {
+    "start" : 1748545025468,
+    "stop" : 1748545034834,
+    "duration" : 9366
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
