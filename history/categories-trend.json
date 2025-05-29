@@ -1,8 +1,3 @@
 [ {
-  "buildOrder" : 120,
-  "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/120/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "Test defects" : 3
-  }
+  "data" : { }
 } ]
