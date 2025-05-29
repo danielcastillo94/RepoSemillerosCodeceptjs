@@ -37,6 +37,7 @@ exports.config = {
     youtubeMainPage: './pages/youtubeMainPage.js',
     youtubeVideoPage: './pages/youtubeVideoMainPage.js', 
     youtubeLoginPage: './pages/youtubeLoginPage.js',
+    uploadPage: './pages/israelPage.js',
   },
   gherkin: {
   features: './features/*.feature',
@@ -48,7 +49,9 @@ exports.config = {
     './steps/dailySteps.js',
     './steps/telcelSteps.js',
     './steps/videoYoutubeSteps.js',
-    './steps/stepsEmilio.js'
+    './steps/stepsEmilio.js',
+    './steps/israelSteps.js',
+    './steps/israelMockeo.js',
   ] 
   },
   plugins: {
