@@ -41,6 +41,7 @@ exports.config = {
   gherkin: {
     features: "./features/*.feature",
     steps: [
+      "./steps/uploadydownloadSteps.js",
       "./steps/mockeoSteps.js",
       "./steps/pruebaSteps.js",
       "./steps/loginSteps.js",
