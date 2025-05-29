@@ -8,11 +8,13 @@ module.exports = {
     I.attachFile(this.uploadInput, filePath);
   },
 
-  async downloadFile() {
-    I.click(this.downloadButton);
-  },
-
-  async openYouTube() {
-    I.amOnPage('https://www.youtube.com/');
+  async downloadFile(downloadPath) {
+    const playwright = codeceptjs.container.helpers("Playwright");
+    const { page } = playwright;
+    const [download] = await Promise.all([
+      page.waitForEvent('download'),
+      I.click(this.downloadButton)
+    ]);
+    await download.saveAs(downloadPath);
   }
 };

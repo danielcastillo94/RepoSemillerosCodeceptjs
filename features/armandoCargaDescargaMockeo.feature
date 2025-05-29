@@ -10,7 +10,7 @@ Feature: Validar carga, descarga y mockeo de datos
     When descargo el archivo "sampleFile.jpeg"
     Then debería existir el archivo descargado
 
-  Scenario: Validar mockeo de datos en YouTube
-    Given estoy en la página de YouTube
-    When mockeo la respuesta de la API de YouTube
-    Then debería ver el título "Mocked Title"
+  Scenario: Validar mockeo de búsqueda en YouTube
+    Given Estoy en youtube
+    When Hago una busqueda con mockeo
+    Then debería ver resultados mockeados

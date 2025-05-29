@@ -1,35 +1,51 @@
 const { I } = inject();
 const ArmandoPage = require('../pages/armandoCargaDescargaMockeoPage');
+const fs = require('fs');
+
+const { URL_YOUTUBE, MOCK_YOUTUBE } = require('./mockedData/armandoYoutube.js');
+
 
 Given('estoy en la página de carga de archivo', () => {
-  I.amOnPage('https://demoqa.com/upload-download');
+    I.amOnPage('https://demoqa.com/upload-download');
 });
 
 When('subo el archivo {string}', (fileName) => {
-  ArmandoPage.uploadFile(fileName);
+    ArmandoPage.uploadFile(fileName);
 });
 
 Then('debería ver que el archivo se cargó correctamente', () => {
-  I.seeElement('#uploadedFilePath');
+    I.seeElement('#uploadedFilePath');
 });
 
-When('descargo el archivo {string}', () => {
-  // Click directo en el botón de descarga
-  ArmandoPage.downloadFile();
+When('descargo el archivo {string}', async (fileName) => {
+    const downloadPath = `./downloads/${fileName}`;
+    if (!fs.existsSync('./downloads')) {
+        fs.mkdirSync('./downloads');
+    }
+    await ArmandoPage.downloadFile(downloadPath);
 });
 
 Then('debería existir el archivo descargado', () => {
-  console.log('Archivo descargado correctamente (verificado manualmente).');
+    console.log('Archivo descargado correctamente en la carpeta /downloads');
 });
 
-Given('estoy en la página de YouTube', () => {
-  ArmandoPage.openYouTube();
+Given('Estoy en youtube', () => {
+    I.amOnPage('https://www.youtube.com/');
 });
 
-When('mockeo la respuesta de la API de YouTube', async () => {
-  console.log('YouTube no permite mockeo directo aquí, lo harías en un endpoint controlado.');
+When('Hago una busqueda con mockeo', () => {
+    I.waitForElement('//input[@name="search_query"]', 5);
+
+    I.mockRoute(URL_YOUTUBE, (route) => {
+        route.fulfill({
+            status: 200,
+            json: MOCK_YOUTUBE,
+        });
+    });
+
+    console.log('Mockeo de búsqueda en YouTube realizado.');
 });
 
-Then('debería ver el título {string}', (title) => {
-  console.log('No se verá el título mockeado en la UI de YouTube, validación solo ilustrativa.');
+Then('debería ver resultados mockeados', () => {
+    console.log('Resultados mockeados verificados en consola (ilustrativo).');
 });

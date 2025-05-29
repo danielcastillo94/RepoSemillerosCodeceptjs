@@ -3,10 +3,13 @@ exports.config = {
   tests: './*_test.js',
   output: './output',
   helpers: {
-    Puppeteer: {
+    Playwright: {
       url: 'https://www.youtube.com',
-      show: false,
+      show: true,
       locale: "es-MX",
+    },
+    MockRequest: {
+      require: '@codeceptjs/mock-request'
     },
     MiHelper: {
       require: './helpers/MiHelper.js'

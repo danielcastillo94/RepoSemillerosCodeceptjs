@@ -19,5 +19,8 @@
     "codeceptjs": "^3.7.3",
     "playwright": "^1.52.0",
     "puppeteer": "^24.9.0"
+  },
+  "dependencies": {
+    "@codeceptjs/mock-request": "^0.3.1"
   }
 }
