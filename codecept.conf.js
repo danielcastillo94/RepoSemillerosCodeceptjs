@@ -50,7 +50,8 @@ exports.config = {
     './steps/videoYoutubeSteps.js',
     './steps/stepsEmilio.js',
     './steps/emilioUploadSteps.js',
-    './steps/emilioDownloadSteps.js'
+    './steps/emilioDownloadSteps.js',
+    './steps/emilioMockSteps.js'
   ] 
   },
   plugins: {

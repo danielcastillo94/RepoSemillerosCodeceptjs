@@ -12,3 +12,16 @@ Feature: Cargar y descargar un archivo
     When el usuario hace clic en el botón de descarga
     Then el archivo debería estar presente en la carpeta de descargas
 
+  @mock
+Scenario Outline: Mockeo resultados youtube con diferentes términos de búsqueda
+  Given Estoy en youtube
+  When Hago una busqueda con mockeo de "<termino>"
+  Then visualizo videos de cristiano
+
+  Examples:
+    | termino  |
+    | musica   |
+    | gatos    |
+    | comedia  |
+
+
