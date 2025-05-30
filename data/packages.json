@@ -1,5 +1,74 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "features.emilioEjercicio.feature",
+    "children" : [ {
+      "name" : "Usuario sube un archivo exitosamente @upload",
+      "uid" : "f5101f9984aa17f5",
+      "parentUid" : "4bfa93a3ff58bb75ee64fb8df2b7fc69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748630545382,
+        "stop" : 1748630548171,
+        "duration" : 2789
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Usuario descarga un archivo exitosamente @download",
+      "uid" : "4719590c940e8e05",
+      "parentUid" : "4bfa93a3ff58bb75ee64fb8df2b7fc69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748630548194,
+        "stop" : 1748630550532,
+        "duration" : 2338
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"musica\"} @mock",
+      "uid" : "f354d4a34754e815",
+      "parentUid" : "4bfa93a3ff58bb75ee64fb8df2b7fc69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748630550550,
+        "stop" : 1748630557755,
+        "duration" : 7205
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"gatos\"} @mock",
+      "uid" : "5e9eababf3f444c8",
+      "parentUid" : "4bfa93a3ff58bb75ee64fb8df2b7fc69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748630557764,
+        "stop" : 1748630565038,
+        "duration" : 7274
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"comedia\"} @mock",
+      "uid" : "11171c0a703f9845",
+      "parentUid" : "4bfa93a3ff58bb75ee64fb8df2b7fc69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748630565048,
+        "stop" : 1748630572270,
+        "duration" : 7222
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "features.emilioEjercicio.feature"
+  } ],
   "name" : "packages"
 }

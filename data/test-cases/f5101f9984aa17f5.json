@@ -1,0 +1,213 @@
+{
+  "uid" : "f5101f9984aa17f5",
+  "name" : "Usuario sube un archivo exitosamente @upload",
+  "fullName" : "features/emilioEjercicio.feature: Cargar y descargar un archivo > Usuario sube un archivo exitosamente @upload",
+  "historyId" : "f104a15980f7b9ddacac2cf534bc7765:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1748630545382,
+    "stop" : 1748630548171,
+    "duration" : 2789
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1748630545382,
+      "stop" : 1748630545432,
+      "duration" : 50
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1748630545116,
+      "stop" : 1748630545380,
+      "duration" : 264
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given que el usuario está en la página de carga de archivos",
+      "time" : {
+        "start" : 1748630545449,
+        "stop" : 1748630545450,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When el usuario adjunta un archivo válido",
+      "time" : {
+        "start" : 1748630545454,
+        "stop" : 1748630545454,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then el archivo debería mostrarse como cargado",
+      "time" : {
+        "start" : 1748630545456,
+        "stop" : 1748630548169,
+        "duration" : 2713
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I am on page \"https://demoqa.com/upload-download\"",
+      "time" : {
+        "start" : 1748630545457,
+        "stop" : 1748630547933,
+        "duration" : 2476
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I attach file \"#uploadFile\", \"uploads/prueba.txt\"",
+      "time" : {
+        "start" : 1748630547933,
+        "stop" : 1748630548145,
+        "duration" : 212
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "I see \"prueba.txt\", \"#uploadedFilePath\"",
+      "time" : {
+        "start" : 1748630548145,
+        "stop" : 1748630548169,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1748630572278,
+      "stop" : 1748630572279,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1748630548172,
+      "stop" : 1748630548193,
+      "duration" : 21
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1701-550"
+  }, {
+    "name" : "thread",
+    "value" : "pid-2463-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.emilioEjercicio.feature"
+  }, {
+    "name" : "tag",
+    "value" : "upload"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Cargar y descargar un archivo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "upload" ]
+  },
+  "source" : "f5101f9984aa17f5.json",
+  "parameterValues" : [ ]
+}

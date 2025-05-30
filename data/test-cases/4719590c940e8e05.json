@@ -1,0 +1,198 @@
+{
+  "uid" : "4719590c940e8e05",
+  "name" : "Usuario descarga un archivo exitosamente @download",
+  "fullName" : "features/emilioEjercicio.feature: Cargar y descargar un archivo > Usuario descarga un archivo exitosamente @download",
+  "historyId" : "3618ef750d228f6939e3e169864f5351:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1748630548194,
+    "stop" : 1748630550532,
+    "duration" : 2338
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1748630548194,
+      "stop" : 1748630548228,
+      "duration" : 34
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1748630545116,
+      "stop" : 1748630545380,
+      "duration" : 264
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given que el usuario está en la página de descarga",
+      "time" : {
+        "start" : 1748630548231,
+        "stop" : 1748630548232,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When el usuario hace clic en el botón de descarga",
+      "time" : {
+        "start" : 1748630548236,
+        "stop" : 1748630550527,
+        "duration" : 2291
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "I am on page \"https://demoqa.com/upload-download\"",
+        "time" : {
+          "start" : 1748630548239,
+          "stop" : 1748630550504,
+          "duration" : 2265
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "I grab attribute from \"#downloadButton\", \"href\"",
+        "time" : {
+          "start" : 1748630550504,
+          "stop" : 1748630550526,
+          "duration" : 22
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Then el archivo debería estar presente en la carpeta de descargas",
+      "time" : {
+        "start" : 1748630550531,
+        "stop" : 1748630550532,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1748630572278,
+      "stop" : 1748630572279,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1748630550533,
+      "stop" : 1748630550549,
+      "duration" : 16
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1701-550"
+  }, {
+    "name" : "thread",
+    "value" : "pid-2463-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.emilioEjercicio.feature"
+  }, {
+    "name" : "tag",
+    "value" : "download"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Cargar y descargar un archivo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "download" ]
+  },
+  "source" : "4719590c940e8e05.json",
+  "parameterValues" : [ ]
+}
