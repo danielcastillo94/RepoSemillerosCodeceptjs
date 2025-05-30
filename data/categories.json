@@ -1,52 +1,5 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "I.abrirYoutube is not a function",
-      "children" : [ {
-        "name" : "Validar fecha de publicación reciente",
-        "uid" : "acd49694b74b642c",
-        "parentUid" : "f20457537b3c802f88ef6bc88540da80",
-        "status" : "broken",
-        "time" : {
-          "start" : 1748632026627,
-          "stop" : 1748632027161,
-          "duration" : 534
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Validar título y videos relacionados correctamente",
-        "uid" : "9083452e6a677b51",
-        "parentUid" : "f20457537b3c802f88ef6bc88540da80",
-        "status" : "broken",
-        "time" : {
-          "start" : 1748632027161,
-          "stop" : 1748632027369,
-          "duration" : 208
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Verificar carga de elementos clave",
-        "uid" : "834c89a9ada66e3c",
-        "parentUid" : "f20457537b3c802f88ef6bc88540da80",
-        "status" : "broken",
-        "time" : {
-          "start" : 1748632078400,
-          "stop" : 1748632078521,
-          "duration" : 121
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "f20457537b3c802f88ef6bc88540da80"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  } ],
+  "children" : [ ],
   "name" : "categories"
 }

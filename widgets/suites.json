@@ -1,92 +1,15 @@
 {
-  "total" : 8,
+  "total" : 1,
   "items" : [ {
-    "uid" : "c54abeb43e2e6c341a979d109d63cf8e",
-    "name" : "Validaciones funcionales en la plataforma de YouTube",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "d2c76bc404a58ecc12ff3c04d6cba31b",
-    "name" : "Validación de resultados relacionados en YouTube",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "5bab7746f6451e92df08cfa66df9145d",
-    "name" : "Validación de carga inicial y elementos clave en la página de YouTube",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "a33775243f021d8b3a19aacdf2004620",
-    "name" : "Automatización de Telcel",
+    "uid" : "a4790287178c089c18a7f0d58a714da4",
+    "name" : "Validaciones funcionales",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 4,
       "unknown" : 0,
-      "total" : 5
-    }
-  }, {
-    "uid" : "6f536b7dc14a75a94777f36790ac17d7",
-    "name" : "Validar carga, descarga y mockeo de datos",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 3,
-      "unknown" : 0,
-      "total" : 3
-    }
-  }, {
-    "uid" : "6300100abe8ed0d86bf5ab61b9136637",
-    "name" : "Validaciones funcionales dailyMotion",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 2,
-      "unknown" : 0,
-      "total" : 2
-    }
-  }, {
-    "uid" : "ed25a67e165223eb323e270a69295234",
-    "name" : "Validación del botón \"Explorar\" y navegación en YouTube",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "315f2d914890879d41a07b18a377f618",
-    "name" : "Validaciones del login en youtube",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
+      "total" : 4
     }
   } ]
 }

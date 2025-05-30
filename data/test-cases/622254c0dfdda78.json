@@ -1,22 +1,22 @@
 {
-  "uid" : "eaa963198dc40b61",
-  "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-  "fullName" : "features/prueba.feature: Validación del botón \"Explorar\" y navegación en YouTube > Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
-  "historyId" : "cb93a540f803c9ac4825d784f82ab297:d41d8cd98f00b204e9800998ecf8427e",
+  "uid" : "622254c0dfdda78",
+  "name" : "Mockeo resultados YouTube {\"busqueda\":\"Videojuegos\"} @mock",
+  "fullName" : "features/israel.feature: Validaciones funcionales > Mockeo resultados YouTube {\"busqueda\":\"Videojuegos\"} @mock",
+  "historyId" : "832a485328030c3c054f26316dff81ba:d41d8cd98f00b204e9800998ecf8427e",
   "time" : {
-    "start" : 1748632078522,
-    "stop" : 1748632085263,
-    "duration" : 6741
+    "start" : 1748632242678,
+    "stop" : 1748632249323,
+    "duration" : 6645
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "name" : "\"before each\" hook: codeceptjs.before",
     "time" : {
-      "start" : 1748632078521,
-      "stop" : 1748632078521,
-      "duration" : 0
+      "start" : 1748632242678,
+      "stop" : 1748632242715,
+      "duration" : 37
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "shouldDisplayMessage" : false,
     "hasContent" : false
   }, {
-    "name" : "\"before each\" hook: codeceptjs.before",
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
     "time" : {
-      "start" : 1748632078522,
-      "stop" : 1748632078548,
-      "duration" : 26
+      "start" : 1748632238740,
+      "stop" : 1748632239012,
+      "duration" : 272
     },
     "status" : "passed",
     "steps" : [ ],
@@ -45,25 +45,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Given el usuario está en la página principal de YouTube",
+      "name" : "Given Estoy en youtube",
       "time" : {
-        "start" : 1748632078549,
-        "stop" : 1748632078550,
-        "duration" : 1
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "When haces clic en el botón \"Explorar\"",
-      "time" : {
-        "start" : 1748632078550,
-        "stop" : 1748632078550,
+        "start" : 1748632242718,
+        "stop" : 1748632242718,
         "duration" : 0
       },
       "status" : "passed",
@@ -75,10 +60,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And debería ver las categorías \"Tendencias\", \"Música\" y \"Noticias\"",
+      "name" : "When Hago una búsqueda de \"Musica\"",
       "time" : {
-        "start" : 1748632078551,
-        "stop" : 1748632078552,
+        "start" : 1748632242724,
+        "stop" : 1748632242725,
         "duration" : 1
       },
       "status" : "passed",
@@ -90,11 +75,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When hacer clic en la categoría \"Música\"",
+      "name" : "And Hago otra búsqueda de \"Videojuegos\"",
       "time" : {
-        "start" : 1748632078553,
-        "stop" : 1748632078553,
-        "duration" : 0
+        "start" : 1748632242728,
+        "stop" : 1748632242729,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -105,11 +90,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then debería ver videos con título y nombre del canal visible",
+      "name" : "Then visualizo videos de Musica",
       "time" : {
-        "start" : 1748632078555,
-        "stop" : 1748632085263,
-        "duration" : 6708
+        "start" : 1748632242732,
+        "stop" : 1748632249323,
+        "duration" : 6591
       },
       "status" : "passed",
       "steps" : [ ],
@@ -120,11 +105,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I am on page \"https://www.youtube.com\"",
+      "name" : "I am on page \"/\"",
       "time" : {
-        "start" : 1748632078555,
-        "stop" : 1748632080423,
-        "duration" : 1868
+        "start" : 1748632242732,
+        "stop" : 1748632244226,
+        "duration" : 1494
       },
       "status" : "passed",
       "steps" : [ ],
@@ -135,11 +120,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait for element \"//div[@id=\"start\"]/yt-icon-button[@id=\"guide-button\"]\", 20",
+      "name" : "I wait for element \"//input[@name=\"search_query\"]\", 5",
       "time" : {
-        "start" : 1748632080423,
-        "stop" : 1748632080476,
-        "duration" : 53
+        "start" : 1748632244227,
+        "stop" : 1748632244312,
+        "duration" : 85
       },
       "status" : "passed",
       "steps" : [ ],
@@ -150,11 +135,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I click \"//div[@id=\"start\"]/yt-icon-button[@id=\"guide-button\"]\"",
+      "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Musica\"",
       "time" : {
-        "start" : 1748632080476,
-        "stop" : 1748632080978,
-        "duration" : 502
+        "start" : 1748632244312,
+        "stop" : 1748632244699,
+        "duration" : 387
       },
       "status" : "passed",
       "steps" : [ ],
@@ -165,11 +150,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait for element \"(//h3[not(@hidden)]/yt-formatted-string[@id=\"guide-section-title\"])[1]\"",
+      "name" : "I press key \"Enter\"",
       "time" : {
-        "start" : 1748632080978,
-        "stop" : 1748632081001,
-        "duration" : 23
+        "start" : 1748632244699,
+        "stop" : 1748632244837,
+        "duration" : 138
       },
       "status" : "passed",
       "steps" : [ ],
@@ -180,11 +165,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I see \"Tendencias\"",
+      "name" : "I mock route \"https://www.youtube.com/youtubei/v1/search?prettyPrint=false\", (route) => {\n      return route.fulfill({\n        status: 200,\n        json: MOCK_YOUTUBE,\n      });\n    }",
       "time" : {
-        "start" : 1748632081001,
-        "stop" : 1748632081017,
-        "duration" : 16
+        "start" : 1748632244837,
+        "stop" : 1748632244848,
+        "duration" : 11
       },
       "status" : "passed",
       "steps" : [ ],
@@ -195,11 +180,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I see \"Música\"",
+      "name" : "I wait 2",
       "time" : {
-        "start" : 1748632081017,
-        "stop" : 1748632081033,
-        "duration" : 16
+        "start" : 1748632244848,
+        "stop" : 1748632246856,
+        "duration" : 2008
       },
       "status" : "passed",
       "steps" : [ ],
@@ -210,11 +195,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I see \"Noticias\"",
+      "name" : "I fill field \"//input[@name=\"search_query\"]\", \"Videojuegos\"",
       "time" : {
-        "start" : 1748632081033,
-        "stop" : 1748632081045,
-        "duration" : 12
+        "start" : 1748632246856,
+        "stop" : 1748632247183,
+        "duration" : 327
       },
       "status" : "passed",
       "steps" : [ ],
@@ -225,11 +210,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I click \"Música\"",
+      "name" : "I press key \"Enter\"",
       "time" : {
-        "start" : 1748632081045,
-        "stop" : 1748632081230,
-        "duration" : 185
+        "start" : 1748632247184,
+        "stop" : 1748632247310,
+        "duration" : 126
       },
       "status" : "passed",
       "steps" : [ ],
@@ -240,11 +225,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait 4",
+      "name" : "I wait 2",
       "time" : {
-        "start" : 1748632081230,
-        "stop" : 1748632085232,
-        "duration" : 4002
+        "start" : 1748632247310,
+        "stop" : 1748632249309,
+        "duration" : 1999
       },
       "status" : "passed",
       "steps" : [ ],
@@ -255,11 +240,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I wait for element \"//*[@id=\"hero-title\"]\", 20",
+      "name" : "I see \"Xavi, Manuel Turizo - En Privado (Official Video)\"",
       "time" : {
-        "start" : 1748632085232,
-        "stop" : 1748632085240,
-        "duration" : 8
+        "start" : 1748632249309,
+        "stop" : 1748632249318,
+        "duration" : 9
       },
       "status" : "passed",
       "steps" : [ ],
@@ -270,26 +255,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "I see element \"//*[@id=\"hero-title\"]\"",
+      "name" : "I see \"Grupo Marca Registrada x Víctor Valverde - El Mayor de los Ranas [En Vivo]\"",
       "time" : {
-        "start" : 1748632085240,
-        "stop" : 1748632085250,
-        "duration" : 10
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "I see element \"//*[@id=\"description\"]/span[1]\"",
-      "time" : {
-        "start" : 1748632085251,
-        "stop" : 1748632085263,
-        "duration" : 12
+        "start" : 1748632249318,
+        "stop" : 1748632249322,
+        "duration" : 4
       },
       "status" : "passed",
       "steps" : [ ],
@@ -302,7 +272,7 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 17,
+    "stepsCount" : 15,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -310,8 +280,8 @@
   "afterStages" : [ {
     "name" : "\"after each\" hook: codeceptjs.after",
     "time" : {
-      "start" : 1748632085264,
-      "stop" : 1748632085270,
+      "start" : 1748632249323,
+      "stop" : 1748632249329,
       "duration" : 6
     },
     "status" : "passed",
@@ -325,8 +295,8 @@
   }, {
     "name" : "\"after all\" hook: codeceptjs.afterSuite",
     "time" : {
-      "start" : 1748632085270,
-      "stop" : 1748632085270,
+      "start" : 1748632262861,
+      "stop" : 1748632262861,
       "duration" : 0
     },
     "status" : "passed",
@@ -346,19 +316,19 @@
     "value" : "codeceptjs"
   }, {
     "name" : "host",
-    "value" : "fv-az1695-625"
+    "value" : "fv-az1338-165"
   }, {
     "name" : "thread",
-    "value" : "pid-6093-worker-main"
+    "value" : "pid-2564-worker-main"
   }, {
     "name" : "package",
-    "value" : "features.prueba.feature"
+    "value" : "features.israel.feature"
   }, {
     "name" : "tag",
-    "value" : "test"
+    "value" : "mock"
   }, {
     "name" : "parentSuite",
-    "value" : "Validación del botón \"Explorar\" y navegación en YouTube"
+    "value" : "Validaciones funcionales"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
@@ -371,8 +341,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "test" ]
+    "tags" : [ "mock" ]
   },
-  "source" : "eaa963198dc40b61.json",
+  "source" : "622254c0dfdda78.json",
   "parameterValues" : [ ]
 }
