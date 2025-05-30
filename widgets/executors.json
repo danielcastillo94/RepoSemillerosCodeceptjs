@@ -1,1 +1,10 @@
-[ ]
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs",
+  "buildOrder" : 130,
+  "buildName" : "GitHub Actions Run #15353679596",
+  "buildUrl" : "https://github.com/danielcastillo94/RepoSemillerosCodeceptjs/actions/runs/15353679596",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/130/"
+} ]

@@ -1,5 +1,74 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Cargar y descargar un archivo",
+    "children" : [ {
+      "name" : "Usuario sube un archivo exitosamente @upload",
+      "uid" : "9d7475cda82e67b7",
+      "parentUid" : "2e83a92139e169587bd33c1c06763ff8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748631287898,
+        "stop" : 1748631290100,
+        "duration" : 2202
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Usuario descarga un archivo exitosamente @download",
+      "uid" : "c7a776afacf016be",
+      "parentUid" : "2e83a92139e169587bd33c1c06763ff8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748631290125,
+        "stop" : 1748631291743,
+        "duration" : 1618
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"musica\"} @mock",
+      "uid" : "1a5bc2b0880cd6b9",
+      "parentUid" : "2e83a92139e169587bd33c1c06763ff8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748631291765,
+        "stop" : 1748631300429,
+        "duration" : 8664
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"gatos\"} @mock",
+      "uid" : "358c06b8ae4d5244",
+      "parentUid" : "2e83a92139e169587bd33c1c06763ff8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748631300436,
+        "stop" : 1748631307503,
+        "duration" : 7067
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"comedia\"} @mock",
+      "uid" : "a75d4efce9a4dc56",
+      "parentUid" : "2e83a92139e169587bd33c1c06763ff8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1748631307511,
+        "stop" : 1748631314693,
+        "duration" : 7182
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2e83a92139e169587bd33c1c06763ff8"
+  } ],
   "name" : "suites"
 }

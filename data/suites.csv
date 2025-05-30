@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri May 30 18:54:50 GMT 2025","Fri May 30 18:54:51 GMT 2025","1618","Cargar y descargar un archivo","","","","","Usuario descarga un archivo exitosamente @download",""
+"passed","Fri May 30 18:55:00 GMT 2025","Fri May 30 18:55:07 GMT 2025","7067","Cargar y descargar un archivo","","","","","Mockeo resultados youtube con diferentes términos de búsqueda {""termino"":""gatos""} @mock",""
+"passed","Fri May 30 18:54:51 GMT 2025","Fri May 30 18:55:00 GMT 2025","8664","Cargar y descargar un archivo","","","","","Mockeo resultados youtube con diferentes términos de búsqueda {""termino"":""musica""} @mock",""
+"passed","Fri May 30 18:55:07 GMT 2025","Fri May 30 18:55:14 GMT 2025","7182","Cargar y descargar un archivo","","","","","Mockeo resultados youtube con diferentes términos de búsqueda {""termino"":""comedia""} @mock",""
+"passed","Fri May 30 18:54:47 GMT 2025","Fri May 30 18:54:50 GMT 2025","2202","Cargar y descargar un archivo","","","","","Usuario sube un archivo exitosamente @upload",""
