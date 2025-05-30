@@ -50,7 +50,7 @@ exports.config = {
     './steps/telcelSteps.js',
     './steps/videoYoutubeSteps.js',
     './steps/stepsEmilio.js',
-    './steps/israelSteps.js',
+    './steps/IsraelSteps.js',
     './steps/israelMockeo.js',
   ] 
   },
