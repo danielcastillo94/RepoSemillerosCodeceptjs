@@ -1,9 +1,7 @@
 const { I } = inject();
 const ArmandoPage = require('../pages/armandoCargaDescargaMockeoPage');
 const fs = require('fs');
-
 const { URL_YOUTUBE, MOCK_YOUTUBE } = require('./mockedData/armandoYoutube.js');
-
 
 Given('estoy en la página de carga de archivo', () => {
     I.amOnPage('https://demoqa.com/upload-download');
@@ -22,7 +20,13 @@ When('descargo el archivo {string}', async (fileName) => {
     if (!fs.existsSync('./downloads')) {
         fs.mkdirSync('./downloads');
     }
-    await ArmandoPage.downloadFile(downloadPath);
+    const playwright = codeceptjs.container.helpers("Playwright");
+    const { page } = playwright;
+    const [download] = await Promise.all([
+        page.waitForEvent('download', { timeout: 10000 }),
+        I.click('#downloadButton'),
+    ]);
+    await download.saveAs(downloadPath);
 });
 
 Then('debería existir el archivo descargado', () => {
@@ -33,17 +37,27 @@ Given('Estoy en youtube', () => {
     I.amOnPage('https://www.youtube.com/');
 });
 
-When('Hago una busqueda con mockeo', () => {
+When('Hago dos busquedas con mockeo', () => {
     I.waitForElement('//input[@name="search_query"]', 5);
 
     I.mockRoute(URL_YOUTUBE, (route) => {
+        console.log('Interceptando llamada a:', route.request().url());
         route.fulfill({
             status: 200,
             json: MOCK_YOUTUBE,
+            headers: { 'Access-Control-Allow-Origin': '*' },
         });
     });
 
-    console.log('Mockeo de búsqueda en YouTube realizado.');
+    I.fillField('//input[@name="search_query"]', 'neffex');
+    I.pressKey('Enter');
+    I.wait(10);
+    console.log('Mockeo con "neffex"');
+
+    I.fillField('//input[@name="search_query"]', 'metallica');
+    I.pressKey('Enter');
+    I.wait(10);
+    console.log('Mockeo sigue funcionando con "metallica"');
 });
 
 Then('debería ver resultados mockeados', () => {

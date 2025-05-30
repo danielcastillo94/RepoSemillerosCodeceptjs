@@ -12,5 +12,5 @@ Feature: Validar carga, descarga y mockeo de datos
 
   Scenario: Validar mockeo de búsqueda en YouTube
     Given Estoy en youtube
-    When Hago una busqueda con mockeo
+    When Hago dos busquedas con mockeo
     Then debería ver resultados mockeados
