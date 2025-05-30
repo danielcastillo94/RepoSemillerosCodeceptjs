@@ -1,62 +1,34 @@
+const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+// turn on headless mode when running with HEADLESS=true environment variable
+// export HEADLESS=true && npx codeceptjs run
+setHeadlessWhen(process.env.HEADLESS);
+
+// enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
+setCommonPlugins();
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './*_test.js',
-  output: './output',
+  tests: "./*_test.js",
+  output: "./output",
   helpers: {
-    Playwright: {
-      browser: 'chromium',
-      url: 'https://www.youtube.com',
-      show: false,
-
-      locale: "es-MX",
-    },
-    MiHelper: {
-      require: './helpers/MiHelper.js'
-    },
-    DailyHelpers: {
-    require: './helpers/dailyHelper.js'
-    },
-    NavigationHelper: {
-      require: './helpers/NavigationHelper.js'
-    },
-    DailyHelper: {
-    require: './helpers/HelperEmilio.js'
-    },
-    MiHelperYoutube: {
-    require: './helpers/MiHelperYoutube.js'
-    },
-    RechargeHelper: {
-      require: './helpers/RechargeHelper.js',
+    FileSystem: {},
+    MyHelper: {
+        require: "./helpers/MyHelper.js",
+      },
+    Puppeteer: {
+      url: "https://demoqa.com",
+      show: true,
+      windowSize: "1200x900",
+      waitForTimeout: 10000,
     },
   },
-  
+
   include: {
-    I: './steps_file.js', 
-    dailyPage: './pages/dailyPage.js',
-    validacionesYoutubeSteps: './steps/videoYoutubeSteps.js',
-    youtubeMainPage: './pages/youtubeMainPage.js',
-    youtubeVideoPage: './pages/youtubeVideoMainPage.js', 
-    youtubeLoginPage: './pages/youtubeLoginPage.js',
+    I: "./steps_file.js",
   },
   gherkin: {
-  features: './features/*.feature',
-  steps: [
-    './steps/pruebaSteps.js',
-    './steps/loginSteps.js',
-    './steps/youtubeLoginSteps.js',
-    './steps/validacionesYoutubeSteps.js',
-    './steps/dailySteps.js',
-    './steps/telcelSteps.js',
-    './steps/videoYoutubeSteps.js',
-    './steps/stepsEmilio.js'
-  ] 
+    features: "./features/*.feature",
+    steps: ["./steps/demoqaSteps.js", "./steps/youtubeSteps.js"],
   },
-  plugins: {
-    allure: {
-      enabled: true,
-      require: 'allure-codeceptjs',
-      resultsDir: 'allure-results'
-    }
-  },
-  name: 'Actividad YouTube'
+  name: "demoQA",
 };
