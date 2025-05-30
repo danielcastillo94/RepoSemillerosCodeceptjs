@@ -1,0 +1,314 @@
+{
+  "uid" : "acd49694b74b642c",
+  "name" : "Validar fecha de publicación reciente",
+  "fullName" : "features/youtubeGeneral.feature: Validaciones funcionales en la plataforma de YouTube > Validar fecha de publicación reciente",
+  "historyId" : "e5d831e0117feef5ab849b56ffc6acd1:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1748632026627,
+    "stop" : 1748632027161,
+    "duration" : 534
+  },
+  "status" : "broken",
+  "statusMessage" : "I.abrirYoutube is not a function",
+  "statusTrace" : "TypeError: I.abrirYoutube is not a function\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:4:5\n    at runSteps (node_modules/codeceptjs/lib/mocha/gherkin.js:85:15)\n    at Context.<anonymous> (node_modules/codeceptjs/lib/mocha/gherkin.js:106:30)\n    at promiseRetry.retries.retries (node_modules/codeceptjs/lib/mocha/asyncWrapper.js:155:20)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/promise-retry/index.js:29:24",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1748632023698,
+      "stop" : 1748632026625,
+      "duration" : 2927
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: Before",
+    "time" : {
+      "start" : 1748632026683
+    },
+    "status" : "broken",
+    "steps" : [ {
+      "name" : "Given abro la página de YouTube",
+      "time" : {
+        "start" : 1748632026697,
+        "stop" : 1748632026699,
+        "duration" : 2
+      },
+      "status" : "broken",
+      "statusMessage" : "I.abrirYoutube is not a function",
+      "statusTrace" : "TypeError: I.abrirYoutube is not a function\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/steps/videoYoutubeSteps.js:4:5\n    at runSteps (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/mocha/gherkin.js:85:15)\n    at Context.<anonymous> (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/mocha/gherkin.js:106:30)\n    at promiseRetry.retries.retries (/home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/codeceptjs/lib/mocha/asyncWrapper.js:155:20)\n    at /home/runner/work/RepoSemillerosCodeceptjs/RepoSemillerosCodeceptjs/node_modules/promise-retry/index.js:29:24",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632026783,
+        "stop" : 1748632026783,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7c7c4acd13788baa",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "7c7c4acd13788baa.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632026847,
+        "stop" : 1748632026847,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "313c4cccd3083337",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "313c4cccd3083337.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632026897,
+        "stop" : 1748632026897,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "42bdab58d3ff70a0",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "42bdab58d3ff70a0.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632026947,
+        "stop" : 1748632026947,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "1527a201604d92e1",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "1527a201604d92e1.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632026997,
+        "stop" : 1748632026997,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "3148587fc68726e1",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "3148587fc68726e1.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632027047,
+        "stop" : 1748632027047,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "389b91df689a0be",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "389b91df689a0be.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632027097,
+        "stop" : 1748632027097,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "cb2e48c4b29d2a3c",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "cb2e48c4b29d2a3c.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632027150,
+        "stop" : 1748632027150,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "758a6e994164ca09",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "758a6e994164ca09.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "attachmentsCount" : 8,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1748632026628,
+      "stop" : 1748632026683,
+      "duration" : 55
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1748632027152,
+      "stop" : 1748632027157,
+      "duration" : 5
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1748632027157,
+      "stop" : 1748632027158,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1695-625"
+  }, {
+    "name" : "thread",
+    "value" : "pid-6093-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.youtubeGeneral.feature"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validaciones funcionales en la plataforma de YouTube"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "acd49694b74b642c.json",
+  "parameterValues" : [ ]
+}

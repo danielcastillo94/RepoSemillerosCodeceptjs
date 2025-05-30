@@ -1,5 +1,208 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "fv-az1695-625",
+    "children" : [ {
+      "name" : "pid-6093-worker-main",
+      "children" : [ {
+        "name" : "Verificar carga de elementos clave",
+        "uid" : "834c89a9ada66e3c",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748632078400,
+          "stop" : 1748632078521,
+          "duration" : 121
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar el boton del login",
+        "uid" : "f3336993606bf13d",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632085272,
+          "stop" : 1748632094420,
+          "duration" : 9148
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar título y videos relacionados correctamente",
+        "uid" : "9083452e6a677b51",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748632027161,
+          "stop" : 1748632027369,
+          "duration" : 208
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Usuario hace clic en \"Explorar\" y navega a la categoría Música @test",
+        "uid" : "eaa963198dc40b61",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632078522,
+          "stop" : 1748632085263,
+          "duration" : 6741
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar carga de archivo",
+        "uid" : "d54ea5a98bd4fcbe",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632098154,
+          "stop" : 1748632100602,
+          "duration" : 2448
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar carga de pagina de DailyMotion @Carga",
+        "uid" : "42f2c41b00819c4a",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632094429,
+          "stop" : 1748632097457,
+          "duration" : 3028
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Mobile recharge of '$300'",
+        "uid" : "9b22a5c5cb6720f3",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632047959,
+          "stop" : 1748632055775,
+          "duration" : 7816
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Mobile recharge of '$100'",
+        "uid" : "1adf34a50ded9907",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632032015,
+          "stop" : 1748632040510,
+          "duration" : 8495
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar sección Contáctanos",
+        "uid" : "7de6159baeef154e",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632055794,
+          "stop" : 1748632078384,
+          "duration" : 22590
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar fecha de publicación reciente",
+        "uid" : "acd49694b74b642c",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748632026627,
+          "stop" : 1748632027161,
+          "duration" : 534
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Mobile recharge of '$200'",
+        "uid" : "afbd9261480e4c55",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632040528,
+          "stop" : 1748632047942,
+          "duration" : 7414
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar el atributo href @enlaces",
+        "uid" : "27dcb2febbede3df",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632097460,
+          "stop" : 1748632098148,
+          "duration" : 688
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar descarga de archivo",
+        "uid" : "54c401f75326c0c2",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632100617,
+          "stop" : 1748632102865,
+          "duration" : 2248
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Validar mockeo de búsqueda en YouTube",
+        "uid" : "b9ebe1567219cba9",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632102879,
+          "stop" : 1748632125436,
+          "duration" : 22557
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Buscar plan Telcel Plus",
+        "uid" : "9913f022aebdaed4",
+        "parentUid" : "88402003eefae87baa280242cb15b186",
+        "status" : "passed",
+        "time" : {
+          "start" : 1748632027370,
+          "stop" : 1748632031996,
+          "duration" : 4626
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "88402003eefae87baa280242cb15b186"
+    } ],
+    "uid" : "fceb75b2bf77f431090a503b1c28bcc0"
+  } ],
   "name" : "timeline"
 }
