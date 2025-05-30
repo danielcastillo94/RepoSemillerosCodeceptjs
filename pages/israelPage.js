@@ -11,11 +11,11 @@ module.exports = {
   testFile: 'data/testfile.txt',
   downloadPath: path.join(__dirname, '../downloads/sampleFile.jpeg'),
 
-  goTo() {
-    I.amOnPage(this.url);
-    I.waitForElement(this.uploadInput, 5);
+ goTo() {
+    I.amOnPage(this.url, {waitUntil: "domcontentloaded",timeout: 60000,});
+    I.waitForElement(this.uploadInput, 10);
   },
-
+  
   uploadFile() {
     I.attachFile(this.uploadInput, this.testFile);
     I.wait(1);
