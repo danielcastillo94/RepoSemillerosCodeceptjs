@@ -41,14 +41,14 @@ exports.config = {
   gherkin: {
   features: './features/*.feature',
   steps: [
-    './steps/pruebaSteps.js',
-    './steps/loginSteps.js',
-    './steps/youtubeLoginSteps.js',
-    './steps/validacionesYoutubeSteps.js',
-    './steps/dailySteps.js',
-    './steps/telcelSteps.js',
-    './steps/videoYoutubeSteps.js',
-    './steps/stepsEmilio.js',
+    // './steps/pruebaSteps.js',
+    // './steps/loginSteps.js',
+    // './steps/youtubeLoginSteps.js',
+    // './steps/validacionesYoutubeSteps.js',
+    // './steps/dailySteps.js',
+    // './steps/telcelSteps.js',
+    // './steps/videoYoutubeSteps.js',
+    // './steps/stepsEmilio.js',
     './steps/emilioUploadSteps.js',
     './steps/emilioDownloadSteps.js',
     './steps/emilioMockSteps.js'
