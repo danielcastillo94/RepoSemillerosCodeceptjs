@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri May 30 18:58:57 GMT 2025","Fri May 30 18:59:04 GMT 2025","6770","Validaciones funcionales","","","","","Mockeo resultados YouTube {""busqueda"":""Noticias""} @mock",""
+"passed","Fri May 30 18:58:50 GMT 2025","Fri May 30 18:58:57 GMT 2025","6860","Validaciones funcionales","","","","","Mockeo resultados YouTube {""busqueda"":""Videojuegos""} @mock",""
+"broken","Fri May 30 18:58:15 GMT 2025","Fri May 30 18:58:50 GMT 2025","35137","Validaciones funcionales","","","","","Validar carga y descarga de archivo @upload",""
+"passed","Fri May 30 18:59:04 GMT 2025","Fri May 30 18:59:10 GMT 2025","6559","Validaciones funcionales","","","","","Mockeo resultados YouTube {""busqueda"":""Futbol""} @mock",""

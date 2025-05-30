@@ -1,3 +1,8 @@
 [ {
-  "data" : { }
+  "buildOrder" : 133,
+  "reportUrl" : "https://danielcastillo94.github.io/RepoSemillerosCodeceptjs/133/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "duration" : 55401
+  }
 } ]

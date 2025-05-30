@@ -1,5 +1,26 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://demoqa.com/upload-download\", waiting until \"load\"\n",
+      "children" : [ {
+        "name" : "Validar carga y descarga de archivo @upload",
+        "uid" : "f6702aa8aa6402cc",
+        "parentUid" : "ff7769961aa3e646714291d342f19a2d",
+        "status" : "broken",
+        "time" : {
+          "start" : 1748631495595,
+          "stop" : 1748631530732,
+          "duration" : 35137
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ff7769961aa3e646714291d342f19a2d"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
   "name" : "categories"
 }
