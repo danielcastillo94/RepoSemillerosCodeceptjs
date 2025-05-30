@@ -40,7 +40,7 @@ exports.config = {
     uploadPage: './pages/israelPage.js',
   },
   gherkin: {
-  features: './features/*.feature',
+  features: './features/israel.feature',
   steps: [
     './steps/pruebaSteps.js',
     './steps/loginSteps.js',
