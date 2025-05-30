@@ -1,41 +1,51 @@
 [ {
-  "uid" : "2a1ed4082f948524",
-  "name" : "Mockeo resultados YouTube {\"busqueda\":\"Noticias\"} @mock",
+  "uid" : "73f78e9ec84009d9",
+  "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"fiesta\"} @mock",
   "time" : {
-    "start" : 1748632249330,
-    "stop" : 1748632256141,
-    "duration" : 6811
+    "start" : 1748633606086,
+    "stop" : 1748633617941,
+    "duration" : 11855
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "622254c0dfdda78",
-  "name" : "Mockeo resultados YouTube {\"busqueda\":\"Videojuegos\"} @mock",
+  "uid" : "47c1b84d16be87c2",
+  "name" : "Validar descarga de archivo",
   "time" : {
-    "start" : 1748632242678,
-    "stop" : 1748632249323,
-    "duration" : 6645
+    "start" : 1748633575570,
+    "stop" : 1748633576343,
+    "duration" : 773
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "799e81fccac1624d",
-  "name" : "Mockeo resultados YouTube {\"busqueda\":\"Futbol\"} @mock",
+  "uid" : "99389ce92a580419",
+  "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"haash\"} @mock",
   "time" : {
-    "start" : 1748632256154,
-    "stop" : 1748632262853,
-    "duration" : 6699
+    "start" : 1748633576435,
+    "stop" : 1748633592176,
+    "duration" : 15741
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "ce64786c4f125ba7",
-  "name" : "Validar carga y descarga de archivo @upload",
+  "uid" : "beed6d92fe59bc60",
+  "name" : "Validar carga de archivo",
   "time" : {
-    "start" : 1748632239013,
-    "stop" : 1748632242639,
-    "duration" : 3626
+    "start" : 1748633573711,
+    "stop" : 1748633575411,
+    "duration" : 1700
   },
-  "status" : "passed",
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "75410556a81ad970",
+  "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"triste\"} @mock",
+  "time" : {
+    "start" : 1748633592344,
+    "stop" : 1748633605962,
+    "duration" : 13618
+  },
+  "status" : "broken",
   "severity" : "normal"
 } ]

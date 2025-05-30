@@ -1,61 +1,74 @@
 {
   "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
   "children" : [ {
-    "name" : "features.israel.feature",
+    "name" : "features.viviCargaDescarga.feature",
     "children" : [ {
-      "name" : "Validar carga y descarga de archivo @upload",
-      "uid" : "ce64786c4f125ba7",
-      "parentUid" : "a1045e0667f3c48303e3157e2ba55c76",
-      "status" : "passed",
+      "name" : "Validar carga de archivo",
+      "uid" : "beed6d92fe59bc60",
+      "parentUid" : "6f17a59ab464035cfcde1ce8c391f06b",
+      "status" : "broken",
       "time" : {
-        "start" : 1748632239013,
-        "stop" : 1748632242639,
-        "duration" : 3626
+        "start" : 1748633573711,
+        "stop" : 1748633575411,
+        "duration" : 1700
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "Mockeo resultados YouTube {\"busqueda\":\"Videojuegos\"} @mock",
-      "uid" : "622254c0dfdda78",
-      "parentUid" : "a1045e0667f3c48303e3157e2ba55c76",
-      "status" : "passed",
+      "name" : "Validar descarga de archivo",
+      "uid" : "47c1b84d16be87c2",
+      "parentUid" : "6f17a59ab464035cfcde1ce8c391f06b",
+      "status" : "broken",
       "time" : {
-        "start" : 1748632242678,
-        "stop" : 1748632249323,
-        "duration" : 6645
+        "start" : 1748633575570,
+        "stop" : 1748633576343,
+        "duration" : 773
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "Mockeo resultados YouTube {\"busqueda\":\"Noticias\"} @mock",
-      "uid" : "2a1ed4082f948524",
-      "parentUid" : "a1045e0667f3c48303e3157e2ba55c76",
-      "status" : "passed",
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"haash\"} @mock",
+      "uid" : "99389ce92a580419",
+      "parentUid" : "6f17a59ab464035cfcde1ce8c391f06b",
+      "status" : "broken",
       "time" : {
-        "start" : 1748632249330,
-        "stop" : 1748632256141,
-        "duration" : 6811
+        "start" : 1748633576435,
+        "stop" : 1748633592176,
+        "duration" : 15741
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "Mockeo resultados YouTube {\"busqueda\":\"Futbol\"} @mock",
-      "uid" : "799e81fccac1624d",
-      "parentUid" : "a1045e0667f3c48303e3157e2ba55c76",
-      "status" : "passed",
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"triste\"} @mock",
+      "uid" : "75410556a81ad970",
+      "parentUid" : "6f17a59ab464035cfcde1ce8c391f06b",
+      "status" : "broken",
       "time" : {
-        "start" : 1748632256154,
-        "stop" : 1748632262853,
-        "duration" : 6699
+        "start" : 1748633592344,
+        "stop" : 1748633605962,
+        "duration" : 13618
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"fiesta\"} @mock",
+      "uid" : "73f78e9ec84009d9",
+      "parentUid" : "6f17a59ab464035cfcde1ce8c391f06b",
+      "status" : "broken",
+      "time" : {
+        "start" : 1748633606086,
+        "stop" : 1748633617941,
+        "duration" : 11855
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "features.israel.feature"
+    "uid" : "features.viviCargaDescarga.feature"
   } ],
   "name" : "packages"
 }

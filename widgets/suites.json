@@ -1,15 +1,15 @@
 {
   "total" : 1,
   "items" : [ {
-    "uid" : "a4790287178c089c18a7f0d58a714da4",
-    "name" : "Validaciones funcionales",
+    "uid" : "6f536b7dc14a75a94777f36790ac17d7",
+    "name" : "Validar carga, descarga y mockeo de datos",
     "statistic" : {
       "failed" : 0,
-      "broken" : 0,
+      "broken" : 5,
       "skipped" : 0,
-      "passed" : 4,
+      "passed" : 0,
       "unknown" : 0,
-      "total" : 4
+      "total" : 5
     }
   } ]
 }

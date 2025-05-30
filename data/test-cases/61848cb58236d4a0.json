@@ -1,0 +1,146 @@
+{
+  "uid" : "61848cb58236d4a0",
+  "name" : "Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"triste\"} @mock",
+  "fullName" : "features/viviCargaDescarga.feature: Validar carga, descarga y mockeo de datos > Mockeo resultados youtube con diferentes términos de búsqueda {\"termino\":\"triste\"} @mock",
+  "historyId" : "a262ad7c105771fab51b4bef4d9f8fb1:d41d8cd98f00b204e9800998ecf8427e",
+  "time" : {
+    "start" : 1748632570321,
+    "stop" : 1748632570802,
+    "duration" : 481
+  },
+  "status" : "broken",
+  "statusMessage" : "No steps matching \"Estoy en youtube\"",
+  "statusTrace" : "Error: No steps matching \"Estoy en youtube\"\n    at matchStep (node_modules\\codeceptjs\\lib\\mocha\\bdd.js:50:9)\n    at runSteps (node_modules\\codeceptjs\\lib\\mocha\\gherkin.js:63:18)\n    at Test.<anonymous> (node_modules\\codeceptjs\\lib\\mocha\\gherkin.js:136:54)\n    at test.fn (node_modules\\codeceptjs\\lib\\mocha\\asyncWrapper.js:81:10)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "\"before all\" hook: codeceptjs.beforeSuite",
+    "time" : {
+      "start" : 1748632566817,
+      "stop" : 1748632568589,
+      "duration" : 1772
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"before each\" hook: codeceptjs.before",
+    "time" : {
+      "start" : 1748632570321,
+      "stop" : 1748632570634,
+      "duration" : 313
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "No steps matching \"Estoy en youtube\"",
+    "statusTrace" : "Error: No steps matching \"Estoy en youtube\"\n    at matchStep (node_modules\\codeceptjs\\lib\\mocha\\bdd.js:50:9)\n    at runSteps (node_modules\\codeceptjs\\lib\\mocha\\gherkin.js:63:18)\n    at Test.<anonymous> (node_modules\\codeceptjs\\lib\\mocha\\gherkin.js:136:54)\n    at test.fn (node_modules\\codeceptjs\\lib\\mocha\\asyncWrapper.js:81:10)",
+    "steps" : [ {
+      "name" : "Main session - Last Seen Screenshot",
+      "time" : {
+        "start" : 1748632570800,
+        "stop" : 1748632570800,
+        "duration" : 0
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "68be28401d9a1874",
+        "name" : "Main session - Last Seen Screenshot",
+        "source" : "68be28401d9a1874.png",
+        "type" : "image/png",
+        "size" : 4331
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "\"after all\" hook: codeceptjs.afterSuite",
+    "time" : {
+      "start" : 1748632571335,
+      "stop" : 1748632571337,
+      "duration" : 2
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "\"after each\" hook: codeceptjs.after",
+    "time" : {
+      "start" : 1748632570804,
+      "stop" : 1748632570872,
+      "duration" : 68
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "framework",
+    "value" : "codeceptjs"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-NAAR98T"
+  }, {
+    "name" : "thread",
+    "value" : "pid-6172-worker-main"
+  }, {
+    "name" : "package",
+    "value" : "features.viviCargaDescarga.feature"
+  }, {
+    "name" : "tag",
+    "value" : "mock"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Validar carga, descarga y mockeo de datos"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "mock" ]
+  },
+  "source" : "61848cb58236d4a0.json",
+  "parameterValues" : [ ]
+}
