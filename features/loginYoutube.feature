@@ -1,11 +1,11 @@
 #
 
-# Feature: Validaciones del login en youtube
+Feature: Validaciones del login en youtube
 
-# Scenario: Validar el boton del login
-#     Given Estoy en la pagina de youtube
-#     When Presiono el boton de login
-#     Then Valido si la loginpage tiene el login
+Scenario: Validar el boton del login
+    Given Estoy en la pagina de youtube
+    When Presiono el boton de login
+    Then Valido si la loginpage tiene el login
 
 # El escenario no se puede ejecutar por captcha requerido
 #Scenario: Validar credenciales de login
