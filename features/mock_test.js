@@ -33,7 +33,7 @@ Scenario('Interceptar y reutilizar resultados de búsqueda en YouTube', async ({
   I.fillField({ xpath: '//*[@id="center"]/yt-searchbox/div[1]/form/input' }, 'daft punk');
   I.pressKey('Enter');
   I.wait(5);
-  I.say('✅ Primera búsqueda realizada');
+  I.say('✅ Primera búsqueda realizada ok');
 
   I.fillField({ xpath: '//*[@id="center"]/yt-searchbox/div[1]/form/input' }, 'rusia');
   I.pressKey('Enter');
