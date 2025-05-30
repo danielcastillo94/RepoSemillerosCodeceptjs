@@ -1,57 +1,5 @@
 {
   "uid" : "b1a8273437954620fa374b796ffaacdd",
-  "children" : [ {
-    "name" : "Validar carga y descarga de archivo @upload",
-    "uid" : "f6702aa8aa6402cc",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "broken",
-    "time" : {
-      "start" : 1748631495595,
-      "stop" : 1748631530732,
-      "duration" : 35137
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Mockeo resultados YouTube {\"busqueda\":\"Videojuegos\"} @mock",
-    "uid" : "8a8de95798e36183",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1748631530779,
-      "stop" : 1748631537639,
-      "duration" : 6860
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Mockeo resultados YouTube {\"busqueda\":\"Noticias\"} @mock",
-    "uid" : "4e8cfa248288a176",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1748631537660,
-      "stop" : 1748631544430,
-      "duration" : 6770
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  }, {
-    "name" : "Mockeo resultados YouTube {\"busqueda\":\"Futbol\"} @mock",
-    "uid" : "d258ac4b62cbb3d",
-    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
-    "time" : {
-      "start" : 1748631544437,
-      "stop" : 1748631550996,
-      "duration" : 6559
-    },
-    "flaky" : false,
-    "newFailed" : false,
-    "parameters" : [ ]
-  } ],
+  "children" : [ ],
   "name" : "behaviors"
 }
