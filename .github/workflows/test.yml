@@ -1,4 +1,4 @@
-on: 
+on:
   push:
     branches: ["**"]
   pull_request:
@@ -15,10 +15,13 @@ jobs:
       - name: Instalar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '23.6.1'
+          node-version: "23.6.1"
 
       - name: Instalar dependencias
         run: npm ci
+
+      - name: Instalar navegadores de Playwright
+        run: npx playwright install --with-deps
 
       - name: Ejecutar pruebas
         run: npm run features
