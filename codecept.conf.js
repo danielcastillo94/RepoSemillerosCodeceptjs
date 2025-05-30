@@ -5,8 +5,11 @@ exports.config = {
   helpers: {
     Playwright: {
       url: 'https://www.youtube.com',
-      show: true,
-      locale: "es-MX",
+      show: false,
+      locale: 'es-MX',
+      chromium: {
+        headless: true,
+      },
     },
     MockRequest: {
       require: '@codeceptjs/mock-request'
