@@ -20,7 +20,8 @@ exports.config = {
     youtubeMainPage: './pages/youtubeMainPage.js',
     youtubeVideoPage: './pages/youtubeVideoMainPage.js',
     youtubeLoginPage: './pages/youtubeLoginPage.js',
-    validacionesYoutubeSteps: './steps/videoYoutubeSteps.js'
+    validacionesYoutubeSteps: './steps/videoYoutubeSteps.js',
+    viviMockSteps: './steps/viviMockSteps.js',
   },
 
   gherkin: {
@@ -31,7 +32,8 @@ exports.config = {
       './steps/youtubeLoginSteps.js',
       './steps/validacionesYoutubeSteps.js',
       './steps/dailySteps.js',
-      './steps/videoYoutubeSteps.js'
+      './steps/videoYoutubeSteps.js',
+      './steps/viviMockSteps.js',
     ]
   },
 
