@@ -1,4 +1,4 @@
-Feature: Validaciones funcionales de carga y descarga
+Feature: Validaciones funcionales 
 
 @upload
 Scenario: Validar carga y descarga de archivo
