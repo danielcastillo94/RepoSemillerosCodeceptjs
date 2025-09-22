@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Prueba de GitHub Flow realizada por Daniela Salgado
+=======
+Prueba para Github realizada por Luis Valente Heredia Torres
+>>>>>>> af265682b746abc277b5c5e3443179cd606233dd
