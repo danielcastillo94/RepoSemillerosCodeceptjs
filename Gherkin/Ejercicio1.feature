@@ -2,7 +2,8 @@
 Feature: compra de productos en linea
 #Se tiene por entendido que para los dos primeros escenarios el usuario ya ha seleccionado el metodo de pago
 
-Background: el usuario se encuentra en la pantalla de confirmacion de pago
+Background:
+Given El usuario se encuentra en la pantalla de confirmacion de pago
 
 @regression
 Scenario: compra exitosa con pago en tarjeta
