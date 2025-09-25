@@ -30,7 +30,7 @@ Scenario Outline: Compra utilizando diferentes métodos de pago
   When El usuario selecciona "<métodos de pago>"
      And ingresa los detalles de pago correspondientes 
         And confirma la compra
-    Then El sistema debe "<resultado esperado>"
+    Then El sistema debe "<resultado esperado>" 
 
 
 |métodos de pago        |resultado esperado|
