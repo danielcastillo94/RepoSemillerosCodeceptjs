@@ -27,10 +27,10 @@ Scenario: Compra fallida por saldo insuficiente
 
 @compras @regresión
 Scenario Outline: Compra utilizando diferentes "<métodos de pago>"
-  When El usuario selecciona ""
+  When El usuario selecciona "Pagar con Paypal"
      And ingresa los detalles de pago correspondientes 
         And confirma la compra
-    Then El sistema debe "" 
+    Then El sistema debe "procesar el pago correctamente"
 
 
 |métodos de pago        |resultado esperado|
