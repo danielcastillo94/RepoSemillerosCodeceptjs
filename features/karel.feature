@@ -25,16 +25,14 @@ Background:
 
 @critica @positiva 
 Scenario: Compra exitosa 
- When El usuario selecciona el metodo de pago 
- and ingresa el cvv valido
+ When El usuario selecciona el metodo de pago "m.pago"
  and da clic en el boton de comprar ahora 
  then el sistema muestra el mensaje de pedido realizado 
  and manda comprobante del pedido 
 
 @critica @negativa 
 Scenario: Compra fallida por saldo insuficiente 
- When el usuario selecciona el metodo de pago 
- and ingresa el cvv valido 
+ When el usuario selecciona el metodo de pago "m.pago"
  and da clic en el boton de comprar ahora 
  then el sistema muestra el mensaje "Compra fallida: saldo insuficiente"
  and no realiza el pedido
@@ -47,10 +45,10 @@ Scenario: Compra fallida por saldo insuficiente
   then el sistema muestra el mensaje "mensaje"
   and hace la accion "accion" 
 
-| m.pago              | saldo        |  mensaje           |
-|Tarjeta de credito   |Suficiente    |Pedido Realizado    |
-|Tarjeta de credito   |Insuficiente  |Pedido no realizado |
-|Tarjeta de debito    |Suficiente    |Pedido Realizado    |
-|Tarjeta de debito    |Insuficiente  |Pedido no Realizado |
-|PayPal               |Suficiente    |Pedido Realizado    |
-|Paypal               |Insuficiente  |Pedido no Realizado |
+| m.pago              | saldo        |  mensaje           | accion 
+|Tarjeta de credito   |Suficiente    |Pedido Realizado    | realiza el pedido
+|Tarjeta de credito   |Insuficiente  |Pedido no realizado | no realiza el pedido
+|Tarjeta de debito    |Suficiente    |Pedido Realizado    | realiza el pedido
+|Tarjeta de debito    |Insuficiente  |Pedido no Realizado | no realiza el pedido
+|PayPal               |Suficiente    |Pedido Realizado    | realiza el pedido
+|Paypal               |Insuficiente  |Pedido no Realizado | no realiza el pedido
