@@ -17,33 +17,33 @@ Feature: Compra de productos en linea
 
 Background:
  Given El usuario esta en la pagina principal de la tienda virtual 
- and inicia sesion 
- and los productos estan disponibles en la tienda 
- and tiene registrada una direccion de envio 
+ Given El usuario  inicia sesion 
+ And los productos estan disponibles en la tienda 
+ And tiene registrada una direccion de envio 
   
 
 
 @critica @positiva 
 Scenario: Compra exitosa 
  When El usuario selecciona el metodo de pago "m.pago"
- and da clic en el boton de comprar ahora 
+ And da clic en el boton de comprar ahora 
  then el sistema muestra el mensaje de pedido realizado 
- and manda comprobante del pedido 
+ And manda comprobante del pedido 
 
 @critica @negativa 
 Scenario: Compra fallida por saldo insuficiente 
  When el usuario selecciona el metodo de pago "m.pago"
- and da clic en el boton de comprar ahora 
+ And da clic en el boton de comprar ahora 
  then el sistema muestra el mensaje "Pedido no Realizado"
- and no realiza el pedido
+ And no realiza el pedido
 
  @regresion 
  Scenario Outline: Compra utilizando diferentes metodos de pago 
   When el usuario selecciona el metodo de pago "m.pago"
-  and ingresa los datos validos para "m.pago" con saldo "saldo"
-  and da clic en boton comprar ahora 
+  And ingresa los datos validos para "m.pago" con saldo "saldo"
+  And da clic en boton comprar ahora 
   then el sistema muestra el mensaje "mensaje"
-  and hace la accion "accion" 
+  And hace la accion "accion" 
 
 | m.pago              | saldo        |  mensaje           | accion 
 |Tarjeta de credito   |Suficiente    |Pedido Realizado    | realiza el pedido
