@@ -5,7 +5,7 @@
  # 1. Escenario de compra exitosa con pago con tarjeta.
 # 2. Escenario de compra fallida por saldo insuficiente.
 # 3. Escenario de compra utilizando diferentes métodos de pago en forma de Scenario Outline, repitiendo pasos y variando únicamente el método de pago y el resultado
-   esperado.
+   #esperado.
    
  #Diseñar los escenarios buscando alcanzar la mayor cobertura posible de la funcionalidad, según se considere necesario
  
@@ -34,7 +34,7 @@ Scenario: Compra exitosa
 Scenario: Compra fallida por saldo insuficiente 
  When el usuario selecciona el metodo de pago "m.pago"
  and da clic en el boton de comprar ahora 
- then el sistema muestra el mensaje "Compra fallida: saldo insuficiente"
+ then el sistema muestra el mensaje "Pedido no Realizado"
  and no realiza el pedido
 
  @regresion 
