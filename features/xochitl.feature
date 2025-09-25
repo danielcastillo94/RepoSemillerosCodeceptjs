@@ -6,15 +6,15 @@ Feature: Compra de productos en Línea
 Background:
 Given El usuario se encuentra en la página principal
 And Inicio sesión con credenciales válidas
-And Da click en la sección de productos
-And Agrega algún producto al carrito de compras
+When Da click en la sección de productos
+When Agrega algún producto al carrito de compras
 And Procede a realizar su checkout
  
 @Acciónpositiva
 Scenario: Compra exitosa 
 When Selecciona "Tarjeta de crédito/debito" como método de pago
 And Ingresa datos de la tarjeta válidos
-And Da click al bóton de "Confirmar Compra"
+When Da click al bóton de "Confirmar Compra"
 Then Se muestra un mensaje de compra exitosa
 And Se genera un número de orden de compra
  
@@ -22,7 +22,7 @@ And Se genera un número de orden de compra
 Scenario: Compra fállida por saldo insuficiente
 When Selecciona método de pago "Tarjeta de crédito/debito"
 And Ingresa datos de la tarjeta válidos con saldo insuficiente
-And Da click en el bóton "Confirmar Compra"
+When Da click en el bóton "Confirmar Compra"
 Then Se muestra un mensaje de error de "Pago rechazado por fondos insuficientes"
 And No debe de generar un número orden de compra
  
@@ -31,7 +31,7 @@ And No debe de generar un número orden de compra
 Scenario: Compra fállida por datos incorrectos del método de pago
 When Selecciona método de pago "Tarjeta de crédito/debito"
 And Ingresa datos de la tarjeta incorrectos 
-And Da click en el bóton "Confirmar Compra"
+When Da click en el bóton "Confirmar Compra"
 Then Se muestra un mensaje de error de "Datos incorrectos de la Tarjeta"
 And No debe de generar un número orden de compra
  
@@ -39,7 +39,7 @@ And No debe de generar un número orden de compra
   Scenario Outline: Compra utilizando diferentes métodos de pago
     When Selecciona "<método_de_pago>" como método de pago
     And Ingresa datos válidos del "<método_de_pago>" seleccionado
-    And Da clic en botón de "Confirmar Compra"
+    When Da clic en botón de "Confirmar Compra"
     Then Se muestra un mensaje de "<resultado_esperado>"
     And Se genera un número de orden de compra
  
