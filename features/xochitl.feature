@@ -11,16 +11,16 @@ Background:
  And Agrega algún producto al carrito de compras
  And Procede a realizar su checkout 
 
- @Acciónpositiva @crítica
+ @Acciónpositiva
  
- Scenario: Compra exitosa con método de pago con tarjeta
+ Scenario: Compra exitosa 
  When Selecciona "Tarjeta de crédito/debito" como método de pago
  And Ingresa datos de la tarjeta válidos
  And Da click al bóton de "Confirmar Compra"
  Then Se muestra un mensaje de compra exitosa
  And Se genera un número de orden de compra
 
- @Saldoinsuficiente @crítica
+ @Saldoinsuficiente @negativa
  
  Scenario: Compra fállida por saldo insuficiente
  When Selecciona método de pago "Tarjeta de crédito/debito"
@@ -29,7 +29,7 @@ Background:
  Then Se muestra un mensaje de error de "Pago rechazado por fondos insuficientes"
  And No debe de generar un número orden de compra
 
-@datosinválidos @crítica
+@datosinválidos @negativa
 
 Scenario: Compra fállida por datos incorrectos del método de pago
 When Selecciona método de pago "Tarjeta de crédito/debito"
