@@ -14,10 +14,14 @@ exports.config = {
   include: {
     I: "./steps_file.js",
     youtubePage: "./pages/youtubePage.js",
+    footertelcelPage: "./pages/pruebaTC010Page.js",
   },
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/loginSteps.js"],
+    steps: [
+      "./steps/loginSteps.js",
+      "./steps/pruebaTC010Steps.js"
+    ],
   },
   name: "Actividad youtube",
 };
