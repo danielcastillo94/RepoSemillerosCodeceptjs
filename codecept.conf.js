@@ -1,77 +1,31 @@
+require("dotenv").config();
+
+const { setHeadlessWhen, setCommonPlugins } = require("@codeceptjs/configure");
+// turn on headless mode when running with HEADLESS=true environment variable
+// export HEADLESS=true && npx codeceptjs run
+setHeadlessWhen(process.env.HEADLESS);
+
+// enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
+setCommonPlugins();
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './*_test.js',
-  output: './output',
+  tests: "./*_test.js",
+  output: "./output",
   helpers: {
     Playwright: {
-      browser: 'chromium',
-      url: 'https://www.youtube.com',
-      show: false,
-
-      locale: "es-MX",
+      browser: "chromium",
+      url: "https://www.youtube.com",
+      show: true,
     },
-    MiHelper: {
-<<<<<<< HEAD
-      require: './helpers/YouTubeHelper'
-    }
-=======
-      require: './helpers/MiHelper.js'
-    },
-    DailyHelpers: {
-    require: './helpers/dailyHelper.js'
-    },
-    NavigationHelper: {
-      require: './helpers/NavigationHelper.js'
-    },
-    DailyHelper: {
-    require: './helpers/HelperEmilio.js'
-    },
-    MiHelperYoutube: {
-    require: './helpers/MiHelperYoutube.js'
-    },
-    RechargeHelper: {
-      require: './helpers/RechargeHelper.js',
-    },
->>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394
   },
-  
   include: {
-    I: './steps_file.js', 
-    dailyPage: './pages/dailyPage.js',
-    validacionesYoutubeSteps: './steps/videoYoutubeSteps.js',
-    youtubeMainPage: './pages/youtubeMainPage.js',
-    youtubeVideoPage: './pages/youtubeVideoMainPage.js', 
-    youtubeLoginPage: './pages/youtubeLoginPage.js',
+    I: "./steps_file.js",
+    youtubePage: "./pages/youtubePage.js",
   },
   gherkin: {
-<<<<<<< HEAD
     features: "./features/*.feature",
-    steps: ["./steps/pruebaSteps.js", "./steps/loginSteps.js", "./steps/youtubeLoginSteps.js", "./steps/validacionesYoutubeSteps.js", "./steps/dailySteps.js", './steps/telcelSteps.js', "./steps/videoYoutubeSteps.js","./steps_file.js",],
-=======
-  features: './features/*.feature',
-  steps: [
-    './steps/pruebaSteps.js',
-    './steps/loginSteps.js',
-    './steps/youtubeLoginSteps.js',
-    './steps/validacionesYoutubeSteps.js',
-    './steps/dailySteps.js',
-    './steps/telcelSteps.js',
-    './steps/videoYoutubeSteps.js',
-    './steps/stepsEmilio.js'
-  ] 
->>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394
+    steps: ["./steps/loginSteps.js"],
   },
-  plugins: {
-    allure: {
-      enabled: true,
-      require: 'allure-codeceptjs',
-      resultsDir: 'allure-results'
-    }
-  },
-<<<<<<< HEAD
-  name: 'Actividad youtube'
+  name: "Framework-prueba",
 };
-=======
-  name: 'Actividad YouTube'
-};
->>>>>>> f5125749a6b327bf9c74e3b8da89c79c71c34394
