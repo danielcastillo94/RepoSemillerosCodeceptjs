@@ -7,7 +7,8 @@
     "test:workers": "codeceptjs run-workers 2",
     "features": "codeceptjs run --features --plugins allure",
     "allure:generate": "allure generate output --clean",
-    "allure:report": "allure open"
+    "allure:report": "allure open",
+    "test:cobertura": "cucumber-js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,12 @@
   "devDependencies": {
     "allure-codeceptjs": "^3.2.2",
     "chai": "^4.5.0",
-    "codeceptjs": "^3.7.3",
-    "playwright": "^1.52.0"
+    "codeceptjs": "^3.7.5",
+    "@playwright/test": "^1.56.0",
+    "playwright": "^1.56.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "dotenv": "^17.2.3"
   }
 }
