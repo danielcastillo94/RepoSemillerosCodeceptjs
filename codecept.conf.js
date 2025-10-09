@@ -1,13 +1,3 @@
-require("dotenv").config();
-
-const { setHeadlessWhen, setCommonPlugins } = require("@codeceptjs/configure");
-// turn on headless mode when running with HEADLESS=true environment variable
-// export HEADLESS=true && npx codeceptjs run
-setHeadlessWhen(process.env.HEADLESS);
-
-// enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
-setCommonPlugins();
-
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: "./*_test.js",
@@ -17,8 +7,10 @@ exports.config = {
       browser: "chromium",
       url: "https://www.youtube.com",
       show: true,
+      locale: "es-MX",
     },
   },
+
   include: {
     I: "./steps_file.js",
     youtubePage: "./pages/youtubePage.js",
@@ -27,5 +19,5 @@ exports.config = {
     features: "./features/*.feature",
     steps: ["./steps/loginSteps.js"],
   },
-  name: "Framework-prueba",
+  name: "Actividad youtube",
 };
