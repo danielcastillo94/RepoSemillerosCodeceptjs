@@ -5,19 +5,37 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://www.youtube.com",
+      url: 'https://www.telcel.com',
       show: true,
-      locale: "es-MX",
-    },
+      locale: "es-MX"
+    }
   },
 
   include: {
     I: "./steps_file.js",
     youtubePage: "./pages/youtubePage.js",
+    plan5g_page: "./pages/plan5g_page.js"
   },
+  plugins: {
+    allure: {
+      enabled: true,
+      require: '@codeceptjs/allure-legacy',
+      outputDir: './output/allure-results'
+    }
+  },
+  
+ 
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/loginSteps.js"],
+    steps: [
+      "./steps/loginSteps.js",
+    "./steps/plan5gSteps.js"
+  ]
   },
-  name: "Actividad youtube",
+
+
+  name: "Actividad youtube y Telcel"
+    
 };
+
+
