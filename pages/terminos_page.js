@@ -16,8 +16,8 @@ class terminos_page {
   }
 
   seeResults() {
-    I.waitForElement('//*[@id="accordion-1628"]/div/div[1]/span[2]/h1', 3);
-    I.seeElement('//*[@id="accordion-1628"]/div/div[1]/span[2]/h1');
+    I.waitForElement('//h1[text()="Términos y condiciones"]', 3);
+    I.seeElement('//h1[text()="Términos y condiciones"]');
   }
 }
 
