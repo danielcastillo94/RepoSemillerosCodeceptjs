@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://www.youtube.com",
+      url: "https://www.telcel.com",
       show: true,
       locale: "es-MX",
     },
@@ -13,11 +13,11 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    youtubePage: "./pages/youtubePage.js",
+    terminos_page: "./pages/terminos_page.js",
   },
   gherkin: {
-    features: "./features/*.feature",
-    steps: ["./steps/loginSteps.js"],
+    features: "./features/terminos_page.feature",
+    steps: ["./steps/pageStep.js"],
   },
-  name: "Actividad youtube",
+  name: "Telcel es la red",
 };
