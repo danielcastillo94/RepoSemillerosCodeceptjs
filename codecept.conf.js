@@ -15,6 +15,13 @@ exports.config = {
     I: "./steps_file.js",
     terminos_page: "./pages/terminos_page.js",
   },
+  plugins: {
+    allure: {
+      enabled: true,
+      require: '@codeceptjs/allure-legacy',
+      outputDir: './output/allure-results'
+    }
+  },
   gherkin: {
     features: "./features/terminos_page.feature",
     steps: ["./steps/pageStep.js"],

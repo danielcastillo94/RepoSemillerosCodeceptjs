@@ -16,8 +16,8 @@ class terminos_page {
   }
 
   seeResults() {
-    I.waitForElement('//*[@id="accordion-4279"]/div/div[4]/span[2]/h3', 10);
-    I.seeElement('//*[@id="accordion-4279"]/div/div[4]/span[2]/h3');
+    I.waitForElement('//*[@id="accordion-1628"]/div/div[1]/span[2]/h1', 3);
+    I.seeElement('//*[@id="accordion-1628"]/div/div[1]/span[2]/h1');
   }
 }
 
