@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://www.youtube.com",
+      url: "https://www.telcel.com",
       show: true,
       locale: "es-MX",
     },
@@ -13,11 +13,12 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    youtubePage: "./pages/youtubePage.js",
+    //youtubePage: "./pages/youtubePage.js",
+    planesPage: "./pages/planesPage.js",
   },
   gherkin: {
-    features: "./features/*.feature",
-    steps: ["./steps/loginSteps.js"],
+    features: "./features/planes.feature",
+    steps: ["./steps/planSteps.js"],
   },
   name: "Actividad youtube",
 };
