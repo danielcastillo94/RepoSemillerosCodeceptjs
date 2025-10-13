@@ -15,6 +15,19 @@ exports.config = {
     I: "./steps_file.js",
     youtubePage: "./pages/youtubePage.js",
   },
+  plugins: {
+    retryFailedStep: {
+      enabled: true,
+    },
+    screenshotOnFail: {
+      enabled: true,
+    },
+    allure: {
+      enabled: true,
+      require: "@codeceptjs/allure-legacy",
+      outputDir: "./output/allure-results",
+    },
+  },
   gherkin: {
     features: "./features/*.feature",
     steps: ["./steps/loginSteps.js"],
