@@ -3,6 +3,8 @@ Feature: Visualización funcional de planes Telcel
 @Telcel5G
     Scenario: Plan Telcel Plus 5G
         Given I am on the telcel plans page
-        When I select the section Plan Telcel Plus 5G
-        Then I see results correctly in the Telcel Plan Plus 5G section
+        When I scroll the section the Telcel plans
+        Then I should see the "Telcel 5G Plus" plan
+        And  I click on the "Details"  button for the specific plan
+        Then I should see the detailed information for that plan
 
