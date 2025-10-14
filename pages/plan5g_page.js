@@ -3,34 +3,48 @@ const { I } = inject();
 class plan5g_page {
   fields = {  //Área de selectores  
     Cookies: '[class="telcel-banner-aviso-cookies"]',
-
-
   };
 
   async visitPage() {
     //Pagina de planes Telcel 
     I.amOnPage('https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-ultra');
-    I.wait(20);
     if (await I.grabNumberOfVisibleElements(this.fields.Cookies)) {
       I.click('//a[@id="acepto-cookies"]');
     }
 
   }
-
-  seleccion5g() {
+  navegacion() {
     //Scroll a Telcel Ultra 5
     I.scrollTo('//p[text()="Telcel Ultra 5"]');
-    I.wait(15);
-    
-  }
-
-  verificacion5g() {  
-    I.waitForElement('//*[@id="pagina-contenido-a68fab363c"]/div[2]/div/div/div/div[2]/section/div/div/div/div[3]/div[2]/div/div[5]/div/div/a', 5);
-    I.click('//*[@id="pagina-contenido-a68fab363c"]/div[2]/div/div/div/div[2]/section/div/div/div/div[3]/div[2]/div/div[5]/div/div/a')
-   // I.seeElement('//*[@id="pagina-contenido-a68fab363c"]/div[2]/div/div/div/div[2]/section/div/div/div/div[3]/div[2]/div/div[5]/div/div/a');
-    // I.waitForElement('//*[@id="pagina-contenido-a68fab363c"]/div[2]/div/div/div/div[2]/section/div/div/div/div[3]/div[2]/div[2]/a',10);
+    //await 
+    I.wait(3);
 
   }
 
+  seleccion5g() {
+    //Esperar el botón de detalles y dar click sobre él 
+    I.waitForElement('[data-selector="6162"]', 5);
+    I.click('[data-selector="6162"]');
+
+  }
+
+  async verificacion5g() {
+    //Esperar a que aparezca el modal en el que se encuentran los detalles del plan 
+    await I.waitForElement('.modal.fade.modal-plan', 10);
+    await I.waitForVisible('.modal.fade.modal-plan', 10);
+
+    //Esperar visibilidad de un elemento para validar que ha entrado al modal de detalles  
+    await I.see('Cargo mensual por servicio', '//div[contains(@id,"contentDetailPlan")]');
+    await I.wait(3);
+
+    //Scroll para observar la información contenida en el plan 
+    await I.scrollTo('//*[@id="contentDetailPlan"]/div[2]/div/div/span[2]');
+    await I.wait(2);
+
+    //Cerrar la ventana de los detalles del plan o modal 
+    I.click('//*[@id="detailPlanHeader"]/div/div/a[2]')
+
+
+  }
 }
 module.exports = new plan5g_page(); //exportar la clase

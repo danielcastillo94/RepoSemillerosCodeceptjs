@@ -5,10 +5,18 @@ Given(/^I am on the telcel plans page$/, async () => {
 
 });
 
-When(/^I select the section Plan Telcel Plus 5G$/, () => {
-  plan5g_page.seleccion5g();
+When(/^I scroll the section the Telcel plans$/, () => {
+   plan5g_page.navegacion();
 });
 
-Then(/^I see results correctly in the Telcel Plan Plus 5G section$/, () => {
-  plan5g_page.verificacion5g();
-})
+Then(/^I should see the "Telcel 5G Plus" plan$/,  () => {
+  plan5g_page.navegacion();
+});
+
+When(/^I click on the "Details"  button for the specific plan$/, () => {
+ plan5g_page.seleccion5g();
+});
+
+Then(/^I should see the detailed information for that plan$/, async() => {
+await plan5g_page.verificacion5g();
+});
