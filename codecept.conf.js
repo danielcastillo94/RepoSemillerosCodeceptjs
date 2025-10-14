@@ -1,40 +1,29 @@
-/** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: "./*_test.js",
-  output: "./output",
+tests: './steps/*_steps.js',
+  output: './output',
   helpers: {
     Playwright: {
-      browser: "chromium",
-      url: "https://www.youtube.com",
+      url: 'https://www.telcel.com/',
       show: true,
-      locale: "es-MX",
+      browser: 'chromium',
+    },
+  },
+  include: {
+    I: './steps_file.js',                 
+    CoberturaPage: './pages/cobertura_page.js',
+  },
+
+
+
+  plugins: {
+    allure: {
+      enabled: true,
+      require: '@codeceptjs/allure-legacy',
     },
   },
 
-  include: {
-    I: "./steps_file.js",
-    youtubePage: "./pages/youtubePage.js",
-    footertelcelPage: "./pages/pruebaTC010Page.js",
-  },
-  plugins: {
-    retryFailedStep: {
-      enabled: true,
-    },
-    screenshotOnFail: {
-      enabled: true,
-    },
-    allure: {
-      enabled: true,
-      require: "@codeceptjs/allure-legacy",
-      outputDir: "./output/allure-results",
-    },
-  },
-  gherkin: {
-    features: "./features/*.feature",
-    steps: [
-      "./steps/loginSteps.js",
-      "./steps/pruebaTC010Steps.js"
-    ],
-  },
-  name: "Actividad youtube",
+  
+  bootstrap: null,
+  mocha: {},
+  name: 'telcel-tests',
 };
