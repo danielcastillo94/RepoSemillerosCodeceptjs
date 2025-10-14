@@ -28,6 +28,27 @@ exports.config = {
       require: '@codeceptjs/allure-legacy',
       outputDir: './output/allure-results'
     }
+    footertelcelPage: "./pages/pruebaTC010Page.js",
+  },
+  plugins: {
+    retryFailedStep: {
+      enabled: true,
+    },
+    screenshotOnFail: {
+      enabled: true,
+    },
+    allure: {
+      enabled: true,
+      require: "@codeceptjs/allure-legacy",
+      outputDir: "./output/allure-results",
+    },
+  },
+  gherkin: {
+    features: "./features/*.feature",
+    steps: [
+      "./steps/loginSteps.js",
+      "./steps/pruebaTC010Steps.js"
+    ],
   },
   name: "Actividad youtube",
 };
