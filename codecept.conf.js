@@ -14,7 +14,10 @@ exports.config = {
   include: {
     I: "./steps_file.js",
     youtubePage: "./pages/youtubePage.js",
-    plan5g_page: "./pages/plan5g_page.js"
+    plan5g_page: "./pages/plan5g_page.js",
+    footertelcelPage: "./pages/pruebaTC010Page.js",
+    TC005Page: "./pages/TC005Page.js",
+    terminos_page: "./pages/terminos_page.js",
   },
   plugins: {
     allure: {
@@ -23,13 +26,15 @@ exports.config = {
       outputDir: './output/allure-results'
     }
   },
-  
- 
+
   gherkin: {
     features: "./features/*.feature",
     steps: [
       "./steps/loginSteps.js",
-    "./steps/plan5gSteps.js"
+      "./steps/plan5gSteps.js",
+      "./steps/pruebaTC010Steps.js",
+      "./steps/TC005Steps.js",
+      "./steps/pageStep.js"
   ]
   },
 
