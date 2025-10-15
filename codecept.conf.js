@@ -7,9 +7,6 @@ exports.config = {
       browser: "chromium",
 <<<<<<< HEAD
       url: "https://www.telcel.com",
-=======
-      url: 'https://www.telcel.com',
->>>>>>> master
       show: true,
       locale: "es-MX"
     }
