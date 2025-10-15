@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://www.telcel.com",
+      url: 'https://www.telcel.com',
       show: true,
       locale: "es-MX"
     }
