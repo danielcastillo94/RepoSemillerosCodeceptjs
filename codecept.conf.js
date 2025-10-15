@@ -8,12 +8,12 @@ setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './*_test.js',
+  tests: './*ejercicio2.js',
   output: './output',
   helpers: {
     Playwright: {
       browser: 'chromium',
-      url: 'http://www.google.com',
+      url: '',
       show: true
     }
   },
