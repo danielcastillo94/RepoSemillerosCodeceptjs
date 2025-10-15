@@ -1,3 +1,5 @@
+const { seccionPlanes } = require("../pages/planesPage");
+
 const {planesPage} = inject();
 
 /*Este flujo valida la navegación del usuario, desde la pagina principal, acceder al menú y seleccionar
@@ -11,6 +13,11 @@ When(/^doy click en Menú, muestra el submenú y selecciona "Plan de Renta"$/, (
   planesPage.accedermenu();
 });
 
-Then(/^se puede ver la seccion "Plan de Renta Telcel"$/, () =>{
+When(/^doy click en algun plan$/, () => { //selecciona algun plan
   planesPage.ventanaplanes(); // verifica que cargue correctamente la página "Plan de Renta"
+
+});
+
+Then(/^se puede ver la seccion "Plan Ultra"$/, () =>{
+  planesPage.seccionPlanes();//pagina plan ultra
 })
