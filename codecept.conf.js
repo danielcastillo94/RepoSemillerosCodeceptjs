@@ -5,21 +5,16 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://www.telcel.com",
+      url: 'https://www.telcel.com',
       show: true,
-      locale: "es-MX",
-    },
+      locale: "es-MX"
+    }
   },
 
   include: {
     I: "./steps_file.js",
     youtubePage: "./pages/youtubePage.js",
-    TC005Page: "./pages/TC005Page.js",
-    terminos_page: "./pages/terminos_page.js",
-  },
-  gherkin: {
-    features: "./features/*.feature",
-    steps: ["./steps/loginSteps.js", "./steps/TC005Steps.js", "./steps/pageStep.js"],
+    plan5g_page: "./pages/plan5g_page.js"
   },
   plugins: {
     allure: {
@@ -28,5 +23,19 @@ exports.config = {
       outputDir: './output/allure-results'
     }
   },
-  name: "Telcel es la red",
+  
+ 
+  gherkin: {
+    features: "./features/*.feature",
+    steps: [
+      "./steps/loginSteps.js",
+    "./steps/plan5gSteps.js"
+  ]
+  },
+
+
+  name: "Actividad youtube y Telcel"
+    
 };
+
+

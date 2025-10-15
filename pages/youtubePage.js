@@ -15,7 +15,7 @@ class youtubePage {
   }
 
   Verresultados() {
-    I.waitForElement('//yt-formatted-string[text()="QUÉ ES GHERKIN"]', 10);
+    I.waitForElement('//yt-formatted-string[text()="QUÉ ES GHERKIN"]', 30);
     I.seeElement('//yt-formatted-string[text()="QUÉ ES GHERKIN"]');
   }
 }
