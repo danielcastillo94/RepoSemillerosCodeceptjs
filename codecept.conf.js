@@ -5,7 +5,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: "https://www.youtube.com",
+      url: "https://www.telcel.com",
       show: true,
       locale: "es-MX",
     },
@@ -15,10 +15,18 @@ exports.config = {
     I: "./steps_file.js",
     youtubePage: "./pages/youtubePage.js",
     TC005Page: "./pages/TC005Page.js",
+    terminos_page: "./pages/terminos_page.js",
   },
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/loginSteps.js", "./steps/TC005Steps.js"],
+    steps: ["./steps/loginSteps.js", "./steps/TC005Steps.js", "./steps/pageStep.js"],
   },
-  name: "Actividad youtube",
+  plugins: {
+    allure: {
+      enabled: true,
+      require: '@codeceptjs/allure-legacy',
+      outputDir: './output/allure-results'
+    }
+  },
+  name: "Telcel es la red",
 };
