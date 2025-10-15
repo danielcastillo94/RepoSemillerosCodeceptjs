@@ -3,7 +3,7 @@ const { I } = inject();
 class region_page {
   fields = {
     estado: '//*[@id="lista-subopciones-menu"]/ul/li[2]/a',
-    Guerrero:'//*[@id="lista-subopciones-menu"]/ul/li[2]/ul/div[2]/li[13]/a',
+    Guerrero:'[data-nombreboton="Guerrero"]',
   };
 
   login() {
@@ -14,7 +14,7 @@ class region_page {
 
 
   SeleccionarRegion () {
-    //selecciona el estado 
+    //selecciona el estado de Guerrero
     I.click(this.fields.estado);
     I.click(this.fields.Guerrero);
     
@@ -25,8 +25,8 @@ class region_page {
 
   Cambioderegion() {
     //texto o valores actualizados correctamente 
-    I.waitForElement('//*[@id="lista-subopciones-menu"]/ul/li[2]/a', 10);
-    I.seeElement('//*[@id="lista-subopciones-menu"]/ul/li[2]/a');
+    I.waitForElement('[data-nombreboton="Guerrero"]', 10);
+    I.seeElement('[class="estado-Gluo text-option"]' );
   }
 }
 

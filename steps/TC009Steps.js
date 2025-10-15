@@ -4,7 +4,7 @@ Given(/^El usuario esta en la pagina principal$/, () => {
   region_page.login();
 });
 
-When(/^El usuario cambia de region$/, () => {
+When(/^El usuario cambia de region a Guerrero$/, () => {
   region_page.SeleccionarRegion();
 });
 
