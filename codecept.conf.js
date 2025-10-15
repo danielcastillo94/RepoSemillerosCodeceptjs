@@ -1,3 +1,4 @@
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: "./*_test.js",
@@ -18,6 +19,8 @@ exports.config = {
     footertelcelPage: "./pages/pruebaTC010Page.js",
     TC005Page: "./pages/TC005Page.js",
     terminos_page: "./pages/terminos_page.js",
+    region_page: "./pages/region_page.js"
+
   },
   plugins: {
     allure: {
@@ -34,7 +37,9 @@ exports.config = {
       "./steps/plan5gSteps.js",
       "./steps/pruebaTC010Steps.js",
       "./steps/TC005Steps.js",
-      "./steps/pageStep.js"
+      "./steps/pageStep.js",
+      "./steps/TC009Steps.js"
+      
   ]
   },
 
