@@ -13,7 +13,13 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
+    youtubePage: "./pages/youtubePage.js",
+    TC005Page: "./pages/TC005Page.js",
     terminos_page: "./pages/terminos_page.js",
+  },
+  gherkin: {
+    features: "./features/*.feature",
+    steps: ["./steps/loginSteps.js", "./steps/TC005Steps.js", "./steps/pageStep.js"],
   },
   plugins: {
     allure: {
@@ -21,10 +27,6 @@ exports.config = {
       require: '@codeceptjs/allure-legacy',
       outputDir: './output/allure-results'
     }
-  },
-  gherkin: {
-    features: "./features/terminos_page.feature",
-    steps: ["./steps/pageStep.js"],
   },
   name: "Telcel es la red",
 };
