@@ -5,7 +5,6 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-<<<<<<< HEAD
       url: "https://www.telcel.com",
       show: true,
       locale: "es-MX"
@@ -14,16 +13,12 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-<<<<<<< HEAD
-    //youtubePage: "./pages/youtubePage.js",
     planesPage: "./pages/planesPage.js",
-=======
     youtubePage: "./pages/youtubePage.js",
     plan5g_page: "./pages/plan5g_page.js",
     footertelcelPage: "./pages/pruebaTC010Page.js",
     TC005Page: "./pages/TC005Page.js",
     terminos_page: "./pages/terminos_page.js",
->>>>>>> master
   },
   plugins: {
     allure: {
@@ -34,19 +29,15 @@ exports.config = {
   },
 
   gherkin: {
-<<<<<<< HEAD
-    features: "./features/planes.feature",
-    steps: ["./steps/planSteps.js"],
-=======
     features: "./features/*.feature",
     steps: [
       "./steps/loginSteps.js",
       "./steps/plan5gSteps.js",
       "./steps/pruebaTC010Steps.js",
       "./steps/TC005Steps.js",
-      "./steps/pageStep.js"
+      "./steps/pageStep.js",
+      "/steps/planSteps.js"
   ]
->>>>>>> master
   },
 
 
