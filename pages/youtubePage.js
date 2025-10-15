@@ -6,7 +6,7 @@ class youtubePage {
   };
 
   login() {
-    I.amOnPage("/");
+    I.amOnPage("https://www.youtube.com/");
   }
 
   Buscarenyoutube() {
