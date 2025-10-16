@@ -4,8 +4,8 @@ Feature: Validar sección de Cobertura
   Quiero acceder a la sección de Cobertura
   Para validar que el mapa interactivo y el título se muestren correctamente
 
-  Scenario: Abrir Cobertura y validar mapa y título
-    Given abro la página principal de Telcel
-    When navego a la sección "Cobertura" usando el buscador
-    Then debería ver que el mapa interactivo está visible
-    And debería ver que el título de la sección se muestra correctamente
+  Scenario: Validar acceso y visibilidad de la sección Cobertura
+    Given que abro la página principal de Telcel
+    When navego a la sección de Cobertura usando el buscador
+    Then debería ver el título de la sección visible
+    And debería ver el mapa interactivo visible

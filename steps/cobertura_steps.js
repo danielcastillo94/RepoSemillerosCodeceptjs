@@ -1,19 +1,20 @@
+const { I } = inject();
 const CoberturaPage = require('../pages/cobertura_page');
+const coberturaPage = new CoberturaPage(I);
 
-Feature('Cobertura - Validación de sección');
+Given('que abro la pagina principal de Telcel', () => {
+  I.amOnPage('https://www.telcel.com/');
+});
 
-Scenario('Abrir Cobertura y validar mapa y título', async ({ I }) => {
-  const coberturaPage = new CoberturaPage(I);
-
-  // Abrir el home de Telcel
-  await I.amOnPage('https://www.telcel.com/');
-
-  // Buscar y abrir la sección Cobertura
+When('navego a la seccion de Cobertura usando el buscador', async () => {
   await coberturaPage.buscarCobertura();
+});
 
-  // Validar título visible
+Then('deberia ver el titulo de la seccion visible', async () => {
   await coberturaPage.verificarTituloVisible();
+});
 
-  // Validar mapa interactivo visible
+Then('deberia ver el mapa interactivo visible', async () => {
   await coberturaPage.verificarMapaVisible();
 });
+

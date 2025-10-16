@@ -1,30 +1,33 @@
 exports.config = {
-  tests: "./steps/*_steps.js",
-  output: "./output",
+  tests: './steps/*_steps.js',
+  output: './output',
+
   helpers: {
     Playwright: {
-      url: "https://www.telcel.com/",
+      url: 'https://www.telcel.com/',
       show: true,
-      browser: "chromium",
+      browser: 'chromium',
     },
   },
+
   include: {
-    I: "./steps_file.js",
-    footertelcelPage: "./pages/pruebaTC010Page.js",
-    CoberturaPage: "./pages/cobertura_page.js",
+    I: './steps_file.js',
+    CoberturaPage: './pages/cobertura_page.js',
   },
+
   gherkin: {
-    features: "./features/*.feature",
-    steps: ["./steps/pruebaTC010Steps.js", "./steps/cobertura_steps.js"],
+    features: './features/*.feature',
+    steps: ['./steps/cobertura_steps.js'],
   },
+
   plugins: {
     allure: {
       enabled: true,
-      require: "@codeceptjs/allure-legacy",
+      require: '@codeceptjs/allure-legacy',
     },
   },
 
   bootstrap: null,
   mocha: {},
-  name: "telcel-tests",
+  name: 'telcel-tests',
 };
