@@ -10,28 +10,31 @@ exports.config = {
       locale: "es-MX",
     },
   },
-
   include: {
     I: "./steps_file.js",
-    youtubePage: "./pages/youtubePage.js",
+    buscadorPage: "./pages/buscador_page.js",
   },
-
-include: {
-  I: './steps_file.js',
-  buscadorPage: './pages/buscador_page.js',
-},
-
-allure: {
+  gherkin: {
+    features: "./features/*.feature",
+    steps: [
+      "./steps/buscador_steps.js",
+    ]
+  },
+  plugins: {
+    allure: {
       enabled: true,
-      require: '@codeceptjs/allure-legacy',
-      outputDir: './output/allure-results'
+      require: "@codeceptjs/allure-legacy",
+      outputDir: "./output/allure-results"
     },
-
-gherkin: {
-  features: './features/*.feature',
-  steps: [
-    './steps/buscador_steps.js',
-    // ...otros steps que ya tenga el proyecto
-  ]
-}
+    screenshotOnFail: {
+      enabled: true
+    },
+    retryFailedStep: {
+      enabled: true
+    },
+    tryTo: {
+      enabled: true
+    }
+  },
+  name: "Framework-Prueba"
 };
