@@ -1,4 +1,4 @@
-Feature: Navegacion planes
+Feature: Validar navegación hacia la sección de planes
 
 @plan_page
 Scenario: Validar navegacion
