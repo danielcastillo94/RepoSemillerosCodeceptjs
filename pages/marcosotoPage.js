@@ -1,6 +1,6 @@
 /**
  * @file Representa el Page Object para la página de Telcel, encapsulando selectores y métodos
- * para interactuar y validar elementos de la UI. Utilizado en pruebas automatizadas.
+ * para interactuar y validar elementos
  * @author Marco Soto
  * @version 1.0
  */
@@ -385,7 +385,7 @@ class marcosotoPage {
         
         I.waitForElement(this.selectors.ProductDescription, timer);
         I.seeElement(this.selectors.ProductDescription);
-        
+
         await I.waitForElement(this.selectors.ProductImage, timer);
         I.seeElement(this.selectors.ProductImage);
     }
