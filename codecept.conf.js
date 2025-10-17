@@ -16,7 +16,7 @@ exports.config = {
     youtubePage: "./pages/youtubePage.js",
     plan5g_page: "./pages/plan5g_page.js",
     footertelcelPage: "./pages/pruebaTC010Page.js",
-    TC005Page: "./pages/TC005Page.js",
+    marcosotoPage: "./pages/marcosotoPage.js",
     terminos_page: "./pages/terminos_page.js",
   },
   plugins: {
@@ -33,7 +33,7 @@ exports.config = {
       "./steps/loginSteps.js",
       "./steps/plan5gSteps.js",
       "./steps/pruebaTC010Steps.js",
-      "./steps/TC005Steps.js",
+      "./steps/marcosotoSteps.js",
       "./steps/pageStep.js"
   ]
   },
