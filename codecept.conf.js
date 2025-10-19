@@ -13,7 +13,7 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    terminos_page: "./pages/terminos_page.js",
+    home_page: "./pages/TC001_Home_page.js",
   },
   plugins: {
     allure: {
@@ -23,8 +23,8 @@ exports.config = {
     }
   },
   gherkin: {
-    features: "./features/terminos_page.feature",
-    steps: ["./steps/pageStep.js"],
+    features: "./features/TC001_Home_page.feature",
+    steps: ["./steps/TC001_Home_page_steps.js"],
   },
   name: "Telcel es la red",
 };
