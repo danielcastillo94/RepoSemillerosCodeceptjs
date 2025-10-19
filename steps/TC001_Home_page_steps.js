@@ -26,3 +26,7 @@ When("EL usuario puede ver el texto {string}", ()=>{
 Then("El usuario puede ver el texto {string}", ()=>{
     home_page.seeElementsMenuPPR();
 });
+
+When ("El usuario se desplaza hasta el banner de telcel 5g", ()=>{
+    home_page.verifyElement5gButton();
+});
