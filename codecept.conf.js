@@ -14,6 +14,7 @@ exports.config = {
   include: {
     I: "./steps_file.js",
     home_page: "./pages/TC001_Home_page.js",
+    planes_5G: "./pages/TC002_Planes_page.js"
   },
   plugins: {
     allure: {
@@ -23,8 +24,9 @@ exports.config = {
     }
   },
   gherkin: {
-    features: "./features/TC001_Home_page.feature",
-    steps: ["./steps/TC001_Home_page_steps.js"],
+    features: "./features/*_page.feature",
+    steps: ["./steps/TC001_Home_page_steps.js",
+           "./steps/TC002_Planes_page_steps.js"],
   },
   name: "Telcel es la red",
 };
