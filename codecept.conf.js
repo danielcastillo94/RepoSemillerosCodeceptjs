@@ -1,3 +1,4 @@
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: "./*_test.js",
@@ -13,11 +14,14 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
+    planesPage: "./pages/planesPage.js",
     youtubePage: "./pages/youtubePage.js",
     plan5g_page: "./pages/plan5g_page.js",
     footertelcelPage: "./pages/pruebaTC010Page.js",
     marcosotoPage: "./pages/marcosotoPage.js",
     terminos_page: "./pages/terminos_page.js",
+    region_page: "./pages/region_page.js"
+
   },
   plugins: {
     allure: {
@@ -35,6 +39,9 @@ exports.config = {
       "./steps/pruebaTC010Steps.js",
       "./steps/marcosotoSteps.js",
       "./steps/pageStep.js"
+      "./steps/pageStep.js",
+      "./steps/TC009Steps.js",
+      "./steps/planSteps.js",
   ]
   },
 
