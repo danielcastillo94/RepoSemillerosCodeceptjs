@@ -42,8 +42,8 @@ When(/^I search for a product "([^"]*)"$/, (productName) => {
     marcosotoPage.searchProduct(productName);
 });
 
-Then(/^I should see search results$/, async () => {
-    await marcosotoPage.verifySearchResults();
+Then(/^I should see search results$/, () => {
+    marcosotoPage.verifySearchResults();
 });
 
 // ==================== TC005 ====================

@@ -200,9 +200,9 @@ class marcosotoPage {
     async _verifyCoverturePage() {
         I.scrollTo(this.selectors.CoverageLink);
         await I.waitForElement(this.selectors.CoverageMapIframe, 10);
+        await I.waitForElement('//iframe[@id="iframe-recarga3"]',10);
         I.switchTo(this.selectors.CoverageMapIframe);
         //Se usa timer, aunque el await ya espera a el selector, no espera a ver el mapa y falla
-        I.wait(timer);
         await I.seeElement(this.selectors.MapContainer, timer);
         I.switchTo(); // Regresa al contexto principal de la página.
     }
@@ -355,7 +355,7 @@ class marcosotoPage {
     /**
      * Verifica que los resultados de la búsqueda de productos se muestren en la página.
      */
-    async verifySearchResults() {
+    verifySearchResults() {
         I.waitForElement(this.selectors.ProductSearchResults, timer);
         I.seeElement(this.selectors.ProductSearchResults);
     }
