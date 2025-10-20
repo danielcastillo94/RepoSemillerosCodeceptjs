@@ -14,6 +14,7 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
+    planesPage: "./pages/planesPage.js",
     youtubePage: "./pages/youtubePage.js",
     plan5g_page: "./pages/plan5g_page.js",
     footertelcelPage: "./pages/pruebaTC010Page.js",
@@ -38,8 +39,8 @@ exports.config = {
       "./steps/pruebaTC010Steps.js",
       "./steps/TC005Steps.js",
       "./steps/pageStep.js",
-      "./steps/TC009Steps.js"
-      
+      "./steps/TC009Steps.js",
+      "./steps/planSteps.js",
   ]
   },
 
