@@ -1,51 +1,49 @@
-# Nombre del workflow [cite: 16]
+# Nombre del workflow
 name: CI de Pruebas Telcel (Marco Soto)
 
 on:
   push:
     branches:
-      # IMPORTANTE: Cambia 'tu-rama-personal' por el nombre de tu rama
       - "marcosoto_githubaction"
-  # Opcional: Permite ejecutarlo manualmente desde la pestaña Actions
+  # Permite ejecutarlo manualmente desde la pestaña Actions
   workflow_dispatch:
 
 jobs:
-  # Define un único job llamado 'run-tests' [cite: 18]
   run-tests:
-    # El job corre en una máquina virtual de Ubuntu [cite: 18]
+    # El job corre en una máquina virtual de Ubuntu
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Clona tu repositorio en la máquina virtual [cite: 20]
+      # 1. Clona tu repositorio
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      # 2. Configura el entorno de Node.js [cite: 21]
+      # 2. Configura el entorno de Node.js
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18" # Puedes usar 18 o 20
+          node-version: "24"
 
-      # 3. Instala las dependencias del proyecto (CodeceptJS, Playwright, etc.) [cite: 22]
-      - name: Instalar dependencias
+      # 3. Instala las dependencias de Node
+      - name: Instalar dependencias de Node
         run: npm install
 
-      # 4. Instala los navegadores (Chromium) que Playwright necesita
-      # (Tu codecept.conf.js especifica 'chromium')
-      - name: Instalar navegadores de Playwright
-        run: npx playwright install --with-deps chromium
+      # 4. Instala el navegador y sus dependencias de Sistema Operativo
+      - name: Instalar navegador (solo Chromium)
+        run: npx playwright install chromium
 
-      # 5. Ejecuta las pruebas (usando el tag de tu feature) [cite: 23]
+      - name: Instalar dependencias de OS (solo para Chromium)
+        run: npx playwright install-deps chromium
+
+      # 5. Ejecuta las pruebas
       - name: Ejecutar Pruebas CodeceptJS
         run: npx codeceptjs run --grep "@marcosoto"
 
-      # 6. Sube los resultados de Allure como un artefacto [cite: 24, 49]
-      # Esto se ejecuta 'always()' para subir los resultados incluso si las pruebas fallan.
+      # 6. Sube los resultados de Allure como un artefacto
       - name: Subir artefactos de Allure
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          # Esta ruta viene de tu codecept.conf.js
           path: output/allure-results
           retention-days: 7
