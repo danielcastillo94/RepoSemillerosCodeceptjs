@@ -11,7 +11,7 @@ exports.config = {
     }
   },
 
-  include: { //pages
+  include: {
     I: "./steps_file.js",
     TC001Page: "./pages/TC001Page.js",
     TC002Page: "./pages/TC002Page.js",
@@ -37,7 +37,6 @@ exports.config = {
 
   gherkin: {
     features: "./features/*.feature",
-    //steps
     steps: [
       "./steps/TC001Steps.js",
       "./steps/TC002Steps.js",
