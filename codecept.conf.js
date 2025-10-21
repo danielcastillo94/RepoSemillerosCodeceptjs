@@ -24,8 +24,7 @@ exports.config = {
     TC009Page: "./pages/TC009Page.js",
     TC010Page: "./pages/TC010Page.js",
     TC011Page: "./pages/TC011Page.js",
-    TC012Page: "./pages/TC012Page.js",
-    youtubePage: "./pages/youtubePage.js"
+    TC012Page: "./pages/TC012Page.js"
   },
   plugins: {
     allure: {
@@ -49,8 +48,7 @@ exports.config = {
       "./steps/TC009Steps.js",
       "./steps/TC010Steps.js",
       "./steps/TC011Steps.js",
-      "./steps/TC012Steps.js",
-      "./steps/loginSteps.js"
+      "./steps/TC012Steps.js"
   ]
   },
 

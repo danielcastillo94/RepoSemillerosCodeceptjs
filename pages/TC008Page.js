@@ -26,7 +26,7 @@ class TC008Page{
     }
 
     seccionayuda(){
-        I.waitForNavigation(this.urls.secayuda);
+        I.waitForURL(this.urls.secayuda);
         I.waitForElement('section[id="#faqsTodas"]');
         I.waitForElement(this.elementos.p5g,2);
         I.click(this.elementos.p5g);

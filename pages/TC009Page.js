@@ -23,7 +23,6 @@ class TC009Page{
         I.waitForElement(this.elementos.menuUbicacion);
         I.scrollTo(this.elementos.optam);
         I.click(this.elementos.optam);
-        I.waitForNavigation();
     }
 
     verubicacion(){
