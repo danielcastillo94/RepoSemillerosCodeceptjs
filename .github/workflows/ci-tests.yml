@@ -35,9 +35,10 @@ jobs:
       - name: Instalar dependencias de OS (solo para Chromium)
         run: npx playwright install-deps chromium
 
-      # 5. Ejecuta las pruebas
+      # 5. Ejecuta las pruebas en modo headless
       - name: Ejecutar Pruebas CodeceptJS
-        run: npx codeceptjs run --grep "@marcosoto"
+        run: |
+          npx codeceptjs run --grep "@marcosoto" --override '{ "helpers": { "Playwright": { "show": false } } }'
 
       # 6. Sube los resultados de Allure como un artefacto
       - name: Subir artefactos de Allure
