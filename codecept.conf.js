@@ -6,14 +6,14 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: "https://www.telcel.com",
       show: true,
       locale: "es-MX"
     }
   },
-
   include: {
     I: "./steps_file.js",
+    buscadorPage: "./pages/buscador_page.js",
     planesPage: "./pages/planesPage.js",
     youtubePage: "./pages/youtubePage.js",
     plan5g_page: "./pages/plan5g_page.js",
@@ -34,20 +34,35 @@ exports.config = {
   gherkin: {
     features: "./features/*.feature",
     steps: [
+      "./steps/buscador_steps.js",
       "./steps/loginSteps.js",
       "./steps/plan5gSteps.js",
       "./steps/pruebaTC010Steps.js",
-      "./steps/marcosotoSteps.js",
-      "./steps/pageStep.js"
+      "./steps/TC005Steps.js",
       "./steps/pageStep.js",
+      "./steps/marcosotoSteps.js",
       "./steps/TC009Steps.js",
       "./steps/planSteps.js",
-  ]
+    ]
   },
-
-
-  name: "Actividad youtube y Telcel"
-    
-};
+  plugins: {
+    allure: {
+      enabled: true,
+      require: "@codeceptjs/allure-legacy",
+      outputDir: "./output/allure-results"
+    },
+    screenshotOnFail: {
+      enabled: true
+    },
+    retryFailedStep: {
+      enabled: true
+    },
+    tryTo: {
+      enabled: true
+    }
+  },
+  name: "Framework-Prueba",
+  };
+  
 
 
