@@ -1,6 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Fri May 30 19:33:12 GMT 2025","Fri May 30 19:33:25 GMT 2025","13618","Validar carga, descarga y mockeo de datos","","","","","Mockeo resultados youtube con diferentes términos de búsqueda {""termino"":""triste""} @mock",""
-"broken","Fri May 30 19:32:53 GMT 2025","Fri May 30 19:32:55 GMT 2025","1700","Validar carga, descarga y mockeo de datos","","","","","Validar carga de archivo",""
-"broken","Fri May 30 19:33:26 GMT 2025","Fri May 30 19:33:37 GMT 2025","11855","Validar carga, descarga y mockeo de datos","","","","","Mockeo resultados youtube con diferentes términos de búsqueda {""termino"":""fiesta""} @mock",""
-"broken","Fri May 30 19:32:55 GMT 2025","Fri May 30 19:32:56 GMT 2025","773","Validar carga, descarga y mockeo de datos","","","","","Validar descarga de archivo",""
-"broken","Fri May 30 19:32:56 GMT 2025","Fri May 30 19:33:12 GMT 2025","15741","Validar carga, descarga y mockeo de datos","","","","","Mockeo resultados youtube con diferentes términos de búsqueda {""termino"":""haash""} @mock",""
