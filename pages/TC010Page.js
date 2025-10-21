@@ -35,9 +35,9 @@ class TC010Page{
         
         accesosLinks.forEach((link, i) => {
             if(link.nombreboton === accesoN[i] && link.url === accesoL[i]){
-                console.log(`Acceso ${accesoN[i]}: Enlaces correctos`);
+                I.say(`Acceso ${accesoN[i]}: Enlaces correctos`);
             }else{
-                console.log(`Acceso ${accesoN[i]}: Error`);
+                I.say(`Acceso ${accesoN[i]}: Error`);
             }
         });
     }
@@ -51,9 +51,9 @@ class TC010Page{
         const urlCoincide = link.url === redL[i];
 
         if(link.nombreboton === redN[i] && link.url === redL[i]){
-            console.log(`Red ${redN[i]}: Enlaces correctos`);
+            I.say(`Red ${redN[i]}: Enlaces correctos`);
         }else{
-            console.log(`Red ${redN[i]}: Error`);
+            I.say(`Red ${redN[i]}: Error`);
         }
         });
     }

@@ -30,7 +30,7 @@ class TC004Page {
 
         const tarjeta = await I.grabTextFromAll('p[class="card-products--data_name"]');
         for (let i = 0; i < tarjeta.length ; i++){
-            console.log(`Resultado ${[i+1]}: ${tarjeta[i]}`);
+            I.say(`Resultado ${[i+1]}: ${tarjeta[i]}`);
         }
 
     }

@@ -45,9 +45,8 @@ class TC002Page {
         const titulos = await I.grabTextFromAll('//p[contains(@class, "content-title")]');
         // Recorre e imprime cada uno
         for (let i = 0; i < titulos.length; i++) {
-        console.log(`Plan visible: ${titulos[i]}`);
+        I.say(`Plan visible: ${titulos[i]}`);
         }
-        I.wait(5);
     }
 
 }

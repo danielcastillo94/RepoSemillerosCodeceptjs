@@ -27,7 +27,7 @@ class TC003Page {
         I.scrollTo('div[id="compare_planes"]');
         const bf = await I.grabTextFromAll('//tbody/tr/td/strong[@class="ng-binding"]');
         for (let i = 0; i < bf.length; i++ ){
-            console.log(`Beneficio ${i + 1}: ${bf[i]}`);
+            I.say(`Beneficio ${i + 1}: ${bf[i]}`);
         }
     }
 }
