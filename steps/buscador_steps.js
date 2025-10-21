@@ -1,4 +1,6 @@
 const { I } = inject();
+
+
 // Paso 1: Abrir portal Telcel
 Given('que el usuario abre el portal oficial de Telcel {string}', (url) => {
   I.amOnPage(url);
