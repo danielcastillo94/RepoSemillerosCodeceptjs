@@ -22,7 +22,7 @@ class marcosotoPage {
         MainMenu: '[id="telcel-menu-principal-boton"]',
         RegionMenu: '(//img[@alt="icono de ubicacion"])[1]',
         MainMenuOpened: '//nav[@class="menu-principal active-menu"]',
-        MainBanner: '(//div[@class="isDesktopBannerPrincipal"])[1]',
+        MainBanner: '//div[@class="bannerprincipal parbase aem-GridColumn aem-GridColumn--default--12"]',
         
         // Elementos del menú
         MenuItem: '//li[@class="menu-item hover-menu"]',
@@ -203,6 +203,7 @@ class marcosotoPage {
         await I.waitForElement('//iframe[@id="iframe-recarga3"]',10);
         I.switchTo(this.selectors.CoverageMapIframe);
         //Se usa timer, aunque el await ya espera a el selector, no espera a ver el mapa y falla
+        await I.waitForElement(this.selectors.MapContainer, timer);
         await I.seeElement(this.selectors.MapContainer, timer);
         I.switchTo(); // Regresa al contexto principal de la página.
     }
@@ -398,7 +399,7 @@ class marcosotoPage {
      */
     async goToMapView() {
         I.scrollTo(this.selectors.PlanCard);
-        I.click(this.selectors.PlanCard);
+        await I.click(this.selectors.PlanCard);
         await I.waitForElement(this.selectors.SolapasContainer, timer);
     }
 
