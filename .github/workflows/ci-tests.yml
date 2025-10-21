@@ -5,8 +5,14 @@ on:
   push:
     branches:
       - "marcosoto_githubaction"
+  pull_request:
+    branches:
+      - "marcosoto_githubaction"
   # Permite ejecutarlo manualmente desde la pestaña Actions
   workflow_dispatch:
+
+permissions:
+  contents: write # necesario para publicar en gh-pages
 
 jobs:
   run-tests:
@@ -40,11 +46,24 @@ jobs:
         run: |
           npx codeceptjs run --grep "@marcosoto" --override '{ "helpers": { "Playwright": { "show": false } } }'
 
-      # 6. Sube los resultados de Allure como un artefacto
-      - name: Subir artefactos de Allure
+      # 👉 NUEVO: Generar reporte Allure
+      - name: Generate Allure report
+        if: always()
+        run: |
+          npx allure generate output/allure-results --clean -o allure-report || echo "No Allure results found"
+      # 👉 NUEVO: Subir artefactos (incluyendo Allure)
+      - name: Upload test artifacts (logs, screenshots & allure)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: allure-results
-          path: output/allure-results
-          retention-days: 7
+          name: codeceptjs-artifacts
+          path: |
+            output/**
+            allure-report/**
+      # 👉 NUEVO: Publicar Allure report en GitHub Pages
+      - name: Deploy Allure report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
