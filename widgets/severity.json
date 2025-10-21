@@ -1,1 +1,1 @@
-[{"uid":"eb2fc79e50680c43","name":"BeforeSuite of suite Validar carga del portal: failed.","time":{"start":1761082467774,"stop":1761082467774,"duration":0},"status":"failed","severity":"normal"}]
+[{"uid":"32f19c6dee61a07c","name":"Carga del portal y elementos principales @TC001","time":{"start":1761082851130,"stop":1761082853864,"duration":2734},"status":"passed","severity":"normal"}]
