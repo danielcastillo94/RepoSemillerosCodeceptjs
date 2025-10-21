@@ -1,5 +1,5 @@
 Feature: Busqueda en youtube
-
+@ejemplo
 Scenario: Estoy en youtube
 Given Im in youtube
 When I search Gherkin

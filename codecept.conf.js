@@ -13,12 +13,19 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    planesPage: "./pages/planesPage.js",
-    youtubePage: "./pages/youtubePage.js",
-    plan5g_page: "./pages/plan5g_page.js",
-    footertelcelPage: "./pages/pruebaTC010Page.js",
+    TC001Page: "./pages/TC001Page.js",
+    TC002Page: "./pages/TC002Page.js",
+    TC003Page: "./pages/TC003Page.js",
+    TC004Page: "./pages/TC004Page.js",
     TC005Page: "./pages/TC005Page.js",
-    terminos_page: "./pages/terminos_page.js",
+    TC006Page: "./pages/TC006Page.js",
+    TC007Page: "./pages/TC007Page.js",
+    TC008Page: "./pages/TC008Page.js",
+    TC009Page: "./pages/TC009Page.js",
+    TC010Page: "./pages/TC010Page.js",
+    TC011Page: "./pages/TC011Page.js",
+    TC012Page: "./pages/TC012Page.js",
+    youtubePage: "./pages/youtubePage.js"
   },
   plugins: {
     allure: {
@@ -31,12 +38,19 @@ exports.config = {
   gherkin: {
     features: "./features/*.feature",
     steps: [
-      "./steps/loginSteps.js",
-      "./steps/plan5gSteps.js",
-      "./steps/pruebaTC010Steps.js",
+      "./steps/TC001Steps.js",
+      "./steps/TC002Steps.js",
+      "./steps/TC003Steps.js",
+      "./steps/TC004Steps.js",
       "./steps/TC005Steps.js",
-      "./steps/pageStep.js",
-      "./steps/planSteps.js"
+      "./steps/TC006Steps.js",
+      "./steps/TC007Steps.js",
+      "./steps/TC008Steps.js",
+      "./steps/TC009Steps.js",
+      "./steps/TC010Steps.js",
+      "./steps/TC011Steps.js",
+      "./steps/TC012Steps.js",
+      "./steps/loginSteps.js"
   ]
   },
 

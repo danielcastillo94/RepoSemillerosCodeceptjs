@@ -1,71 +1,48 @@
-const { I } = inject();
-const timer = 5;
-_productName = "";
-class TC005Page {
-    fields = {
-        searchBar: 'input[id="buscador-menu-input"]',
-        Product: '(//div[@class="v-card v-theme--light bg-white v-card--density-default v-card--variant-elevated card card-device"])[1]', // Selector para el primer producto en los resultados
-        productDetailsPage: '//cx-page-layout[@class="ng-star-inserted ProductDetailsPageTemplate"]', // Selector para el título del producto en la página de detalles
-        ProductPrice: '//div[@class="cx-product-price-plan"]', // Selector para el precio del producto (ajustar según el HTML real)
-        ProductDescription: '//span[text()="Características"]', // Selector para la descripción del producto (ajustar según el HTML real)
-        ProductImage: '(//cx-media[@class="img-item is-initialized"])[1]' // Selector para la imagen del producto (ajustar según el HTML real)
-    };
+const {I} = inject();
 
-    goToHomePage() {
-        //Página de inicio de Telcel
-        I.amOnPage("https://www.telcel.com/"); 
-
-        // Esperar a que la página cargue completamente
-        I.waitForElement(this.fields.searchBar, timer);
-
-        // Verificar que estamos en la página correcta
-        I.seeInTitle('Telcel'); 
+class TC005Page{
+    elementos = {
+        buttoncookies: '//a[@id="acepto-cookies"]',
+        barra: 'input[id="buscador-menu-input"]',
+        iphone: '//p[contains(text(), "iPhone 17 Pro Max")]',
+        botoncompra: '//button[contains(@class, "btn-primary")]',
+        botoncarrito: '//button[contains(@class, "addtominicart")]'
     }
 
-    searchProduct(productName) {
-        _productName = productName; //la asignamos a variable global
-        // Ingresar el nombre del producto en la barra de búsqueda
-        I.fillField(this.fields.searchBar, productName);
+    urls = {
+        telcel: 'https://www.telcel.com/',
+        resultados: 'https://www.telcel.com/buscador?query=iPhone&mundo=Home&subseccion=Home',
+        equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-azul-256gb/71002636'
+    }
+
+    busqueda(){
+        I.amOnPage(this.urls.telcel);
+        I.click(this.elementos.buttoncookies);
+        I.fillField(this.elementos.barra, "iPhone");
         I.pressKey('Enter');
-
-        // Esperar a que los resultados de búsqueda carguen
-        I.waitForElement(this.fields.Product, timer);
+        I.waitForURL(this.urls.resultados);
+        I.waitForVisible('h3[class="results-num"]');
     }
 
-    selectProduct() {
-        // Seleccionar el primer producto de los resultados
-        I.click(this.fields.Product);
-
-        // Esperar a que la página de detalles del producto cargue
-        I.waitForElement('h1', timer); // Asumiendo que el nombre del producto está en un <h1>
+    seleccionequipo(){
+        I.click(this.elementos.iphone);
+        I.waitForURL(this.urls.equipo);
     }
 
-    verifyProductDetailPage() {
-        // Verificar que estamos en la página de detalles del producto
-        I.seeElement(this.fields.productDetailsPage);
+    ventanadetalles(){
+        I.waitForURL(this.urls.equipo);
+        I.waitForVisible('div#slide-ngb-slide-2',//imagen
+                         '//h1[contains(text(), "iPhone 17 Pro Max")]',//nombre
+                         'div[class="cx-product-price-plan"]',//precio
+                         'span[class="color-txt"]',//color
+                         '//span[contains(@class, "capacity-txt")]',//capacidad
+                         'div[class="title-sim"]',//SIM
+                         'input[id="activePayment"]',//cobro
+                         this.elementos.botoncarrito,//boton carrito
+                         this.elementos.botoncompra);//boton compra
+        I.scrollTo('//h2[contains(text(), "Características y especificaciones")]');
     }
+    
 
-    async verifyProductDetails() {
-        // Verificar que el nombre sea visible y capturarlo
-        I.waitForElement(`//h1[contains(text(),"${_productName}")]`, timer);
-        // Nombre del producto guardado en una variable
-        const productName = await I.grabTextFrom(`//h1[contains(text(),"${_productName}")]`);
-        I.seeElement(`//h1[contains(text(),"${_productName}")]`);
-        
-        // Precio del producto
-        I.waitForElement(this.fields.ProductPrice, timer);
-        // Precio del producto guardado en una variable
-        const productPrice = await I.grabTextFrom(this.fields.ProductPrice);
-        I.seeElement(this.fields.ProductPrice);
-        
-        // Descripción
-        I.waitForElement(this.fields.ProductDescription, timer);
-        I.seeElement(this.fields.ProductDescription);
-        
-        // Imagen
-        I.waitForElement(this.fields.ProductImage, timer);
-        I.seeElement(this.fields.ProductImage);
-    }
 }
-
 module.exports = new TC005Page();

@@ -1,21 +1,14 @@
-const { TC005Page } = inject();
+const {TC005Page} = inject();
 
-Given(/^Im on the homepage$/, () => {
-    TC005Page.goToHomePage();
+Given (/^el usuario esta en la pagina de resultados de la busqueda$/, () =>  {
+    TC005Page.busqueda();
 });
 
-When(/^I search for a product "([^"]*)"$/, (productName) => {
-    TC005Page.searchProduct(productName);
+When (/^el usuario selecciona algun equipo$/, () =>{
+    TC005Page.seleccionequipo();
 });
 
-When(/^I select a product to view its details$/, () => {
-    TC005Page.selectProduct();
-});
+Then (/^el usuario puede ver la imagen, especificaciones y precio del equipo$/, () =>{
+    TC005Page.ventanadetalles();
 
-Then(/^I should see the product detail page$/, () => {
-    TC005Page.verifyProductDetailPage();
-});
-
-Then(/^I can see the product name, price, description, and image$/, async () => {
-    await TC005Page.verifyProductDetails();
 });
