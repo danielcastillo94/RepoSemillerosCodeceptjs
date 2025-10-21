@@ -1,4 +1,5 @@
 const { I } = inject();
+const { devices } = require('playwright');
 
 class home_page {
 
@@ -9,7 +10,7 @@ class home_page {
         banner: '//*[@id="pagina-contenido-d670c30d2d"]/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]',
 
         //Elementos para "Verificar navegacion hacia la seccion de planes y submenus"
-        movil: '//*[@id="level-1"]/li[1]/a',
+        movil: '//a[text()="Móvil"]',
         ppr: '//*[@id="level-1"]/li[1]/div/div[1]/ul/li[3]/a', //pagos paquetes y recargas (ppr)
 
         //Elementos para "Verificar ingreso al detalle de un plan especifico"
@@ -43,6 +44,40 @@ class home_page {
         countryText: '//span[text()="Baja California"]'
     }
 
+    linksElements={
+        //Elementos para "Verficar que los enlaces redirigen correctamente a sus paginas"
+        twitterIcon: 'a[href*="twitter.com/telcel"]',
+        facebookIcon: 'a[href*="facebook.com/Telcel"]', 
+        youtubeIcon: 'a[href*="youtube.com/user/Telceloficial"]'
+    }
+
+    movilElements={
+        menuButton: '//*[@id="telcel-menu-principal-boton"]',
+        peopleButton: '//*[@id="menu-telcel-active"]/a'
+    }
+
+    //Metodo para verificar el funcionamiento movil
+    movilView(){
+    session('mobile user', devices['iPhone 11'], () => {
+        I.amOnPage('/');
+        I.click(this.movilElements.menuButton);
+        I.seeElement(this.movilElements.peopleButton);
+        I.click(this.homeElements.movil);
+        I.seeElement(this.homeElements.movil);      
+    });    
+    }
+
+    //Metodo para "Verficar que los enlaces redirigen correctamente a sus paginas"
+    verifyLinks(){
+        I.scrollPageToBottom();
+        // Verificar que los enlaces existen y son clickeables
+        I.wait(2);
+        I.seeElement(this.linksElements.twitterIcon);
+        I.seeElement(this.linksElements.facebookIcon);
+        I.seeElement(this.linksElements.youtubeIcon);
+        
+    }
+    
     //Metodo para verificar el cambio de regionalizacion
     verifyCountryChange(){
         I.click(this.countryElements.countryIcon);
@@ -105,18 +140,18 @@ class home_page {
 
     //Metodo para "Verificar funcionalidad de la barra de busqueda"
     verifySearchBar(){
-        I.click(this.homeElements.searchBar);
+        I.click(this.searchBarElements.searchBar);
         I.fillField("search", "oppo");
         I.pressKey("Enter");
-        I.waitForElement(this.homeElements.oppoText, 5);
-        I.seeElement(this.homeElements.oppoText);
-        I.click(this.homeElements.oppoText);
-        I.waitForElement(this.homeElements.oppoImage, 5);
-        I.seeElement(this.homeElements.oppoImage);
-        I.seeElement(this.homeElements.oppoPrice);
-        I.seeElement(this.homeElements.oppoMemory);    
+        I.waitForElement(this.searchBarElements.oppoText, 5);
+        I.seeElement(this.searchBarElements.oppoText);
+        I.click(this.searchBarElements.oppoText);
+        I.waitForElement(this.searchBarElements.oppoImage, 5);
+        I.seeElement(this.searchBarElements.oppoImage);
+        I.seeElement(this.searchBarElements.oppoPrice);
+        I.seeElement(this.searchBarElements.oppoMemory);    
     }
-
+    
 }
 
 module.exports = new home_page();

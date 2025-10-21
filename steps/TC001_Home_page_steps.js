@@ -22,7 +22,7 @@ When("EL usuario puede ver el texto {string}", ()=>{
     home_page.seeElementsMenuMovil();
 });
 
-Then("El usuario puede ver el texto {string}", ()=>{
+Then("El usuario debe ver el texto {string}", ()=>{
     home_page.seeElementsMenuPPR();
 });
 
@@ -40,4 +40,12 @@ When ("El usuario se posiciona sobre el boton Menú", ()=>{
 
 When ("El usuario hace click en el menu deslizable de estados", ()=>{
     home_page.verifyCountryChange();
+});
+
+When ("El usuario se desplaza hasta el final de la pagina", ()=>{
+    home_page.verifyLinks();
+});
+
+When (/^El usuario hace click en "Menu"$/, ()=>{
+    home_page.movilView();
 });

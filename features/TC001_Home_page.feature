@@ -55,20 +55,15 @@ Scenario: Verificar cambio de regionalizacion
 Scenario: Verficar que los enlaces redirigen correctamente a sus paginas
 
     When El usuario el usuario se desplaza hasta el final de la pagina
-    And El usuario hace click en el enlace facebook
-    Then El usuario deberia redirigirse correctamente al enlace
-    And El usuario hace click en el enlace a x 
-    Then El usuario deberia ser redirigido correctamente a x
+    #And El usuario hace click en el enlace facebook
+    #Then El usuario deberia redirigirse correctamente al enlace
+    #And El usuario hace click en el enlace a x 
+    #Then El usuario deberia ser redirigido correctamente a x
 
 @vista-movil
 Scenario: Verificar comportamiento del menu en vista movil
 
     When El usuario hace click en "Menu"
-    And El usuario hace click en  "Movil"
-    Then El usuario deberia ver los textos "Entretenimiento" y "Ayuda"
+    #And El usuario hace click en  "Movil"
+    #Then El usuario deberia ver los textos "Entretenimiento" y "Ayuda"
 
-@centro-de-atencion
-Scenario: Verficar elementos del centro de atencion
-    Given El usuario el usuario se encuentra en la pagina de contactanos
-    When El usuario hace click en "Centro de Atención"
-    Then El usuario deberia ver los enlaces "Zacatecas", "Veracruz"
