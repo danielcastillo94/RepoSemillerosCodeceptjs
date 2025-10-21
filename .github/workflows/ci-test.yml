@@ -31,7 +31,7 @@ jobs:
         run: npx playwright install chromium
 
       - name: Run CodeceptJS tests
-        run: npx codeceptjs run --features
+        run: npx codeceptjs run --features --steps --verbose --grep '@TC001'
 
       # 👉 NUEVO: Generar reporte Allure
       - name: Generate Allure report
