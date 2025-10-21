@@ -38,7 +38,6 @@ exports.config = {
       "./steps/plan5gSteps.js",
       "./steps/pruebaTC010Steps.js",
       "./steps/marcosotoSteps.js",
-      "./steps/pageStep.js"
       "./steps/pageStep.js",
       "./steps/TC009Steps.js",
       "./steps/planSteps.js",
