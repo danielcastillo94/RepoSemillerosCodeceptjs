@@ -1,4 +1,5 @@
 # EJERCICIO 4 - ANA PAOLA REBOLLOSO SAUCEDO
+# TC010 | HU-001 | v.1.0
 
 @footer
 Feature: Validar footer de Telcel
