@@ -34,10 +34,6 @@ When ("El usuario hace click en la barra de busqueda", ()=>{
     home_page.verifySearchBar();
 });
 
-When ("El usuario se posiciona sobre el boton Menú", ()=>{
-    home_page.verifyFormElements();
-});
-
 When ("El usuario hace click en el menu deslizable de estados", ()=>{
     home_page.verifyCountryChange();
 });

@@ -1,5 +1,4 @@
 const { I } = inject();
-const { devices } = require('playwright');
 
 class home_page {
 
@@ -28,16 +27,6 @@ class home_page {
         oppoPrice: '.cx-product-price-plan[class]',
     }
 
-    formElements={
-        //Elementos para Verificar la carga correcta de los elementos del formulario
-        helpText: '//*[@id="level-1"]/li[5]/a',
-        contactText: '//a[text()="Contáctanos"]',
-        emailText: '//span/a[text()="Correo Electrónico"]',
-        nameInput: '//input[@id="contacto"]',
-        phoneInput:'//input[@id="telefono"]',
-        sendButton: '//a[@id="form-btn"]'
-    }
-
     countryElements={
         countryIcon: '//*[@id="lista-subopciones-menu"]/ul/li[2]/a',
         countrySelection: '//a[text()="Baja California"]',
@@ -49,22 +38,6 @@ class home_page {
         twitterIcon: 'a[href*="twitter.com/telcel"]',
         facebookIcon: 'a[href*="facebook.com/Telcel"]', 
         youtubeIcon: 'a[href*="youtube.com/user/Telceloficial"]'
-    }
-
-    movilElements={
-        menuButton: '//*[@id="telcel-menu-principal-boton"]',
-        peopleButton: '//*[@id="menu-telcel-active"]/a'
-    }
-
-    //Metodo para verificar el funcionamiento movil
-    movilView(){
-    session('mobile user', devices['iPhone 11'], () => {
-        I.amOnPage('/');
-        I.click(this.movilElements.menuButton);
-        I.seeElement(this.movilElements.peopleButton);
-        I.click(this.homeElements.movil);
-        I.seeElement(this.homeElements.movil);      
-    });    
     }
 
     //Metodo para "Verficar que los enlaces redirigen correctamente a sus paginas"
@@ -84,21 +57,6 @@ class home_page {
         I.click(this.countryElements.countrySelection);
         I.waitForElement(this.countryElements.countryText, 3)
         I.seeElement(this.countryElements.countryText);
-    }
-
-    //Metodo para "Verificar la carga correcta de los elementos del formulario"
-    verifyFormElements(){
-        //navegacion
-        I.moveCursorTo(this.homeElements.menu);
-        I.moveCursorTo(this.formElements.helpText);
-        I.click(this.formElements.contactText);
-        //verificacion
-        I.waitForElement(this.formElements.emailText, 3);
-        I.click(this.formElements.emailText);
-        I.scrollTo(this.formElements.nameInput);
-        I.seeElement(this.formElements.nameInput);
-        I.seeElement(this.formElements.phoneInput);
-        I.seeElement(this.formElements.sendButton);        
     }
 
     goToTelcel() {

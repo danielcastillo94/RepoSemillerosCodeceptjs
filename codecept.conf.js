@@ -16,7 +16,8 @@ exports.config = {
     I: "./steps_file.js",
     home_page: "./pages/TC001_Home_page.js",
     planes_5G: "./pages/TC002_Planes_page.js",
-    contact_page: "./pages/contact_page.js"
+    contact_page: "./pages/contact_page.js",
+    mobile_page: "./pages/Mobil_page.js"
   },
   plugins: {
     allure: {
@@ -29,7 +30,8 @@ exports.config = {
     features: "./features/*_page.feature",
     steps: ["./steps/TC001_Home_page_steps.js",
            "./steps/TC002_Planes_page_steps.js",
-           "./steps/contact_page_steps.js"],
+           "./steps/Contact_page_steps.js",
+           "./steps/Mobile_page_steps.js"],
   },
   name: "Telcel es la red",
 };

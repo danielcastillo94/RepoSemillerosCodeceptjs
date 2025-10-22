@@ -34,16 +34,6 @@ Scenario: Verificar funcionalidad de la barra de busqueda
     #And El usuario deberia ver el precio del equipo
     #And El usuario deberia ver los textos "Camara" y "Memoria"
 
-@formulario-elementos
-Scenario: Verificar la carga correcta de los elementos del formulario
-
-    When El usuario se posiciona sobre el boton Menú
-    #And El usuario se posiciona sobre "Ayuda"
-    #And El usuario hace click en "Contáctanos"
-    #And El usuario hace click en "Correo Electrónico"
-    #Then El usuario deberia ver el campo "contacto" y "telefono" 
-    #And El usuario deberia ver el boton enviar
-
 @regionalizacion
 Scenario: Verificar cambio de regionalizacion
 
@@ -60,10 +50,4 @@ Scenario: Verficar que los enlaces redirigen correctamente a sus paginas
     #And El usuario hace click en el enlace a x 
     #Then El usuario deberia ser redirigido correctamente a x
 
-@vista-movil
-Scenario: Verificar comportamiento del menu en vista movil
-
-    When El usuario hace click en "Menu"
-    #And El usuario hace click en  "Movil"
-    #Then El usuario deberia ver los textos "Entretenimiento" y "Ayuda"
 
