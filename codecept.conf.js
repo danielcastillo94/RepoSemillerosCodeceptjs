@@ -31,6 +31,9 @@ exports.config = {
       enabled: true,
       require: '@codeceptjs/allure-legacy',
       outputDir: './output/allure-results'
+    },
+    screenshotOnFail: {
+      enabled: true
     }
   },
 
