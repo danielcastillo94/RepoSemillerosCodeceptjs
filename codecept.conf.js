@@ -20,7 +20,9 @@ exports.config = {
     footertelcelPage: "./pages/pruebaTC010Page.js",
     marcosotoPage: "./pages/marcosotoPage.js",
     terminos_page: "./pages/terminos_page.js",
-    region_page: "./pages/region_page.js"
+    region_page: "./pages/region_page.js",
+    karelPage: "./pages/karelPage.js"
+    
 
   },
   plugins: {
@@ -38,10 +40,11 @@ exports.config = {
       "./steps/plan5gSteps.js",
       "./steps/pruebaTC010Steps.js",
       "./steps/marcosotoSteps.js",
-      "./steps/pageStep.js"
       "./steps/pageStep.js",
       "./steps/TC009Steps.js",
       "./steps/planSteps.js",
+      "./steps/karelSteps.js",
+
   ]
   },
 
