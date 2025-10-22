@@ -1,3 +1,4 @@
+#Se encapsularon los metodos dentro del archivo Lvht_Contact_page.js
 Feature: Validar que el centro de atencion cargue correctamente los elementos
 
 Background:

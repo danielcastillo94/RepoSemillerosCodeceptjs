@@ -14,10 +14,10 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    home_page: "./pages/TC001_Home_page.js",
-    planes_5G: "./pages/TC002_Planes_page.js",
-    contact_page: "./pages/contact_page.js",
-    mobile_page: "./pages/Mobil_page.js"
+    home_page: "./pages/Lvht_Home_page.js",
+    planes_5G: "./pages/Lvht_Planes_page.js",
+    contact_page: "./pages/Lvht_Contact_page.js",
+    mobile_page: "./pages/Lvht_Mobil_page.js"
   },
   plugins: {
     allure: {
@@ -28,10 +28,10 @@ exports.config = {
   },
   gherkin: {
     features: "./features/*_page.feature",
-    steps: ["./steps/TC001_Home_page_steps.js",
-           "./steps/TC002_Planes_page_steps.js",
-           "./steps/Contact_page_steps.js",
-           "./steps/Mobile_page_steps.js"],
+    steps: ["./steps/Lvht_Home_page_steps.js",
+           "./steps/Lvht_Planes_page_steps.js",
+           "./steps/Lvht_Contact_page_steps.js",
+           "./steps/Lvht_Mobile_page_steps.js"],
   },
   name: "Telcel es la red",
 };

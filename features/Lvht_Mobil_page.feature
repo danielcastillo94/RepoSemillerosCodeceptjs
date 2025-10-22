@@ -1,3 +1,4 @@
+#Se encapsularon los metodos dentro del archivo Lvht_Mobil_page.js
 Feature: Comprobar los elementos en vista movil
 
 Given El usuario se encuentra en la pagina principal de Telcel en modo vista movil

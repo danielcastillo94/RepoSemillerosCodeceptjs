@@ -1,3 +1,6 @@
+#12 casos de prueba para probar las funcionalidades y verficar elmentos dentro del sitio web de Telcel
+#Se encapsularon los metodos dentro de los archivos .page
+
 Feature: Validar carga del portal y elementos
 
     Background:

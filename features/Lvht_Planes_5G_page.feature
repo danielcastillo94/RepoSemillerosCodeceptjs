@@ -1,3 +1,4 @@
+#Se encapsularon los metodos dentro del archivo Lvht_Planes_page.js
 Feature: Validar el mapa interactivo
 
 @mapa-interactivo

@@ -1,6 +1,6 @@
 const { I } = inject();
 const { devices } = require('playwright');
-const home_page = require('../pages/TC001_Home_page.js');
+const home_page = require('./Lvht_Home_page.js');
 
 class mobile_page {
     movilElements = {
