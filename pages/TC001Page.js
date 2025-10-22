@@ -20,10 +20,9 @@ class TC001Page{
     }
 
     verelementos(){
-        I.seeElement('img[data-menusup="Logo"]', //logo
+    I.seeElement('a[title=Telcel]', //logo
                      'a[id="telcel-menu-principal-boton"]', //boton menu
-                     '//div[contains(@class, "bannerprincipal")]' //banner principal
-        );
+                     '//div[contains(@class, "bannerprincipal")]'); //banner principal
     }
 }
 
