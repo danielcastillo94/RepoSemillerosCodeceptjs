@@ -26,7 +26,7 @@ class TC009Page{
     }
 
     verubicacion(){
-        I.waitForURL(this.urls.telcel);
+        I.waitForNavigation(this.urls.telcel);
         I.seeTextEquals("Tamaulipas", this.elementos.btnubicacion);
 
     }
