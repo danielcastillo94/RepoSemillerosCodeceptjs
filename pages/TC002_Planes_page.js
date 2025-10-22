@@ -2,8 +2,8 @@ const { I } = inject();
 
 class planes_5G {
     page_elements = {
-        banner5G: '//*[@id="accordion-9615"]/div/div[7]/div/div/div/a/div[2]',
-        seeMapButton: '//*[@id="accordion-9615"]/div/div[7]/div/div/div/a/div[2]/div/button',
+        banner5G: '//div[@class="telcel-destacado-descriptivo---contenido  "]',
+        seeMapButton: '//button[text()="Ver cobertura"]',
         mapiFrame: '#iframe-recarga3',
         mapGraph: '//html/body/div[2]/div[2]/div[1]/div/div/div[3]/div[1]/div[2]'
     }

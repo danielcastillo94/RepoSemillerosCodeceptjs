@@ -17,7 +17,7 @@ class home_page {
         moreButton: '//*[@id="telcel_backoffice_banner"]/div[1]/div[2]/div[1]/div[2]/div/a',
 
     }
-    searchBarElements={
+    searchBarElements = {
         //Elmentos para "Verificar funcionalidad de la barra de busqueda"
         searchBar: '//*[@name="search"]',
         searchButton: '//button[text()="Buscar"]',
@@ -27,36 +27,58 @@ class home_page {
         oppoPrice: '.cx-product-price-plan[class]',
     }
 
-    countryElements={
+    countryElements = {
         countryIcon: '//*[@id="lista-subopciones-menu"]/ul/li[2]/a',
         countrySelection: '//a[text()="Baja California"]',
         countryText: '//span[text()="Baja California"]'
     }
 
-    linksElements={
+    linksElements = {
         //Elementos para "Verficar que los enlaces redirigen correctamente a sus paginas"
         twitterIcon: 'a[href*="twitter.com/telcel"]',
-        facebookIcon: 'a[href*="facebook.com/Telcel"]', 
+        facebookIcon: 'a[href*="facebook.com/Telcel"]',
         youtubeIcon: 'a[href*="youtube.com/user/Telceloficial"]'
     }
 
     //Metodo para "Verficar que los enlaces redirigen correctamente a sus paginas"
-    verifyLinks(){
+    verifyLinks() {
         I.scrollPageToBottom();
         // Verificar que los enlaces existen y son clickeables
         I.wait(2);
         I.seeElement(this.linksElements.twitterIcon);
         I.seeElement(this.linksElements.facebookIcon);
         I.seeElement(this.linksElements.youtubeIcon);
-        
+
     }
-    
+
     //Metodo para verificar el cambio de regionalizacion
-    verifyCountryChange(){
+    verifyCountryChange() {
         I.click(this.countryElements.countryIcon);
         I.click(this.countryElements.countrySelection);
         I.waitForElement(this.countryElements.countryText, 3)
         I.seeElement(this.countryElements.countryText);
+    }
+
+    //Metodos para "Verificar ingreso al detalle de un plan especifico"
+    verifyElement5gButton() {
+        I.scrollTo(this.homeElements.button5g);
+        I.click(this.homeElements.button5g);
+        I.waitForElement(this.homeElements.moreButton, 5);
+        I.seeElement(this.homeElements.moreButton);
+    }
+
+    //Metodo para "Verificar funcionalidad de la barra de busqueda"
+    verifySearchBar() {
+        I.click(this.searchBarElements.searchBar);
+        I.fillField("search", "oppo");
+        I.pressKey("Enter");
+        I.waitForElement(this.searchBarElements.oppoText, 5);
+        I.seeElement(this.searchBarElements.oppoText);
+        I.click(this.searchBarElements.oppoText);
+        I.waitForElement(this.searchBarElements.oppoImage, 5);
+        I.seeElement(this.searchBarElements.oppoImage);
+        I.seeElement(this.searchBarElements.oppoPrice);
+        I.seeElement(this.searchBarElements.oppoMemory);
     }
 
     goToTelcel() {
@@ -88,28 +110,20 @@ class home_page {
         I.seeElement(this.homeElements.ppr);
     }
 
-    //Metodos para "Verificar ingreso al detalle de un plan especifico"
-    verifyElement5gButton() {
-        I.scrollTo(this.homeElements.button5g);
-        I.click(this.homeElements.button5g);
-        I.waitForElement(this.homeElements.moreButton, 5);
-        I.seeElement(this.homeElements.moreButton);
+    goToPageEnd() {
+        I.scrollPageToBottom();
+        I.click('//*[@id="acepto-cookies"]');
     }
 
-    //Metodo para "Verificar funcionalidad de la barra de busqueda"
-    verifySearchBar(){
-        I.click(this.searchBarElements.searchBar);
-        I.fillField("search", "oppo");
-        I.pressKey("Enter");
-        I.waitForElement(this.searchBarElements.oppoText, 5);
-        I.seeElement(this.searchBarElements.oppoText);
-        I.click(this.searchBarElements.oppoText);
-        I.waitForElement(this.searchBarElements.oppoImage, 5);
-        I.seeElement(this.searchBarElements.oppoImage);
-        I.seeElement(this.searchBarElements.oppoPrice);
-        I.seeElement(this.searchBarElements.oppoMemory);    
+    clickLink() {
+        I.click('//*[@id="telcel-footer-copyright-derecha-contenido"]/ul/li[2]/a');
     }
-    
+
+    seeResults() {
+        I.waitForElement('//h1[text()="Términos y condiciones"]', 3);
+        I.seeElement('//h1[text()="Términos y condiciones"]');
+    }
+
 }
 
 module.exports = new home_page();
