@@ -27,6 +27,9 @@ jobs:
         npm install
         # Si usas Playwright, instala los browsers
         npx playwright install
+    - name: Install dependencies
+      run: |
+        npx codeceptjs run --grep "@regression"
         
     - name: Run tests with Allure
       run: |
