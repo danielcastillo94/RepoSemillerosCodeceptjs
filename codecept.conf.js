@@ -8,7 +8,8 @@ exports.config = {
       browser: "chromium",
       url: 'https://www.telcel.com',
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
+      headless: true
     }
   },
 
