@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { addAttachment } = require('@codeceptjs/allure-legacy');
 
-class ScreenshotHelper extends Helper {
+class ScreenshotsHelper extends Helper {
   async _after() {
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     const filename = `screenshot-${timestamp}.png`;
@@ -16,4 +16,4 @@ class ScreenshotHelper extends Helper {
   }
 }
 
-module.exports = ScreenshotHelper;
+module.exports = ScreenshotsHelper;
