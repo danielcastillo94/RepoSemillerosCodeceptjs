@@ -48,7 +48,7 @@ exports.config = {
        //== De Luis Valente ==//
       "./steps/Lvht_Home_page_steps.js",
       "./steps/Lvht_Planes_page_steps.js",
-      "./steps/Lvht_Contact_page_steps.js",
+      "./steps/Lvht_Contact_Page_steps.js",
       "./steps/Lvht_Mobile_page_steps.js"
 
   ]
