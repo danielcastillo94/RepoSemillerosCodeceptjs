@@ -1,6 +1,3 @@
-import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
-import homeSteps from '../steps/homeSteps';
-
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: "./*_test.js",
@@ -8,7 +5,6 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      //url: "https://www.youtube.com",
       url: "https://www.telcel.com",
       show: true,
       locale: "es-MX",
@@ -16,11 +12,14 @@ exports.config = {
   },
 
   include: {
-    /*I: "./steps_file.js",
-    youtubePage: "./pages/youtubePage.js", */
-    I: "./homeSteps.js",
-    home_page: "./pages/homePage.js",
+     I: "./steps_file.js",
+    TC001Page: "./pages/TC001Page.js",
+    TC002Page: "./pages/TC002Page.js",
+    TC003Page: "./pages/TC003Page.js",
+    TC004Page: "./pages/TC004Page.js",
+    TC005Page: "./pages/TC005Page.js",
   },
+
   plugins: {
     allure: {
       enabled: true,
@@ -30,8 +29,14 @@ exports.config = {
   },
   gherkin: {
     features: "./features/*.feature",
-    steps: ["./steps/loginSteps.js"],
+    steps: ["./steps/loginSteps.js", 
+      "./steps/TC001Steps.js",
+      "./steps/TC002Steps.js",
+      "./steps/TC003Steps.js",
+      "./steps/TC004Steps.js",
+      "./steps/TC005Steps.js",
+
+    ]
   },
-  //name: "Actividad youtube",
-  name: "Página Telcel",
+  
 };

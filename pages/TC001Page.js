@@ -1,0 +1,30 @@
+const {I} = inject();
+
+class TC001Page{
+    elements = {
+        busqueda: 'textarea[title="Buscar"]',        
+    }
+
+    urls = {
+        telcel: 'https://www.telcel.com',
+    }
+
+    carga(){
+        I.amOnPage(this.urls.telcel);
+    }
+
+    portal(){
+        I.waitForURL(this.urls.telcel);
+        I.waitForElement('//title[contains(text(), "Telcel es la Red - Sitio Oficial")]');
+
+    }
+
+    verelementos(){
+        I.seeElement('img[data-menusup="Logo"]', //logo
+                     'a[id="telcel-menu-principal-boton"]', //boton menu
+                     '(//img[contains(@class, "telcel-banner-simple--imagen")])[1]' //banner principal
+        );
+    }
+}
+
+module.exports = new TC001Page();
