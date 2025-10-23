@@ -28,8 +28,6 @@ jobs:
     - name: Run tests
       run: |
         npx codeceptjs run --features
-      env:
-        HEADLESS: true
         
     - name: Run tests with Allure
       run: |
