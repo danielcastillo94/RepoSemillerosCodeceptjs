@@ -8,7 +8,7 @@ When(/^El usuario se desplaza hasta el final de la pagina$/, () => {
   terminos_page.goToPageEnd();
 });
 
-Then(/^El usuario hace click en terminos y condiciones$/, () => {
+When(/^El usuario hace click en terminos y condiciones$/, () => {
   terminos_page.clickLink();
 });
 
