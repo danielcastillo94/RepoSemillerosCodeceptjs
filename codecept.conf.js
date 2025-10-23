@@ -34,6 +34,9 @@ exports.config = {
     },
     screenshotOnFail: {
       enabled: true
+    },
+    ScreenshotsHelper: {
+        require: './helpers/ScreenshotsHelper.js'
     }
   },
 
