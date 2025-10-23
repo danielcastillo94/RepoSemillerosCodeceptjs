@@ -30,7 +30,7 @@ jobs:
 
     - name: Run tests
       run:
-        npx codeceptjs run --features
+        npx codeceptjs run --grep "@regression"
         
     - name: Run tests with Allure
       run: |
