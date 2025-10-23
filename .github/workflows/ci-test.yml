@@ -1,0 +1,53 @@
+name: CI Tests - Allure Report
+
+on:
+  push:
+    branches: [ "features/TC012-Luis-Heredia" ]  # Se ejecuta en features
+    # O si prefieres solo en tu rama específica:
+    # branches: [ "tu-rama-personal" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm install
+        # Si usas Playwright, instala los browsers
+        npx playwright install
+        
+    - name: Run tests with Allure
+      run: |
+        npx codeceptjs run --plugins allure
+        # O si tienes un script en package.json:
+        # npm run test:allure
+        
+    - name: Generate Allure Report
+      run: |
+        npx allure generate output --clean
+        
+    - name: Upload Allure Report as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-report
+        path: allure-report/
+        retention-days: 30
+        
+    - name: Upload test results as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: output/
+        retention-days: 30

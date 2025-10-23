@@ -1,7 +1,7 @@
 #Se encapsularon los metodos dentro del archivo Lvht_Planes_page.js
 Feature: Validar el mapa interactivo
 
-@mapa-interactivo
+@regression @mapa-interactivo
 Scenario: Navegacion hasta el mapa interactivo
 
 Given El usuario se encuentra en la seccion "Conoce el mundo 5G"

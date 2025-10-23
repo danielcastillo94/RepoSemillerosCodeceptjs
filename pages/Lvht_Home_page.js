@@ -44,7 +44,7 @@ class home_page {
     verifyLinks() {
         I.scrollPageToBottom();
         // Verificar que los enlaces existen y son clickeables
-        I.wait(2);
+        I.waitForElement(this.linksElements.twitterIcon, 2);
         I.seeElement(this.linksElements.twitterIcon);
         I.seeElement(this.linksElements.facebookIcon);
         I.seeElement(this.linksElements.youtubeIcon);
@@ -73,6 +73,9 @@ class home_page {
         I.fillField("search", "oppo");
         I.pressKey("Enter");
         I.waitForElement(this.searchBarElements.oppoText, 5);
+    }
+
+    verifySearchBarElement(){
         I.seeElement(this.searchBarElements.oppoText);
         I.click(this.searchBarElements.oppoText);
         I.waitForElement(this.searchBarElements.oppoImage, 5);

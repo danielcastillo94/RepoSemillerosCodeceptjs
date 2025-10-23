@@ -4,12 +4,12 @@ Feature: Validar que el centro de atencion cargue correctamente los elementos
 Background:
     Given El usuario se encuentra en la pagina de contactanos
 
-@centro-de-atencion
+@regression @centro-de-atencion
 Scenario: Verficar elementos del centro de atencion
     When El usuario hace click en "Centro de Atención"
     #Then El usuario deberia ver los enlaces "Zacatecas", "Veracruz"
 
-@formulario-elementos
+@regression @formulario-elementos
 Scenario: Verificar la carga correcta de los elementos del formulario
 
     When El usuario se posiciona sobre el boton Menú

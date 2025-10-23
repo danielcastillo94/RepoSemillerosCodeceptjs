@@ -51,6 +51,10 @@ When("El usuario hace click en la barra de busqueda", () => {
     home_page.verifySearchBar();
 });
 
+Then("El usuario deberia ver una imagen del equipo", ()=>{
+    home_page.verifySearchBarElement();
+});
+
 //@regionalizacion
 When("El usuario hace click en el menu deslizable de estados", () => {
     home_page.verifyCountryChange();

@@ -2,7 +2,7 @@
 Feature: Comprobar los elementos en vista movil
 
 Given El usuario se encuentra en la pagina principal de Telcel en modo vista movil
-@vista-movil
+@regression @vista-movil
 Scenario: Verificar comportamiento del menu en vista movil
 
     When El usuario hace click en "Menu"
