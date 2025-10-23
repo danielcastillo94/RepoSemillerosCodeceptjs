@@ -6,11 +6,8 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: 'https://www.telcel.com',
-      show: false ,
+      show: true ,
       locale: "es-MX"
-    },
-    ScreenshotHelper: {
-        require: './helpers/ScreenshotHelper.js'
     }
   },
 
