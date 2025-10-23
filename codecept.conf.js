@@ -1,8 +1,8 @@
-
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: "./*_test.js",
-  output: "./output",
+  tests: './steps/*_steps.js',
+  output: './output',
+
   helpers: {
     Playwright: {
       browser: "chromium",
@@ -14,6 +14,7 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
+    CoberturaPage: "./pages/cobertura_page.js",
     planesPage: "./pages/planesPage.js",
     youtubePage: "./pages/youtubePage.js",
     plan5g_page: "./pages/plan5g_page.js",
@@ -22,20 +23,12 @@ exports.config = {
     terminos_page: "./pages/terminos_page.js",
     region_page: "./pages/region_page.js",
     karelPage: "./pages/karelPage.js"
-    
-
-  },
-  plugins: {
-    allure: {
-      enabled: true,
-      require: '@codeceptjs/allure-legacy',
-      outputDir: './output/allure-results'
-    }
   },
 
   gherkin: {
-    features: "./features/*.feature",
+    features: './features/*.feature',
     steps: [
+      './steps/cobertura_steps.js',
       "./steps/loginSteps.js",
       "./steps/plan5gSteps.js",
       "./steps/pruebaTC010Steps.js",
@@ -44,13 +37,18 @@ exports.config = {
       "./steps/TC009Steps.js",
       "./steps/planSteps.js",
       "./steps/karelSteps.js",
-
-  ]
+    ],
   },
 
+  plugins: {
+    allure: {
+      enabled: true,
+      require: '@codeceptjs/allure-legacy',
+      outputDir: './output/allure-results'
+    }
+  },
 
+  bootstrap: null,
+  mocha: {},
   name: "Actividad youtube y Telcel"
-    
 };
-
-

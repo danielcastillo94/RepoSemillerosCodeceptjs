@@ -1,0 +1,102 @@
+{
+  "cookies": [
+    {
+      "name": "_GRECAPTCHA",
+      "value": "09AG7bzvGjA0XdajXn-dgVmtE-JlWvbodstc3kLc6x-wL-B1i8DN_noGGRpwyCvr-6Ealpcf64Cj_-UCVrhaMib2E",
+      "domain": "www.google.com",
+      "path": "/recaptcha",
+      "expires": 1775417523.959579,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Host-device_id",
+      "value": "AQBZs7UbpC4TeR8eTBEnklj5zTWYGkx-g_xE_DQlnGFBFlzi7TKXAUU20WpLyW2wL1yROnZYziY6OqyFp-Qi-cLXW3iamLg-hlo",
+      "domain": "accounts.spotify.com",
+      "path": "/",
+      "expires": 1794425517.081132,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-TPASESSION",
+      "value": "AQBAV6OKpXcFE6+i+YIUOybxPiYypGXjilkjnonMhrnU6JLbDhJsPGhg9wKMoAWQQdckrZIdFF1FeHb2wELx/UAgRry6IJVaxQ4=",
+      "domain": ".accounts.spotify.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sp_sso_csrf_token",
+      "value": "013acda719081a370c877f2fb4cd7f813f8d58684f31373539383635353137303832",
+      "domain": ".accounts.spotify.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sp_tr",
+      "value": "false",
+      "domain": ".accounts.spotify.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-sp_csrf_sid",
+      "value": "3cf2453b8f2d807cc0b07440d82fe2f88db27bafb25a800528435c62a59c6a7c",
+      "domain": "accounts.spotify.com",
+      "path": "/",
+      "expires": 1759869117.083252,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sp_t",
+      "value": "e2fc2c24-55f3-41e3-8adb-1911112cfa9d",
+      "domain": "accounts.spotify.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://accounts.spotify.com",
+      "localStorage": [
+        {
+          "name": "_grecaptcha",
+          "value": "09AG7bzvGeboV1eFSOvA3lGqj2DzKN45CkLPVcMnfJVTqnl1avrsfapKlPIJQE2Re7-pZW1ID_lRnxmYjmQtzwhzrwp2llTalU-_iPsA0jMjUejS7OLgcBzk8IfEFB-w7m"
+        },
+        {
+          "name": "com.spotify.single.item.cache:accounts-sso",
+          "value": "{\"key\":\"3b07058a15551356\",\"value\":{\"#v\":\"1\",\"passwordless\":true,\"#configurationAssignmentId\":\"df60e22d-a3f8-3667-6c4b-43247f6dc11a:0\",\"#groupIds\":{\"passwordless\":1243118},\"#fetchTimeMillis\":1759865520206}}"
+        }
+      ]
+    },
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "rc::a",
+          "value": "cjIwdHpmMW1zZzJwNQ=="
+        },
+        {
+          "name": "rc::f",
+          "value": "0aAGmBFivsU-9CuK1JlP6oTPfNYUtHrighGbTerueHLd1wZfgJRo70uIAO9aev_fa2_zLs2Kc"
+        }
+      ]
+    }
+  ]
+}
