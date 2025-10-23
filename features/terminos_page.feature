@@ -1,3 +1,4 @@
+@terminos
 Feature: Terminos y condiciones
 
 Scenario: Verificar la carga de los terminos y condiciones en la pagina principal
