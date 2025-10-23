@@ -1,0 +1,52 @@
+name: CI Tests - Allure Report
+
+on:
+  push:
+    branches: [ "features/karelm" ]
+  pull_request:
+    branches: [ "features/karelm" ]
+
+# Definición del job principal
+jobs:
+  test:
+    runs-on: ubuntu-latest   # Usa una máquina virtual con Ubuntu como sistema operativo
+
+    steps:
+      # Paso 1: Clona el repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Paso 2: Configura Node.js con la versión especificada
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.18.0   # Versión de Node.js que se usará para ejecutar el proyecto
+
+      # Paso 3: Instala las dependencias del proyecto (CodeceptJS, Playwright, etc.)
+      - name: Install dependencies
+        run: npm install
+
+      # Paso 4: Instala el navegador Chromium para las pruebas con Playwright
+      - name: Install browsers
+        run: npx playwright install chromium
+
+      # Paso 5: Ejecuta los tests definidos en archivos .feature usando CodeceptJS
+      - name: Run CodeceptJS tests
+        run: npx codeceptjs run --features --grep '@karelTelcel'
+
+      # Paso 6: Genera el reporte Allure desde los resultados de prueba
+      - name: Generate Allure report
+        if: always()   # Se ejecuta siempre, incluso si los tests fallan
+        run: |
+          npx allure generate output/allure-results --clean -o allure-report || echo "No Allure results found"
+      # Paso 7: Sube los artefactos generados (logs, capturas de pantalla, reporte Allure)
+      - name: Upload test artifacts (logs, screenshots & allure)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: codeceptjs-artifacts
+          #Carpeta con resultados de CodeceptJS
+          #Carpeta con el reporte visual de Allure
+          path: |
+            output/**
+            allure-report/**
