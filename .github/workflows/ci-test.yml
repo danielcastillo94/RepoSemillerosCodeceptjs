@@ -2,9 +2,7 @@ name: CI Tests - Allure Report
 
 on:
   push:
-    branches: [ "features/TC012-Luis-Heredia" ]  # Se ejecuta en features
-    # O si prefieres solo en tu rama específica:
-    # branches: [ "tu-rama-personal" ]
+    branches: [ "features/TC012-Luis-Heredia" ]
   pull_request:
     branches: [ "main" ]
 
@@ -25,18 +23,17 @@ jobs:
     - name: Install dependencies
       run: |
         npm install
-        # Si usas Playwright, instala los browsers
-        npx playwright install
 
     - name: Run tests
       run: |
         npx codeceptjs run --grep "@regression"
+      env:
+        HEADLESS: true
         
     - name: Run tests with Allure
       run: |
         npx allure generate output/allure-results --clean -o output/allure-report
-        # O si tienes un script en package.json:
-        # npm run test:allure
+
         
     - name: Upload Allure Report as artifact
       uses: actions/upload-artifact@v4
