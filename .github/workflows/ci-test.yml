@@ -3,6 +3,8 @@ name: CI Tests - Allure Report
 on:
   push:
     branches: [ "features/TC012-Luis-Heredia" ]
+  pull_request:
+    branches: [ "features/TC012-Luis-Heredia" ]
 
 jobs:
   test:
@@ -15,29 +17,36 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '20.x'
         cache: 'npm'
         
     - name: Install dependencies
       run: |
         npm install
-        npx playwright install
+        npx playwright install chromium
 
+    - name: Run tests
+      run: |
+        npx codeceptjs run --features
+      env:
+        HEADLESS: true
+        
     - name: Run tests with Allure
       run: |
-        npx codeceptjs run --grep "@regression" --plugins allure
-      env:
-        HEADLESS: true 
+        npx allure generate output/allure-results --clean -o output/allure-report
+
         
-    - name: Generate Allure Report
-      if: always()
-      run: |
-        npx allure generate output --clean -o allure-report
-        
-    - name: Upload Allure Report
-      if: always()
+    - name: Upload Allure Report as artifact
       uses: actions/upload-artifact@v4
       with:
         name: allure-report
         path: allure-report/
+        retention-days: 30
+        
+    - name: Upload test results as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: output/**
+              allure-report/**
         retention-days: 30
