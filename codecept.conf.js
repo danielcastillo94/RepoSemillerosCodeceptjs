@@ -8,6 +8,9 @@ exports.config = {
       url: 'https://www.telcel.com',
       show: false ,
       locale: "es-MX"
+    },
+    ScreenshotHelper: {
+        require: './helpers/ScreenshotHelper.js'
     }
   },
 
@@ -34,9 +37,6 @@ exports.config = {
     },
     screenshotOnFail: {
       enabled: true
-    },
-    ScreenshotsHelper: {
-        require: './helpers/ScreenshotsHelper.js'
     }
   },
 
