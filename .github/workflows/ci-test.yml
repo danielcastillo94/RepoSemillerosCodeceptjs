@@ -30,13 +30,9 @@ jobs:
         
     - name: Run tests with Allure
       run: |
-        npx codeceptjs run --plugins allure
+        npx allure generate output/allure-results --clean -o output/allure-report
         # O si tienes un script en package.json:
         # npm run test:allure
-        
-    - name: Generate Allure Report
-      run: |
-        npx allure generate output --clean
         
     - name: Upload Allure Report as artifact
       uses: actions/upload-artifact@v4
