@@ -1,6 +1,6 @@
 const { I } = inject();
 
-class plan5g_page {
+class TC003plan5g_page {
   fields = {  //Área de selectores  
     Cookies: '[class="telcel-banner-aviso-cookies"]',
   };
@@ -39,7 +39,7 @@ class plan5g_page {
 
     //Scroll para observar la información contenida en el plan 
     await I.scrollTo('//*[@id="contentDetailPlan"]/div[2]/div/div/span[2]');
-    await I.wait(2);
+    await I.wait(5);
 
     //Cerrar la ventana de los detalles del plan o modal 
     I.click('//*[@id="detailPlanHeader"]/div/div/a[2]')
@@ -47,4 +47,4 @@ class plan5g_page {
 
   }
 }
-module.exports = new plan5g_page(); //exportar la clase
+module.exports = new TC003plan5g_page(); //exportar la clase
