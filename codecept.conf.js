@@ -6,7 +6,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: 'https://www.telcel.com',
-      show: true,
+      show: false,
       locale: "es-MX"
     }
   },
@@ -29,6 +29,8 @@ exports.config = {
   },
   plugins: {
     allure: {
+      enabled: true, // activar el plugin
+      require: '@codeceptjs/allure-legacy',
       outputDir: './output/allure-results'
     }
   },
@@ -40,7 +42,7 @@ exports.config = {
       "./steps/loginSteps.js",
       "./steps/TC001Steps.js",
       "./steps/TC002Steps.js",
-      "./steps/TC003gSteps.js",
+      "./steps/TC003Steps.js",
       "./steps/TC004Steps.js",
       "./steps/TC005Steps.js",
       "./steps/TC006Steps.js",
