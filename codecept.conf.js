@@ -7,9 +7,16 @@ exports.config = {
       browser: "chromium",
       url: 'https://www.telcel.com',
       show: false ,
-      locale: "es-MX"
+      locale: "es-MX",
+      waitForNavigation: 'domcontentloaded',
+      video: true,
+      keepVideoForPassedTests: true,
+    },
+    adjuntarCaptura: {
+      require: './helpers/adjuntarCaptura.js'
     }
   },
+
 
   include: {
     I: "./steps_file.js",
@@ -59,5 +66,6 @@ exports.config = {
   name: "Actividad youtube y Telcel"
     
 };
+
 
 

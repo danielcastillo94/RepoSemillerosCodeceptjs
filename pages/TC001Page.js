@@ -23,7 +23,9 @@ class TC001Page{
     I.seeElement('a[title=Telcel]', //logo
                      'a[id="telcel-menu-principal-boton"]', //boton menu
                      '//div[contains(@class, "bannerprincipal")]'); //banner principal
+    I.saveScreenshot('TC001.png');
     }
+    
 }
 
 module.exports = new TC001Page();

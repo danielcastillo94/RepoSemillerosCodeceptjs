@@ -32,6 +32,7 @@ class TC008Page{
         I.click(this.elementos.p5g);
         I.waitForElement(this.elementos.resultados);
         I.seeElement(this.elementos.resultados, this.elementos.paginas);
+
     }
 
 }
