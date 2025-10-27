@@ -1,5 +1,3 @@
-
-/** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: "./*_test.js",
   output: "./output",
@@ -8,7 +6,16 @@ exports.config = {
       browser: "chromium",
       url: 'https://www.telcel.com',
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
+      // Habilita la grabación de video para cada prueba
+      video: true,
+      keepVideoForPassedTests: true,
+      // Habilita la generación de trazas de Playwright
+      trace: true, // Allure adjuntará la traza si la prueba falla
+      keepTraceForPassedTests: true,
+
+      screenshots: true, 
+      keepScreenshotsForPassedTests: true
     }
   },
 
@@ -48,5 +55,4 @@ exports.config = {
   name: "Actividad youtube y Telcel"
     
 };
-
 
