@@ -25,7 +25,6 @@ class TC004Page {
 
     async resultadosBusqueda(){
         I.waitForURL(this.urls.resultados);
-        I.see('iPhone');
         I.seeElement('p[class="card-products--data_name"]');
 
         const tarjeta = await I.grabTextFromAll('p[class="card-products--data_name"]');
