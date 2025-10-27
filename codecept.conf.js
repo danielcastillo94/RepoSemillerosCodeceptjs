@@ -7,8 +7,9 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: 'https://www.telcel.com',
-      show: true,
-      locale: "es-MX"
+      show: false,
+      locale: "es-MX",
+      headless: true
     }
   },
 
@@ -22,7 +23,14 @@ exports.config = {
     marcosotoPage: "./pages/marcosotoPage.js",
     terminos_page: "./pages/terminos_page.js",
     region_page: "./pages/region_page.js",
-    karelPage: "./pages/karelPage.js"
+    karelPage: "./pages/karelPage.js",
+    
+    //== De Luis Valente ==//
+    home_page: "./pages/Lvht_Home_page.js",
+    planes_5G: "./pages/Lvht_Planes_page.js",
+    contact_page: "./pages/Lvht_Contact_page.js",
+    mobile_page: "./pages/Lvht_Mobil_page.js"
+
   },
 
   gherkin: {
@@ -37,7 +45,14 @@ exports.config = {
       "./steps/TC009Steps.js",
       "./steps/planSteps.js",
       "./steps/karelSteps.js",
-    ],
+      
+       //== De Luis Valente ==//
+      "./steps/Lvht_Home_page_steps.js",
+      "./steps/Lvht_Planes_page_steps.js",
+      "./steps/Lvht_Contact_Page_steps.js",
+      "./steps/Lvht_Mobile_page_steps.js"
+
+  ]
   },
 
   plugins: {
