@@ -1,24 +1,59 @@
 const { I } = inject();
 
 class TC002Page {
-    // Selectores
-    get menuPlanes() {
-        return $(' a[id="telcel-menu-principal-boton"]');
+    // Definimos los elementos de la página como propiedades de la clase
+    get elements() {
+        return {
+            menuPrincipal: 'a#telcel-menu-principal-boton',
+            menuDesplegado: '#menu-principal.active-menu',
+            opcionMovil: 'a[data-menuprin="Movil"].black-mobile',
+            submenuMovilContenedor: '//div[@class="submenu-content default submenu-mobile" and @data-menuprin="Movil"]',
+            submenuMovil: '//div[@class="submenu-content default submenu-mobile" and @data-menuprin="Movil"]//a',
+        };
     }
 
-    get subMenu() {
-        return $$('a[href="/planes-renta"]');
-    }
-    
-    // Método para navegar al menú de planes
-    async navigateToPlanes() {
-        await this.menuPlanes.moveTo(); // Colocar mouse sobre el submenú
+    abrirPagina() {
+        I.amOnPage('https://www.telcel.com/');
     }
 
-    // Método para verificar visibilidad de submenús
-    async validateSubMenus() {
-        const isVisible = await this.subMenu.every(elem => elem.isDisplayed());
-        return isVisible;
+    esperarCarga() {
+        I.waitForElement(this.elements.menuPrincipal, 10);
+    }
+
+    accederMenuPrincipal() {
+        I.moveCursorTo(this.elements.menuPrincipal);
+        I.waitForVisible(this.elements.menuDesplegado, 10);
+    }
+
+    posicionarseSobreOpcionMovil() {
+        I.waitForVisible(this.elements.opcionMovil, 10);
+        I.seeElement(this.elements.opcionMovil);
+        I.waitForVisible(this.elements.submenuMovilContenedor, 10);
+    }
+
+    validarSubmenus(submenusEsperados) {
+        submenusEsperados.forEach((submenu, index) => {
+            const xpathElemento = `(${this.elements.submenuMovil})[${index + 1}]`;
+
+            I.waitForVisible(xpathElemento, 10);
+            I.seeElement(xpathElemento);
+
+            this.validarTexto(xpathElemento, submenu.texto);
+            this.validarLink(xpathElemento, submenu.link);
+        });
+    }
+
+    validarTexto(xpathElemento, textoEsperado) {
+        I.grabTextFrom(xpathElemento).then(textoActual => {
+            I.assert(textoActual.trim() === textoEsperado, `Texto esperado: "${textoEsperado}", encontrado: "${textoActual.trim()}"`);
+        });
+    }
+
+    validarLink(xpathElemento, linkEsperado) {
+        I.grabAttributeFrom(xpathElemento, 'href').then(hrefActual => {
+            const esElMismoLink = hrefActual.endsWith(linkEsperado) || hrefActual === linkEsperado;
+            I.assert(esElMismoLink, `Link esperado: "${linkEsperado}", encontrado: "${hrefActual}"`);
+        });
     }
 }
 

@@ -1,23 +1,22 @@
-const { I } = inject();
-const detalleEquipoPage = require('../pages/TC005Page');
+const { TC005Page } = inject();
 
-Given('que estoy en la página de inicio del portal Telcel', async () => {
-  await I.amOnPage('https://www.telcel.com');
+Given(/^que estoy en la página de inicio del portal Telcel$/, async () => {
+  await TC005Page.portal();
+
 });
 
-When('selecciono un equipo desde los resultados', async () => {
-  // Aquí deberás agregar la lógica para seleccionar un equipo
-  await I.click(seleccionequipo); // Selector del equipo (ajusta según sea necesario)
+When(/^selecciono un equipo desde los resultados$/, () => {
+  TC005Page.busqueda();
+
 });
 
-Then('debo ver las imágenes del producto', async () => {
-  await detalleEquipoPage.verificarElementosVisibles();
+
+Then(/^debo ver las imágenes, el precio del producto$/, () => {
+  TC005Page.resultados();
+
 });
 
-Then('debo ver el precio del producto', async () => {
-  await detalleEquipoPage.verificarElementosVisibles();
-});
+Then(/^las especificaciones del producto$/, () => {
+  TC005Page.detalles();
 
-Then('debo ver las especificaciones del producto', async () => {
-  await detalleEquipoPage.verificarElementosVisibles();
 });

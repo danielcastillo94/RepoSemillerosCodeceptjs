@@ -1,22 +1,37 @@
+const { I } = inject();
+
 class TC005Page {
-  constructor() {
-    // Selector para los elementos de la página de detalle del equipo
-    this.imagenes = 'div[class="card-device--img_cont"]'; // Selector de las imágenes
-    this.precio = 'p[class="card-products--acquire_price"]'; // Selector del precio
-    this.especificaciones = '//i[@id="tab-characteristic"]'; // Selector de especificaciones
-  
-}
 
-seleccionequipo(){
-        I.click(this.elementos.iphone);
-        I.waitForURL(this.urls.equipo);
+fields = {
+    Cookies: '[class="telcel-banner-aviso-cookies"]',
+    Buscador: '#buscador-menu-input',
+    Resultado: 'h3.results-num span.filled',
+    Producto: 'p.card-products--data_name',
+    Detalle: 'custom-product-intro h1'
+
+  };
+   async portal() {
+    await I.amOnPage('https://www.telcel.com/')
+    if (await I.grabNumberOfVisibleElements(this.fields.Cookies)) {
+      await I.click('//a[@id="acepto-cookies"]');
     }
+  }
 
-  // Método para verificar que los elementos están visibles
-  async verificarElementosVisibles() {
-    await I.seeElement(this.imagenes);
-    await I.seeElement(this.precio);
-    await I.seeElement(this.especificaciones);
+  busqueda() {
+    I.waitForElement(this.fields.Buscador)
+    I.fillField(this.fields.Buscador, 'Redmi Note 13');
+    I.pressKey('Enter');
+  }
+
+   async resultados() {
+    await I.waitForElement(this.fields.Resultado, 10);
+  }
+  
+  detalles() {
+    I.waitForElement(this.fields.Producto, 10);
+    I.click(this.fields.Producto);
+    I.waitForElement(this.fields.Detalle, 10);
+    I.seeElement(this.fields.Detalle);
   }
 }
 
