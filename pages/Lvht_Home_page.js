@@ -4,7 +4,7 @@ class home_page {
 
     homeElements = {
         //Elementos para "Verificar la carga del portal y de los elementos"
-        logo: 'img.js-responsive-image',
+        logo: '//a[@title="Telcel"]',
         menu: '//*[@class="navbar-nuevo-menu btn"]',
         banner: '//*[@id="pagina-contenido-d670c30d2d"]/div[2]/div[1]/div/div/div[1]/div/div[1]/div[2]',
 
@@ -55,7 +55,7 @@ class home_page {
     verifyCountryChange() {
         I.click(this.countryElements.countryIcon);
         I.click(this.countryElements.countrySelection);
-        I.waitForElement(this.countryElements.countryText, 3)
+        I.waitForElement(this.countryElements.countryText, 5)
         I.seeElement(this.countryElements.countryText);
     }
 
@@ -80,6 +80,7 @@ class home_page {
         I.click(this.searchBarElements.oppoText);
         I.waitForElement(this.searchBarElements.oppoImage, 5);
         I.seeElement(this.searchBarElements.oppoImage);
+        I.waitForElement(this.searchBarElements.oppoPrice, 3);
         I.seeElement(this.searchBarElements.oppoPrice);
         I.seeElement(this.searchBarElements.oppoMemory);
     }
@@ -89,6 +90,7 @@ class home_page {
     }
 
     seeElementsLogo() {
+        I.waitForElement(this.homeElements.logo, 5);
         I.seeElement(this.homeElements.logo);
     }
 
