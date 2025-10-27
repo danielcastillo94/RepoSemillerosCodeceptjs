@@ -11,12 +11,11 @@ exports.config = {
       waitForNavigation: 'domcontentloaded',
       video: true,
       keepVideoForPassedTests: true,
+      trace: true,
+      keepTraceForPassedTests: true,
+      screenshotOnFail: true
     },
-    adjuntarCaptura: {
-      require: './helpers/adjuntarCaptura.js'
-    }
   },
-
 
   include: {
     I: "./steps_file.js",
@@ -38,9 +37,6 @@ exports.config = {
       enabled: true,
       require: '@codeceptjs/allure-legacy',
       outputDir: './output/allure-results'
-    },
-    screenshotOnFail: {
-      enabled: true
     }
   },
 
@@ -66,6 +62,3 @@ exports.config = {
   name: "Actividad youtube y Telcel"
     
 };
-
-
-
