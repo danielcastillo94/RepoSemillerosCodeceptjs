@@ -21,7 +21,7 @@ exports.config = {
     marcosotoPage: "./pages/marcosotoPage.js",
     terminos_page: "./pages/terminos_page.js",
     region_page: "./pages/region_page.js",
-    karelPage: "./pages/karelPage.js"
+    kareltPage: "./pages/kareltPage.js"
     
 
   },
@@ -43,7 +43,7 @@ exports.config = {
       "./steps/pageStep.js",
       "./steps/TC009Steps.js",
       "./steps/planSteps.js",
-      "./steps/karelSteps.js",
+      "./steps/kareltSteps.js",
 
   ]
   },

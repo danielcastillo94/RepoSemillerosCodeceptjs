@@ -2,7 +2,7 @@ const { locator } = require("codeceptjs");
 const { expect } = require("playwright/test");
 const { I } = inject();
 
-class KarelPage {
+class KareltPage {
   urls = {
         urltelcel: 'https://www.telcel.com/',
         urlplanrenta: 'https://www.telcel.com/planes-renta',
@@ -321,4 +321,4 @@ class KarelPage {
 
 }
 
-module.exports = new KarelPage();
+module.exports = new KareltPage();
