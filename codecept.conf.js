@@ -11,10 +11,11 @@ exports.config = {
       waitForNavigation: 'domcontentloaded',
       video: true,
       keepVideoForPassedTests: true,
-      trace: true,
-      keepTraceForPassedTests: true,
-      screenshotOnFail: true
-    },
+      trace: false,
+      keepTraceForPassedTests: false,
+      screenshotOnFail: true,
+      fullPageScreenshots: true
+    }
   },
 
   include: {

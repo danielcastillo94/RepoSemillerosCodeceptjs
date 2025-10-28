@@ -1,4 +1,5 @@
 const {I} = inject();
+const {allure} = codeceptjs.container.plugins();
 
 class TC005Page{
     elementos = {
@@ -41,8 +42,20 @@ class TC005Page{
                          this.elementos.botoncarrito,//boton carrito
                          this.elementos.botoncompra);//boton compra
         I.scrollTo('//h2[contains(text(), "Características y especificaciones")]');
+        this.screenshotPassed();
     }
-    
+
+    async screenshotPassed(){
+    const fs = require('fs');
+    const path = require('path');
+    const className = this.constructor.name;
+    const screenshotName = (`${className}`+'.png');
+    await I.saveScreenshot(screenshotName);
+    const screenshotPath = path.resolve('output', screenshotName);
+
+    const dataImage = fs.readFileSync(screenshotPath);
+    allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
+    }
 
 }
 module.exports = new TC005Page();

@@ -1,4 +1,5 @@
 const { I } = inject();
+const { allure } = codeceptjs.container.plugins();
 
 class TC006Page{
     elementos = {
@@ -37,6 +38,19 @@ class TC006Page{
         I.see('Mapas de Cobertura'); //nombre de la seccion
         I.scrollTo('iframe[id="iframe-recarga3"]');
         I.seeElement('iframe[id="iframe-recarga3"]'); //mapa
+        this.screenshotPassed();
+    }
+
+    async screenshotPassed(){
+    const fs = require('fs');
+    const path = require('path');
+    const className = this.constructor.name;
+    const screenshotName = (`${className}`+'.png');
+    await I.saveScreenshot(screenshotName);
+    const screenshotPath = path.resolve('output', screenshotName);
+
+    const dataImage = fs.readFileSync(screenshotPath);
+    allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
     }
 
 }

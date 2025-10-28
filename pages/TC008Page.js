@@ -1,4 +1,5 @@
 const { I } = inject();
+const { allure } = codeceptjs.container.plugins();
 
 class TC008Page{
     elementos = {
@@ -33,6 +34,19 @@ class TC008Page{
         I.waitForElement(this.elementos.resultados);
         I.seeElement(this.elementos.resultados, this.elementos.paginas);
 
+        this.screenshotPassed();
+    }
+
+    async screenshotPassed(){
+    const fs = require('fs');
+    const path = require('path');
+    const className = this.constructor.name;
+    const screenshotName = (`${className}`+'.png');
+    await I.saveScreenshot(screenshotName);
+    const screenshotPath = path.resolve('output', screenshotName);
+
+    const dataImage = fs.readFileSync(screenshotPath);
+    allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
     }
 
 }

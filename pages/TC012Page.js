@@ -1,4 +1,5 @@
 const {I} = inject();
+const {allure} = codeceptjs.container.plugins();
 
 class TC012Page{
     botones = {
@@ -26,6 +27,19 @@ class TC012Page{
         I.waitForURL(this.urls.urlTYC);
         I.see('Términos y condiciones');
 
+        this.screenshotPassed();
+    }
+
+    async screenshotPassed(){
+    const fs = require('fs');
+    const path = require('path');
+    const className = this.constructor.name;
+    const screenshotName = (`${className}`+'.png');
+    await I.saveScreenshot(screenshotName);
+    const screenshotPath = path.resolve('output', screenshotName);
+
+    const dataImage = fs.readFileSync(screenshotPath);
+    allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
     }
 }
 

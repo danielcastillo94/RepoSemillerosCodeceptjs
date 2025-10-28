@@ -1,4 +1,5 @@
 const { I } = inject();
+const { allure } = codeceptjs.container.plugins();
 
 /*Se crearon 3 metodos para simular el flujo de navegación*/
 
@@ -47,8 +48,20 @@ class TC002Page {
         for (let i = 0; i < titulos.length; i++) {
         I.say(`Plan visible: ${titulos[i]}`);
         }
+        this.screenshotPassed();
     }
 
+    async screenshotPassed(){
+    const fs = require('fs');
+    const path = require('path');
+    const className = this.constructor.name;
+    const screenshotName = (`${className}`+'.png');
+    await I.saveScreenshot(screenshotName);
+    const screenshotPath = path.resolve('output', screenshotName);
+
+    const dataImage = fs.readFileSync(screenshotPath);
+    allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
+    }
 }
 
 module.exports = new TC002Page();

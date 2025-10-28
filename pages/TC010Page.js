@@ -1,4 +1,5 @@
 const { I } = inject();
+const { allure } = codeceptjs.container.plugins();
 
 class TC010Page{
     elementos = {
@@ -27,6 +28,7 @@ class TC010Page{
 
     seccionFooter(){
         I.scrollTo(this.elementos.footer);
+        this.screenshotPassed();
     }
 
     async datosAccesos(accesosLinks){
@@ -56,6 +58,18 @@ class TC010Page{
             I.say(`Red ${redN[i]}: Error`);
         }
         });
+    }
+
+    async screenshotPassed(){
+    const fs = require('fs');
+    const path = require('path');
+    const className = this.constructor.name;
+    const screenshotName = (`${className}`+'.png');
+    await I.saveScreenshot(screenshotName);
+    const screenshotPath = path.resolve('output', screenshotName);
+
+    const dataImage = fs.readFileSync(screenshotPath);
+    allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
     }
 }
 

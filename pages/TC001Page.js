@@ -1,4 +1,7 @@
 const {I} = inject();
+const {allure} = codeceptjs.container.plugins();
+const fs = require('fs');
+const path = require('path');
 
 class TC001Page{
     elements = {
@@ -19,12 +22,21 @@ class TC001Page{
         
     }
 
-    verelementos(){
-    I.seeElement('a[title=Telcel]', //logo
-                     'a[id="telcel-menu-principal-boton"]', //boton menu
-                     '//div[contains(@class, "bannerprincipal")]'); //banner principal
+    async verelementos(){
+        I.seeElement('a[title=Telcel]');
+        I.seeElement('a[id="telcel-menu-principal-boton"]');
+        I.seeElement('//div[contains(@class, "bannerprincipal")]');
+        await this.screenshotPassed();
     }
-    
+
+    async screenshotPassed(){
+        const className = this.constructor.name;
+        const screenshotName = (`${className}`+'.png');
+        await I.saveScreenshot(screenshotName);
+        const screenshotPath = path.resolve('output', screenshotName);
+        const dataImage = fs.readFileSync(screenshotPath);
+        allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
+    }
 }
 
 module.exports = new TC001Page();

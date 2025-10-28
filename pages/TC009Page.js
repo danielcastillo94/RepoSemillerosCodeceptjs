@@ -1,4 +1,5 @@
 const {I} = inject();
+const {allure} = codeceptjs.container.plugins();
 
 class TC009Page{
     elementos = {
@@ -28,7 +29,20 @@ class TC009Page{
     verubicacion(){
         I.amOnPage(this.urls.telcel);
         I.seeTextEquals("Tamaulipas", this.elementos.btnubicacion);
+        
+        this.screenshotPassed();
+    }
 
+    async screenshotPassed(){
+    const fs = require('fs');
+    const path = require('path');
+    const className = this.constructor.name;
+    const screenshotName = (`${className}`+'.png');
+    await I.saveScreenshot(screenshotName);
+    const screenshotPath = path.resolve('output', screenshotName);
+
+    const dataImage = fs.readFileSync(screenshotPath);
+    allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
     }
 }
 module.exports = new TC009Page();

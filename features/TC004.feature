@@ -1,5 +1,5 @@
 Feature:Validar funcionamiento del buscador general
-@TC004
+@TC004 @regression
 Scenario: Buscador de equipos
 Given el usuario est en la pagina principal
 When el usuario introduce "IPhone" en la barra de busqueda

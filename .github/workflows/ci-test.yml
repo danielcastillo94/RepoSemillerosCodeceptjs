@@ -39,7 +39,7 @@ jobs:
 
       # Paso 5: Ejecuta los tests definidos en archivos .feature usando CodeceptJS
       - name: Run CodeceptJS tests
-        run: npx codeceptjs run --features
+        run: npx codeceptjs run --features --steps --verbose --grep '@regression'
   
       # Paso 6: Genera el reporte Allure desde los resultados de prueba
       - name: Generate Allure report

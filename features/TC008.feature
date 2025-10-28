@@ -1,5 +1,5 @@
 Feature: Validar contenido del apartado de ayuda o preguntas frecuentes
-@TC008
+@TC008 @regression
 Scenario: Centro de ayuda
 Given el usuario esta en el menu principal
 When el usuario selecciona la opcion de ayuda

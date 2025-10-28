@@ -1,5 +1,5 @@
 Feature: Validar acceso a documentos legales del sitio
-@TC012
+@TC012 @regression
 Scenario: Terminos y condiciones
 Given el usuario esta en el final de la pagina principal
 When el usuario da click en "Términos y Condiciones"
