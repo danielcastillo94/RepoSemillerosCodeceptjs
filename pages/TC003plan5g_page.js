@@ -38,8 +38,8 @@ class TC003plan5g_page {
     await I.wait(3);
 
     //Scroll para observar la información contenida en el plan 
-    await I.scrollTo('//*[@id="contentDetailPlan"]/div[2]/div/div/span[2]');
-    await I.wait(5);
+     I.scrollTo('//*[@id="contentDetailPlan"]/div[2]/div/div/span[2]');
+     I.wait(5);
 
     //Cerrar la ventana de los detalles del plan o modal 
     I.click('//*[@id="detailPlanHeader"]/div/div/a[2]')

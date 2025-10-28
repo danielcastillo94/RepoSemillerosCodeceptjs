@@ -1,3 +1,4 @@
+@Telcel @TC010
 Feature: Validar flujo de componentes telcel
 
     Scenario:Validar enlaces de redes sociales en el pie de pagina

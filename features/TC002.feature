@@ -1,3 +1,4 @@
+@Telcel @TC002
 Feature: Validar flujos del portal telcel
 
 

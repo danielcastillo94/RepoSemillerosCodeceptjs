@@ -12,7 +12,7 @@ class TC010footer_page {
     };
 
     async inicio() {
-        I.amOnPage('https://www.telcel.com/');
+        I.amOnPage('/');
 
     }
 

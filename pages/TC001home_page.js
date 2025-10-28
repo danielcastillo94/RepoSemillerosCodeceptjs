@@ -16,30 +16,34 @@ class TC001home_page {
   };
 
   async visitPage() {
-    await I.amOnPage('https://www.telcel.com/')
-    if (await I.grabNumberOfVisibleElements(this.fields.Cookies)) {
-      await I.click('//a[@id="acepto-cookies"]');
+    I.amOnPage('/')
+   if (await I.grabNumberOfVisibleElements(this.fields.Cookies)) {
+     I.click('//a[@id="acepto-cookies"]');
+        
     }
   }
+  
 
   Logotipo() {
-
+     
     I.click(this.fields.LogoTelcel);
     I.wait(5);
-    I.say('Se validó click en el logotipo Telcel');
+    I.say('Se valido click en el logotipo Telcel');
 
   }
 
 
   async MenuPrincipal() {
+     
+    
     //ir al menu principal  
-    await I.moveCursorTo('#telcel-menu-principal-boton');
-    await I.wait(5);
+   I.moveCursorTo('#telcel-menu-principal-boton');
+   I.wait(5);
 
     //Mover el cursor fuera del menu para quitarlo
-    await I.moveCursorTo('body', 5, 5);
-    await I.click('body');
-    await I.wait(2);
+     I.moveCursorTo('body', 5, 5);
+   I.click('body');
+   I.wait(2);
     I.say('El despliegue de menu se validó y cerró correctamente');
 
 

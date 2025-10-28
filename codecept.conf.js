@@ -6,7 +6,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: 'https://www.telcel.com',
-      show: false,
+      show: true,
       locale: "es-MX"
     }
   },
@@ -24,7 +24,7 @@ exports.config = {
     TC008ayuda_page: "./pages/TC008ayuda_page.js",
     TC009region_page: "./pages/TC009region_page.js",
     TC010footer_page: "./pages/TC010footer_page.js",
-    TC011mobile_menu_page: "./pages/TC011_mobile_menu_page.js",
+    TC011mobile_menu_page: "./pages/TC011mobile_menu_page.js",
     TC012terminos_page: "./pages/TC012terminos_page.js"
   },
   plugins: {

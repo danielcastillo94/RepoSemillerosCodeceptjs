@@ -1,7 +1,7 @@
 const { TC002planes_page } = inject();
 
-Given(/^I am on the telcel page home$/, async () => {
-  await TC002planes_page.visitPage();
+Given(/^I am on the telcel page home$/,  () => {
+  TC002planes_page.visitPage();
 
 });
 

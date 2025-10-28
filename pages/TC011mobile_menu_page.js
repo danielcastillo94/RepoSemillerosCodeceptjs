@@ -12,13 +12,13 @@ class TC011mobile_menu_page {
 
     async Home() {
 
-        await I.amOnPage('https://www.telcel.com/');
+        I.amOnPage('/');
         if (await I.grabNumberOfVisibleElements(this.fields.Cookies)) {
-            await I.click('//a[@id="acepto-cookies"]');
+            I.click('//a[@id="acepto-cookies"]');
         }
         // Simulador de pantalla del iPhone 14 Pro Max
-        await I.resizeWindow(430, 932);
-        await I.wait(5);
+        I.resizeWindow(430, 932);
+        I.wait(5);
 
 
     }
@@ -26,8 +26,8 @@ class TC011mobile_menu_page {
 
         await I.waitForVisible(this.fields.menuHamburguesa, 10);
         await I.seeElement(this.fields.menuHamburguesa);
-        await I.click(this.fields.menuHamburguesa);
-        await I.wait(3);
+        I.click(this.fields.menuHamburguesa);
+        I.wait(3);
 
 
         // Mostrar los elementos del menu lateral 

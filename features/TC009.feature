@@ -1,3 +1,4 @@
+@Telcel @TC009
 Feature: Navegación en el portal Telcel
 
     Scenario: Validar cambio de estado/region en el portal

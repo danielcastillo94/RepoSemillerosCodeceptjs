@@ -10,17 +10,17 @@ class TC002planes_page {
     };
 
 
-    async visitPage() {
-        await I.amOnPage('https://www.telcel.com/')
-        if (await I.grabNumberOfVisibleElements(this.fields.Cookies)) {
-            await I.click('//a[@id="acepto-cookies"]');
-        }
-
+   visitPage() {
+       I.amOnPage('/')
+      
     }
 
 
     async MenuPrincipal() {
 
+         if (I.grabNumberOfVisibleElements(this.fields.Cookies)) {
+      I.click('//a[@id="acepto-cookies"]');
+    }
         await I.moveCursorTo('#telcel-menu-principal-boton');
         await I.wait(3);
 

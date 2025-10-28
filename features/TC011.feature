@@ -1,3 +1,4 @@
+@Telcel @TC011
 Feature: Validar flujos del sitio Telcel
 
     Scenario: Validar comportamiento del menu en vista movil

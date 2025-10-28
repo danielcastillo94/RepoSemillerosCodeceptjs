@@ -5,13 +5,13 @@ class TC005detalle_equipo_page {
     Buscador: '#buscador-menu-input',
     Resultado: 'h3.results-num span.filled',
     Producto: 'p.card-products--data_name',
-    Detalle: 'custom-product-intro h1'
+    Detalle: 'custom-product-intro h1'   
 
   };
   async Home() {
-    await I.amOnPage('https://www.telcel.com/')
+    I.amOnPage('/')
     if (await I.grabNumberOfVisibleElements(this.fields.Cookies)) {
-      await I.click('//a[@id="acepto-cookies"]');
+       I.click('//a[@id="acepto-cookies"]');
     }
   }
 

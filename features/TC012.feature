@@ -1,3 +1,4 @@
+@Telcel @TC012
 Feature: Validación flujo de sitio Telcel
 
     Scenario: Validar acceso a documentos legales del sitio

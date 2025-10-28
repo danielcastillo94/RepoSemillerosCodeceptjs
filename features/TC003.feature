@@ -1,6 +1,6 @@
+@Telcel @TC003
 Feature: Visualización funcional de planes Telcel
 
-    @TC003
     Scenario: Plan Telcel Plus 5G
         Given I am on the telcel plans page
         When I scroll the section the Telcel plans

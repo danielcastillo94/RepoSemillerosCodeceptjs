@@ -1,3 +1,4 @@
+@Telcel @TC007
 Feature: Verificar flujo de modulo en Telcel
 
     Scenario: Validar acceso y estructura del formulario de contacto

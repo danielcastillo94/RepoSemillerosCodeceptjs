@@ -11,7 +11,7 @@ class TC012terminos_page {
     };
 
     async inicio() {
-        I.amOnPage('https://www.telcel.com/');
+        I.amOnPage('/');
 
     }
 
@@ -42,8 +42,7 @@ class TC012terminos_page {
         //Redirigirse a la pagina de terminos y condiciones, hacer un scroll para valdiar que cargo completa
         I.waitForElement(this.fields.Pagina, 5);
         I.see('Términos y condiciones', 'h1');
-        I.scrollTo(this.fields.Verificar)
-        I.wait(5);
+        I.waitForElement(this.fields.Verificar, 5);
 
 
     }

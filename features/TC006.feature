@@ -1,3 +1,4 @@
+@Telcel @TC006
 Feature:   Validar acceso y visualización del mapa interactivo en la sección de cobertura nacional del sitio de Telcel.
 
 

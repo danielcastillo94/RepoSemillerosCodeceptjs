@@ -1,3 +1,4 @@
+@Telcel @TC008
 Feature: Validar flujo de apartado Telcel
 
     Scenario: Validar contenido del apartado de ayuda o preguntas frecuentes

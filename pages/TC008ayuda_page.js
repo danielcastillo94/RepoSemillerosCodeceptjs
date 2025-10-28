@@ -11,9 +11,9 @@ class TC008ayuda_page {
 
     };
     async pagInicio() {
-        await I.amOnPage('https://www.telcel.com/');
+      I.amOnPage('/');
         if (await I.grabNumberOfVisibleElements(this.fields.Cookies)) {
-            await I.click('//a[@id="acepto-cookies"]');
+            I.click('//a[@id="acepto-cookies"]');
 
         }
 
