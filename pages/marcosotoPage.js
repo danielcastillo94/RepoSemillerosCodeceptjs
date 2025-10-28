@@ -18,14 +18,14 @@ class marcosotoPage {
         CookiesBanner: '[class="telcel-banner-aviso-cookies"]',
         CookiesAcceptButton: '[id="acepto-cookies"]',
         SearchBar: 'input[id="buscador-menu-input"]',
-        Logo: '[class="navbar-brand gluo-logo-telcel1"]',
+        Logo: '[class="navbar-brand gluo-logo-telcel"]',
         MainMenu: '[id="telcel-menu-principal-boton"]',
         RegionMenu: '(//img[@alt="icono de ubicacion"])[1]',
         MainMenuOpened: '//nav[@class="menu-principal active-menu"]',
         MainBanner: '//div[@class="bannerprincipal parbase aem-GridColumn aem-GridColumn--default--12"]',
         
         // Elementos del menú
-        MenuItem: '//li[@class="menu-item hover-menu1"]',
+        MenuItem: '//li[@class="menu-item hover-menu"]',
         MenuItemGeneral: '//li[@class="menu-item"]',
         MenuDevices: '//a[text()="Dispositivos Conectados y Seguridad"]',
         MenuEntertainment: '//a[text()="Entretenimiento"]',
@@ -40,7 +40,7 @@ class marcosotoPage {
         // Selectores para planes
         PlanesNav: '//nav[@data-path="/content/telcel/planes-renta"]',
         CarruselContainer: '[class="free-content-swipper--container carruselLibre-planes-renta"]',
-        PlanCard: '(//div[@class="telcel-destacado-descriptivo---contenido1  "])[1]',
+        PlanCard: '(//div[@class="telcel-destacado-descriptivo---contenido  "])[1]',
         CompareButton: '//a[@data-nombre="Telcel Ultra 5" and text()="Comparar"]',
         PlanTitle: '//p[text()="Telcel Ultra 5"]',
         SolapasContainer: '[id="contenedor-interno-solapas"]',

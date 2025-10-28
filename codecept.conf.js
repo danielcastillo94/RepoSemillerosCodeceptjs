@@ -5,7 +5,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: 'https://www.telcel.com',
-      show: true,
+      show: false,
       locale: "es-MX",
       // Habilita la grabación de video para cada prueba
       video: true,
