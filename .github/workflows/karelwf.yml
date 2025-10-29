@@ -5,9 +5,9 @@ name: CI Tests - Allure Report
 
 on:
   push:
-    branches: [ "features/karelm" ]
+    branches: [ "features/karelm" , "karelm" ]
   pull_request:
-    branches: [ "features/karelm" ]
+    branches: [ "features/karelm", "karelm" ]
 
 # Definición del job principal
 jobs:
