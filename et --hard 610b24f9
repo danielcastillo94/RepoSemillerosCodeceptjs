@@ -1,0 +1,206 @@
+[33m5ef00063[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/Plan-Telcel-Plus-5g[m[33m, [m[1;32mtemp-mis-cambios[m[33m)[m Se agregan 12 TC y se ajusta configuración de CodeceptJS
+[33m3c088a92[m[33m ([m[1;31morigin/feature/Plan-Telcel-Plus-5g[m[33m)[m Merge branch 'master' into feature/Plan-Telcel-Plus-5g
+[33m544c9353[m Merge pull request #55 from danielcastillo94/MASR_TC005
+[33m803d3b4d[m Merge branch 'master' into MASR_TC005
+[33md8a4317a[m Merge pull request #58 from danielcastillo94/features/TC012-Luis-Heredia
+[33m74b8ae03[m Merge branch 'master' into feature/Plan-Telcel-Plus-5g
+[33mcdf0fe05[m Haciendo correcciones sobre los metodos asincronos, cambiando validación para los elementos y haciendo mas especifico el selector
+[33m9dce602e[m Agrego archivos parte del ejercicio4
+[33m610b24f9[m Subo ejercicio4
+[33m1da002ff[m Guardo cambios locales en plan5g
+[33m837779d6[m[33m ([m[1;31morigin/features/TC012-Luis-Heredia[m[33m)[m Merge branch 'master' into features/TC012-Luis-Heredia
+[33m6137cb1f[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #54 from danielcastillo94/feature/TC010/AnaRebolloso
+[33mb703978f[m Merge branch 'master' into feature/Plan-Telcel-Plus-5g
+[33ma1f9df81[m Agrego flujo Plan Telcel Plus 5G y ajustes
+[33m327350a4[m Modificado nuevamente terminos_page.js
+[33me0f8ddb1[m Modificado archivo terminos_page.js
+[33mf4695a98[m allure
+[33m29070641[m Agregados archivos correspondientes al ejercicio 4
+[33mc9354307[m[33m ([m[1;31morigin/MASR_TC005[m[33m)[m Añadiendo ejercicio 4 (TC005)
+[33mab71158e[m[33m ([m[1;31morigin/feature/TC010/AnaRebolloso[m[33m)[m Ejercicio 4 - Feature TC010 - APRS
+[33me3bc9bfd[m Ejercicio 4 - Feature TC010 - APRS
+[33m58bc12f6[m solve frame
+[33mbf519ab1[m update frame
+[33m2a48ef3d[m update master
+[33m89228f3c[m Merge pull request #47 from danielcastillo94/XochitlPerez
+[33m92acc008[m Merge pull request #41 from danielcastillo94/AnaRebolloso
+[33m632ad063[m[33m ([m[1;31morigin/XochitlPerez[m[33m)[m Envío de Ejercicio 1 Gherkin Xochitl
+[33m1b4095ae[m Merge pull request #42 from danielcastillo94/LeonV
+[33m0857c796[m Merge pull request #45 from danielcastillo94/marcosoto
+[33m2ff09101[m[33m ([m[1;31morigin/marcosoto[m[33m)[m añadiendo ejemplo de scenario outline y ejercicio1
+[33m857f2a97[m Merge pull request #44 from danielcastillo94/DGSC
+[33m10748732[m[33m ([m[1;31morigin/DGSC[m[33m)[m ejercio feature DGSC
+[33md600b320[m Merge pull request #43 from danielcastillo94/MahiliFlores
+[33ma91ac9c9[m Feature Mahili
+[33m393f3a14[m Se sube ejercicio 3 de Luis Gilberto
+[33m42cffb9e[m[33m ([m[1;31morigin/AnaRebolloso[m[33m)[m Feature Ejercicio 1
+[33m44d7662c[m Ejercicio 1 Gherkin xochitl.feature
+[33m6c054922[m ejemplo scenario outline
+[33maad3dd52[m cambios
+[33mf2aaab02[m ejercicio2
+[33m90131599[m new frame
+[33m61120e11[m nuevo pdf
+[33m8cdb0983[m ejemplo pdf
+[33m62469be2[m ejemplo
+[33m233f2cec[m Merge pull request #36 from danielcastillo94/LGLV
+[33mdd26b832[m Prueba Luis Gilberto
+[33mbd54d94e[m Merge pull request #33 from danielcastillo94/DanielaS
+[33m1b3df15f[m Resuelve conflicto de archivo
+[33maf265682[m Update prueba.md
+[33me1d32b3d[m prueba
+[33m81606118[m Merge pull request #35 from danielcastillo94/MahiliFlores
+[33m30cebcc9[m Merge pull request #34 from danielcastillo94/LABR
+[33m61291f69[m Merge pull request #29 from danielcastillo94/MarcoSoto
+[33mb5e6410c[m[33m ([m[1;31morigin/MarcoSoto[m[33m)[m solve conflicts
+[33m1cc963eb[m Agregar nueva prueba
+[33m97a7e813[m[33m ([m[1;31morigin/LABR[m[33m)[m Agrego archivo LABR.txt con prueba de GitHub Flow
+[33mee0d29ab[m Merge pull request #30 from danielcastillo94/jesus
+[33m63f54789[m Merge pull request #32 from danielcastillo94/aprs
+[33mb122b584[m Merge pull request #31 from danielcastillo94/lvht
+[33m9f73797d[m Creando mi rama y un archivo
+[33maf213980[m Agregar prueba.md: Prueba de GitHub Flow realizada por Jesus
+[33m4797fd12[m Archivo prueba - APRS
+[33m99c63791[m Agregado archivo prueba.txt
+[33mc7ba6461[m commit de Marco Soto
+[33m4d75c15a[m Merge pull request #26 from danielcastillo94/Angela-helper
+[33mb071641e[m[33m ([m[1;31morigin/Angela-helper[m[33m)[m update branch
+[33m2f57339a[m update gitignore
+[33m3c0bf960[m update gitignore
+[33mbdb3ec7d[m Update .gitignore
+[33m95541b3e[m Resueltos conflictos en MiHelper.js y pasos combinados
+[33m9738fb27[m Mis cambios en Angela-helper
+[33mf5125749[m Merge pull request #20 from danielcastillo94/Helpers-Hector
+[33m6c39effc[m[33m ([m[1;31morigin/Helpers-Hector[m[33m)[m Merge branch 'master' into debugging-Hector
+[33m941d3888[m Merge pull request #25 from danielcastillo94/helpersisrael
+[33m0f81f43c[m [merge & feat] RechargeHelper y mobileRecharge custom step
+[33m8481d066[m ConflictosResueltos
+[33mc2671a39[m Merge pull request #23 from danielcastillo94/Helper-Emilio
+[33m52795649[m conflictos resueltos
+[33m7e81f8f5[m update
+[33m2ca4bf22[m update
+[33m301e9ee5[m Merge pull request #21 from danielcastillo94/helper-armando
+[33m62ea4521[m update
+[33m71f346e6[m update branch
+[33mc5d5f084[m update
+[33m01e32272[m[33m ([m[1;31morigin/helper-armando[m[33m)[m Se subira la configuracion codecept.conf.js
+[33me7443a4f[m Se subira la configuracion codecept.conf.js
+[33m69828814[m Se subira el ejercicio helper y steps
+[33md8fe8921[m cambios con heelper
+[33m6937980e[m Se implemento steps
+[33mf317e965[m Se subira el helper
+[33me27f5ded[m helpers
+[33m43d2d71d[m Helper
+[33ma37d9a3b[m [fix] desactiva el modo grafico del navegador
+[33mb66e03b6[m [feat] agrega helpers para navegacion en pagina de telcel
+[33m7e02e079[m update
+[33md5126840[m update
+[33m8015ac85[m update branch
+[33m6a392d67[m update branch
+[33mc634323b[m update branch
+[33ma1d997b1[m Merge pull request #19 from danielcastillo94/debugging-Hector
+[33m3d8a8f0a[m[33m ([m[1;31morigin/debugging-Hector[m[33m)[m [fix] setea locate es-MX y fusiona cambios de rama master
+[33m12c2d5b9[m [FIX] Arregla Validación de boton 'Explorar' x6
+[33m6b067cc0[m [FIX] Arregla Validación de boton 'Explorar' x5
+[33m1adb8a0b[m [FIX] Arregla Validación de boton 'Explorar' x4
+[33m84ae4c9d[m [FIX] Arregla Validación de boton 'Explorar' x3
+[33ma79e6d6e[m [debug] Busca errores al validar boton 'Explorar'
+[33m180792ce[m [FIX] Arregla Validación de boton 'Explorar' x2
+[33m1a9b678e[m update codeceptjs
+[33mea2d66f9[m [FIX] Arregla Validación de boton 'Explorar'
+[33m25d4b192[m update branch
+[33m2fed8374[m update branch
+[33m0b22147f[m update branch
+[33mf1088bba[m update branch
+[33m71fc2bd1[m [FIX] Arregla scenarios que no pasaban
+[33mb51296cd[m update script workflow
+[33m7617c2f4[m update script workflow
+[33m9c83f52d[m update script workflow
+[33ma353b3a4[m update script workflow
+[33m1488f29f[m update script workflow
+[33m08c19404[m update script workflow
+[33m26c67a1f[m update branch
+[33m9a903696[m Merge pull request #18 from danielcastillo94/debugging-Hector
+[33m305f021c[m Update test.yml
+[33m75461e3d[m [fix] - Corrige errores en validación de carga inicial
+[33ma04c5f60[m Merge pull request #17 from danielcastillo94/Youtube-Hector
+[33m856f205f[m update branch
+[33m1440906b[m update branch
+[33mb688b076[m Merge pull request #10 from danielcastillo94/youtube-Armando
+[33me65e341f[m[33m ([m[1;31morigin/Youtube-Hector[m[33m)[m [refactor] - cambia console.log() por I.say()
+[33m81c5d691[m [fix] - corrige validarVideosRecientes() en YoutubeMainPage
+[33m9f717d99[m[33m ([m[1;31morigin/youtube-Armando[m[33m)[m Se resolvió los conflictos
+[33mba43c815[m Resuelto conflicto
+[33mf7ea17d3[m Merge pull request #14 from danielcastillo94/Youtube-Hector
+[33ma978ba6c[m [chore] - Elimina carpetas output y node_modules
+[33m2bf485ed[m update branch
+[33md2cb752b[m Merge pull request #8 from danielcastillo94/Angela
+[33m3f81450b[m update branch
+[33m50f19750[m Merge pull request #13 from danielcastillo94/Youtube-Hector
+[33m28034b83[m update branch
+[33m23385874[m update branch
+[33m35670e0c[m [refactor] - unifica métodos y simplifica loógica
+[33maaefd3be[m Update test.yml
+[33maae1d5d9[m Update test.yml
+[33m489720b1[m Update test.yml
+[33md858fda3[m update branch
+[33mbdcd36c5[m Merge branch 'master' of https://github.com/danielcastillo94/RepoSemillerosCodeceptjs
+[33mfc734e3f[m update branch
+[33m872a8cae[m Create test.yml
+[33m335c36d9[m Merge pull request #12 from danielcastillo94/Youtube-Emilio
+[33m286965df[m Merge pull request #11 from danielcastillo94/ramaVivi
+[33m16636081[m update branch resolve conflicts
+[33m87567244[m Merge branch 'master' into Angela
+[33m607ff7f9[m Merge pull request #9 from danielcastillo94/Youtube-Hector
+[33m474221b6[m cambios Angela
+[33m0e680923[m viviana2
+[33ma2018065[m viviana
+[33ma495bcee[m Subiran cambios
+[33m3fc5da22[m Se subiran cambios
+[33m2d5b2a04[m Primer commit con pruebas automatizadas sin output
+[33mce72b476[m tareayoutube
+[33m7abdd31c[m [HU-9] Extracción de duracion de video en campo oculto
+[33mbddcad77[m[33m ([m[1;31morigin/Youtube-Emilio[m[33m)[m update branch
+[33m78f6827a[m Ejercicio DailyMotion
+[33m6ebb352b[m cambios de rama master
+[33m3a3930e8[m Merge branch 'master' into Angela
+[33m4a6f3e62[m Resolviendo coflictos
+[33m3dfa0ae1[m update branch
+[33m214baeae[m update branch
+[33m8ada245b[m Actualiza prueba.feature con nuevos escenarios
+[33md4901d88[m feat: prueba de validación botón Explorar en YouTube
+[33m6234ba49[m feat: prueba de validación botón Explorar en YouTube
+[33m46850189[m update branch
+[33m62d4ad39[m update branch
+[33mc679e289[m update branch
+[33mb4c282fd[m Merge pull request #7 from danielcastillo94/Youtube-Emilio
+[33m30e83601[m Resolviendo conflictos
+[33maa6d5452[m Resolviendo conflictos
+[33mb697870a[m Merge branch 'master' into Youtube-Emilio
+[33md5925245[m Resolviendo Conflictos
+[33m75f24fb5[m Merge branch 'master' of https://github.com/danielcastillo94/RepoSemillerosCodeceptjs
+[33m99eece50[m Merge pull request #5 from danielcastillo94/israelyoutube
+[33m93599073[m Escenario 2 finalizado
+[33m06b42fea[m Sin conflictos
+[33md97de583[m Conflictos Resueltos
+[33mba7ee929[m Eliminando la carpeta de node_modules
+[33mce1b460d[m Haciendo merge
+[33m9a5fa6ed[m Merge branch 'master' of https://github.com/danielcastillo94/RepoSemillerosCodeceptjs
+[33m61ed99f9[m Resolver conflictos
+[33m0d22a08e[m Merge pull request #1 from danielcastillo94/Youtube-Jorge
+[33m14a14280[m[33m ([m[1;31morigin/Youtube-Jorge[m[33m)[m update branch
+[33mdb9600f8[m Resolviendo conflictos
+[33m869f5cad[m Ignorar carpeta note_modules en .gitignore
+[33m712ef264[m Ejercicio Youtube
+[33ma498e9f6[m YOUTUBE
+[33m844bd72c[m YOUTUBE
+[33m5824cee3[m Merge pull request #2 from danielcastillo94/Youtube-Hector
+[33mdeb3a3ae[m YOUTUBE
+[33m0b0b7c2e[m [feat][Hector] - HU 3 Interacción con filtros
+[33mab474546[m Creacion de feature y primeros pasos
+[33m28b883e4[m[33m ([m[1;31morigin/lariosHector[m[33m)[m [Update] codecept telcel feature
+[33mb557d29e[m update branch
+[33mdc6e995c[m [Hector] - Codecept telcel feature
+[33m9d498134[m update branch
+[33me2c704f3[m update master
+[33m8c087417[m Framework para búsqueda en Mercado Libre con CodeceptJS Angela Andrea
+[33m17d08461[m created framework

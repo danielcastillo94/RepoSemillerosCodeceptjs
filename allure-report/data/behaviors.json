@@ -1,1 +1,1 @@
-{"uid":"b1a8273437954620fa374b796ffaacdd","name":"behaviors","children":[{"name":"Estoy en la pagina principal de telcel","uid":"721d47c2a7883cab","parentUid":"b1a8273437954620fa374b796ffaacdd","status":"passed","time":{"start":1760375837871,"stop":1760375841653,"duration":3782},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":1,"retriesStatusChange":true,"parameters":[],"tags":[]}]}
+{"uid":"b1a8273437954620fa374b796ffaacdd","name":"behaviors","children":[]}
