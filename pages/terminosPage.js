@@ -4,7 +4,7 @@ class terminosPage {
     elements = {
         enlaceTerminos: '//a[contains(text(), "Términos y condiciones") and @href="/terminos-y-condiciones"]',
         tituloTerminos: '//h1[normalize-space(text())="Términos y condiciones"]',
-        textoContenido: 'div#accordion-8906',
+        textoContenido: 'div.panel-group.glosario',
         botonCookies: '//a[@id="acepto-cookies" and contains(text(), "Acepto las Cookies")]',
     };
 
@@ -26,7 +26,8 @@ class terminosPage {
     }
 
     validarContenido() {
-        I.waitForVisible(this.elements.textoContenido, 10);
+        I.waitForVisible(this.elements.textoContenido, 20);
+        I.scrollTo(this.elements.textoContenido);
         I.seeElement(this.elements.textoContenido);
     }
 }

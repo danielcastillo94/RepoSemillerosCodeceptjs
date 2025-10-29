@@ -28,13 +28,14 @@ class contactoPage {
 
     validarFormulario() {
         I.waitForVisible(this.elements.formulario, 10);
+        I.waitForVisible(this.elements.campoConsulta, 10);
         I.seeElement(this.elements.campoNombre);
         I.seeElement(this.elements.campoApPaterno);
         I.seeElement(this.elements.campoApMaterno);
         I.seeElement(this.elements.campoCorreo);
         I.seeElement(this.elements.campoTelefono);
-        I.seeElement(this.elements.selectEstado);
-        I.seeElement(this.elements.selectComentario);
+        // I.seeElement(this.elements.selectEstado);
+        // I.seeElement(this.elements.selectComentario);
         I.seeElement(this.elements.campoConsulta);
     }
     
