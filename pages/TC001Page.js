@@ -30,12 +30,12 @@ class TC001Page{
     }
 
     async screenshotPassed(){
-        const className = this.constructor.name;
+        const className = this.constructor.name; //obtiene el nombre de la clase
         const screenshotName = (`${className}`+'.png');
         await I.saveScreenshot(screenshotName);
-        const screenshotPath = path.resolve('output', screenshotName);
-        const dataImage = fs.readFileSync(screenshotPath);
-        allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png');
+        const screenshotPath = path.resolve('output', screenshotName); //construye ruta absoluta
+        const dataImage = fs.readFileSync(screenshotPath); //lee el archivo de la ruta
+        allure.addAttachment(`Screenshot: ${className}`, dataImage, 'image/png'); //agrega la imagen a Allure
     }
 }
 
