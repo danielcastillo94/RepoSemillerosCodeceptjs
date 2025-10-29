@@ -1,8 +1,7 @@
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './steps/*_steps.js',
+  tests: './*_test.js',
   output: './output',
-
   helpers: {
     Playwright: {
       browser: "chromium",
@@ -11,7 +10,6 @@ exports.config = {
       locale: "es-MX"
     }
   },
-
   include: {
     I: "./steps_file.js",
     CoberturaPage: "./pages/cobertura_page.js",
@@ -57,8 +55,12 @@ exports.config = {
       outputDir: './output/allure-results'
     }
   },
-
-  bootstrap: null,
-  mocha: {},
-  name: "Actividad youtube y Telcel"
+  gherkin: {
+    features: './features/**/*.feature',
+    steps: [
+      './steps/contacto_steps.js'
+    ],
+  },
+ 
+  name: 'Automatizacion'
 };
