@@ -1,33 +1,28 @@
 const { I } = inject();
 
 class region_page {
-  fields = {
-    estado: '//*[@id="lista-subopciones-menu"]/ul/li[2]/a',
-    Guerrero:'[data-nombreboton="Guerrero"]',
-  };
+    elements = {
+        selectorRegion: '//a[contains(@class, "dropdown-toggle") and contains(@data-menuprin, "Estados")]',
+        opcionRegion: (region) => `//ul[contains(@class, "dropdown-menu")]//a[text()="${region}"]`,
+        textoRegionSeleccionada: '//span[contains(@class, "estado-Gluo")]'
+    };
 
-  login() {
-    //Pagina de inicio de Telcel
-    I.amOnPage("https://www.telcel.com/");
+    abrirPagina() {
+        I.amOnPage('https://www.telcel.com/');
+        I.waitForElement(this.elements.selectorRegion, 10);
+    }
 
-  }
+    cambiarRegion(region) {
+        I.waitForVisible(this.elements.selectorRegion, 10);
+        I.click(this.elements.selectorRegion);
+        I.waitForElement(this.elements.opcionRegion(region), 10);
+        I.click(this.elements.opcionRegion(region));
+    }
 
-
-  SeleccionarRegion () {
-    //selecciona el estado de Guerrero
-    I.click(this.fields.estado);
-    I.click(this.fields.Guerrero);
-    
-
-    
-    
-  }
-
-  Cambioderegion() {
-    //texto o valores actualizados correctamente 
-    I.waitForElement('[data-nombreboton="Guerrero"]', 10);
-    I.seeElement('[class="estado-Gluo text-option"]' );
-  }
+    validarRegionActual(region) {
+        I.waitForVisible(this.elements.textoRegionSeleccionada, 10);
+        I.waitForText(region, 10, this.elements.textoRegionSeleccionada);
+    }
 }
 
-module.exports = new region_page ();
+module.exports = new region_page();

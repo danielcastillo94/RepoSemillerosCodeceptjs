@@ -1,11 +1,8 @@
-@cobertura
-Feature: Validar seccion de Cobertura
-  Como usuario del portal Telcel
-  Quiero acceder a la seccion de Cobertura
-  Para validar que el mapa interactivo y el titulo se muestren correctamente
+@TC006 @Xochitl
+Feature: Validar acceso a la sección de cobertura nacional
 
-  Scenario: Validar acceso y visibilidad de la seccion Cobertura
-    Given que abro la pagina principal de Telcel
-    When navego a la seccion de Cobertura usando el buscador
-    Then deberia ver el titulo de la seccion visible
-    And deberia ver el mapa interactivo visible
+Scenario: Acceder al menú "Cobertura" y validar mapa interactivo
+    Given el usuario se encuentra dentro de la página principal de Telcel
+    When accede en el menú a la sección "Móvil" y "Red de mayor cobertura"
+    And da clic al botón "Ver cobertura"
+    Then se muestra el mapa interactivo y el título de la sección

@@ -1,24 +1,34 @@
 const { I } = inject();
 
 class terminos_page {
+    elements = {
+        enlaceTerminos: '//a[contains(text(), "Términos y condiciones") and @href="/terminos-y-condiciones"]',
+        tituloTerminos: '//h1[normalize-space(text())="Términos y condiciones"]',
+        textoContenido: 'div#accordion-8906',
+        botonCookies: '//a[@id="acepto-cookies" and contains(text(), "Acepto las Cookies")]',
+    };
 
-  goToTelcel() {
-    I.amOnPage("/");
-  }
+    abrirPagina() {
+        I.amOnPage('https://www.telcel.com/');
+        I.waitForElement(this.elements.botonCookies, 10);
+    }
 
-  goToPageEnd() {
-    I.scrollPageToBottom();
-    I.click('//*[@id="acepto-cookies"]');
-  }
+    accederTerminos() {
+        I.click(this.elements.botonCookies);
+        I.scrollPageToBottom();
+        I.waitForElement(this.elements.enlaceTerminos, 10);
+        I.click(this.elements.enlaceTerminos);
+    }
 
-  clickLink(){
-    I.click('//*[@id="telcel-footer-copyright-derecha-contenido"]/ul/li[2]/a');
-  }
+    validarCargaDocumento() {
+        I.waitForElement(this.elements.tituloTerminos, 10);
+        I.seeElement(this.elements.tituloTerminos, 10);
+    }
 
-  seeResults() {
-    I.waitForElement('//h1[text()="Términos y condiciones"]', 3);
-    I.seeElement('//h1[text()="Términos y condiciones"]');
-  }
+    validarContenido() {
+        I.waitForVisible(this.elements.textoContenido, 10);
+        I.seeElement(this.elements.textoContenido);
+    }
 }
 
 module.exports = new terminos_page();
