@@ -8,7 +8,9 @@ exports.config = {
       browser: "chromium",
       url: 'https://www.telcel.com',
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
+      waitForNavigation: "load",   // Espera completa de la página
+      waitForTimeout: 40000        // Espera máxima de 20s para elementos
     }
   },
 
@@ -22,7 +24,30 @@ exports.config = {
     marcosotoPage: "./pages/marcosotoPage.js",
     terminos_page: "./pages/terminos_page.js",
     region_page: "./pages/region_page.js",
-    karelPage: "./pages/karelPage.js"
+    karelPage: "./pages/karelPage.js",
+    // --- Agregado TC001 ---
+    TC001Page: "./pages/TC001Page.js",
+    TC002Page: "./pages/TC002Page.js",
+    TC003Page: "./pages/TC003Page.js",
+    TC004Page: "./pages/TC004Page.js",
+    TC005Page: "./pages/TC005Page.js",
+    TC006Page: "./pages/TC006Page.js",
+    TC007Page: "./pages/TC007Page.js",
+    TC008Page: "./pages/TC008Page.js",
+    TC09Page: "./pages/TC09Page.js",
+    TC0010Page: "./pages/TC0010Page.js",
+    TC0011Page: "./pages/TC0011Page.js",
+    TC0012Page: "./pages/TC0012Page.js",
+
+
+
+
+
+
+
+
+    
+
   },
 
   gherkin: {
@@ -37,6 +62,30 @@ exports.config = {
       "./steps/TC009Steps.js",
       "./steps/planSteps.js",
       "./steps/karelSteps.js",
+      // --- Agregado TC001Steps ---
+      './steps/TC001Steps.js',
+      './steps/TC002Steps.js',
+      './steps/TC003Steps.js',
+      './steps/TC004Steps.js',
+      './steps/TC005Steps.js',
+      './steps/TC006Steps.js',
+      './steps/TC007Steps.js',
+      './steps/TC008Steps.js',
+      './steps/TC09Steps.js',
+      './steps/TC0010Steps.js',      
+      './steps/TC0011Steps.js',
+      './steps/TC0012Steps.js',
+
+
+
+
+
+
+
+      
+
+ 
+
     ],
   },
 
