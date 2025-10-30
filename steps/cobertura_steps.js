@@ -1,20 +1,17 @@
-const { I } = inject();
-const CoberturaPage = require('../pages/cobertura_page');
-const coberturaPage = new CoberturaPage(I);
+const { cobertura_page } = inject();
 
-Given('que abro la pagina principal de Telcel', () => {
-  I.amOnPage('https://www.telcel.com/');
+Given(/^el usuario se encuentra dentro de la página principal de Telcel$/, () => {
+    cobertura_page.abrirPagina();
 });
 
-When('navego a la seccion de Cobertura usando el buscador', async () => {
-  await coberturaPage.buscarCobertura();
+When(/^accede en el menú a la sección "Móvil" y "Red de mayor cobertura"$/, () => {
+    cobertura_page.accederMenuCobertura();
 });
 
-Then('deberia ver el titulo de la seccion visible', async () => {
-  await coberturaPage.verificarTituloVisible();
+When(/^da clic al botón "Ver cobertura"$/, () => {
+    cobertura_page.oprimirVerCobertura();
 });
 
-Then('deberia ver el mapa interactivo visible', async () => {
-  await coberturaPage.verificarMapaVisible();
+Then(/^se muestra el mapa interactivo y el título de la sección$/, () => {
+    cobertura_page.validadMapa();
 });
-
