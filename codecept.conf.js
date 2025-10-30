@@ -12,7 +12,6 @@ exports.config = {
   },
   include: {
     I: './steps_file.js',
-    contacto_page: './pages/contacto_page.js',
   },
 
   plugins: {
@@ -22,12 +21,7 @@ exports.config = {
       outputDir: './output/allure-results'
     }
   },
-  gherkin: {
-    features: './features/**/*.feature',
-    steps: [
-      './steps/contacto_steps.js'
-    ],
-  },
+
  
   name: 'Automatizacion'
 };
