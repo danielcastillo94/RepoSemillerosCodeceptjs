@@ -1,0 +1,53 @@
+name: CI Tests - Allure Report
+
+on:
+  push:
+    branches: [ "features/TC012-Luis-Heredia" ]
+  pull_request:
+    branches: [ "features/TC012-Luis-Heredia" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.18.0'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run:
+        npm install
+
+    - name: Install browsers
+      run:
+        npx playwright install chromium
+
+    - name: Run tests
+      run:
+        npx codeceptjs run --grep "@regression"
+        
+    - name: Run tests with Allure
+      run: |
+        npx allure generate output/allure-results --clean -o output/allure-report
+
+        
+    - name: Upload Allure Report as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-report
+        path: allure-report/
+        retention-days: 30
+        
+    - name: Upload test results as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: output/**
+              allure-report/**
+        retention-days: 30
