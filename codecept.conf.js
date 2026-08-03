@@ -14,25 +14,12 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    CoberturaPage: "./pages/cobertura_page.js",
-    planesPage: "./pages/planesPage.js",
-    youtubePage: "./pages/youtubePage.js",
-    plan5g_page: "./pages/plan5g_page.js",
-    footertelcelPage: "./pages/pruebaTC010Page.js",
-    marcosotoPage: "./pages/marcosotoPage.js",
-    terminos_page: "./pages/terminos_page.js",
-    region_page: "./pages/region_page.js",
     karelPage: "./pages/karelPage.js"
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
-      './steps/cobertura_steps.js',
-      "./steps/loginSteps.js",
-      "./steps/plan5gSteps.js",
-      "./steps/marcosotoSteps.js",
-      "./steps/planSteps.js",
       "./steps/karelSteps.js",
     ],
   },

@@ -1,5 +1,3 @@
-const { locator } = require("codeceptjs");
-const { expect } = require("playwright/test");
 const { I } = inject();
 
 class KarelPage {
@@ -57,7 +55,7 @@ class KarelPage {
 
   login() {
     //Pagina de inicio de Telcel
-    I.amOnPage(this.urls.urltelcel);
+    I.amOnPage('/');
     I.click(this.fields.cookies);
   }
 
