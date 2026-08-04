@@ -8,7 +8,10 @@ exports.config = {
       browser: "chromium",
       url: 'https://www.telcel.com',
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
+      waitForNavigation: "domcontentloaded",
+      getPageTimeout: 60000,
+      restart: true 
     }
   },
 
@@ -29,6 +32,7 @@ exports.config = {
       enabled: true,
       require: '@codeceptjs/allure-legacy',
       outputDir: './output/allure-results'
+      
     }
   },
 
