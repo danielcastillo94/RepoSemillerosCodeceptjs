@@ -11,17 +11,17 @@ Then(/^El usuario valida la pagina principal$/, () => {
 
 //TC002---------------------------------------------------------------------------------------------------------------------
 
-When(/^El usuario da click en Menú, muestra el submenú y selecciona "Plan de Renta"$/, () => { // interaccion con el menú
+When(/^El usuario da click en Menú, muestra el submenú y selecciona "Plan de Renta"$/, () => { 
   karelPage.accedermenu();
 });
 
-When(/^El usuario da click en algun plan$/, () => { //selecciona algun plan
-  karelPage.ventanaplanes(); // verifica que cargue correctamente la página "Plan de Renta"
+When(/^El usuario da click en algun plan$/, () => {
+  karelPage.ventanaplanes(); 
 
 });
 
 Then(/^se puede ver la seccion "Plan Ultra"$/, () =>{
-  karelPage.seccionPlanes();//pagina plan ultra
+  karelPage.seccionPlanes();
 });
 //TC003-----------------------------------------------------------------------------------------------------------------------
 
@@ -121,7 +121,6 @@ When(/^se desplaza al final del sitio$/, () => {
 });
 
 Then(/^los enlaces de redes sociales son visibles y apuntan a la URL correcta$/, () => {
-    // Lista de links de las redes sociales y su valor en el atributo data-nombreboton
     const redesSocialesLinks = [
         { nombreboton: 'Twitter', url: 'https://twitter.com/telcel' },
         { nombreboton: 'Facebook', url: 'https://web.facebook.com/Telcel?_rdc=1&_rdr' },
@@ -132,10 +131,7 @@ Then(/^los enlaces de redes sociales son visibles y apuntan a la URL correcta$/,
 });
 
 Then(/^los accesos rápidos son visibles y apuntan a la URL correcta$/, () => {
-    // Lista de links y texto de los accesos rápidos
     const accesosRapidosLinks = [
-        // "Tienda en línea" no aparece en el bloque de Accesos rápidos del footer, se elimina
-        // Las URLs son RUTAS RELATIVAS en el DOM real (confirmado inspeccionando el HTML), no absolutas
         { texto: 'Planes Telcel Libre', url: '/personas/planes-de-renta/tarifas-y-opciones/telcel-libre' },
         { texto: 'Paquetes Amigo Sin Límite', url: '/personas/amigo/paquetes/paquetes-amigo-sin-limite' },
         { texto: 'Paquetes y Recargas', url: '/personas/compra-paquetes-y-recargas' },
@@ -143,9 +139,6 @@ Then(/^los accesos rápidos son visibles y apuntan a la URL correcta$/, () => {
         { texto: 'Cámbiate a Telcel', url: '/personas/portate/hazlo-ahora' },
         { texto: 'Promociones Plan de Renta', url: '/personas/planes-de-renta/promociones' },
     ];
-    // Estos 6 links existen en el DOM pero están dentro de un <ul class="disable">
-    // (ocultos por CSS hasta que el usuario interactúa con un "ver más"), por lo que
-    // se validan aparte: solo que existan y apunten a la URL correcta, no que sean visibles
     const accesosRapidosOcultos = [
         { texto: 'Viajero Internacional', url: '/personas/roaming/paquetes-y-precios' },
         { texto: 'Experiencias', url: '/personas/experiencias-telcel' },
