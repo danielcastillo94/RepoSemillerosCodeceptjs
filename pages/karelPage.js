@@ -54,7 +54,6 @@ class KarelPage {
   //GIVEN---------------------------------------------------------------------------------------------------------------
 
   async login() {
-    //Pagina de inicio de Telcel
     try {
       I.amOnPage('/');
     } catch (e) {
@@ -75,7 +74,7 @@ class KarelPage {
 
   //TC002--------------------------------------------------------------------------------------------------------------
 
-  accedermenu() { //método que accede al menu, "Plan de Renta"
+  accedermenu() { 
         I.moveCursorTo(this.fields.menu);
         I.waitForElement('//ul[@id="level-1"]');
         I.seeElement('//a[@data-submenu="Plan de renta" and @data-menuprin="Movil"]');
@@ -123,7 +122,6 @@ class KarelPage {
   }
 
   async verificacion5g() {
-    //Esperar a que aparezca el modal en el que se encuentran los detalles del plan 
     await I.waitForElement('.modal.fade.modal-plan', 10);
     await I.waitForVisible('.modal.fade.modal-plan', 10); 
     await I.see('Cargo mensual por servicio', '//div[contains(@id,"contentDetailPlan")]');
@@ -175,7 +173,7 @@ class KarelPage {
                          '//h1[contains(text(), "iPhone 17 Pro Max")]',
                          'div[class="cx-product-price-plan"]',
                          'span[class="color-txt"]',
-                         '//span[contains(@class, "capacity-txt")]',//capacidad
+                         '//span[contains(@class, "capacity-txt")]',
                          'div[class="title-sim"]',
                          'input[id="activePayment"]',
                          this.fields.botoncarrito,

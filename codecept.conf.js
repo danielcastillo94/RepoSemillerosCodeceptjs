@@ -11,7 +11,7 @@ exports.config = {
       locale: "es-MX",
       waitForNavigation: "domcontentloaded",
       getPageTimeout: 60000,
-      restart: true // Reinicia el navegador/contexto en cada prueba para que no arrastren estado entre sí
+      restart: true 
     }
   },
 
