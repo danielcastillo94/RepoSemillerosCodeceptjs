@@ -48,7 +48,7 @@ class KarelPage {
     capacidadIPhone: '//span[contains(@class, "capacity-txt")]',
     SIMIPhone: 'div[class="title-sim"]',
     cobroIPhone : 'input[id="activePayment"]',
-    caracteristicasIPhone: '//h2[contains(text()," Características y especificaciones ")]',
+    caracteristicasIPhone: '//h2[contains(text(), "Características y especificaciones")]',
     telcelUltra: '//p[text()="Telcel Ultra 5"]',
     selecto: '[data-selector="6162"]',
     modal: '.modal.fade.modal-plan',
@@ -199,11 +199,11 @@ class KarelPage {
                          this.fields.colorIPhone,//color
                          this.fields.capacidadIPhone,//capacidad
                          this.fields.SIMIPhone,//SIM
-                         this.fields.cobroIPhone, //Cobro
+                         //this.fields.cobroIPhone, //Cobro no existe en la pagina
                          this.fields.botoncarrito,//boton carrito
                          this.fields.botoncompra, 10);//boton compra
-        I.waitForElement(this.fields.caracteristicasIPhone, 10); //espera a que aparesca el titulo
-        I.scrollTo(this.fields.caracteristicasIPhone); //vanega a las caracteristicas
+        I.scrollPageToBottom(); //navegacio al final para cargar elementos en el dom
+        I.scrollTo(this.fields.caracteristicasIPhone, 10); //navega a las caracteristicas
         I.waitForVisible(this.fields.caracteristicasIPhone); //valida que se vean las caracteristicas
     }
   //TC006-------------------------------------------------------------------------------------------------------------
