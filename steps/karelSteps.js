@@ -1,8 +1,8 @@
 const { karelPage } = inject();
 
 
-Given(/^El usuario esta en la pagina principal$/, () => {
-  karelPage.login();
+Given(/^El usuario esta en la pagina principal$/, async () => {
+  await karelPage.login();
 });
 //TC001--------------------------------------------------------------------------------------------------------------------
 Then(/^El usuario valida la pagina principal$/, () => {
@@ -134,20 +134,28 @@ Then(/^los enlaces de redes sociales son visibles y apuntan a la URL correcta$/,
 Then(/^los accesos rápidos son visibles y apuntan a la URL correcta$/, () => {
     // Lista de links y texto de los accesos rápidos
     const accesosRapidosLinks = [
-        { texto: 'Tienda en línea', url: 'https://www.telcel.com/tienda/' },
+        // "Tienda en línea" no aparece en el bloque de Accesos rápidos del footer, se elimina
+        // Las URLs son RUTAS RELATIVAS en el DOM real (confirmado inspeccionando el HTML), no absolutas
         { texto: 'Planes Telcel Libre', url: '/personas/planes-de-renta/tarifas-y-opciones/telcel-libre' },
         { texto: 'Paquetes Amigo Sin Límite', url: '/personas/amigo/paquetes/paquetes-amigo-sin-limite' },
         { texto: 'Paquetes y Recargas', url: '/personas/compra-paquetes-y-recargas' },
-        { texto: 'Viajero Internacional', url: '/personas/roaming/paquetes-y-precios#!plan-de-renta.html' },
-        { texto: 'Experiencias', url: '/personas/experiencias-telcel' },
         { texto: 'Internet de las cosas', url: '/personas/internet-de-las-cosas/vida-conectada' },
         { texto: 'Cámbiate a Telcel', url: '/personas/portate/hazlo-ahora' },
         { texto: 'Promociones Plan de Renta', url: '/personas/planes-de-renta/promociones' },
+    ];
+    // Estos 6 links existen en el DOM pero están dentro de un <ul class="disable">
+    // (ocultos por CSS hasta que el usuario interactúa con un "ver más"), por lo que
+    // se validan aparte: solo que existan y apunten a la URL correcta, no que sean visibles
+    const accesosRapidosOcultos = [
+        { texto: 'Viajero Internacional', url: '/personas/roaming/paquetes-y-precios' },
+        { texto: 'Experiencias', url: '/personas/experiencias-telcel' },
+        { texto: 'Personas desaparecidas', url: '/personas-desaparecidas' },
         { texto: '¿Quién es Telcel?', url: '/personas/quien-es-telcel' },
         { texto: 'Políticas y códigos', url: '/personas/politicas-y-codigos' },
         { texto: 'Trabaja con Telcel', url: '/personas/trabaja-con-telcel/enviar-curriculum' }
     ];
     karelPage.verificarAccesosRapidos(accesosRapidosLinks);
+    karelPage.verificarAccesosRapidosOcultos(accesosRapidosOcultos);
 });
 //TC011-------------------------------------------------------------------------------------------------------------------
 

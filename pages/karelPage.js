@@ -4,7 +4,7 @@ class KarelPage {
   urls = {
         urltelcel: 'https://www.telcel.com/',
         urlplanrenta: 'https://www.telcel.com/planes-renta',
-        urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-ultra',
+        urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-libre',
         riphone: 'https://www.telcel.com/buscador?query=iPhone&mundo=Home&subseccion=Home',
         equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-azul-256gb/71002636',
         cobertura: 'https://www.telcel.com/personas/la-red-de-mayor-cobertura/red-tecnologia/5g',
@@ -53,10 +53,18 @@ class KarelPage {
 
   //GIVEN---------------------------------------------------------------------------------------------------------------
 
-  login() {
+  async login() {
     //Pagina de inicio de Telcel
-    I.amOnPage('/');
-    I.click(this.fields.cookies);
+    try {
+      I.amOnPage('/');
+    } catch (e) {
+      I.amOnPage('/');
+    }
+    // Con restart:true el banner de cookies carga desde cero cada vez,
+    // y a veces el carrusel de promos de arriba tapa momentáneamente el botón.
+    // Se espera a que esté visible y se usa forceClick para evitar el bloqueo.
+    I.waitForVisible(this.fields.cookies, 10);
+    I.forceClick(this.fields.cookies);
   }
 
   //TC001---------------------------------------------------------------------------------------------------------------
@@ -78,14 +86,16 @@ class KarelPage {
 
   ventanaplanes() { //método que verífica que cargue la página de "Plan de Renta"
         I.waitForURL(this.urls.urlplanrenta);
-        I.waitForElement('//b[contains(text(), "Plan Telcel Ultra")]');
-        I.waitForElement('p[class="telcel-destacado-descriptivo---titulo"]');
+        // El sitio ya no destaca "Plan Telcel Ultra"; ahora muestra "Plan Telcel Libre"
+        I.waitForText('Plan Telcel Libre', 10);
+        I.waitForElement('p[class="telcel-destacado-descriptivo---titulo"]', 10);
         I.click(this.fields.buttonplan);
     }
 
   async seccionPlanes(){
         I.waitForURL(this.urls.urlplan);
-        I.waitForVisible('//p[contains(@class, "content-title")]');
+        I.waitForElement('//p[contains(@class, "content-title")]', 15);
+        I.waitForVisible('//p[contains(@class, "content-title")]', 15);
         I.scrollTo('//p[contains(@class, "content-title")]');
         I.wait(5);
 
@@ -100,8 +110,8 @@ class KarelPage {
 
   
   navegacion() {
-    //Scroll a Telcel Ultra 5
-    I.scrollTo('//p[text()="Telcel Ultra 5"]');
+    //Scroll a Telcel Libre 5 (antes "Telcel Ultra 5"; el sitio renombró todos los planes a "Telcel Libre N")
+    I.scrollTo('//p[text()="Telcel Libre 5"]');
     //await 
     I.wait(3);
 
@@ -109,8 +119,8 @@ class KarelPage {
 
   seleccion5g() {
     //Esperar el botón de detalles y dar click sobre él 
-    I.waitForElement('[data-selector="6162"]', 5);
-    I.click('[data-selector="6162"]');
+    I.waitForElement('[data-selector="6126"]', 5);
+    I.click('[data-selector="6126"]');
 
   }
 
@@ -142,6 +152,8 @@ class KarelPage {
 
     async resultadosBusqueda(){
       I.waitForURL(this.urls.riphone);
+      I.waitForElement('h3[class="results-num"]', 15);
+      I.waitForVisible('h3[class="results-num"]', 15);
       I.see('iPhone');
       I.seeElement('p[class="card-products--data_name"]');
 
@@ -152,19 +164,23 @@ class KarelPage {
       
         I.fillField(this.fields.SearchBar, "iPhone");
         I.pressKey('Enter');
-
-        // Esperar a que los resultados de búsqueda carguen
         I.waitForURL(this.urls.riphone);
-        I.waitForVisible('h3[class="results-num"]');
+        I.waitForElement('h3[class="results-num"]', 20);
+        I.waitForVisible('h3[class="results-num"]', 20);
     }
 
   seleccionequipo(){
+        // El iPhone 17 Pro Max no aparece en el carrusel inicial de "Equipos" (solo muestra 5).
+        // Hay que dar clic en "Todos los Equipos" para cargar el listado completo donde sí aparece.
+        I.waitForElement('//a[contains(text(), "Todos los Equipos")]', 10);
+        I.click('//a[contains(text(), "Todos los Equipos")]');
+        I.waitForElement(this.fields.iphone17, 15);
         I.click(this.fields.iphone17);
-        I.waitForURL(this.urls.equipo);
+        I.waitForURL(/apple-iphone-17-pro-max-\w+-256gb/, 20);
     }
 
   ventanadetalles(){
-        I.waitForURL(this.urls.equipo);
+        I.waitForURL(/apple-iphone-17-pro-max-\w+-256gb/, 20);
         I.waitForVisible('div#slide-ngb-slide-2',//imagen
                          '//h1[contains(text(), "iPhone 17 Pro Max")]',//nombre
                          'div[class="cx-product-price-plan"]',//precio
@@ -174,6 +190,10 @@ class KarelPage {
                          'input[id="activePayment"]',//cobro
                          this.fields.botoncarrito,//boton carrito
                          this.fields.botoncompra);//boton compra
+        I.scrollPageToBottom();
+        I.wait(3);
+        I.scrollPageToBottom();
+        I.waitForElement('//h2[contains(text(), "Características y especificaciones")]', 20);
         I.scrollTo('//h2[contains(text(), "Características y especificaciones")]');
     }
   //TC006-------------------------------------------------------------------------------------------------------------
@@ -273,9 +293,19 @@ class KarelPage {
 
   // Verifica que cada enlace de accesos rápidos sea visible y tenga la URL correcta y se vea el texto correcto
   verificarAccesosRapidos(linksEsperados) {
+        I.scrollTo(this.fields.accesosRapidos);
         linksEsperados.forEach(link => {
-            I.waitForVisible(`${this.fields.accesosRapidos}[href="${link.url}"]`, 5); // Espera a que carguen los enlaces
+            I.waitForVisible(`${this.fields.accesosRapidos}[href="${link.url}"]`, 10); // Espera a que carguen los enlaces
             I.see(link.texto, `${this.fields.accesosRapidos}[href="${link.url}"]`);   // Comprueba que el texto y el enlace sean correctos
+        });
+    }
+
+  // Verifica los links que están dentro del <ul class="disable"> (ocultos por CSS por defecto):
+  // solo se comprueba que existan en el DOM y apunten a la URL correcta, no que estén visibles
+  verificarAccesosRapidosOcultos(linksEsperados) {
+        linksEsperados.forEach(link => {
+            I.seeElement(`${this.fields.accesosRapidos}[href="${link.url}"]`);
+            I.see(link.texto, `${this.fields.accesosRapidos}[href="${link.url}"]`);
         });
     }
 
