@@ -20,7 +20,7 @@ When(/^El usuario da click en algun plan$/, () => { //selecciona algun plan
 
 });
 
-Then(/^se puede ver la seccion "Plan Ultra"$/, () =>{
+Then(/^se puede ver la seccion "Plan Libre"$/, () =>{
   karelPage.seccionPlanes();//pagina plan ultra
 });
 //TC003-----------------------------------------------------------------------------------------------------------------------
@@ -123,7 +123,7 @@ When(/^se desplaza al final del sitio$/, () => {
 Then(/^los enlaces de redes sociales son visibles y apuntan a la URL correcta$/, () => {
     // Lista de links de las redes sociales y su valor en el atributo data-nombreboton
     const redesSocialesLinks = [
-        { nombreboton: 'Twitter', url: 'https://twitter.com/telcel' },
+        { nombreboton: 'X Twitter', url: 'https://twitter.com/telcel' },
         { nombreboton: 'Facebook', url: 'https://web.facebook.com/Telcel?_rdc=1&_rdr' },
         { nombreboton: 'YouTube', url: 'https://www.youtube.com/user/Telceloficial' },
         { nombreboton: 'Hola Telcel', url: 'https://holatelcel.com/' }
@@ -134,12 +134,13 @@ Then(/^los enlaces de redes sociales son visibles y apuntan a la URL correcta$/,
 Then(/^los accesos rápidos son visibles y apuntan a la URL correcta$/, () => {
     // Lista de links y texto de los accesos rápidos
     const accesosRapidosLinks = [
-        { texto: 'Tienda en línea', url: 'https://www.telcel.com/tienda/' },
+        //{ texto: 'Tienda en línea', url: 'https://www.telcel.com/tienda/' },
         { texto: 'Planes Telcel Libre', url: '/personas/planes-de-renta/tarifas-y-opciones/telcel-libre' },
         { texto: 'Paquetes Amigo Sin Límite', url: '/personas/amigo/paquetes/paquetes-amigo-sin-limite' },
         { texto: 'Paquetes y Recargas', url: '/personas/compra-paquetes-y-recargas' },
-        { texto: 'Viajero Internacional', url: '/personas/roaming/paquetes-y-precios#!plan-de-renta.html' },
+        { texto: 'Viajero Internacional', url: '/personas/roaming/paquetes-y-precios' },
         { texto: 'Experiencias', url: '/personas/experiencias-telcel' },
+        { texto: 'Personas desaparecidas', url: '/personas-desaparecidas' },
         { texto: 'Internet de las cosas', url: '/personas/internet-de-las-cosas/vida-conectada' },
         { texto: 'Cámbiate a Telcel', url: '/personas/portate/hazlo-ahora' },
         { texto: 'Promociones Plan de Renta', url: '/personas/planes-de-renta/promociones' },
