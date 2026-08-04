@@ -4,9 +4,10 @@ class KarelPage {
   urls = {
         urltelcel: 'https://www.telcel.com/',
         urlplanrenta: 'https://www.telcel.com/planes-renta',
-        urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-ultra',
+        urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-libre',
         riphone: 'https://www.telcel.com/buscador?query=iPhone&mundo=Home&subseccion=Home',
-        equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-azul-256gb/71002636',
+        resultados: 'https://www.telcel.com/buscador?query=iPhone',
+        equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-naranja-256gb/71002637',
         cobertura: 'https://www.telcel.com/personas/la-red-de-mayor-cobertura/red-tecnologia/5g',
         mapai: 'https://www.telcel.com/personas/quien-es-telcel/sobre-nosotros/mapas-cobertura',
         contactospage: 'https://www.telcel.com/personas/atencion-a-clientes/puntos-de-contacto',
@@ -26,7 +27,7 @@ class KarelPage {
     Guerrero:'[data-nombreboton="Guerrero"]',
     footer: 'footer.telcel-footer',
     redesSociales: 'ul.contenido-redes-sociales li a',          
-    accesosRapidos: '#telcel-footer-menu-personas ul li a',
+    accesosRapidos: '.telcel-footer-bloque-contenido ul li a',
     menu: 'a#telcel-menu-principal-boton',
     movil: 'a[data-nombreboton="Movil"]',
     ayuda: 'a[data-nombreboton="Ayuda"]',
@@ -36,11 +37,12 @@ class KarelPage {
     vercobertura: '//button[contains(@class,"telcel-controles-cta")]',
     btnMenuPrincipal: '//ul[@id="level-1"]',
     planRentaMovil: '//a[@data-submenu="Plan de renta" and @data-menuprin="Movil"]',
-    tituloPlan: '//b[contains(text(), "Plan Telcel Ultra")]',
+    tituloPlan: '//b[contains(text(), "Plan Telcel")]',
+    btnResultados: '//a[@data-titulo="Resultados buscador:Todos los Equipos"]',
     tituloDescriptivo: 'p[class="telcel-destacado-descriptivo---titulo"]',
     contenidoTitulo: '//p[contains(@class, "content-title")]',
-    textoTelcelUltra5: '//p[text()="Telcel Ultra 5"]',
-    btnVerDetalles: '[data-selector="6162"]',
+    textoTelcelLibre5: '//p[text()="Telcel Libre 5"]',
+    btnVerDetalles: '[data-selector="6126"]',
     modalPlan: '.modal.fade.modal-plan',
     detallesPlan: '//div[contains(@id,"contentDetailPlan")]',
     scrollDetalles: '//*[@id="contentDetailPlan"]/div[2]/div/div/span[2]',
@@ -128,10 +130,10 @@ class KarelPage {
 
   
   navegacion() {
-    //Scroll a Telcel Ultra 5
-    I.scrollTo(this.fields.textoTelcelUltra5);
+    //Scroll a Telcel Libre 5
+    I.scrollTo(this.fields.textoTelcelLibre5);
     //await 
-    I.waitForElement(this.fields.textoTelcelUltra5, 3);
+    I.waitForElement(this.fields.textoTelcelLibre5, 3);
 
   }
 
@@ -183,15 +185,18 @@ class KarelPage {
         // Esperar a que los resultados de búsqueda carguen
         I.waitForURL(this.urls.riphone);
         I.waitForVisible(this.fields.tituloResultados);
+        I.click(this.fields.btnResultados);
+        I.waitForURL(this.urls.resultados);
     }
 
   seleccionequipo(){
+        I.scrollTo(this.fields.iphone17);
         I.click(this.fields.iphone17);
         I.waitForURL(this.urls.equipo);
     }
 
   ventanadetalles(){
-        I.waitForURL(this.urls.equipo);
+        I.waitForURL(this.urls.equipo, 5);
         I.waitForVisible(this.fields.imgTelefono,//imagen
                          this.fields.nombreTelefono,//nombre
                          this.fields.precioTelefono,//precio
@@ -201,7 +206,8 @@ class KarelPage {
                          this.fields.compraTelefono,//cobro
                          this.fields.botoncarrito,//boton carrito
                          this.fields.botoncompra);//boton compra
-        I.scrollTo(this.fields.tituloCaracteristicas);
+        I.scrollPageToBottom();
+        I.waitForElement(this.fields.tituloCaracteristicas, 5);
     }
   //TC006-------------------------------------------------------------------------------------------------------------
   maco(){
@@ -285,7 +291,7 @@ class KarelPage {
   
   // Desplaza la página hasta el footer y espera a que termine de cargarse
   irAlFooter() {
-        I.scrollTo(this.fields.footer);
+        I.scrollPageToBottom();
         I.waitForElement(this.fields.footer, 10);
     }
 
