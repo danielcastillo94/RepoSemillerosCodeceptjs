@@ -5,8 +5,8 @@ class KarelPage {
     urltelcel: 'https://www.telcel.com/',
     urlplanrenta: 'https://www.telcel.com/planes-renta',
     urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-ultra',
-    riphone: 'https://www.telcel.com/buscador?query=iPhone&mundo=Home&subseccion=Home',
-    equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-naranja-256gb/71002637',
+    riphone: 'https://www.telcel.com/buscador?query=iphone%20pro%20max&mundo=Home&subseccion=Home',
+    equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-16-pro-max-natural-1tb/71000508',
     cobertura: 'https://www.telcel.com/personas/la-red-de-mayor-cobertura/red-tecnologia/5g',
     mapai: 'https://www.telcel.com/personas/quien-es-telcel/sobre-nosotros/mapas-cobertura',
     contactospage: 'https://www.telcel.com/personas/atencion-a-clientes/puntos-de-contacto',
@@ -20,7 +20,7 @@ class KarelPage {
     buttonplanrenta: '//a[@data-submenu="Plan de renta"]',
    // XPath usando la clase, texto y atributo único
       buttonplanultra: '//a[contains(@class, "btn") and @data-nombre="Telcel Ultra" and contains(text(), "Más planes")]',
-    iphone17: '//p[contains(text(), "iPhone 17 Pro Max")]',
+    iphone16: '//p[contains(@class, "card-products--data_name") and text()="iPhone 16 Pro Max 1TB"]',
     botoncompra: '//button[contains(@class, "btn-primary")]',
     botoncarrito: '//button[contains(@class, "addtominicart")]',
     estado: '//*[@id="lista-subopciones-menu"]/ul/li[2]/a',
@@ -50,7 +50,7 @@ class KarelPage {
     cardProductsDataName: 'p[class="card-products--data_name"]',
     resultsNum: 'h3[class="results-num"]',
     equipoSlideImage: 'div#slide-ngb-slide-2',
-    equipoTitle: '//h1[contains(text(), "iPhone 17 Pro Max")]',
+    equipoTitle: '//h1[contains(text(), "iPhone 16 Pro Max 1TB")]',
     equipoPrice: 'div[class="cx-product-price-plan"]',
     equipoColor: 'span[class="color-txt"]',
     equipoCapacity: '//span[contains(@class, "capacity-txt")]',
@@ -164,7 +164,7 @@ class KarelPage {
   //TC004--------------------------------------------------------------------------------------------------------------
 
   buscador(){
-    I.fillField(this.fields.SearchBar, "iPhone");
+    I.fillField(this.fields.SearchBar, "iphone pro max");
     I.pressKey('Enter');
   }
 
@@ -177,7 +177,7 @@ class KarelPage {
   //TC005--------------------------------------------------------------------------------------------------------------
 
   busqueda(){
-    I.fillField(this.fields.SearchBar, "iPhone");
+    I.fillField(this.fields.SearchBar, "iphone pro max");
     I.pressKey('Enter');
 
     // Esperar a que los resultados de búsqueda carguen
@@ -186,7 +186,7 @@ class KarelPage {
   }
 
   seleccionequipo(){
-    I.click(this.fields.iphone17);
+    I.click(this.fields.iphone16);
     I.waitForURL(this.urls.equipo);
   }
 ventanadetalles() {
