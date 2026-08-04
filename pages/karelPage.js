@@ -6,7 +6,8 @@ class KarelPage {
         urlplanrenta: 'https://www.telcel.com/planes-renta',
         urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-ultra',
         riphone: 'https://www.telcel.com/buscador?query=iPhone&mundo=Home&subseccion=Home',
-        equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-azul-256gb/71002636',
+        // Se cambio la URL de equipo ya que en antes estaba con el color azul y ahora redirije a color naranja
+        equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-naranja-256gb/71002637',
         cobertura: 'https://www.telcel.com/personas/la-red-de-mayor-cobertura/red-tecnologia/5g',
         mapai: 'https://www.telcel.com/personas/quien-es-telcel/sobre-nosotros/mapas-cobertura',
         contactospage: 'https://www.telcel.com/personas/atencion-a-clientes/puntos-de-contacto',
@@ -18,8 +19,14 @@ class KarelPage {
     cookies: '//*[@id="acepto-cookies"]',
     SearchBar: '[id="buscador-menu-input"]',
     buttonplanrenta: '//a[@data-submenu="Plan de renta"]',
-    buttonplan: '(//button[contains(@class, "telcel-controles-cta")])[1]',
+    // buttonplan: '(//button[contains(@class, "telcel-controles-cta")])[1]',
+    buttonplan: '//div[@class="swiper-wrapper"]/div[1]/div/a/div',
+    buttonplan1: '//div[@class="principal responsivegrid"]/div/div/div/div[3]/section/div/div/div[2]/div/div/div/div[5]/div/div/a',
+
+    // Se agrego nuevo campo ya que es para dar click en e botón de "Todos los equipos" y ver la lista de equipos disponibles en la página de resultados de búsqueda
+    todoslosequipos: '//a[contains(text(), "Todos los Equipos")]',
     iphone17: '//p[contains(text(), "iPhone 17 Pro Max")]',
+  
     botoncompra: '//button[contains(@class, "btn-primary")]',
     botoncarrito: '//button[contains(@class, "addtominicart")]',
     estado: '//*[@id="lista-subopciones-menu"]/ul/li[2]/a',
@@ -34,6 +41,8 @@ class KarelPage {
     btncorreo: '//a[contains(text(), "Correo Electrónico")]',
     redcobertura: 'a[data-nombreboton="Red de mayor cobertura"]',
     vercobertura: '//button[contains(@class,"telcel-controles-cta")]',
+
+    
 
 
   };
@@ -78,9 +87,14 @@ class KarelPage {
 
   ventanaplanes() { //método que verífica que cargue la página de "Plan de Renta"
         I.waitForURL(this.urls.urlplanrenta);
-        I.waitForElement('//b[contains(text(), "Plan Telcel Ultra")]');
+        // I.waitForElement('//b[contains(text(), "Plan Telcel Ultra")]');
+        I.waitForElement('//div[contains(@class,"swiper-wrapper")]/div[1]/div/a/div/p[1]');
         I.waitForElement('p[class="telcel-destacado-descriptivo---titulo"]');
+        I.wait(10);
         I.click(this.fields.buttonplan);
+        I.wait(10);
+        I.click(this.fields.buttonplan1);
+        
     }
 
   async seccionPlanes(){
@@ -154,8 +168,12 @@ class KarelPage {
         I.pressKey('Enter');
 
         // Esperar a que los resultados de búsqueda carguen
+        I.wait(10);
         I.waitForURL(this.urls.riphone);
+        I.wait(10);
         I.waitForVisible('h3[class="results-num"]');
+        I.wait(10);
+        I.click(this.fields.todoslosequipos);
     }
 
   seleccionequipo(){
@@ -171,9 +189,10 @@ class KarelPage {
                          'span[class="color-txt"]',//color
                          '//span[contains(@class, "capacity-txt")]',//capacidad
                          'div[class="title-sim"]',//SIM
-                         'input[id="activePayment"]',//cobro
+                        //  'input[id="activePayment"]',//cobro
                          this.fields.botoncarrito,//boton carrito
                          this.fields.botoncompra);//boton compra
+                         I.wait(10);
         I.scrollTo('//h2[contains(text(), "Características y especificaciones")]');
     }
   //TC006-------------------------------------------------------------------------------------------------------------
