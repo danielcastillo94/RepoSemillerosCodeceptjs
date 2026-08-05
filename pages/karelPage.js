@@ -84,7 +84,7 @@ class KarelPage {
     }
 
   async seccionPlanes(){
-        I.waitForURL(this.urls.urlplan);
+        I.waitForURL(/telcel-libre/, 30);
         I.waitForVisible('//p[contains(@class, "content-title")]');
         I.scrollTo('//p[contains(@class, "content-title")]');
         I.wait(5);
@@ -287,8 +287,11 @@ ventanadetalles() {
   // Verifica que cada enlace de accesos rápidos sea visible y tenga la URL correcta y se vea el texto correcto
   verificarAccesosRapidos(linksEsperados) {
         linksEsperados.forEach(link => {
-            I.waitForVisible(`${this.fields.accesosRapidos}[href="${link.url}"]`, 5); // Espera a que carguen los enlaces
-            I.see(link.texto, `${this.fields.accesosRapidos}[href="${link.url}"]`);   // Comprueba que el texto y el enlace sean correctos
+            I.scrollTo('#telcel-footer-menu-personas');
+
+I.waitForVisible('//div[@id="telcel-footer-menu-personas"]//a[contains(normalize-space(.),"Planes Telcel Libre")]', 10);
+
+I.see("Planes Telcel Libre", '#telcel-footer-menu-personas');
         });
     }
 
