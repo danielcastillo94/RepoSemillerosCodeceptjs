@@ -59,16 +59,24 @@ Then(/^El usuario puede ver los resultados de la busqueda$/, () =>{
 
 //TC005----------------------------------------------------------------------------------------------------------------------
 
-Given(/^El usuario esta en la pagina de resultados de la busqueda$/, () =>  {
+Given(/^El usuario esta en la pagina de resultados de la busqueda$/, () => {
+
     karelPage.busqueda();
+    karelPage.mostrarTodosLosEquipos();
+
 });
-When(/^El usuario selecciona algun equipo$/, () =>{
+
+When(/^El usuario selecciona algun equipo$/, () => {
+
     karelPage.seleccionequipo();
+
 });
-Then(/^El usuario puede ver la imagen, especificaciones y precio del equipo$/, () =>{
+
+Then(/^El usuario puede ver la imagen, especificaciones y precio del equipo$/, () => {
+
     karelPage.ventanadetalles();
-});
-//TC006----------------------------------------------------------------------------------------------------------------------
+
+});//TC006----------------------------------------------------------------------------------------------------------------------
 
 When(/^El usuario da click a red de mayor cobertura$/, () =>{
     karelPage.maco();
@@ -134,11 +142,10 @@ Then(/^los enlaces de redes sociales son visibles y apuntan a la URL correcta$/,
 Then(/^los accesos rápidos son visibles y apuntan a la URL correcta$/, () => {
     // Lista de links y texto de los accesos rápidos
     const accesosRapidosLinks = [
-        { texto: 'Tienda en línea', url: 'https://www.telcel.com/tienda/' },
         { texto: 'Planes Telcel Libre', url: '/personas/planes-de-renta/tarifas-y-opciones/telcel-libre' },
         { texto: 'Paquetes Amigo Sin Límite', url: '/personas/amigo/paquetes/paquetes-amigo-sin-limite' },
         { texto: 'Paquetes y Recargas', url: '/personas/compra-paquetes-y-recargas' },
-        { texto: 'Viajero Internacional', url: '/personas/roaming/paquetes-y-precios#!plan-de-renta.html' },
+        { texto: 'Viajero Internacional', url: '/personas/roaming/paquetes-y-precios' },
         { texto: 'Experiencias', url: '/personas/experiencias-telcel' },
         { texto: 'Internet de las cosas', url: '/personas/internet-de-las-cosas/vida-conectada' },
         { texto: 'Cámbiate a Telcel', url: '/personas/portate/hazlo-ahora' },

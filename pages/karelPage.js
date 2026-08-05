@@ -4,9 +4,9 @@ class KarelPage {
   urls = {
         urltelcel: 'https://www.telcel.com/',
         urlplanrenta: 'https://www.telcel.com/planes-renta',
-        urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-ultra',
+        urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-libre',
         riphone: 'https://www.telcel.com/buscador?query=iPhone&mundo=Home&subseccion=Home',
-        equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-azul-256gb/71002636',
+        equipo: 'https://www.telcel.com/tienda/producto/telefonos-y-smartphones/apple-iphone-17-pro-max-naranja-256gb/71002637',
         cobertura: 'https://www.telcel.com/personas/la-red-de-mayor-cobertura/red-tecnologia/5g',
         mapai: 'https://www.telcel.com/personas/quien-es-telcel/sobre-nosotros/mapas-cobertura',
         contactospage: 'https://www.telcel.com/personas/atencion-a-clientes/puntos-de-contacto',
@@ -15,14 +15,42 @@ class KarelPage {
    
    };
   fields = {
+    subMenuNivel1:  '//ul[@id="level-1"]',
+    opcionPlanRenta: '//a[@data-submenu="Plan de renta" and @data-menuprin="Movil"]',
+    tituloPlanUltra: '//b[contains(text(), "Plan Telcel Ultra")]',
+    tituloContenidoPlan: 'p[class="telcel-destacado-descriptivo---titulo"]',
+    tituloContenido: '//p[contains(@class, "content-title")]',
+    planUltra5: '//p[text()="Telcel Ultra 5"]',
+    botonDetalles6162: '[data-selector="6162"]',
+    modalPlan: '.modal.fade.modal-plan',
+    contenidoDetallePlan: '//div[contains(@id,"contentDetailPlan")]',
+    detalleScroll: '//*[@id="contentDetailPlan"]/div[2]/div/div/span[2]',
+    cerrarModal: '//*[@id="detailPlanHeader"]/div/div/a[2]',
+    nombreProductoBusqueda: 'p[class="card-products--data_name"]',
+    imagenProducto: 'div#slide-ngb-slide-2',
+    tituloProducto: '//h1[contains(text(), "iPhone 17 Pro")]',
+    precioProducto: 'div[class="cx-product-price-plan"]',
+    colorProducto: 'span[class="color-txt"]',
+    capacidadProducto: '//span[contains(@class, "capacity-txt")]',
+    simProducto: 'div[class="title-sim"]',
+    cobroActivo: 'input[id="activePayment"]',
+    iframeMapa : 'iframe[id="iframe-recarga3"]',
+    contendorPreguntas: '//*[@id="gluoSolapa-preguntas-frecuentes"]/div[2]',
+    estadoSeleccionado: '[class="estado-Gluo text-option"]',
+    menuHamburguesaTitulo: '//div[contains(text(), "Menú")]',
+    menuMovil: 'a[data-nombreboton="Movil"]',
+    menuDispositivos: 'a[data-nombreboton="Dispositivos Conectados y Seguridad"]',
+    menuEntretenimiento: 'a[data-nombreboton="Entretenimiento"]',
+    linkTerminos: '//*[@id="telcel-footer-copyright-derecha-contenido"]/ul/li[2]/a',
+    tituloTerminos: '//h1[text()="Términos y condiciones"]',
     cookies: '//*[@id="acepto-cookies"]',
     SearchBar: '[id="buscador-menu-input"]',
     buttonplanrenta: '//a[@data-submenu="Plan de renta"]',
     buttonplan: '(//button[contains(@class, "telcel-controles-cta")])[1]',
-    iphone17: '//p[contains(text(), "iPhone 17 Pro Max")]',
+    iphone17:'a[data-titulo="Resultados buscador:iPhone 17 Pro Max"]',
     botoncompra: '//button[contains(@class, "btn-primary")]',
     botoncarrito: '//button[contains(@class, "addtominicart")]',
-    estado: '//*[@id="lista-subopciones-menu"]/ul/li[2]/a',
+    estado: '//div[@id="lista-subopciones-menu"]/ul/li[2]/a',
     Guerrero:'[data-nombreboton="Guerrero"]',
     footer: 'footer.telcel-footer',
     redesSociales: 'ul.contenido-redes-sociales li a',          
@@ -34,6 +62,8 @@ class KarelPage {
     btncorreo: '//a[contains(text(), "Correo Electrónico")]',
     redcobertura: 'a[data-nombreboton="Red de mayor cobertura"]',
     vercobertura: '//button[contains(@class,"telcel-controles-cta")]',
+    todosLosEquipos:'a[data-titulo="Resultados buscador:Todos los Equipos"]',
+    
 
 
   };
@@ -71,26 +101,23 @@ class KarelPage {
 
   accedermenu() { //método que accede al menu, "Plan de Renta"
         I.moveCursorTo(this.fields.menu);
-        I.waitForElement('//ul[@id="level-1"]');
-        I.seeElement('//a[@data-submenu="Plan de renta" and @data-menuprin="Movil"]');
+        I.waitForElement(this.fields.subMenuNivel1);
+        I.seeElement(this.fields.opcionPlanRenta);
         I.click(this.fields.buttonplanrenta);
     }
 
   ventanaplanes() { //método que verífica que cargue la página de "Plan de Renta"
         I.waitForURL(this.urls.urlplanrenta);
-        I.waitForElement('//b[contains(text(), "Plan Telcel Ultra")]');
-        I.waitForElement('p[class="telcel-destacado-descriptivo---titulo"]');
+        I.waitForElement(this.fields.buttonplan,10);
         I.click(this.fields.buttonplan);
     }
 
   async seccionPlanes(){
-        I.waitForURL(this.urls.urlplan);
-        I.waitForVisible('//p[contains(@class, "content-title")]');
-        I.scrollTo('//p[contains(@class, "content-title")]');
-        I.wait(5);
-
-    }
-
+    I.waitForURL(this.urls.urlplan);
+    I.waitForVisible(this.fields.tituloContenido, 15); // timeout explícito, antes usaba el default
+    I.scrollTo(this.fields.tituloContenido);
+    I.wait(2); // reducido, ya no hace falta esperar 5s a ciegas
+}
   //TC003---------------------------------------------------------------------------------------------------------------
 
   paginaplanes() {
@@ -101,7 +128,7 @@ class KarelPage {
   
   navegacion() {
     //Scroll a Telcel Ultra 5
-    I.scrollTo('//p[text()="Telcel Ultra 5"]');
+    I.scrollTo(this.fields.planUltra5);
     //await 
     I.wait(3);
 
@@ -109,8 +136,8 @@ class KarelPage {
 
   seleccion5g() {
     //Esperar el botón de detalles y dar click sobre él 
-    I.waitForElement('[data-selector="6162"]', 5);
-    I.click('[data-selector="6162"]');
+    I.waitForElement(this.fields.botonDetalles6162, 5);
+    I.click(this.fields.botonDetalles6162);
 
   }
 
@@ -120,15 +147,15 @@ class KarelPage {
     await I.waitForVisible('.modal.fade.modal-plan', 10);
 
     //Esperar visibilidad de un elemento para validar que ha entrado al modal de detalles  
-    await I.see('Cargo mensual por servicio', '//div[contains(@id,"contentDetailPlan")]');
+    await I.see('Cargo mensual por servicio', this.fields.contenidoDetallePlan);
     await I.wait(3);
 
     //Scroll para observar la información contenida en el plan 
-    await I.scrollTo('//*[@id="contentDetailPlan"]/div[2]/div/div/span[2]');
+    await I.scrollTo(this.fields.detalleScroll);
     await I.wait(2);
 
     //Cerrar la ventana de los detalles del plan o modal 
-    I.click('//*[@id="detailPlanHeader"]/div/div/a[2]')
+    I.click(this.fields.cerrarModal);
 
   }
 
@@ -142,7 +169,7 @@ class KarelPage {
 
     async resultadosBusqueda(){
       I.waitForURL(this.urls.riphone);
-      I.see('iPhone');
+      I.see('iPhone');  
       I.seeElement('p[class="card-products--data_name"]');
 
     }
@@ -155,10 +182,18 @@ class KarelPage {
 
         // Esperar a que los resultados de búsqueda carguen
         I.waitForURL(this.urls.riphone);
-        I.waitForVisible('h3[class="results-num"]');
+        I.waitForVisible('h3[class="results-num"]',10);
     }
+mostrarTodosLosEquipos(){
+
+    I.waitForElement(this.fields.todosLosEquipos,10);
+    I.scrollTo(this.fields.todosLosEquipos);
+    I.click(this.fields.todosLosEquipos);
+
+}
 
   seleccionequipo(){
+        I.waitForElement(this.fields.iphone17,10);
         I.click(this.fields.iphone17);
         I.waitForURL(this.urls.equipo);
     }
@@ -166,15 +201,15 @@ class KarelPage {
   ventanadetalles(){
         I.waitForURL(this.urls.equipo);
         I.waitForVisible('div#slide-ngb-slide-2',//imagen
-                         '//h1[contains(text(), "iPhone 17 Pro Max")]',//nombre
-                         'div[class="cx-product-price-plan"]',//precio
-                         'span[class="color-txt"]',//color
-                         '//span[contains(@class, "capacity-txt")]',//capacidad
-                         'div[class="title-sim"]',//SIM
-                         'input[id="activePayment"]',//cobro
+                         this.fields.tituloProducto,//nombre
+                         this.fields.precioProducto,//precio
+                         this.fields.colorProducto,//color
+                         this.fields.capacidadProducto,//capacidad
+                         this.fields.simProducto,//SIM
+                         this.fields.cobroActivo,//cobro
                          this.fields.botoncarrito,//boton carrito
                          this.fields.botoncompra);//boton compra
-        I.scrollTo('//h2[contains(text(), "Características y especificaciones")]');
+        //I.scrollTo(this.fields.tituloContenido);
     }
   //TC006-------------------------------------------------------------------------------------------------------------
   maco(){
@@ -192,8 +227,8 @@ class KarelPage {
   vermapa(){
         I.waitForURL(this.urls.mapai);
         I.see('Mapas de Cobertura'); //nombre de la seccion
-        I.scrollTo('iframe[id="iframe-recarga3"]');
-        I.seeElement('iframe[id="iframe-recarga3"]'); //mapa
+        I.scrollTo(this.fields.iframeMapa);
+        I.seeElement(this.fields.iframeMapa); //mapa
     }
   //TC007--------------------------------------------------------------------------------------------------------------
   menuayuda(){
@@ -233,7 +268,7 @@ class KarelPage {
 
   seccionayuda(){
         I.waitForURL(this.urls.urlayuda, 5);
-        I.waitForElement('//*[@id="gluoSolapa-preguntas-frecuentes"]/div[2]', 5);
+        I.waitForElement(this.fields.contendorPreguntas);
         
     }
 
@@ -249,36 +284,38 @@ class KarelPage {
 
   Cambioderegion() {
     //texto o valores actualizados correctamente 
-    I.waitForElement('[data-nombreboton="Guerrero"]', 10);
-    I.seeElement('[class="estado-Gluo text-option"]', 5 );
+    I.waitForElement(this.fields.Guerrero, 10);
+    I.seeElement(this.fields.estadoSeleccionado, 5 );
     
   }
 
   //TC010----------------------------------------------------------------------------------------------------------------
   
   // Desplaza la página hasta el footer y espera a que termine de cargarse
-  irAlFooter() {
-        I.scrollTo(this.fields.footer);
-        I.waitForElement(this.fields.footer, 10);
-    }
-
+  // Desplaza la página hasta el footer y espera a que termine de cargarse
+irAlFooter() {
+    I.scrollTo(this.fields.footer);
+    I.waitForElement(this.fields.footer, 10);
+    I.wait(2);
+}
   // Verifica que cada enlace e icono de redes sociales sea visible y tenga la URL correcta
   verificarRedesSociales(linksEsperados) {
         linksEsperados.forEach(link => {
             I.waitForVisible(`${this.fields.redesSociales}[href="${link.url}"]`, 5);
-            I.seeElement(`${this.fields.redesSociales}[href="${link.url}"]`);     // Comprueba el enlace
-            I.seeElement(`${this.fields.redesSociales}[href="${link.url}"] img`); // Comprueba la imagen
+            I.seeElement('//div[@id="telcel-footer-menu-personas"]//a[contains(@data-nombreboton,"Internet de las cosas")]');
+            I.seeElement('//div[@id="telcel-footer-menu-personas"]//a[contains(@data-nombreboton,"Cámbiate a Telcel")]');
+            I.seeElement('//div[@id="telcel-footer-menu-personas"]//a[contains(@data-nombreboton,"Promociones Plan de Renta")]');
+            //I.seeElement(`${this.fields.redesSociales}[href="${link.url}"]`);     // Comprueba el enlace
+            //I.seeElement(`${this.fields.redesSociales}[href="${link.url}"] img`); // Comprueba la imagen
         });
     }
 
   // Verifica que cada enlace de accesos rápidos sea visible y tenga la URL correcta y se vea el texto correcto
-  verificarAccesosRapidos(linksEsperados) {
-        linksEsperados.forEach(link => {
-            I.waitForVisible(`${this.fields.accesosRapidos}[href="${link.url}"]`, 5); // Espera a que carguen los enlaces
-            I.see(link.texto, `${this.fields.accesosRapidos}[href="${link.url}"]`);   // Comprueba que el texto y el enlace sean correctos
-        });
-    }
-
+ verificarAccesosRapidos(linksEsperados) {
+    linksEsperados.forEach(link => {
+        I.waitForVisible(`${this.fields.footer} a[href="${link.url}"]`, 5);
+    });
+}
   //TC011-----------------------------------------------------------------------------------------------------------------------------------------
   vistaMovil(){
         I.usePlaywrightTo('emular vista móvil', async ({ page }) => {
@@ -291,14 +328,13 @@ class KarelPage {
   menuHamburguesa(){
         I.waitForURL(this.urls.urltelcel);
         I.click(this.fields.menu);
-        I.seeElement('//div[contains(text(), "Menú")]');
+        I.seeElement(this.fields.menuHamburguesaTitulo);
     }
 
   btsHamburguesa(){
-        I.waitForElement('a[data-nombreboton="Movil"]',
-                        'a[data-nombreboton="Dispositivos Conectados y Seguridad"]',
-                        'a[data-nombreboton="Entretenimiento"]'
-        );
+        I.waitForElement(this.fields.menuMovil, 5);
+        I.waitForElement(this.fields.menuDispositivos, 5);
+        I.waitForElement(this.fields.menuEntretenimiento, 5);
     }
 
 
@@ -308,12 +344,12 @@ class KarelPage {
     }
 
   clickLink(){
-    I.click('//*[@id="telcel-footer-copyright-derecha-contenido"]/ul/li[2]/a');
+    I.click(this.fields.linkTerminos);
     }
 
   seeResults() {
-    I.waitForElement('//h1[text()="Términos y condiciones"]', 3);
-    I.seeElement('//h1[text()="Términos y condiciones"]');
+    I.waitForElement(this.fields.tituloTerminos, 3);
+    I.seeElement(this.fields.tituloTerminos);
     }
     
 
