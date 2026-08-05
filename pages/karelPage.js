@@ -19,7 +19,7 @@ class KarelPage {
     SearchBar: '[id="buscador-menu-input"]',
     buttonplanrenta: '//a[@data-submenu="Plan de renta"]',
     buttonplan: '(//button[contains(@class, "telcel-controles-cta")])[1]',
-    iphone17: '//p[contains(text(), "iPhone 17 Pro Max")]',
+    iphone17: '//a[contains(., "iPhone 17 Pro Max")]',
     botoncompra: '//button[contains(@class, "btn-primary")]',
     botoncarrito: '//button[contains(@class, "addtominicart")]',
     estado: '//*[@id="lista-subopciones-menu"]/ul/li[2]/a',
@@ -78,7 +78,7 @@ class KarelPage {
 
   ventanaplanes() { //método que verífica que cargue la página de "Plan de Renta"
         I.waitForURL(this.urls.urlplanrenta);
-        I.waitForElement('//b[contains(text(), "Plan Telcel Ultra")]');
+        I.waitForElement('//b[contains(text(), "Plan Telcel Libre")]');
         I.waitForElement('p[class="telcel-destacado-descriptivo---titulo"]');
         I.click(this.fields.buttonplan);
     }
@@ -159,23 +159,36 @@ class KarelPage {
     }
 
   seleccionequipo(){
-        I.click(this.fields.iphone17);
-        I.waitForURL(this.urls.equipo);
-    }
 
-  ventanadetalles(){
-        I.waitForURL(this.urls.equipo);
-        I.waitForVisible('div#slide-ngb-slide-2',//imagen
-                         '//h1[contains(text(), "iPhone 17 Pro Max")]',//nombre
-                         'div[class="cx-product-price-plan"]',//precio
-                         'span[class="color-txt"]',//color
-                         '//span[contains(@class, "capacity-txt")]',//capacidad
-                         'div[class="title-sim"]',//SIM
-                         'input[id="activePayment"]',//cobro
-                         this.fields.botoncarrito,//boton carrito
-                         this.fields.botoncompra);//boton compra
-        I.scrollTo('//h2[contains(text(), "Características y especificaciones")]');
-    }
+    I.waitForElement('//a[contains(text(), "Todos los Equipos")]', 10);
+    I.click('//a[contains(text(), "Todos los Equipos")]');
+
+    I.waitForElement(this.fields.iphone17, 15);
+    I.click(this.fields.iphone17);
+
+    I.wait(3);
+    I.saveScreenshot('despues-click-iphone17.png');
+
+    I.waitForURL(/iphone-17-pro-max/, 20);
+}
+
+ventanadetalles() {
+    I.waitForURL(/apple-iphone-17-pro-max/, 20);
+
+    I.waitForVisible('//h1[contains(text(), "iPhone 17 Pro Max")]', 20);
+    I.waitForVisible('#slide-ngb-slide-2', 15);
+
+    I.waitForVisible('div[class="cx-product-price-plan"]');
+    I.waitForVisible('span[class="color-txt"]');
+    I.waitForVisible('//span[contains(@class, "capacity-txt")]');
+    I.waitForVisible('div[class="title-sim"]');
+
+    I.waitForVisible(this.fields.botoncarrito);
+    I.waitForVisible(this.fields.botoncompra);
+
+    I.scrollPageToBottom();
+}
+  
   //TC006-------------------------------------------------------------------------------------------------------------
   maco(){
         I.moveCursorTo(this.fields.menu);
