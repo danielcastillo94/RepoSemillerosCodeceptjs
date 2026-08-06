@@ -4,6 +4,7 @@ class KarelPage { /** Creacion de la clase para organizar datos y comportamiento
   urls = { /** Direcciones que utilizaremos durante las ejecuciones */
         urltelcel: 'https://www.telcel.com/',
         urlplanrenta: 'https://www.telcel.com/planes-renta',
+        urlplan: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-ultra',
         urlplanUltra: 'https://www.telcel.com/personas/planes-de-renta/tarifas-y-opciones/telcel-ultra',
         riphone: 'https://www.telcel.com/buscador?query=iPhone&mundo=Home&subseccion=Home',
         cobertura: 'https://www.telcel.com/personas/la-red-de-mayor-cobertura/red-tecnologia/5g',
