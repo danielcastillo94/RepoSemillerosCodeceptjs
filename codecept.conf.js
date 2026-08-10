@@ -1,38 +1,43 @@
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './steps/*_steps.js',
+  tests: './features/*.feature',
   output: './output',
 
   helpers: {
     Playwright: {
-      browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: 'https://www.saucedemo.com/',
       show: true,
-      locale: "es-MX"
-    }
+      browser: 'chromium',
+      video: true,
+      pressKeyDelay: 100,
+      trace: true,
+      keepTraceForPassedTests: true,
+    },
+    PlaywrightVideoAllure: {
+        require: './utils/playwrightVideoAllure_helper'
+  },
   },
 
   include: {
-    I: "./steps_file.js",
-    karelPage: "./pages/karelPage.js"
+    I: './steps_file.js',
+    sauceDemoPage: './pages/sauceDemoPage.js'
   },
 
   gherkin: {
     features: './features/*.feature',
-    steps: [
-      "./steps/karelSteps.js",
-    ],
+    steps: './step_definitions/*.js'
   },
 
   plugins: {
-    allure: {
-      enabled: true,
-      require: '@codeceptjs/allure-legacy',
-      outputDir: './output/allure-results'
-    }
+  screenshot: {
+    enabled: true
   },
 
-  bootstrap: null,
-  mocha: {},
-  name: "Actividad youtube y Telcel"
-};
+  allure: {
+    enabled: true,
+    require: "allure-codeceptjs"
+  }
+},
+
+  name: 'sauce-demo-automation'
+}
