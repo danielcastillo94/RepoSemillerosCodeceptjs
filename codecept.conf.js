@@ -8,7 +8,15 @@ exports.config = {
       browser: "chromium",
       url: 'https://www.telcel.com',
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
+      show: true,
+      video: true,
+      pressKeyDelay: 100,
+      trace: true,
+      keepTraceForPassedTests: true,
+    },
+    PlaywrightVideoAllure: {
+      require: './utils/playwrightVideoAllure_helper'
     }
   },
 
