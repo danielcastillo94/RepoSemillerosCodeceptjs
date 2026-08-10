@@ -6,6 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:workers": "codeceptjs run-workers 2",
     "features": "codeceptjs run --features --plugins allure",
+    "features:busqueda": "codeceptjs run --features --grep\"@busquedaLiverpool\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
   },
