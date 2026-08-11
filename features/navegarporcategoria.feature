@@ -9,10 +9,13 @@ Scenario: Expandir categoría principal
 @TC005
 Scenario: Acceder a subcategoría
     When El usuario da clic sobre "Categorías"
-    When El usuario da clic sobre la categoria "Hombre"
-    When El usuario da clic en la subcategoría "Zapatos"
+    And El usuario da clic sobre la categoria "Hombre"
+    And El usuario da clic en la subcategoría "Zapatos"
     Then El usuario observa un nuevo menu y imagenes relacionados a la categoria
 @TC006
 Scenario: Validar productos de categoría
-    When El usuario da clic en la opcion "Tenis Casuales"
+    When El usuario da clic sobre "Categorías"
+    And El usuario da clic sobre la categoria "Hombre"
+    And El usuario da clic en la subcategoría "Zapatos"
+    And El usuario da clic en la opcion "Tenis Casuales"
     Then El usuario ve todos los resultados relacionados de la subcategoría

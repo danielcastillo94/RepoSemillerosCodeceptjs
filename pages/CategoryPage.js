@@ -12,6 +12,7 @@ class CategoryPage {
         imgtenis: '//img[@data-testid="Tenis-image"]',
         subcatzapatos: '//a[@href="/tienda/zapatos/cat5040004"]',
         headersubcatzapatos: '//h1[contains(text(),"Zapatos")]',
+        enlacezapatoscasuales:'//a[@data-testid="CATST7543627-card"]',
         imgsubcatteniscasual: '//img[@alt="Tenis Casuales de Hombre"]',
         textsubcatteniscasual:'//h3[contains(text(),"Tenis Casuales")]',
         imgsubcattendepo: '//img[@alt="Tenis Deportivos de Hombre"]',
@@ -22,6 +23,8 @@ class CategoryPage {
         imgteniscasual: '//img[@data-testid="1144488671-image-slider-image-0"]',
         nombretenis: '//h3[contains(text(), "Tenis vl court 3.0")]',
         calificaciontenis: '//div[@data-testid="1144488671-rating"]',
+        btnordenadar: '//button[@id="sorting-button"]',
+        textarticulos: '//p[@class="font-semibold text-body-base"]',
     };
     
     //TC005----------
@@ -35,10 +38,9 @@ class CategoryPage {
     subcategoria(){
         I.click(this.locator.subcatzapatos);
         I.waitForURL(this.urls.urlsubcatzapatios);
-        pause();
     }
     resultadosubcategoria(){
-        I.see(this.locator.headersubcatzapatos);
+        I.see('Zapatos', this.locator.headersubcatzapatos);
         I.waitForElement(this.locator.imgsubcatteniscasual, 
                         this.locator.textsubcatteniscasual,
                         this.locator.imgsubcattendepo,
@@ -54,8 +56,12 @@ class CategoryPage {
         I.waitForURL(this.urls.urlvalidarproductenis);
     }
     validarproductos(){
-        I.see(this.locator.headerteniscasual);
-        I.waitForElement(this.locator.calificaciontenis);
+        I.see('Tenis Casuales de Hombre', this.locator.headerteniscasual);
+        I.waitForElement(this.locator.textarticulos,
+                        this.locator.btnordenadar,
+                        this.locator.imgteniscasual,
+                        this.locator.nombretenis,
+                        this.locator.calificaciontenis, 5);
     }
 
 }
