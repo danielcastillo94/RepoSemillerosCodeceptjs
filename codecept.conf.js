@@ -6,7 +6,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: 'https://www.liverpool.com.mx/tienda/home',
       show: true,
       locale: "es-MX"
     }
@@ -14,13 +14,14 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    karelPage: "./pages/karelPage.js"
+    SearchPage: './pages/SearchPage.js',
+    ResultPage: './pages/ResultPage.js'
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
-      "./steps/karelSteps.js",
+      "./steps/buscarprodcutoSteps.js",
     ],
   },
 
