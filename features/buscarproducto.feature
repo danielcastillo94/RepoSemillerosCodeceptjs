@@ -9,11 +9,11 @@ Scenario: Buscar producto existente
 
 @TC002
 Scenario: Buscar producto inexistente
-    When El usuario escribe "DiDi" en el buscador
+    When El usuario escribe "uber" en el buscador
     Then El usuario ve un mensaje de error de busqueda
 
 @TC003
 Scenario: Validar resultados mostrados
     When El usuario escribe "pantalon hombre" en el buscador
-    And el usuario da clic en un pantalon
+    And El usuario da clic en un pantalon
     Then El usuario puede ver detalles del pantalon
