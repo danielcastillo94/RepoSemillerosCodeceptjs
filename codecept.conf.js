@@ -6,7 +6,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: '',
       show: true,
       locale: "es-MX"
     }
@@ -14,29 +14,13 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    CoberturaPage: "./pages/cobertura_page.js",
-    planesPage: "./pages/planesPage.js",
-    youtubePage: "./pages/youtubePage.js",
-    plan5g_page: "./pages/plan5g_page.js",
-    footertelcelPage: "./pages/pruebaTC010Page.js",
-    marcosotoPage: "./pages/marcosotoPage.js",
-    terminos_page: "./pages/terminos_page.js",
-    region_page: "./pages/region_page.js",
-    karelPage: "./pages/karelPage.js"
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
       './steps/cobertura_steps.js',
-      "./steps/loginSteps.js",
-      "./steps/plan5gSteps.js",
-      "./steps/pruebaTC010Steps.js",
-      "./steps/marcosotoSteps.js",
-      "./steps/pageStep.js",
-      "./steps/TC009Steps.js",
-      "./steps/planSteps.js",
-      "./steps/karelSteps.js",
+
     ],
   },
 
@@ -50,5 +34,6 @@ exports.config = {
 
   bootstrap: null,
   mocha: {},
-  name: "Actividad youtube y Telcel"
+  name: "Reto liverpool"
 };
+
