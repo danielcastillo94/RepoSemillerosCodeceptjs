@@ -15,13 +15,16 @@ exports.config = {
   include: {
     I: "./steps_file.js",
     SearchPage: './pages/SearchPage.js',
-    ResultPage: './pages/ResultPage.js'
+    ResultPage: './pages/ResultPage.js',
+    MenuPage: './pages/MenuPage.js',
+    CategoryPage: './pages/CategoryPage.js',
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
       "./steps/buscarprodcutoSteps.js",
+      "./steps/navegarporcategoriaSteps.js",
     ],
   },
 
