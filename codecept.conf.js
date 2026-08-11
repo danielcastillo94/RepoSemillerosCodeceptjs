@@ -14,12 +14,13 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
+    axelLiverpool: './pages/axelLiverpool.js'
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
-      './steps/cobertura_steps.js',
+      './steps/axelSteps.js'
 
     ],
   },
