@@ -7,3 +7,34 @@ npx codeceptjs run --features --grep '@karelTelcel'
 allure generate output/allure-results --clean -o allure-report
 
 allure open allure-report
+
+
+Antigua pakcjeson:
+{
+  "name": "actividad-youtube",
+  "version": "1.0.0",
+  "main": "codecept.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:workers": "codeceptjs run-workers 2",
+    "features": "codeceptjs run --features --plugins allure",
+    "allure:generate": "allure generate output --clean",
+    "allure:report": "allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
+    "allure-codeceptjs": "^3.2.2",
+    "allure-commandline": "^2.34.1",
+    "chai": "^4.5.0",
+    "codeceptjs": "^3.7.3",
+    "playwright": "^1.52.0"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.56.0",
+    "dotenv": "^17.2.3"
+  }
+}

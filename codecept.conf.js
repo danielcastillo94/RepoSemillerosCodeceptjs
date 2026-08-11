@@ -1,4 +1,8 @@
 /** @type {CodeceptJS.MainConfig} */
+const urls = {
+  telcel: 'https://www.telcel.com/',
+  liverpool: 'https://www.liverpool.com.mx'
+};
 exports.config = {
   tests: './steps/*_steps.js',
   output: './output',
@@ -6,25 +10,42 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: urls.liverpool,
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
+      video: true,
+      pressKeyDelay: 100,
+      trace: true,
+      keepTraceForPassedTests: true,
+      getPageTimeout: 60000,
+    },
+    PlaywrightVideoAllure: {
+        require: './utils/playwrightVideoAllure_helper'
     }
   },
 
   include: {
     I: "./steps_file.js",
-    karelPage: "./pages/karelPage.js"
+    karelPage: "./pages/karelPage.js",
+    buscarPage: "./pages/buscarPage.js",
+    resultsPage: "./pages/ResultsPage.js",
+    CategoryPage: "./pages/categoryPage.js",
+    MenuPage: "./pages/menuPage.js",
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
       "./steps/karelSteps.js",
+      "./steps/buscarSteps.js",
+      "./steps/categoriasSteps.js",
     ],
   },
 
   plugins: {
+    screenshotOnFail: {
+    enabled: true
+  },
     allure: {
       enabled: true,
       require: '@codeceptjs/allure-legacy',
