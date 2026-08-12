@@ -3,8 +3,9 @@ const {I, SearchPage} = inject();
 class ResultPage {
     urls = {
         urlpantalo: 'https://www.liverpool.com.mx/tienda?s=pantalon%20hombre',
-        urlinfopantalon: 'https://www.liverpool.com.mx/tienda/pdp/jeans-slim-aero-lavado-stone-wash-para-hombre/1180850367',
-
+        urlinfopantalon: 'https://www.liverpool.com.mx/tienda/pdp/jeans-slim-aeropostale-lavado-stone-wash-para-hombre/1180850367',
+        urlzapatos: 'https://www.liverpool.com.mx/tienda/zapatos/cat5040004',
+        urlzapatosconfiltro: 'https://www.liverpool.com.mx/tienda/tenis-casuales-de-hombre/N-iT46Ie4aAvzNe8M90pRVO5cDsozXlN996IBB7goqY12UpmVpE6wGWVOM1JHMYWOG',
     };
 
     locator = {
@@ -23,7 +24,28 @@ class ResultPage {
         headerdetails: '//h2[contains(text(), "Detalles del Producto")]',
         btncaracteristicas: '//button[@data-testid="ml-list-item-specs"]',
         headerfail: '//h2[@class="w-full text-body-base font-normal mb-6 md:mb-4"]',
-        paneldetallado: '//div[@class="relative min-w-0 flex-1"]'
+        paneldetallado: '//div[@class="relative min-w-0 flex-1"]',
+
+
+
+
+
+        imgsubcatteniscasual: '//img[@alt="Tenis Casuales de Hombre"]',
+        textsubcatteniscasual:'//h3[contains(text(),"Tenis Casuales")]',
+        imgsubcattendepo: '//img[@alt="Tenis Deportivos de Hombre"]',
+        textsubcattendepo: '//h3[contains(text(),"Tenis Deportivos")]',
+        imgsubcatzapa: '//img[@alt="Zapatos Casuales"]',
+        textsubcatzapa: '//h3[contains(text(),"Zapatos Casuales")]',
+        headerteniscasual: '//h1[contains(text(),"Tenis Casuales")]',
+        headerteniscasual: '//h1[contains(text(),"Tenis Casuales")]',
+        btnordenadar: '//button[@id="sorting-button"]',
+        textarticulos: '//p[@class="font-semibold text-body-base"]',
+        textprecios: '//span[contains(text(),"Precios")]',
+        inputminimo: '//input[@data-testid="at-text-min-input"]',
+        inputmaximo: '//input[@data-testid="at-text-max-input"]',
+        contenprecio: '//div[@class="max-h-full overflow-y-visible pl-6 transition-all"]',
+        inputseleccionvalida: '//*[@id="main-content"]/section/div[3]/section[1]/div/div/div[2]/div/div[2]/div/div/div/fieldset/div/label[1]/span[1]/input',
+        btnrangoprecio: '//button[@data-testid="$100.0 -$500.0"]',
     };
 
     //TC003----------------
@@ -49,6 +71,20 @@ class ResultPage {
         I.click(this.locator.btncaracteristicas);
         I.waitForElement(this.locator.paneldetallado, 5);
     }
+
+    //TC009----------------
+    filtrounico(){
+        I.click(this.locator.inputseleccionvalida);
+        I.waitForVisible(this.locator.btnrangoprecio, 5);
+    }
+    filtroaplicado(){
+        I.see('Tenis Casuales de Hombre', this.locator.headerteniscasual);
+        I.waitForElement(this.locator.textarticulos,
+                        this.locator.btnordenadar,
+                        this.locator.contenprecio, 5);
+        I.scrollPageToBottom();
+    }
+
 }
 
 module.exports = new ResultPage();
