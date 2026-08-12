@@ -8,20 +8,23 @@ exports.config = {
       browser: "chromium",
       url: '',
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
     }
+
   },
+
 
   include: {
     I: "./steps_file.js",
-    axelLiverpool: './pages/axelLiverpool.js'
+    axelLiverpool: './pages/axelLiverpool.js',
+    searchPage: './pages/searchPage.js'
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
-      './steps/axelSteps.js'
-
+      './steps/axelSteps.js',
+      './steps/searchPageSteps.js'
     ],
   },
 
@@ -37,4 +40,3 @@ exports.config = {
   mocha: {},
   name: "Reto liverpool"
 };
-
