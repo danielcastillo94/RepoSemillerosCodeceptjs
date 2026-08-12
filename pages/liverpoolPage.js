@@ -240,4 +240,22 @@ seleccionarMultiplesMarcas() {
     I.wait(3);
 },
 
+seleccionarMarca(marca) {
+    const selectorMarca =
+        `//label[.//*[@data-testid="item-${marca}"]]`;
+
+    I.waitForVisible(selectorMarca, 10);
+    I.click(selectorMarca);
+    I.wait(3);
+},
+
+deseleccionarMarca(marca) {
+    const selectorMarca =
+        `//label[.//*[@data-testid="item-${marca}"]]`;
+
+    I.waitForVisible(selectorMarca, 10);
+    I.click(selectorMarca);
+    I.wait(3);
+},
+
 }

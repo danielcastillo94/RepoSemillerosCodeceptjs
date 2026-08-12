@@ -75,3 +75,15 @@ Scenario: Filtrar productos por múltiples marcas
   And busca la marca "PS"
   And selecciona las marcas "PS5" y "PS4"
   Then se muestran productos filtrados por las marcas seleccionadas
+
+ @LP012
+Scenario: Deseleccionar una marca
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "consolas"
+  And busca la marca "PS"
+  And selecciona la marca "PS5"
+  And busca la marca "PS"
+  And selecciona la marca "PS4"
+  And busca la marca "PS"
+  And deselecciona la marca "PS5"
+  Then se muestran productos filtrados por la marca seleccionada

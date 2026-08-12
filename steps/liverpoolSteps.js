@@ -77,13 +77,19 @@ When(/^busca la marca "([^"]*)"$/, (marca) => {
     liverpoolPage.buscarMarca(marca);
 });
 
-When(/^selecciona la marca "PS5"$/, () => {
-    liverpoolPage.seleccionarMarcaPS5();
-});
+
 When(/^selecciona las marcas "PS5" y "PS4"$/, () => {
     liverpoolPage.seleccionarMultiplesMarcas();
 });
 
 Then(/^se muestran productos filtrados por (?:la marca|las marcas) seleccionadas?$/, () => {
     liverpoolPage.validarResultados();
+});
+
+When(/^selecciona la marca "([^"]*)"$/, (marca) => {
+    liverpoolPage.seleccionarMarca(marca);
+});
+
+When(/^deselecciona la marca "([^"]*)"$/, (marca) => {
+    liverpoolPage.deseleccionarMarca(marca);
 });
