@@ -43,3 +43,11 @@ Scenario: Validar contenido de la categoría
     And abre el filtro de precios
     And selecciona un rango de precio
     Then se muestran productos filtrados por precio
+
+      @LP008
+  Scenario: Filtrar productos por rango específico de precio
+    Given que el usuario se encuentra en la página principal de Liverpool
+    When busca el producto "ps5"
+    And abre el filtro de precios
+    And ingresa un precio mínimo de "500" y un precio máximo de "2000"
+    Then se muestran productos dentro del rango de precio

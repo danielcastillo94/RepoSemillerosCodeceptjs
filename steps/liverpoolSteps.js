@@ -56,3 +56,11 @@ When(/^selecciona un rango de precio$/, () => {
 Then(/^se muestran productos filtrados por precio$/, () => {
     liverpoolPage.validarFiltroPrecio();
 });
+
+When(/^ingresa un precio mínimo de "([^"]*)" y un precio máximo de "([^"]*)"$/, (minimo, maximo) => {
+    liverpoolPage.ingresarRangoPrecio(minimo, maximo);
+});
+
+Then(/^se muestran productos dentro del rango de precio$/, () => {
+    liverpoolPage.validarResultados();
+});

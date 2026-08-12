@@ -40,9 +40,7 @@ module.exports = {
         '[data-testid="at-text-max-input"]',
 
         rangoPrecio:
-        'input[type="radio"][value=\'{"low":100,"high":500}\']'
- 
- 
+        'input[type="radio"][value=\'{"low":100,"high":500}\']',
  
  
  
@@ -156,9 +154,18 @@ seleccionarRangoPrecio() {
 validarFiltroPrecio() {
     I.waitForElement(this.fields.resultados, 10);
     I.seeElement(this.fields.resultados);
-}
+},
 
+ingresarRangoPrecio(minimo, maximo) {
+    I.waitForVisible(this.fields.precioMinimo, 10);
+    I.fillField(this.fields.precioMinimo, minimo);
 
+    I.waitForVisible(this.fields.precioMaximo, 10);
+    I.fillField(this.fields.precioMaximo, maximo);
+
+    I.pressKey('Enter');
+    I.wait(3);
+},
 
 
 
