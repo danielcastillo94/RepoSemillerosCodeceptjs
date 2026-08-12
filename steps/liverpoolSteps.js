@@ -68,3 +68,19 @@ Then(/^se muestran productos dentro del rango de precio$/, () => {
 Then(/^todos los productos mostrados tienen precio entre "([^"]*)" y "([^"]*)"$/, async (minimo, maximo) => {
     await liverpoolPage.validarPreciosEnRango(minimo, maximo);
 });
+
+When(/^abre el filtro de marcas$/, () => {
+    liverpoolPage.abrirFiltroMarcas();
+});
+
+When(/^busca la marca "([^"]*)"$/, (marca) => {
+    liverpoolPage.buscarMarca(marca);
+});
+
+When(/^selecciona la marca "PS5"$/, () => {
+    liverpoolPage.seleccionarMarcaPS5();
+});
+
+Then(/^se muestran productos filtrados por la marca seleccionada$/, () => {
+    liverpoolPage.validarResultados();
+});

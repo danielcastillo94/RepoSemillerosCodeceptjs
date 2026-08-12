@@ -44,8 +44,18 @@ module.exports = {
  
         preciosProductos:
         '[data-testid$="-card-card-price"]',
- 
- 
+        
+        filtroMarcas:
+        '//button[@data-testid="button-dropdown-filter" and .//span[text()="Marcas"]]',
+
+        buscadorMarca:
+        'input[placeholder="Buscar marca"]',
+
+        marcaPS5:
+        'input[type="checkbox"][value="PS5"]',
+
+        marcaPS4:
+        'input[type="checkbox"][value="PS4"]',
  
  
  
@@ -86,6 +96,8 @@ module.exports = {
         await buscador.click();
         await buscador.fill(producto);
         await buscador.press('Enter');
+
+        await page.waitForLoadState('domcontentloaded');
     });
 
     I.wait(3);
@@ -199,6 +211,24 @@ async validarPreciosEnRango(minimo, maximo) {
     });
 },
 
+abrirFiltroMarcas() {
+    I.waitForVisible(this.fields.botonFiltrar, 10);
+    I.click(this.fields.botonFiltrar);
+
+    I.waitForVisible(this.fields.filtroMarcas, 10);
+    I.click(this.fields.filtroMarcas);
+},
+
+buscarMarca(marca) {
+    I.waitForVisible(this.fields.buscadorMarca, 10);
+    I.fillField(this.fields.buscadorMarca, marca);
+},
+
+seleccionarMarcaPS5() {
+    I.waitForElement(this.fields.marcaPS5, 10);
+    I.click(this.fields.marcaPS5);
+    I.wait(3);
+},
 
 
 }
