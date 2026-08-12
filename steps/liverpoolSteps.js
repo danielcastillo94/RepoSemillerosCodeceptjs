@@ -18,4 +18,26 @@ Then(/^no se muestran productos para "([^"]*)"$/, (producto) => {
 
 Then(/^los resultados muestran productos relacionados con "([^"]*)"$/, (producto) => {
     liverpoolPage.validarProductoRelacionado(producto);
+
 });
+
+When(/^abre el menú de categorías$/, () => {
+    liverpoolPage.abrirCategorias();
+});
+
+Then(/^puede visualizar la categoría "Vinos y Gourmet"$/, () => {
+    liverpoolPage.validarCategoriaVinos();
+});
+
+When(/^navega a la categoría "Vinos y Gourmet"$/, () => {
+    liverpoolPage.irAVinosGourmet();
+});
+
+Then(/^se muestra la página de Vinos y Gourmet$/, () => {
+    liverpoolPage.validarPaginaVinosGourmet();
+});
+
+Then(/^se visualiza el encabezado "Vinos y Gourmet"$/, () => {
+    liverpoolPage.validarPaginaVinosGourmet();
+});
+

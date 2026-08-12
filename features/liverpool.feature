@@ -17,3 +17,21 @@ Feature: Búsqueda de productos en Liverpool
     Given que el usuario se encuentra en la página principal de Liverpool
     When busca el producto "ps5"
     Then los resultados muestran productos relacionados con "Ps5"
+
+       @LP004
+  Scenario: Expandir categoría principal
+    Given que el usuario se encuentra en la página principal de Liverpool
+    When abre el menú de categorías
+    Then puede visualizar la categoría "Vinos y Gourmet"
+
+  @LP005
+  Scenario: Acceder a una categoría
+    Given que el usuario se encuentra en la página principal de Liverpool
+    When navega a la categoría "Vinos y Gourmet"
+    Then se muestra la página de Vinos y Gourmet
+
+  @LP006
+  Scenario: Validar contenido de la categoría
+    Given que el usuario se encuentra en la página principal de Liverpool
+    When navega a la categoría "Vinos y Gourmet"
+    Then se visualiza el encabezado "Vinos y Gourmet"
