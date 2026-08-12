@@ -42,7 +42,8 @@ module.exports = {
         rangoPrecio:
         'input[type="radio"][value=\'{"low":100,"high":500}\']',
  
- 
+        preciosProductos:
+        '[data-testid$="-card-card-price"]',
  
  
  
@@ -167,17 +168,36 @@ ingresarRangoPrecio(minimo, maximo) {
     I.wait(3);
 },
 
+async validarPreciosEnRango(minimo, maximo) {
 
+    const min = Number(minimo);
+    const max = Number(maximo);
 
+    await I.usePlaywrightTo('validar precios dentro del rango', async ({ page }) => {
 
+        const precios = page.locator(this.fields.preciosProductos);
 
+        const cantidad = await precios.count();
 
+        for (let i = 0; i < cantidad; i++) {
 
+            const textoPrecio = await precios.nth(i).innerText();
 
+            const precio = Number(
+                textoPrecio
+                    .replace('$', '')
+                    .replace(',', '')
+                    .replace(/\s/g, '')
+            );
 
-
-
-
+            if (precio < min || precio > max) {
+                throw new Error(
+                    `El precio ${precio} está fuera del rango ${min} - ${max}`
+                );
+            }
+        }
+    });
+},
 
 
 

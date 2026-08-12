@@ -64,3 +64,7 @@ When(/^ingresa un precio mínimo de "([^"]*)" y un precio máximo de "([^"]*)"$/
 Then(/^se muestran productos dentro del rango de precio$/, () => {
     liverpoolPage.validarResultados();
 });
+
+Then(/^todos los productos mostrados tienen precio entre "([^"]*)" y "([^"]*)"$/, async (minimo, maximo) => {
+    await liverpoolPage.validarPreciosEnRango(minimo, maximo);
+});

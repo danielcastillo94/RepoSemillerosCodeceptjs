@@ -51,3 +51,11 @@ Scenario: Validar contenido de la categoría
     And abre el filtro de precios
     And ingresa un precio mínimo de "500" y un precio máximo de "2000"
     Then se muestran productos dentro del rango de precio
+
+    @LP009
+Scenario: Validar productos dentro del rango de precio
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ps5"
+  And abre el filtro de precios
+  And ingresa un precio mínimo de "500" y un precio máximo de "2000"
+  Then todos los productos mostrados tienen precio entre "500" y "2000"
