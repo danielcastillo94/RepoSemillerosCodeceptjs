@@ -11,7 +11,7 @@ Feature: Validar flujos principales del portal Telcel desde el home hasta seccio
     Scenario: Validar navegacion hacia la seccion de planes y submenus
         When El usuario da click en Menú, muestra el submenú y selecciona "Plan de Renta"
         When El usuario da click en algun plan
-        Then se puede ver la seccion "Plan Ultra" 
+        Then se puede ver la seccion "Plan Libre" 
 
     @TC003
     Scenario: Validar ingreso al detalle de un plan especifico
