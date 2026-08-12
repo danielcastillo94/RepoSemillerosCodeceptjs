@@ -52,10 +52,10 @@ module.exports = {
         'input[placeholder="Buscar marca"]',
 
         marcaPS5:
-        'input[type="checkbox"][value="PS5"]',
+        '//label[.//*[@data-testid="item-PS5"]]',
 
         marcaPS4:
-        'input[type="checkbox"][value="PS4"]',
+        '//label[.//*[@data-testid="item-PS4"]]',
  
  
  
@@ -230,5 +230,14 @@ seleccionarMarcaPS5() {
     I.wait(3);
 },
 
+seleccionarMultiplesMarcas() {
+    I.waitForVisible(this.fields.marcaPS5, 10);
+    I.waitForVisible(this.fields.marcaPS4, 10);
+
+    I.click(this.fields.marcaPS5);
+    I.click(this.fields.marcaPS4);
+
+    I.wait(3);
+},
 
 }
