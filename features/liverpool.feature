@@ -208,12 +208,25 @@ Feature: detalle de producto - reviews
 
     @TC-026: 
     Scenario: Ver reseñas de producto
+        When el usuario se encuentra en la pagina del producto
+        And desliza la pagina 
+        Then aparecen las opiniones del producto
     
     @TC-027: 
     Scenario: Filtrar por calificación (estrellas)
+        When el usuario se encuentra en la pagina del producto
+        And desliza la pagina 
+        And el boton de (ordenar por) aparece en el lado derecho y el usuario da clic
+        And el submenu de filtros aparece
+        And el usuario da clic en: mayor calificación
+        Then las opiniones se actualizan de mayor a menor calificación
 
     @TC-028: 
     Scenario: Ver fotos en reviews
+        When el usuario se encuentra en la pagina del producto
+        And desliza la pagina 
+        And aparecen las opiniones del producto
+        Then si la opinion tiene imagenes apareceran con la reseña
 
 Feature: agregar al carrito - un producto 
     Background: 
@@ -221,12 +234,26 @@ Feature: agregar al carrito - un producto
     
     @TC-029: 
     Scenario: Agregar 1 producto al carrito
+        When el usuario se encuentra en la pagina del producto
+        And desliza la pagina 
+        And el boton de (agregar a mi bolsa) aparece
+        And el usuario da clic en el 
+        Then el articulo se agrega al carrito 
 
     @TC-030: 
     Scenario: Validar cantidad en badge
+        When el usuario ya agrego un produto a la bolsa
+        And da clic en el boton de bolsa del lado derecho
+        And la pagina del carrito carga
+        Then aparece del lado derecho: Total (IVA incluido) con el valor de los productos 
 
     @TC-031: 
     Scenario: Ver confirmación de agregado
+        When el usuario se encuentra en la pagina del producto
+        And desliza la pagina 
+        And el boton de (agregar a mi bolsa) aparece
+        And el usuario da clic en el 
+        Then un mensaje de confirmacion aparece durante unos segundos  
 
 Feature: agregar al carrito - multiples productos 
     Background: 
@@ -234,34 +261,86 @@ Feature: agregar al carrito - multiples productos
 
     @TC-032: 
     Scenario: Agregar 3+ productos diferentes
-    
+        When el usuario busca un producto en la barra de busqueda 
+        And los resultados aparecen 
+        And escoge un elemento
+        And da clic en el 
+        And la pagina del producto carga 
+        And el usuario da clic en el boton agrega a mi bolsa
+        And el mensaje de confirmacion aparece
+        And el usuario vuelve a buscar un producto en la barra de busqueda
+        And los resultados aparecen 
+        And escoge un elemento
+        And da clic en el 
+        And la pagina del producto carga 
+        And el usuario da clic en el boton agrega a mi bolsa
+        And el mensaje de confirmacion aparece
+        And el usuario vuelve a buscar un producto en la barra de busqueda
+        And los resultados aparecen 
+        And escoge un elemento
+        And da clic en el 
+        And la pagina del producto carga 
+        And el usuario da clic en el boton agrega a mi bolsa
+        And el mensaje de confirmacion aparece 
+        And el usuario repite los pasos las veces que desee
+        Then el boton de bolsa indica el numero de productos agregados 
+
     @TC-033:
     Scenario: Validar cantidad total en carrito
+        When el usuario ya agrego productos a su bolsa
+        And da clic en el boton del carrito al lado derecho de la pagina
+        And la pagina del carrito carga 
+        Then el total de los productos aparece del lado derecho de la siguiente manera: Total (IVA incluido): 
     
     @TC-034:
     Scenario: Ver subtotal actualizado
-
+        When el usuario ya agrego productos a su bolsa
+        And da clic en el boton del carrito al lado derecho de la pagina
+        And la pagina del carrito carga 
+        And el total de los productos aparece del lado derecho de la siguiente manera: Total (IVA incluido): 
+        And si el usuario da clic en el boton de bote de basura de un producto
+        And el mensaje de confirmacion aparece
+        And el usuario da clic en el boton aceptar
+        Then la pagina se actualiza y el subtotal tambien 
 
 Feature: agregar a Wishlist
     Background: 
-        Given el usuario se encuentra en un producto que le agrada pero no va a comprar de momento
+        Given el usuario ya inicio sesion con su cuenta
 
     @TC-035:
     Scenario: Agregar producto a wishlist
+        When el usuario ya agrego un producto y se encuentra en la pagina de su bolsa   
+        And da clic en el boton de: Mover a wishlist junto a la imagen del producto
+        And el submenu del lado derecho aparece
+        And selecciona una lista
+        Then aparece un mensaje de confirmacion que indica que el producto fue movido a la lista de deseos
     
     @TC-036: 
     Scenario: Ver wishlist actualizada
+        When el usuario se encuentra en la pagina de wishlist
+        And selecciona una de sus listas
+        And da clic sobre ella
+        Then la pagina se actualiza y se muestran los productos de la lista de deseos
 
     @TC-037:
     Scenario: Remover de wishlist
+        When el usuario se encuentra en la pagina de wishlist
+        And selecciona una de sus listas
+        And da clic sobre ella
+        And la pagina se actualiza y se muestran los productos de la lista de deseos
+        And el usuario da clic en los 3 puntitos que aparecen en el lado derecho del producto
+        And da clic en eliminar
+        And el mensaje de confirmacion aparece
+        And el usuario da clic en el boton eliminar
+        Then la pagina se actualiza, desaparece el producto y un mensaje de confirmacion es visible durante unos segundos
 
-Feature: Comparar Productos
+Feature: Comparar Productos (De momento la pagina no cuenta con opcion para comparar productos por ende no se pueden realizar los casos TC038 -TC040)
     Background: 
         Given el usuario escogio un producto a comparar con otro
 
     @TC-038:
     Scenario: Agregar producto a comparación
-    
+        
     @TC-039:
     Scenario: Agregar segundo producto
 
@@ -275,25 +354,47 @@ Feature: Carrito - Cantidad y Cambios
 
     @TC-041:
     Scenario: Aumentar cantidad en carrito
+        When el usuario ya agrego productos a su bolsa y se encuentra en la pagina de bolsa
+        And el producto o productos sons visibles
+        And el usuario escoge un producto
+        And da clic en el boton del simbolo de mas al lado del producto 
+        Then la pagina se actualiza, la cantidad de productos sube por uno y el nuevo precio se refleja
 
     @TC-042: 
     Scenario: Disminuir cantidad
-    
+        When el usuario ya agrego productos a su bolsa y se encuentra en la pagina de bolsa
+        And el producto o productos son visibles
+        And el usuario escoge un producto
+        And da clic en el boton del simbolo de menos al lado del producto 
+        Then la pagina se actualiza, la cantidad de productos disminuye por uno y el nuevo precio se refleja
+
     @TC-043:
     Scenario: Remover producto del carrito
+        When el usuario ya agrego productos a su bolsa y se encuentra en la pagina de bolsa
+        And el producto o productos son visibles
+        And el usuario escoge un producto
+        And si el usuario da clic en el boton de bote de basura de un producto
+        And el mensaje de confirmacion aparece
+        And el usuario da clic en el boton aceptar
+        Then la pagina se actualiza, el producto desaparece y el total se actualiza 
 
 Feature: Carrito - Totales y Impuestos
     Background: 
-        Given el usuario tiene productos por pagar y se encuentra en la pagina de pago
+        Given el usuario ya inicio sesion y se encuentra en la pagina de pago
 
     @TC-044: 
     Scenario: Validar subtotal correcto
-    
+        When el usuario se encuentra en la pagina de pago
+        Then el subtotal se muestra a la derecha de la pagina de la siguiente manera: Subtotal: y el monto de los productos
+
     @TC-045:
-    Scenario: Validar cálculo de impuestos
+    Scenario: Validar cálculo de impuestos (De momento no existe un apartado que indique algo relacionado a los impuestos)
+        
 
     @TC-046:
     Scenario: Validar total final
+        When el usuario se encuentra en la pagina de pago
+        Then el total se muestra a la derecha de la pagina de la siguiente manera: Total (IVA incluido): y el monto de los productos
 
 Feature: Código Promocional
     Background: 
