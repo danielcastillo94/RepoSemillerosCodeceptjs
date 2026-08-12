@@ -53,5 +53,72 @@ Feature: Validación de funcionalidades principales del portal de Liverpool
         Given El usuario está en la página de resultados de "PC Gamer"
         When El usuario visualiza un menú lateral con opciones de filtrado
         And El usuario scrollea hasta la opción de "Precios"
-        And El usuario introduce un rango de precio específico
+        And El usuario introduce un rango de precio específico en los campos correspondientes "Mínimo" y "Máximo"
+        And El usuario hace clic en el botón para filtrar
         Then El usuario puede ver los productos filtrados por el rango de precio seleccionado
+
+    @TC009
+    Scenario: Validar que solo muestre productos en rango de precio seleccionado
+        Given El usuario está en la página de resultados de "PC Gamer" filtrados por rango de precio
+        When El usuario visualiza los productos mostrados en la página
+        Then El usuario puede verificar que todos los productos mostrados están dentro del rango de precio seleccionado
+
+    @TC010
+    Scenario: Validar selección de producto por marca
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú lateral con opciones de filtrado
+        And El usuario scrollea hasta la opción de "Marcas"
+        And El usuario selecciona una marca específica haciendo clic en la casilla correspondiente
+        Then El usuario puede ver los productos filtrados por la marca seleccionada
+    
+    @TC011
+    Scenario: Validar selección múltiple de marcas
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú lateral con opciones de filtrado
+        And El usuario scrollea hasta la opción de "Marcas"
+        And El usuario selecciona dos o más marcas específicas haciendo clic en las casillas correspondientes
+        Then El usuario puede ver los productos filtrados por marcas seleccionadas
+
+    @TC012
+    Scenario: Deseleccionar una marca previamente seleccionada
+        Given El usuario está en la página de resultados de "PC Gamer" filtrados por marcas
+        When El usuario visualiza un menú lateral con opciones de filtrado
+        And El usuario scrollea hasta la opción de "Marcas"
+        And El usuario deselecciona una marca específica haciendo clic en la casilla correspondiente
+        Then El usuario puede ver los productos filtrados de las marcas restantes seleccionadas
+
+    @TC013
+    Scenario: Filtrar por talla/tamaño del producto
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú lateral con opciones de filtrado
+        And El usuario scrollea hasta la opción de "Talla/Tamaño"
+        And El usuario selecciona un tamaño específico haciendo clic en la casilla correspondiente
+        Then El usuario puede ver los productos filtrados por el tamaño seleccionado
+
+    @TC014
+    Scenario: Filtrar por color del producto
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú lateral con opciones de filtrado
+        And El usuario scrollea hasta la opción de "Color"
+        And El usuario selecciona un color específico haciendo clic en la casilla correspondiente
+        Then El usuario puede ver los productos filtrados por el color seleccionado
+
+    @TC015
+    Scenario: Combinar filtros por talla/tamaño y color del producto
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú lateral con opciones de filtrado
+        And El usuario scrollea hasta la opción de "Talla/Tamaño"
+        And El usuario selecciona un tamaño específico haciendo clic en la casilla correspondiente
+        And El usuario scrollea hasta la opción de "Color"
+        And El usuario selecciona un color específico haciendo clic en la casilla correspondiente
+        Then El usuario puede ver los productos filtrados por el tamaño y color seleccionados
+
+    @TC016
+    Scenario: Ordenar productos por relevancia
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú desplegable con el título "Ordenar por:"
+        And El usuario selecciona la opción "Destacados" haciendo clic
+        Then El usuario puede ver los productos ordenados por relevancia
+
+    @TC017
+    Scenario: 
