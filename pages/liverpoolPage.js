@@ -25,24 +25,72 @@ module.exports = {
             '[data-testid="blt26617d4f2e17657d-header-menu-mobile-submenu-Vinos y Gourmet-15"]',
 
         tituloVinosGourmet:
-            '//h2[contains(text(),"Vinos y Gourmet")]'
+            '//h2[contains(text(),"Vinos y Gourmet")]',
+
+        botonFiltrar:
+        '[data-testid="plp-page-filter-button"]',
+
+        filtroPrecios:
+        '[data-testid="button-dropdown-filter"]',
+
+        precioMinimo:
+        '[data-testid="at-text-min-input"]',
+
+        precioMaximo:
+        '[data-testid="at-text-max-input"]',
+
+        rangoPrecio:
+        'input[type="radio"][value=\'{"low":100,"high":500}\']'
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     },
 
     abrirLiverpool() {
+    I.amOnPage('/');
+    I.waitForElement(this.fields.buscadorHome, 10);
+},
+
+    abrirLiverpoolMovil() {
     I.usePlaywrightTo('usar vista móvil', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
     });
 
     I.amOnPage('/');
-    I.waitForElement(this.fields.buscadorHome, 10);
+    I.waitForElement(this.fields.botonMenu, 10);
 },
 
-    buscarProducto(producto) {
-        I.fillField(this.fields.buscadorHome, producto);
-        I.pressKey('Enter');
-        I.wait(3);
-    },
+  async buscarProducto(producto) {
+    await I.usePlaywrightTo('buscar producto en Liverpool', async ({ page }) => {
+        const buscador = page.locator(this.fields.buscadorHome).first();
 
+        await buscador.waitFor({ state: 'visible', timeout: 10000 });
+        await buscador.click();
+        await buscador.fill(producto);
+        await buscador.press('Enter');
+    });
+
+    I.wait(3);
+},
     validarResultados() {
         I.waitForElement(this.fields.resultados, 10);
         I.seeElement(this.fields.resultados);
@@ -89,6 +137,41 @@ module.exports = {
     validarPaginaVinosGourmet() {
         I.waitForElement(this.fields.tituloVinosGourmet, 10);
         I.see('Vinos y Gourmet', this.fields.tituloVinosGourmet);
-    }
+    },
+
+    abrirFiltroPrecios() {
+    I.waitForVisible(this.fields.botonFiltrar, 10);
+    I.click(this.fields.botonFiltrar);
+
+    I.waitForVisible(this.fields.filtroPrecios, 10);
+    I.click(this.fields.filtroPrecios);
+},
+
+seleccionarRangoPrecio() {
+    I.waitForElement(this.fields.rangoPrecio, 10);
+    I.click(this.fields.rangoPrecio);
+    I.wait(3);
+},
+
+validarFiltroPrecio() {
+    I.waitForElement(this.fields.resultados, 10);
+    I.seeElement(this.fields.resultados);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

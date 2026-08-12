@@ -4,6 +4,10 @@ Given(/^que el usuario se encuentra en la página principal de Liverpool$/, () =
     liverpoolPage.abrirLiverpool();
 });
 
+Given(/^que el usuario se encuentra en la página principal de Liverpool en vista móvil$/, () => {
+    liverpoolPage.abrirLiverpoolMovil();
+});
+
 When(/^busca el producto "([^"]*)"$/, (producto) => {
     liverpoolPage.buscarProducto(producto);
 });
@@ -41,3 +45,14 @@ Then(/^se visualiza el encabezado "Vinos y Gourmet"$/, () => {
     liverpoolPage.validarPaginaVinosGourmet();
 });
 
+When(/^abre el filtro de precios$/, () => {
+    liverpoolPage.abrirFiltroPrecios();
+});
+
+When(/^selecciona un rango de precio$/, () => {
+    liverpoolPage.seleccionarRangoPrecio();
+});
+
+Then(/^se muestran productos filtrados por precio$/, () => {
+    liverpoolPage.validarFiltroPrecio();
+});
