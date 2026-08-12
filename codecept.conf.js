@@ -1,3 +1,5 @@
+//const FilterPage = require("./pages/FilterPage");
+
 /** @type {CodeceptJS.MainConfig} */
 const urls = {
   telcel: 'https://www.telcel.com/',
@@ -31,6 +33,7 @@ exports.config = {
     resultsPage: "./pages/ResultsPage.js",
     CategoryPage: "./pages/categoryPage.js",
     MenuPage: "./pages/menuPage.js",
+    FilterPage: "./pages/FilterPage.js",
   },
 
   gherkin: {
@@ -39,6 +42,8 @@ exports.config = {
       "./steps/karelSteps.js",
       "./steps/buscarSteps.js",
       "./steps/categoriasSteps.js",
+      "./steps/filtrosporPrecioSteps.js",
+      "./steps/filtrarporMarcaSteps.js",
     ],
   },
 
