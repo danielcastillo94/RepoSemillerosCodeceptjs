@@ -1,4 +1,8 @@
-    @Flujo_cuenta
+@Flujo_cuenta
+Feature: Correcto funcionamiento de una cuenta
+
+    Feature Description
+
     Scenario: EL usuario se encuentra en la página de inicio de sesión.
         Given El usuario se encuentra en la página de inicio de sesión.
 

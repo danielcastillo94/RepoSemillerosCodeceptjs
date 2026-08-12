@@ -1,4 +1,7 @@
-    @promocion_checkout
+@promocion_checkout
+Feature: Funcionamiento del checkout
+
+    Feature Description
 
     Scenario: Validar el checkout
         Given El usuario ingresa los codigos de promocion.

@@ -1,4 +1,7 @@
-    @Funcionalidades_De_Liverpool.
+@Funcionalidades_De_Liverpool
+Feature: Funcionalidades de liverpool
+
+    Feature Description
 
     Scenario: Localización de la página de liverpool.
         Given El usuario ingresa a la página de Liverpool.

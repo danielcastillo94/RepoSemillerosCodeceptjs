@@ -1,4 +1,7 @@
-    @carrito_favoritos_De_Liverpool.
+@carrito_favoritos_De_Liverpool
+Feature: Correcto funcionamiento de el carrito
+
+    Feature Description
 
     Scenario: Validar carrito y favoritos de productos en Liverpool.
         Given El usuario se encuentra con un producto específico en la página de Liverpool.
@@ -12,9 +15,9 @@
         Then El usuario valida que el producto se haya agregado correctamente al carrito.
 
     @TC030
-    Scenario: Validar cantidad de productos en el carrito.
+    Scenario: Validar cantidad de un producto en el carrito.
         Given El usuario se encuentra en la página del carrito.
-        Then El usuario valida que la cantidad de productos en el carrito sea correcta y corresponda a los productos agregados.
+        Then El usuario valida que la cantidad de producto en el carrito sea correcta y corresponda a los productos agregados.
 
     @TC031
     Scenario: Ver confirmación de agregado al carrito.
@@ -31,7 +34,7 @@
         Then El usuario valida que los productos se hayan agregado correctamente al carrito.
 
     @TC033
-    Scenario: Validar cantidad de productos en el carrito.
+    Scenario: Validar cantidad de multiples productos en el carrito.
         Given El usuario se encuentra en la página del carrito.
         Then El usuario valida que la cantidad de productos en el carrito sea correcta y corresponda a los productos agregados.
 
@@ -43,7 +46,7 @@
     # Agregar al Carrito - Un Producto
 
     @TC029
-    Scenario: Agregar un producto al carrito.
+    Scenario: Ingresar mercancia al carrito.
         Given El usuario se encuentra en la página de detalle de un producto.
         When El usuario selecciona el producto y hace clic en "Agregar al carrito".
         Then El usuario valida que el producto se haya agregado correctamente al carrito.
@@ -54,7 +57,7 @@
         Then El usuario valida que la cantidad de productos en el carrito sea correcta y corresponda a los productos agregados.
 
     @TC031
-    Scenario: Ver confirmación de agregado al carrito.
+    Scenario: Visulizar los productos en el carrito.
         Given El usuario ha agregado un producto al carrito.
         When El usuario accede al carrito.
         Then El usuario valida que el producto agregado se muestre correctamente en el carrito.
@@ -62,7 +65,7 @@
     # Agregar al Carrito - Múltiples Productos
 
     @TC032
-    Scenario: Agregar más de tres productos al carrito.
+    Scenario: Almacenar mercancia multiple en el carrito.
         Given El usuario se encuentra en la página de detalle de varios productos.
         When El usuario agrega más de tres productos al carrito.
         Then El usuario valida que los productos se hayan agregado correctamente al carrito.
@@ -73,7 +76,7 @@
         Then El usuario valida que la cantidad de productos en el carrito sea correcta y corresponda a los productos agregados.
 
     @TC034
-    Scenario: Ver subtotal actualizado en el carrito.
+    Scenario: Ver subtotal de los porductos alamacenados en el carrito.
         Given El usuario se encuentra en la página del carrito.
         Then El usuario valida que el subtotal del carrito se haya actualizado correctamente según los productos agregados.
 

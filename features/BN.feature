@@ -1,16 +1,18 @@
-    @Busqueda_Navegacion_De_Liverpool.
+@Busqueda_Navegacion_De_Liverpool
+Feature: Navegacion de la página de liverpool.
+
+    Feature Description
 
     Scenario: Localización de la página de liverpool.
         Given El usuario ingresa a la página de Liverpool.
 
     #Búsqueda de Productos
 
-    @TC001
-    Scenario: Buscar un producto existente en Liverpool.
-        Given El usuario ingresa a la página de Liverpool.
-        When El usuario localiza la barra de búsqueda.
-        And El usuario ingresa la palabra "zapatillas" en la barra de búsqueda.
-        Then El usuario valida que se muestren resultados para la búsqueda.
+    @TC0001
+    Scenario: Buscar un producto existente en Liverpool
+        Given El usuario ingresa a la página de Liverpool
+        When  El usuario ingresa la palabra "zapatillas" en la barra de búsqueda
+        Then El usuario valida que se muestren resultados para la búsqueda
 
     @TC002
     Scenario: Buscar un producto inexistente en Liverpool.

@@ -1,4 +1,7 @@
-    @Ordenamiento_detalles_De_Liverpool.
+@Ordenamiento_detalles_De_Liverpool
+Feature: Validar el ordenamiento de los productos
+
+    Feature Description
 
     Scenario: Validar ordenamiento y detalles de productos en Liverpool.
         Given El usuario se encuentra con un producto específico en la página de Liverpool.

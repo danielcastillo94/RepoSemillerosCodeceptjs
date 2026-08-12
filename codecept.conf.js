@@ -23,14 +23,14 @@ exports.config = {
   include: {
     I: "./steps_file.js",
     karelPage: "./pages/karelPage.js",
-    B_NPage: "./pages/B_NPage.js"
+    BNPage: "./pages/BNPage.js"
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
       "./steps/karelSteps.js",
-      "./steps/B_NSteps.js"
+      "./steps/BNSteps.js"
     ],
   },
 

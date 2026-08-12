@@ -1,7 +1,10 @@
-    @Filtros_Liverpool.
+@Filtros_Liverpool
+Feature: Validar filtros de productos de Liverpool
+
+    Feature Description
 
     Scenario: Validar filtros de productos en Liverpool.
-        Given El usuario ingresa ingresa un producto de Liverpool.
+        Given El usuario ingresa un producto de Liverpool.
 
     # Filtros por Precio - Ropa
 
