@@ -29,8 +29,8 @@ class FilterPage {
 
         hrefplayeras: '//a[@data-testid="blt83f3cb6dcb412235-card"]',
         headerplayeras: '//h1[@data-testid="plp-page-heading-title-title"]',
-        spanXchico: '//span[@data-testid="plp-page-plp-filter-attributes.rzlv_tallaRopa-attributes.rzlv_tallaRopa-checkbox-group-1-checkbox"]',
-        btnborrartalla: '//button[@data-testid="X-Chico"]',
+        spantallagrande: '//span[@data-testid="plp-page-plp-filter-attributes.rzlv_tallaRopa-attributes.rzlv_tallaRopa-checkbox-group-4-checkbox"]',
+        btnborrartalla: '//button[@data-testid="Grande"]',
         btnmastallas: '//button[@data-testid="plp-page-plp-filter-attributes.rzlv_tallaRopa-attributes.rzlv_tallaRopa-checkbox-group-show-all-items-btn"]',
         spancolorazuloscuro: '//span[@data-testid="plp-page-plp-filter-colors-filter-:R1csl48pb9utsq:-color-checkbox-group-3-checkbox"]',
         btnborrarcolor: '//button[@data-testid="Azul Oscuro"]'
