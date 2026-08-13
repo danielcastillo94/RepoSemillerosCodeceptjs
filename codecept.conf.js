@@ -6,7 +6,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: 'https://www.liverpool.com.mx',
       show: true,
       locale: "es-MX"
     }
@@ -14,13 +14,15 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    karelPage: "./pages/karelPage.js"
+    karelPage: "./pages/karelPage.js",
+    liverpoolPage: "./pages/liverpoolPage.js"
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
       "./steps/karelSteps.js",
+      "./steps/liverpoolSteps.js"
     ],
   },
 
@@ -34,5 +36,5 @@ exports.config = {
 
   bootstrap: null,
   mocha: {},
-  name: "Actividad youtube y Telcel"
+  name: "Reto Liverpool"
 };
