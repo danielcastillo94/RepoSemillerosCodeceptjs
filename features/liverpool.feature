@@ -87,3 +87,11 @@ Scenario: Deseleccionar una marca
   And busca la marca "PS"
   And deselecciona la marca "PS5"
   Then se muestran productos filtrados por la marca seleccionada
+
+@LP013
+Scenario: Filtrar productos por talla
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And abre el filtro de talla
+  And selecciona la talla "Mediano"
+  Then se muestran productos filtrados por la talla seleccionada

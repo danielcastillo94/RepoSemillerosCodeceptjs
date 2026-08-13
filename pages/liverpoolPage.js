@@ -57,8 +57,8 @@ module.exports = {
         marcaPS4:
         '//label[.//*[@data-testid="item-PS4"]]',
  
- 
- 
+    filtroTalla:
+    '//button[@data-testid="button-dropdown-filter" and .//span[text()="Talla"]]',
  
  
  
@@ -258,4 +258,45 @@ deseleccionarMarca(marca) {
     I.wait(3);
 },
 
-}
+async abrirFiltroTalla() {
+    await I.usePlaywrightTo('abrir filtro Talla', async ({ page }) => {
+
+        const botonTalla = page
+            .locator('button[data-testid="button-dropdown-filter"]:visible')
+            .filter({ hasText: 'Talla' })
+            .first();
+
+        await botonTalla.waitFor({
+            state: 'visible',
+            timeout: 10000
+        });
+
+        const estaAbierto = await botonTalla
+            .locator('[data-testid="keyboard-arrow-up-icon"]')
+            .count();
+
+        if (estaAbierto === 0) {
+            await botonTalla.click();
+        }
+    });
+},
+
+async seleccionarTalla(talla) {
+    await I.usePlaywrightTo(`seleccionar talla ${talla}`, async ({ page }) => {
+
+        const opcion = page.locator(
+            `[data-testid="item-${talla}"]`
+        ).first();
+
+        await opcion.waitFor({
+            state: 'visible',
+            timeout: 10000
+        });
+
+        const label = opcion.locator('xpath=ancestor::label[1]');
+
+        await label.click();
+    });
+
+    I.wait(3);
+},}

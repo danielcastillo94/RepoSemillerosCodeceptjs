@@ -93,3 +93,15 @@ When(/^selecciona la marca "([^"]*)"$/, (marca) => {
 When(/^deselecciona la marca "([^"]*)"$/, (marca) => {
     liverpoolPage.deseleccionarMarca(marca);
 });
+
+When(/^abre el filtro de talla$/, () => {
+    liverpoolPage.abrirFiltroTalla();
+});
+
+When(/^selecciona la talla "([^"]*)"$/, (talla) => {
+    liverpoolPage.seleccionarTalla(talla);
+});
+
+Then(/^se muestran productos filtrados por la talla seleccionada$/, () => {
+    liverpoolPage.validarResultados();
+});
