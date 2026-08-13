@@ -28,6 +28,7 @@ exports.config = {
       "./steps/navegarporcategoriaSteps.js",
       "./steps/filtroporprecioSteps.js",
       "./steps/filtropormarcaSteps.js",
+      "./steps/filtroportallaSteps.js",
     ],
   },
 

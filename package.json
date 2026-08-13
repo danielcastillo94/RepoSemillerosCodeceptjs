@@ -10,6 +10,7 @@
     "features:navegar": "codeceptjs run --features --grep \"@navegacioncategoria\" --steps --verbose",
     "features:filtro": "codeceptjs run --features --grep \"@filtroprecio\" --steps --verbose",
     "features:marcas": "codeceptjs run --features --grep \"@filtromarcas\" --steps --verbose",
+    "features:tallas": "codeceptjs run --features --grep \"@filtrotallas\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
   },
