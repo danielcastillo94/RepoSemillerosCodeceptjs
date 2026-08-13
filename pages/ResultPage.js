@@ -37,7 +37,6 @@ class ResultPage {
         imgsubcatzapa: '//img[@alt="Zapatos Casuales"]',
         textsubcatzapa: '//h3[contains(text(),"Zapatos Casuales")]',
         headerteniscasual: '//h1[contains(text(),"Tenis Casuales")]',
-        headerteniscasual: '//h1[contains(text(),"Tenis Casuales")]',
         btnordenadar: '//button[@id="sorting-button"]',
         textarticulos: '//p[@class="font-semibold text-body-base"]',
         textprecios: '//span[contains(text(),"Precios")]',

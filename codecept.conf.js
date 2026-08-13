@@ -27,6 +27,7 @@ exports.config = {
       "./steps/buscarprodcutoSteps.js",
       "./steps/navegarporcategoriaSteps.js",
       "./steps/filtroporprecioSteps.js",
+      "./steps/filtropormarcaSteps.js",
     ],
   },
 

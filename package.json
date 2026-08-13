@@ -9,6 +9,7 @@
     "features:busqueda": "codeceptjs run --features --grep \"@busquedaLiverpool\" --steps --verbose",
     "features:navegar": "codeceptjs run --features --grep \"@navegacioncategoria\" --steps --verbose",
     "features:filtro": "codeceptjs run --features --grep \"@filtroprecio\" --steps --verbose",
+    "features:marcas": "codeceptjs run --features --grep \"@filtromarcas\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
   },
