@@ -510,4 +510,8 @@ validarCodigoProducto() {
     I.waitForText('Código de producto:', 10);
 },
 
+
+validarSeccionOpiniones() {
+    I.waitForText('Opiniones del artículo', 10);
+},
 }

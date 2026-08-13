@@ -177,3 +177,7 @@ Then(/^se muestra la opción para buscar disponibilidad en tiendas$/, () => {
 Then(/^se muestra el código de producto$/, () => {
     liverpoolPage.validarCodigoProducto();
 });
+
+Then(/^se muestra la sección de opiniones del artículo$/, () => {
+    liverpoolPage.validarSeccionOpiniones();
+});

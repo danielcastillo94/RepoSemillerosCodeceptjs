@@ -190,3 +190,10 @@ Scenario: Validar SKU y código de producto
   When busca el producto "Tanga De Poliamida Para Mujer"
   And selecciona el producto "Tanga De Poliamida Para Mujer"
   Then se muestra el código de producto
+
+  @LP026
+Scenario: Visualizar sección de opiniones del producto
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Tanga De Poliamida Para Mujer"
+  And selecciona el producto "Tanga De Poliamida Para Mujer"
+  Then se muestra la sección de opiniones del artículo
