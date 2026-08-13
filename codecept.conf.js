@@ -6,23 +6,29 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: 'https://www.liverpool.com.mx',
       show: true,
       locale: "es-MX"
     }
   },
 
   include: {
-    I: "./steps_file.js",
-    karelPage: "./pages/karelPage.js"
-  },
+I: "./steps_file.js",
+karelPage: "./pages/karelPage.js",
+liverpoolSearchPage: "./pages/liverpoolSearchPage.js",
+liverpoolResultsPage: "./pages/liverpoolResultsPage.js",
+liverpoolMenuPage: "./pages/liverpoolMenuPage.js",
+},
+
+
 
   gherkin: {
-    features: './features/*.feature',
-    steps: [
-      "./steps/karelSteps.js",
-    ],
-  },
+  features: './features/*.feature',
+  steps: [
+    "./steps/karelSteps.js",
+    "./steps/liverpoolSteps.js",
+  ],
+},
 
   plugins: {
     allure: {
