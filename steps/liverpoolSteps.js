@@ -181,3 +181,7 @@ Then(/^se muestra el código de producto$/, () => {
 Then(/^se muestra la sección de opiniones del artículo$/, () => {
     liverpoolPage.validarSeccionOpiniones();
 });
+
+Then(/^se muestra la distribución de calificaciones por estrellas$/, () => {
+    liverpoolPage.validarDistribucionCalificaciones();
+});

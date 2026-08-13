@@ -514,4 +514,10 @@ validarCodigoProducto() {
 validarSeccionOpiniones() {
     I.waitForText('Opiniones del artículo', 10);
 },
+
+validarDistribucionCalificaciones() {
+    I.waitForText('5 estrellas', 10);
+    I.see('2 estrellas');
+},
+
 }
