@@ -175,3 +175,11 @@ Scenario: Validar disponibilidad de stock del producto
   When busca el producto "Tanga De Poliamida Para Mujer"
   And selecciona el producto "Tanga De Poliamida Para Mujer"
   Then el producto muestra disponibilidad para seleccionar cantidad
+
+  @LP024
+Scenario: Consultar disponibilidad en tienda
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Tanga De Poliamida Para Mujer"
+  And selecciona el producto "Tanga De Poliamida Para Mujer"
+  And consulta la disponibilidad en tienda
+  Then se muestra la opción para buscar disponibilidad en tiendas

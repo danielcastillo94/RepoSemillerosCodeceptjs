@@ -81,6 +81,9 @@ module.exports = {
     botonAumentarCantidad:
     'button[aria-label="increase"]',
 
+    botonDisponibilidadTienda:
+    '[data-testid="or-find-in-store-modal-button"]',
+
 
 
 
@@ -491,6 +494,16 @@ async validarStockDisponible() {
             throw new Error('El producto no permite aumentar la cantidad');
         }
     });
+},
+
+consultarDisponibilidadTienda() {
+    I.waitForVisible(this.fields.botonDisponibilidadTienda, 10);
+    I.click(this.fields.botonDisponibilidadTienda);
+    I.wait(2);
+},
+
+validarDisponibilidadTienda() {
+    I.see('Ver disponibilidad en tienda');
 },
 
 }

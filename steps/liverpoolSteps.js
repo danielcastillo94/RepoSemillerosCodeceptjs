@@ -165,3 +165,11 @@ Then(/^se muestra la galería de imágenes del producto$/, () => {
 Then(/^el producto muestra disponibilidad para seleccionar cantidad$/, () => {
     liverpoolPage.validarStockDisponible();
 });
+
+When(/^consulta la disponibilidad en tienda$/, () => {
+    liverpoolPage.consultarDisponibilidadTienda();
+});
+
+Then(/^se muestra la opción para buscar disponibilidad en tiendas$/, () => {
+    liverpoolPage.validarDisponibilidadTienda();
+});
