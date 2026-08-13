@@ -121,3 +121,27 @@ Scenario: Ordenar productos por relevancia
   And abre las opciones de ordenamiento
   And selecciona el orden "Destacados"
   Then se muestran los productos ordenados correctamente
+
+  @LP017
+Scenario: Ordenar productos por precio de menor a mayor
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And abre las opciones de ordenamiento
+  And selecciona el orden "Menor precio"
+  Then se muestran los productos ordenados correctamente
+
+  @LP018
+Scenario: Ordenar productos por precio de mayor a menor
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And abre las opciones de ordenamiento
+  And selecciona el orden "Mayor precio"
+  Then se muestran los productos ordenados correctamente
+
+@LP019
+Scenario: Ordenar productos por más nuevo
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And abre las opciones de ordenamiento
+  And selecciona el orden "Novedades"
+  Then se muestran los productos ordenados correctamente
