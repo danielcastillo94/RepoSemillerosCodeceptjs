@@ -73,83 +73,11 @@ module.exports = {
         '[data-testid$="-configurator-price"] [data-testid="discounted"]',
 
     botonCaracteristicas:
-        '[data-testid="ml-list-item-specs"]'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
-    },
+        '[data-testid="ml-list-item-specs"]',
+
+    galeriaProducto:
+    'button[data-testid^="pdp-"][data-testid*="gallery-details__thumbnail"]',
+},
 
     abrirLiverpool() {
     I.amOnPage('/');
@@ -497,4 +425,44 @@ validarCaracteristicasProducto() {
     I.see('Características', this.fields.botonCaracteristicas);
 },
 
+async seleccionarProducto(producto) {
+    await I.usePlaywrightTo(`seleccionar producto ${producto}`, async ({ page }) => {
+
+        const tarjeta = page
+            .locator(this.fields.tarjetasProducto)
+            .filter({ hasText: producto })
+            .first();
+
+        await tarjeta.waitFor({
+            state: 'visible',
+            timeout: 10000
+        });
+
+        await tarjeta.click();
+
+        await page.waitForLoadState('domcontentloaded');
+    });
+
+    I.wait(3);
+},
+
+async validarGaleriaProducto() {
+    await I.usePlaywrightTo('validar galería del producto', async ({ page }) => {
+
+        const miniaturas = page.locator(this.fields.galeriaProducto);
+
+        await miniaturas.first().waitFor({
+            state: 'attached',
+            timeout: 10000
+        });
+
+        const cantidad = await miniaturas.count();
+
+        if (cantidad < 2) {
+            throw new Error(
+                `Se esperaban al menos 2 imágenes y se encontraron ${cantidad}`
+            );
+        }
+    });
+},
 }

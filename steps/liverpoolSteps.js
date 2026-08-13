@@ -153,3 +153,11 @@ Then(/^se muestra el precio del producto$/, () => {
 Then(/^se muestra la sección de características del producto$/, () => {
     liverpoolPage.validarCaracteristicasProducto();
 });
+
+When(/^selecciona el producto "([^"]*)"$/, (producto) => {
+    liverpoolPage.seleccionarProducto(producto);
+});
+
+Then(/^se muestra la galería de imágenes del producto$/, () => {
+    liverpoolPage.validarGaleriaProducto();
+});

@@ -161,3 +161,10 @@ Scenario: Validar información básica del producto
   Then se muestra el nombre del producto
   And se muestra el precio del producto
   And se muestra la sección de características del producto
+
+  @LP022
+Scenario: Visualizar galería de imágenes del producto
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And selecciona el primer producto de los resultados
+  Then se muestra la galería de imágenes del producto
