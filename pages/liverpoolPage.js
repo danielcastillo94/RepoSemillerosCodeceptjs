@@ -77,6 +77,13 @@ module.exports = {
 
     galeriaProducto:
     'button[data-testid^="pdp-"][data-testid*="gallery-details__thumbnail"]',
+    
+    botonAumentarCantidad:
+    'button[aria-label="increase"]',
+
+
+
+
 },
 
     abrirLiverpool() {
@@ -465,4 +472,25 @@ async validarGaleriaProducto() {
         }
     });
 },
+
+async validarStockDisponible() {
+    await I.usePlaywrightTo('validar disponibilidad del producto', async ({ page }) => {
+
+        const botonAumentar = page
+            .locator(this.fields.botonAumentarCantidad)
+            .first();
+
+        await botonAumentar.waitFor({
+            state: 'visible',
+            timeout: 10000
+        });
+
+        const estaDeshabilitado = await botonAumentar.isDisabled();
+
+        if (estaDeshabilitado) {
+            throw new Error('El producto no permite aumentar la cantidad');
+        }
+    });
+},
+
 }

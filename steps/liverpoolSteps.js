@@ -161,3 +161,7 @@ When(/^selecciona el producto "([^"]*)"$/, (producto) => {
 Then(/^se muestra la galería de imágenes del producto$/, () => {
     liverpoolPage.validarGaleriaProducto();
 });
+
+Then(/^el producto muestra disponibilidad para seleccionar cantidad$/, () => {
+    liverpoolPage.validarStockDisponible();
+});

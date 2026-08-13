@@ -165,6 +165,13 @@ Scenario: Validar información básica del producto
   @LP022
 Scenario: Visualizar galería de imágenes del producto
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "ropa"
-  And selecciona el primer producto de los resultados
+  When busca el producto "Tanga De Poliamida Para Mujer"
+  And selecciona el producto "Tanga De Poliamida Para Mujer"
   Then se muestra la galería de imágenes del producto
+
+  @LP023
+Scenario: Validar disponibilidad de stock del producto
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Tanga De Poliamida Para Mujer"
+  And selecciona el producto "Tanga De Poliamida Para Mujer"
+  Then el producto muestra disponibilidad para seleccionar cantidad
