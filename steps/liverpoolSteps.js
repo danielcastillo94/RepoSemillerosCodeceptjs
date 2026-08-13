@@ -105,3 +105,15 @@ When(/^selecciona la talla "([^"]*)"$/, (talla) => {
 Then(/^se muestran productos filtrados por la talla seleccionada$/, () => {
     liverpoolPage.validarResultados();
 });
+
+When(/^abre el filtro de color$/, () => {
+    liverpoolPage.abrirFiltroColor();
+});
+
+When(/^selecciona el color "([^"]*)"$/, (color) => {
+    liverpoolPage.seleccionarColor(color);
+});
+
+Then(/^se muestran productos filtrados por el color seleccionado$/, () => {
+    liverpoolPage.validarResultados();
+});

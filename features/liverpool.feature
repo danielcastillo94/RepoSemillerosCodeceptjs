@@ -95,3 +95,11 @@ Scenario: Filtrar productos por talla
   And abre el filtro de talla
   And selecciona la talla "Mediano"
   Then se muestran productos filtrados por la talla seleccionada
+
+@LP014
+Scenario: Filtrar productos por color
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And abre el filtro de color
+  And selecciona el color "Negro"
+  Then se muestran productos filtrados por el color seleccionado

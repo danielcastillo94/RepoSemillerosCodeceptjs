@@ -60,7 +60,8 @@ module.exports = {
     filtroTalla:
     '//button[@data-testid="button-dropdown-filter" and .//span[text()="Talla"]]',
  
- 
+    filtroColor:
+    '//button[@data-testid="button-dropdown-filter" and .//span[text()="Color"]]',
  
  
  
@@ -299,4 +300,54 @@ async seleccionarTalla(talla) {
     });
 
     I.wait(3);
-},}
+},
+
+async abrirFiltroColor() {
+    await I.usePlaywrightTo('abrir filtro Color', async ({ page }) => {
+
+        const botonColor = page
+            .locator('button[data-testid="button-dropdown-filter"]:visible')
+            .filter({ hasText: 'Color' })
+            .first();
+
+        await botonColor.waitFor({
+            state: 'visible',
+            timeout: 10000
+        });
+
+        const estaAbierto = await botonColor
+            .locator('[data-testid="keyboard-arrow-up-icon"]')
+            .count();
+
+        if (estaAbierto === 0) {
+            await botonColor.click();
+        }
+    });
+},
+
+async seleccionarColor(color) {
+    await I.usePlaywrightTo(`seleccionar color ${color}`, async ({ page }) => {
+
+        const checkbox = page.locator(
+            `input[type="checkbox"][value^="${color}~~"]`
+        ).first();
+
+        await checkbox.waitFor({
+            state: 'attached',
+            timeout: 10000
+        });
+
+        const label = checkbox.locator('xpath=ancestor::label[1]');
+
+        await label.waitFor({
+            state: 'visible',
+            timeout: 10000
+        });
+
+        await label.click();
+    });
+
+    I.wait(3);
+},
+
+}
