@@ -117,3 +117,7 @@ When(/^selecciona el color "([^"]*)"$/, (color) => {
 Then(/^se muestran productos filtrados por el color seleccionado$/, () => {
     liverpoolPage.validarResultados();
 });
+
+Then(/^se muestran productos filtrados por talla y color$/, () => {
+    liverpoolPage.validarResultados();
+});

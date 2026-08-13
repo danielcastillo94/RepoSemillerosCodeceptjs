@@ -103,3 +103,13 @@ Scenario: Filtrar productos por color
   And abre el filtro de color
   And selecciona el color "Negro"
   Then se muestran productos filtrados por el color seleccionado
+
+  @LP015
+Scenario: Combinar filtros de talla y color
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And abre el filtro de talla
+  And selecciona la talla "Mediano"
+  And abre el filtro de color
+  And selecciona el color "Negro"
+  Then se muestran productos filtrados por talla y color
