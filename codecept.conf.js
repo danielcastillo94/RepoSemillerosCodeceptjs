@@ -14,13 +14,15 @@ exports.config = {
 
   include: {
     I: "./steps_file.js", /** Crear al actor, quien va a realizar las acciones */
-    karelPage: "./pages/karelPage.js" /** Creacion de la page Object */
+    karelPage: "./pages/karelPage.js", /** Creacion de la page Object */
+    liverpoolPage: "./pages/liverpoolPage.js"
   },
 
   gherkin: {
     features: './features/*.feature', /** Ubicacion de los archivos features */
     steps: [
       "./steps/karelSteps.js", /** Ubicaciones de los archivos que traducen Given,When y Then a javascript */
+      "./steps/liverpoolSteps.js",
     ],
   },
 
