@@ -474,7 +474,7 @@ async validarGaleriaProducto() {
             );
         }
     });
-},
+},    
 
 async validarStockDisponible() {
     await I.usePlaywrightTo('validar disponibilidad del producto', async ({ page }) => {
@@ -504,6 +504,10 @@ consultarDisponibilidadTienda() {
 
 validarDisponibilidadTienda() {
     I.see('Ver disponibilidad en tienda');
+},
+
+validarCodigoProducto() {
+    I.waitForText('Código de producto:', 10);
 },
 
 }

@@ -173,3 +173,7 @@ When(/^consulta la disponibilidad en tienda$/, () => {
 Then(/^se muestra la opción para buscar disponibilidad en tiendas$/, () => {
     liverpoolPage.validarDisponibilidadTienda();
 });
+
+Then(/^se muestra el código de producto$/, () => {
+    liverpoolPage.validarCodigoProducto();
+});
