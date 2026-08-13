@@ -133,3 +133,11 @@ When(/^selecciona el orden "([^"]*)"$/, (orden) => {
 Then(/^se muestran los productos ordenados correctamente$/, () => {
     liverpoolPage.validarResultados();
 });
+
+When(/^selecciona el primer producto de los resultados$/, () => {
+    liverpoolPage.seleccionarPrimerProducto();
+});
+
+Then(/^se muestra el detalle del producto$/, () => {
+    liverpoolPage.validarDetalleProducto();
+});

@@ -365,4 +365,46 @@ seleccionarOrden(orden) {
     I.wait(3);
 },
 
+async seleccionarPrimerProducto() {
+    await I.usePlaywrightTo('seleccionar primer producto', async ({ page }) => {
+
+        const producto = page
+            .locator(this.fields.tarjetasProducto)
+            .first();
+
+        await producto.waitFor({
+            state: 'visible',
+            timeout: 10000
+        });
+
+        const urlInicial = page.url();
+
+        await producto.click();
+
+        await page.waitForURL(
+            url => url.toString() !== urlInicial,
+            { timeout: 10000 }
+        );
+
+        await page.waitForLoadState('domcontentloaded');
+    });
+
+    I.wait(3);
+},
+
+async validarDetalleProducto() {
+    await I.usePlaywrightTo('validar detalle del producto', async ({ page }) => {
+
+        const tarjetas = page.locator(this.fields.tarjetasProducto);
+
+        const cantidadTarjetas = await tarjetas.count();
+
+        if (cantidadTarjetas > 0) {
+            throw new Error(
+                'El usuario continúa visualizando la lista de productos'
+            );
+        }
+    });
+},
+
 }

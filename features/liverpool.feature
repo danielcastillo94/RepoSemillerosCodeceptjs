@@ -145,3 +145,10 @@ Scenario: Ordenar productos por más nuevo
   And abre las opciones de ordenamiento
   And selecciona el orden "Novedades"
   Then se muestran los productos ordenados correctamente
+
+  @LP020
+Scenario: Abrir detalle de un producto
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And selecciona el primer producto de los resultados
+  Then se muestra el detalle del producto
