@@ -141,3 +141,15 @@ When(/^selecciona el primer producto de los resultados$/, () => {
 Then(/^se muestra el detalle del producto$/, () => {
     liverpoolPage.validarDetalleProducto();
 });
+
+Then(/^se muestra el nombre del producto$/, () => {
+    liverpoolPage.validarNombreProducto();
+});
+
+Then(/^se muestra el precio del producto$/, () => {
+    liverpoolPage.validarPrecioProducto();
+});
+
+Then(/^se muestra la sección de características del producto$/, () => {
+    liverpoolPage.validarCaracteristicasProducto();
+});

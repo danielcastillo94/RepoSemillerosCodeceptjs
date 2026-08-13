@@ -66,6 +66,81 @@ module.exports = {
     botonOrdenamiento:
     '[data-testid="dropdown-sorting-button"]',
  
+    nombreProducto:
+        'h1.text-body-2xl',
+
+    precioProducto:
+        '[data-testid$="-configurator-price"] [data-testid="discounted"]',
+
+    botonCaracteristicas:
+        '[data-testid="ml-list-item-specs"]'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
  
  
@@ -405,6 +480,21 @@ async validarDetalleProducto() {
             );
         }
     });
+},
+
+validarNombreProducto() {
+    I.waitForVisible(this.fields.nombreProducto, 10);
+    I.seeElement(this.fields.nombreProducto);
+},
+
+validarPrecioProducto() {
+    I.waitForVisible(this.fields.precioProducto, 10);
+    I.seeElement(this.fields.precioProducto);
+},
+
+validarCaracteristicasProducto() {
+    I.waitForVisible(this.fields.botonCaracteristicas, 10);
+    I.see('Características', this.fields.botonCaracteristicas);
 },
 
 }

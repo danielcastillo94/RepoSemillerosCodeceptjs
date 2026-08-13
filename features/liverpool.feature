@@ -152,3 +152,12 @@ Scenario: Abrir detalle de un producto
   When busca el producto "ropa"
   And selecciona el primer producto de los resultados
   Then se muestra el detalle del producto
+
+  @LP021
+Scenario: Validar información básica del producto
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And selecciona el primer producto de los resultados
+  Then se muestra el nombre del producto
+  And se muestra el precio del producto
+  And se muestra la sección de características del producto
