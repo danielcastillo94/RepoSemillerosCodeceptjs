@@ -121,4 +121,49 @@ Feature: Validación de funcionalidades principales del portal de Liverpool
         Then El usuario puede ver los productos ordenados por relevancia
 
     @TC017
-    Scenario: 
+    Scenario: Ordenar por precio de menor a mayor
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú desplegable con el título "Ordenar por:"
+        And El usuario selecciona la opción "Menor precio" haciendo clic
+        Then El usuario puede ver los productos ordenados por precio de menor a mayor
+
+    @TC018
+    Scenario: Ordenar por precio de mayor a menor
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú desplegable con el título "Ordenar por:"
+        And El usuario selecciona la opción "Mayor precio" haciendo clic
+        Then El usuario puede ver los productos ordenados por precio de mayor a menor
+
+    @TC019
+    Scenario: Ordenar productos por más nuevo
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario visualiza un menú desplegable con el título "Ordenar por:"
+        And El usuario selecciona la opción "Novedades" haciendo clic
+        Then El usuario puede ver los productos ordenados por novedades
+
+    @TC020
+    Scenario: Abrir detalle de un producto específico
+        Given El usuario está en la página de resultados de "PC Gamer"
+        When El usuario hace clic en "Laptop Gamer ASUS"
+        Then El usuario visualiza la página de detalle del producto seleccionado
+
+    @TC021
+    Scenario: Validar información del producto en detalle
+        Given El usuario está en la página de detalle del producto "Laptop Gamer ASUS"
+        When El usuario visualiza el nombre y precio del producto
+        And El usuario scrollea hasta la sección de "Características" del producto y hace clic
+        Then El usuario visualiza la descripción detallada del producto
+
+    @TC022
+    Scenario: Visualizar galería de imágenes del producto
+        Given El usuario está en la página de detalle del producto "Laptop Gamer ASUS"
+        When El usuario visualiza la galería de imágenes del producto del lado izquierdo de la página
+        And El usuario hace clic en cualquiera de las imágenes de la galería
+        Then El usuario puede ver la imagen seleccionada en un tamaño más grande y con la opción de navegar entre las demás imágenes del producto
+
+    @TC023
+    Scenario: Validar stock disponible del producto
+        Given El usuario está en la página de detalle del producto "Laptop Gamer ASUS"
+        When El usuario visualiza la opción de "Ver disponibilidad en tienda" y hace clic en el
+        And Se despliega un menú con los estados y ciudades donde se puede encontrar el producto
+        Then El usuario elige un estado del país haciendo clic y se muestra un listado de las tiendas con stock disponible
