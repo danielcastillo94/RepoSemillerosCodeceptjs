@@ -121,3 +121,15 @@ Then(/^se muestran productos filtrados por el color seleccionado$/, () => {
 Then(/^se muestran productos filtrados por talla y color$/, () => {
     liverpoolPage.validarResultados();
 });
+
+When(/^abre las opciones de ordenamiento$/, () => {
+    liverpoolPage.abrirOrdenamiento();
+});
+
+When(/^selecciona el orden "([^"]*)"$/, (orden) => {
+    liverpoolPage.seleccionarOrden(orden);
+});
+
+Then(/^se muestran los productos ordenados correctamente$/, () => {
+    liverpoolPage.validarResultados();
+});

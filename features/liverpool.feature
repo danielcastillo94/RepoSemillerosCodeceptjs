@@ -113,3 +113,11 @@ Scenario: Combinar filtros de talla y color
   And abre el filtro de color
   And selecciona el color "Negro"
   Then se muestran productos filtrados por talla y color
+
+  @LP016
+Scenario: Ordenar productos por relevancia
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ropa"
+  And abre las opciones de ordenamiento
+  And selecciona el orden "Destacados"
+  Then se muestran los productos ordenados correctamente

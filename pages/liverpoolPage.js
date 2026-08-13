@@ -63,7 +63,8 @@ module.exports = {
     filtroColor:
     '//button[@data-testid="button-dropdown-filter" and .//span[text()="Color"]]',
  
- 
+    botonOrdenamiento:
+    '[data-testid="dropdown-sorting-button"]',
  
  
  
@@ -347,6 +348,20 @@ async seleccionarColor(color) {
         await label.click();
     });
 
+    I.wait(3);
+},
+
+abrirOrdenamiento() {
+    I.waitForVisible(this.fields.botonOrdenamiento, 10);
+    I.click(this.fields.botonOrdenamiento);
+},
+
+seleccionarOrden(orden) {
+    const opcionOrden =
+        `//li[@role="option" and normalize-space(.)="${orden}"]`;
+
+    I.waitForVisible(opcionOrden, 10);
+    I.click(opcionOrden);
     I.wait(3);
 },
 
