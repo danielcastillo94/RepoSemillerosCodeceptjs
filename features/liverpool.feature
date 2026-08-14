@@ -305,3 +305,59 @@ Scenario: Validar cantidad total de productos en el carrito
   And abre la bolsa de compras
 
   Then se muestra el subtotal de "3" productos
+
+  # LP035-LP037 requieren sesión autenticada.
+  # LP038-LP040 no se encuentran estas funcionalidades
+# Liverpool no permite gestionar wishlist/favoritos como invitado.
+# Ya no se encuentra la funcionalidad de comparar productos
+# Casos pendientes hasta contar con credenciales de prueba.
+
+
+@LP041
+Scenario: Aumentar cantidad de un producto en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  And aumenta la cantidad del producto en el carrito
+  Then la cantidad del producto en el carrito es "2"
+
+
+@LP042
+Scenario: Disminuir cantidad de un producto en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  And aumenta la cantidad del producto en el carrito
+  And disminuye la cantidad del producto en el carrito
+  Then la cantidad del producto en el carrito es "1"
+
+  @LP042
+Scenario: Disminuir de dos a un producto en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  And aumenta la cantidad del producto en el carrito
+  And disminuye la cantidad del producto en el carrito
+  Then la cantidad del producto en el carrito es "1"
+
+
+@LP043
+Scenario: Eliminar el último producto del carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  And remueve el producto del carrito
+  And confirma la eliminación del producto
+  Then el carrito queda vacío

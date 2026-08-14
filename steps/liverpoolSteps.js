@@ -226,3 +226,31 @@ When(/^abre la bolsa de compras$/, () => {
 Then(/^se muestra el subtotal de "([^"]*)" productos$/, (cantidad) => {
     liverpoolPage.validarSubtotal(cantidad);
 });
+
+When(/^aumenta la cantidad del producto en el carrito$/, () => {
+    liverpoolPage.aumentarCantidadCarrito();
+});
+
+When(/^disminuye la cantidad del producto en el carrito$/, () => {
+    liverpoolPage.disminuirCantidadCarrito();
+});
+
+Then(/^la cantidad del producto en el carrito es "([^"]*)"$/, (cantidad) => {
+    liverpoolPage.validarCantidadCarritoProducto(cantidad);
+});
+
+When(/^disminuye la cantidad del producto en el carrito$/, () => {
+    liverpoolPage.disminuirCantidadCarrito();
+});
+
+When(/^remueve el producto del carrito$/, () => {
+    liverpoolPage.removerProductoCarrito();
+});
+
+When(/^confirma la eliminación del producto$/, () => {
+    liverpoolPage.confirmarEliminacionProducto();
+});
+
+Then(/^el carrito queda vacío$/, () => {
+    liverpoolPage.validarCarritoVacio();
+});

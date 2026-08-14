@@ -93,6 +93,9 @@ module.exports = {
     botonBolsa:
     '[data-testid="blt26617d4f2e17657d-header-shopping-cart-shopping-link"]',
 
+    botonDisminuirCantidadCarrito: 'button[aria-label="decrease"]',
+    botonAumentarCantidadCarrito: 'button[aria-label="increase"]',
+
 },
 
     abrirLiverpool() {
@@ -576,5 +579,49 @@ abrirBolsa() {
 validarSubtotal(cantidad) {
     I.waitForText(`Subtotal (${cantidad} productos)`, 10);
 },
+
+aumentarCantidadCarrito() {
+    I.waitForVisible(this.fields.botonAumentarCantidadCarrito, 10);
+    I.click(this.fields.botonAumentarCantidadCarrito);
+    I.wait(1);
+},
+
+disminuirCantidadCarrito() {
+    I.waitForVisible(this.fields.botonDisminuirCantidadCarrito, 10);
+    I.click(this.fields.botonDisminuirCantidadCarrito);
+    I.wait(1);
+},
+
+validarCantidadCarritoProducto(cantidad) {
+    I.seeInField('input[name="quantity"]', cantidad);
+},
+
+disminuirCantidadCarrito() {
+    I.waitForVisible('button[aria-label="decrease"]', 10);
+    I.click('button[aria-label="decrease"]');
+    I.wait(1);
+},
+
+removerProductoCarrito() {
+    I.waitForVisible('button[aria-label="decrease"]', 10);
+    I.click('button[aria-label="decrease"]');
+    I.wait(2);
+},
+
+confirmarEliminacionProducto() {
+    I.waitForVisible(
+        '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]',
+        10
+    );
+    I.click(
+        '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]'
+    );
+    I.wait(2);
+},
+
+validarCarritoVacio() {
+    I.dontSeeElement('input[name="quantity"]');
+},
+
 
 }
