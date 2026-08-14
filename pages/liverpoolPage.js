@@ -84,6 +84,8 @@ module.exports = {
     botonDisponibilidadTienda:
     '[data-testid="or-find-in-store-modal-button"]',
 
+    botonAgregarBolsa:
+    '[data-testid="add-to-bag-button"]',
 
 
 
@@ -518,6 +520,25 @@ validarSeccionOpiniones() {
 validarDistribucionCalificaciones() {
     I.waitForText('5 estrellas', 10);
     I.see('2 estrellas');
+},
+
+seleccionarTallaProducto(talla) {
+    const opcionTalla =
+        `label:has(input[name="size-picker"][value="${talla}"])`;
+
+    I.waitForVisible(opcionTalla, 10);
+    I.click(opcionTalla);
+    I.wait(1);
+},
+
+agregarProductoBolsa() {
+    I.waitForVisible(this.fields.botonAgregarBolsa, 10);
+    I.click(this.fields.botonAgregarBolsa);
+    I.wait(3);
+},
+
+validarProductoAgregado() {
+    I.wait(2);
 },
 
 }

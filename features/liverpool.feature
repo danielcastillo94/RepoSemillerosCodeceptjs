@@ -204,3 +204,16 @@ Scenario: Validar calificaciones del producto
   When busca el producto "Tanga para mujer"
   And selecciona el producto "Tanga para mujer"
   Then se muestra la distribución de calificaciones por estrellas
+
+  # LP028 pendiente/no aplicable:
+# No se encontraron reseñas con imágenes disponibles en los productos revisados.
+# Se documenta la limitación de datos de prueba en la UI actual.
+
+@LP029
+Scenario: Agregar un producto al carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Tanga para mujer"
+  And selecciona el producto "Tanga para mujer"
+  And selecciona la talla "XCH" del producto
+  And agrega el producto a la bolsa
+  Then el producto se agrega correctamente a la bolsa

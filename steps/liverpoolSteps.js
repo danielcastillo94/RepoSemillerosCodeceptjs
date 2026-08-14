@@ -185,3 +185,15 @@ Then(/^se muestra la sección de opiniones del artículo$/, () => {
 Then(/^se muestra la distribución de calificaciones por estrellas$/, () => {
     liverpoolPage.validarDistribucionCalificaciones();
 });
+
+When(/^selecciona la talla "([^"]*)" del producto$/, (talla) => {
+    liverpoolPage.seleccionarTallaProducto(talla);
+});
+
+When(/^agrega el producto a la bolsa$/, () => {
+    liverpoolPage.agregarProductoBolsa();
+});
+
+Then(/^el producto se agrega correctamente a la bolsa$/, () => {
+    liverpoolPage.validarProductoAgregado();
+});
