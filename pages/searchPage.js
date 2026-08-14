@@ -10,7 +10,10 @@ class searchPage{
     fields = {
         buscador: '//input[@data-testid="blt26617d4f2e17657d-header-search-input"]',
         textoSinResultados: '//p[contains(text(), "¿Quizá quisiste decir?")]',
-        resultado: '//button[normalize-space()="NINTENDO"]'
+        resultado: '//h1[normalize-space()="Xbox series x"]',
+        resultadoGeneral: '//h1[@data-testid="plp-page-heading-title-title" and normalize-space()="Videojuegos"]',
+        xboxTitulo: '//h3[normalize-space()="Consola fija xbox series x de 1 tb"]',
+        indicePagina: '//a[@data-testid="plp-page-pagination-link" and text()="1"]'
 
     };
 
@@ -21,11 +24,11 @@ class searchPage{
     }
 //TC001---------------------------------------------------------------------------------------------------------------
     darClicEnBuscador() {
-        I.waitForVisible(this.fields.buscador, 5);
+        I.waitForVisible(this.fields.buscador, 3);
         I.forceClick(this.fields.buscador);
     }
     escribirProducto() {
-        I.fillField(this.fields.buscador, "Videojuegos");
+        I.fillField(this.fields.buscador, "Xbox series X");
     }
 
     presionarEnter() {
@@ -33,13 +36,18 @@ class searchPage{
     }
 
     validarResultados() {
-        I.waitForElement(this.fields.resultado,4);
+        I.waitForElement(this.fields.resultado,5);
 
+    }
+
+    verCard(){
+        I.scrollTo(this.fields.xboxTitulo);
+        I.click(this.fields.xboxTitulo)
     }
 
 //TC002---------------------------------------------------------------------------------------------------------------
     darClicEnBuscadorI() {
-        I.waitForVisible(this.fields.buscador, 5);
+        I.waitForVisible(this.fields.buscador, 7);
         I.forceClick(this.fields.buscador);
     }
 
@@ -54,9 +62,28 @@ class searchPage{
 
 
     validarResultadosInexistentes(){
-        I.waitForVisible(this.fields.textoSinResultados,5);
+        I.waitForVisible(this.fields.textoSinResultados,7);
 
     }
+
+//TC003---------------------------------------------------------------------------------------------------------------
+    darClicEnBuscador3() {
+        I.waitForVisible(this.fields.buscador, 3);
+        I.forceClick(this.fields.buscador);
+    }
+    escribirProducto3() {
+        I.fillField(this.fields.buscador, "Videojuegos");
+    }
+
+    presionarEnter3() {
+        I.pressKey('Enter');
+    }
+
+    validarResultados3() {
+        I.waitForElement(this.fields.resultadoGeneral,5);
+        I.scrollTo(this.fields.indicePagina);
+
+    }    
 
 }
 

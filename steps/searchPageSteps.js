@@ -9,7 +9,7 @@ When (/^El usuario da click en el buscador$/, () => {
     searchPage.darClicEnBuscador();
 });
 
-When (/^El usuario escribe "Videojuegos"$/, () => {
+When (/^El usuario escribe "Xbox series X"$/, () => {
     searchPage.escribirProducto();
 });
 
@@ -17,8 +17,9 @@ When (/^El usuario da 'Enter'$/, () => {
     searchPage.presionarEnter();
 });
 
-Then (/^Se muestran diferentes productos$/, () => {
+Then (/^Se muestran productos de Xbox$/, () => {
     searchPage.validarResultados();
+    searchPage.verCard();
 });
 
 
@@ -37,5 +38,22 @@ When (/^El usuario da 'Enter'$/, () => {
 
 Then (/^Aparece la pagina de "Lo sentimos, no encontramos nada"$/, () => {
     searchPage.validarResultadosInexistentes();
+});
+
+//TC003--------------------------------------------------------------------------------------------------------------------
+When (/^El usuario da click en el buscador$/, () => {
+    searchPage.darClicEnBuscador3();
+});
+
+When (/^El usuario escribe "Videojuegos"$/, () => {
+    searchPage.escribirProducto3();
+});
+
+When (/^El usuario da 'Enter'$/, () => {
+    searchPage.presionarEnter3();
+});
+
+Then (/^Se muestran productos de Videojuegos$/, () => {
+    searchPage.validarResultados3();
 });
 
