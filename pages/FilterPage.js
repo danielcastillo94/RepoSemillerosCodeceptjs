@@ -4,6 +4,7 @@ class FilterPage {
 
     urls = {
         urlTenisCasuales: 'https://www.liverpool.com.mx/tienda/tenis-casuales/catst4003357',
+        urlPlayerasMujer: 'https://www.liverpool.com.mx/tienda/playeras/catst25229539'
     };
 
     fields = {
@@ -21,7 +22,11 @@ class FilterPage {
         seleccionarCampoMarca: '//input[@type="checkbox" and @value="ADIDAS"]',
         seleccionarCampoMarca1: '//input[@type="checkbox" and @value="ACTVITTA"]',
         productosMarca: '//h4[text()="ADIDAS"]',
-        productosMarca1: '//h4[contains(text(),"ACTVITTA")]'
+        productosMarca1: '//h4[contains(text(),"ACTVITTA")]',
+        filtroMedida: '//input[@type="checkbox" and @value="Mediano"]',
+        validarFiltro: '//button[@data-testid="Mediano"]',
+        filtroColor: '//input[@type="checkbox" and @value="Rosa~~#e522e2"]',
+        productosColorRosa: '//button[contains(@style,"rgb(247, 110, 165)")]'
     };
 
 //GIVEN---------------------------------------------------------------------------------------------------------------
@@ -106,6 +111,50 @@ class FilterPage {
     validarCheckNoSeleccionado(){
          I.dontSeeCheckboxIsChecked(this.fields.seleccionarCampoMarca);
     }
+//@TC-013---------------------------------------------------------------
+    paginaPlayerasMujer(){
+         I.amOnPage(this.urls.urlPlayerasMujer);
+    }
+    filtroTalla(){
+        I.scrollTo(this.fields.filtroMedida);
+        I.click(this.fields.filtroMedida);
+        I.wait(5);
+    }
+    filtroValido(){
+        I.waitForElement(this.fields.validarFiltro);
+    }
+//@TC-014---------------------------------------------------------------
+    paginaPlayerasMujer(){
+         I.amOnPage(this.urls.urlPlayerasMujer);
+    }
+    filtroColor(){
+        I.scrollTo(this.fields.filtroColor);
+        I.click(this.fields.filtroColor);
+        I.wait(5);
+    }
+    filtroValido(){
+        I.waitForElement(this.fields.productosColorRosa);
+    }
+
+    //@TC-015---------------------------------------------------------------
+    paginaPlayerasMujer(){
+        I.amOnPage(this.urls.urlPlayerasMujer);
+    }
+
+    combinacionFiltro(){
+        I.scrollTo(this.fields.filtroMedida);
+        I.click(this.fields.filtroMedida);
+        I.wait(5);
+        I.scrollTo(this.fields.filtroColor);
+        I.click(this.fields.filtroColor);
+        I.wait(5);
+    }
+    filtroValidoCombinacion(){
+        I.waitForElement(this.fields.validarFiltro);
+        I.waitForElement(this.fields.productosColorRosa);
+    }
+
+
 }
 
 module.exports = new FilterPage();
