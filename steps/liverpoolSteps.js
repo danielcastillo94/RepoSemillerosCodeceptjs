@@ -6,6 +6,7 @@ Given(/^el usuario se encuentra en la página principal de Liverpool$/, () => {
 
 Then(/^los elementos principales del home son visibles$/, () => {
     liverpoolPage.verificarElementosHome();
+});
 
 //TC001--------------------------------------------------------------------------------------------------------------------
 
@@ -27,14 +28,46 @@ Then(/^la pagina carga y muestra los resultados relacionados a "(.*)"$/, (produc
 
 //TC002--------------------------------------------------------------------------------------------------------------------
 
-Then(/^la pagina carga y muestra el mensaje de "(.+)"$/, (mensaje) => {
-    liverpoolPage.verificarMensajeSinResultados(mensaje);
+Then(/^la pagina muestra el mensaje de producto no encontrado para "(.*)"$/, (producto) => {
+    liverpoolPage.verificarMensajeSinResultados(producto);
 });
 
 //TC003--------------------------------------------------------------------------------------------------------------------
 
-Then(/^la URL contiene "(.*)"$/, (texto) => {
-    liverpoolPage.verificarURL(texto);
+Then(/^la URL contiene "(.*)"$/, (producto) => {
+    liverpoolPage.verificarURL(producto);
 });
 
+//TC004--------------------------------------------------------------------------------------------------------------------
+
+When(/^el usuario da clic en categorias$/, () => {
+    liverpoolPage.clicCategorias();
 });
+
+Then(/^el submenu de categorias carga al lado izquierdo de la pagina$/, () => {
+    liverpoolPage.verificarSubmenuCategorias();
+});
+
+//TC005--------------------------------------------------------------------------------------------------------------------
+
+When('da clic en "Videojuegos"', () => {
+    liverpoolPage.clicVideojuegos();
+});
+
+Then('la pagina carga y muestra la categoria "Videojuegos"', () => {
+    liverpoolPage.verificarCategoriaVideojuegos();
+});
+
+//TC006--------------------------------------------------------------------------------------------------------------------
+
+Then('podemos ver las opciones de productos de "Videojuegos"', () => {
+    liverpoolPage.verificarOpcionesVideojuegos();
+})
+
+//TC007--------------------------------------------------------------------------------------------------------------------
+
+
+//TC008--------------------------------------------------------------------------------------------------------------------
+
+
+//TC009--------------------------------------------------------------------------------------------------------------------

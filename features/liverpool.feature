@@ -1,30 +1,30 @@
 @liverpool
 Feature: Automatizacion liverpool
-
+    Background: 
+        Given el usuario se encuentra en la página principal de Liverpool
+    
     #Feature: Busqueda de productos
-    #Background: 
-        #Given el usuario valida y esta en la pagina principal 
 
-    @TC001
-    Scenario: Buscar producto existente (ej: "Batman")
-        When el usuario da clic en la barra de busqueda 
-        And el usuario ingresa la palabra: Batman
+    @TC-001
+    Scenario: Buscar producto existente (ej: "batman")
+        When el usuario da clic en la barra de busqueda
+        And el usuario ingresa "batman"
         And da enter 
-        Then la pagina carga y muestra los resultados relacionados a Batman
+        Then la pagina carga y muestra los resultados relacionados a "batman"
 
     @TC-002: 
-    Scenario: Buscar producto inexistente
+    Scenario: Buscar producto inexistente (ej: "isbxisbx")
         When el usuario da clic en la barra de busqueda 
-        And ingresa un texto invalido por ejemplo: isbxisbx
+        And el usuario ingresa "isbxisbx"
         And da enter 
-        Then la pagina carga y muestra el mensaje de: lo sentimos, no encontramos nada para isbxisbx
+        Then la pagina muestra el mensaje de producto no encontrado para "isbxisbx"
 
     @TC-003: 
     Scenario: Validar resultados mostrados
-        When el usuario da clic en la barra de busqueda 
-        And escribe: Batman
+        When el usuario da clic en la barra de busqueda
+        And el usuario ingresa "Batman"
         And da enter
-        Then la pagina carga y muestra resultados que coinciden con la busqueda y se comprueba con el final de la url donde aparece el nombre de Batman
+        Then la URL contiene "Batman"
 
     #Feature: navegacion por categorias
     #Background: 
@@ -35,31 +35,31 @@ Feature: Automatizacion liverpool
         When el usuario da clic en categorias
         Then el submenu de categorias carga al lado izquierdo de la pagina
 
-    @TC-005: 
-    Scenario: Acceder a subcategoría
-        When el usuario da clic en categorias
-        And el submenu de categorias carga al lado izquierdo de la pagina
-        And da clic en videojuegos
-        Then la pagina carga y te envia a la pagina de la categoría
-    
-    @TC-006: 
-    Scenario: Validar productos de categoría
-        When el usuario da clic en categorias
-        And el submenu de categorias carga al lado izquierdo de la pagina
-        And da clic en videojuegos
-        And la pagina carga y te envia a la pagina de la categoría
-        Then podemos ver las opciones de productos por marcas
+    @TC-005
+    Scenario: Acceder a categoría (ej: "Videojuegos")
+    When el usuario da clic en categorias
+    And el submenu de categorias carga al lado izquierdo de la pagina
+    And da clic en "Videojuegos"
+    Then la pagina carga y muestra la categoria "Videojuegos"
+
+    @TC-006
+    Scenario: Validar productos de categoría (ej: "Videojuegos")
+    When el usuario da clic en categorias
+    And el submenu de categorias carga al lado izquierdo de la pagina
+    And da clic en "Videojuegos"
+    And la pagina carga y muestra la categoria "Videojuegos"
+    Then podemos ver las opciones de productos de "Videojuegos"
 
     #Feature: Filtro por precios
     #Background: 
         #Given el usuario ya busco un producto existente y se muestran los resultados 
 
     @TC-007: 
-    Scenario: Filtrar precio de menor a mayor
-        When el usuario se encuentra y visualiza los resultados del producto buscado
-        And da clic en el boton (Ordenar por:) del lado derecho 
-        And selecciona menor precio
-        Then los resultados se ordenan de precio menor a mayor 
+    Scenario: Filtrar precio de menor a mayor    
+        Given el usuario busca el producto "batman"
+        When da clic en el boton "Ordenar por:"
+        And selecciona "Menor precio"
+        Then los resultados se ordenan de precio menor a mayor
 
     @TC-008: 
     Scenario: Filtrar por rango específico (ej: $500-$2000)
