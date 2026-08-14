@@ -87,7 +87,8 @@ module.exports = {
     botonAgregarBolsa:
     '[data-testid="add-to-bag-button"]',
 
-
+    cantidadCarrito:
+    '[data-testid="blt26617d4f2e17657d-header-shopping-cart-header-cart-quantity"]',
 
 },
 
@@ -539,6 +540,11 @@ agregarProductoBolsa() {
 
 validarProductoAgregado() {
     I.wait(2);
+},
+
+validarCantidadCarrito(cantidad) {
+    I.waitForVisible(this.fields.cantidadCarrito, 10);
+    I.see(cantidad, this.fields.cantidadCarrito);
 },
 
 }

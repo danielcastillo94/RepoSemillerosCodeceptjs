@@ -197,3 +197,8 @@ When(/^agrega el producto a la bolsa$/, () => {
 Then(/^el producto se agrega correctamente a la bolsa$/, () => {
     liverpoolPage.validarProductoAgregado();
 });
+
+
+Then(/^el carrito muestra "([^"]*)" producto$/, (cantidad) => {
+    liverpoolPage.validarCantidadCarrito(cantidad);
+});
