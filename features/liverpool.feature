@@ -235,3 +235,73 @@ Scenario: Confirmar producto agregado a la bolsa
   And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
   Then se confirma que el producto fue agregado a la bolsa
+
+@LP032
+Scenario: Agregar tres productos diferentes a la bolsa
+  Given que el usuario se encuentra en la página principal de Liverpool
+
+  When busca el producto "Tanga para mujer"
+  And selecciona el producto "Tanga para mujer"
+  And selecciona la talla "XCH" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Panty para mujer"
+  And selecciona el producto "Panty para mujer"
+  And selecciona el color "Multicolor" del producto
+  And selecciona la talla "G" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Brassiere corrector con copa para mujer"
+  And selecciona el producto "Brassiere corrector con copa para mujer"
+  And selecciona el color "Negro" del producto
+  And selecciona la talla "38B" del producto
+  And agrega el producto a la bolsa
+
+  Then la bolsa contiene productos agregados
+
+  @LP033
+Scenario: Validar cantidad total de productos en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+
+  When busca el producto "Tanga para mujer"
+  And selecciona el producto "Tanga para mujer"
+  And selecciona la talla "XCH" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Panty para mujer"
+  And selecciona el producto "Panty para mujer"
+  And selecciona el color "Multicolor" del producto
+  And selecciona la talla "G" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Brassiere corrector con copa para mujer"
+  And selecciona el producto "Brassiere corrector con copa para mujer"
+  And selecciona el color "Negro" del producto
+  And selecciona la talla "38B" del producto
+  And agrega el producto a la bolsa
+
+  Then el carrito muestra "3" productos
+
+  @LP034
+Scenario: Validar cantidad total de productos en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+
+  When busca el producto "Tanga para mujer"
+  And selecciona el producto "Tanga para mujer"
+  And selecciona la talla "XCH" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Panty para mujer"
+  And selecciona el producto "Panty para mujer"
+  And selecciona el color "Negro" del producto
+  And selecciona la talla "G" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Brassiere corrector con copa para mujer"
+  And selecciona el producto "Brassiere corrector con copa para mujer"
+  And selecciona el color "Negro" del producto
+  And selecciona la talla "38B" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+
+  Then se muestra el subtotal de "3" productos

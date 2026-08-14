@@ -206,3 +206,23 @@ Then(/^el carrito muestra "([^"]*)" producto$/, (cantidad) => {
 Then(/^se confirma que el producto fue agregado a la bolsa$/, () => {
     liverpoolPage.validarConfirmacionAgregado();
 });
+
+When(/^selecciona el color "([^"]*)" del producto$/, (color) => {
+    liverpoolPage.seleccionarColorProducto(color);
+});
+
+Then(/^la bolsa contiene productos agregados$/, () => {
+    liverpoolPage.validarCarritoConProductos();
+});
+
+Then(/^el carrito muestra "([^"]*)" productos$/, (cantidad) => {
+    liverpoolPage.validarCantidadCarrito(cantidad);
+});
+
+When(/^abre la bolsa de compras$/, () => {
+    liverpoolPage.abrirBolsa();
+});
+
+Then(/^se muestra el subtotal de "([^"]*)" productos$/, (cantidad) => {
+    liverpoolPage.validarSubtotal(cantidad);
+});

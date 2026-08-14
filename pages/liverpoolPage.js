@@ -90,6 +90,9 @@ module.exports = {
     cantidadCarrito:
     '[data-testid="blt26617d4f2e17657d-header-shopping-cart-header-cart-quantity"]',
 
+    botonBolsa:
+    '[data-testid="blt26617d4f2e17657d-header-shopping-cart-shopping-link"]',
+
 },
 
     abrirLiverpool() {
@@ -550,6 +553,28 @@ validarCantidadCarrito(cantidad) {
 validarConfirmacionAgregado() {
     I.waitForVisible(this.fields.cantidadCarrito, 10);
     I.see('1', this.fields.cantidadCarrito);
+},
+
+seleccionarColorProducto(color) {
+    const opcionColor = `//p[normalize-space(.)="${color}"]`;
+
+    I.waitForVisible(opcionColor, 10);
+    I.click(opcionColor);
+    I.wait(1);
+},
+
+validarCarritoConProductos() {
+    I.waitForVisible(this.fields.cantidadCarrito, 10);
+},
+
+abrirBolsa() {
+    I.waitForVisible(this.fields.botonBolsa, 10);
+    I.click(this.fields.botonBolsa);
+    I.wait(3);
+},
+
+validarSubtotal(cantidad) {
+    I.waitForText(`Subtotal (${cantidad} productos)`, 10);
 },
 
 }
