@@ -19,6 +19,7 @@ exports.config = {
     MenuPage: './pages/MenuPage.js',
     CategoryPage: './pages/CategoryPage.js',
     FilterPage: './pages/FilterPage.js',
+    ProductDetailPage: './pages/ProductDetailPage.js',
   },
 
   gherkin: {
@@ -29,6 +30,7 @@ exports.config = {
       "./steps/filtroporprecioSteps.js",
       "./steps/filtropormarcaSteps.js",
       "./steps/filtroportallaSteps.js",
+      "./steps/detallesproductobasicoSteps.js",
     ],
   },
 

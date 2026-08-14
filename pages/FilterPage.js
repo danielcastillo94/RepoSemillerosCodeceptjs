@@ -118,7 +118,7 @@ class FilterPage {
 
     //TC013---------------
     filtrotalla(){
-        I.click(this.locator.spanXchico);
+        I.click(this.locator.spantallagrande);
         I.waitForVisible(this.locator.btnborrartalla, 10);
     }
 
