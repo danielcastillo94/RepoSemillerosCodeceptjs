@@ -1,5 +1,5 @@
 @detallesbasicos
-Feature: Detalle de Producto - Stock y Disponibilidad
+Feature: Detalle de Producto - Básico
 Background: categorias playeres
     Given El usuario se encuentar en la categora de playeres
     When  El usuario aplica filtros
