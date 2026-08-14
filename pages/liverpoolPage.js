@@ -547,4 +547,9 @@ validarCantidadCarrito(cantidad) {
     I.see(cantidad, this.fields.cantidadCarrito);
 },
 
+validarConfirmacionAgregado() {
+    I.waitForVisible(this.fields.cantidadCarrito, 10);
+    I.see('1', this.fields.cantidadCarrito);
+},
+
 }

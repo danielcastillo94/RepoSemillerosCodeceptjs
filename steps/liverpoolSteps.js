@@ -202,3 +202,7 @@ Then(/^el producto se agrega correctamente a la bolsa$/, () => {
 Then(/^el carrito muestra "([^"]*)" producto$/, (cantidad) => {
     liverpoolPage.validarCantidadCarrito(cantidad);
 });
+
+Then(/^se confirma que el producto fue agregado a la bolsa$/, () => {
+    liverpoolPage.validarConfirmacionAgregado();
+});

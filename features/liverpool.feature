@@ -226,3 +226,12 @@ Scenario: Validar cantidad en el carrito
   And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
   Then el carrito muestra "1" producto
+
+  @LP031
+Scenario: Confirmar producto agregado a la bolsa
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Tanga para mujer"
+  And selecciona el producto "Tanga para mujer"
+  And selecciona la talla "XCH" del producto
+  And agrega el producto a la bolsa
+  Then se confirma que el producto fue agregado a la bolsa
