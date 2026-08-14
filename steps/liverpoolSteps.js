@@ -206,3 +206,71 @@ Then(/^el carrito muestra "([^"]*)" producto$/, (cantidad) => {
 Then(/^se confirma que el producto fue agregado a la bolsa$/, () => {
     liverpoolPage.validarConfirmacionAgregado();
 });
+
+When(/^selecciona el color "([^"]*)" del producto$/, (color) => {
+    liverpoolPage.seleccionarColorProducto(color);
+});
+
+Then(/^la bolsa contiene productos agregados$/, () => {
+    liverpoolPage.validarCarritoConProductos();
+});
+
+Then(/^el carrito muestra "([^"]*)" productos$/, (cantidad) => {
+    liverpoolPage.validarCantidadCarrito(cantidad);
+});
+
+When(/^abre la bolsa de compras$/, () => {
+    liverpoolPage.abrirBolsa();
+});
+
+Then(/^se muestra el subtotal de "([^"]*)" productos$/, (cantidad) => {
+    liverpoolPage.validarSubtotal(cantidad);
+});
+
+When(/^aumenta la cantidad del producto en el carrito$/, () => {
+    liverpoolPage.aumentarCantidadCarrito();
+});
+
+When(/^disminuye la cantidad del producto en el carrito$/, () => {
+    liverpoolPage.disminuirCantidadCarrito();
+});
+
+Then(/^la cantidad del producto en el carrito es "([^"]*)"$/, (cantidad) => {
+    liverpoolPage.validarCantidadCarritoProducto(cantidad);
+});
+
+When(/^disminuye la cantidad del producto en el carrito$/, () => {
+    liverpoolPage.disminuirCantidadCarrito();
+});
+
+When(/^remueve el producto del carrito$/, () => {
+    liverpoolPage.removerProductoCarrito();
+});
+
+When(/^confirma la eliminación del producto$/, () => {
+    liverpoolPage.confirmarEliminacionProducto();
+});
+
+Then(/^el carrito queda vacío$/, () => {
+    liverpoolPage.validarCarritoVacio();
+});
+
+Then(/^se muestra el subtotal del carrito$/, () => {
+    liverpoolPage.validarSubtotalCarrito();
+});
+
+Then(/^se muestra el descuento aplicado$/, () => {
+    liverpoolPage.validarDescuento();
+});
+
+Then(/^se muestra el costo de envío$/, () => {
+    liverpoolPage.validarCostoEnvio();
+});
+
+Then(/^se indica que el total incluye IVA$/, () => {
+    liverpoolPage.validarIVAIncluido();
+});
+
+Then(/^se muestra el total final de la compra$/, () => {
+    liverpoolPage.validarTotalFinal();
+});

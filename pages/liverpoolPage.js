@@ -90,6 +90,18 @@ module.exports = {
     cantidadCarrito:
     '[data-testid="blt26617d4f2e17657d-header-shopping-cart-header-cart-quantity"]',
 
+    botonBolsa:
+    '[data-testid="blt26617d4f2e17657d-header-shopping-cart-shopping-link"]',
+
+    botonDisminuirCantidadCarrito: 'button[aria-label="decrease"]',
+    botonAumentarCantidadCarrito: 'button[aria-label="increase"]',
+
+    descuentoCarrito:
+    '[data-testid="checkout-payment-summary-discount"]',
+
+    totalCarrito:
+    '[data-testid="checkout-payment-summary-total"]',
+
 },
 
     abrirLiverpool() {
@@ -550,6 +562,92 @@ validarCantidadCarrito(cantidad) {
 validarConfirmacionAgregado() {
     I.waitForVisible(this.fields.cantidadCarrito, 10);
     I.see('1', this.fields.cantidadCarrito);
+},
+
+seleccionarColorProducto(color) {
+    const opcionColor = `//p[normalize-space(.)="${color}"]`;
+
+    I.waitForVisible(opcionColor, 10);
+    I.click(opcionColor);
+    I.wait(1);
+},
+
+validarCarritoConProductos() {
+    I.waitForVisible(this.fields.cantidadCarrito, 10);
+},
+
+abrirBolsa() {
+    I.waitForVisible(this.fields.botonBolsa, 10);
+    I.click(this.fields.botonBolsa);
+    I.wait(3);
+},
+
+validarSubtotal(cantidad) {
+    I.waitForText(`Subtotal (${cantidad} productos)`, 10);
+},
+
+aumentarCantidadCarrito() {
+    I.waitForVisible(this.fields.botonAumentarCantidadCarrito, 10);
+    I.click(this.fields.botonAumentarCantidadCarrito);
+    I.wait(1);
+},
+
+disminuirCantidadCarrito() {
+    I.waitForVisible(this.fields.botonDisminuirCantidadCarrito, 10);
+    I.click(this.fields.botonDisminuirCantidadCarrito);
+    I.wait(1);
+},
+
+validarCantidadCarritoProducto(cantidad) {
+    I.seeInField('input[name="quantity"]', cantidad);
+},
+
+disminuirCantidadCarrito() {
+    I.waitForVisible('button[aria-label="decrease"]', 10);
+    I.click('button[aria-label="decrease"]');
+    I.wait(1);
+},
+
+removerProductoCarrito() {
+    I.waitForVisible('button[aria-label="decrease"]', 10);
+    I.click('button[aria-label="decrease"]');
+    I.wait(2);
+},
+
+confirmarEliminacionProducto() {
+    I.waitForVisible(
+        '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]',
+        10
+    );
+    I.click(
+        '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]'
+    );
+    I.wait(2);
+},
+
+validarCarritoVacio() {
+    I.dontSeeElement('input[name="quantity"]');
+},
+
+validarSubtotalCarrito() {
+    I.waitForText('Subtotal', 10);
+},
+
+validarDescuento() {
+    I.waitForVisible(this.fields.descuentoCarrito, 10);
+},
+
+validarCostoEnvio() {
+    I.waitForText('Costo de envío:', 10);
+    I.see('Gratis');
+},
+
+validarIVAIncluido() {
+    I.waitForText('Total (IVA incluido):', 10);
+},
+
+validarTotalFinal() {
+    I.waitForVisible(this.fields.totalCarrito, 10);
 },
 
 }

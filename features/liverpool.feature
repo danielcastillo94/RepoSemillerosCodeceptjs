@@ -235,3 +235,163 @@ Scenario: Confirmar producto agregado a la bolsa
   And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
   Then se confirma que el producto fue agregado a la bolsa
+
+@LP032
+Scenario: Agregar tres productos diferentes a la bolsa
+  Given que el usuario se encuentra en la página principal de Liverpool
+
+  When busca el producto "Tanga para mujer"
+  And selecciona el producto "Tanga para mujer"
+  And selecciona la talla "XCH" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Panty para mujer"
+  And selecciona el producto "Panty para mujer"
+  And selecciona el color "Multicolor" del producto
+  And selecciona la talla "G" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Brassiere corrector con copa para mujer"
+  And selecciona el producto "Brassiere corrector con copa para mujer"
+  And selecciona el color "Negro" del producto
+  And selecciona la talla "38B" del producto
+  And agrega el producto a la bolsa
+
+  Then la bolsa contiene productos agregados
+
+  @LP033
+Scenario: Validar cantidad total de productos en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+
+  When busca el producto "Tanga para mujer"
+  And selecciona el producto "Tanga para mujer"
+  And selecciona la talla "XCH" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Panty para mujer"
+  And selecciona el producto "Panty para mujer"
+  And selecciona el color "Multicolor" del producto
+  And selecciona la talla "G" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Brassiere corrector con copa para mujer"
+  And selecciona el producto "Brassiere corrector con copa para mujer"
+  And selecciona el color "Negro" del producto
+  And selecciona la talla "38B" del producto
+  And agrega el producto a la bolsa
+
+  Then el carrito muestra "3" productos
+
+  @LP034
+Scenario: Validar cantidad total de productos en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+
+  When busca el producto "Tanga para mujer"
+  And selecciona el producto "Tanga para mujer"
+  And selecciona la talla "XCH" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Panty para mujer"
+  And selecciona el producto "Panty para mujer"
+  And selecciona el color "Negro" del producto
+  And selecciona la talla "G" del producto
+  And agrega el producto a la bolsa
+
+  And busca el producto "Brassiere corrector con copa para mujer"
+  And selecciona el producto "Brassiere corrector con copa para mujer"
+  And selecciona el color "Negro" del producto
+  And selecciona la talla "38B" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+
+  Then se muestra el subtotal de "3" productos
+
+  # LP035-LP037 requieren sesión autenticada.
+  # LP038-LP040 no se encuentran estas funcionalidades
+# Liverpool no permite gestionar wishlist/favoritos como invitado.
+# Ya no se encuentra la funcionalidad de comparar productos
+# Casos pendientes hasta contar con credenciales de prueba.
+
+
+@LP041
+Scenario: Aumentar cantidad de un producto en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  And aumenta la cantidad del producto en el carrito
+  Then la cantidad del producto en el carrito es "2"
+
+
+@LP042
+Scenario: Disminuir cantidad de un producto en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  And aumenta la cantidad del producto en el carrito
+  And disminuye la cantidad del producto en el carrito
+  Then la cantidad del producto en el carrito es "1"
+
+  @LP042
+Scenario: Disminuir de dos a un producto en el carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  And aumenta la cantidad del producto en el carrito
+  And disminuye la cantidad del producto en el carrito
+  Then la cantidad del producto en el carrito es "1"
+
+
+@LP043
+Scenario: Eliminar el último producto del carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  And remueve el producto del carrito
+  And confirma la eliminación del producto
+  Then el carrito queda vacío
+
+  @LP044
+Scenario: Validar subtotal del carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  Then se muestra el subtotal del carrito
+
+
+@LP045
+Scenario: Validar resumen de costos del carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  Then se muestra el descuento aplicado
+  And se muestra el costo de envío
+  And se indica que el total incluye IVA
+
+
+@LP046
+Scenario: Validar total final del carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  Then se muestra el total final de la compra
