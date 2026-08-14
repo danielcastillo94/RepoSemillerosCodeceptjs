@@ -96,6 +96,12 @@ module.exports = {
     botonDisminuirCantidadCarrito: 'button[aria-label="decrease"]',
     botonAumentarCantidadCarrito: 'button[aria-label="increase"]',
 
+    descuentoCarrito:
+    '[data-testid="checkout-payment-summary-discount"]',
+
+    totalCarrito:
+    '[data-testid="checkout-payment-summary-total"]',
+
 },
 
     abrirLiverpool() {
@@ -623,5 +629,25 @@ validarCarritoVacio() {
     I.dontSeeElement('input[name="quantity"]');
 },
 
+validarSubtotalCarrito() {
+    I.waitForText('Subtotal', 10);
+},
+
+validarDescuento() {
+    I.waitForVisible(this.fields.descuentoCarrito, 10);
+},
+
+validarCostoEnvio() {
+    I.waitForText('Costo de envío:', 10);
+    I.see('Gratis');
+},
+
+validarIVAIncluido() {
+    I.waitForText('Total (IVA incluido):', 10);
+},
+
+validarTotalFinal() {
+    I.waitForVisible(this.fields.totalCarrito, 10);
+},
 
 }

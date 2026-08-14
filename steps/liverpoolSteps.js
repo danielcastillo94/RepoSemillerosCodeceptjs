@@ -254,3 +254,23 @@ When(/^confirma la eliminación del producto$/, () => {
 Then(/^el carrito queda vacío$/, () => {
     liverpoolPage.validarCarritoVacio();
 });
+
+Then(/^se muestra el subtotal del carrito$/, () => {
+    liverpoolPage.validarSubtotalCarrito();
+});
+
+Then(/^se muestra el descuento aplicado$/, () => {
+    liverpoolPage.validarDescuento();
+});
+
+Then(/^se muestra el costo de envío$/, () => {
+    liverpoolPage.validarCostoEnvio();
+});
+
+Then(/^se indica que el total incluye IVA$/, () => {
+    liverpoolPage.validarIVAIncluido();
+});
+
+Then(/^se muestra el total final de la compra$/, () => {
+    liverpoolPage.validarTotalFinal();
+});

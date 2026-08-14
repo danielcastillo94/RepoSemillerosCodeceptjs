@@ -361,3 +361,37 @@ Scenario: Eliminar el último producto del carrito
   And remueve el producto del carrito
   And confirma la eliminación del producto
   Then el carrito queda vacío
+
+  @LP044
+Scenario: Validar subtotal del carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  Then se muestra el subtotal del carrito
+
+
+@LP045
+Scenario: Validar resumen de costos del carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  Then se muestra el descuento aplicado
+  And se muestra el costo de envío
+  And se indica que el total incluye IVA
+
+
+@LP046
+Scenario: Validar total final del carrito
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  And abre la bolsa de compras
+  Then se muestra el total final de la compra
