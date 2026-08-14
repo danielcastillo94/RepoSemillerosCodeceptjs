@@ -12,12 +12,13 @@ exports.config = {
       browser: 'chromium',
       url: process.env.BASE_URL,
       show: true,
+      restart: 'context',
       waitForNavigation: 'domcontentloaded',
       waitForTimeout: 15000,
-      video: true,
-      keepVideoForPassedTests: true,
+      video: false,
+      keepVideoForPassedTests: false,
       trace: true,
-      keepTraceForPassedTests: true
+      keepTraceForPassedTests: false
     }
   },
   include: {
@@ -30,7 +31,7 @@ exports.config = {
   hooks: [],
   gherkin: {
     features: './features/*.feature',
-    steps: ['./step_definitions/steps.js']
+    steps: ['./step_definitions/busqueda_steps.js']
   },
   plugins: {
     screenshot: {
@@ -61,6 +62,6 @@ exports.config = {
     }
   ],
   tests: './tests/*_test.js',
-  noGlobals: true,
-  name: 'nuevo-framework'
+  noGlobals: false,
+  name: 'HectorPerez_Liverpool'
 }
