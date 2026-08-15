@@ -12,6 +12,7 @@
     "features:marcas": "codeceptjs run --features --grep \"@filtromarcas\" --steps --verbose",
     "features:tallas": "codeceptjs run --features --grep \"@filtrotallas\" --steps --verbose",
     "features:detallesbasicos": "codeceptjs run --features --grep \"@detallesbasicos\" --steps --verbose",
+    "features:stockdisponible": "codeceptjs run --features --grep \"@stockdisponible\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
   },

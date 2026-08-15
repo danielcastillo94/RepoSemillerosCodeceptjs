@@ -10,7 +10,7 @@ When(/^El usuario da clic en un producto de su agrado$/, () => {
     ProductDetailPage.productoelejido();
 });
 
-//TC020
+//TC020-----------------
 Then(/^El usuario puede ver los detalles del producto$/, () => {
     ProductDetailPage.detallesproducto();
 });
