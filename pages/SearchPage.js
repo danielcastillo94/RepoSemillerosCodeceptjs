@@ -1,3 +1,4 @@
+const contexto = require('../utils/contexto')
 const { I } = inject();
 const BasePage = require('./BasePage');
 
@@ -8,6 +9,7 @@ const SELECTORES = {
 
 class SearchPage extends BasePage {
   async abrirHome() {
+    contexto.limpiar();
     I.amOnPage('/');
     this.esperarElemento(SELECTORES.campoBusqueda);
     await this.descartarModales();

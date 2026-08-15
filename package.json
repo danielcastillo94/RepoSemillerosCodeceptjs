@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "rm -rf output allure-report",
     "pretest": "npm run clean",
-    "test": "codeceptjs run --steps --grep \"@pendiente\" --invert",
+    "test": "FORCE_COLOR=0 codeceptjs run --steps --grep \"@pendiente\" --invert",
+    "test:carrito": "FORCE_COLOR=0 codeceptjs run --steps --grep \"@carrito\"",
     "test:todo": "codeceptjs run --steps",
     "test:pendiente": "codeceptjs run --steps --grep \"@pendiente\"",
     "test:dry": "codeceptjs dry-run",
