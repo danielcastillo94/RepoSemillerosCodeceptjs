@@ -286,3 +286,7 @@ When(/^selecciona la opción de entrega "([^"]*)"$/, (opcion) => {
 Then(/^la opción de entrega "([^"]*)" queda seleccionada$/, (opcion) => {
     liverpoolPage.validarOpcionEntregaSeleccionada(opcion);
 });
+
+Then(/^se muestran resultados de búsqueda$/, () => {
+    liverpoolPage.validarResultadosBusqueda();
+});

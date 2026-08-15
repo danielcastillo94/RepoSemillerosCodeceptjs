@@ -676,4 +676,8 @@ validarOpcionEntregaSeleccionada(opcion) {
     I.seeElement(`${selector} [data-testid="selection-checkmark"]`);
 },
 
+validarResultadosBusqueda() {
+    I.waitForElement('#plp-page-card-product-list', 10);
+},
+
 }

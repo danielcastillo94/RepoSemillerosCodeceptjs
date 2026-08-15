@@ -460,3 +460,46 @@ Scenario: Seleccionar Click & Collect
 # y "Click & Collect". No se muestra una opción denominada
 # "Envío express", por lo que LP058 se adapta a la segunda
 # modalidad de entrega realmente disponible.
+
+# ==========================================================
+# LP059 - LP061 | Método de pago
+# ==========================================================
+
+# LP059 - Seleccionar pago con tarjeta
+# LP060 - Validar campos de tarjeta
+# LP061 - Ver resumen antes de pagar
+#
+# Casos no automatizados en el alcance actual.
+# El flujo requiere una sesión autenticada de Liverpool.
+# Se intentó reutilizar la sesión mediante Playwright storageState,
+# pero la autenticación no se restauró durante la ejecución con CodeceptJS.
+
+# ==========================================================
+# LP062 - LP064 | Flujo completo E2E
+# ==========================================================
+
+@LP062
+Scenario: Buscar producto en flujo E2E
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  Then se muestran resultados de búsqueda
+
+
+@LP063
+Scenario: Agregar producto al carrito en flujo E2E
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And agrega el producto a la bolsa
+  Then el carrito muestra "1" producto
+
+
+# @LP064
+# Scenario: Completar checkout hasta confirmación
+#
+# Caso no automatizado en el alcance actual.
+# El checkout completo requiere una sesión autenticada de Liverpool.
+# Se intentó reutilizar la sesión mediante Playwright storageState,
+# pero la autenticación no se restauró durante la ejecución con CodeceptJS.
+# Por este motivo no se automatiza la confirmación final de compra.
