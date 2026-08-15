@@ -102,6 +102,11 @@ module.exports = {
     totalCarrito:
     '[data-testid="checkout-payment-summary-total"]',
 
+    opcionesEntrega:
+    '[data-testid^="product-configurator-delivery-selection-card-"]',
+
+    checkEntrega:
+    '[data-testid="selection-checkmark"]',
 },
 
     abrirLiverpool() {
@@ -648,6 +653,31 @@ validarIVAIncluido() {
 
 validarTotalFinal() {
     I.waitForVisible(this.fields.totalCarrito, 10);
+},
+
+validarOpcionesEntrega() {
+    I.waitForElement(this.fields.opcionesEntrega, 10);
+},
+
+seleccionarOpcionEntrega(opcion) {
+    const selector =
+        `[data-testid="product-configurator-delivery-selection-card-${opcion}"]`;
+
+    I.waitForVisible(selector, 10);
+    I.click(selector);
+    I.wait(1);
+},
+
+validarOpcionEntregaSeleccionada(opcion) {
+    const selector =
+        `[data-testid="product-configurator-delivery-selection-card-${opcion}"]`;
+
+    I.waitForVisible(selector, 10);
+    I.seeElement(`${selector} [data-testid="selection-checkmark"]`);
+},
+
+validarResultadosBusqueda() {
+    I.waitForElement('#plp-page-card-product-list', 10);
 },
 
 }
