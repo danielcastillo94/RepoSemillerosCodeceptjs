@@ -274,3 +274,15 @@ Then(/^se indica que el total incluye IVA$/, () => {
 Then(/^se muestra el total final de la compra$/, () => {
     liverpoolPage.validarTotalFinal();
 });
+
+Then(/^se muestran las opciones de entrega disponibles$/, () => {
+    liverpoolPage.validarOpcionesEntrega();
+});
+
+When(/^selecciona la opción de entrega "([^"]*)"$/, (opcion) => {
+    liverpoolPage.seleccionarOpcionEntrega(opcion);
+});
+
+Then(/^la opción de entrega "([^"]*)" queda seleccionada$/, (opcion) => {
+    liverpoolPage.validarOpcionEntregaSeleccionada(opcion);
+});

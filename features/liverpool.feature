@@ -395,3 +395,68 @@ Scenario: Validar total final del carrito
   And agrega el producto a la bolsa
   And abre la bolsa de compras
   Then se muestra el total final de la compra
+
+  # ==========================================================
+# CASOS DEPENDIENTES DE AUTENTICACIÓN
+# ==========================================================
+
+# LP035 - Agregar producto a wishlist
+# LP036 - Ver wishlist actualizada
+# LP037 - Remover de wishlist
+# Requieren sesión autenticada en Liverpool.
+
+# LP047 - Aplicar código promocional válido
+# LP048 - Validar descuento aplicado
+# LP049 - Remover código promocional
+# La funcionalidad no se encuentra disponible para usuario invitado.
+
+# LP050 - Llenar formulario de datos personales
+# LP051 - Validar email válido
+# LP052 - Validar teléfono válido
+# Liverpool redirige al flujo de autenticación/creación de cuenta.
+
+# LP053 - Seleccionar dirección guardada
+# LP054 - Agregar dirección nueva
+# LP055 - Validar campos de dirección
+# Requieren una cuenta autenticada con información de envío.
+
+# Nota técnica:
+# Se intentó reutilizar una sesión autenticada mediante Playwright storageState.
+# La sesión se guardó correctamente, pero Liverpool no restauró la autenticación
+# durante la ejecución con CodeceptJS.
+# Por este motivo, los escenarios dependientes de autenticación se documentan
+# como no automatizados en el alcance actual.
+
+@LP056
+Scenario: Ver opciones de entrega disponibles
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  Then se muestran las opciones de entrega disponibles
+
+
+@LP057
+Scenario: Seleccionar entrega a domicilio
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And selecciona la opción de entrega "Recibe a domicilio"
+  Then la opción de entrega "Recibe a domicilio" queda seleccionada
+
+
+@LP058
+Scenario: Seleccionar Click & Collect
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "Nintendo Switch"
+  And selecciona el producto "Nintendo Switch"
+  And selecciona el color "Negro" del producto
+  And selecciona la opción de entrega "Click & Collect"
+  Then la opción de entrega "Click & Collect" queda seleccionada
+
+# Nota:
+# La UI actual de Liverpool muestra "Recibe a domicilio"
+# y "Click & Collect". No se muestra una opción denominada
+# "Envío express", por lo que LP058 se adapta a la segunda
+# modalidad de entrega realmente disponible.
