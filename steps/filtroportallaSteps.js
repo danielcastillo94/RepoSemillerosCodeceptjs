@@ -15,10 +15,10 @@ When(/^El usuario da click en la opcion "Playeras"$/, () => {
 });
 
 //TC013---------------
-When(/^El usuario da clic en la opcion "X-Chico"$/, () => {
+When(/^El usuario da clic en la opcion "Grande"$/, () => {
     FilterPage.filtrotalla();
 });
-Then(/^El usuario ve solo playeras talla "X-Chico"$/, () => {
+Then(/^El usuario ve solo playeras talla "Grande"$/, () => {
     FilterPage.revisarresultados();
 });
 

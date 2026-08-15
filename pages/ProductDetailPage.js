@@ -3,12 +3,12 @@ const {I} = inject();
 class ProductDetailPage{
     url = {
         urlcatplayera: 'https://www.liverpool.com.mx/tienda/playeras/catst16655654',
-        urlplayeraelejida: 'https://www.liverpool.com.mx/tienda/pdp/playera-aeropostale-cuello-redondo-para-hombre/1191575057?skuid=1191575101',
+        urlplayeraelejida: 'https://www.liverpool.com.mx/tienda/pdp/playera-levi-s-cuello-redondo-para-hombre/1041644110',
 
     };
 
     locator = {
-        enlaceproducto: '//a[@data-testid="1191575057-card-card-link"]',
+        enlaceproducto: '//a[@data-testid="1041644110-card-card-link"]',
         textdetalleprod: '//h2[contains(text(),"Detalles del Producto")]',
         btncaracteristicas: '//button[@data-testid="ml-list-item-specs"]',
         textgeneral: '//h4[contains(text(),"General")]',
@@ -19,15 +19,15 @@ class ProductDetailPage{
         btnborrartalla: '//button[@data-testid="Grande"]',
         spancolorazuloscuro: '//span[@data-testid="plp-page-plp-filter-colors-filter-:R1csl48pb9utsq:-color-checkbox-group-3-checkbox"]',
         btnborrarcolor: '//button[@data-testid="Azul Oscuro"]',
-        imgproducto: '//img[@data-testid="pdp-1191575057-gallery__gallery-0__image__image"]',
+        imgproducto: '//img[@data-testid="pdp-1041644110-gallery__gallery-0__image__image"]',
         nombreproducto: '//h1[@class="text-body-2xl text-heading-xs text-base"]',
         precioproducto: '//span[@class="text-heading-2xl font-bold text-price-primary font-bold"]',
         color: '//p[contains(text(),"Color")]',
         tamanio: '//p[contains(text(),"Tamaño")]',
         btnenvio: '//button[@data-testid="product-configurator-delivery-selection-card-Recibe a domicilio"]',
         btnrecoger: '//button[@data-testid="product-configurator-delivery-selection-card-Click & Collect"]',
-        btncerrarimg: '//span[@data-testid="pdp-1191575057-gallery-details__close-btn-icon"]',
-        btnzooimg: '//span[@data-testid="pdp-1191575057-gallery-details__close-zoom-in-icon"]',
+        btncerrarimg: '//span[@data-testid="pdp-1041644110-gallery-details__close-btn-icon"]',
+        btnzooimg: '//button[@data-testid="pdp-1041644110-gallery-details__zoom-in-btn"]',
         numeroimge: '//span[@class="font-semibold text-body-xl"]',
         btnimgantes: '//button[@data-testid="pdp-1191575057-gallery-details__previous-item-btn"]',
         btnimgsiguiente: '//button[@data-testid="pdp-1191575057-gallery-details__next-item-btn"]',
@@ -72,7 +72,7 @@ class ProductDetailPage{
     galeriaimagenes(){
         I.click(this.locator.imgproducto);
         I.waitForVisible(this.locator.btncerrarimg,
-                        this.locator.btnimgsiguiente, 
+                        this.locator.btnzooimg, 
                         this.locator.numeroimge, 5
         );
         

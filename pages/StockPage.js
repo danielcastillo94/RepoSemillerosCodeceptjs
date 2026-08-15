@@ -2,7 +2,7 @@ const {I} = inject();
 
 class StockPage {
     locator = {
-        inputtalla: '//*[@id=":R2927h35d7rlsq:"]/div/label[5]',
+        inputtalla: '//label[@for="size-picker-G-undefined1041644110-1041644156"]',
         btndisponibilidadentienda: '//button[@class="flex w-fit underline text-label-md text-base font-bold gap-3 py-3"]',
         tituloseleccion: '//h3[contains(text(),"Selecciona un estado")]',
         btncerrarlistaesatado: '//button[@class="h-6 text-carbon-500"]',
