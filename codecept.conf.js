@@ -22,6 +22,7 @@ exports.config = {
     ProductDetailPage: './pages/ProductDetailPage.js',
     StockPage: './pages/StockPage.js',
     ReviewsPage: './pages/ReviewsPage.js',
+    CartPage: './pages/CartPage',
   },
 
   gherkin: {
@@ -35,6 +36,7 @@ exports.config = {
       "./steps/detallesproductobasicoSteps.js",
       "./steps/detallesproductostockdisponibleSteps.js",
       "./steps/detallesproductoreviewSteps.js",
+      "./steps/agregarproductocarritoSteps.js",
     ],
   },
 
