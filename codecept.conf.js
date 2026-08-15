@@ -30,8 +30,12 @@ exports.config = {
   teardown: null,
   hooks: [],
   gherkin: {
-    features: './features/*.feature',
-    steps: ['./step_definitions/busqueda_steps.js']
+    features: './features/*.feature', //* para que agarre todos los archivos 
+    steps: [
+      './step_definitions/busqueda_steps.js',
+      './step_definitions/filtros_steps.js',
+      './step_definitions/detalle_steps.js'
+    ]
   },
   plugins: {
     screenshot: {
@@ -46,13 +50,10 @@ exports.config = {
     retryFailedStep: {
       enabled: true
     }
-/*     screenshotOnFail: {},
-    pauseOn: {},
-    browser: {},
-    aiTrace: {} */
   },
   stepTimeout: 0,
-  stepTimeoutOverride: [{
+  stepTimeoutOverride: [
+    {
       pattern: 'wait.*',
       timeout: 0
     },

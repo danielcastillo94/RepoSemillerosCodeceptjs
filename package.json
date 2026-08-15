@@ -1,11 +1,18 @@
 {
   "name": "nuevo-framework",
   "version": "1.0.0",
-  "description": "",
+  "description": "Framework de automatización CodeceptJS + Playwright + Gherkin + Allure — Reto S6 Liverpool",
   "scripts": {
-    "test": "codeceptjs run --steps",
+    "clean": "rm -rf output allure-report",
+    "pretest": "npm run clean",
+    "test": "codeceptjs run --steps --grep \"@pendiente\" --invert",
+    "test:todo": "codeceptjs run --steps",
+    "test:pendiente": "codeceptjs run --steps --grep \"@pendiente\"",
     "test:dry": "codeceptjs dry-run",
-    "report": "allure serve output/allure-results",
+    "test:smoke": "codeceptjs run --steps --grep \"@smoke\"",
+    "test:busqueda": "codeceptjs run --steps --grep \"@busqueda\"",
+    "test:filtros": "codeceptjs run --steps --grep \"@filtros\"",
+    "test:detalle": "codeceptjs run --steps --grep \"@detalle\"",
     "report:generate": "allure generate output/allure-results -o allure-report --clean",
     "report:serve": "cd allure-report && python3 -m http.server 8080",
     "report": "npm run report:generate && npm run report:serve"

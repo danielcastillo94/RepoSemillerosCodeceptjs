@@ -43,18 +43,6 @@ class BasePage {
     }
   }
 
-  /**
-   * Espera a que la página termine de cargar sus peticiones.
-   * Reemplaza los I.wait(3) fijos: espera por una condición real,
-   * no por un tiempo arbitrario.
-   */
-
-  async esperarRedInactiva() {
-    await I.usePlaywrightTo('esperar a que la red quede inactiva', async ({ page }) => {
-      await page.waitForLoadState('networkidle')
-    })
-  }
-
   esperarElemento(selector) {
     I.waitForElement(selector, this.timeout)
   }
