@@ -46,7 +46,8 @@ exports.config = {
       "./steps/filtrosporPrecioSteps.js",
       "./steps/filtrarporMarcaSteps.js",
       "./steps/filtrosTallaMedidaSteps.js",
-      "./steps/detalledeProductoBasicoSteps.js"
+      "./steps/detalledeProductoBasicoSteps.js",
+      "./steps/ordenamientoResultadosSteps.js"
     ],
   },
 

@@ -14,7 +14,7 @@ When(/^El usuario aplica el filtro de talla Mediana$/, () => { //selecciona algu
   FilterPage.filtroTalla(); // verifica que cargue correctamente la página "Plan de Renta"
 });
 Then(/^El usuario puede ver que que se aplico correctamente el filtro$/, () =>{
-  FilterPage.filtroValido();
+  FilterPage.filtroValidoTalla();
 });
 
 //@TC-014-----------------------------------------------------------------

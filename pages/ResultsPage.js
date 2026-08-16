@@ -7,13 +7,28 @@ class resultsPage {
       // Mensaje cuando no existen resultados
       noResultsMessage: '//h2[contains(text(), "Lo sentimos")]',
       //Valudar que los productos mostrados sean algo relacionado con la busqueda
-      validarresultadomostrado: '//h3[contains(text(), "Zapatilla Charol")]'
+      validarresultadomostrado: '//h1[contains(text(), "Zapatillas")]',
+      ordenarPor: '//button[@id="sorting-button"]',
+      destacada: '//li[@role="option" and text()="Destacados"]', 
+      novedades: '//li[normalize-space(text())="Novedades"]',
+      menorPrecio: '//li[normalize-space(text())="Menor precio"]',
+      mayorPrecio: '//li[normalize-space(text())="Mayor precio"]',
+      mayorCalificados: '//li[normalize-space(text())="Mejor calificados"]',
+      productoDestacado: '//section[@data-testid="1202132878-card"]//h4'
+
     };
 
     urls = {
       urlzapatillas: 'https://www.liverpool.com.mx/tienda?s=zapatillas',
-      urlnohayresultados: 'https://www.liverpool.com.mx/tienda?s=productoxyz99999'
+      urlnohayresultados: 'https://www.liverpool.com.mx/tienda?s=productoxyz99999',
+      urlPlayeraMujer: 'https://www.liverpool.com.mx/tienda/playeras/catst25229539',
     };
+
+    //GIVEN-PRIMCIPAL---------------------------------------------------------------------------------------------------------------
+    pagina(){
+        I.amOnPage('/');
+       
+    }
 
 //@TC-001--------------------------------------------------------------------------------------------------------------
     validarResultados() {
@@ -35,5 +50,37 @@ class resultsPage {
         I.waitForElement(this.fields.validarresultadomostrado, 10);
         I.seeElement(this.fields.validarresultadomostrado, 10);
     }
-}
+//@TC-016----------------------------------------------------------------------------------
+    playerasMujer(){
+        I.amOnPage(this.urls.urlPlayeraMujer);
+        I.wait(10);
+    }
+    ordenarPor(){
+        I.click( this.fields.ordenarPor)
+    }
+
+    opcionesPosiblesOrdenar(){
+        I.waitForElement(this.fields.destacada);
+        I.seeElement(this.fields.destacada);
+        I.waitForElement(this.fields.novedades);
+        I.seeElement(this.fields.novedades);
+        I.waitForElement(this.fields.menorPrecio);
+        I.seeElement(this.fields.menorPrecio);
+        I.waitForElement(this.fields.mayorPrecio);
+        I.seeElement(this.fields.mayorPrecio);
+        I.waitForElement(this.fields.mayorCalificados);
+        I.seeElement(this.fields.mayorCalificados);
+    }
+    destacados(){
+        I.click( this.fields.destacada)
+        I.wait(5);
+    }
+    resultadoDestacado(){
+        I.waitForElement(this.fields.productoDestacado);
+        I.seeElement(this.fields.productoDestacado);
+    }
+
+//@TC-017----------------------------------------------------------------
+
+}   
 module.exports = resultsPage;

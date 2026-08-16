@@ -10,13 +10,13 @@ const { CategoryPage, MenuPage, I } = inject();
         MenuPage.abrirMenuCategorias();} 
     );
    Then( /^Se despliega el menú de categorías$/, () => { 
-    MenuPage.validarMenuCategoriasVisible(); } 
+        MenuPage.validarMenuCategoriasVisible(); } 
    );
-   When( /^El usuario selecciona una categoría principal$/, () => { 
-    MenuPage.seleccionarCategoriaPrincipal(); } 
+   When( /^El usuario selecciona una categoría principal Mujer$/, () => { 
+        MenuPage.seleccionarCategoriaPrincipal(); } 
     );
    Then( /^Se muestran las subcategorías disponibles$/, () => { 
-    MenuPage.validarSubcategorias(); } 
+        MenuPage.validarSubcategorias(); } 
    );
 
 // TC-005 --------------------------------------------------------------------------------------------------
@@ -39,6 +39,6 @@ const { CategoryPage, MenuPage, I } = inject();
     When(/^El usuario selecciona una subcategoría$/,() =>{
         MenuPage.seleccionarSubcategoria();
     });
-    Then (/^El usuario es dirigido a la página de la subcategoría, mostrando productos correspondientes a la categoría seleccionadagina de la subcategoría, mostrando productos correspondientes a la categoría seleccionada$/, () => {
+    Then (/^El usuario es dirigido a la página de la subcategoría, mostrando productos correspondientes a la categoría seleccionada$/, () => {
         CategoryPage.validarProductos();
     });

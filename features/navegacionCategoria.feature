@@ -7,7 +7,7 @@ Feature: Navegación por Categorías
     Scenario: Expandir categoría principal
         When Da click en el componente de la página principal que dice Categorias
         Then Se despliega el menú de categorías 
-        When El usuario selecciona una categoría principal
+        When El usuario selecciona una categoría principal Mujer
         Then Se muestran las subcategorías disponibles
     
     @TC-005

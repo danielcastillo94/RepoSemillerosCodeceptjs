@@ -120,7 +120,7 @@ class FilterPage {
         I.click(this.fields.filtroMedida);
         I.wait(5);
     }
-    filtroValido(){
+    filtroValidoTalla() {
         I.waitForElement(this.fields.validarFiltro);
     }
 //@TC-014---------------------------------------------------------------
