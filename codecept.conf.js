@@ -37,6 +37,7 @@ exports.config = {
       "./steps/detallesproductostockdisponibleSteps.js",
       "./steps/detallesproductoreviewSteps.js",
       "./steps/agregarproductocarritoSteps.js",
+      "./steps/agregarmultiproductoscarritoSteps",
     ],
   },
 

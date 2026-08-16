@@ -15,6 +15,7 @@
     "features:stockdisponible": "codeceptjs run --features --grep \"@stockdisponible\" --steps --verbose",
     "features:review": "codeceptjs run --features --grep \"@reviews\" --steps --verbose",
     "features:addcard": "codeceptjs run --features --grep \"@agregarcarrito\" --steps --verbose",
+    "features:multicard": "codeceptjs run --features --grep \"@multicarrito\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
   },
