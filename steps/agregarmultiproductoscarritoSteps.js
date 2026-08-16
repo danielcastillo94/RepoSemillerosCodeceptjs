@@ -27,5 +27,5 @@ Then(/^El usuario ve su carrito de productos$/, () => {
 
 //TC034-------------------
 Then(/^El usuario ve el "Subtotal" y el "Total" de su comprar$/, () => {
-    CartPage.validadprecios();
+    CartPage.validarprecios();
 });

@@ -1,4 +1,4 @@
-const { I } = inject();
+const { I, ProductDetailPage } = inject();
 
 class CartPage {
     urls = {
@@ -28,10 +28,11 @@ class CartPage {
 
         btncarrito: '//a[@class="flex items-center gap-1 disabled:cursor-default transition-colors p-1 text-header-primary hover:bg-header-secondary rounded-full font-bold"][1]',
         btnseleccionarproducto: '//button[@data-testid="checkout-payment-summary-select-all-btn"]',
-        btneliminarproducto3: '//button[@data-testid="delete-button-b5066a6d-5ddd-4fdd-9a01-7bdb61427b56"]',
-        btneliminarproducto2: '//button[@data-testid="delete-button-8ad1f84b-1665-4bdc-bf57-c9c85f75d1a0"]',
-        btnaddproduc3card: '//button[@data-testid="ml-card-product-mybag-b5066a6d-5ddd-4fdd-9a01-7bdb61427b56-input-cart-item-wrapper-input-cart-item-quantity-increase"]',
-        btndelitproduc3card: '//button[@data-testid="ml-card-product-mybag-b5066a6d-5ddd-4fdd-9a01-7bdb61427b56-input-cart-item-wrapper-input-cart-item-quantity-decrease"]',
+        btneliminarproducto3: '//button[@data-testid="delete-button-5a2fa692-0c8f-446d-9d45-6431a330a934"]',
+        btneliminarproducto2: '(//span[contains(text(),"Eliminar")])[2]',
+        btnaddproduc3card: '//button[@aria-label="increase"]',
+        btndisminuirproduc3card: '//button[@aria-label="decrease"]',
+        btnaceptarborrarproducto: '//span[contains(text(),"Aceptar")]',
         total: '//p[contains(text(),"Total")]',
         subtotal: '//p[contains(text(),"Subtotal")]',
     };
@@ -94,15 +95,47 @@ class CartPage {
         I.waitForVisible(this.locator.btnseleccionarproducto,
                         this.locator.btneliminarproducto3,
                         this.locator.btnaddproduc3card,
-                        this.locator.btndelitproduc3card, 5
+                        this.locator.btndisminuirproduc3card, 5
         );
         I.scrollPageToBottom();
     }
 
     //TC034------------------
-    validadprecios(){
+    validarprecios(){
         I.scrollPageToTop();
         I.waitForVisible(this.locator.total, this.locator.subtotal);
+    }
+
+    //Given para feature:editarcarrito
+    carritolleno(){
+        ProductDetailPage.iniciocatplayera();
+        ProductDetailPage.aplicacionfiltros();
+        this.primerproducto();
+        this.segundoproducto();
+        this.tercerproducto();
+        this.validarcarrito();
+    }
+
+    //TC041-------------------
+    aumentarcantidadcarrito(){
+        //agregagos dos unidades ams del producto 3
+        I.scrollPageToTop();
+        I.click(this.locator.btnaddproduc3card);
+        I.click(this.locator.btnaddproduc3card);
+        //el selector registra 3 conincidencias pero por defecto utiliza en primero
+    }
+
+    //TC042-------------------
+    disminuircantidadcarrito(){
+        //le quitamos una unidad al producto 3
+        I.click(this.locator.btndisminuirproduc3card)
+        //el selector registra 3 conincidencias pero por defecto utiliza en primero
+    }
+
+    //TC043-------------------
+    borrarproductocarrito(){
+        I.click(this.locator.btneliminarproducto2);
+        I.waitForVisible(this.locator.btnaceptarborrarproducto);
     }
 }
 

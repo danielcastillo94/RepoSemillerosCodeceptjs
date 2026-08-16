@@ -38,6 +38,7 @@ exports.config = {
       "./steps/detallesproductoreviewSteps.js",
       "./steps/agregarproductocarritoSteps.js",
       "./steps/agregarmultiproductoscarritoSteps",
+      "./steps/editarcarritoSteps.js",
     ],
   },
 
