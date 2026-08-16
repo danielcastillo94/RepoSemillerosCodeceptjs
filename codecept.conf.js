@@ -10,23 +10,26 @@ exports.config = {
   output: './output',
   helpers: {
     Playwright: {
-      url: 'https://www.liverpool.com.mx',
+      url: 'https://www.liverpool.com.mx/tienda/home',
       show: true,
       browser: 'chromium',
       video: true,
       trace: true,
-      keepVideoForPassedTests: false
+      waitForNavigation: 'domcontentloaded',
+      getPageTimeout: 60000
     },
-    PlaywrightVideoAllure: {
-      require: './utils/playwrightVideoAllure_helper.js'
-    }
+    //PlaywrightVideoAllure: {
+      //require: './utils/playwrightVideoAllure_helper.js'
+    //}
   },
   include: {
     I: './steps_file.js',
+    searchPage: './pages/searchPage.js',
+    resultsPage: './pages/resultsPage.js'
   },
   gherkin: {
-    features: './features/**/*.feature',
-    steps: ['./step_definitions/**/*.js']
+    features: './features/search_product.feature',
+    steps: ['./step_definitions/searchSteps.js']
   },
   plugins: {
     allure: {
