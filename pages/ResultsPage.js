@@ -8,8 +8,9 @@ module.exports = {
         productCard: '#plp-page-card-product-list [data-testid$="-card-card-link"]',
         productTitle: '#plp-page-card-product-list [data-testid$="-card-card-link"] h3',
         productPrice: '#plp-page-card-product-list [data-testid$="-card-card-link"] [data-testid$="-price"]',
-
+        
         noResultsMessage: '//h2[contains(., "Lo sentimos, no encontramos nada para")]',
+        productWithReviews: '#plp-page-card-product-list [data-testid$="-card-card-link"]:has([data-testid$="-rating"])'
     },
 
     seeSearchResultsPage(){
@@ -63,5 +64,28 @@ module.exports = {
             products,
             `Expected ${products} products to have prices, but found ${prices} prices.`
         )
+    },
+
+    selectFirstProduct() {
+        I.waitForElement(
+            this.fields.productCard,
+            10
+        );
+
+        I.click(
+            this.fields.productCard
+        );
+    },
+    
+    selectFirstProductWithReviews() {
+
+        I.waitForElement(
+            this.fields.productWithReviews,
+            15
+        );
+
+        I.click(
+            this.fields.productWithReviews
+        );
     }
 }

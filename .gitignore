@@ -1,5 +1,6 @@
 node_modules/
 output/
+utils/
 allure-results/
 allure-report/
 .env2

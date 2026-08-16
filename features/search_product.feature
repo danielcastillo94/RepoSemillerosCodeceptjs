@@ -1,7 +1,9 @@
 @search
 Feature: Product Search Functionality
 
-    As a liverpool customer, I want to be able to search for products on the Liverpool website so that I can easily find the items I am looking for.
+    As a liverpool customer 
+    I want to be able to search for products on the Liverpool website 
+    So that I can easily find the items I am looking for.
 
     Background:
         Given the user is on the Liverpool homepage 
