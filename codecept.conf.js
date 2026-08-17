@@ -23,6 +23,7 @@ exports.config = {
     StockPage: './pages/StockPage.js',
     ReviewsPage: './pages/ReviewsPage.js',
     CartPage: './pages/CartPage',
+    WishlistPage: './pages/WishlistPage',
   },
 
   gherkin: {
@@ -39,6 +40,7 @@ exports.config = {
       "./steps/agregarproductocarritoSteps.js",
       "./steps/agregarmultiproductoscarritoSteps",
       "./steps/editarcarritoSteps.js",
+      "./steps/WishlistSteps.js"
     ],
   },
 

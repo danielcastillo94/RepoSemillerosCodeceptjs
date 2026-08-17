@@ -1,0 +1,67 @@
+const {I} = inject();
+require('dotenv').config();
+
+class WishlistPage {
+    urls = {
+        urlwishlist: 'https://www.liverpool.com.mx/tienda/users/wishlist',
+        urlcarrito: 'https://www.liverpool.com.mx/tienda/cart',
+    };
+    locator = {
+        btniniciosesion: '//button[@data-testid="blt26617d4f2e17657d-header-menu-dropdown-button"]',
+        inputcorreo: '//input[@class="input cd9adde91 c2de5e435"]',
+        inputcontrasenia: '//input[@class="input cd9adde91 c5c2bd33f"]',
+        btniniciarsesion: '//button[@class="c73a1ad3f c39d6a68a cd1d573fa c11133b5c c91f7cb68"]',
+        btncarrito: '//a[@class="flex items-center gap-1 disabled:cursor-default transition-colors p-1 text-header-primary hover:bg-header-secondary rounded-full font-bold"][1]',
+        btnwishlist: '(//a[@data-testid="blt26617d4f2e17657d-header-shopping-cart-favourites-link"])[1]',
+        btnmovera: '//span[contains(text(),"Mover a Wishlist")]',
+        btnwishelejida: '//button[@class="flex gap-5 px-4 py-3 bg-white rounded cursor-pointer h-32"]',
+        miwishlist: '//a[@data-testid="wishlist-6a8269b012b4e26773f6c85b-button"]',
+        btnopcion: '(//button[@class="flex items-center"])[2]',
+        lieliminar: '//li[contains(text(),"Eliminar")]',
+        btnconfitmareliminar: '(//span[contains(text(),"Eliminar")])[2]',
+        msjconfirmareliminar: '//span[contains(text(),"Eliminar lista")]',
+    };
+
+    iniciarsesion(){
+        I.amOnPage('/');
+        I.wait(5); //tiempo de espera que que carge bien la pagina
+        I.click(this.locator.btniniciosesion);
+        I.wait(2); //tiempo de espera para cargar el inicio de sesion
+        I.fillField(this.locator.inputcorreo, process.env.EMAIL);
+        I.fillField(this.locator.inputcontrasenia, process.env.PASSWORD);
+        I.click(this.locator.btniniciarsesion);
+        pause(); //despues de dar clic en iniciar sesion pide ingresar un codigo que se envia al numero registrado
+        //pausa obligatoria para ingregsar el codigo de seguridad y continuar
+        //una vez se ingresa el codigo y se da clic en continuar el proceso sigui con normalidad pero hay de dar enter a diestra y siniestra para avanzar
+        //como se utilzia en mismo prodcuto para los tres casos, si se ejecutan todos los casos en orden, solo el primero pasara
+        //el segundo escenario fallara porque el produto ya existe en la wish y se deberia de eliminar para que pase
+        //lo mismo ocurre en el ultimo caso por eso recomiendo ejecutar el ultimo caso
+    }
+
+    //TC035----------------------------
+    agregarwishlist(){ //utiliza el mismo producto para todos los casos
+        I.click(this.locator.btncarrito);
+        I.waitForURL(this.urls.urlcarrito);
+        I.click(this.locator.btnmovera);
+        I.waitForVisible(this.locator.btnwishelejida);
+        I.click(this.locator.btnwishelejida);
+    }
+
+    //TC036----------------------------
+    verwishlist(){
+        I.click(this.locator.btnwishlist);
+        I.waitForURL(this.urls.urlwishlist);
+        I.click(this.locator.miwishlist);
+    }
+
+    //TC037----------------------------
+    removerdewishlist(){
+        I.click(this.locator.btnopcion);
+        I.waitForVisible(this.locator.btnopcion);
+        I.click(this.locator.lieliminar);
+        I.waitForVisible(this.locator.msjconfirmareliminar);
+        I.click(this.locator.btnconfitmareliminar)
+    }
+}
+
+module.exports = new WishlistPage();
