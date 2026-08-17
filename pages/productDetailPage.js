@@ -4,7 +4,8 @@ class productDetailPage {
        
     urls = {        
         urlPaginaDetalleProducto: 'https://www.liverpool.com.mx/tienda/pdp/playera-tipo-polo-hollister-para-mujer/1201006488',
-        urlPlayeraMujer: 'https://www.liverpool.com.mx/tienda/playeras/catst25229539'
+        urlPlayeraMujer: 'https://www.liverpool.com.mx/tienda/playeras/catst25229539',
+        urlPlayeraMangaCorta: 'https://www.liverpool.com.mx/tienda/pdp/playera-manga-corta-aeropostale-cuello-redondo-para-mujer/1202132878?skuid=1202132886&size=XCH'
     }
     fields = {
         producto: '//section[@data-testid="1201006488-card"]',
@@ -21,7 +22,12 @@ class productDetailPage {
         caracteristicaComposicion: '//td[text()="Algodón"]',
         carateriscasLargoDeManga: '//td[text()="Corta"]',
         imagen: '//img[@data-testid="pdp-1201006488-gallery__gallery-0__image__image"]',
-        validarImagen: '//img[@alt="Playera tipo polo para mujer 1"]'
+        validarImagen: '//img[@alt="Playera tipo polo para mujer 1"]',
+        botonTamaño: '//label[@for="size-picker-XCH-undefined1202132878-1202132886"]',
+        verDisponiblidad: '//span[normalize-space(text())="Ver disponibilidad en tienda"]',
+        estados: '//h3[normalize-space(text())="Selecciona un estado"]',
+        estadoPuebla: '//span[normalize-space(text())="PUEBLA"]',
+        cantidadDisponible: '//p[normalize-space(.)="1 piezas"]',
     }
 //GIVEN---------------------------------------------------------------------------------------------------------------
   PaginPrincipal() {
@@ -75,7 +81,32 @@ class productDetailPage {
     validaImagen(){
         I.waitForElement( this.fields.validarImagen );
         I.seeElement( this. fields.validarImagen);
-}
+    }
+    //@TC-023-----------------------------------------------------------------
+    paginaPlayeraMangaCorta(){
+        I.amOnPage(this.urls.urlPlayeraMangaCorta);
+        I.wait(10)
+    }
+    clicTamaño(){
+        I.click( this.fields.botonTamaño );
+        I.wait(10);
+        I.click( this.fields.verDisponiblidad );
+        I.wait(10);
+    }
+    visibleEstados(){
+        I.waitForElement(this.fields.estados);
+        I.seeElement(this.fields.estados);
+    }
+    seleccionEstado(){
+        I.scrollTo( this.fields.estadoPuebla );
+        I.click( this.fields.estadoPuebla );
+        I.wait(5);
+    }
+    disponibilidadEnEstado(){
+        I.waitForElement(this.fields.cantidadDisponible);
+        I.seeElement(this.fields.cantidadDisponible);
+    }
+
         
 }
 module.exports = new productDetailPage();

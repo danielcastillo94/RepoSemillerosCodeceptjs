@@ -14,8 +14,10 @@ class resultsPage {
       menorPrecio: '//li[normalize-space(text())="Menor precio"]',
       mayorPrecio: '//li[normalize-space(text())="Mayor precio"]',
       mayorCalificados: '//li[normalize-space(text())="Mejor calificados"]',
-      productoDestacado: '//section[@data-testid="1202132878-card"]//h4'
-
+      productoDestacado: '//section[@data-testid="1202132878-card"]//h4',
+      productoMenorPrecio: '//h3[normalize-space(text())="Playera manga corta cuello redondo para mujer"]',
+      productoMayorPrecio: '//h3[normalize-space(text())="Playera manga corta cuello redondo para mujer"]',
+      productosMejorCalificados: '//h3[normalize-space(text())="Playera manga al codo cuello redondo para mujer"]'
     };
 
     urls = {
@@ -80,7 +82,37 @@ class resultsPage {
         I.seeElement(this.fields.productoDestacado);
     }
 
-//@TC-017----------------------------------------------------------------
+//@TC-017----------------------------------------------------------------   
+    menorPrecio(){
+        I.click( this.fields.menorPrecio );
+        I.wait(5)
+    }
+
+    productoMenorPrecio(){
+        I.waitForElement(this.fields.productoMenorPrecio);
+        I.seeElement(this.fields.productoMenorPrecio);
+    }
+
+//@TC-018---------------------------------------------------
+    mayorPrecio(){
+        I.click( this.fields.mayorPrecio );
+        I.wait(5)
+    }
+    productoMayorPrecio(){
+        I.waitForElement(this.fields.productoMayorPrecio);
+        I.seeElement(this.fields.productoMayorPrecio);
+    }
+    //@TC-019---------------------------------------------------
+    majorCalificacion(){
+        I.click( this.fields.mayorCalificados );
+        I.wait(5)
+    }
+
+    productosMejorCalificados(){
+        I.waitForElement(this.fields.productosMejorCalificados);
+        I.seeElement(this.fields.productosMejorCalificados);
+    }
+
 
 }   
 module.exports = resultsPage;
