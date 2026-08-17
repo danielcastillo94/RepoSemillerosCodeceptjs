@@ -1,4 +1,5 @@
-const {I, SearchPage} = inject();
+const {I, SearchPage, MenuPage, CategoryPage, FilterPage} = inject();
+require('dotenv').config();
 
 class ResultPage {
     urls = {
@@ -27,9 +28,6 @@ class ResultPage {
         paneldetallado: '//div[@class="relative min-w-0 flex-1"]',
 
 
-
-
-
         imgsubcatteniscasual: '//img[@alt="Tenis Casuales de Hombre"]',
         textsubcatteniscasual:'//h3[contains(text(),"Tenis Casuales")]',
         imgsubcattendepo: '//img[@alt="Tenis Deportivos de Hombre"]',
@@ -45,7 +43,37 @@ class ResultPage {
         contenprecio: '//div[@class="max-h-full overflow-y-visible pl-6 transition-all"]',
         inputseleccionvalida: '//*[@id="main-content"]/section/div[3]/section[1]/div/div/div[2]/div/div[2]/div/div/div/fieldset/div/label[1]/span[1]/input',
         btnrangoprecio: '//button[@data-testid="$100.0 -$500.0"]',
+
+        btniniciosesion: '//button[@data-testid="blt26617d4f2e17657d-header-menu-dropdown-button"]',
+        inputcorreo: '//input[@class="input cd9adde91 c2de5e435"]',
+        inputcontrasenia: '//input[@class="input cd9adde91 c5c2bd33f"]',
+        btniniciarsesion: '//button[@class="c73a1ad3f c39d6a68a cd1d573fa c11133b5c c91f7cb68"]',
+        ordenrelevante: '//li[contains(text(),"Mejor calificados")]',
+        ordenmenor: '//li[contains(text(),"Menor precio")]',
+        ordenmayor: '//li[contains(text(),"Mayor precio")]',
+        ordennovedad: '//li[contains(text(),"Novedad")]',
+
     };
+
+    //Given para ordenar
+    iniciarsesion(){
+        I.amOnPage('/');
+        I.wait(5); //tiempo de espera que que carge bien la pagina
+        I.click(this.locator.btniniciosesion);
+        I.wait(2); //tiempo de espera para cargar el inicio de sesion
+        I.fillField(this.locator.inputcorreo, process.env.EMAIL);
+        I.fillField(this.locator.inputcontrasenia, process.env.PASSWORD);
+        I.click(this.locator.btniniciarsesion);
+        pause(); //despues de dar clic en iniciar sesion pide ingresar un codigo que se envia al numero registrado
+        //pausa obligatoria para ingregsar el codigo de seguridad y continuar
+    }
+    buscarproducto(){
+        MenuPage.categorias();
+        CategoryPage.categoria();
+        FilterPage.inicifiltroropa();
+        FilterPage.filtrotalla();
+        FilterPage.filtrocolor();
+    }
 
     //TC003----------------
     resultadosbuscados(){
@@ -84,6 +112,33 @@ class ResultPage {
         I.scrollPageToBottom();
     }
 
+    //TC016----------------
+    ordenrelivante(){
+        I.click(this.locator.btnordenadar);
+        I.waitForVisible(this.locator.ordenrelevante);
+        I.click(this.locator.ordenrelevante);
+    }
+
+    //TC017----------------
+    ordenmenorprecio(){
+        I.click(this.locator.btnordenadar);
+        I.waitForVisible(this.locator.ordenmenor);
+        I.click(this.locator.ordenmenor);
+    }
+
+    //TC018----------------
+    ordenmayorprecio(){
+        I.click(this.locator.btnordenadar);
+        I.waitForVisible(this.locator.ordenmayor);
+        I.click(this.locator.ordenmayor);
+    }
+
+    //TC019----------------
+    ordenmasnuevo(){
+        I.click(this.locator.btnordenadar);
+        I.waitForVisible(this.locator.ordennovedad);
+        I.click(this.locator.ordennovedad);
+    }
 }
 
 module.exports = new ResultPage();

@@ -34,6 +34,7 @@ exports.config = {
       "./steps/filtroporprecioSteps.js",
       "./steps/filtropormarcaSteps.js",
       "./steps/filtroportallaSteps.js",
+      "./steps/ordenarresultadosSteps.js",
       "./steps/detallesproductobasicoSteps.js",
       "./steps/detallesproductostockdisponibleSteps.js",
       "./steps/detallesproductoreviewSteps.js",
