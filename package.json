@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx codeceptjs run --features",
-    "test:ui": "npx codeceptjs run --features --plugins allure",
+    "test": "codeceptjs run --features",
+    "test:steps": "codeceptjs run --features --steps",
     "report": "allure serve output/allure-results"
   },
   "repository": {
