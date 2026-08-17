@@ -8,7 +8,14 @@ exports.config = {
       browser: "chromium", /** Navegador que se va a utilizar */
       url: 'https://www.telcel.com', /** Url de los casos a probar */
       show: true, /** Muestra o no el navegador al ejecutar las pruebas */
+      video: true,
+      pressKeyDelay: 100,
+      trace: true,
+      keepTraceForPassedTests: true,
       locale: "es-MX" /** Configuracion regional */
+    },
+    PlaywrightVideoAllure:{
+      require: './utils/playwrightVideoAllure_helper.js'
     }
   },
 
