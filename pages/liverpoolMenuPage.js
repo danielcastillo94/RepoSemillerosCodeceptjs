@@ -25,6 +25,11 @@ module.exports = {
     I.forceClick(this.categoriaMujer);
   },
 
+  validarSubcategoriaRopa() {
+  I.waitForElement(this.subcategoriaRopa, 10);
+  I.seeElement(this.subcategoriaRopa);
+},
+
   seleccionarRopa() {
     I.waitForElement(this.subcategoriaRopa, 10);
     I.wait(2);

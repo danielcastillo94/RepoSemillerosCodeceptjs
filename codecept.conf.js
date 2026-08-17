@@ -13,22 +13,18 @@ exports.config = {
   },
 
   include: {
-I: "./steps_file.js",
-karelPage: "./pages/karelPage.js",
-liverpoolSearchPage: "./pages/liverpoolSearchPage.js",
-liverpoolResultsPage: "./pages/liverpoolResultsPage.js",
-liverpoolMenuPage: "./pages/liverpoolMenuPage.js",
-},
-
-
+    I: "./steps_file.js",
+    liverpoolSearchPage: "./pages/liverpoolSearchPage.js",
+    liverpoolResultsPage: "./pages/liverpoolResultsPage.js",
+    liverpoolMenuPage: "./pages/liverpoolMenuPage.js",
+  },
 
   gherkin: {
-  features: './features/*.feature',
-  steps: [
-    "./steps/karelSteps.js",
-    "./steps/liverpoolSteps.js",
-  ],
-},
+    features: './features/*.feature',
+    steps: [
+      "./steps/liverpoolSteps.js",
+    ],
+  },
 
   plugins: {
     allure: {
@@ -40,5 +36,5 @@ liverpoolMenuPage: "./pages/liverpoolMenuPage.js",
 
   bootstrap: null,
   mocha: {},
-  name: "Actividad youtube y Telcel"
+  name: "Liverpool Automation"
 };
