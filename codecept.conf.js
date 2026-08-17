@@ -6,9 +6,16 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: 'https://www.liverpool.com.mx',
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
+      video: true,
+      pressKeyDelay: 100,
+      trace: true,
+      keepTraceForPassedTests: true
+    },
+    PlaywrightVideoAllure: {
+      require: './utils/playwrightVideoAllure_helper.js'
     }
   },
 
