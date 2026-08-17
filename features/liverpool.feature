@@ -5,7 +5,7 @@ Feature: Validación de funcionalidades principales del portal de Liverpool
     @TC001
     Scenario: Búsqueda de producto existente
         When El usuario hace clic en la barra de búsqueda
-        And El usuario busca "zapatillas" mediante la barra de búsqueda
+        And El usuario busca "zapatos" mediante la barra de búsqueda
         Then El usuario puede ver los resultados coincidentes de la búsqueda
 
     @TC002

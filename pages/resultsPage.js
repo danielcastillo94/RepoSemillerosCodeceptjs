@@ -3,7 +3,8 @@ const { I } = inject();
 class ResultsPage {
     locators = {
         searchBar: '//input[@id=":R37ba9il9utsq:-input"]',
-        productResultTitle: '//h1[contains(text(), "Zapatillas")]',
+        productResultTitle: '//h1[contains(text(), "Zapatos")]',
+        resultsPageUrl: 'https://www.liverpool.com.mx/tienda?s=zapatos'
     };
 
     validation() {
@@ -16,7 +17,7 @@ class ResultsPage {
     }
 
     searchFor() {
-        I.fillField(this.locators.searchBar, 'zapatillas');
+        I.fillField(this.locators.searchBar, 'zapatos');
         I.pressKey('Enter');
     }
 
@@ -33,4 +34,6 @@ class ResultsPage {
     validateNoMatchResults() {
         I.waitForText('Lo sentimos, no encontramos nada', 5);
     }
+
+    
 }
