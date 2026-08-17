@@ -122,22 +122,29 @@ module.exports = {
      * @throws {AssertionError} If fewer that two unique images are found.
      */
     async seeMultipleProductImages() {
-        const imageSources = await I.executeScript(() => {
+        const gallerySelector =
+        this.elements.productGallery;
 
-            const gallery = document.querySelector(this.elements.productGallery);
+        const imageSources = await I.executeScript((selector) => {
+                    const gallery = document.querySelector(selector);
 
-            if (!gallery) {
-                return [];
-            }
+                    if (!gallery) {
+                        return [];
+                    }
 
-            const images = Array.from(gallery.querySelectorAll('img[src]'));
+                    const images = Array.from(gallery.querySelectorAll('img[src]'));
 
-            const sources = images
-                .map(image => image.getAttribute('src'))
-                .filter(Boolean);
+                    const sources =  
+                        images
+                            .map(image =>
+                                image.getAttribute('src')
+                            )
+                            .filter(Boolean);
 
-            return [...new Set(sources)];
-        });
+                    return [...new Set(sources)];
+                },
+                gallerySelector
+            );
 
         assert(
             imageSources.length > 1,
