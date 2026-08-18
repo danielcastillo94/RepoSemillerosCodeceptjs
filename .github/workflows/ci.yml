@@ -1,0 +1,37 @@
+name: CI — Framework CodeceptJS
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalar navegadores de Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Ejecutar pruebas
+        run: npx codeceptjs run --features --steps
+
+      - name: Subir resultados de Allure
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-results
+          path: output/allure-results
+          retention-days: 7
