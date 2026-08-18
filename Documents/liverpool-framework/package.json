@@ -1,0 +1,22 @@
+{
+  "name": "liverpool-framework",
+  "version": "1.0.0",
+  "description": "Framework de Liverpool",
+  "license": "ISC",
+  "author": "Jeranny De La Cruz",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "features": "codeceptjs run --features --steps",
+    "features:busqueda": "codeceptjs run --features @BusquedaDeProducto",
+    "allure:generate": "npx allure-commandline generate ./output/allure-results -o ./allure-report --clean",
+    "allure:open": "npx allure-commandline open ./allure-report"
+  },
+  "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
+    "allure-commandline": "^2.43.0",
+    "codeceptjs": "^4.1.0",
+    "playwright": "^1.62.1"
+  }
+}

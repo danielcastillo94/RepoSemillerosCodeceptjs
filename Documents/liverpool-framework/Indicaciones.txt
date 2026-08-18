@@ -1,0 +1,1 @@
+Comando para correr: npm run features, npm run allure:generate, npm run allure:open
