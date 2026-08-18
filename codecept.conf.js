@@ -16,6 +16,7 @@ exports.config = {
     I: "./steps_file.js", /** Crear al actor, quien va a realizar las acciones */
     karelPage: "./pages/karelPage.js", /** Creacion de la page Object */
     rickMortyMockPage: "./pages/rickMortyMockPage.js", /** Page Object para demo de Network Mocking */
+    rickMortyEpisodiosPage: "./pages/rickMortyEpisodiosPage.js", /** Page Object para demo de Network Mocking */
   },
 
   gherkin: {
@@ -23,6 +24,7 @@ exports.config = {
     steps: [
       "./steps/karelSteps.js", /** Ubicaciones de los archivos que traducen Given,When y Then a javascript */
       "./steps/rickMortyMockSteps.js", /** Steps para demo de Network Mocking */
+      "./steps/rickMortyEpisodiosSteps.js", /** Steps para demo de Network Mocking */
     ],
   },
 
