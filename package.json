@@ -7,7 +7,9 @@
     "test:workers": "codeceptjs run-workers 2",
     "features": "codeceptjs run --features --plugins allure",
     "allure:generate": "allure generate output --clean",
-    "allure:report": "allure open"
+    "allure:report": "allure open",
+    "generacionallure": "allure generate ./output/allure-results -o ./allure-report --clean",
+    "abrirreporteallure": "allure open ./allure-report"
   },
   "keywords": [],
   "author": "",
