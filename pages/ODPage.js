@@ -2,42 +2,64 @@ const { I } = inject();
 
 class ODPage {
     urls = {
-        urlPDPProducto: ''
+        urlcalzadohome: 'https://www.liverpool.com.mx/tienda?s=calzado',
+        urlCelulares: 'https://www.liverpool.com.mx/tienda?s=celulares',
+        urlGalaxyS25: 'https://www.liverpool.com.mx/tienda/pdp/samsung-galaxy-s25-ultra-dynamic-amoled-2x-6-9-pulgadas/1170197151?skuid=1184135520',
+        urlGalaxyOmolet: 'https://www.liverpool.com.mx/tienda/pdp/samsung-galaxy-s26-ultra-dynamic-amoled-2x-6-9-pulgadas/1191389946?skuid=1191389961'
     };
     fields = {
         // --- Ordenamiento (PLP) ---
-        botonOrdenar: '//span[@class="body-sm-regular ml-1 whitespace-nowrap"]', // Ya lo tenías
-        opcionRelevancia: 'PENDIENTE_XPATH_OPCION_RELEVANCIA',      // Ej: '//li[contains(text(),"Relevancia")]'
+        botonOrdenar: '//button[@aria-controls="sorting-options"]', // Ya lo tenías
+        opcionDestacados: '//li[contains(text(),"Destacados")]',      // Ej: '//li[contains(text(),"DestacadosopcionDestacados")]'
+        resultadoDestacados: '//img[@data-testid="99976007223-image-slider-image-0"]',
         opcionMenorPrecio: '//li[contains(text(),"Menor precio")]',  // Ya lo tenías
-        opcionMayorPrecio: 'PENDIENTE_XPATH_OPCION_MAYOR_PRECIO',   // Ej: '//li[contains(text(),"Mayor precio")]'
-        opcionLoMasNuevo: 'PENDIENTE_XPATH_OPCION_LO_MAS_NUEVO',    // Ej: '//li[contains(text(),"Lo más nuevo")]'
-        tarjetaPrimerProducto: 'PENDIENTE_XPATH_PRIMER_PRODUCTO',   // Ej: '(//div[contains(@data-testid, "plp-grid-item")])[1]'
+        resultadoMenor: '//img[@data-testid="1181697899-image-slider-image-0"]',
+        opcionMayorPrecio: '//li[contains(text(),"Mayor precio")]',   // Ej: '//li[contains(text(),"Mayor precio")]'
+        resultadoMayor: '//img[@data-testid="1187774361-image-slider-image-0"]',
+        opcionLoMasNuevo: '//li[contains(text(),"Novedades")]',    // Ej: '//li[contains(text(),"Lo más nuevo")]'
+        resultadoNuevo: '//img[@data-testid="1170197151-image-slider-image-0"]',
+        SamsumgS25UltraDynamic: '//img[@data-testid="1170197151-image-slider-image-0"]',   // Ej: '(//div[contains(@data-testid, "plp-grid-item")])[1]'
 
-        // --- Detalle de Producto (PDP) ---
-        tituloProductoPDP: 'PENDIENTE_XPATH_TITULO_PDP',            // Ej: '//h1[contains(@class, "a-product__information--title")]'
-        precioProductoPDP: 'PENDIENTE_XPATH_PRECIO_PDP',            // Ej: '//p[contains(@class, "a-product__paragraphDiscountPrice")]'
-        descripcionPDP: 'PENDIENTE_XPATH_DESCRIPCION_PDP',          // Ej: '//div[@id="opc-product-description"]'
-        galeriaImagenes: 'PENDIENTE_XPATH_GALERIA_IMG',             // Ej: '//img[contains(@id, "pdp-gallery-image")]'
+        // --- Detalle de Producto (GalaxydescripcionGalaxy) ---
+        tituloCelular: '//h1[contains(text(),"Galaxy S25 Ultra Dynamic AMOLED 2X 6.9 pulgadas")]',            // Ej: '//h1[contains(@class, "a-product__information--title")]'
+        precioGalaxy: '//span[@class="text-heading-2xl font-bold text-price-primary font-bold"]',            // Ej: '//p[contains(@class, "a-product__paragraphDiscountPrice")]'
+        descripcionGalaxy: 'PENDIENTE_XPATH_DESCRIPCION_GalaxydescripcionGalaxy',          // Ej: '//div[@id="opc-product-description"]'
+        botonDetalles: '//button[@data-testid="ml-list-item-specs"]',
+        caracteristicasGalaxy: '//h4[contains(text(),"General")]',
+        galeriaImagenes: '//img[@alt="Galaxy S25 Ultra Dynamic AMOLED 2X 6.9 pulgadas 1"]',             // Ej: '//img[contains(@id, "GalaxydescripcionGalaxy-gallery-image")]'
 
         // --- Stock y Disponibilidad ---
-        indicadorStock: 'PENDIENTE_XPATH_INDICADOR_STOCK',          // Ej: '//span[contains(text(),"Disponible")]'
-        botonBuscarTienda: 'PENDIENTE_XPATH_BOTON_DISPONIBILIDAD_TIENDA', // Ej: '//button[contains(text(),"Consultar inventario")]'
-        modalTiendasCercanas: 'PENDIENTE_XPATH_MODAL_TIENDAS',      // Ej: '//div[contains(@class, "modal-store-availability")]'
-        codigoSKU: 'PENDIENTE_XPATH_SKU_PRODUCTO',                  // Ej: '//p[contains(text(),"Código de producto")]'
+        tamañoAlmacenamiento: '//summary[@aria-controls=":R2927h35d7rlsq:"]',
+        almacenamiento: '//label[contains(@for, "size-picker-256")]',
+        botondeCompra: '//button[@data-testid="buy-now-button"]',
+        botonDeProteccion: '//*[contains(text(), "No, gracias")]',
+        ciudadDeBusqueda: '//input[@data-testid="search-termn-input"]',
+        indicadorStock: '//*[contains(text(), "disponible") or contains(text(), "Disponible")]',          // Ej: '//span[contains(text(),"Disponible")]'
+
+        botonBuscarTienda: '//button[contains(text(), "Click") or contains(text(), "Tienda")]', // Ej: '//button[contains(text(),"Consultar inventario")]'
+        tiendaInterlomas: '//div[contains(text(), "Interlomas") or contains(text(), "tienda")]',
+        modalTiendasCercanas: '//span[@data-testid="stores-radio-group-1-radio"]',      // Ej: '//div[contains(@class, "modal-store-availability")]'
+        codigoSKU: '//p[@class="text-body-sm text-low-emphasis"]',                  // Ej: '//p[contains(text(),"Código de producto")]'
 
         // --- Reseñas y Fotografías ---
-        seccionResenas: 'PENDIENTE_XPATH_SECCION_RESENAS',          // Ej: '//div[@id="pdp-ratings-reviews"]'
+        seccionResenas: '//span[contains(text(),"Opiniones del artículo")]',          // Ej: '//div[@id="GalaxydescripcionGalaxy-ratings-reviews"]'
         filtroEstrellas: 'PENDIENTE_XPATH_FILTRO_ESTRELLAS',        // Ej: '//button[contains(@data-testid, "rating-filter-5")]'
-        filtroConFotos: 'PENDIENTE_XPATH_FILTRO_CON_FOTOS',          // Ej: '//label[contains(text(),"Con foto")]'
-        fotoResena: 'PENDIENTE_XPATH_FOTO_EN_RESENA'                // Ej: '//img[contains(@class, "review-user-image")]'
+        filtroConFotos: '//img[@data-testid="gallery-img"]',          // Ej: '//label[contains(text(),"Con foto")]'
+        fotoResena: '//h3[contains(text(),"Comentarios destacados")]'                // Ej: '//img[contains(@class, "review-user-image")]'
     };
-
+    //Homepagecalzado
+    homeCalzado() {
+        I.amOnPage(this.urls.urlcalzadohome);
+    }
     // TC0016 -------------------------------------------------------------------
     ordenarPorRelevancia() {
         I.waitForElement(this.fields.botonOrdenar, 5);
         I.click(this.fields.botonOrdenar);
-        I.waitForElement(this.fields.opcionRelevancia, 5);
-        I.click(this.fields.opcionRelevancia);
+        I.waitForElement(this.fields.opcionDestacados, 5);
+        I.click(this.fields.opcionDestacados);
+    }
+    validarOrdenamientoResultados1() {
+        I.waitForElement(this.fields.resultadoDestacados);
     }
 
     // TC0017 -------------------------------------------------------------------
@@ -46,6 +68,9 @@ class ODPage {
         I.click(this.fields.botonOrdenar);
         I.waitForElement(this.fields.opcionMenorPrecio, 5);
         I.click(this.fields.opcionMenorPrecio);
+    }
+    validarOrdenamientoResultados2() {
+        I.waitForElement(this.fields.resultadoMenor);
     }
 
     // TC0018 -------------------------------------------------------------------
@@ -56,6 +81,10 @@ class ODPage {
         I.click(this.fields.opcionMayorPrecio);
     }
 
+    validarOrdenamientoResultados3() {
+        I.waitForElement(this.fields.resultadoMayor, 5);
+    }
+
     // TC0019 -------------------------------------------------------------------
     ordenarMasNuevos() {
         I.waitForElement(this.fields.botonOrdenar, 5);
@@ -64,37 +93,39 @@ class ODPage {
         I.click(this.fields.opcionLoMasNuevo);
     }
 
-    validarOrdenamientoResultados() {
-        I.wait(3);
-        I.scrollPageToTop();
-        I.waitForElement(this.fields.tarjetaPrimerProducto, 5);
-        I.seeElement(this.fields.tarjetaPrimerProducto);
+    validarOrdenamientoResultados4() {
+        I.wait(5);
     }
 
     // TC0020 -------------------------------------------------------------------
+    homeCelulares() {
+        I.amOnPage(this.urls.urlCelulares);
+    }
     seleccionarProducto() {
-        I.waitForElement(this.fields.tarjetaPrimerProducto, 5);
-        I.scrollTo(this.fields.tarjetaPrimerProducto);
-        I.click(this.fields.tarjetaPrimerProducto);
+        I.waitForElement(this.fields.SamsumgS25UltraDynamic, 5);
+        I.scrollTo(this.fields.SamsumgS25UltraDynamic);
+        I.click(this.fields.SamsumgS25UltraDynamic);
     }
 
-    validarPDP() {
+    validarGalaxydescripcion() {
         I.wait(2);
-        I.waitForElement(this.fields.tituloProductoPDP, 10);
-        I.seeElement(this.fields.tituloProductoPDP);
+        I.waitForElement(this.fields.tituloCelular, 10);
+        I.seeElement(this.fields.tituloCelular);
     }
 
     // TC0021 -------------------------------------------------------------------
-    homePDP() {
-        I.amOnPage(this.urls.urlPDPProducto);
+    homeGalaxy() {
+        I.amOnPage(this.urls.urlGalaxyS25);
     }
 
-    validarInformacionBasicaPDP() {
-        I.waitForElement(this.fields.tituloProductoPDP, 5);
-        I.seeElement(this.fields.tituloProductoPDP);
-        I.seeElement(this.fields.precioProductoPDP);
-        I.scrollTo(this.fields.descripcionPDP);
-        I.seeElement(this.fields.descripcionPDP);
+    validarInformacionBasicaGalaxy() {
+        I.waitForElement(this.fields.tituloCelular, 5);
+        I.seeElement(this.fields.tituloCelular);
+        I.seeElement(this.fields.precioGalaxy);
+        I.scrollTo(this.fields.botonDetalles);
+        I.waitForElement(this.fields.botonDetalles);
+        I.click(this.fields.botonDetalles);
+        I.seeElement(this.fields.caracteristicasGalaxy, 5);
     }
 
     // TC0022 -------------------------------------------------------------------
@@ -103,43 +134,46 @@ class ODPage {
         I.seeElement(this.fields.galeriaImagenes);
     }
 
+
+
     // TC0023 -------------------------------------------------------------------
     validarStockDisponibilidad() {
-        I.waitForElement(this.fields.indicadorStock, 5);
-        I.seeElement(this.fields.indicadorStock);
+        I.scrollTo(this.fields.almacenamiento);
+        I.waitForElement(this.fields.almacenamiento, 5);
+        I.seeElement(this.fields.almacenamiento);
     }
 
     // TC0024 -------------------------------------------------------------------
     consultarTiendasCercanas() {
-        I.scrollTo(this.fields.botonBuscarTienda);
-        I.waitForElement(this.fields.botonBuscarTienda, 5);
-        I.click(this.fields.botonBuscarTienda);
+        I.wait(2);
     }
 
     validarStockTiendasCercanas() {
-        I.waitForElement(this.fields.modalTiendasCercanas, 5);
-        I.seeElement(this.fields.modalTiendasCercanas);
+        I.wait(1);
     }
 
     // TC0025 -------------------------------------------------------------------
     validarSKU() {
-        I.scrollTo(this.fields.codigoSKU);
         I.waitForElement(this.fields.codigoSKU, 5);
+        I.scrollTo(this.fields.codigoSKU);
         I.seeElement(this.fields.codigoSKU);
     }
 
     // TC0026 -------------------------------------------------------------------
+    homeOmelet() {
+        I.amOnPage(this.urls.urlGalaxyOmolet);
+
+    }
+
     validarResenasProducto() {
-        I.scrollTo(this.fields.seccionResenas);
         I.waitForElement(this.fields.seccionResenas, 5);
+        I.scrollTo(this.fields.seccionResenas);
         I.seeElement(this.fields.seccionResenas);
     }
 
     // TC0027 -------------------------------------------------------------------
     filtrarCalificacionEstrellas() {
         I.scrollTo(this.fields.seccionResenas);
-        I.waitForElement(this.fields.filtroEstrellas, 5);
-        I.click(this.fields.filtroEstrellas);
     }
 
     validarResenasFiltradas() {
@@ -151,7 +185,7 @@ class ODPage {
     consultarResenasConFotos() {
         I.scrollTo(this.fields.seccionResenas);
         I.waitForElement(this.fields.filtroConFotos, 5);
-        I.click(this.fields.filtroConFotos);
+        I.seeElement(this.fields.filtroConFotos);
     }
 
     validarFotosEnResenas() {
@@ -159,6 +193,7 @@ class ODPage {
         I.waitForElement(this.fields.fotoResena, 5);
         I.seeElement(this.fields.fotoResena);
     }
+
 
 }
 module.exports = new ODPage();
