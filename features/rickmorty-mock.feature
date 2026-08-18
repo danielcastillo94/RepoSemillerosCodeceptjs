@@ -1,4 +1,4 @@
-@rickmorty
+@rickmorty #Comentario de CI
 Feature: Demostración de Network Mocking con Rick and Morty API
   Como tester
   Quiero interceptar y controlar las respuestas de red
