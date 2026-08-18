@@ -40,16 +40,16 @@ jobs:
           path: gh-pages
 
       - name: Generar reporte de Allure
-        uses: simple-elf/allure-report-action@v1.6
         if: always()
-        with:
-          allure_results: output/allure-results
-          allure_history: gh-pages
-          allure_report: allure-history
+        run: |
+          if [ -d "gh-pages/history" ]; then
+            cp -r gh-pages/history output/allure-results/history
+          fi
+          node_modules/.bin/allure generate output/allure-results --clean -o allure-report
 
       - name: Publicar reporte en GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: allure-history
+          publish_dir: allure-report
