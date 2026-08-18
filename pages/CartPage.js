@@ -148,7 +148,7 @@ class CartPage {
         I.see('IVA incluido', this.locator.total);
     }
 
-    //TC046
+    //TC046------------------
     total(){
         I.see('Total', this.locator.total);
     }

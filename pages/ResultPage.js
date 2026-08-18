@@ -48,6 +48,7 @@ class ResultPage {
         inputcorreo: '//input[@class="input cd9adde91 c2de5e435"]',
         inputcontrasenia: '//input[@class="input cd9adde91 c5c2bd33f"]',
         btniniciarsesion: '//button[@class="c73a1ad3f c39d6a68a cd1d573fa c11133b5c c91f7cb68"]',
+        btnaceptarsms: '//button[@class="c73a1ad3f c39d6a68a cd1d573fa c11133b5c ca71de123"]',
         ordenrelevante: '//li[contains(text(),"Mejor calificados")]',
         ordenmenor: '//li[contains(text(),"Menor precio")]',
         ordenmayor: '//li[contains(text(),"Mayor precio")]',
@@ -64,8 +65,8 @@ class ResultPage {
         I.fillField(this.locator.inputcorreo, process.env.EMAIL);
         I.fillField(this.locator.inputcontrasenia, process.env.PASSWORD);
         I.click(this.locator.btniniciarsesion);
-        pause(); //despues de dar clic en iniciar sesion pide ingresar un codigo que se envia al numero registrado
-        //pausa obligatoria para ingregsar el codigo de seguridad y continuar
+        I.wait(40);
+        I.click(this.locator.btnaceptarsms);
     }
     buscarproducto(){
         MenuPage.categorias();

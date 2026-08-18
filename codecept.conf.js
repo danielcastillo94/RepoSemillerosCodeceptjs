@@ -24,6 +24,7 @@ exports.config = {
     ReviewsPage: './pages/ReviewsPage.js',
     CartPage: './pages/CartPage',
     WishlistPage: './pages/WishlistPage',
+    CheckoutPage: './pages/CheckoutPage',
   },
 
   gherkin: {
@@ -43,6 +44,7 @@ exports.config = {
       "./steps/WishlistSteps.js",
       "./steps/editarcarritoSteps.js",
       "./steps/carritoimpuestosSteps.js",
+      "./steps/codigopromocionSteps.js"
     ],
   },
 

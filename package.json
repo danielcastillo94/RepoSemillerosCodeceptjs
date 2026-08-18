@@ -20,6 +20,7 @@
     "features:editarcarrito": "codeceptjs run --features --grep \"@multicarrito\" --steps --verbose",
     "features:impuestos": "codeceptjs run --features --grep \"@validarimpuestos\" --steps --verbose",
     "features:whishlist": "codeceptjs run --features --grep \"@TC037\" --steps --verbose",
+    "features:cupon": "codeceptjs run --features --grep \"@promocion\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
   },  

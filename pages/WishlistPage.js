@@ -11,6 +11,7 @@ class WishlistPage {
         inputcorreo: '//input[@class="input cd9adde91 c2de5e435"]',
         inputcontrasenia: '//input[@class="input cd9adde91 c5c2bd33f"]',
         btniniciarsesion: '//button[@class="c73a1ad3f c39d6a68a cd1d573fa c11133b5c c91f7cb68"]',
+        btnaceptarsms: '//button[@class="c73a1ad3f c39d6a68a cd1d573fa c11133b5c ca71de123"]',
         btncarrito: '//a[@class="flex items-center gap-1 disabled:cursor-default transition-colors p-1 text-header-primary hover:bg-header-secondary rounded-full font-bold"][1]',
         btnwishlist: '(//a[@data-testid="blt26617d4f2e17657d-header-shopping-cart-favourites-link"])[1]',
         btnmovera: '//span[contains(text(),"Mover a Wishlist")]',
@@ -30,12 +31,8 @@ class WishlistPage {
         I.fillField(this.locator.inputcorreo, process.env.EMAIL);
         I.fillField(this.locator.inputcontrasenia, process.env.PASSWORD);
         I.click(this.locator.btniniciarsesion);
-        pause(); //despues de dar clic en iniciar sesion pide ingresar un codigo que se envia al numero registrado
-        //pausa obligatoria para ingregsar el codigo de seguridad y continuar
-        //una vez se ingresa el codigo y se da clic en continuar el proceso sigui con normalidad pero hay de dar enter a diestra y siniestra para avanzar
-        //como se utilzia en mismo prodcuto para los tres casos, si se ejecutan todos los casos en orden, solo el primero pasara
-        //el segundo escenario fallara porque el produto ya existe en la wish y se deberia de eliminar para que pase
-        //lo mismo ocurre en el ultimo caso por eso recomiendo ejecutar el ultimo caso
+        I.wait(40);
+        I.click(this.locator.btnaceptarsms);
     }
 
     //TC035----------------------------
