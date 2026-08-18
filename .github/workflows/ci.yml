@@ -5,6 +5,9 @@ on:
     branches:
       - '**'
 
+permissions:
+  contents: write
+
 jobs:
   pruebas:
     runs-on: ubuntu-latest
@@ -13,7 +16,7 @@ jobs:
       - name: Clonar repositorio
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js 20
+      - name: Configurar Node.js 22
         uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -28,10 +31,25 @@ jobs:
       - name: Ejecutar pruebas
         run: npx codeceptjs run --features --steps
 
-      - name: Subir resultados de Allure
-        uses: actions/upload-artifact@v4
+      - name: Obtener historial de Allure
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Generar reporte de Allure
+        uses: simple-elf/allure-report-action@v1.6
         if: always()
         with:
-          name: allure-results
-          path: output/allure-results
-          retention-days: 7
+          allure_results: output/allure-results
+          allure_history: gh-pages
+          allure_report: allure-history
+
+      - name: Publicar reporte en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-history
