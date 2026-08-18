@@ -137,6 +137,21 @@ class CartPage {
         I.click(this.locator.btneliminarproducto2);
         I.waitForVisible(this.locator.btnaceptarborrarproducto);
     }
+
+    //TC044------------------
+    subtotal(){
+        I.see('Subtotal',this.locator.subtotal);
+    }
+
+    //TC045------------------
+    IVA(){
+        I.see('IVA incluido', this.locator.total);
+    }
+
+    //TC046
+    total(){
+        I.see('Total', this.locator.total);
+    }
 }
 
 module.exports = new CartPage();

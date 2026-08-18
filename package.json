@@ -18,6 +18,7 @@
     "features:addcard": "codeceptjs run --features --grep \"@agregarcarrito\" --steps --verbose",
     "features:multicard": "codeceptjs run --features --grep \"@multicarrito\" --steps --verbose",
     "features:editarcarrito": "codeceptjs run --features --grep \"@multicarrito\" --steps --verbose",
+    "features:impuestos": "codeceptjs run --features --grep \"@validarimpuestos\" --steps --verbose",
     "features:whishlist": "codeceptjs run --features --grep \"@TC037\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
