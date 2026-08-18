@@ -1,5 +1,5 @@
 const {I} = inject();
-
+require('dotenv').config();
 class StockPage {
     locator = {
         inputtalla: '//label[@for="size-picker-G-undefined1041644110-1041644156"]',
@@ -10,6 +10,14 @@ class StockPage {
         spanestadoseleccionado: '//span[@class="flex-1 text-start"]',
         spandisponible: '//span[@class="whitespace-nowrap"]',
         divstock: '//div[@class="flex flex-col px-4 pb-8 pt-2.5 h-full"]',
+
+        btnrecogertienda: '//button[@data-testid="product-configurator-delivery-selection-card-Click & Collect"]',
+        btnseleccionartienda: '//button[@data-testid="product-configurator-delivery-Click & Collect-option-subselection-button"]',
+        contenteleccion: '//div[@data-testid="product-configurator-delivery__store-selector-test-id"]',
+        inputcp: '//input[@data-testid="search-termn-input"]',
+        btnbuscarcerca: '//button[@data-testid="trigger-search-button"]',
+        tiendacerca: '//div[@class="rounded border border-solid border-carbon-100"]',
+        codigoproducto: '//p[@class="text-body-sm text-low-emphasis"]',
     };
 
     //TC023--------------------------------
@@ -30,6 +38,29 @@ class StockPage {
         );
     }
 
+    //TC024--------------------------------
+    recogertienda(){
+        I.click(this.locator.btnrecogertienda);
+        
+    }
+    seleccionartienda(){
+        I.click(this.locator.btnseleccionartienda);
+        I.waitForVisible(this.locator.contenteleccion);
+    }
+    cp(){
+        I.fillField(this.locator.inputcp, process.env.CP);
+        I.click(this.locator.btnbuscarcerca);
+        
+    }
+    tiendascercanas(){
+        I.waitForElement(this.locator.tiendacerca, 5);
+        I.waitForVisible(this.locator.tiendacerca, 5);
+    }
+    
+    //TC025--------------------------------
+    codigoproducto(){
+        I.waitForVisible(this.locator.codigoproducto);
+    }
 }
 
 module.exports = new StockPage();

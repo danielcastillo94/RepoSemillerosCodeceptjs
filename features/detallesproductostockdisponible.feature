@@ -12,5 +12,10 @@ Scenario: Validar stock disponible
 @TC024
 Scenario: Ver tiendas cercanas con stock
     When El usuario escoge la talla de su agrado
-    And El usuario da clic en "Ver disponibilidad en tienda" y escoge su pais
-    Then El usuario ve las diferentes sucursales con stock disponible
+    And El usuario da clic en "Recogen en tienda"
+    And El usuario da clic en "Selecciona una tienda"
+    And El usuario ingresa su cp y da clic en "Buscar"
+    Then El usuario ve las tiendas cercanas
+@TC025
+Scenario: Validar SKU y código de producto
+    Then El usuario ve el codigo del producto

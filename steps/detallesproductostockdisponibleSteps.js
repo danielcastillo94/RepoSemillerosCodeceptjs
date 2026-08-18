@@ -22,3 +22,20 @@ Then(/^El usuario ve las diferentes sucursales con stock disponible$/, () => {
 });
 
 //TC024------------------
+When(/^El usuario da clic en "Recogen en tienda"$/, () => {
+    StockPage.recogertienda();
+});
+When(/^El usuario da clic en "Selecciona una tienda"$/, () => {
+    StockPage.seleccionartienda();
+});
+When(/^El usuario ingresa su cp y da clic en "Buscar"$/, () => {
+    StockPage.cp();
+});
+Then(/^El usuario ve las tiendas cercanas$/, () => {
+    StockPage.tiendascercanas();
+});
+
+//TC25------------------
+Then(/^El usuario ve el codigo del producto$/, () => {
+    StockPage.codigoproducto();
+})
