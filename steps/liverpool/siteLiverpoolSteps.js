@@ -18,7 +18,6 @@ Given(/^se muestran resultados relacionados con la búsqueda "tenis"$/, () => {
 });
 
 Given(/^el usuario hace clic en un producto para ver su detalle$/, () => {
-  siteLiverpoolPage.mainPageValidation();
   siteLiverpoolPage.clickFirstProduct();
 });
 
@@ -66,7 +65,7 @@ When(/^el usuario hace clic en la categoría "Hombres"$/, () => {
   siteLiverpoolPage.clickOnManCategory();
 });
 
-Then(/^se expande la categoría "Hombres"$/, () => {
+Then(/^el usuario entra a la categoría "Hombres"$/, () => {
   siteLiverpoolPage.waitUrlManCategory();
 });
 
@@ -125,7 +124,6 @@ Then(
 
 //TC-010
 When(/^el usuario aplica el filtro de marca "Nike"$/, () => {
-
   siteLiverpoolPage.scrollToPriceFilter();
   siteLiverpoolPage.searchAndSelectNike();
 });
@@ -146,86 +144,80 @@ Then(/^los productos se muestran de las marcas "Nike" y "Adidas"$/, () => {
 });
 
 //TC-012
-When(
-  /^el usuario deselecciona el filtro de marca "Nike"$/,
-  () => {
-    siteLiverpoolPage.removeNikeFilter();
-  },
-);
+When(/^el usuario deselecciona el filtro de marca "Nike"$/, () => {
+  siteLiverpoolPage.removeNikeFilter();
+});
 
 Then(/^los productos se muestran sin la marca "Nike"$/, () => {
   siteLiverpoolPage.verifyTenisTitle();
 });
 
 //TC-013
-When(/^el usuario aplica el filtro de talla "M"$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+When(/^el usuario aplica el filtro de talla "10 cm"$/, () => {
+  siteLiverpoolPage.scrollToPriceFilter();
+  siteLiverpoolPage.selectSize10cm();
 });
 
-Then(/^los productos se muestran solo en la talla "M"$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+Then(/^los productos se muestran solo en la talla "10 cm"$/, () => {
+  siteLiverpoolPage.verifySize10cm();
 });
 
 //TC-014
 When(/^el usuario aplica el filtro de color$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+  siteLiverpoolPage.scrollToPriceFilter();
+  siteLiverpoolPage.selectBlackColor();
 });
 
 Then(/^los productos se muestran solo en el color seleccionado$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+  siteLiverpoolPage.verifyBlackColor();
 });
 
 //TC-015
-When(/^el usuario aplica los filtros de talla "M" y color "Negro"$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+When(/^el usuario aplica los filtros de talla "10 cm" y color "Negro"$/, () => {
+  siteLiverpoolPage.scrollToPriceFilter();
+  siteLiverpoolPage.selectSize10cm();
+  siteLiverpoolPage.selectBlackColor();
 });
 
-Then(/^los productos se muestran solo en la talla "M" y color$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
+Then(
+  /^los productos se muestran solo en la talla "10 cm" y color "Negro"$/,
+  () => {
+    siteLiverpoolPage.verifySize10cm();
+    siteLiverpoolPage.verifyBlackColor();
+  },
+);
 
 //TC-016
-When(/^el usuario aplica el filtro de ordenamiento "Relevancia"$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
+When(
+  /^el usuario aplica el filtro de ordenamiento "Mejor calificados"$/,
+  () => {
+    siteLiverpoolPage.openSortBestRated();
+  },
+);
 
-Then(/^los productos se muestran por relevancia$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+Then(/^los productos se muestran por calificación$/, () => {
+  siteLiverpoolPage.verifyRatedFilter();
 });
 
 //TC-017
-When(
-  /^el usuario aplica el filtro de ordenamiento "Precio: Menor a Mayor"$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
 
-Then(/^los productos se muestran por precio de menor a mayor$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+When(/^el usuario aplica el filtro de ordenamiento "Mayor precio"$/, () => {
+  siteLiverpoolPage.openSortHighestPrice();
+});
+
+Then(/^los productos se muestran por precio de mayor a menor$/, () => {
+  siteLiverpoolPage.verifyRatedFilter();
 });
 
 //TC-018
-When(
-  /^el usuario aplica el filtro de ordenamiento "Precio: Mayor a Menor"$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-Then(/^los productos se muestran por precio de mayor a menor$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-019
-When(/^el usuario aplica el filtro de ordenamiento "Más Nuevo"$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+When(/^el usuario aplica el filtro de ordenamiento "Novedades"$/, () => {
+  siteLiverpoolPage.openSortNewest();
 });
 
 Then(
   /^los productos se muestran por fecha de publicación, mostrando los más recientes primero$/,
   () => {
-    siteLiverpoolPage.mainPageValidation();
+    siteLiverpoolPage.verifyRatedFilter();
   },
 );
 
@@ -233,14 +225,14 @@ Then(
 
 //TC-020
 Then(/^se muestra la página de detalle del producto seleccionado$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+  siteLiverpoolPage.ProductDetailsAndFeatures();
 });
 
 //TC-021
 Then(
   /^se valida que el nombre, precio y descripción del producto son correctos$/,
   () => {
-    siteLiverpoolPage.mainPageValidation();
+    siteLiverpoolPage.verifyProductElements();
   },
 );
 
@@ -248,49 +240,27 @@ Then(
 Then(
   /^se valida que la galería de imágenes del producto se muestra correctamente$/,
   () => {
-    siteLiverpoolPage.mainPageValidation();
+    siteLiverpoolPage.clickProductGallery();
   },
 );
 
 //TC-023
-Then(/^se valida que el stock del producto está disponible$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-024
 Then(
   /^se valida que se muestran las tiendas cercanas con stock del producto$/,
   () => {
-    siteLiverpoolPage.mainPageValidation();
+    siteLiverpoolPage.selectSizeAndCheckStore();
   },
 );
+
+//TC-024
+Then(/^el usuario visualiza el código del producto$/, () => {
+  siteLiverpoolPage.verifyProductCode();
+});
 
 //TC-025
-Then(/^se valida que el SKU y código del producto son correctos$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+Then(/^se valida que se muestra la seccion de reseñas del producto$/, () => {
+  siteLiverpoolPage.scrollToSectionTitle();
 });
-
-//TC-026
-Then(/^se valida que se muestran las reseñas del producto$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-027
-When(/^el usuario filtra las reseñas por calificación de 4 estrellas$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se muestran solo las reseñas con calificación de 4 estrellas$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-028
-Then(
-  /^se valida que las fotos en las reseñas del producto se muestran correctamente$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
 
 //@carrito
 
@@ -457,9 +427,6 @@ Then(/^se valida que el cálculo de impuestos es correcto$/, () => {
 });
 
 //TC-046
-// (Steps compartidos con los Test Case TC-033/TC-046)
-
-//TC-047
 When(/^el usuario aplica un código promocional válido$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -468,12 +435,12 @@ Then(/^se valida que el descuento se ha aplicado correctamente$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-048
+//TC-047
 Then(/^se valida que el descuento aplicado es correcto$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-049
+//TC-048
 When(/^el usuario remueve un código promocional aplicado$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -482,7 +449,7 @@ Then(/^se valida que el descuento ha sido removido correctamente$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-050
+//TC-049
 When(/^el usuario llena el formulario con nombre, email y teléfono$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -494,7 +461,7 @@ Then(
   },
 );
 
-//TC-051
+//TC-050
 When(/^el usuario ingresa un email válido en el formulario$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -503,7 +470,7 @@ Then(/^se valida que el email ingresado es correcto$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-052
+//TC-051
 When(/^el usuario ingresa un teléfono válido en el formulario$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -512,7 +479,7 @@ Then(/^se valida que el teléfono ingresado es correcto$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-053
+//TC-052
 When(/^el usuario selecciona una dirección guardada$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -521,7 +488,7 @@ Then(/^se valida que la dirección seleccionada es correcta$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-054
+//TC-053
 When(/^el usuario agrega una dirección nueva$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -530,7 +497,7 @@ Then(/^se valida que la dirección nueva se ha agregado correctamente$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-055
+//TC-054
 When(/^el usuario llena los campos de dirección$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -539,7 +506,7 @@ Then(/^se valida que los campos de dirección son correctos$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-056
+//TC-055
 When(/^el usuario accede a las opciones de envío$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -551,7 +518,7 @@ Then(
   },
 );
 
-//TC-057
+//TC-056
 When(/^el usuario selecciona la opción de envío estándar$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -563,7 +530,7 @@ Then(
   },
 );
 
-//TC-058
+//TC-057
 When(/^el usuario selecciona la opción de envío express$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -575,7 +542,7 @@ Then(
   },
 );
 
-//TC-059
+//TC-058
 When(/^el usuario selecciona la opción de pago con tarjeta$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -587,7 +554,7 @@ Then(
   },
 );
 
-//TC-060
+//TC-059
 When(/^el usuario llena los campos de tarjeta con número, fecha y CVV$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -596,7 +563,7 @@ Then(/^se valida que los campos de tarjeta son correctos$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-061
+//TC-060
 When(/^el usuario accede al resumen de compra antes de pagar$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
@@ -608,7 +575,7 @@ Then(
   },
 );
 
-//TC-062
+//TC-061
 When(/^el usuario entra al carrito y valida el registro del producto$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });

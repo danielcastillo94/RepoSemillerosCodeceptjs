@@ -18,7 +18,7 @@ class Liverpool {
     searchInput: "//input[contains(@data-testid, 'header-search-input')]",
     noResultsMessage:
       "//h2[contains(., 'Lo sentimos, no encontramos nada para')]",
-    totalArticles: "//p[normalize-space()='18629 artículos']",
+    totalArticles: "//p[@class='font-semibold text-body-base']",
     manCategoryButton:
       "(//a[@data-testid='blt26617d4f2e17657d-header-menu-categories-menu-category-item-'])[2]",
     clothingCategoryButton:
@@ -86,6 +86,38 @@ class Liverpool {
       "//button[contains(@class, 'bg-carbon-50')]//span[contains(text(),'ADIDAS')]",
     nikeAppliedFilterTag:
       "//button[contains(@class, 'bg-carbon-50')]//span[contains(text(),'NIKE')]",
+    sizeSpan: "//span[normalize-space()='Talla']",
+    size10cmCheckbox: "//input[@value='10 cm']",
+    size10cmAppliedFilterTag:
+      "//button[contains(@class, 'bg-carbon-50')]//span[contains(text(),'10 cm')]",
+    colorSpan: "//span[normalize-space()='Color']",
+    blackColorCheckbox: "//input[@value='Negro~~#000000']",
+    blackColorAppliedFilterTag:
+      "//button[contains(@class, 'bg-carbon-50')]//span[normalize-space()='Negro']",
+    sortDropdownBtn: "//button[@id='sorting-button']",
+    bestRatedOption: "//li[normalize-space()='Mejor calificados']",
+    ratingSpan: "//span[@class='body-sm-regular ml-1 whitespace-nowrap']",
+    highestPriceOption: "//li[normalize-space()='Mayor precio']",
+    newestOption: "//li[normalize-space()='Novedades']",
+    firstProductCard:
+      ".object-contain.absolute.w-full.h-full.translate-x-0.transition-transform.duration-500.ease-in-out[data-testid='1189327837-image-slider-image-0']",
+    primarySection: "//div[contains(@class, 'bg-primary')]",
+    detailsHeading:
+      "//h2[contains(@class, 'font-semibold') and contains(@class, 'text-base')]",
+    featuresTab: "//h3[normalize-space()='Características']",
+    productTitle:
+      "//h1[normalize-space()='Tenis Aspyre 3 Stripes para hombre']",
+    productPriceContainer:
+      "//div[contains(@class, 'flex-col') and contains(@class, 'gap-y-2')]//div[contains(@class, 'flex-row') and contains(@class, 'items-center')]",
+    productGalleryImage:
+      "//div[contains(@class, 'relative')]//img[@alt='Tenis Aspyre 3 Stripes para hombre 1']",
+    sizeDropdownBtn:
+      "//button[contains(@class, 'bg-carbon-25')]//div[contains(@class, 'flex gap-1 items-center')]",
+    storeAvailabilityBtn:
+      "//span[normalize-space()='Ver disponibilidad en tienda']",
+    productCodeText: "p[class='text-body-sm text-low-emphasis']",
+    sectionTitleText:
+      "//span[contains(@class, 'text-body-xl') and contains(@class, 'font-semibold') and contains(@class, 'text-high-emphasis')]",
   };
 
   mainPageValidation() {
@@ -330,6 +362,94 @@ class Liverpool {
   verifyTenisTitle() {
     I.waitForElement(this.indicators.searchTitle, 10);
     I.seeElement(this.indicators.searchTitle);
+  }
+  selectSize10cm() {
+    I.waitForElement(this.indicators.sizeSpan, 10);
+    I.waitForElement(this.indicators.size10cmCheckbox, 10);
+    I.click(this.indicators.size10cmCheckbox);
+  }
+
+  verifySize10cm() {
+    I.waitForElement(this.indicators.size10cmAppliedFilterTag, 10);
+    I.seeElement(this.indicators.size10cmAppliedFilterTag);
+  }
+  selectBlackColor() {
+    I.waitForElement(this.indicators.colorSpan, 10);
+    I.waitForElement(this.indicators.blackColorCheckbox, 10);
+    I.click(this.indicators.blackColorCheckbox);
+  }
+
+  verifyBlackColor() {
+    I.waitForElement(this.indicators.blackColorAppliedFilterTag, 10);
+    I.seeElement(this.indicators.blackColorAppliedFilterTag);
+  }
+  openSortBestRated() {
+    I.waitForElement(this.indicators.sortDropdownBtn, 10);
+    I.click(this.indicators.sortDropdownBtn);
+
+    I.waitForElement(this.indicators.bestRatedOption, 10);
+    I.click(this.indicators.bestRatedOption);
+  }
+
+  verifyRatedFilter() {
+    I.waitForElement(this.indicators.ratingSpan, 10);
+    I.seeElement(this.indicators.ratingSpan);
+  }
+  openSortHighestPrice() {
+    I.waitForElement(this.indicators.sortDropdownBtn, 10);
+    I.seeElement(this.indicators.sortDropdownBtn, 10);
+    I.wait(2);
+    I.click(this.indicators.sortDropdownBtn);
+
+    I.waitForElement(this.indicators.highestPriceOption, 10);
+    I.click(this.indicators.highestPriceOption);
+  }
+  openSortNewest() {
+    I.waitForElement(this.indicators.sortDropdownBtn, 10);
+    I.wait(2);
+    I.click(this.indicators.sortDropdownBtn);
+
+    I.waitForElement(this.indicators.newestOption, 10);
+    I.click(this.indicators.newestOption);
+  }
+  clickFirstProduct() {
+    I.waitForElement(this.indicators.firstProductCard, 10);
+    I.click(this.indicators.firstProductCard);
+  }
+  ProductDetailsAndFeatures() {
+    I.waitForElement(this.indicators.primarySection, 10);
+    I.scrollTo(this.indicators.detailsHeading);
+    I.waitForElement(this.indicators.featuresTab, 10);
+    I.click(this.indicators.featuresTab);
+  }
+  verifyProductElements() {
+    I.waitForElement(this.indicators.productTitle, 10);
+    I.seeElement(this.indicators.productTitle);
+
+    I.waitForElement(this.indicators.productPriceContainer, 10);
+    I.seeElement(this.indicators.productPriceContainer);
+  }
+  clickProductGallery() {
+    I.waitForElement(this.indicators.productGalleryImage, 10);
+    I.click(this.indicators.productGalleryImage);
+  }
+  selectSizeAndCheckStore() {
+    I.waitForElement(this.indicators.sizeDropdownBtn, 10);
+    I.click(this.indicators.sizeDropdownBtn);
+    I.pressKey("Tab");
+    I.pressKey("Enter");
+
+    I.waitForElement(this.indicators.storeAvailabilityBtn, 10);
+    I.click(this.indicators.storeAvailabilityBtn);
+  }
+  verifyProductCode() {
+    I.waitForElement(this.indicators.productCodeText, 10);
+    I.seeElement(this.indicators.productCodeText);
+  }
+  scrollToSectionTitle() {
+    I.waitForElement(this.indicators.sectionTitleText, 10);
+    I.scrollTo(this.indicators.sectionTitleText);
+    I.seeElement(this.indicators.sectionTitleText);
   }
 }
 module.exports = new Liverpool();

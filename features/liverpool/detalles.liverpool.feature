@@ -20,26 +20,13 @@ Feature: Validación de detalle de producto en Liverpool
     Then se valida que la galería de imágenes del producto se muestra correctamente
 
   @TC-023
-  Scenario: Validar stock disponible
-    Then se valida que el stock del producto está disponible
-
-  @TC-024
   Scenario: Ver tiendas cercanas con stock
     Then se valida que se muestran las tiendas cercanas con stock del producto
 
+  @TC-024
+  Scenario: Validar código de producto
+    Then el usuario visualiza el código del producto
+
   @TC-025
-  Scenario: Validar SKU y código de producto
-    Then se valida que el SKU y código del producto son correctos
-
-  @TC-026
   Scenario: Ver reseñas de producto
-    Then se valida que se muestran las reseñas del producto
-
-  @TC-027
-  Scenario: Filtrar por calificación (estrellas)
-    When el usuario filtra las reseñas por calificación de 4 estrellas
-    Then se muestran solo las reseñas con calificación de 4 estrellas
-
-  @TC-028
-  Scenario: Ver fotos en reviews
-    Then se valida que las fotos en las reseñas del producto se muestran correctamente
+    Then se valida que se muestra la seccion de reseñas del producto

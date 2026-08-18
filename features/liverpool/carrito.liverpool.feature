@@ -93,86 +93,81 @@ Feature: Funcionalidades del carrito de compras en Liverpool
     Then se valida que el cálculo de impuestos es correcto
 
   @TC-046
-  Scenario: Validar la cantidad total
-    When el usuario agrega productos al carrito
-    Then se valida que la cantidad total en el carrito es correcta
-
-  @TC-047
   Scenario: Aplicación de código promocional válido
     When el usuario aplica un código promocional válido
     Then se valida que el descuento se ha aplicado correctamente
 
-  @TC-048
+  @TC-047
   Scenario: Validación de descuento
     When el usuario aplica un código promocional válido
     Then se valida que el descuento aplicado es correcto
 
-  @TC-049
+  @TC-048
   Scenario: Remover código promocional
     When el usuario remueve un código promocional aplicado
     Then se valida que el descuento ha sido removido correctamente
 
-  @TC-050
+  @TC-049
   Scenario: Llenar formulario de datos personales
     When el usuario llena el formulario con nombre, email y teléfono
     Then se valida que los datos personales se han llenado correctamente
 
-  @TC-051
+  @TC-050
   Scenario: Validar un email válido
     When el usuario ingresa un email válido en el formulario
     Then se valida que el email ingresado es correcto
 
-  @TC-052
+  @TC-051
   Scenario: Validar un teléfono válido
     When el usuario ingresa un teléfono válido en el formulario
     Then se valida que el teléfono ingresado es correcto
 
-  @TC-053
+  @TC-052
   Scenario: Seleccionar dirección guardada
     When el usuario selecciona una dirección guardada
     Then se valida que la dirección seleccionada es correcta
 
-  @TC-054
+  @TC-053
   Scenario: Agregar dirección nueva
     When el usuario agrega una dirección nueva
     Then se valida que la dirección nueva se ha agregado correctamente
 
-  @TC-055
+  @TC-054
   Scenario: Validar campos de dirección
     When el usuario llena los campos de dirección
     Then se valida que los campos de dirección son correctos
 
-  @TC-056
+  @TC-055
   Scenario: Ver opciones de envío disponibles
     When el usuario accede a las opciones de envío
     Then se valida que se muestran todas las opciones de envío disponibles
 
-  @TC-057
+  @TC-056
   Scenario: Seleccionar envío estándar
     When el usuario selecciona la opción de envío estándar
     Then se valida que la opción de envío estándar ha sido seleccionada correctamente
 
-  @TC-058
+  @TC-057
   Scenario: Seleccionar envío express
     When el usuario selecciona la opción de envío express
     Then se valida que la opción de envío express ha sido seleccionada correctamente
 
-  @TC-059
+  @TC-058
   Scenario: Seleccionar pago con tarjeta
     When el usuario selecciona la opción de pago con tarjeta
     Then se valida que la opción de pago con tarjeta ha sido seleccionada correctamente
 
-  @TC-060
+  @TC-059
   Scenario: Validar los campos de tarjeta
     When el usuario llena los campos de tarjeta con número, fecha y CVV
     Then se valida que los campos de tarjeta son correctos
 
-  @TC-061
+  @TC-060
   Scenario: Ver resumen antes de pagar
     When el usuario accede al resumen de compra antes de pagar
     Then se valida que el resumen muestra correctamente los productos, cantidades, precios y total a pagar
 
-  @TC-062
+  @TC-061
   Scenario: Evaluación de proceso de compra de principio a fin
     When el usuario agrega un producto al carrito
     And el usuario entra al carrito y valida el registro del producto

@@ -8,7 +8,7 @@ Feature: Navegación en la página de Liverpool
   @TC-004
   Scenario: Expandir categoría principal
     When el usuario hace clic en la categoría "Hombres"
-    Then se expande la categoría "Hombres"
+    Then el usuario entra a la categoría "Hombres"
 
   @TC-005
   Scenario: Acceder a subcategoría

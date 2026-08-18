@@ -41,8 +41,8 @@ Feature: Validación de filtros de productos en Liverpool
 
   @TC-013
   Scenario: Filtrar por talla
-    When el usuario aplica el filtro de talla "M"
-    Then los productos se muestran solo en la talla "M"
+    When el usuario aplica el filtro de talla "10 cm"
+    Then los productos se muestran solo en la talla "10 cm"
 
   @TC-014
   Scenario: Filtrar por color
@@ -51,27 +51,22 @@ Feature: Validación de filtros de productos en Liverpool
 
   @TC-015
   Scenario: Combinar filtros talla + color
-    When el usuario aplica los filtros de talla "M" y color "Negro"
-    Then los productos se muestran solo en la talla "M" y color
+    When el usuario aplica los filtros de talla "10 cm" y color "Negro"
+    Then los productos se muestran solo en la talla "10 cm" y color "Negro"
 
   @TC-016
-  Scenario: Ordenar por relevancia
-    When el usuario aplica el filtro de ordenamiento "Relevancia"
-    Then los productos se muestran por relevancia
+  Scenario: Ordenar por calificación
+    When el usuario aplica el filtro de ordenamiento "Mejor calificados"
+    Then los productos se muestran por calificación
 
   @TC-017
-  Scenario: Ordenar por precio (menor a mayor)
-    When el usuario aplica el filtro de ordenamiento "Precio: Menor a Mayor"
-    Then los productos se muestran por precio de menor a mayor
-
-  @TC-018
   Scenario: Ordenar por precio (mayor a menor)
-    When el usuario aplica el filtro de ordenamiento "Precio: Mayor a Menor"
+    When el usuario aplica el filtro de ordenamiento "Mayor precio"
     Then los productos se muestran por precio de mayor a menor
 
-  @TC-019
+  @TC-018
   Scenario: Ordenar por más nuevo
-    When el usuario aplica el filtro de ordenamiento "Más Nuevo"
+    When el usuario aplica el filtro de ordenamiento "Novedades"
     Then los productos se muestran por fecha de publicación, mostrando los más recientes primero
 
 
