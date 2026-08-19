@@ -6,7 +6,7 @@ Feature: Validación de login y gestión de cuenta de usuario en Liverpool
     And el usuario hace clic en el botón "Iniciar sesión"
     And se muestra el formulario de login
 
-  @TC-063
+  @TC-029
   Scenario: Registrar cuenta nueva
     When el usuario hace clic en "Crear cuenta"
     And ingresa un correo y contraseña validos
@@ -17,14 +17,14 @@ Feature: Validación de login y gestión de cuenta de usuario en Liverpool
     And el usuario ingresará su número telefonico y hace click en "Continuar"
     Then se muestra un mensaje de confirmación de registro exitoso
 
-  @TC-064
+  @TC-030
   Scenario: Login con cuenta existente
     When el usuario ingresa su correo electrónico y contraseña válidos
     And hace clic en "Iniciar sesión"
     And el usuario ingresa el código de verificación manualmente y confirma la sesión
     Then se redirige al usuario a la página principal
 
-  @TC-065
+  @TC-031
   Scenario: Ver perfil y direcciones guardadas
     When el usuario ingresa su correo electrónico y contraseña válidos
     And hace clic en "Iniciar sesión"

@@ -223,12 +223,12 @@ Then(
 
 //@detalles
 
-//TC-020
+//TC-019
 Then(/^se muestra la página de detalle del producto seleccionado$/, () => {
   siteLiverpoolPage.ProductDetailsAndFeatures();
 });
 
-//TC-021
+//TC-020
 Then(
   /^se valida que el nombre, precio y descripción del producto son correctos$/,
   () => {
@@ -236,7 +236,7 @@ Then(
   },
 );
 
-//TC-022
+//TC-021
 Then(
   /^se valida que la galería de imágenes del producto se muestra correctamente$/,
   () => {
@@ -244,7 +244,7 @@ Then(
   },
 );
 
-//TC-023
+//TC-022
 Then(
   /^se valida que se muestran las tiendas cercanas con stock del producto$/,
   () => {
@@ -252,19 +252,19 @@ Then(
   },
 );
 
-//TC-024
+//TC-023
 Then(/^el usuario visualiza el código del producto$/, () => {
   siteLiverpoolPage.verifyProductCode();
 });
 
-//TC-025
+//TC-024
 Then(/^se valida que se muestra la seccion de reseñas del producto$/, () => {
   siteLiverpoolPage.scrollToSectionTitle();
 });
 
 //@carrito
 
-//TC-061
+//TC-025
 When(/^el usuario agrega un producto al carrito$/, () => {
   siteLiverpoolPage.addToBag();
 });
@@ -292,7 +292,7 @@ Then(
   },
 );
 
-//TC-041
+//TC-026
 When(/^el usuario entra al carrito$/, () => {
   siteLiverpoolPage.openBag();
 });
@@ -305,12 +305,12 @@ Then(/^se valida que la cantidad se ha actualizado correctamente$/, () => {
   siteLiverpoolPage.verifyProductQuantity();
 });
 
-//TC-042
+//TC-027
 When(/^el usuario disminuye la cantidad de un producto en el carrito$/, () => {
   siteLiverpoolPage.clickRemoveButton();
 });
 
-//TC-043
+//TC-028
 When(/^el usuario remueve un producto del carrito$/, () => {
   siteLiverpoolPage.clickDeleteButton();
 });
@@ -324,7 +324,7 @@ Then(
 
 //@login
 
-//TC-063
+//TC-029
 When(/^el usuario hace clic en "Crear cuenta"$/, () => {
   siteLiverpoolPage.clickCreateAccountLink();
 });
@@ -363,7 +363,7 @@ Then(/^se muestra un mensaje de confirmación de registro exitoso$/, () => {
   siteLiverpoolPage.navigateToLoginDirect();
 });
 
-//TC-064
+//TC-030
 When(/^el usuario ingresa su correo electrónico y contraseña válidos$/, () => {
   siteLiverpoolPage.fillLoginForm();
 });
@@ -383,7 +383,7 @@ Then(/^se redirige al usuario a la página principal$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });
 
-//TC-065
+//TC-031
 When(/^se redirige al usuario a la página principal$/, () => {
   siteLiverpoolPage.mainPageValidation();
 });

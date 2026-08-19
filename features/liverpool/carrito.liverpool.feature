@@ -7,7 +7,7 @@ Feature: Funcionalidades del carrito de compras en Liverpool
     And se muestran resultados relacionados con la búsqueda "tenis"
     And el usuario hace clic en un producto para ver su detalle
 
-  @TC-061
+  @TC-025
   Scenario: Evaluación de proceso de compra
     When el usuario agrega un producto al carrito
     And el usuario entra al carrito y valida el registro del producto
@@ -16,14 +16,14 @@ Feature: Funcionalidades del carrito de compras en Liverpool
     And el usuario revisa el resumen de compra
     Then se valida que el proceso de compra se ha completado correctamente
 
-  @TC-041
+  @TC-026
   Scenario: Aumentar cantidad en carrito
     When el usuario agrega un producto al carrito
     And el usuario entra al carrito
     And el usuario aumenta la cantidad de un producto en el carrito
     Then se valida que la cantidad se ha actualizado correctamente
 
-  @TC-042
+  @TC-027
   Scenario: Disminuir cantidad en carrito
     When el usuario agrega un producto al carrito
     And el usuario entra al carrito
@@ -31,7 +31,7 @@ Feature: Funcionalidades del carrito de compras en Liverpool
     And el usuario disminuye la cantidad de un producto en el carrito
     Then se valida que la cantidad se ha actualizado correctamente
 
-  @TC-043
+  @TC-028
   Scenario: Remover producto del carrito
     When el usuario agrega un producto al carrito
     And el usuario entra al carrito
