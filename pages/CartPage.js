@@ -35,6 +35,8 @@ class CartPage {
         btnaceptarborrarproducto: '//span[contains(text(),"Aceptar")]',
         total: '//p[contains(text(),"Total")]',
         subtotal: '//p[contains(text(),"Subtotal")]',
+        headerbolsa: '//h1[contains(text(),"Mi bolsa")]',
+        btncomprartodo: '//button[@data-testid="checkout-payment-summary-button"]',
     };
     //metodo de navegacion para el TC032
     regresarinicio(){
@@ -92,10 +94,9 @@ class CartPage {
     validarcarrito(){
         I.click(this.locator.btncarrito);
         I.waitForURL(this.urls.urlcarrito);
-        I.waitForVisible(this.locator.btnseleccionarproducto,
-                        this.locator.btneliminarproducto3,
-                        this.locator.btnaddproduc3card,
-                        this.locator.btndisminuirproduc3card, 5
+        I.waitForVisible(this.locator.headerbolsa,
+                        this.locator.btnseleccionarproducto,
+                        this.locator.btncomprartodo, 5
         );
         I.scrollPageToBottom();
     }
