@@ -1,13 +1,13 @@
 const { I } = inject();
 
-class rickMortyEpisodiosPage {
+class RickMortyEpisodiosPage {
     urls = {
         home: '',
         apiepisodios: 'https://rickandmortyapi.com/api/episode',
-        apipersonaje1: 'https://rickandmortyapi.com/api/episode/1',
+        apiepisodio1: 'https://rickandmortyapi.com/api/episode/1',
     }
     
-   mockEpisodios(episodio1, episodio2) {
+    mockearEpisodios(episodio1, episodio2) {
     I.usePlaywrightTo('mokear lista de episodios', async ({ page }) => {
         await page.route('https://rickandmortyapi.com/api/episode', route => {
             route.fulfill({
@@ -48,7 +48,7 @@ class rickMortyEpisodiosPage {
 }
 
     mockError503() {
-        I.usePlaywrightTo('simular error 500', async ({ page }) => {
+        I.usePlaywrightTo('simular error 503', async ({ page }) => {
             await page.route('https://rickandmortyapi.com/api/episode', route => {
                 route.fulfill({
                     status: 503,
@@ -101,4 +101,4 @@ class rickMortyEpisodiosPage {
 
 }
 
-module.exports = new rickMortyEpisodiosPage();
+module.exports = new RickMortyEpisodiosPage();

@@ -16,7 +16,7 @@ exports.config = {
     I: "./steps_file.js", /** Crear al actor, quien va a realizar las acciones */
     karelPage: "./pages/karelPage.js", /** Creacion de la page Object */
     rickMortyMockPage: "./pages/rickMortyMockPage.js", /** Page Object para demo de Network Mocking */
-    rickMortyEpisodiosPage: "./pages/rickMortyEpisodiosPage.js"
+    RickMortyEpisodiosPage: "./pages/rickMortyEpisodiosPage.js"
   },
 
   gherkin: {
