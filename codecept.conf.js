@@ -25,7 +25,8 @@ exports.config = {
     karelPage: "./pages/karelPage.js",
     BNPage: "./pages/BNPage.js",
     livFilterPage: "./pages/livFilterPage.js",
-    ODPage: "./pages/ODPage.js"
+    ODPage: "./pages/ODPage.js",
+    CarritoPage: './pages/CarritoPage.js'
   },
 
   gherkin: {
@@ -34,7 +35,8 @@ exports.config = {
       "./steps/karelSteps.js",
       "./steps/BNSteps.js",
       "./steps/livFilterSteps.js",
-      "./steps/ODSteps.js"
+      "./steps/ODSteps.js",
+      "./steps/CarritoSteps.js"
 
     ],
   },
