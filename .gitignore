@@ -4,3 +4,5 @@ allure-results/
 allure-report/
 .env2
 .env
+.github/
+workflows/
