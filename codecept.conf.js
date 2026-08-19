@@ -44,7 +44,8 @@ exports.config = {
       "./steps/WishlistSteps.js",
       "./steps/editarcarritoSteps.js",
       "./steps/carritoimpuestosSteps.js",
-      "./steps/codigopromocionSteps.js"
+      "./steps/codigopromocionSteps.js",
+      "./steps/CheckoutSteps.js"
     ],
   },
 
