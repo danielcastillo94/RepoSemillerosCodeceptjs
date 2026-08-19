@@ -45,10 +45,11 @@ class ResultPage {
         btnrangoprecio: '//button[@data-testid="$100.0 -$500.0"]',
 
         btniniciosesion: '//button[@data-testid="blt26617d4f2e17657d-header-menu-dropdown-button"]',
-        inputcorreo: '//input[@class="input cd9adde91 c2de5e435"]',
-        inputcontrasenia: '//input[@class="input cd9adde91 c5c2bd33f"]',
-        btniniciarsesion: '//button[@class="c73a1ad3f c39d6a68a cd1d573fa c11133b5c c91f7cb68"]',
-        btnaceptarsms: '//button[@class="c73a1ad3f c39d6a68a cd1d573fa c11133b5c ca71de123"]',
+        inputcorreo: '//input[@id="username"]',
+        inputcontrasenia: '//input[@id="password"]',
+        btniniciarsesion: '//button[contains(text(),"Iniciar sesión")]',
+        btnaceptarsms: '//button[contains(text(),"Continuar")]',
+
         ordenrelevante: '//li[contains(text(),"Mejor calificados")]',
         ordenmenor: '//li[contains(text(),"Menor precio")]',
         ordenmayor: '//li[contains(text(),"Mayor precio")]',
@@ -65,7 +66,7 @@ class ResultPage {
         I.fillField(this.locator.inputcorreo, process.env.EMAIL);
         I.fillField(this.locator.inputcontrasenia, process.env.PASSWORD);
         I.click(this.locator.btniniciarsesion);
-        I.wait(40);
+        I.wait(30);
         I.click(this.locator.btnaceptarsms);
     }
     buscarproducto(){
