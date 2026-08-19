@@ -25,7 +25,7 @@ Scenario: Modificar la respuesta real del primer episodio
 Scenario: Mock de un episodio específico por ID
     Given el mock del episodio con ID 3 devuelve "Prueba de Automatización", fecha "Semilleros 2026" y código "S99E99"
     When el usuario consulta el personaje con ID 3
-    When el usuario consulta el episodio con ID 3
+    And el usuario consulta el episodio con ID 3
     Then ve el episodio "Prueba de Automatización" en la respuesta
     And la respuesta contiene el mensaje "Semilleros 2026"
     And la respuesta contiene el mensaje "S99E99"
