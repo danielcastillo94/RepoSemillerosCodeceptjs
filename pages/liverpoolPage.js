@@ -2,6 +2,13 @@ const { I } = inject();
 
 module.exports = {
 
+    /*
+     * Page Object Liverpool
+     * Los selectores viven en fields y las acciones se reutilizan entre escenarios.
+     * Los métodos "Disponible" se usan cuando talla/color son prerrequisitos y no el objetivo de la prueba.
+     */
+
+
     fields: {
         buscadorHome:
             '[data-testid="blt26617d4f2e17657d-header-search-input"]',
@@ -67,7 +74,7 @@ module.exports = {
     '[data-testid="dropdown-sorting-button"]',
  
     nombreProducto:
-        'h1.text-body-2xl',
+        'h1:visible',
 
     precioProducto:
         '[data-testid$="-configurator-price"] [data-testid="discounted"]',
@@ -107,6 +114,19 @@ module.exports = {
 
     checkEntrega:
     '[data-testid="selection-checkmark"]',
+
+    // Variantes reutilizables: evitan amarrar carrito/entrega a una talla o color específico.
+    tallasProducto:
+    'input[name="size-picker"]:not([disabled])',
+
+    coloresProducto:
+    'button[data-testid^="ml-image-picker-image-"]',
+
+    inputCantidadCarrito:
+    'input[name="quantity"]',
+
+    botonConfirmarEliminacion:
+    '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]',
 },
 
     abrirLiverpool() {
@@ -200,8 +220,8 @@ seleccionarRangoPrecio() {
 },
 
 validarFiltroPrecio() {
-    I.waitForElement(this.fields.resultados, 10);
-    I.seeElement(this.fields.resultados);
+    // Reutiliza la validación general del listado.
+    return this.validarResultados();
 },
 
 ingresarRangoPrecio(minimo, maximo) {
@@ -285,12 +305,8 @@ seleccionarMarca(marca) {
 },
 
 deseleccionarMarca(marca) {
-    const selectorMarca =
-        `//label[.//*[@data-testid="item-${marca}"]]`;
-
-    I.waitForVisible(selectorMarca, 10);
-    I.click(selectorMarca);
-    I.wait(3);
+    // El mismo click activa o desactiva el checkbox de marca.
+    return this.seleccionarMarca(marca);
 },
 
 async abrirFiltroTalla() {
@@ -460,7 +476,7 @@ async seleccionarProducto(producto) {
 
         const tarjeta = page
             .locator(this.fields.tarjetasProducto)
-            .filter({ hasText: producto })
+            .filter({ has: page.getByText(producto, { exact: true }) })
             .first();
 
         await tarjeta.waitFor({
@@ -549,6 +565,20 @@ seleccionarTallaProducto(talla) {
     I.wait(1);
 },
 
+// Reutilizable para casos donde la talla solo es un requisito para agregar al carrito.
+async seleccionarTallaDisponibleProducto() {
+    await I.usePlaywrightTo('seleccionar una talla disponible del producto', async ({ page }) => {
+        const tallas = page.locator(this.fields.tallasProducto);
+        await tallas.first().waitFor({ state: 'attached', timeout: 10000 });
+
+        const label = tallas.first().locator('xpath=ancestor::label[1]');
+        await label.waitFor({ state: 'visible', timeout: 10000 });
+        await label.click();
+    });
+
+    I.wait(1);
+},
+
 agregarProductoBolsa() {
     I.waitForVisible(this.fields.botonAgregarBolsa, 10);
     I.click(this.fields.botonAgregarBolsa);
@@ -556,7 +586,8 @@ agregarProductoBolsa() {
 },
 
 validarProductoAgregado() {
-    I.wait(2);
+    // Reutiliza la misma validación del badge del carrito.
+    return this.validarCantidadCarrito('1');
 },
 
 validarCantidadCarrito(cantidad) {
@@ -565,15 +596,38 @@ validarCantidadCarrito(cantidad) {
 },
 
 validarConfirmacionAgregado() {
-    I.waitForVisible(this.fields.cantidadCarrito, 10);
-    I.see('1', this.fields.cantidadCarrito);
+    // Misma evidencia que LP030, sin duplicar lógica.
+    return this.validarCantidadCarrito('1');
 },
 
 seleccionarColorProducto(color) {
+    // Se conserva para los casos que realmente necesitan un color específico.
     const opcionColor = `//p[normalize-space(.)="${color}"]`;
 
     I.waitForVisible(opcionColor, 10);
     I.click(opcionColor);
+    I.wait(1);
+},
+
+// Reutilizable para carrito, entrega y E2E: evita fallos cuando cambia el catálogo.
+async seleccionarColorDisponible() {
+    await I.usePlaywrightTo('seleccionar un color disponible del producto', async ({ page }) => {
+        const colores = page.locator(this.fields.coloresProducto);
+        const cantidad = await colores.count();
+
+        if (cantidad === 0) {
+            // Algunos productos no requieren seleccionar color.
+            return;
+        }
+
+        const primerColor = colores.first();
+        await primerColor.waitFor({ state: 'visible', timeout: 10000 });
+
+        if (await primerColor.isEnabled()) {
+            await primerColor.click();
+        }
+    });
+
     I.wait(1);
 },
 
@@ -604,29 +658,19 @@ disminuirCantidadCarrito() {
 },
 
 validarCantidadCarritoProducto(cantidad) {
-    I.seeInField('input[name="quantity"]', cantidad);
-},
-
-disminuirCantidadCarrito() {
-    I.waitForVisible('button[aria-label="decrease"]', 10);
-    I.click('button[aria-label="decrease"]');
-    I.wait(1);
+    I.seeInField(this.fields.inputCantidadCarrito, cantidad);
 },
 
 removerProductoCarrito() {
-    I.waitForVisible('button[aria-label="decrease"]', 10);
-    I.click('button[aria-label="decrease"]');
+    // Con cantidad 1 Liverpool reutiliza decrease como acción de eliminar.
+    I.waitForVisible(this.fields.botonDisminuirCantidadCarrito, 10);
+    I.click(this.fields.botonDisminuirCantidadCarrito);
     I.wait(2);
 },
 
 confirmarEliminacionProducto() {
-    I.waitForVisible(
-        '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]',
-        10
-    );
-    I.click(
-        '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]'
-    );
+    I.waitForVisible(this.fields.botonConfirmarEliminacion, 10);
+    I.click(this.fields.botonConfirmarEliminacion);
     I.wait(2);
 },
 
@@ -677,7 +721,8 @@ validarOpcionEntregaSeleccionada(opcion) {
 },
 
 validarResultadosBusqueda() {
-    I.waitForElement('#plp-page-card-product-list', 10);
+    // LP062 reutiliza la validación general ya usada desde LP001.
+    return this.validarResultados();
 },
 
 }
