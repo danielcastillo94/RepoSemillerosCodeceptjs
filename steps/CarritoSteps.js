@@ -6,7 +6,7 @@ Given(/^El usuario se encuentra en la página de detalle de un producto$/, () =>
 });
 
 When(/^El usuario selecciona el producto y hace clic en "Agregar al carrito"$/, () => {
-    CarritoPage.agregarProducto();
+    CarritoPage.agregarProductoAlCarrito();
 });
 
 When(/^El usuario confirma si quiere o no el seguro para su producto$/, () => {
@@ -24,11 +24,11 @@ Given(/^El usuario se encuentra en la página de detalle de un producto$/, () =>
 });
 
 When(/^El usuario selecciona el producto y hace clic en "Agregar al carrito"$/, () => {
-    CarritoPage.agregarProducto();
+    CarritoPage.agregarProductoAlCarrito();
 });
 
-When(/^El usuario confirma si quiere o no el seguro para su producto$/, () => {
-    CarritoPage.agregarProductoConSeguroOpcional();
+When(/^El usuario confirma si quiere o no el seguro para su producto$/, async () => {
+    await CarritoPage.agregarProductoConSeguroOpcional();
 
 });
 
@@ -40,61 +40,76 @@ When(/^El usuario se encuentra en la página del carrito$/, () => {
     CarritoPage.homeCart();
 });
 
-Then(/^El usuario valida que la cantidad de producto en el carrito sea correcta y corresponda a los productos agregados$/, () => {
-    CarritoPage.validarCantidadCarrito();
+Then(/^El usuario valida que la cantidad de "([^"]*)" producto en el carrito sea correcta y corresponda a los productos agregados$/, async (cantidadEsperada) => {
+    CarritoPage.validarCantidadCarrito(cantidadEsperada);
 });
 
 
 //TC0031----------------------------------------------------------------------------
-Given(/^El usuario se encuentra en la página de detalle de varios productos$/, () => {
-    CarritoPage.homeLiverpool();
+Given(/^El usuario se encuentra en la página de celulares$/, () => {
+    CarritoPage.homeCelularesLiverpool();
 });
 
-When(/^El usuario agrega más de tres productos al carrito$/, () => {
-    CarritoPage.agregarMultiplesProductos();
-});
+When(/^El usuario agrega los productos Apple, Motorola y Samsung al carrito$/, async () => {
+    await CarritoPage.agregarMultiplesProductos("Apple");
+    await CarritoPage.agregarMultiplesProductos("Motorola");
+    await CarritoPage.agregarMultiplesProductos("Samsung");
 
-//TC0032----------------------------------------------------------------------------
+});
+Then(/^El usuario valida que los productos se hayan agregado correctamente al carrito$/, () => {
+    CarritoPage.validarProductoAgregado();
+});
+Then(/^El usuario valida que la cantidad de "([^"]*)" productos en el carrito sea correcta y corresponda a los productos agregados$/, async (cantidadEsperada) => {
+    await CarritoPage.validarCantidadCarrito(cantidadEsperada);
+});
 Then(/^El usuario valida que el subtotal del carrito se haya actualizado correctamente según los productos agregados$/, () => {
     CarritoPage.validarSubtotalActualizado();
 });
 
-//TC0033----------------------------------------------------------------------------
-When(/^El usuario selecciona el icono de favoritos$/, () => {
-    CarritoPage.agregarAFavoritos();
+
+
+
+// Paso de inicio de sesión leyendo de .env
+Given(/^El usuario ha iniciado sesión en Liverpool$/, async () => {
+    await CarritoPage.iniciarSesion();
 });
 
-Then(/^El usuario valida que el producto se haya agregado a su lista de favoritos$/, () => {
-    CarritoPage.validarProductoEnFavoritos();
+When(/^El usuario se encuentra en la página de detalle de un producto$/, async () => {
+    // Lógica para ir a un producto (por ejemplo, mediante búsqueda direct a URL)
+    I.amOnPage('https://www.liverpool.com.mx/tienda/pdp/celular/1191389946');
 });
 
-//TC0034----------------------------------------------------------------------------
-Given(/^El usuario se encuentra en la página de favoritos$/, () => {
-    CarritoPage.homeWishlist();
+When(/^El usuario selecciona el icono de favoritos$/, async () => {
+    await CarritoPage.agregarAFavoritos();
 });
 
-Then(/^El usuario valida que la cantidad de productos en favoritos sea correcta y corresponda a los productos agregados$/, () => {
-    CarritoPage.validarCantidadFavoritos();
+Then(/^El usuario valida que el producto se haya agregado a su lista de favoritos$/, async () => {
+    await CarritoPage.validarProductoEnFavoritos();
 });
 
-//TC0035----------------------------------------------------------------------------
-When(/^El usuario selecciona un producto y hace clic en "Remover de favoritos"$/, () => {
-    CarritoPage.removerDeFavoritos();
+When(/^El usuario se navega a la página de favoritos$/, async () => {
+    await CarritoPage.homeWishlist();
 });
 
-Then(/^El usuario valida que el producto se haya removido correctamente de favoritos$/, () => {
-    CarritoPage.validarFavoritoRemovido();
+Then(/^El usuario valida que la cantidad de productos en favoritos sea "([^"]*)"$/, async (cantidad) => {
+    await CarritoPage.validarCantidadFavoritos(cantidad);
 });
 
-//TC0036----------------------------------------------------------------------------
-When(/^El usuario aumenta la cantidad de un producto$/, () => {
-    CarritoPage.aumentarCantidad();
+When(/^El usuario selecciona un producto y hace clic en "Remover de favoritos"$/, async () => {
+    await CarritoPage.removerDeFavoritos();
 });
 
-Then(/^El usuario valida que la cantidad del producto se haya actualizado correctamente en el carrito$/, () => {
-    CarritoPage.validarCantidadActualizada();
+Then(/^El usuario valida que el producto se haya removido correctamente de favoritos$/, async () => {
+    await CarritoPage.validarFavoritoRemovido();
 });
 
+When(/^El usuario aumenta la cantidad de un producto$/, async () => {
+    await CarritoPage.aumentarCantidad();
+});
+
+Then(/^El usuario valida que la cantidad del producto se haya actualizado correctamente en el carrito$/, async () => {
+    await CarritoPage.validarCantidadActualizada();
+});
 //TC0037----------------------------------------------------------------------------
 When(/^El usuario disminuye la cantidad de un producto$/, () => {
     CarritoPage.disminuirCantidad();

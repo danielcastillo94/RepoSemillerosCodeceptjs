@@ -16,42 +16,28 @@ Feature: Correcto funcionamiento de el carrito
         When El usuario confirma si quiere o no el seguro para su producto
         When El usuario va a la página de carrito
         When  El usuario se encuentra en la página del carrito
-        Then El usuario valida que la cantidad de producto en el carrito sea correcta y corresponda a los productos agregados
+        Then El usuario valida que la cantidad de "1" producto en el carrito sea correcta y corresponda a los productos agregados
 
     # Agregar al Carrito - Múltiples Productos
 
     @TC0031
-    Scenario: Agregar más de tres productos al carrito
-        Given El usuario se encuentra en la página de detalle de varios productos
-        When El usuario agrega más de tres productos al carrito
+    Scenario: Agregar tres productos al carrito
+        Given El usuario se encuentra en la página de celulares
+        When El usuario agrega los productos Apple, Motorola y Samsung al carrito
         Then El usuario valida que los productos se hayan agregado correctamente al carrito
-
-    @TC0032
-    Scenario: Validar cantidad de multiples productos en el carrito
-        Given El usuario se encuentra en la página del carrito
-        Then El usuario valida que la cantidad de productos en el carrito sea correcta y corresponda a los productos agregados
-
-    @TC0033
-    Scenario: Ver subtotal actualizado en el carrito
-        Given El usuario se encuentra en la página del carrito
-        Then El usuario valida que el subtotal del carrito se haya actualizado correctamente según los productos agregados
+        And  El usuario valida que la cantidad de "3" productos en el carrito sea correcta y corresponda a los productos agregados
+        And  El usuario valida que el subtotal del carrito se haya actualizado correctamente según los productos agregados
 
     # Agregar a Favoritos
 
-    @TC0034
-    Scenario: Agregar producto a favoritos
-        Given El usuario se encuentra en la página de detalle de un producto
+    @TC0032_Favoritos
+    Scenario: Agregar, validar y remover un producto de favoritos
+        Given El usuario ha iniciado sesión en Liverpool
+        And El usuario se encuentra en la página de detalle de un producto
         When El usuario selecciona el icono de favoritos
         Then El usuario valida que el producto se haya agregado a su lista de favoritos
-
-    @TC0035
-    Scenario: Validar cantidad de productos en favoritos
-        Given El usuario se encuentra en la página de favoritos
-        Then El usuario valida que la cantidad de productos en favoritos sea correcta y corresponda a los productos agregados
-
-    @TC0036
-    Scenario: Remover producto de favoritos
-        Given El usuario se encuentra en la página de favoritos
+        When El usuario se navega a la página de favoritos
+        Then El usuario valida que la cantidad de productos en favoritos sea "1"
         When El usuario selecciona un producto y hace clic en "Remover de favoritos"
         Then El usuario valida que el producto se haya removido correctamente de favoritos
 

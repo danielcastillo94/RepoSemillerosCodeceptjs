@@ -1,3 +1,4 @@
+require('dotenv').config();//Carga las variables del archivo . env desde el inicio
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: './steps/*_steps.js',
