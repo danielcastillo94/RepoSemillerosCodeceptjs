@@ -10,6 +10,7 @@ class Liverpool {
     filterSortPrice: "sort=sortPrice",
     loginDirectUrl:
       "https://login.liverpool.com.mx/u/login?state=hKFo2SB5S0MyUjBFS1J5ZHhDY0NJZE5VdmJsYjdka1Y2RXNpOKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEpUcnhoWThadFBoSEJXQW5TNUNfY216aEg3c0J1TjFao2NpZNkgSjFXOVJPZ1RZaWltbkM5UGl0ZDJKd3Y3RXpqV05VQWo",
+    carrito: "https://www.liverpool.com.mx/tienda/cart",
   };
   indicators = {
     searchTitle: "//h1[normalize-space()='Tenis']",
@@ -99,8 +100,7 @@ class Liverpool {
     ratingSpan: "//span[@class='body-sm-regular ml-1 whitespace-nowrap']",
     highestPriceOption: "//li[normalize-space()='Mayor precio']",
     newestOption: "//li[normalize-space()='Novedades']",
-    firstProductCard:
-      ".object-contain.absolute.w-full.h-full.translate-x-0.transition-transform.duration-500.ease-in-out[data-testid='1189327837-image-slider-image-0']",
+    firstProductCard: "(//div[@class='flex-1 gap-2 flex flex-col'])[1]",
     primarySection: "//div[contains(@class, 'bg-primary')]",
     detailsHeading:
       "//h2[contains(@class, 'font-semibold') and contains(@class, 'text-base')]",
@@ -118,6 +118,25 @@ class Liverpool {
     productCodeText: "p[class='text-body-sm text-low-emphasis']",
     sectionTitleText:
       "//span[contains(@class, 'text-body-xl') and contains(@class, 'font-semibold') and contains(@class, 'text-high-emphasis')]",
+    specificSizeLabel: "//p[normalize-space()='Tamaño:']",
+    addToCartBtn: "//span[normalize-space()='Agregar a mi bolsa']",
+    cartIcon:
+      "//div[@class='flex h-full items-center relative gap-5 justify-between flex-1']//span[@class='24px material-icons-outlined notranslate MuiIcon-root MuiIcon-fontSizeMedium css-fd29xp'][normalize-space()='shopping_bag']",
+    proceedToCheckoutBtn: "//span[text()='Comprar']",
+    usernameInput: "//input[@id='username']",
+    passwordInput: "//input[@id='password']",
+    loginActionBtn: "//button[@name='action']",
+    checkoutAddressContainer:
+      "//div[contains(@class, 'bg-carbon-white')]//div[contains(@class, 'flex justify-between')]",
+    cashAndTransferOption:
+      "//span[normalize-space()='Efectivo y Transferencias']",
+    orderSummaryContainer:
+      "//div[contains(@class, 'p-4') and contains(@class, 'flex-col') and contains(@class, 'gap-4')]",
+    addBtn: "//span[normalize-space()='add']",
+    quantityText: "//div[@class='w-40 text-center mr-2']",
+    removeBtn: "//span[normalize-space()='remove']",
+    deleteBtn:
+      "//button[contains(@data-testid, 'delete-button') and .//span[normalize-space()='Eliminar']]",
   };
 
   mainPageValidation() {
@@ -227,23 +246,17 @@ class Liverpool {
   }
   fillRegistrationForm() {
     I.waitForElement(this.indicators.emailInput, 10);
-    I.fillField(
-      this.indicators.emailInput,
-      "C.u.e.n.t.a.P.r.u.e.b.a@gmail.com",
-    );
+    I.fillField(this.indicators.emailInput, process.env.TEST_EMAIL);
 
     I.waitForElement(this.indicators.passwordInput, 10);
-    I.fillField(this.indicators.passwordInput, "CuentaPrueba123");
+    I.fillField(this.indicators.passwordInput, process.env.TEST_PASSWORD);
   }
   fillLoginForm() {
     I.waitForElement(this.indicators.usernameInput, 10);
-    I.fillField(
-      this.indicators.usernameInput,
-      "C.u.e.n.t.a.P.r.u.e.b.a@gmail.com",
-    );
+    I.fillField(this.indicators.usernameInput, process.env.TEST_EMAIL);
 
     I.waitForElement(this.indicators.passwordInput, 10);
-    I.fillField(this.indicators.passwordInput, "CuentaPrueba123");
+    I.fillField(this.indicators.passwordInput, process.env.TEST_PASSWORD);
   }
   clickSubmitCreateAccount() {
     I.waitForElement(this.indicators.submitCreateAccountBtn, 10);
@@ -450,6 +463,68 @@ class Liverpool {
     I.waitForElement(this.indicators.sectionTitleText, 10);
     I.scrollTo(this.indicators.sectionTitleText);
     I.seeElement(this.indicators.sectionTitleText);
+  }
+  addToBag() {
+    I.waitForElement(this.indicators.specificSizeLabel, 10);
+    I.wait(2);
+    I.waitForElement(this.indicators.addToCartBtn, 10);
+    I.click(this.indicators.addToCartBtn);
+  }
+
+  openCheckout() {
+    I.waitForElement(this.indicators.cartIcon, 10);
+    I.click(this.indicators.cartIcon);
+
+    I.seeInCurrentUrl(this.urls.carrito);
+
+    I.waitForElement(this.indicators.proceedToCheckoutBtn, 10);
+    I.click(this.indicators.proceedToCheckoutBtn);
+  }
+  confirmAddress() {
+    I.waitForElement(this.indicators.usernameInput, 10);
+    I.fillField(this.indicators.usernameInput, "los.pachis16@gmail.com");
+    //process.env.TEST_EMAIL
+    I.waitForElement(this.indicators.passwordInput, 10);
+    I.fillField(this.indicators.passwordInput, "Subaru16");
+    //process.env.TEST_PASSWORD
+    I.waitForElement(this.indicators.loginActionBtn, 10);
+    I.click(this.indicators.loginActionBtn);
+    //wait para esperar el codigo de verificación
+    I.wait(20);
+    I.waitForElement(this.indicators.checkoutAddressContainer, 10);
+    I.seeElement(this.indicators.checkoutAddressContainer);
+  }
+  selectPayment() {
+    I.waitForElement(this.indicators.cashAndTransferOption, 10);
+    I.click(this.indicators.cashAndTransferOption);
+  }
+
+  verifyOrderSummary() {
+    I.waitForElement(this.indicators.orderSummaryContainer, 10);
+    I.seeElement(this.indicators.orderSummaryContainer);
+  }
+  openBag() {
+    I.waitForElement(this.indicators.cartIcon, 10);
+    I.click(this.indicators.cartIcon);
+
+    I.seeInCurrentUrl(this.urls.carrito);
+  }
+  clickAddButton() {
+    I.waitForElement(this.indicators.addBtn, 10);
+    I.click(this.indicators.addBtn);
+  }
+  verifyProductQuantity() {
+    I.waitForElement(this.indicators.quantityText, 10);
+    I.seeElement(this.indicators.quantityText);
+  }
+  clickRemoveButton() {
+    I.wait(2);
+    I.waitForElement(this.indicators.removeBtn, 10);
+    I.click(this.indicators.removeBtn);
+  }
+  clickDeleteButton() {
+    I.waitForElement(this.indicators.deleteBtn, 10);
+    I.click(this.indicators.deleteBtn);
   }
 }
 module.exports = new Liverpool();

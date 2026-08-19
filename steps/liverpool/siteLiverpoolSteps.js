@@ -264,342 +264,61 @@ Then(/^se valida que se muestra la seccion de reseñas del producto$/, () => {
 
 //@carrito
 
-//TC-029
-When(/^el usuario agrega el producto al carrito$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que el producto se ha agregado correctamente al carrito$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-030
-When(/^el usuario agrega un producto al carrito$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que la cantidad en el badge del carrito se actualiza correctamente$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-031
-Then(
-  /^se valida que se muestra una confirmación de que el producto ha sido agregado$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-032
-When(/^el usuario agrega 3 productos diferentes al carrito$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que los 3 productos se han agregado correctamente al carrito$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-033
-Then(/^se valida que la cantidad total en el carrito es correcta$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-034
-Then(
-  /^se valida que el subtotal en el carrito se actualiza correctamente$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-035
-When(/^el usuario agrega un producto a la wishlist$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que el producto se ha agregado correctamente a la wishlist$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-036
-Then(/^se valida que la wishlist se ha actualizado correctamente$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-037
-When(/^el usuario remueve un producto de la wishlist$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que el producto se ha removido correctamente de la wishlist$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-038
-When(/^el usuario agrega un producto a la comparación$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que el producto se ha agregado correctamente a la comparación$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-039
-When(/^el usuario agrega un segundo producto a la comparación$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que ambos productos se han agregado correctamente a la comparación$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-040
-When(/^el usuario accede a la tabla de comparación$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que la tabla de comparación muestra correctamente los productos agregados$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-041
-When(/^el usuario aumenta la cantidad de un producto en el carrito$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que la cantidad se ha actualizado correctamente$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-042
-When(/^el usuario disminuye la cantidad de un producto en el carrito$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-043
-When(/^el usuario remueve un producto del carrito$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que el producto se ha removido correctamente del carrito$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-044
-When(/^el usuario agrega productos al carrito$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que el subtotal en el carrito es correcto$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-045
-Then(/^se valida que el cálculo de impuestos es correcto$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-046
-When(/^el usuario aplica un código promocional válido$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que el descuento se ha aplicado correctamente$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-047
-Then(/^se valida que el descuento aplicado es correcto$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-048
-When(/^el usuario remueve un código promocional aplicado$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que el descuento ha sido removido correctamente$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-049
-When(/^el usuario llena el formulario con nombre, email y teléfono$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que los datos personales se han llenado correctamente$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-050
-When(/^el usuario ingresa un email válido en el formulario$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que el email ingresado es correcto$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-051
-When(/^el usuario ingresa un teléfono válido en el formulario$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que el teléfono ingresado es correcto$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-052
-When(/^el usuario selecciona una dirección guardada$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que la dirección seleccionada es correcta$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-053
-When(/^el usuario agrega una dirección nueva$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que la dirección nueva se ha agregado correctamente$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-054
-When(/^el usuario llena los campos de dirección$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que los campos de dirección son correctos$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-055
-When(/^el usuario accede a las opciones de envío$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que se muestran todas las opciones de envío disponibles$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-056
-When(/^el usuario selecciona la opción de envío estándar$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que la opción de envío estándar ha sido seleccionada correctamente$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-057
-When(/^el usuario selecciona la opción de envío express$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que la opción de envío express ha sido seleccionada correctamente$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-058
-When(/^el usuario selecciona la opción de pago con tarjeta$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que la opción de pago con tarjeta ha sido seleccionada correctamente$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
-//TC-059
-When(/^el usuario llena los campos de tarjeta con número, fecha y CVV$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(/^se valida que los campos de tarjeta son correctos$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-//TC-060
-When(/^el usuario accede al resumen de compra antes de pagar$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-Then(
-  /^se valida que el resumen muestra correctamente los productos, cantidades, precios y total a pagar$/,
-  () => {
-    siteLiverpoolPage.mainPageValidation();
-  },
-);
-
 //TC-061
+When(/^el usuario agrega un producto al carrito$/, () => {
+  siteLiverpoolPage.addToBag();
+});
+
 When(/^el usuario entra al carrito y valida el registro del producto$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+  siteLiverpoolPage.openCheckout();
 });
 
 When(/^el usuario selecciona una dirección de envío$/, () => {
-  siteLiverpoolPage.mainPageValidation();
-});
-
-When(/^el usuario selecciona una opción de envío$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+  siteLiverpoolPage.confirmAddress();
 });
 
 When(/^el usuario selecciona una opción de pago$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+  siteLiverpoolPage.selectPayment();
 });
 
 When(/^el usuario revisa el resumen de compra$/, () => {
-  siteLiverpoolPage.mainPageValidation();
+  siteLiverpoolPage.verifyOrderSummary();
 });
 
 Then(
   /^se valida que el proceso de compra se ha completado correctamente$/,
   () => {
     siteLiverpoolPage.mainPageValidation();
+  },
+);
+
+//TC-041
+When(/^el usuario entra al carrito$/, () => {
+  siteLiverpoolPage.openBag();
+});
+
+When(/^el usuario aumenta la cantidad de un producto en el carrito$/, () => {
+  siteLiverpoolPage.clickAddButton();
+});
+
+Then(/^se valida que la cantidad se ha actualizado correctamente$/, () => {
+  siteLiverpoolPage.verifyProductQuantity();
+});
+
+//TC-042
+When(/^el usuario disminuye la cantidad de un producto en el carrito$/, () => {
+  siteLiverpoolPage.clickRemoveButton();
+});
+
+//TC-043
+When(/^el usuario remueve un producto del carrito$/, () => {
+  siteLiverpoolPage.clickDeleteButton();
+});
+
+Then(
+  /^se valida que el producto se ha removido correctamente del carrito$/,
+  () => {
+    siteLiverpoolPage.verifyProductQuantity();
   },
 );
 
