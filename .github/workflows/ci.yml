@@ -1,0 +1,55 @@
+name: CI — Framework CodeceptJS
+
+on:
+  push:
+    branches:
+      - '**'
+
+permissions:
+  contents: write
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalar navegadores de Playwright
+        run: node_modules/.bin/playwright install --with-deps chromium
+
+      - name: Ejecutar pruebas
+        run: npx codeceptjs run --features --grep '@episodios' --steps 
+
+      - name: Obtener historial de Allure
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Generar reporte de Allure
+        if: always()
+        run: |
+          if [ -d "gh-pages/history" ]; then
+            cp -r gh-pages/history output/allure-results/history
+          fi
+          node_modules/.bin/allure generate output/allure-results --clean -o allure-report
+
+      - name: Publicar reporte en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
