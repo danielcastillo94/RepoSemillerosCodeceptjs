@@ -12,7 +12,7 @@ class searchPage{
         textoSinResultados: '//p[contains(text(), "¿Quizá quisiste decir?")]',
         resultado: '//h1[normalize-space()="Xbox series x"]',
         resultadoGeneral: '//h1[@data-testid="plp-page-heading-title-title" and normalize-space()="Videojuegos"]',
-        xboxTitulo: '//h3[normalize-space()="Consola fija xbox series x de 1 tb"]',
+        xboxTitulo: '//h3[text()="Consola fija xbox one series x de 2 tb edición especial"]',
         indicePagina: '//a[@data-testid="plp-page-pagination-link" and text()="1"]'
 
     };
