@@ -18,7 +18,9 @@ exports.config = {
     I: "./steps_file.js",
     axelLiverpool: './pages/axelLiverpool.js',
     searchPage: './pages/searchPage.js',
-    resultsPage: './pages/resultsPage.js'
+    resultsPage: './pages/resultsPage.js',
+    menuPage: './pages/menuPage.js',
+    categoryPage: './pages/categoryPage.js'
   },
 
   gherkin: {
