@@ -8,7 +8,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: 'https://www.liverpool.com.mx/tienda/home',
-      show: true,
+      show: process.env.CI ? false : true,
       locale: "es-MX",
       storageState: './storageState.json',
       show: true,
