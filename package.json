@@ -20,8 +20,7 @@
     "allure-codeceptjs": "^3.2.2",
     "allure-commandline": "^2.34.1",
     "chai": "^4.5.0",
-    "codeceptjs": "^3.7.3",
-    "playwright": "^1.62.1"
+    "codeceptjs": "^3.7.3"
   },
   "dependencies": {
     "@playwright/test": "^1.56.0",
