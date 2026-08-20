@@ -1,74 +1,72 @@
 Feature: Búsqueda de productos en Liverpool
-# Caso LP001 - Búsqueda existente. Reutiliza abrirLiverpool(), buscarProducto() y validarResultados().
+
 
   @LP001
   Scenario: Buscar un producto existente
     Given que el usuario se encuentra en la página principal de Liverpool
     When busca el producto "ps5"
     Then se muestran resultados relacionados con la búsqueda
-# Caso LP002 - Búsqueda inexistente. Reutiliza abrirLiverpool() y buscarProducto().
+
 
   @LP002
   Scenario: Buscar un producto inexistente
     Given que el usuario se encuentra en la página principal de Liverpool
     When busca el producto "ps51"
     Then no se muestran productos para "ps51"
-# Caso LP003 - Valida relación entre búsqueda y resultados. Reutiliza el flujo de búsqueda.
+
 
   @LP003
   Scenario: Validar resultados mostrados
     Given que el usuario se encuentra en la página principal de Liverpool
     When busca el producto "ps5"
     Then los resultados muestran productos relacionados con "Ps5"
-# Caso LP004 - Navegación móvil. Reutiliza abrirLiverpoolMovil() y abrirCategorias().
+
 
     @LP004
 Scenario: Expandir categoría principal
   Given que el usuario se encuentra en la página principal de Liverpool en vista móvil
   When abre el menú de categorías
   Then puede visualizar la categoría "Vinos y Gourmet"
-# Caso LP005 - Acceso a categoría. Reutiliza abrirLiverpoolMovil() e irAVinosGourmet().
+
 
 @LP005
 Scenario: Acceder a una categoría
   Given que el usuario se encuentra en la página principal de Liverpool en vista móvil
   When navega a la categoría "Vinos y Gourmet"
   Then se muestra la página de Vinos y Gourmet
-# Caso LP006 - Valida categoría. Reutiliza el mismo flujo móvil de LP005.
+
 
 @LP006
 Scenario: Validar contenido de la categoría
   Given que el usuario se encuentra en la página principal de Liverpool en vista móvil
   When navega a la categoría "Vinos y Gourmet"
   Then se visualiza el encabezado "Vinos y Gourmet"
-# Caso LP007 - Filtro de precio. Reutiliza búsqueda, apertura de filtro y validación de resultados.
+
 
   @LP007
-  Scenario: Filtrar productos por precio
-    Given que el usuario se encuentra en la página principal de Liverpool
-    When busca el producto "ps5"
-    And abre el filtro de precios
-    And selecciona un rango de precio
-    Then se muestran productos filtrados por precio
-# Caso LP008 - Rango de precio. Reutiliza abrirFiltroPrecios() e ingresarRangoPrecio().
+Scenario: Filtrar productos por precio
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ps5"
+  And ubica la sección de precios
+  And selecciona un rango de precio
+  Then se muestran productos filtrados por precio
+
 
       @LP008
-  Scenario: Filtrar productos por rango específico de precio
-    Given que el usuario se encuentra en la página principal de Liverpool
-    When busca el producto "ps5"
-    And abre el filtro de precios
-    And ingresa un precio mínimo de "500" y un precio máximo de "2000"
-    Then se muestran productos dentro del rango de precio
-# Caso LP009 - Valida precios del rango. Reutiliza el mismo flujo de LP008.
+Scenario: Filtrar productos por rango específico de precio
+  Given que el usuario se encuentra en la página principal de Liverpool
+  When busca el producto "ps5"
+  And ubica la sección de precios
+  And ingresa un precio mínimo de "500" y un precio máximo de "2000"
+  Then se muestran productos dentro del rango de precio
 
-    @LP009
+   @LP009
 Scenario: Validar productos dentro del rango de precio
   Given que el usuario se encuentra en la página principal de Liverpool
   When busca el producto "ps5"
-  And abre el filtro de precios
+  And ubica la sección de precios
   And ingresa un precio mínimo de "500" y un precio máximo de "2000"
   Then todos los productos mostrados tienen precio entre "500" y "2000"
-# Caso LP010 - Una marca. Reutiliza buscarMarca(), seleccionarMarca() y validarResultados().
 
   @LP010
 Scenario: Filtrar productos por una marca
@@ -77,7 +75,7 @@ Scenario: Filtrar productos por una marca
   And busca la marca "PS"
   And selecciona la marca "PS5"
   Then se muestran productos filtrados por la marca seleccionada
-# Caso LP011 - Múltiples marcas. Reutiliza el filtro de marcas.
+
 
   @LP011
 Scenario: Filtrar productos por múltiples marcas
@@ -86,7 +84,7 @@ Scenario: Filtrar productos por múltiples marcas
   And busca la marca "PS"
   And selecciona las marcas "PS5" y "PS4"
   Then se muestran productos filtrados por las marcas seleccionadas
-# Caso LP012 - Deselección de marca. Reutiliza seleccionarMarca() para activar/desactivar.
+
 
  @LP012
 Scenario: Deseleccionar una marca
@@ -99,36 +97,34 @@ Scenario: Deseleccionar una marca
   And busca la marca "PS"
   And deselecciona la marca "PS5"
   Then se muestran productos filtrados por la marca seleccionada
-# Caso LP013 - Talla en PLP. Reutiliza abrirFiltroTalla() y seleccionarTalla().
+
 
 @LP013
 Scenario: Filtrar productos por talla
   Given que el usuario se encuentra en la página principal de Liverpool
   When busca el producto "ropa"
-  And abre el filtro de talla
+  And ubica la sección de talla
   And selecciona la talla "Mediano"
   Then se muestran productos filtrados por la talla seleccionada
-# Caso LP014 - Color específico en PLP. Mantiene color hardcodeado porque aquí sí se valida el filtro de color.
 
 @LP014
 Scenario: Filtrar productos por color
   Given que el usuario se encuentra en la página principal de Liverpool
   When busca el producto "ropa"
-  And abre el filtro de color
+  And ubica la sección de color
   And selecciona el color "Negro"
   Then se muestran productos filtrados por el color seleccionado
-# Caso LP015 - Combina talla + color reutilizando los métodos de ambos filtros.
 
   @LP015
 Scenario: Combinar filtros de talla y color
   Given que el usuario se encuentra en la página principal de Liverpool
   When busca el producto "ropa"
-  And abre el filtro de talla
+  And ubica la sección de talla
   And selecciona la talla "Mediano"
-  And abre el filtro de color
+  And ubica la sección de color
   And selecciona el color "Negro"
   Then se muestran productos filtrados por talla y color
-# Caso LP016 - Orden Destacados. Reutiliza abrirOrdenamiento() y seleccionarOrden().
+
 
   @LP016
 Scenario: Ordenar productos por relevancia
@@ -137,7 +133,7 @@ Scenario: Ordenar productos por relevancia
   And abre las opciones de ordenamiento
   And selecciona el orden "Destacados"
   Then se muestran los productos ordenados correctamente
-# Caso LP017 - Menor precio. Reutiliza el mismo método genérico de ordenamiento.
+
 
   @LP017
 Scenario: Ordenar productos por precio de menor a mayor
@@ -146,7 +142,7 @@ Scenario: Ordenar productos por precio de menor a mayor
   And abre las opciones de ordenamiento
   And selecciona el orden "Menor precio"
   Then se muestran los productos ordenados correctamente
-# Caso LP018 - Mayor precio. Reutiliza el mismo método genérico de ordenamiento.
+
 
   @LP018
 Scenario: Ordenar productos por precio de mayor a menor
@@ -155,7 +151,7 @@ Scenario: Ordenar productos por precio de mayor a menor
   And abre las opciones de ordenamiento
   And selecciona el orden "Mayor precio"
   Then se muestran los productos ordenados correctamente
-# Caso LP019 - Novedades. Reutiliza el mismo método genérico de ordenamiento.
+
 
 @LP019
 Scenario: Ordenar productos por más nuevo
@@ -164,7 +160,7 @@ Scenario: Ordenar productos por más nuevo
   And abre las opciones de ordenamiento
   And selecciona el orden "Novedades"
   Then se muestran los productos ordenados correctamente
-# Caso LP020 - Abre detalle. Reutiliza búsqueda y seleccionarPrimerProducto().
+
 
   @LP020
 Scenario: Abrir detalle de un producto
@@ -172,17 +168,15 @@ Scenario: Abrir detalle de un producto
   When busca el producto "ropa"
   And selecciona el primer producto de los resultados
   Then se muestra el detalle del producto
-# Caso LP021 - Información básica. Reutiliza el detalle abierto y validadores independientes.
 
-  @LP021
+
+@LP021
 Scenario: Validar información básica del producto
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "ropa"
-  And selecciona el primer producto de los resultados
+  When busca el producto "1177646322"
   Then se muestra el nombre del producto
   And se muestra el precio del producto
   And se muestra la sección de características del producto
-# Caso LP022 - Galería. Reutiliza buscarProducto() y seleccionarProducto().
 
   @LP022
 Scenario: Visualizar galería de imágenes del producto
@@ -190,7 +184,7 @@ Scenario: Visualizar galería de imágenes del producto
   When busca el producto "Tanga De Poliamida Para Mujer"
   And selecciona el producto "Tanga De Poliamida Para Mujer"
   Then se muestra la galería de imágenes del producto
-# Caso LP023 - Stock. Reutiliza el mismo acceso al detalle del producto.
+
 
   @LP023
 Scenario: Validar disponibilidad de stock del producto
@@ -198,7 +192,7 @@ Scenario: Validar disponibilidad de stock del producto
   When busca el producto "Tanga De Poliamida Para Mujer"
   And selecciona el producto "Tanga De Poliamida Para Mujer"
   Then el producto muestra disponibilidad para seleccionar cantidad
-# Caso LP024 - Disponibilidad en tienda. Reutiliza el mismo acceso al detalle.
+
 
   @LP024
 Scenario: Consultar disponibilidad en tienda
@@ -207,7 +201,7 @@ Scenario: Consultar disponibilidad en tienda
   And selecciona el producto "Tanga De Poliamida Para Mujer"
   And consulta la disponibilidad en tienda
   Then se muestra la opción para buscar disponibilidad en tiendas
-# Caso LP025 - Código de producto. Reutiliza el mismo acceso al detalle.
+
 
   @LP025
 Scenario: Validar SKU y código de producto
@@ -215,7 +209,7 @@ Scenario: Validar SKU y código de producto
   When busca el producto "Tanga De Poliamida Para Mujer"
   And selecciona el producto "Tanga De Poliamida Para Mujer"
   Then se muestra el código de producto
-# Caso LP026 - Opiniones. Reutiliza el mismo acceso al detalle.
+
 
   @LP026
 Scenario: Visualizar sección de opiniones del producto
@@ -223,7 +217,7 @@ Scenario: Visualizar sección de opiniones del producto
   When busca el producto "Tanga De Poliamida Para Mujer"
   And selecciona el producto "Tanga De Poliamida Para Mujer"
   Then se muestra la sección de opiniones del artículo
-# Caso LP027 - Calificaciones. Reutiliza búsqueda + detalle; valida la distribución disponible en UI.
+
 
   @LP027
 Scenario: Validar calificaciones del producto
@@ -235,37 +229,37 @@ Scenario: Validar calificaciones del producto
   # LP028 pendiente/no aplicable:
 # No se encontraron reseñas con imágenes disponibles en los productos revisados.
 # Se documenta la limitación de datos de prueba en la UI actual.
-# Caso LP029 - Agregar al carrito. La talla se elige dinámicamente porque no es el objetivo del caso.
+
 
 @LP029
 Scenario: Agregar un producto al carrito
   Given que el usuario se encuentra en la página principal de Liverpool
   When busca el producto "Tanga para mujer"
   And selecciona el producto "Tanga para mujer"
-  And selecciona una talla disponible del producto
+  And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
   Then el producto se agrega correctamente a la bolsa
-# Caso LP030 - Badge del carrito. Reutiliza el flujo de LP029 y validarCantidadCarrito().
+
 
   @LP030
 Scenario: Validar cantidad en el carrito
   Given que el usuario se encuentra en la página principal de Liverpool
   When busca el producto "Tanga para mujer"
   And selecciona el producto "Tanga para mujer"
-  And selecciona una talla disponible del producto
+  And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
   Then el carrito muestra "1" producto
-# Caso LP031 - Confirmación. Reutiliza validarCantidadCarrito() desde validarConfirmacionAgregado().
+
 
   @LP031
 Scenario: Confirmar producto agregado a la bolsa
   Given que el usuario se encuentra en la página principal de Liverpool
   When busca el producto "Tanga para mujer"
   And selecciona el producto "Tanga para mujer"
-  And selecciona una talla disponible del producto
+  And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
   Then se confirma que el producto fue agregado a la bolsa
-# Caso LP032 - Tres productos. Reutiliza búsqueda, selección, variante disponible y agregarProductoBolsa().
+
 
 @LP032
 Scenario: Agregar tres productos diferentes a la bolsa
@@ -273,23 +267,23 @@ Scenario: Agregar tres productos diferentes a la bolsa
 
   When busca el producto "Tanga para mujer"
   And selecciona el producto "Tanga para mujer"
-  And selecciona una talla disponible del producto
+  And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
 
   And busca el producto "Panty para mujer"
   And selecciona el producto "Panty para mujer"
   And selecciona un color disponible del producto
-  And selecciona una talla disponible del producto
+  And selecciona la talla "G" del producto
   And agrega el producto a la bolsa
 
   And busca el producto "Brassiere corrector con copa para mujer"
   And selecciona el producto "Brassiere corrector con copa para mujer"
   And selecciona un color disponible del producto
-  And selecciona una talla disponible del producto
+  And selecciona la talla "38B" del producto
   And agrega el producto a la bolsa
 
   Then la bolsa contiene productos agregados
-# Caso LP033 - Total del carrito. Reutiliza exactamente el flujo de agregado de LP032.
+
 
   @LP033
 Scenario: Validar cantidad total de productos en el carrito
@@ -297,43 +291,43 @@ Scenario: Validar cantidad total de productos en el carrito
 
   When busca el producto "Tanga para mujer"
   And selecciona el producto "Tanga para mujer"
-  And selecciona una talla disponible del producto
+  And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
 
   And busca el producto "Panty para mujer"
   And selecciona el producto "Panty para mujer"
   And selecciona un color disponible del producto
-  And selecciona una talla disponible del producto
+  And selecciona la talla "G" del producto
   And agrega el producto a la bolsa
 
   And busca el producto "Brassiere corrector con copa para mujer"
   And selecciona el producto "Brassiere corrector con copa para mujer"
   And selecciona un color disponible del producto
-  And selecciona una talla disponible del producto
+  And selecciona la talla "38B" del producto
   And agrega el producto a la bolsa
 
   Then el carrito muestra "3" productos
-# Caso LP034 - Subtotal. Reutiliza el flujo de tres productos y abrirBolsa().
+
 
   @LP034
-Scenario: Validar subtotal actualizado de tres productos
+Scenario: Validar subtotal de tres productos en el carrito
   Given que el usuario se encuentra en la página principal de Liverpool
 
   When busca el producto "Tanga para mujer"
   And selecciona el producto "Tanga para mujer"
-  And selecciona una talla disponible del producto
+  And selecciona la talla "XCH" del producto
   And agrega el producto a la bolsa
 
   And busca el producto "Panty para mujer"
   And selecciona el producto "Panty para mujer"
   And selecciona un color disponible del producto
-  And selecciona una talla disponible del producto
+  And selecciona la talla "G" del producto
   And agrega el producto a la bolsa
 
   And busca el producto "Brassiere corrector con copa para mujer"
   And selecciona el producto "Brassiere corrector con copa para mujer"
   And selecciona un color disponible del producto
-  And selecciona una talla disponible del producto
+  And selecciona la talla "38B" del producto
   And agrega el producto a la bolsa
   And abre la bolsa de compras
 
@@ -344,80 +338,72 @@ Scenario: Validar subtotal actualizado de tres productos
 # Liverpool no permite gestionar wishlist/favoritos como invitado.
 # Ya no se encuentra la funcionalidad de comparar productos
 # Casos pendientes hasta contar con credenciales de prueba.
-# Caso LP041 - Aumentar cantidad. El color se selecciona dinámicamente para evitar depender del catálogo.
 
 
+
+# LP041 - SKU directo: Liverpool abre el PDP automáticamente; no se selecciona tarjeta de resultados.
 @LP041
 Scenario: Aumentar cantidad de un producto en el carrito
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And agrega el producto a la bolsa
   And abre la bolsa de compras
   And aumenta la cantidad del producto en el carrito
   Then la cantidad del producto en el carrito es "2"
-# Caso LP042 - Disminuir cantidad. Reutiliza el mismo flujo de LP041.
 
-
+  
 @LP042
-Scenario: Disminuir cantidad de un producto en el carrito
+Scenario: Disminuir de dos a un producto en el carrito
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And agrega el producto a la bolsa
   And abre la bolsa de compras
   And aumenta la cantidad del producto en el carrito
   And disminuye la cantidad del producto en el carrito
   Then la cantidad del producto en el carrito es "1"
-# Caso LP043 - Eliminar. Reutiliza carrito y el botón decrease que Liverpool convierte en eliminar con cantidad 1.
 
 
 @LP043
 Scenario: Eliminar el último producto del carrito
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And agrega el producto a la bolsa
   And abre la bolsa de compras
   And remueve el producto del carrito
   And confirma la eliminación del producto
   Then el carrito queda vacío
-# Caso LP044 - Subtotal. Reutiliza el flujo genérico de producto + carrito.
 
-  @LP044
+  # LP044-LP046 - Reutilizan SKU directo y color disponible para evitar datos variables del catálogo.
+@LP044
 Scenario: Validar subtotal del carrito
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And agrega el producto a la bolsa
   And abre la bolsa de compras
   Then se muestra el subtotal del carrito
-# Caso LP045 - Resumen de costos. Reutiliza el mismo flujo de carrito.
+
 
 
 @LP045
 Scenario: Validar resumen de costos del carrito
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And agrega el producto a la bolsa
   And abre la bolsa de compras
   Then se muestra el descuento aplicado
   And se muestra el costo de envío
   And se indica que el total incluye IVA
-# Caso LP046 - Total final. Reutiliza el mismo flujo de carrito.
 
 
 @LP046
 Scenario: Validar total final del carrito
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And agrega el producto a la bolsa
   And abre la bolsa de compras
@@ -453,34 +439,32 @@ Scenario: Validar total final del carrito
 # durante la ejecución con CodeceptJS.
 # Por este motivo, los escenarios dependientes de autenticación se documentan
 # como no automatizados en el alcance actual.
-# Caso LP056 - Opciones de entrega. Reutiliza búsqueda, detalle y selección dinámica de color.
 
+
+# LP056-LP058 - Reutilizan SKU directo y selección dinámica de color antes de validar entrega.
 @LP056
 Scenario: Ver opciones de entrega disponibles
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   Then se muestran las opciones de entrega disponibles
-# Caso LP057 - Domicilio. Reutiliza seleccionarOpcionEntrega(opcion).
+
 
 
 @LP057
 Scenario: Seleccionar entrega a domicilio
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And selecciona la opción de entrega "Recibe a domicilio"
   Then la opción de entrega "Recibe a domicilio" queda seleccionada
-# Caso LP058 - Click & Collect. Reutiliza seleccionarOpcionEntrega(opcion).
+
 
 
 @LP058
 Scenario: Seleccionar Click & Collect
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And selecciona la opción de entrega "Click & Collect"
   Then la opción de entrega "Click & Collect" queda seleccionada
@@ -507,21 +491,21 @@ Scenario: Seleccionar Click & Collect
 # ==========================================================
 # LP062 - LP064 | Flujo completo E2E
 # ==========================================================
-# Caso LP062 - Búsqueda E2E. Reutiliza la búsqueda ya validada en LP001-LP003.
 
+
+# LP062-LP063 - Flujo E2E con SKU directo; la búsqueda termina en el PDP.
 @LP062
 Scenario: Buscar producto en flujo E2E
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  Then se muestran resultados de búsqueda
-# Caso LP063 - Carrito E2E. Reutiliza búsqueda, detalle, variante disponible y badge del carrito.
+  When busca el producto "1177646322"
+  Then se muestra el nombre del producto
+
 
 
 @LP063
 Scenario: Agregar producto al carrito en flujo E2E
   Given que el usuario se encuentra en la página principal de Liverpool
-  When busca el producto "Nintendo Switch"
-  And selecciona el producto "Nintendo Switch"
+  When busca el producto "1177646322"
   And selecciona un color disponible del producto
   And agrega el producto a la bolsa
   Then el carrito muestra "1" producto

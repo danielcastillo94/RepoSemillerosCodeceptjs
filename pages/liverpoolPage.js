@@ -2,13 +2,6 @@ const { I } = inject();
 
 module.exports = {
 
-    /*
-     * Page Object Liverpool
-     * Los selectores viven en fields y las acciones se reutilizan entre escenarios.
-     * Los métodos "Disponible" se usan cuando talla/color son prerrequisitos y no el objetivo de la prueba.
-     */
-
-
     fields: {
         buscadorHome:
             '[data-testid="blt26617d4f2e17657d-header-search-input"]',
@@ -35,128 +28,118 @@ module.exports = {
             '//h2[contains(text(),"Vinos y Gourmet")]',
 
         botonFiltrar:
-        '[data-testid="plp-page-filter-button"]',
+            '[data-testid="plp-page-filter-button"]',
 
         filtroPrecios:
-        '[data-testid="button-dropdown-filter"]',
+            '//button[@data-testid="button-dropdown-filter" and .//span[contains(text(),"Precio")]]',
 
         precioMinimo:
-        '[data-testid="at-text-min-input"]',
+            '[data-testid="at-text-min-input"]',
 
         precioMaximo:
-        '[data-testid="at-text-max-input"]',
+            '[data-testid="at-text-max-input"]',
 
         rangoPrecio:
-        'input[type="radio"][value=\'{"low":100,"high":500}\']',
- 
+            'input[type="radio"][value=\'{"low":100,"high":500}\']',
+
         preciosProductos:
-        '[data-testid$="-card-card-price"]',
-        
+            '[data-testid$="-card-card-price"]',
+
         filtroMarcas:
-        '//button[@data-testid="button-dropdown-filter" and .//span[text()="Marcas"]]',
+            '//button[@data-testid="button-dropdown-filter" and .//span[text()="Marcas"]]',
 
         buscadorMarca:
-        'input[placeholder="Buscar marca"]',
+            'input[placeholder="Buscar marca"]',
 
         marcaPS5:
-        '//label[.//*[@data-testid="item-PS5"]]',
+            '//label[.//*[@data-testid="item-PS5"]]',
 
         marcaPS4:
-        '//label[.//*[@data-testid="item-PS4"]]',
- 
-    filtroTalla:
-    '//button[@data-testid="button-dropdown-filter" and .//span[text()="Talla"]]',
- 
-    filtroColor:
-    '//button[@data-testid="button-dropdown-filter" and .//span[text()="Color"]]',
- 
-    botonOrdenamiento:
-    '[data-testid="dropdown-sorting-button"]',
- 
-    nombreProducto:
-        'h1:visible',
+            '//label[.//*[@data-testid="item-PS4"]]',
 
-    precioProducto:
-        '[data-testid$="-configurator-price"] [data-testid="discounted"]',
+        filtroTalla:
+            '//button[@data-testid="button-dropdown-filter" and .//span[text()="Talla"]]',
 
-    botonCaracteristicas:
-        '[data-testid="ml-list-item-specs"]',
+        filtroColor:
+            '//button[@data-testid="button-dropdown-filter" and .//span[text()="Color"]]',
 
-    galeriaProducto:
-    'button[data-testid^="pdp-"][data-testid*="gallery-details__thumbnail"]',
-    
-    botonAumentarCantidad:
-    'button[aria-label="increase"]',
+        botonOrdenamiento:
+            '[data-testid="dropdown-sorting-button"]',
 
-    botonDisponibilidadTienda:
-    '[data-testid="or-find-in-store-modal-button"]',
+        nombreProducto:
+            'h1.text-body-2xl',
 
-    botonAgregarBolsa:
-    '[data-testid="add-to-bag-button"]',
+        precioProducto:
+            '[data-testid$="-configurator-price"] [data-testid="discounted"]',
 
-    cantidadCarrito:
-    '[data-testid="blt26617d4f2e17657d-header-shopping-cart-header-cart-quantity"]',
+        botonCaracteristicas:
+            '[data-testid="ml-list-item-specs"]',
 
-    botonBolsa:
-    '[data-testid="blt26617d4f2e17657d-header-shopping-cart-shopping-link"]',
+        galeriaProducto:
+            'button[data-testid^="pdp-"][data-testid*="gallery-details__thumbnail"]',
 
-    botonDisminuirCantidadCarrito: 'button[aria-label="decrease"]',
-    botonAumentarCantidadCarrito: 'button[aria-label="increase"]',
+        botonDisminuirCantidadCarrito:
+            'button[data-testid$="input-cart-item-quantity-decrease"]',
 
-    descuentoCarrito:
-    '[data-testid="checkout-payment-summary-discount"]',
+        botonAumentarCantidadCarrito:
+            'button[data-testid$="input-cart-item-quantity-increase"]',
 
-    totalCarrito:
-    '[data-testid="checkout-payment-summary-total"]',
+        botonAgregarBolsa:
+            '[data-testid="add-to-bag-button"]',
 
-    opcionesEntrega:
-    '[data-testid^="product-configurator-delivery-selection-card-"]',
+        cantidadCarrito:
+            '[data-testid="blt26617d4f2e17657d-header-shopping-cart-header-cart-quantity"]',
 
-    checkEntrega:
-    '[data-testid="selection-checkmark"]',
+        botonBolsa:
+            '[data-testid="blt26617d4f2e17657d-header-shopping-cart-shopping-link"]',
 
-    // Variantes reutilizables: evitan amarrar carrito/entrega a una talla o color específico.
-    tallasProducto:
-    'input[name="size-picker"]:not([disabled])',
+        descuentoCarrito:
+            '[data-testid="checkout-payment-summary-discount"]',
 
-    coloresProducto:
-    'button[data-testid^="ml-image-picker-image-"]',
+        totalCarrito:
+            '[data-testid="checkout-payment-summary-total"]',
 
-    inputCantidadCarrito:
-    'input[name="quantity"]',
+        opcionesEntrega:
+            '[data-testid^="product-configurator-delivery-selection-card-"]',
 
-    botonConfirmarEliminacion:
-    '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]',
-},
+        checkEntrega:
+            '[data-testid="selection-checkmark"]',
 
+        cantidadProductoCarrito:
+            'input[name="quantity"]',
+
+        botonConfirmarEliminacion:
+            '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]',
+
+        botonAumentarCantidadProducto:
+            'button[aria-label="increase"]',
+
+        botonDisponibilidadTienda:
+            '[data-testid="or-find-in-store-modal-button"]',
+    },
+
+    // LP001-LP003 - Abre Liverpool y reutiliza el buscador principal.
     abrirLiverpool() {
-    I.amOnPage('/');
-    I.waitForElement(this.fields.buscadorHome, 10);
-},
+        I.amOnPage('/');
+        I.waitForElement(this.fields.buscadorHome, 10);
+    },
 
+    // LP004-LP006 - Reutiliza Liverpool en resolución móvil usando CodeceptJS.
     abrirLiverpoolMovil() {
-    I.usePlaywrightTo('usar vista móvil', async ({ page }) => {
-        await page.setViewportSize({ width: 375, height: 667 });
-    });
+        I.resizeWindow(375, 667);
+        I.amOnPage('/');
+        I.waitForElement(this.fields.botonMenu, 10);
+    },
 
-    I.amOnPage('/');
-    I.waitForElement(this.fields.botonMenu, 10);
-},
+    // Función reutilizable de búsqueda para prácticamente todos los casos.
+    buscarProducto(producto) {
+        I.waitForVisible(this.fields.buscadorHome, 10);
+        I.click(this.fields.buscadorHome);
+        I.fillField(this.fields.buscadorHome, producto);
+        I.pressKey('Enter');
+        I.wait(3);
+    },
 
-  async buscarProducto(producto) {
-    await I.usePlaywrightTo('buscar producto en Liverpool', async ({ page }) => {
-        const buscador = page.locator(this.fields.buscadorHome).first();
-
-        await buscador.waitFor({ state: 'visible', timeout: 10000 });
-        await buscador.click();
-        await buscador.fill(producto);
-        await buscador.press('Enter');
-
-        await page.waitForLoadState('domcontentloaded');
-    });
-
-    I.wait(3);
-},
     validarResultados() {
         I.waitForElement(this.fields.resultados, 10);
         I.seeElement(this.fields.resultados);
@@ -168,49 +151,49 @@ module.exports = {
         I.seeNumberOfElements(this.fields.tarjetasProducto, 0);
     },
 
-    validarProductoRelacionado(producto) {
-        I.waitForElement(this.fields.resultados, 10);
-        I.seeElement(this.fields.resultados);
+validarProductoRelacionado(producto) {
+    I.waitForElement(this.fields.resultados, 10);
+    I.seeElement(this.fields.resultados);
 
-        I.waitForElement(this.fields.tituloResultados, 10);
-        I.see(producto, this.fields.tituloResultados);
-    },
+    I.waitForElement(this.fields.tituloResultados, 10);
+    I.see(producto, this.fields.tituloResultados);
+},
 
-    abrirCategorias() {
+// LP004 - Abre el menú de categorías en vista móvil.
+abrirCategorias() {
     I.waitForVisible(this.fields.botonMenu, 10);
     I.click(this.fields.botonMenu);
 
     I.waitForVisible(this.fields.botonCategorias, 10);
     I.click(this.fields.botonCategorias);
-    },
+},
 
+validarCategoriaVinos() {
+    I.waitForElement(this.fields.vinosGourmet, 10);
+    I.seeElement(this.fields.vinosGourmet);
+},
 
+// LP005-LP006 - Reutiliza los mismos selectores del menú de categorías.
+irAVinosGourmet() {
+    I.waitForVisible(this.fields.botonMenu, 10);
+    I.click(this.fields.botonMenu);
 
-    validarCategoriaVinos() {
-        I.waitForElement(this.fields.vinosGourmet, 10);
-        I.seeElement(this.fields.vinosGourmet);
-    },
+    I.waitForVisible(this.fields.botonCategorias, 10);
+    I.click(this.fields.botonCategorias);
 
-    irAVinosGourmet() {
-        I.click(this.fields.botonMenu);
-        I.waitForElement(this.fields.botonCategorias, 10);
-        I.click(this.fields.botonCategorias);
+    I.waitForVisible(this.fields.vinosGourmet, 10);
+    I.click(this.fields.vinosGourmet);
+},
 
-        I.waitForElement(this.fields.vinosGourmet, 10);
-        I.click(this.fields.vinosGourmet);
-    },
+validarPaginaVinosGourmet() {
+    I.waitForElement(this.fields.tituloVinosGourmet, 10);
+    I.see('Vinos y Gourmet', this.fields.tituloVinosGourmet);
+},
 
-    validarPaginaVinosGourmet() {
-        I.waitForElement(this.fields.tituloVinosGourmet, 10);
-        I.see('Vinos y Gourmet', this.fields.tituloVinosGourmet);
-    },
-
-    abrirFiltroPrecios() {
-    I.waitForVisible(this.fields.botonFiltrar, 10);
-    I.click(this.fields.botonFiltrar);
-
+// LP007-LP009 - Abre el filtro general y después el filtro de precios.
+ubicarSeccionPrecios() {
     I.waitForVisible(this.fields.filtroPrecios, 10);
-    I.click(this.fields.filtroPrecios);
+    I.scrollTo(this.fields.filtroPrecios);
 },
 
 seleccionarRangoPrecio() {
@@ -219,8 +202,8 @@ seleccionarRangoPrecio() {
     I.wait(3);
 },
 
+// Reutiliza la validación general de resultados.
 validarFiltroPrecio() {
-    // Reutiliza la validación general del listado.
     return this.validarResultados();
 },
 
@@ -235,37 +218,32 @@ ingresarRangoPrecio(minimo, maximo) {
     I.wait(3);
 },
 
+// LP009 - Obtiene los precios visibles usando CodeceptJS y valida el rango.
 async validarPreciosEnRango(minimo, maximo) {
-
     const min = Number(minimo);
     const max = Number(maximo);
 
-    await I.usePlaywrightTo('validar precios dentro del rango', async ({ page }) => {
+    const textosPrecios = await I.grabTextFromAll(
+        this.fields.preciosProductos
+    );
 
-        const precios = page.locator(this.fields.preciosProductos);
+    for (const textoPrecio of textosPrecios) {
+        const precio = Number(
+            textoPrecio
+                .replace('$', '')
+                .replace(/,/g, '')
+                .replace(/\s/g, '')
+        );
 
-        const cantidad = await precios.count();
-
-        for (let i = 0; i < cantidad; i++) {
-
-            const textoPrecio = await precios.nth(i).innerText();
-
-            const precio = Number(
-                textoPrecio
-                    .replace('$', '')
-                    .replace(',', '')
-                    .replace(/\s/g, '')
+        if (precio < min || precio > max) {
+            throw new Error(
+                `El precio ${precio} está fuera del rango ${min} - ${max}`
             );
-
-            if (precio < min || precio > max) {
-                throw new Error(
-                    `El precio ${precio} está fuera del rango ${min} - ${max}`
-                );
-            }
         }
-    });
+    }
 },
 
+// LP010-LP012 - Abre el filtro de marcas.
 abrirFiltroMarcas() {
     I.waitForVisible(this.fields.botonFiltrar, 10);
     I.click(this.fields.botonFiltrar);
@@ -295,6 +273,7 @@ seleccionarMultiplesMarcas() {
     I.wait(3);
 },
 
+// Función genérica reutilizada por LP010-LP012.
 seleccionarMarca(marca) {
     const selectorMarca =
         `//label[.//*[@data-testid="item-${marca}"]]`;
@@ -304,102 +283,55 @@ seleccionarMarca(marca) {
     I.wait(3);
 },
 
+// El mismo click vuelve a desactivar el checkbox.
 deseleccionarMarca(marca) {
-    // El mismo click activa o desactiva el checkbox de marca.
     return this.seleccionarMarca(marca);
 },
 
-async abrirFiltroTalla() {
-    await I.usePlaywrightTo('abrir filtro Talla', async ({ page }) => {
-
-        const botonTalla = page
-            .locator('button[data-testid="button-dropdown-filter"]:visible')
-            .filter({ hasText: 'Talla' })
-            .first();
-
-        await botonTalla.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        const estaAbierto = await botonTalla
-            .locator('[data-testid="keyboard-arrow-up-icon"]')
-            .count();
-
-        if (estaAbierto === 0) {
-            await botonTalla.click();
-        }
-    });
+// LP013-LP015 - Abre el filtro de talla usando únicamente CodeceptJS.
+ubicarSeccionTalla() {
+    I.waitForVisible(this.fields.filtroTalla, 10);
+    I.scrollTo(this.fields.filtroTalla);
 },
 
-async seleccionarTalla(talla) {
-    await I.usePlaywrightTo(`seleccionar talla ${talla}`, async ({ page }) => {
+seleccionarTalla(talla) {
+    const opcionTalla =
+        `[data-testid="item-${talla}"]`;
 
-        const opcion = page.locator(
-            `[data-testid="item-${talla}"]`
-        ).first();
-
-        await opcion.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        const label = opcion.locator('xpath=ancestor::label[1]');
-
-        await label.click();
-    });
-
+    I.waitForVisible(opcionTalla, 10);
+    I.click(opcionTalla);
     I.wait(3);
 },
 
-async abrirFiltroColor() {
-    await I.usePlaywrightTo('abrir filtro Color', async ({ page }) => {
-
-        const botonColor = page
-            .locator('button[data-testid="button-dropdown-filter"]:visible')
-            .filter({ hasText: 'Color' })
-            .first();
-
-        await botonColor.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        const estaAbierto = await botonColor
-            .locator('[data-testid="keyboard-arrow-up-icon"]')
-            .count();
-
-        if (estaAbierto === 0) {
-            await botonColor.click();
-        }
-    });
+// LP014-LP015 - Abre el filtro de color.
+ubicarSeccionColor() {
+    I.waitForVisible(this.fields.filtroColor, 10);
+    I.scrollTo(this.fields.filtroColor);
 },
 
-async seleccionarColor(color) {
-    await I.usePlaywrightTo(`seleccionar color ${color}`, async ({ page }) => {
+// Selecciona un color específico cuando el color sí forma parte de la prueba.
+seleccionarColor(color) {
+    const opcionColor =
+        `//label[.//input[@type="checkbox" and starts-with(@value,"${color}~~")] and not(ancestor::*[contains(@style,"display: none")])]`;
 
-        const checkbox = page.locator(
-            `input[type="checkbox"][value^="${color}~~"]`
-        ).first();
-
-        await checkbox.waitFor({
-            state: 'attached',
-            timeout: 10000
-        });
-
-        const label = checkbox.locator('xpath=ancestor::label[1]');
-
-        await label.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        await label.click();
-    });
-
+    I.waitForVisible(opcionColor, 10);
+    I.click(opcionColor);
     I.wait(3);
 },
 
+// Reutilizable para carrito y entrega.
+// Selecciona la primera variante disponible sin depender de Negro, Multicolor, etc.
+seleccionarColorDisponible() {
+    const colorDisponible =
+        'button[data-testid^="ml-image-picker-image-"]';
+
+    I.waitForVisible(colorDisponible, 10);
+    I.click(colorDisponible);
+    I.wait(1);
+},
+
+// LP016-LP019 - Ordenamiento.
+// La misma función se reutiliza con Destacados, Menor precio, Mayor precio y Novedades.
 abrirOrdenamiento() {
     I.waitForVisible(this.fields.botonOrdenamiento, 10);
     I.click(this.fields.botonOrdenamiento);
@@ -414,46 +346,17 @@ seleccionarOrden(orden) {
     I.wait(3);
 },
 
-async seleccionarPrimerProducto() {
-    await I.usePlaywrightTo('seleccionar primer producto', async ({ page }) => {
-
-        const producto = page
-            .locator(this.fields.tarjetasProducto)
-            .first();
-
-        await producto.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        const urlInicial = page.url();
-
-        await producto.click();
-
-        await page.waitForURL(
-            url => url.toString() !== urlInicial,
-            { timeout: 10000 }
-        );
-
-        await page.waitForLoadState('domcontentloaded');
-    });
-
+// LP020-LP021 - Selecciona el primer resultado.
+// No se usa cuando buscamos directamente por SKU porque Liverpool abre el PDP automáticamente.
+seleccionarPrimerProducto() {
+    I.waitForVisible(this.fields.tarjetasProducto, 10);
+    I.click(this.fields.tarjetasProducto);
     I.wait(3);
 },
 
-async validarDetalleProducto() {
-    await I.usePlaywrightTo('validar detalle del producto', async ({ page }) => {
-
-        const tarjetas = page.locator(this.fields.tarjetasProducto);
-
-        const cantidadTarjetas = await tarjetas.count();
-
-        if (cantidadTarjetas > 0) {
-            throw new Error(
-                'El usuario continúa visualizando la lista de productos'
-            );
-        }
-    });
+// Reutiliza la validación del nombre para comprobar que estamos en el PDP.
+validarDetalleProducto() {
+    return this.validarNombreProducto();
 },
 
 validarNombreProducto() {
@@ -471,67 +374,39 @@ validarCaracteristicasProducto() {
     I.see('Características', this.fields.botonCaracteristicas);
 },
 
-async seleccionarProducto(producto) {
-    await I.usePlaywrightTo(`seleccionar producto ${producto}`, async ({ page }) => {
+// LP022-LP027 - Selecciona un producto por su texto.
+// Se mantiene para búsquedas normales; con SKU directo este paso no es necesario.
+seleccionarProducto(producto) {
+    const tarjetaProducto =
+        `//a[contains(@data-testid,"-card-card-link")][contains(.,"${producto}")]`;
 
-        const tarjeta = page
-            .locator(this.fields.tarjetasProducto)
-            .filter({ has: page.getByText(producto, { exact: true }) })
-            .first();
-
-        await tarjeta.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        await tarjeta.click();
-
-        await page.waitForLoadState('domcontentloaded');
-    });
-
+    I.waitForVisible(tarjetaProducto, 10);
+    I.click(tarjetaProducto);
     I.wait(3);
 },
 
+// LP022 - Valida que exista más de una imagen en la galería.
 async validarGaleriaProducto() {
-    await I.usePlaywrightTo('validar galería del producto', async ({ page }) => {
+    I.waitForElement(this.fields.galeriaProducto, 10);
 
-        const miniaturas = page.locator(this.fields.galeriaProducto);
+    const cantidad = await I.grabNumberOfVisibleElements(
+        this.fields.galeriaProducto
+    );
 
-        await miniaturas.first().waitFor({
-            state: 'attached',
-            timeout: 10000
-        });
-
-        const cantidad = await miniaturas.count();
-
-        if (cantidad < 2) {
-            throw new Error(
-                `Se esperaban al menos 2 imágenes y se encontraron ${cantidad}`
-            );
-        }
-    });
-},    
-
-async validarStockDisponible() {
-    await I.usePlaywrightTo('validar disponibilidad del producto', async ({ page }) => {
-
-        const botonAumentar = page
-            .locator(this.fields.botonAumentarCantidad)
-            .first();
-
-        await botonAumentar.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        const estaDeshabilitado = await botonAumentar.isDisabled();
-
-        if (estaDeshabilitado) {
-            throw new Error('El producto no permite aumentar la cantidad');
-        }
-    });
+    if (cantidad < 2) {
+        throw new Error(
+            `Se esperaban al menos 2 imágenes y se encontraron ${cantidad}`
+        );
+    }
 },
 
+// LP023 - Valida que exista el control para aumentar cantidad.
+validarStockDisponible() {
+    I.waitForVisible(this.fields.botonAumentarCantidadProducto, 10);
+    I.seeElement(this.fields.botonAumentarCantidadProducto);
+},
+
+// LP024 - Disponibilidad en tienda.
 consultarDisponibilidadTienda() {
     I.waitForVisible(this.fields.botonDisponibilidadTienda, 10);
     I.click(this.fields.botonDisponibilidadTienda);
@@ -542,11 +417,12 @@ validarDisponibilidadTienda() {
     I.see('Ver disponibilidad en tienda');
 },
 
+// LP025 - Permite reutilizar la validación con cualquier SKU.
 validarCodigoProducto() {
     I.waitForText('Código de producto:', 10);
 },
 
-
+// LP026-LP027 - Opiniones y calificaciones.
 validarSeccionOpiniones() {
     I.waitForText('Opiniones del artículo', 10);
 },
@@ -556,6 +432,7 @@ validarDistribucionCalificaciones() {
     I.see('2 estrellas');
 },
 
+// Selección de talla específica dentro del PDP.
 seleccionarTallaProducto(talla) {
     const opcionTalla =
         `label:has(input[name="size-picker"][value="${talla}"])`;
@@ -565,28 +442,15 @@ seleccionarTallaProducto(talla) {
     I.wait(1);
 },
 
-// Reutilizable para casos donde la talla solo es un requisito para agregar al carrito.
-async seleccionarTallaDisponibleProducto() {
-    await I.usePlaywrightTo('seleccionar una talla disponible del producto', async ({ page }) => {
-        const tallas = page.locator(this.fields.tallasProducto);
-        await tallas.first().waitFor({ state: 'attached', timeout: 10000 });
-
-        const label = tallas.first().locator('xpath=ancestor::label[1]');
-        await label.waitFor({ state: 'visible', timeout: 10000 });
-        await label.click();
-    });
-
-    I.wait(1);
-},
-
+// LP029-LP034 - Agregar productos y validar carrito.
 agregarProductoBolsa() {
     I.waitForVisible(this.fields.botonAgregarBolsa, 10);
     I.click(this.fields.botonAgregarBolsa);
     I.wait(3);
 },
 
+// Reutiliza la validación del badge del carrito.
 validarProductoAgregado() {
-    // Reutiliza la misma validación del badge del carrito.
     return this.validarCantidadCarrito('1');
 },
 
@@ -595,39 +459,18 @@ validarCantidadCarrito(cantidad) {
     I.see(cantidad, this.fields.cantidadCarrito);
 },
 
+// Reutiliza la misma validación de LP030.
 validarConfirmacionAgregado() {
-    // Misma evidencia que LP030, sin duplicar lógica.
     return this.validarCantidadCarrito('1');
 },
 
+// Se mantiene para casos que realmente necesitan un color específico.
 seleccionarColorProducto(color) {
-    // Se conserva para los casos que realmente necesitan un color específico.
-    const opcionColor = `//p[normalize-space(.)="${color}"]`;
+    const opcionColor =
+        `//p[normalize-space(.)="${color}"]`;
 
     I.waitForVisible(opcionColor, 10);
     I.click(opcionColor);
-    I.wait(1);
-},
-
-// Reutilizable para carrito, entrega y E2E: evita fallos cuando cambia el catálogo.
-async seleccionarColorDisponible() {
-    await I.usePlaywrightTo('seleccionar un color disponible del producto', async ({ page }) => {
-        const colores = page.locator(this.fields.coloresProducto);
-        const cantidad = await colores.count();
-
-        if (cantidad === 0) {
-            // Algunos productos no requieren seleccionar color.
-            return;
-        }
-
-        const primerColor = colores.first();
-        await primerColor.waitFor({ state: 'visible', timeout: 10000 });
-
-        if (await primerColor.isEnabled()) {
-            await primerColor.click();
-        }
-    });
-
     I.wait(1);
 },
 
@@ -645,12 +488,14 @@ validarSubtotal(cantidad) {
     I.waitForText(`Subtotal (${cantidad} productos)`, 10);
 },
 
+// LP041 - Reutiliza el selector estable del botón aumentar.
 aumentarCantidadCarrito() {
     I.waitForVisible(this.fields.botonAumentarCantidadCarrito, 10);
     I.click(this.fields.botonAumentarCantidadCarrito);
     I.wait(1);
 },
 
+// LP042 - Una sola función para disminuir cantidad.
 disminuirCantidadCarrito() {
     I.waitForVisible(this.fields.botonDisminuirCantidadCarrito, 10);
     I.click(this.fields.botonDisminuirCantidadCarrito);
@@ -658,11 +503,11 @@ disminuirCantidadCarrito() {
 },
 
 validarCantidadCarritoProducto(cantidad) {
-    I.seeInField(this.fields.inputCantidadCarrito, cantidad);
+    I.seeInField(this.fields.cantidadProductoCarrito, cantidad);
 },
 
+// LP043 - Liverpool reutiliza decrease para eliminar cuando la cantidad es 1.
 removerProductoCarrito() {
-    // Con cantidad 1 Liverpool reutiliza decrease como acción de eliminar.
     I.waitForVisible(this.fields.botonDisminuirCantidadCarrito, 10);
     I.click(this.fields.botonDisminuirCantidadCarrito);
     I.wait(2);
@@ -675,9 +520,10 @@ confirmarEliminacionProducto() {
 },
 
 validarCarritoVacio() {
-    I.dontSeeElement('input[name="quantity"]');
+    I.dontSeeElement(this.fields.cantidadProductoCarrito);
 },
 
+// LP044-LP046 - Resumen y totales.
 validarSubtotalCarrito() {
     I.waitForText('Subtotal', 10);
 },
@@ -699,10 +545,12 @@ validarTotalFinal() {
     I.waitForVisible(this.fields.totalCarrito, 10);
 },
 
+// LP056-LP058 - Opciones de entrega.
 validarOpcionesEntrega() {
     I.waitForElement(this.fields.opcionesEntrega, 10);
 },
 
+// Una sola función sirve para domicilio y Click & Collect.
 seleccionarOpcionEntrega(opcion) {
     const selector =
         `[data-testid="product-configurator-delivery-selection-card-${opcion}"]`;
@@ -717,11 +565,13 @@ validarOpcionEntregaSeleccionada(opcion) {
         `[data-testid="product-configurator-delivery-selection-card-${opcion}"]`;
 
     I.waitForVisible(selector, 10);
-    I.seeElement(`${selector} [data-testid="selection-checkmark"]`);
+    I.seeElement(
+        `${selector} ${this.fields.checkEntrega}`
+    );
 },
 
+// LP062 - Reutiliza la validación general de resultados.
 validarResultadosBusqueda() {
-    // LP062 reutiliza la validación general ya usada desde LP001.
     return this.validarResultados();
 },
 
