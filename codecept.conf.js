@@ -8,7 +8,14 @@ exports.config = {
       browser: "chromium",
       url: 'https://www.liverpool.com.mx/tienda/home',
       show: true,
-      locale: "es-MX"
+      locale: "es-MX",
+      video: true,
+      pressKeyDelay: 100,
+      trace: true,
+      keepTraceForPassedTests: true,
+    },
+    PlaywrightVideoAllure: {
+      require: './utils/playwrightVideoAllure_helper'
     }
   },
 
