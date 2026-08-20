@@ -22,7 +22,18 @@ exports.config = {
   include: {
     I: "./steps_file.js", /** Crear al actor, quien va a realizar las acciones */
     karelPage: "./pages/karelPage.js", /** Creacion de la page Object */
-    liverpoolPage: "./pages/liverpoolPage.js"
+    busquedaProductosPage: "./pages/busquedaProductosPage.js",
+    carritoPage: "./pages/carritoPage.js",
+    checkoutPage: "./pages/checkoutPage.js",
+    codigoPromocionalPage: "./pages/codigoPromocionalPage.js",
+    detalleProductoPage: "./pages/detalleProductoPage.js",
+    filtrosProductosPage: "./pages/filtrosProductosPage.js",
+    flujoE2EPage: "./pages/flujoE2EPage.js",
+    loginCuentaPage: "./pages/loginCuentaPage.js",
+    navegacionCategoriasPage: "./pages/navegacionCategoriasPage.js",
+    ordenamientoResultadosPage: "./pages/ordenamientoResultadosPage.js",
+    smokePage: "./pages/smokePage.js",
+    wishlistPage: "./pages/wishlistPage.js",
   },
 
   gherkin: {
