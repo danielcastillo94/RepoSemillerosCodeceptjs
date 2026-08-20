@@ -11,7 +11,7 @@ exports.config = {
       show: process.env.CI ? false : true,
       locale: "es-MX",
       storageState: './storageState.json',
-      show: true,
+      show: process.env.CI ? false : true,
       video: true,
       pressKeyDelay: 100,
       trace: true,
