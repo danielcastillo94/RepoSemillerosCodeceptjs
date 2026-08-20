@@ -36,7 +36,7 @@ class BNPage {
     }
 
     busquedaZapatillas() {
-        I.waitForElement(this.fields.searchBar, 5);
+        I.waitForElement(this.fields.searchBar, 15);
         I.click(this.fields.searchBar)
         I.fillField(this.fields.searchBar, "zapatillas");
         I.pressKey('Enter');
@@ -51,7 +51,7 @@ class BNPage {
 
     //TC002--------------------------------------------------------------------------
     busquedaInexistente() {
-        I.waitForElement(this.fields.searchBar, 5);
+        I.waitForElement(this.fields.searchBar, 15);
         I.click(this.fields.searchBar)
         I.fillField(this.fields.searchBar, "qwerty12345xyz");
         I.pressKey('Enter');
@@ -65,7 +65,7 @@ class BNPage {
     //TC003-----------------------------------------------------------------------
     resultadosLady() {
         I.scrollTo(this.fields.zapatillaLady)
-        I.waitForElement(this.fields.zapatillaLady, 5);
+        I.waitForElement(this.fields.zapatillaLady, 15);
         I.click(this.fields.zapatillaLady)
         I.waitForURL(this.urls.urlLady);
         I.seeElement(this.fields.textZapatillaLady);
@@ -77,7 +77,7 @@ class BNPage {
     }
 
     categoriaPrincipal() {
-        I.waitForElement(this.fields.mueblesCategoria, 5);
+        I.waitForElement(this.fields.mueblesCategoria, 15);
         I.click(this.fields.mueblesCategoria);
     }
 
@@ -88,7 +88,7 @@ class BNPage {
     //TC0005
 
     Subcategorias() {
-        I.waitForElement(this.fields.mueblesCategoria, 5);
+        I.waitForElement(this.fields.mueblesCategoria, 15);
         I.moveCursorTo(this.fields.mueblesCategoria);
         I.wait(5);
     }

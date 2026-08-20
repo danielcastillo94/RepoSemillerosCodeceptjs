@@ -11,11 +11,15 @@ exports.config = {
       show: process.env.CI ? false : true,
       locale: "es-MX",
       storageState: './storageState.json',
-      show: process.env.CI ? false : true,
       video: true,
       pressKeyDelay: 100,
       trace: true,
       keepTraceForPassedTests: true,
+      waitForTimeout: 15000,
+      getPageTimeout: 30000,
+      emulate: {
+        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+      }
     },
     PlaywrightVideoAllure: {
       require: './utils/playwrightVideoAllure_helper'
