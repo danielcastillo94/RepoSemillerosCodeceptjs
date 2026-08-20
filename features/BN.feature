@@ -33,11 +33,11 @@ Feature: Navegacion de la página de liverpool.
     Scenario: Expandir categorías principales
         Given El usuario se encuentra en la página de Liverpool
         When El usuario localiza el menú de categorías
-        When El usuario selecciona una categoría principal
+        When El usuario selecciona una categoría principal de la página de Liverpool
         Then El usuario valida que la categoría seleccionada se despliegue correctamente
 
     @TC0005
     Scenario: Expandir subcategorías
         Given El usuario se encuentra en la página de Liverpool
-        When El usuario localiza el menú de categorías
+        When El usuario localiza el menú de categorías de Liverpool
         Then El usuario valida que se desplieguen las subcategorías correspondientes

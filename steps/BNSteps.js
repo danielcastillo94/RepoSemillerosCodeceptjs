@@ -50,11 +50,11 @@ Given(/^El usuario se encuentra en la página de Liverpool$/, () => {
     BNPage.login();
 });
 
-When(/^El usuario localiza el menú de categorías$/, () => {
+When(/^El usuario localiza el menú de categorías de Liverpool$/, () => {
     BNPage.categorias();
 });
 
-When(/^El usuario selecciona una categoría principal$/, () => {
+When(/^El usuario selecciona una categoría principal de la página de Liverpool$/, () => {
     BNPage.categoriaPrincipal()
 });
 
