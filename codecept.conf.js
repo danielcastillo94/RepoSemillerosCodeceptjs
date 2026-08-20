@@ -10,6 +10,7 @@ exports.config = {
       url: 'https://www.liverpool.com.mx/tienda/home',
       show: true,
       locale: "es-MX",
+      storageState: './storageState.json',
       show: true,
       video: true,
       pressKeyDelay: 100,

@@ -76,7 +76,11 @@ Given(/^El usuario ha iniciado sesión en Liverpool$/, async () => {
 
 When(/^El usuario se encuentra en la página de detalle de un producto$/, async () => {
     // Lógica para ir a un producto (por ejemplo, mediante búsqueda direct a URL)
-    I.amOnPage('https://www.liverpool.com.mx/tienda/pdp/celular/1191389946');
+    await CarritoPage.homeCelularesLiverpool();
+});
+
+When(/^El usuario selecciona un producto del listado que es Apple$/, async () => {
+    await CarritoPage.agregarUnProductoAFavoritos("Apple");
 });
 
 When(/^El usuario selecciona el icono de favoritos$/, async () => {
@@ -102,32 +106,69 @@ When(/^El usuario selecciona un producto y hace clic en "Remover de favoritos"$/
 Then(/^El usuario valida que el producto se haya removido correctamente de favoritos$/, async () => {
     await CarritoPage.validarFavoritoRemovido();
 });
+//TC0033----------------------------------------------------------------------------------------------------------
+// ==========================================
+// PASOS COMPARTIDOS / PREPARACIÓN (GIVENS)
+// (Usados por TC0033, TC0034 y TC0035)
+// ==========================================
 
-When(/^El usuario aumenta la cantidad de un producto$/, async () => {
-    await CarritoPage.aumentarCantidad();
-});
-
-Then(/^El usuario valida que la cantidad del producto se haya actualizado correctamente en el carrito$/, async () => {
-    await CarritoPage.validarCantidadActualizada();
-});
-//TC0037----------------------------------------------------------------------------
-When(/^El usuario disminuye la cantidad de un producto$/, () => {
-    CarritoPage.disminuirCantidad();
+Given(/^El usuario se encuentra en la página de celulares$/, async () => {
+    await CarritoPage.homeCelularesLiverpool();
 });
 
-//TC0038----------------------------------------------------------------------------
-When(/^El usuario selecciona un producto y hace clic en "Remover del carrito"$/, () => {
-    CarritoPage.removerDelCarrito();
+Given(/^El usuario agrega los productos Apple al carrito$/, async () => {
+    await CarritoPage.agregarMultiplesProductos("Apple");
+
 });
 
-Then(/^El usuario valida que el producto se haya removido correctamente del carrito$/, () => {
-    CarritoPage.validarCarritoVacio();
+Given(/^El usuario se encuentra en la página del carrito$/, async () => {
+    await CarritoPage.irAlCarrito();
 });
 
-//TC0039----------------------------------------------------------------------------
-Then(/^El usuario valida que el subtotal del carrito sea correcto y corresponda a los productos agregados$/, () => {
-    CarritoPage.validarSubtotalActualizado();
+
+// ==========================================
+// TC0033: AUMENTAR CANTIDAD DE UN PRODUCTO
+// ==========================================
+
+// Acción de TC0033
+When(/^El usuario aumenta la cantidad del producto a "([^"]*)"$/, async (cantidad) => {
+    await CarritoPage.aumentarCantidadProducto(cantidad);
 });
+
+// Validación de TC0033 (y reutilizable para TC0034)
+Then(/^El usuario valida que la cantidad del producto sea "([^"]*)" en el carrito$/, async (cantidadEsperada) => {
+    await CarritoPage.validarCantidadCarrito(cantidadEsperada);
+});
+
+
+// ==========================================
+// TC0034: DISMINUIR CANTIDAD DE UN PRODUCTO
+// ==========================================
+
+// Acción de TC0034
+When(/^El usuario disminuye la cantidad del producto a "([^"]*)"$/, async (cantidad) => {
+    await CarritoPage.disminuirCantidadProducto(cantidad);
+});
+
+// Nota: El 'Then' de la cantidad se reutiliza del bloque de TC0033 arriba 
+// debido a que la expresión regex es idéntica:
+// Then(/^El usuario valida que la cantidad del producto sea "([^"]*)" en el carrito$/)
+
+
+// ==========================================
+// TC0035: REMOVER PRODUCTO DEL CARRITO
+// ==========================================
+
+// Acción de TC0035
+When(/^El usuario elimina el producto del carrito$/, async () => {
+    await CarritoPage.removerProductoDelCarrito();
+});
+
+// Validación de TC0035
+Then(/^El usuario valida que el carrito se encuentre vacío$/, async () => {
+    await CarritoPage.validarCarritoVacio();
+});
+
 
 //TC0040----------------------------------------------------------------------------
 Then(/^El usuario valida que los impuestos del carrito sean correctos y correspondan a los productos agregados$/, () => {

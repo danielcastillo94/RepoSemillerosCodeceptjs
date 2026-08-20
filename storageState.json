@@ -1,0 +1,751 @@
+{
+  "cookies": [
+    {
+      "name": "gcp-migrated",
+      "value": "true",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AKA_A2",
+      "value": "A",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1787251289.810893,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_abck",
+      "value": "89D99EC2B6D127FF314AD8E6A518A13A~-1~YAAQVsX3vbvr/vafAQAAsIRDIBDKWn3Bt/I66LzTXN6HFGQN278FZMoAQTFs/x3nVV/Zhk+F+m/3rLa1wmzwKjFuioMu8/QcBde6tEEPtYF0JAkO4AuSCvxoPDU6Sz7A+59AsjeDQbvMk6bzBNLyS4ibH0cdWJyvPLhMjfK+/hSMOrLfJRZz2CBFzTsMi0cm8YIkgxjV5gCFXBJIDulKUPLhLJA2W7NWYFkRLqzoWcvTYPjQTVDTDW6Mz1x4lNmXOZ0WTm+BOzltNLY5T5BI9TVBGBV/u+jYHjUOniyZTMPCGaOt6v8ip8zsi0MbUjoF6xZVpI+08Qy9XElN6GCSovSxnWoiyfA+lQVuCDziNBdDTGv53HcNf/68/LlF5wgeePU+5wB3ouw6ZchnsG738gSRi71Dmxrp2JY9r9aI5MylEO1Fyg8yfF3gIH5unCnTHAdID3l0x2RYAUi2F7I=~-1~-1~-1~-1~-1",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783689.810939,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ak_bmsc",
+      "value": "A60E7E02400877C73F0B8FFE332336C0~000000000000000000000000000000~YAAQVsX3vbzr/vafAQAAsIRDIACGS+JCW1V+DPdIauRezIvCNsPmYrZFke2MPXxXQKZz2+j61VQzzAz6N85LKn7WFtz5wzbga/uQByYT8ekvCwKhDHTTsph7WqUPAWl2feF21GcOsO3UvIkjNYZqfg+7UuB1wm/ZBBiHsZA6PoUxxHFn+R81P9+XQhlA3zrdPDNvW3fkG/vnIWaaVzD+iU88spvp6oDJQHQeKv0iPeS9RUKJeHQQ3g4BDzKFilU489lBJn92apC6OWvi18Y9SO2QbHLcUqdIUT5tsQ6kck4F15QOXqdcV17EEZFGhN/Lq6JlpMNHdoIAEyS4JrJ+GiGo/8gVMKBjpQ457ZxG36SzlyjOn0P+3cqEbhEvYG2lgVXE0pJRRbDuAAptt23ygOdYaw==",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1787254889.810988,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "jewel-migrated",
+      "value": "true",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IMGVER",
+      "value": "SS425",
+      "domain": "ss425.liverpool.com.mx",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PIM-SESSION-ID",
+      "value": "oPClY3SCl2F8ifU9",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "gbi_sessionId",
+      "value": "cmt1t4nvl00003571rc0nhmgl",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1787249490,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "gbi_visitorId",
+      "value": "cmt1t4nvl0001357118f6z2zd",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807690.886757,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.1502306711.1787247691",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1795023690,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "session_dc_qv",
+      "value": "1",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1787249490,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "han2n24oKwPZsfKnpmRNn_ROUSKajmdDPzpWFQbJlbM-1787247691.8627071-1.0.1.1-l5HCOAFhfdHvjnJX9swhe20PZErvOPP8NSO5aFjVaiwtPa06LiJi8uF5762LXXjZ8VSubzO88MxH.jVGWpqrtFolx1DjMSp9pGF3Lkw5sWCTzPDdsvIdwf7Nl9wdIpYw",
+      "domain": ".curalate.com",
+      "path": "/",
+      "expires": 1787249490.786562,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ttp",
+      "value": "3IBpCrPBYA6x3AJBXAqi37Usx65",
+      "domain": ".tiktok.com",
+      "path": "/",
+      "expires": 1820943690.81596,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "deviceId",
+      "value": "02-842601518",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807691.083937,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "crl8.fpcuid",
+      "value": "bc9cd3e7-cca6-47b2-86f8-d934b4fcd8a2",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783691,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUlHhzrbZs3epD6MgVHwG15He2zPOlm-ktnXBFz491ppdr8QEYmYOcfrdZTWVl0",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1821807691.536298,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__rtbh.lid",
+      "value": "%7B%22eventType%22%3A%22lid%22%2C%22id%22%3A%2208hEKNb722MJ4Ty9mKkZ%22%2C%22expiryDate%22%3A%222027-08-20T17%3A41%3A31.614Z%22%7D",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783691,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_tt_enable_cookie",
+      "value": "1",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1820943691,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ttp",
+      "value": "01M0G471X5P2X2ND2C78ZQT041_.tt.2",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1820943691,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_uetsid",
+      "value": "616f79b09cbe11f1b99e657e7fbb44b9",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1787334091,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_uetvid",
+      "value": "617054a09cbe11f19a8e7754ec8953e5",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1820943691,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_XXXXXXXXXX",
+      "value": "GS2.1.s1787247691$o1$g0$t1787247691$j60$l0$h0",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807691.824142,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".bat.bing.com",
+      "path": "/",
+      "expires": 1787852492.882406,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "25BDA2B825926E6C34AFB50324B36F89",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1820943692.882323,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.2.1787247692039.504917550703531555",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1795023692,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "GRV_2409_ga",
+      "value": "GA1.1.1678939379.1787247691",
+      "domain": ".groovinads.com",
+      "path": "/",
+      "expires": 1787506892.108501,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "i",
+      "value": "67e71ac4-33f7-4cb4-beb1-c0e0754db02d|1787247693",
+      "domain": ".openx.net",
+      "path": "/",
+      "expires": 1818783692.134516,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_pin_unauth",
+      "value": "dWlkPVpESmlNV1prT0RRdFlqQTNaQzAwTVRGaExXRXpNVEl0TkRVNU1XUmhaREpoT0RNMw",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783692,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "muidn",
+      "value": "q7kxV1rDB7Fa",
+      "domain": ".mgid.com",
+      "path": "/",
+      "expires": 1818783692.230705,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "mg_sync",
+      "value": "{\"834131\":1787247693}",
+      "domain": "cm.mgid.com",
+      "path": "/",
+      "expires": 1789839692.230787,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_pinterest_ct_ua",
+      "value": "TWc9PSYraGlwalF6V1FGK25TVWljaXdJMjlCeEVNVTZ5V1VoTlJTdnc3Z1ZrRUo4K2RyQklVY0tJWXFXT2VxdHhNL0tPbnR1Z1B5eFFmMFRQZ1JaaHNNVm8rS0ROOE5iR2Z6Q0l6eVlnUHVsVjRPWT0mUDlOcUoyYWFTV2I4TE93czRxaHpUMzdNUmc0PQ==",
+      "domain": ".ct.pinterest.com",
+      "path": "/",
+      "expires": 1818783692.270234,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "jml_uuid_67fd95260740ccc4ec658d03",
+      "value": "9db9aba1-0468-489d-b6c6-56adb561c7bb",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783692,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "GRV_mgid",
+      "value": "%7Bmuidn%7B",
+      "domain": ".groovinads.com",
+      "path": "/",
+      "expires": 1787506892.317033,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "g",
+      "value": "3aNZ35IRWCLBVinOVFoe_1787247693401",
+      "domain": ".creativecdn.com",
+      "path": "/",
+      "expires": 1818783692.329456,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "c",
+      "value": "3aNZ35IRWCLBVinOVFoe_6uHXnND6jRecH1ocXFyK_1787247693401",
+      "domain": ".creativecdn.com",
+      "path": "/",
+      "expires": 1818783692.329523,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://liverpool.com.mx",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "ts",
+      "value": "1787247693",
+      "domain": ".creativecdn.com",
+      "path": "/",
+      "expires": 1818783692.329587,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://liverpool.com.mx",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "_evga_7242",
+      "value": "{%22uuid%22:%22780da31e038bec0d%22}",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807708.015912,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_sfid_930e",
+      "value": "{%22anonymousId%22:%22780da31e038bec0d%22%2C%22consents%22:[]}",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807707.936484,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "QuantumMetricSessionID",
+      "value": "3a259978c7cf4738aca1b535707f7486",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1787249493,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "QuantumMetricUserID",
+      "value": "91f2894a3e717b5abda006e2413125d1",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783693,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "XANDR_PANID",
+      "value": "Nq6y32HAOqU6FqDpH4_kW674oGU4PVUYsQfkXLQo8yvj9MOAUqzrXXsDCRvQ4JiQ8BHWGmKX5R9IbVfFcZ6UM8gMwx0VM-i3jTiO7VmAYZM.",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1795023692.856252,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://liverpool.com.mx",
+      "_crHasCrossSiteAncestor": true
+    },
+    {
+      "name": "uuid2",
+      "value": "7142704375321464561",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1795023692.856376,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "anj",
+      "value": "dTM7k!M4/rD>6NRF']wIg2C'$o6EGT!]tbPl@/@8+nOv3U_jlf>S9BACAF?$Q8A)PD>[N-HLXq:^/CO%^/UaPc15s5>UHHKc0yYg_KB0<J3?eA3If)y3KL9D3I?*z7@8oR",
+      "domain": ".adnxs.com",
+      "path": "/",
+      "expires": 1795023692.856352,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ttcsid",
+      "value": "1787247691691::t1KnleJEqvQuqDrRnrH3.1.1787247692863.0::1.-2292.0::1161.1.1005.127::0.0.0",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1820943692,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ttcsid_C9APTGJC77U7KEORBI90",
+      "value": "1787247691689::WBsVotCHo7YgSOfSMU7L.1.1787247692863.0",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1820943692,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_ZF6SNY8CLK",
+      "value": "GS2.1.s1787247691$o1$g1$t1787247692$j59$l0$h0",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807692.96241,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "kampyle_userid",
+      "value": "b71b-650b-6bc4-dd3f-957a-d839-006b-9e47",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783692,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "kampyleUserSession",
+      "value": "1787247693185",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783693,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "kampyleUserSessionsCount",
+      "value": "1",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783693,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "kampyleUserPercentile",
+      "value": "40.87382372111155",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783693,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "kampyleSessionPageCounter",
+      "value": "1",
+      "domain": "www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818783693,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_171XPPQ282",
+      "value": "GS2.1.s1787247691$o1$g0$t1787247693$j58$l0$h0",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807693.669195,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.3.1678939379.1787247691",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807707.971999,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.3.1991915944.1787247694",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1787334107,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_gtag_UA_4668284_1",
+      "value": "1",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1787247754,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "did",
+      "value": "s%3Av0%3A00fb2c42-0033-4df4-bebd-2cba6b2f1b78%3A131b4af0d6e98a510df853dddc888a80bcdd2cd194c5bb784d894dc7e8ee9411.wBGKFL1elvuroMZGKXHide80xafw3K2BDnfLV8CeuHg",
+      "domain": "login.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818805305.938676,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "did_compat",
+      "value": "s%3Av0%3A00fb2c42-0033-4df4-bebd-2cba6b2f1b78%3A131b4af0d6e98a510df853dddc888a80bcdd2cd194c5bb784d894dc7e8ee9411.wBGKFL1elvuroMZGKXHide80xafw3K2BDnfLV8CeuHg",
+      "domain": "login.liverpool.com.mx",
+      "path": "/",
+      "expires": 1818805305.938827,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "auth0",
+      "value": "s%3AeRrgm4oqYh7QTUIBu-KYpIPZk2yC0HBA.%2FHTZJgoS0mK8B7nn2ir%2BheOUNW8kFE2fEdH%2B4OEfh4A",
+      "domain": "login.liverpool.com.mx",
+      "path": "/",
+      "expires": 1795801322.617183,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "auth0_compat",
+      "value": "s%3AeRrgm4oqYh7QTUIBu-KYpIPZk2yC0HBA.%2FHTZJgoS0mK8B7nn2ir%2BheOUNW8kFE2fEdH%2B4OEfh4A",
+      "domain": "login.liverpool.com.mx",
+      "path": "/",
+      "expires": 1795801322.617297,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "lastLogin",
+      "value": "2026-08-20T17:42:03.985Z",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1804527721.939606,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SessionId",
+      "value": "81554da5-133e-4490-bd26-05db7c8fa866.oFoXe%2B0pInVPRlUxmDknMcXF2xm%2BhQDnlWZ022z58Ps",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1821807722.939707,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "bm_sv",
+      "value": "5499F82D9568F93E31F32CDA20C8E557~YAAQVsX3vYsY//afAQAACApEIABUxNBrHuio8dwNgQg/Z0/uqZzKybF4r5A8y+t+iiBt3ju7I6K8uFo4uL94VvRueRdV4+qUP8l64Dc4arMwyR1Br92/c/ILSDEiVWXwFVC8f41njMkwvSIfvBuUL1rn9n42s+n1t5Xi2uno1ph37zJeIjW6Hpyfpbwd9NWU8MTvXgqa8rBO8KMneLaDMmhjY0mm07PJnjSQfrfZo67TG1OvQg8dLhN4YynBkjfft/8j5saP~1",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1787254890.945818,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "bm_sz",
+      "value": "68C2D0F7B57DB30DC2D91B4203D8EA6D~YAAQVsX3vYwY//afAQAACApEIADG3y09hJpd023bmcTtXrBa9QTw4+QJ5RWvoScjUxySdX06a2u5RIMX8wJkkYQPS68Vu4qDjZOzzWWHbbeByhhrxf7MDioc3XME+yoirNNLauJHs/qCMUp2WJNivVRC6IhZb5ITZtXnPjhIAxV2h1FqujfpZyu0grkKinzOg3t41PFGwXcvXU4VRI1dEsU++fbY4wjXy1yE5tY8lpO3IoA/KsXK990d6COryOCzublo8+LHcCLsR81/Iyh7nZ4Oyt0d74Q1LKzargJ3o0KUuYW76UJNEm9xXYqU6Obj7Zb0qCv1A2utI7xkf5C88xFzIDrwKY9YeHgCtjGNeQ4mAz+A0fD2xlHPRLw4+gLErCzLN+oX1XXP0lFx0/mm0zZCSax66zbZ2wRY6GtGyGt5bQ==~3487032~4600120",
+      "domain": ".liverpool.com.mx",
+      "path": "/",
+      "expires": 1787262088.945869,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AWSALBTGCORS",
+      "value": "McZZicHTk/T0NP/B92pWlnqSvexM8Tfw1ejALngc9B8Wf8jPcfZRJspMhtpjHY6Daw639Fe4tEeEtJYFM+hk1IU+0dnatNyekgIszPEbMkX1KcW3aFYpcEhM3RXTe43D303O8QUDaicbwF7OPMo+yma2fnTaLeTMgYvYmsXTHGlJ+fQ5Dpw=",
+      "domain": "serviciosliverpoolsadecv.us-4.evergage.com",
+      "path": "/",
+      "expires": 1787852524.025786,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "RT",
+      "value": "\"z=1&dm=www.liverpool.com.mx&si=b142cd15-cc8a-4949-a209-f0be6d03ae21&ss=mt1t4n1y&sl=1&tt=2ar&rl=1\"",
+      "domain": ".www.liverpool.com.mx",
+      "path": "/",
+      "expires": 1787852524,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.liverpool.com.mx",
+      "localStorage": [
+        {
+          "name": "grvclid",
+          "value": "69d54d9746b6e87"
+        },
+        {
+          "name": "QM_U",
+          "value": "{\"u\":\"91f2894a3e717b5abda006e2413125d1\",\"exp\":1818783693091}"
+        },
+        {
+          "name": "__rtbh.lid",
+          "value": "{\"eventType\":\"lid\",\"id\":\"08hEKNb722MJ4Ty9mKkZ\",\"expiryDate\":\"2027-08-20T17:41:31.614Z\"}"
+        },
+        {
+          "name": "_uetvid_exp",
+          "value": "Tue, 14 Sep 2027 17:41:31 GMT"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gsid_dc\":{\"value\":{\"joinId\":\"hA9r2JBLp9ZPIyaN1FV3vLQVUrp4T2RzPg\",\"lastJoinedTimeMs\":1787247690646},\"expires\":1787247990646},\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"errors\":0,\"eopCount\":0,\"creationTimeMs\":1787247690648},\"expires\":1795023690648}}"
+        },
+        {
+          "name": "_uetsid",
+          "value": "616f79b09cbe11f1b99e657e7fbb44b9"
+        },
+        {
+          "name": "QM_S",
+          "value": "{\"configReplayEnabled\":true,\"s\":\"3a259978c7cf4738aca1b535707f7486\",\"exp\":1787249493090,\"event:a11385efaf20470f9be2d8fe2e436de8\":{\"i\":-18,\"v\":\"Script error.\",\"t\":1787247693037},\"event:f618b036fcaa47a6b73f6b169f8c349f\":{\"i\":3301,\"v\":\"/tienda/home\",\"t\":1787247692840},\"event:6bcae5c518d74f59bee903a2ffed0d30\":{\"i\":3334,\"v\":\"true\",\"t\":1787247692840},\"event:ae1844c1339f4015a81ea99b03f462f0\":{\"i\":3347,\"v\":\"\",\"t\":1787247692840},\"slr\":false,\"event:11c8c20e6c024bd7924865718d120e2e\":{\"i\":-26,\"v\":\"\",\"t\":1787247693098},\"eSync\":true,\"event:f7522d86481443d6a2d5743dc061234a\":{\"i\":3401,\"v\":\"view_promotion\",\"t\":1787247692840,\"h\":\"BrgXX8Xgm8I=\"},\"event:8e0cb8c9e8b844a58c8a4c5e5fdccd3d\":{\"i\":3415,\"v\":\"page_view\",\"t\":1787247692840,\"h\":\"bFivlWX968o=\"},\"event:6732059b43fb4948a020a55baeeedfaa\":{\"i\":3417,\"v\":\"true\",\"t\":1787247692840},\"event:d8c85e569b3941a09a9e769cb64303ac\":{\"i\":3406,\"v\":\"click_menu\",\"t\":1787247693308,\"h\":\"DY+n3NuZIQ0=\"}}"
+        },
+        {
+          "name": "jml_uuid_67fd95260740ccc4ec658d03",
+          "value": "9db9aba1-0468-489d-b6c6-56adb561c7bb"
+        },
+        {
+          "name": "kampyleUserSession",
+          "value": "1787247693185"
+        },
+        {
+          "name": "_constructorio_search_client_id",
+          "value": "b5e96478-b72c-407f-9d6f-931ba4e34aa4"
+        },
+        {
+          "name": "lastExternalReferrerTime",
+          "value": "1787247692015"
+        },
+        {
+          "name": "kampyle_userid",
+          "value": "b71b-650b-6bc4-dd3f-957a-d839-006b-9e47"
+        },
+        {
+          "name": "_uetsid_exp",
+          "value": "Fri, 21 Aug 2026 17:41:31 GMT"
+        },
+        {
+          "name": "jml-cache-items-ts",
+          "value": "1787247692423"
+        },
+        {
+          "name": "kampyleUserPercentile",
+          "value": "40.87382372111155"
+        },
+        {
+          "name": "_constructorio_search_session",
+          "value": "{\"sessionId\":1,\"lastTime\":1787247690815}"
+        },
+        {
+          "name": "kampyleUserSessionsCount",
+          "value": "1"
+        },
+        {
+          "name": "_uetvid",
+          "value": "617054a09cbe11f19a8e7754ec8953e5"
+        },
+        {
+          "name": "lastExternalReferrer",
+          "value": "empty"
+        },
+        {
+          "name": "kampyleSessionPageCounter",
+          "value": "1"
+        },
+        {
+          "name": "_constructorio_search_session_id",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}

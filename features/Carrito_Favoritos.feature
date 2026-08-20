@@ -33,7 +33,8 @@ Feature: Correcto funcionamiento de el carrito
     @TC0032_Favoritos
     Scenario: Agregar, validar y remover un producto de favoritos
         Given El usuario ha iniciado sesión en Liverpool
-        And El usuario se encuentra en la página de detalle de un producto
+        When El usuario se encuentra en la página de detalle de un producto
+        When El usuario selecciona un producto del listado que es Apple
         When El usuario selecciona el icono de favoritos
         Then El usuario valida que el producto se haya agregado a su lista de favoritos
         When El usuario se navega a la página de favoritos
@@ -44,24 +45,30 @@ Feature: Correcto funcionamiento de el carrito
     # Comparar Productos se deja pendiente----------------------------------------
 
     # Carrito - Cantidad y Cambios
+    @TC0033
+    Scenario: Aumentar cantidad de un producto en el carrito
+        Given El usuario se encuentra en la página de celulares
+        And El usuario agrega los productos Apple al carrito
+        And El usuario se encuentra en la página del carrito
+        When El usuario aumenta la cantidad del producto a "2"
+        Then El usuario valida que la cantidad del producto sea "2" en el carrito
 
-    @TC0037
-    Scenario: Aumentar cantidad en carrito.
-        Given El usuario se encuentra en la página del carrito
-        When El usuario aumenta la cantidad de un producto
-        Then El usuario valida que la cantidad del producto se haya actualizado correctamente en el carrito
+    @TC0034
+    Scenario: Disminuir cantidad de un producto en el carrito
+        Given El usuario se encuentra en la página de celulares
+        And El usuario agrega los productos Apple al carrito
+        And El usuario se encuentra en la página del carrito
+        When El usuario aumenta la cantidad del producto a "2"
+        And El usuario disminuye la cantidad del producto a "1"
+        Then El usuario valida que la cantidad del producto sea "1" en el carrito
 
-    @TC0038
-    Scenario: Disminuir cantidad en carrito
-        Given El usuario se encuentra en la página del carrito
-        When El usuario disminuye la cantidad de un producto
-        Then El usuario valida que la cantidad del producto se haya actualizado correctamente en el carrito
-
-    @TC0039
-    Scenario: Remover producto del carrito
-        Given El usuario se encuentra en la página del carrito
-        When El usuario selecciona un producto y hace clic en "Remover del carrito"
-        Then El usuario valida que el producto se haya removido correctamente del carrito
+    @TC0035
+    Scenario: Remover un producto del carrito
+        Given El usuario se encuentra en la página de celulares
+        And El usuario agrega los productos Apple, Motorola y Samsung al carrito
+        And El usuario se encuentra en la página del carrito
+        When El usuario elimina el producto del carrito
+        Then El usuario valida que el carrito se encuentre vacío
 
     # Carrito - Totales e Impuestos
 

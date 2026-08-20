@@ -18,7 +18,7 @@ class CarritoPage {
     fields = {
         // PDP & Acciones
         btnAgregarCarrito: '//button[@data-testid="add-to-bag-button"]',
-        btnFavoritosPDP: '//button[contains(@class,"wishlist")] | //i[contains(@class,"icon-heart")]',
+        btnFavoritosPDP: '//button[@aria-label="Marcar como favorito"]',
         icnBolsaHeader: '//div[@class="relative p-1 cursor-pointer"]',
         seguroBoton: '//button[@data-testid="1191389946-warranty-modal-modal-guarantee-modal-footer-secondary-button"]',
         btnIniciarSesionHeader: '//div[@data-testid="blt26617d4f2e17657d-header-menu-dropdown"]',
@@ -27,8 +27,8 @@ class CarritoPage {
         // Carrito (Cart)
         itemProductoCarrito: '//a[contains(text(),"Samsung Galaxy S26 Ultra Dynamic AMOLED 2X 6.9 pulgadas")]',
         lblCantidadItems: '//p[contains(text(), "Subtotal") or contains(., "Subtotal")]',
-        btnAumentarCantidad: '//button[contains(@class,"btn-plus")] | //button[text()="+"]',
-        btnDisminuirCantidad: '//button[contains(@class,"btn-minus")] | //button[text()="-"]',
+        btnAumentarCantidad: '//button[@aria-label="increase"]',
+        btnDisminuirCantidad: '//button[@aria-label="decrease"]',
         btnEliminarProducto: '//button[contains(text(),"Eliminar")] | //button[contains(@class,"btn-remove")]',
         resultadoCarrito: '//h1[contains(text(),"Mi bolsa")]',
         samsung: '//img[@data-testid="1203150314-image-slider-image-0"]',
@@ -74,27 +74,22 @@ class CarritoPage {
     }
 
     async iniciarSesion() {
-        const usuario = process.env.LIVERPOOL_USER;
-        const password = process.env.LIVERPOOL_PASSWORD;
+        // 1. Inyectamos las cookies directamente al contexto de Playwright
+        I.usePlaywrightTo('Cargar cookies de sesión', async ({ context }) => {
+            const fs = require('fs');
+            if (fs.existsSync('./storageState.json')) {
+                const state = JSON.parse(fs.readFileSync('./storageState.json', 'utf8'));
+                await context.addCookies(state.cookies);
+            }
+        });
 
-        // 1. Estás en la Home
+        // 2. Navegamos al Home
         I.amOnPage(this.urls.urlHome);
-        I.waitForElement(this.fields.btnIniciarSesionHeader, 5);
+        I.wait(2);
 
-        // 2. Clic en "Iniciar sesión" (esto dispara la redirección al login)
-        I.click(this.fields.btnIniciarSesionHeader);
+        // 3. Validamos que el header muestre tu sesión activa
+        I.waitForElement('//span[contains(text(),"Leonel Perez")] | //span[contains(text(),"Hola,")]', 15);
 
-        // 3. ESPERAR A QUE OCURRA LA REDIRECCIÓN A LA PÁGINA DE LOGIN
-        // Esperamos a que la URL cambie a la pantalla de login:
-        I.waitForURL('**/u/login**', 10);
-
-        // O en su defecto, esperamos a que el input del correo de la nueva página ya exista:
-        I.waitForElement(this.fields.inputEmail, 10);
-
-        // 4. Ahora que ya estamos en la página de login, interactuamos con el formulario
-        I.fillField(this.fields.inputEmail, usuario);
-        I.fillField(this.fields.inputPassword, password);
-        I.click(this.fields.btnIniciarSesionSubmit);
     }
 
     agregarProductoAlCarrito() {
@@ -135,10 +130,11 @@ class CarritoPage {
     }
 
     async validarCantidadCarrito(cantidadEsperada) {
+
         const selector = this.fields.lblCantidadItems;
 
         I.waitForElement(selector, 5);
-        I.see(cantidadEsperada.toString(), selector);
+        I.waitForText(cantidadEsperada.toString(), 10, selector);
     }
 
     irAlCarrito() {
@@ -166,19 +162,49 @@ class CarritoPage {
             throw new Error(`Producto no reconocido: ${producto}`);
         }
 
-        // Entrar al producto
+        // 1. Asegurar visibilidad del producto antes de dar clic
+        I.waitForElement(selector, 10);
+        I.scrollTo(selector);
         I.click(selector);
-        //Cantidad de almacenamiento
-        await this.seleccionarAlmacenamiento("1 TB");
-        // Agregar al carrito
-        this.agregarProductoAlCarrito();
-        I.wait(2);
 
-        // Rechazar seguro
+        // 2. Seleccionar almacenamiento
+        await this.seleccionarAlmacenamiento("1 TB");
+
+        // 3. Agregar al carrito (agregamos el await que faltaba)
+        await this.agregarProductoAlCarrito();
+
+        // 4. Rechazar seguro
         await this.agregarProductoConSeguroOpcional();
 
-        // Volver a la página de celulares
+        // 5. Pausa para dar tiempo a que se guarde el item en la sesión del servidor
+        I.wait(5);
+
+        // 6. Volver a celulares mediante navegación limpia
         I.amOnPage(this.urls.urlhomeCelularesLiverpool);
+        I.waitForElement(selector, 10); // Esperar a que la lista cargue antes de continuar
+    }
+
+    async agregarUnProductoAFavoritos(producto) {
+        const productos = {
+            apple: this.fields.apple,
+            samsung: this.fields.samsung,
+            motorola: this.fields.motorola
+        };
+
+        producto = producto.toLowerCase();
+        const selector = productos[producto];
+
+        if (!selector) {
+            throw new Error(`Producto no reconocido: ${producto}`);
+        }
+        // 1. Entrar al detalle del producto desde el catálogo
+        I.waitForElement(selector, 5);
+        I.click(selector);
+
+        // 2. Dar clic en el botón de favoritos dentro de la PDP
+        I.waitForElement(this.fields.btnFavoritosPDP, 5);
+        I.click(this.fields.btnFavoritosPDP);
+        I.wait(2);
     }
 
     validarSubtotalActualizado() {
@@ -213,16 +239,30 @@ class CarritoPage {
         I.dontSeeElement(this.fields.itemFavorito);
     }
 
-    aumentarCantidad() {
-        I.waitForElement(this.fields.btnAumentarCantidad, 5);
-        I.click(this.fields.btnAumentarCantidad);
-        I.wait(2);
+    aumentarCantidadProducto(cantidad) {
+        I.waitForElement(this.fields.btnAumentarCantidad, 10);
+
+        // Convertimos la cantidad recibida desde Gherkin ("2") a un entero numérico (2)
+        const objetivo = parseInt(cantidad, 10);
+
+        // Como el carrito ya inicia con 1 producto, damos los clics necesarios para subir hasta el objetivo
+        for (let i = 1; i < objetivo; i++) {
+            I.click(this.fields.btnAumentarCantidad);
+            I.wait(2); // Pausa fundamental para que el botón de React vuelva a habilitarse tras el click
+        }
+
+        I.wait(3); // Espera final a que la SPA recalcule el subtotal
     }
 
-    disminuirCantidad() {
-        I.waitForElement(this.fields.btnDisminuirCantidad, 5);
+    disminuirCantidadProducto() {
+        I.waitForElement(this.fields.btnDisminuirCantidad, 10);
+
+        // Convertimos la cantidad de string a número
+        const objetivo = parseInt(cantidad, 10);
+
+        // Nota: Si solo necesitas dar 1 clic de restar para bajar de 2 a 1:
         I.click(this.fields.btnDisminuirCantidad);
-        I.wait(2);
+        I.wait(4); // Esperar a que la UI actualice la vista
     }
 
     validarCantidadActualizada() {
