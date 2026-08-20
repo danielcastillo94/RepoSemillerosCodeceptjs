@@ -26,7 +26,8 @@ exports.config = {
     WishlistPage: './pages/WishlistPage.js',
     CheckoutPage: './pages/CheckoutPage.js',
     LoginPage: './pages/LoginPage.js',
-    RegisterPage: './pages/RegisterPage.js'
+    RegisterPage: './pages/RegisterPage.js',
+    FlujoCompletoPage: './pages/FlujoCompletoPage.js'
   },
 
   gherkin: {
@@ -50,6 +51,7 @@ exports.config = {
       "./steps/CheckoutSteps.js",
       "./steps/LoginSteps.js",
       "./steps/RegisterSteps.js",
+      "./steps/flujocompletoSteps.js"
     ],
   },
 

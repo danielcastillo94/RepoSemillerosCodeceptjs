@@ -13,7 +13,7 @@ class CheckoutPage{
         inputcupon: '//input[@data-testid="coupon-list-coupon-input-input"]',
         btnaplicarcupon: '//span[contains(text(),"Aplicar")]',
         btnclosecupon: '//span[contains(text(),"close")]',
-        btncambiardireccion: '//span[contains(text(),"Cambiar")]',
+        btncambiardireccion: '//button[@data-testid="delivery-home-button"] | //span[contains(text(),"Cambiar")]',
         contentnuevadireccion: '//h3[contains(text(),"Selecciona una dirección")]',
         btnagregardireccion: '//button[@data-testid="delivery-selector-add-address-button"]',
         contentagregardireccion: '//h3[contains(text(),"Agregar dirección")]',
@@ -31,6 +31,12 @@ class CheckoutPage{
         CVV: '//input[@name="cvv"]',
         confirmartarjeta: '//button[contains(text(),"Continuar")]',
 
+        //direcion pro primera vez
+        direccionentrega: '//h3[contains(text(),"Agregar dirección de entrega")]',
+        usardireccion: '//span[contains(text(),"Usar esta dirección")]',
+
+        formulariodireccion: '//form[@id="formId"]',
+        contentdireccion: '//div[@class="flex flex-col h-full "]',
         //localizadores para el formulario de una nueva direccion
         aliasdireccion: '//input[@placeholder="Alias de dirección"]',
         codigopostal: '//input[@placeholder="Código postal"]',
@@ -80,23 +86,26 @@ class CheckoutPage{
         CartPage.agregarbolsa(); //Agrega a carrito
         CartPage.validarcarrito();//ve el carrito
     }
+    comprarproducto(){
+        I.click(this.locartor.btncomprar);
+    }
+    //Checkout - Datos Personales -----------------
+    direccionporprimeravez(){
+        I.waitForElement(this.locartor.contentdireccion, 5);
+        I.waitForVisible(this.locartor.contentdireccion, 5);
+        this.validarcamposdireccion();
+    }
 
     //Checkout - Dirección de Envío ------------------
     //TC053----------------------------
     direccionguardada(){
-        I.click(this.locartor.btncomprar);
         I.click(this.locartor.btncambiardireccion);
     }
     //TC054----------------------------
+
     agregardireccionnueva(){
-        I.waitForElement(this.locartor.contentnuevadireccion,
-                        this.locartor.btnagregardireccion,
-                        5
-        );
-        I.waitForVisible(this.locartor.contentnuevadireccion,
-                        this.locartor.btnagregardireccion,
-                        5
-        );
+        I.waitForElement(this.locartor.contentdireccion, 5);
+        I.waitForVisible(this.locartor.contentdireccion, 5);
         I.click(this.locartor.btnagregardireccion);
         I.waitForVisible(this.locartor.contentagregardireccion,
                         this.locartor.btnusardireccion,
@@ -107,6 +116,7 @@ class CheckoutPage{
     validarcamposdireccion(){
         I.fillField(this.locartor.aliasdireccion, process.env.ALIASDIRECCION);
         I.fillField(this.locartor.codigopostal, process.env.CP);
+        I.fillField(this.locartor.ciudad, process.env.CIUDAD);
         I.wait(3);
         I.scrollTo(this.locartor.validardireccionpordefecto);
         I.fillField(this.locartor.calle, process.env.CALLE);
@@ -114,14 +124,12 @@ class CheckoutPage{
         I.fillField(this.locartor.telefonocelular, process.env.TELEFONOCEL);
         I.fillField(this.locartor.telefonoparticular, process.env.TELEFONOPART);
         I.click(this.locartor.validardireccionpordefecto);
-        I.click(this.locartor.btnusardireccion)
-        
+        I.click(this.locartor.btnusardireccion);
     }
 
     //Checkout - Método de Pago-------------------------------
     //TC059----------------------------
     seleccionartarjeta(){
-        I.click(this.locartor.btncomprar);
         I.click(this.locartor.btntarjetas);
         I.waitForElement(this.locartor.contentformapago, 
                         this.locartor.btnagregartarjeta, 5);

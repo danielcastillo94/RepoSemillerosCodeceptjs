@@ -13,6 +13,18 @@ When(/^El usuario escoge un producto$/, () => {
 When(/^El usuario agrega el producto al carrito$/, () => {
     CheckoutPage.agregarproductocarrito();
 });
+When(/^El usuario compra el producto$/, () => {
+    CheckoutPage.comprarproducto();
+});
+
+//Checkout - Datos Personales -----------------
+When(/^El usuario agrega un domicilio$/, () => {
+    CheckoutPage.direccionguardada();
+});
+When(/^El usuario llena el formulario$/, () => {
+    CheckoutPage.direccionporprimeravez();
+});
+
 
 //Checkout - Dirección de Envío -----------------
 //TC053----------------------------

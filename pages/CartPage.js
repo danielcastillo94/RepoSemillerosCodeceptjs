@@ -10,10 +10,10 @@ class CartPage {
     };
 
     locator = {
-         spantallagrande: '//span[@data-testid="plp-page-plp-filter-attributes.rzlv_tallaRopa-attributes.rzlv_tallaRopa-checkbox-group-4-checkbox"]',
-         spancolorazuloscuro: '//span[@data-testid="plp-page-plp-filter-colors-filter-:R1csl48pb9utsq:-color-checkbox-group-3-checkbox"]',
-         btnborrartalla: '//button[@data-testid="Grande"]',
-         btnborrarcolor: '//button[@data-testid="Azul Oscuro"]',
+        spantallagrande: '//span[@data-testid="plp-page-plp-filter-attributes.rzlv_tallaRopa-attributes.rzlv_tallaRopa-checkbox-group-4-checkbox"]',
+        spancolorazuloscuro: '//span[@data-testid="plp-page-plp-filter-colors-filter-:R1csl48pb9utsq:-color-checkbox-group-3-checkbox"]',
+        btnborrartalla: '//button[@data-testid="Grande"]',
+        btnborrarcolor: '//button[@data-testid="Azul Oscuro"]',
 
         btncantidadproduc: '//button[@data-testid="1041644110-configurator-quantity-increase"]',
         btnagregarbolsa: '//button[@data-testid="add-to-bag-button"]',
@@ -95,7 +95,6 @@ class CartPage {
         I.click(this.locator.btncarrito);
         I.waitForURL(this.urls.urlcarrito);
         I.waitForVisible(this.locator.headerbolsa,
-                        this.locator.btnseleccionarproducto,
                         this.locator.btncomprartodo, 5
         );
         I.scrollPageToBottom();

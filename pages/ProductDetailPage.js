@@ -44,6 +44,7 @@ class ProductDetailPage{
         I.waitForVisible(this.locator.btnborrarcolor, 10);
     }
     productoelejido(){
+        
         I.click(this.locator.enlaceproducto);
         I.waitForURL(this.url.urlplayeraelejida);
     }
