@@ -12,15 +12,15 @@ Feature: Demostración de Network Mocking con Rick and Morty API
     Given el mock de espisodios está activo con "Episodio Semillero Alpha" y "Episodio Semillero Beta"
     When el usuario consulta la API de epsiodios
     Then ve el espisodio "Episodio Semillero Alpha" en la respuesta
-    And  ve al personaje "Episodio Semillero Beta" en la respuesta
+    And  ve el espisodio "Episodio Semillero Beta" en la respuesta
     And  no ve el espisode real "Pilot"
 
   # ─────────────────────────────────────────────────────────────────
   # EJEMPLO 2: Error 503 en la API de episodios
   # ─────────────────────────────────────────────────────────────────
-  @mock-error-episode-500
+  @mock-error-episode-503
   Scenario: Error 503 en la API de episodios
-    Given el mock de episode devuelve un error 500
+    Given el mock de episode devuelve un error 503
     When el usuario consulta la API de epsiodios
     Then la respuesta contiene el mensaje "Servicio de episodios no disponible"
 
@@ -42,5 +42,5 @@ Feature: Demostración de Network Mocking con Rick and Morty API
     Given el mock del espisodio con ID 3 devuelve "Prueba de Automatización" con fecha "Semilleros 2026" y espisodio "S99E99"
     When el usuario consulta el episodio con ID 3
     Then ve el nombre "Prueba de Automatización" en la respuesta
-    Then  ve la fecha "Semilleros 2026" en la respuesta
-    Then ve el espísodio "S99E99" en la respuesta
+    And  ve la fecha "Semilleros 2026" en la respuesta
+    And ve el espísodio "S99E99" en la respuesta

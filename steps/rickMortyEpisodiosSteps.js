@@ -1,9 +1,9 @@
 
 const {  rickMortyEpisodiosPage } = inject();
 
-// ─── EJEMPLO 1: Mock de personajes ────────────────────────────────────────────
+// ─── EJEMPLO 1: Mock de episodios ────────────────────────────────────────────
 Given(/^el mock de espisodios está activo con "(.+)" y "(.+)"$/, (nombre1, nombre2) => {
-    rickMortyEpisodiosPage.mockEpisode(nombre1, nombre2);
+    rickMortyEpisodiosPage.mockEpisodio(nombre1, nombre2);
 });
 
 When(/^el usuario consulta la API de epsiodios$/, () => {
@@ -18,8 +18,8 @@ Then(/^no ve el espisode real "(.+)"$/, (nombre) => {
     rickMortyEpisodiosPage.noVerEpisodio(nombre);
 });
 
-// ─── EJEMPLO 2: Mock de error 500 ─────────────────────────────────────────────
-Given(/^el mock de episode devuelve un error 500$/, () => {
+// ─── EJEMPLO 2: Mock de error 503 ─────────────────────────────────────────────
+Given(/^el mock de episode devuelve un error 503$/, () => {
     rickMortyEpisodiosPage.mockEpisodioError500();
 });
 
@@ -27,7 +27,7 @@ Then(/^la respuesta contiene el mensaje "(.+)"$/, (mensaje) => {
     rickMortyEpisodiosPage.verMensajeEpisodio(mensaje);
 });
 
-// ─── EJEMPLO 3: Interceptar y modificar respuesta real del nombre de la Pelicula────────────────────────
+// ─── EJEMPLO 3: Interceptar y modificar respuesta real del nombre del Episodio────────────────────────
 Given(/^el mock intercepta la respuesta real y renombra al primer episodio como "(.+)"$/, (nuevoNombre) => {
     rickMortyEpisodiosPage.mockEpisodioModificarReal(nuevoNombre);
 });

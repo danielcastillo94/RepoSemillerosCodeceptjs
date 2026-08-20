@@ -9,9 +9,9 @@ class RickMortyEpisodios {
     };
 
      // ─── EJEMPLO 1: Mock de personajes completo ───────────────────────────────
-    // Intercepta /api/character y devuelve personajes inventados.
+    // Intercepta /api/character y devuelve episodios inventados.
     // El servidor real NUNCA recibe la petición.
-    mockEpisode(nombre1, nombre2) {
+    mockEpisodio(nombre1, nombre2) {
         I.usePlaywrightTo('mockear lista de Episodios', async ({ page }) => {
             await page.route('**/api/episode', route => {
                 route.fulfill({
