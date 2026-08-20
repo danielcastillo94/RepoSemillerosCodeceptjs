@@ -24,6 +24,7 @@
     "features:checkout": "codeceptjs run --features --grep \"@checkout\" --steps --verbose",
     "features:crearcuenta": "codeceptjs run --features --grep \"@crearcuenta\" --steps --verbose",
     "features:login": "codeceptjs run --features --grep \"@Login\" --steps --verbose",
+    "features:E2E": "codeceptjs run --features --grep \"@E2E\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
   },  
