@@ -19,7 +19,7 @@
     "allure-commandline": "^2.34.1",
     "chai": "^4.5.0",
     "codeceptjs": "^3.7.3",
-    "playwrigh": "^1.62.1"
+    "playwright": "^1.62.1"
   },
   "dependencies": {
     "dotenv": "^17.2.3"
