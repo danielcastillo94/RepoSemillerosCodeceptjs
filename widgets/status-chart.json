@@ -1,1 +1,1 @@
-[{"uid":"f67e29a1abaf3f95","name":"BeforeSuite of suite Mocking de episodios en la API Rick and Morty @episodios: failed.","time":{"start":1787167181694,"stop":1787167181695,"duration":1},"status":"failed","severity":"normal"}]
+[{"uid":"761c4b659d01cfd4","name":"BeforeSuite of suite Demostración de Network Mocking con Rick and Morty API @rickmortyEpisode: failed.","time":{"start":1787208820022,"stop":1787208820022,"duration":0},"status":"failed","severity":"normal"}]
