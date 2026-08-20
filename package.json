@@ -22,6 +22,8 @@
     "features:whishlist": "codeceptjs run --features --grep \"@TC037\" --steps --verbose",
     "features:cupon": "codeceptjs run --features --grep \"@promocion\" --steps --verbose",
     "features:checkout": "codeceptjs run --features --grep \"@checkout\" --steps --verbose",
+    "features:crearcuenta": "codeceptjs run --features --grep \"@crearcuenta\" --steps --verbose",
+    "features:login": "codeceptjs run --features --grep \"@Login\" --steps --verbose",
     "allure:generate": "allure generate output --clean",
     "allure:report": "allure open"
   },  
