@@ -7,7 +7,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: 'https://www.liverpool.com.mx/tienda/home',
-      show: true,
+      show: false,
       locale: "es-MX",
       video: true,
       pressKeyDelay: 100,
