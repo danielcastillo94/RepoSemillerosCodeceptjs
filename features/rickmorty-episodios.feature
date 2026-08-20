@@ -5,7 +5,7 @@ Feature: Demostración de Network Mocking con Rick and Morty API
   Para probar distintos escenarios sin depender del servidor real
 
   # ─────────────────────────────────────────────────────────────────
-  # EJEMPLO 1: Reemplazar episodios reales con episodios falsos
+  # EJEMPLO 1: Reemplazar episodios reales con episodios falsos Jesus 
   # ─────────────────────────────────────────────────────────────────
   @mock-episode
   Scenario: Episodios mockeados reemplazan a los reales
