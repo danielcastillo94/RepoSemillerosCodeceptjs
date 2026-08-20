@@ -22,7 +22,7 @@ class FilterPage {
         seleccionarCampoMarca: '//input[@type="checkbox" and @value="ADIDAS"]',
         seleccionarCampoMarca1: '//input[@type="checkbox" and @value="ACTVITTA"]',
         productosMarca: '//h4[text()="ADIDAS"]',
-        productosMarca1: '//h4[contains(text(),"ACTVITTA")]',
+        productosMarca1: '(//span[text()="ACTVITTA"])[1]',     //'//h4[contains(text(),"ACTVITTA")]',
         filtroMedida: '//input[@type="checkbox" and @value="Mediano"]',
         validarFiltro: '//button[@data-testid="Mediano"]',
         filtroColor: '//input[@type="checkbox" and @value="Rosa~~#e522e2"]',
@@ -32,7 +32,7 @@ class FilterPage {
 //GIVEN---------------------------------------------------------------------------------------------------------------
 
   PaginPrincipal() {
-    //Pagina de inicio de Telcel
+    //Pagina de inicio de Liverpool
     I.amOnPage('/');
   }
 

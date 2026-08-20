@@ -20,9 +20,9 @@ Then(/^Los productos mostrados deben pertenecer a la marca seleccionada$/, () =>
 
 
 //@TC-011---------------------------------------------------------------
-Given(/^El usuario se encuentra en la página de Subcategorias de Tenis Casuales$/, () => {
-  FilterPage.PaginTenisCasuales();
-});
+// Given(/^El usuario se encuentra en la página de Subcategorias de Tenis Casuales$/, () => {
+//   FilterPage.PaginTenisCasuales();
+// });
 When(/^El usuario selecciona dos marcas en el filtro de marca$/, () => {
   FilterPage.seleccionarMasMarcas();
 });
@@ -31,9 +31,9 @@ Then(/^Los productos mostrados deben pertenecer a alguna de las marcas seleccion
 });
 
 //@TC-012--------------------------------------------------------------
-Given(/^El usuario se encuentra en la página de Subcategorias de Tenis Casuales$/, () => {
-  FilterPage.PaginTenisCasuales();
-});
+// Given(/^El usuario se encuentra en la página de Subcategorias de Tenis Casuales$/, () => {
+//   FilterPage.PaginTenisCasuales();
+// });
 When(/^El usuario selecciona la marca ADIDAS$/, () => {
   FilterPage.seleccionarMarca();
 });
