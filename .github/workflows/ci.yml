@@ -1,4 +1,4 @@
-name: CI — Framework CodeceptJS
+name: CI — Framework CodeceptJS Leonel Perez
 
 on:
   push:
@@ -20,18 +20,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          #cache: 'npm'
+          cache: 'npm'
 
       - name: Instalar dependencias
-        run: npm ci
+        run: npm install
 
       - name: Instalar navegadores de Playwright
-        run: npx playwright install chromium --with-deps
+        run: npx playwright install --with-deps --force chromium
 
       - name: Ejecutar pruebas
-        run: |
-          npx playwright install chromium
-          npx codeceptjs run --features --grep "@episodios" --steps
+        run: npx codeceptjs run --features --grep '@episodios' --steps
 
       - name: Obtener historial de Allure
         uses: actions/checkout@v4
