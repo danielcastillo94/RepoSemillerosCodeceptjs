@@ -1,20 +1,21 @@
 const { rickMortyMockPage } = inject();
 
 // ─── EJEMPLO 1: Mock de personajes ────────────────────────────────────────────
-Given(/^el mock de personajes está activo con "(.+)" y "(.+)"$/, (nombre1, nombre2) => {
-    rickMortyMockPage.mockPersonajes(nombre1, nombre2);
+Given(/^el mock de personajes está activo con "(.+)" y "(.+)"$/, (Episodio1, Episodio2) => {
+    rickMortyMockPage.mockPersonajes(Episodio1, Episodio2);
 });
 
 When(/^el usuario consulta la API de personajes$/, () => {
     rickMortyMockPage.consultarAPIPersonajes();
 });
 
-Then(/^ve al personaje "(.+)" en la respuesta$/, (nombre) => {
-    rickMortyMockPage.verPersonaje(nombre);
+Then(/^ve al personaje "(.+)" en la respuesta$/, (Episodio) => {
+    rickMortyMockPage.verPersonaje(Episodio);
 });
 
-Then(/^no ve al personaje real "(.+)"$/, (nombre) => {
-    rickMortyMockPage.noVerPersonaje(nombre);
+Then(/^no ve al personaje real "(.+)"$/, async (Episodio) => {
+
+    rickMortyMockPage.noVerPersonaje(Episodio);
 });
 
 // ─── EJEMPLO 2: Mock de error 500 ─────────────────────────────────────────────
