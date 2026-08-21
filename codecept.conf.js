@@ -7,7 +7,7 @@ exports.config = {
     Playwright: {
       browser: "chromium", /** Navegador que se va a utilizar */
       url: 'https://www.liverpool.com.mx', /** Url de los casos a probar */
-      show: !process.env.CI, /** En local muestra el navegador; en CI (GitHub Actions) corre headless */
+      show: true, /** En local muestra el navegador; en CI (GitHub Actions) corre headless */
       locale: "es-MX" /** Configuracion regional */
     }
   },
