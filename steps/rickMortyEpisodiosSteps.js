@@ -22,10 +22,6 @@ Given(/^el mock de episodios devuelve un error 503$/, () => {
     rickMortyEpisodiosPage.mockError503();
 });
 
-When(/^el usuario consulta la API de episodios$/, () => {
-    rickMortyEpisodiosPage.consultarAPIEpisodios();
-});
-
 Then(/^la respuesta contiene el mensaje "(.+)"$/, (mensaje) => {
     rickMortyEpisodiosPage.verMensaje(mensaje);
 });
@@ -33,10 +29,6 @@ Then(/^la respuesta contiene el mensaje "(.+)"$/, (mensaje) => {
 // ─── ESCENARIO 3: Interceptar y modificar respuesta real ────────────────────────
 Given(/^el mock intercepta la respuesta real y renombra el primer episodio como "(.+)"$/, (nuevoNombre) => {
     rickMortyEpisodiosPage.mockModificarReal(nuevoNombre);
-});
-
-When(/^el usuario consulta la API de episodios$/, () => {
-    rickMortyEpisodiosPage.consultarAPIEpisodios();
 });
 
 Then(/^ve el nombre "(.+)" en la respuesta$/, (nombre) => {
