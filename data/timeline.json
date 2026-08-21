@@ -1,1 +1,1 @@
-{"uid":"ab17fc5a4eb3bca4b216b548c7f9fcbc","name":"timeline","children":[]}
+{"uid":"ab17fc5a4eb3bca4b216b548c7f9fcbc","name":"timeline","children":[{"name":"BeforeSuite of suite Ejericicio 4 del framework @episodios: failed.","uid":"73dc2f4bc0996469","parentUid":"ab17fc5a4eb3bca4b216b548c7f9fcbc","status":"failed","time":{"start":1787275284967,"stop":1787275284968,"duration":1},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":[],"tags":[]}]}
