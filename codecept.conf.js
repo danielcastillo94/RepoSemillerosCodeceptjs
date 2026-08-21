@@ -7,7 +7,7 @@ exports.config = {
     Playwright: {
       browser: "chromium", /** Navegador que se va a utilizar */
       url: 'https://www.telcel.com', /** Url de los casos a probar */
-      show: process.env.CI !== true, /** Muestra o no el navegador al ejecutar las pruebas */
+      show: process.env.CI !== 'true', /** Muestra o no el navegador al ejecutar las pruebas */
       locale: "es-MX" /** Configuracion regional */
     }
   },
