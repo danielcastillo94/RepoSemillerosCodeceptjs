@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Instalar navegadores de Playwright
-        run: node_modules/.bin/playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Ejecutar pruebas
         run: npx codeceptjs run --features --grep "@episodios" --steps
