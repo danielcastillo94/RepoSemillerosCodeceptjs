@@ -12,8 +12,7 @@ jobs:
   pruebas:
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.49.1-noble
-
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v4
@@ -28,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Instalar navegadores de Playwright
-        run: npx -p playwright@latest playwright install --with-deps chromium
+        run: npx playwright install chromium
 
       - name: Ejecutar pruebas
         run: npx codeceptjs run --features --grep '@episodios' --steps
