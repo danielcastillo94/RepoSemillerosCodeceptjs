@@ -45,12 +45,12 @@ Then(/^se visualiza el encabezado "Vinos y Gourmet"$/, () => {
     liverpoolPage.validarPaginaVinosGourmet();
 });
 
-When(/^abre el filtro de precios$/, () => {
-    liverpoolPage.abrirFiltroPrecios();
-});
-
 When(/^selecciona un rango de precio$/, () => {
     liverpoolPage.seleccionarRangoPrecio();
+});
+
+When(/^ubica la sección de precios$/, () => {
+    return liverpoolPage.ubicarSeccionPrecios();
 });
 
 Then(/^se muestran productos filtrados por precio$/, () => {
@@ -94,8 +94,8 @@ When(/^deselecciona la marca "([^"]*)"$/, (marca) => {
     liverpoolPage.deseleccionarMarca(marca);
 });
 
-When(/^abre el filtro de talla$/, () => {
-    liverpoolPage.abrirFiltroTalla();
+When(/^ubica la sección de talla$/, () => {
+    return liverpoolPage.ubicarSeccionTalla();
 });
 
 When(/^selecciona la talla "([^"]*)"$/, (talla) => {
@@ -106,12 +106,27 @@ Then(/^se muestran productos filtrados por la talla seleccionada$/, () => {
     liverpoolPage.validarResultados();
 });
 
-When(/^abre el filtro de color$/, () => {
-    liverpoolPage.abrirFiltroColor();
+When(/^ubica la sección de color$/, () => {
+    return liverpoolPage.ubicarSeccionColor();
 });
 
 When(/^selecciona el color "([^"]*)"$/, (color) => {
     liverpoolPage.seleccionarColor(color);
+});
+
+When(/^ubica la sección de talla$/, () => {
+    return liverpoolPage.ubicarSeccionTalla();
+});
+When(/^selecciona la talla "([^"]*)"$/, (talla) => {
+    return liverpoolPage.seleccionarTalla(talla);
+});
+
+When(/^selecciona un color disponible del producto$/, () => {
+    return liverpoolPage.seleccionarColorDisponible();
+});
+
+Then(/^se muestra el código de producto$/, () => {
+    return liverpoolPage.validarCodigoProducto();
 });
 
 Then(/^se muestran productos filtrados por el color seleccionado$/, () => {
@@ -174,8 +189,8 @@ Then(/^se muestra la opción para buscar disponibilidad en tiendas$/, () => {
     liverpoolPage.validarDisponibilidadTienda();
 });
 
-Then(/^se muestra el código de producto$/, () => {
-    liverpoolPage.validarCodigoProducto();
+Then(/^se muestra el código de producto "([^"]*)"$/, (codigo) => {
+    liverpoolPage.validarCodigoProducto(codigo);
 });
 
 Then(/^se muestra la sección de opiniones del artículo$/, () => {
