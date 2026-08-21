@@ -29,7 +29,7 @@ jobs:
         run: node_modules/.bin/playwright install --with-deps chromium
 
       - name: Ejecutar pruebas
-        run: npx codeceptjs run --features --steps
+        run: npx codeceptjs run features/liverpool.feature
 
       - name: Obtener historial de Allure
         uses: actions/checkout@v4
