@@ -29,7 +29,9 @@ jobs:
         run: npx playwright install chromium --with-deps
 
       - name: Ejecutar pruebas
-        run: npx codeceptjs run --features --grep "@episodios" --steps
+        run: |
+          npx playwright install chromium
+          npx codeceptjs run --features --grep "@episodios" --steps
 
       - name: Obtener historial de Allure
         uses: actions/checkout@v4
