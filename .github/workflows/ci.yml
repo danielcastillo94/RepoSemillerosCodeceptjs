@@ -39,6 +39,13 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
+        
+      - name: Instalar Java
+        if: always()
+        run: |
+          apt-get update
+          apt-get install -y openjdk-17-jre
+          java -version
 
       - name: Generar reporte de Allure
         if: always()
