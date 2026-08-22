@@ -40,7 +40,8 @@ exports.config = {
 
     productDetailPage: './pages/productDetailPage.js',
     stockPage: './pages/stockPage.js',
-    reviewsPage: './pages/reviewsPage.js'
+    reviewsPage: './pages/reviewsPage.js',
+    filterPage: './pages/filterPage.js'
   },
 
   gherkin: {
@@ -48,14 +49,16 @@ exports.config = {
           './features/search_product.feature',
           './features/product_detail.feature',
           './features/product_stock.feature',
-          './features/product_reviews.feature'
+          './features/product_reviews.feature',
+          './features/product_filters.feature'
       ],
 
       steps: [
           './step_definitions/searchSteps.js',
           './step_definitions/productDetailSteps.js',
           './step_definitions/stockSteps.js',
-          './step_definitions/reviewsSteps.js'
+          './step_definitions/reviewsSteps.js',
+          './step_definitions/filterSteps.js'
       ]
   },
   plugins: {

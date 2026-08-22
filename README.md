@@ -23,10 +23,12 @@ RepoSemillerosCodeceptjs/
 ├── features/
 │   ├── search_product.feature
 │   ├── product_detail.feature
+│   ├── product_filters.feature
 │   ├── product_stock.feature
 │   └── product_reviews.feature
 │
 ├── pages/
+│   ├── filterPage.js
 │   ├── searchPage.js
 │   ├── resultsPage.js
 │   ├── productDetailPage.js
@@ -34,6 +36,7 @@ RepoSemillerosCodeceptjs/
 │   └── reviewsPage.js
 │
 ├── step_definitions/
+│   ├── filterSteps.js
 │   ├── searchSteps.js
 │   ├── productDetailSteps.js
 │   ├── stockSteps.js
@@ -63,6 +66,19 @@ RepoSemillerosCodeceptjs/
 | TC-001 | Search for an existing product | Automated |
 | TC-002 | Search for a non-existing product | Automated |
 | TC-003 | Validate displayed search results | Automated |
+
+### Product Filters
+
+| Test Case | Scenario | Status |
+|-----------|----------|--------|
+| TC-008 | Filter products by a specific price range | Automated |
+| TC-009 | Validate products inside the selected price range | Automated |
+| TC-010 | Filter products by one brand | Automated |
+| TC-011 | Filter products by multiple brands | Automated |
+| TC-012 | Remove an active brand filter | Automated |
+| TC-013 | Filter products by size | Automated |
+| TC-014 | Filter products by color | Automated |
+| TC-015 | Combine size and color filters | Automated |
 
 ### Product Detail
 
