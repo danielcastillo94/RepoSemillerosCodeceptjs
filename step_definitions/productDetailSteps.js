@@ -8,14 +8,14 @@ const { searchPage , resultsPage , productDetailPage } = inject();
  * @param {string} product - Product/search term to look up.
  * @returns {void}
  */
-function openProductDetail(product) {
+async function openProductDetail(product) {
     searchPage.openHomePage();
 
     searchPage.searchProduct(product);
 
     resultsPage.seeSearchResultsPage();
 
-    resultsPage.selectFirstProduct();
+    await resultsPage.selectFirstProduct();
 
     productDetailPage.seeProductDetailPage();
 }
@@ -33,8 +33,8 @@ Given('the user has searched for {string}', (product) => {
     }
 );
 
-When('the user selects a product from the search results', () => {
-        resultsPage.selectFirstProduct();
+When('the user selects a product from the search results', async () => {
+        await resultsPage.selectFirstProduct();
     }
 );
 
@@ -49,8 +49,8 @@ Then('the product detail page should be displayed', () => {
  * @TC-023 / @TC-024 / @TC-025 in product_stock.feature)
  * ============================================================ */
 
-Given('the user is viewing a product detail page for {string}', (product) => {
-        openProductDetail(product);
+Given('the user is viewing a product detail page for {string}', async (product) => {
+        await openProductDetail(product);
     }
 );
 

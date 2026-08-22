@@ -21,7 +21,9 @@ module.exports = {
         productPrice: '#plp-page-card-product-list [data-testid$="-card-card-link"] [data-testid$="-price"]',
 
         noResultsMessage: '//h2[contains(., "Lo sentimos, no encontramos nada para")]',
-        productWithReviews: '#plp-page-card-product-list [data-testid$="-card-card-link"]:has([data-testid$="-rating"])'
+        productWithReviews: '#plp-page-card-product-list [data-testid$="-card-card-link"]:has([data-testid$="-rating"])',
+        notFoundProductPage: '[data-testid="not-found-error"]',
+        productDetailContainer: 'section[data-testid$="-configurator"]'
     },
 
     /**
@@ -108,16 +110,64 @@ module.exports = {
     },
 
     /**
-     * Select the first product displayed on the search results page by clicking on its product card.
+     * Selects the first valid product from the search results page.
      *
-     * @returns {void}
+     * If the selected product redirects to an unavailable or outdated page,
+     * the next product result is attempted.
+     *
+     * @returns {Promise<void>}
+     * @throws {AssertionError} If no valid product detail page can be opened.
      */
-    selectFirstProduct() {
-        I.waitForElement(this.fields.productCard, 10);
+    async selectFirstProduct() {
+        await I.waitForElement(
+            this.fields.productCard,
+            10
+        );
 
-        I.click(this.fields.productCard);
+        const numberOfProducts =
+            await I.grabNumberOfVisibleElements(
+                this.fields.productCard
+            );
+
+        assert(
+            numberOfProducts > 0,
+            'No products were found on the search results page.'
+        );
+
+        const maxAttempts =
+            Math.min(numberOfProducts, 5);
+
+        for (
+            let index = 0;
+            index < maxAttempts;
+            index++
+        ) {
+            const product =
+                locate(
+                    this.fields.productCard
+                ).at(index + 1);
+
+            await I.click(product);
+
+            const pageState =
+                await this._waitForProductPageState();
+
+            if (pageState === 'valid') {
+                return;
+            }
+
+            await I.goBack();
+
+            await I.waitForElement(
+                this.fields.resultsContainer,
+                10
+            );
+        }
+
+        assert.fail(
+            'No valid product detail page was found in the first search results.'
+        );
     },
-
     /**
      * Select the first product displayed on the search results page that has reviews by clicking on its product card.
      *
@@ -127,5 +177,64 @@ module.exports = {
         I.waitForElement(this.fields.productWithReviews, 15);
 
         I.click(this.fields.productWithReviews);
+    },
+
+    /**
+     * Waits until the product page resolves as a valid PDP
+     * or an unavailable product page.
+     *
+     * @private
+     * @returns {Promise<string>} Product page state.
+     */
+    async _waitForProductPageState() {
+        const selectors = {
+            productDetail:
+                this.fields.productDetailContainer,
+
+            notFound:
+                this.fields.notFoundProductPage
+        };
+
+        const maxAttempts = 20;
+
+        for (
+            let attempt = 0;
+            attempt < maxAttempts;
+            attempt++
+        ) {
+            const pageState =
+                await I.executeScript(
+                    (selectors) => {
+                        const productDetail =
+                            document.querySelector(
+                                selectors.productDetail
+                            );
+
+                        if (productDetail) {
+                            return 'valid';
+                        }
+
+                        const notFound =
+                            document.querySelector(
+                                selectors.notFound
+                            );
+
+                        if (notFound) {
+                            return 'notFound';
+                        }
+
+                        return 'loading';
+                    },
+                    selectors
+                );
+
+            if (pageState !== 'loading') {
+                return pageState;
+            }
+
+            await I.wait(0.5);
+        }
+
+        return 'timeout';
     }
-}
+};
