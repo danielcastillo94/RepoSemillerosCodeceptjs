@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"f6977a2ebcac84c3d35e8ce66ad27f26","name":"Búsqueda de productos en Liverpool:","statistic":{"failed":0,"broken":0,"skipped":0,"passed":44,"unknown":0,"total":44}}]}
+{"total":1,"items":[{"uid":"9f3df621d516d675f8699cddbab5dcb4","name":"Validación de búsqueda de productos @busqueda:","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}}]}
