@@ -3,7 +3,7 @@ Feature: Validación de filtros de productos en Liverpool
 
   Background:
     Given El usuario se encuentra en la página principal de Liverpool
-    And el usuario busca el producto "tenis"
+    When el usuario busca el producto "tenis"
     And se muestran resultados relacionados con la búsqueda "tenis"
 
 

@@ -9,15 +9,15 @@ Given(/^el usuario hace clic en el botón de "Categorias"$/, () => {
   siteLiverpoolPage.clickOnCategoriesMenu();
 });
 
-Given(/^el usuario busca el producto "tenis"$/, () => {
+When(/^el usuario busca el producto "tenis"$/, () => {
   siteLiverpoolPage.searchTenis();
 });
 
-Given(/^se muestran resultados relacionados con la búsqueda "tenis"$/, () => {
+When(/^se muestran resultados relacionados con la búsqueda "tenis"$/, () => {
   siteLiverpoolPage.verifySearchResultTenis();
 });
 
-Given(/^el usuario hace clic en un producto para ver su detalle$/, () => {
+When(/^el usuario hace clic en un producto para ver su detalle$/, () => {
   siteLiverpoolPage.clickFirstProduct();
 });
 

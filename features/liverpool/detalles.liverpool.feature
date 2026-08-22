@@ -3,7 +3,7 @@ Feature: Validación de detalle de producto en Liverpool
 
   Background:
     Given El usuario se encuentra en la página principal de Liverpool
-    And el usuario busca el producto "tenis"
+    When el usuario busca el producto "tenis"
     And se muestran resultados relacionados con la búsqueda "tenis"
     And el usuario hace clic en un producto para ver su detalle
 

@@ -49,15 +49,12 @@ class Liverpool {
     lastNameInput: "//input[@id=':r1:' or contains(@name, 'firstLastName')]",
     secondLastNameInput:
       "//input[@id=':r2:' or contains(@name, 'secondLastName')]",
-    dayDropdown:
-      "//html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/form[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]",
+    dayDropdown: "//label[@id='at-select-ij9dqfcr0-label']//span[text()='Día']",
     dayOption09: "//li[normalize-space()='09']",
-    monthDropdown:
-      "//html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/form[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]",
+    monthDropdown: '//div[@data-testid="form-signup-field-month"]',
     monthOptionJunio:
       "//li[normalize-space()='Junio' or contains(text(),'Jun')]",
-    yearDropdown:
-      "//html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/form[1]/div[4]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]",
+    yearDropdown: '//div[@data-testid="form-signup-field-year"]',
     yearOption2004: "//li[normalize-space()='2004']",
     menuPaperScroll: "//div[contains(@class, 'MuiMenu-paper')]",
     genderMaleRadio: "//input[@value='M']",
@@ -410,7 +407,7 @@ class Liverpool {
   }
   openSortHighestPrice() {
     I.waitForElement(this.indicators.sortDropdownBtn, 10);
-    I.seeElement(this.indicators.sortDropdownBtn, 10);
+    I.seeElement(this.indicators.sortDropdownBtn);
     I.wait(2);
     I.click(this.indicators.sortDropdownBtn);
 
@@ -482,10 +479,10 @@ class Liverpool {
   }
   confirmAddress() {
     I.waitForElement(this.indicators.usernameInput, 10);
-    I.fillField(this.indicators.usernameInput, "los.pachis16@gmail.com");
+    I.fillField(this.indicators.usernameInput, process.env.TEST_EMAIL);
     //process.env.TEST_EMAIL
     I.waitForElement(this.indicators.passwordInput, 10);
-    I.fillField(this.indicators.passwordInput, "Subaru16");
+    I.fillField(this.indicators.passwordInput, process.env.TEST_PASSWORD);
     //process.env.TEST_PASSWORD
     I.waitForElement(this.indicators.loginActionBtn, 10);
     I.click(this.indicators.loginActionBtn);
