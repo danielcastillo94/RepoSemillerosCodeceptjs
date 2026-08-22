@@ -20,14 +20,16 @@ exports.config = {
     searchPage: './pages/searchPage.js',
     resultsPage: './pages/resultsPage.js',
     menuPage: './pages/menuPage.js',
-    categoryPage: './pages/categoryPage.js'
+    categoryPage: './pages/categoryPage.js',
+    filterPage: './pages/filterPage.js'
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
       './steps/axelSteps.js',
-      './steps/busquedaProductosSteps.js'
+      './steps/busquedaProductosSteps.js',
+      './steps/filtrosPrecioSteps.js'
     ],
   },
 
