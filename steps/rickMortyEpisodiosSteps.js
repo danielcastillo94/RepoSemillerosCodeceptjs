@@ -43,8 +43,9 @@ When(
 );
 
 When(
-    'consulto el episodio con ID 3',
+    'consulto el personaje con ID 3 y después consulto el episodio con ID 3',
     () => {
+        rickMortyEpisodiosPage.consultarPersonaje3();
         rickMortyEpisodiosPage.consultarEpisodio3();
     }
 );
@@ -87,6 +88,6 @@ Then(
 Then(
     'debo ver el personaje real',
     () => {
-        I.see('Summer Smith');
+        rickMortyEpisodiosPage.verPersonajeReal();
     }
 );

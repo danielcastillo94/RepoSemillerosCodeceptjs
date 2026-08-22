@@ -124,25 +124,30 @@ class RickMortyEpisodiosPage {
     }
 
     // ─── VERIFICACIONES ────────────────────────────────────────────────────────
-    verEpisodio(nombre) {
-        I.see(nombre);
-    }
+verEpisodio(nombre) {
+    I.see(nombre);
+}
 
-    noVerEpisodio(nombre) {
-        I.dontSee(nombre);
-    }
+noVerEpisodio(nombre) {
+    I.dontSee(nombre);
+}
 
-    verMensaje(texto) {
-        I.see(texto);
-    }
+verMensaje(texto) {
+    I.see(texto);
+}
 
-    verAirDate(fecha) {
-        I.see(fecha);
-    }
+verAirDate(fecha) {
+    I.see(fecha);
+}
 
-    verCodigoEpisodio(codigo) {
-        I.see(codigo);
-    }
+verCodigoEpisodio(codigo) {
+    I.see(codigo);
+}
+
+verPersonajeReal() {
+    I.see('Summer Smith');
+    this.consultarEpisodio3();
+}
 }
 
 module.exports = new RickMortyEpisodiosPage();

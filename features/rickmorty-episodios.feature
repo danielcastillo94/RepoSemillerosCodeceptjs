@@ -21,11 +21,10 @@ Feature: Network Mocking de episodios de Rick and Morty
     Then debo ver el episodio "Episodio de Gael"
 
   @episodios
-  Scenario: Mock de un episodio específico por ID
-    Given que mockeo el episodio con ID 3
-    When consulto el personaje con ID 3
-    Then debo ver el personaje real
-    When consulto el episodio con ID 3
-    Then debo ver el episodio "Prueba de Automatización"
-    And debo ver la fecha "Semilleros 2026"
-    And debo ver el código de episodio "S99E99"
+Scenario: Mock de un episodio específico por ID
+  Given que mockeo el episodio con ID 3
+  When consulto el personaje con ID 3
+  Then debo ver el personaje real
+  And debo ver el episodio "Prueba de Automatización"
+  And debo ver la fecha "Semilleros 2026"
+  And debo ver el código de episodio "S99E99"
