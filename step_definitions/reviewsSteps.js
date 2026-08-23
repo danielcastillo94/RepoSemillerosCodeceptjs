@@ -7,14 +7,14 @@ const { searchPage , resultsPage, productDetailPage, reviewsPage } = inject();
  * @param {string} product - Product/search term to look up.
  * @returns {void}
  */
-function openProductWithReviews(product) {
+async function openProductWithReviews(product) {
     searchPage.openHomePage();
 
     searchPage.searchProduct(product);
 
     resultsPage.seeSearchResultsPage();
 
-    resultsPage.selectFirstProductWithReviews();
+    await resultsPage.selectFirstProductWithReviews();
 
     productDetailPage.seeProductDetailPage();
 }
@@ -23,8 +23,8 @@ function openProductWithReviews(product) {
  * @TC-026 — View product reviews
  * ============================================================ */
 
-Given('the user is viewing a product with reviews for {string}', (product) => {
-        openProductWithReviews(product);
+Given('the user is viewing a product with reviews for {string}', async (product) => {
+        await openProductWithReviews(product);
     }
 );
 
@@ -44,8 +44,8 @@ Then('customer reviews should be displayed', async () => {
  * @TC-027 — Validate five star product reviews
  * ============================================================ */
 
-Given('the user is viewing the reviews section for {string}', (product) => {
-        openProductWithReviews(product);
+Given('the user is viewing the reviews section for {string}', async (product) => {
+        await openProductWithReviews(product);
 
         productDetailPage.openReviews();
 

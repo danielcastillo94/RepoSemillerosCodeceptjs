@@ -119,64 +119,78 @@ module.exports = {
      * @throws {AssertionError} If no valid product detail page can be opened.
      */
     async selectFirstProduct() {
-        await I.waitForElement(
-            this.fields.productCard,
-            10
-        );
+        await I.waitForElement(this.fields.productCard, 10);
 
-        const numberOfProducts =
-            await I.grabNumberOfVisibleElements(
-                this.fields.productCard
-            );
+        const numberOfProducts = await I.grabNumberOfVisibleElements(this.fields.productCard);
 
         assert(
             numberOfProducts > 0,
             'No products were found on the search results page.'
         );
 
-        const maxAttempts =
-            Math.min(numberOfProducts, 5);
+        const resultsUrl = await I.grabCurrentUrl();
 
-        for (
-            let index = 0;
-            index < maxAttempts;
-            index++
-        ) {
-            const product =
-                locate(
-                    this.fields.productCard
-                ).at(index + 1);
+        const maxAttempts = Math.min(numberOfProducts, 5);
+
+        for (let index = 0; index < maxAttempts; index++){
+            const product = locate(this.fields.productCard).at(index + 1);
 
             await I.click(product);
 
-            const pageState =
-                await this._waitForProductPageState();
+            const pageState = await this._waitForProductPageState();
 
             if (pageState === 'valid') {
                 return;
             }
 
-            await I.goBack();
+            await I.amOnPage(resultsUrl);
 
-            await I.waitForElement(
-                this.fields.resultsContainer,
-                10
-            );
+            await I.waitForElement(this.fields.resultsContainer, 10);
         }
 
         assert.fail(
             'No valid product detail page was found in the first search results.'
         );
     },
+
     /**
      * Select the first product displayed on the search results page that has reviews by clicking on its product card.
      *
      * @returns {void}
      */
-    selectFirstProductWithReviews() {
-        I.waitForElement(this.fields.productWithReviews, 15);
+    async selectFirstProductWithReviews() {
+        await I.waitForElement(this.fields.productWithReviews, 15);
 
-        I.click(this.fields.productWithReviews);
+        const numberOfProducts = await I.grabNumberOfVisibleElements(this.fields.productWithReviews);
+
+        assert(
+            numberOfProducts > 0,
+            'No products with reviews were found.'
+        );
+
+        const resultsUrl = await I.grabCurrentUrl();
+
+        const maxAttempts = Math.min(numberOfProducts, 5);
+
+        for (let index = 0; index < maxAttempts; index++){
+            const product = locate(this.fields.productWithReviews).at(index + 1);
+
+            await I.click(product);
+
+            const pageState = await this._waitForProductPageState();
+
+            if (pageState === 'valid'){
+                return;
+            }
+
+            await I.amOnPage(resultsUrl);
+
+            await I.waitForElement(this.fields.resultsContainer, 10);
+        }
+
+        assert.fail(
+            'No valid product detail page with reviews was found.'
+        );
     },
 
     /**
