@@ -13,7 +13,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: urls.liverpool,
-      show: true,
+      show: false, /** Muestra o no el navegador al ejecutar las pruebas */
       locale: "es-MX",
       video: true,
       pressKeyDelay: 100,
@@ -65,5 +65,5 @@ exports.config = {
 
   bootstrap: null,
   mocha: {},
-  name: "Actividad youtube y Telcel"
+  name: "Actividad Reto Liverpool"
 };
