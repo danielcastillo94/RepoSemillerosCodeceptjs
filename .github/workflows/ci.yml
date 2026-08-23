@@ -1,9 +1,7 @@
 name: CI — Framework CodeceptJS Reto Liverpool Jesus Cortes 
 
 on:
-  push:
-    branches:
-      - '**'
+  workflow_dispatch:
 
 permissions:
   contents: write

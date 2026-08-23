@@ -28,7 +28,7 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    karelPage: "./pages/karelPage.js",
+    // karelPage: "./pages/karelPage.js",
     buscarPage: "./pages/buscarPage.js",
     resultsPage: "./pages/ResultsPage.js",
     CategoryPage: "./pages/categoryPage.js",
@@ -40,7 +40,7 @@ exports.config = {
   gherkin: {
     features: './features/*.feature',
     steps: [
-      "./steps/karelSteps.js",
+      // "./steps/karelSteps.js",
       "./steps/buscarSteps.js",
       "./steps/categoriasSteps.js",
       "./steps/filtrosporPrecioSteps.js",
