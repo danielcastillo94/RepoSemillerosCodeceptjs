@@ -46,7 +46,7 @@ jobs:
 
       - name: Generar reporte de Allure
         if: always()
-        shell: pwsh
+        shell: powershell
         run: |
           if (Test-Path "gh-pages/history") {
             New-Item -ItemType Directory -Force -Path "output/allure-results" | Out-Null
