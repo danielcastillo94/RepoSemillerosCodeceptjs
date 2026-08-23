@@ -17,7 +17,7 @@ exports.config = {
 
       browser: 'chromium',
       restart: 'context',
-      windowSize: '1280x720',
+      windowSize: '1440x900',
       locale: 'es-MX',
 
       video: true,
