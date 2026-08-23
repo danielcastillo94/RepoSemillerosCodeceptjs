@@ -86,16 +86,22 @@ class RickMortyMockPage {
     }
 
     inyectarTitulo(nuevoTitulo) {
-        I.usePlaywrightTo('inyectar título en DOM', async ({ page }) => {
-            await page.evaluate((titulo) => {
-                // Cambia el título del tab del navegador
-                document.title = titulo;
-                // Cambia el H1 visible en la página
-                const h1 = document.querySelector('h1');
-                if (h1) h1.textContent = titulo;
-            }, nuevoTitulo);
-        });
-    }
+    I.usePlaywrightTo('inyectar título en DOM', async ({ page }) => {
+
+        await page.waitForLoadState('networkidle');
+        await page.waitForSelector('h1');
+
+        await page.evaluate((titulo) => {
+            document.title = titulo;
+
+            const h1 = document.querySelector('h1');
+            if (h1) {
+                h1.textContent = titulo;
+            }
+        }, nuevoTitulo);
+
+    });
+}
 
     // ─── EJEMPLO 4: Mock de personaje específico por ID ───────────────────────
     // Intercepta solo el endpoint de un personaje concreto: /api/character/1
