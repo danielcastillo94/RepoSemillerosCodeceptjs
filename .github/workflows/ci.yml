@@ -4,6 +4,7 @@ on:
   push:
     branches-ignore:
       - gh-pages
+
   workflow_dispatch:
 
 permissions:
@@ -11,7 +12,7 @@ permissions:
 
 jobs:
   pruebas:
-    runs-on: [self-hosted, Windows, X64]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Clonar repositorio
@@ -23,19 +24,20 @@ jobs:
           node-version: '22'
           cache: 'npm'
 
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
       - name: Instalar dependencias
         run: npm ci
 
       - name: Instalar navegadores de Playwright
-        run: npx playwright install chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Ejecutar pruebas
-        run: |
-          npx codeceptjs run --features ./features/search_product.feature --steps
-          npx codeceptjs run --features ./features/product_filters.feature --steps
-          npx codeceptjs run --features ./features/product_detail.feature --steps
-          npx codeceptjs run --features ./features/product_stock.feature --steps
-          npx codeceptjs run --features ./features/product_reviews.feature --steps
+        run: xvfb-run -a npx codeceptjs run --features --steps
 
       - name: Obtener historial de Allure
         uses: actions/checkout@v4
@@ -47,12 +49,11 @@ jobs:
 
       - name: Generar reporte de Allure
         if: always()
-        shell: powershell
         run: |
-          if (Test-Path "gh-pages/history") {
-            New-Item -ItemType Directory -Force -Path "output/allure-results" | Out-Null
-            Copy-Item -Recurse -Force "gh-pages/history" "output/allure-results/history"
-          }
+          if [ -d "gh-pages/history" ]; then
+            mkdir -p output/allure-results
+            cp -r gh-pages/history output/allure-results/history
+          fi
 
           npx allure generate output/allure-results --clean -o allure-report
 
