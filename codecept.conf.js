@@ -1,6 +1,6 @@
 const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
 
-setHeadlessWhen(process.env.HEADLESS);
+setHeadlessWhen(process.env.HEADLESS === 'true');
 setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
@@ -13,7 +13,7 @@ exports.config = {
       url: 'https://www.liverpool.com.mx/tienda/home',
 
       // Show the browser locally and run headless in CI
-      show: !process.env.CI,
+      show: true,
 
       browser: 'chromium',
       restart: 'context',
