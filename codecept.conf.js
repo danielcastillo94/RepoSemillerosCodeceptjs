@@ -1,40 +1,81 @@
+const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+
+setHeadlessWhen(process.env.HEADLESS === 'true');
+setCommonPlugins();
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './steps/*_steps.js', /** Indica donde se encuentran las pruebas a ejecutar */
-  output: './output', /** indica donde se guardaran los resultados de las pruebas*/
+  tests: './*_test.js',
+  output: './output',
 
-  helpers: { /** Ayudantes para realizar las acciones, configura el motor de automatizacion */
+  helpers: {
     Playwright: {
-      browser: "chromium", /** Navegador que se va a utilizar */
-      url: 'https://www.telcel.com', /** Url de los casos a probar */
-      show: !process.env.CI, /** En local muestra el navegador; en CI (GitHub Actions) corre headless */
-      locale: "es-MX" /** Configuracion regional */
+      url: 'https://www.liverpool.com.mx/tienda/home',
+
+      // Show the browser locally and run headless in CI
+      show: true,
+
+      browser: 'chromium',
+      restart: 'context',
+      windowSize: '1440x900',
+      locale: 'es-MX',
+
+      video: true,
+      keepVideoForPassedTests: true,
+
+      trace: true,
+      keepTraceForPassedTests: true,
+
+      waitForNavigation: 'domcontentloaded',
+      getPageTimeout: 60000
+    },
+
+    PlaywrightVideoAllure: {
+      require: './utils/playwrightVideoAllure_helper.js'
     }
   },
 
   include: {
-    I: "./steps_file.js", /** Crear al actor, quien va a realizar las acciones */
-    karelPage: "./pages/karelPage.js", /** Creacion de la page Object */
-    rickMortyMockPage: "./pages/rickMortyMockPage.js", /** Page Object para demo de Network Mocking */
+    I: './steps_file.js',
+
+    searchPage: './pages/searchPage.js',
+    resultsPage: './pages/resultsPage.js',
+
+    productDetailPage: './pages/productDetailPage.js',
+    stockPage: './pages/stockPage.js',
+    reviewsPage: './pages/reviewsPage.js',
+    filterPage: './pages/filterPage.js'
   },
 
   gherkin: {
-    features: './features/*.feature', /** Ubicacion de los archivos features */
-    steps: [
-      "./steps/karelSteps.js", /** Ubicaciones de los archivos que traducen Given,When y Then a javascript */
-      "./steps/rickMortyMockSteps.js", /** Steps para demo de Network Mocking */
+    features: [
+      './features/search_product.feature',
+      './features/product_detail.feature',
+      './features/product_stock.feature',
+      './features/product_reviews.feature',
+      './features/product_filters.feature'
     ],
+
+    steps: [
+      './step_definitions/searchSteps.js',
+      './step_definitions/productDetailSteps.js',
+      './step_definitions/stockSteps.js',
+      './step_definitions/reviewsSteps.js',
+      './step_definitions/filterSteps.js'
+    ]
   },
 
-  plugins: { /**Son las funcionalidades extra */
-    allure: { /** Generador de reportes */
+  plugins: {
+    allure: {
       enabled: true,
-      require: '@codeceptjs/allure-legacy',
-      outputDir: './output/allure-results'
+      require: 'allure-codeceptjs',
+      resultsDir: './output/allure-results'
+    },
+
+    stepByStepReport: {
+      enabled: false
     }
   },
 
-  bootstrap: null, /**Archivo opcional que se ejecuta antes de realizar las pruebas */
-  mocha: {}, /** Motor de ejecucion */
-  name: "Actividad youtube y Telcel" /**Nombre del proyecto */
+  name: 'RepoSemillerosCodeceptjs'
 };
