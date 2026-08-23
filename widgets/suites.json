@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"9f3df621d516d675f8699cddbab5dcb4","name":"Validación de búsqueda de productos @busqueda:","statistic":{"failed":1,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":1}}]}
+{"total":1,"items":[{"uid":"8654d0e907fb9470627180e15008cfc4","name":"Demostración de Network Mocking con Rick and Morty API @rickmortyEpisode:","statistic":{"failed":0,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":4}}]}
