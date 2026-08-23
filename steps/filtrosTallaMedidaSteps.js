@@ -34,7 +34,7 @@ Given(/^El Usurario se encuentra en la página de Subcategorias de playeras de m
   FilterPage.paginaPlayerasMujer();
 });
 
-When(/^El usuario aplica la combinación de filtros de talla M y color Rosa$/, () => { //selecciona algun plan
+When(/^El usuario aplica la combinación de filtros de talla M y color Azul$/, () => { //selecciona algun plan
   FilterPage.combinacionFiltro(); // verifica que cargue correctamente la página "Plan de Renta"
 });
 Then(/^Se ve el filtrado seleccionado correctamente$/, () =>{

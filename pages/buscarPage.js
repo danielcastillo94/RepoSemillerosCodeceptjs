@@ -7,7 +7,7 @@ class buscarPage {
     };
     //GIVEN-PRIMCIPAL---------------------------------------------------------------------------------------------------------------
     pagina(){
-        //Pagina de inicio de Telcel
+        //Pagina de inicio de Liverpool
         I.amOnPage('/');
        
     }

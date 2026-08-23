@@ -27,7 +27,7 @@ class productDetailPage {
         verDisponiblidad: '//span[normalize-space(text())="Ver disponibilidad en tienda"]',
         estados: '//h3[normalize-space(text())="Selecciona un estado"]',
         estadoPuebla: '//span[normalize-space(text())="PUEBLA"]',
-        cantidadDisponible: '//p[normalize-space(.)="1 piezas"]',
+        cantidadDisponible: '//p[@class="text-caption text-base mt-2.5 px-10 text-center"]',
     }
 //GIVEN---------------------------------------------------------------------------------------------------------------
   PaginPrincipal() {

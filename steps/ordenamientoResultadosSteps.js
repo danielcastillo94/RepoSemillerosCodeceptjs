@@ -18,7 +18,7 @@ Then(/^El usuario le muestra todas las opciones posibles para ordenar$/,  () => 
   resultsPage.opcionesPosiblesOrdenar();
 });
 
-When(/^El usuario dar click em el que dice destacados$/, () => {
+When(/^El usuario da click em el que dice destacados$/, () => {
  resultsPage.destacados();
 });
 

@@ -1,8 +1,8 @@
 @JesusCFiltrarMarca
 Feature: Filtros por Marca
   Background: Regresando al caso inicial
-        Given El usuario se encuentra en la página principal de Liverpool
-        And El usuario se encuentra en la página de Subcategorias de Tenis Casuales 
+        # Given El usuario se encuentra en la página principal de Liverpool
+        Given El usuario se encuentra en la página de Subcategorias de Tenis Casuales 
     
  @TC-010
  Scenario: Seleccionar una marca

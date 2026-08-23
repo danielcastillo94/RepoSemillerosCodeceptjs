@@ -11,14 +11,16 @@ Given(/^El Usurario se encuentra en la página de la Playera manga corta cuello 
 When(/^El usario da click en un Tamaño en este caso XCH Y da click en Ver disponibilidad en tienda$/, () => { //selecciona algun plan
   ProductoDetail.clicTamaño(); // verifica que cargue correctamente la página "Plan de Renta"
 });
-Then(/^El usuario le muestra los estados de México$/, () =>{
+// Then(/^El usuario le muestra los estados de México$/, () =>{
+//   ProductoDetail.visibleEstados();
+// });
+When(/^El usuario puede seleccionar Puebla y visualizar la disponibilidad$/, () => { //selecciona algun plan
   ProductoDetail.visibleEstados();
-});
-When(/^El usuario da Clic en Puebla$/, () => { //selecciona algun plan
   ProductoDetail.seleccionEstado(); // verifica que cargue correctamente la página "Plan de Renta"
-});
-Then(/^Se muestran la disponibilidad$/, () =>{
   ProductoDetail.disponibilidadEnEstado();
 });
+// Then(/^Se muestran la disponibilidad$/, () =>{
+//   ProductoDetail.disponibilidadEnEstado();
+// });
 
 

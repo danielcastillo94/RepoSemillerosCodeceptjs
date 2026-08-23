@@ -23,10 +23,14 @@ class FilterPage {
         seleccionarCampoMarca1: '//input[@type="checkbox" and @value="ACTVITTA"]',
         productosMarca: '//h4[text()="ADIDAS"]',
         productosMarca1: '(//span[text()="ACTVITTA"])[1]',     //'//h4[contains(text(),"ACTVITTA")]',
-        filtroMedida: '//input[@type="checkbox" and @value="Mediano"]',
-        validarFiltro: '//button[@data-testid="Mediano"]',
-        filtroColor: '//input[@type="checkbox" and @value="Rosa~~#e522e2"]',
-        productosColorRosa: '//button[contains(@style,"rgb(247, 110, 165)")]'
+        filtroMedida: '//input[@type="checkbox" and @value="M"]',
+        validarFiltro: '//button[@data-testid="M"]',
+        filtroColor: '//input[@type="checkbox" and @value="Rosa Claro~~#db85b6"]',
+        productosColorRosa: '//button[contains(@style,"rgb(247, 110, 165)")]', 
+        clickColor: '//button[.//span[contains(text(),"Color")]]',
+        filtroColorAzul: '//input[@type="checkbox" and @value="Azul Claro~~#0480ed"]',
+        productosColorAzul: '//button[@data-testid="Azul Claro"]',
+        verMasTamaño: '//button[@data-testid="plp-page-plp-filter-sizes-filter-sizes-checkbox-group-show-all-items-btn"]'
     };
 
 //GIVEN---------------------------------------------------------------------------------------------------------------
@@ -116,6 +120,7 @@ class FilterPage {
          I.amOnPage(this.urls.urlPlayerasMujer);
     }
     filtroTalla(){
+        I.click( this.fields.verMasTamaño );
         I.scrollTo(this.fields.filtroMedida);
         I.click(this.fields.filtroMedida);
         I.wait(5);
@@ -142,16 +147,19 @@ class FilterPage {
     }
 
     combinacionFiltro(){
+        I.click( this.fields.verMasTamaño );
         I.scrollTo(this.fields.filtroMedida);
         I.click(this.fields.filtroMedida);
-        I.wait(5);
-        I.scrollTo(this.fields.filtroColor);
-        I.click(this.fields.filtroColor);
+        // I.wait(5);
+        // I.click( this.fields.clickColor );
+        I.waitForElement(this.fields.filtroColorAzul);
+        I.scrollTo(this.fields.filtroColorAzul);
+        I.click(this.fields.filtroColorAzul);
         I.wait(5);
     }
     filtroValidoCombinacion(){
         I.waitForElement(this.fields.validarFiltro);
-        I.waitForElement(this.fields.productosColorRosa);
+        I.waitForElement(this.fields.productosColorAzul);
     }
 
 
