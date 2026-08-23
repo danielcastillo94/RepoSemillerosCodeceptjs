@@ -1,4 +1,4 @@
-const { rickMortyEpisodiosPage } = inject();
+const { rickMortyEpisodiosPage, rickMortyMockPage } = inject();
 
 // ESCENARIO A
 Given(/^el mock de episodios está activo con "(.+)" y "(.+)"$/, (nombre1, nombre2) => {
@@ -39,10 +39,6 @@ Given(/^el mock del episodio con ID (\d+) devuelve "(.+)" con fecha "(.+)" y có
         fecha,
         codigo
     );
-});
-
-When(/^el usuario consulta el personaje con ID (\d+)$/, (id) => {
-    rickMortyEpisodiosPage.consultarPersonajePorId(parseInt(id));
 });
 
 When(/^el usuario consulta el episodio con ID (\d+)$/, (id) => {
