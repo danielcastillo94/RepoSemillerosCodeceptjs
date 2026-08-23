@@ -1,5 +1,4 @@
 const assert = require('assert');
-const { AssertionError } = require('assert/strict');
 
 const { I } = inject();
 

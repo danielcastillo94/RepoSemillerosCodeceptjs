@@ -1,5 +1,4 @@
 const assert = require('assert');
-const { AssertionError } = require('assert/strict');
 
 const { I } = inject();
 
@@ -70,17 +69,31 @@ module.exports = {
         I.seeElement(this.buttons.homeDelivery);
 
         I.seeElement(this.buttons.clickAndCollect);
-        const availability = await I.executeScript(() => {
 
-            const buyNow = document.querySelector('[data-testid="buy-now-button"]');
+        const selectors = {
+            buyNow: this.buttons.buyNow,
+            addToBag: this.buttons.addToBag
+        };
 
-            const addToBag = document.querySelector('[data-testid="add-to-bag-button"]');
+        const availability =
+            await I.executeScript(
+                (selectors) => {
+                    const buyNow = document.querySelector(selectors.buyNow);
 
-            return {
-                buyNowEnabled: !!buyNow && !buyNow.disabled,
-                addToBagEnabled: !!addToBag && !addToBag.disabled
-            };
-        });
+                    const addToBag = document.querySelector(selectors.addToBag);
+
+                    return {
+                        buyNowEnabled:
+                            !!buyNow &&
+                            !buyNow.disabled,
+
+                        addToBagEnabled:
+                            !!addToBag &&
+                            !addToBag.disabled
+                    };
+                },
+                selectors
+            );
 
         assert(
             availability.buyNowEnabled ||

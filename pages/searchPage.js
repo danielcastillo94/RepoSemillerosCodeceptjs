@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 const {I} = inject();
 
 /**
@@ -17,7 +15,7 @@ module.exports = {
      * Fields for the search page.
      */
     fields: {
-        searchInput: '//*[@id=":R37ba9il9utsq:-input"]',
+        searchInput: '[data-testid="blt26617d4f2e17657d-header-search-input"]',
     },
 
     /**
@@ -37,7 +35,7 @@ module.exports = {
      * @returns {void}
      */
     enterProduct(productName) {
-        I.waitForElement(this.fields.searchInput, 10);
+        I.waitForElement(this.fields.searchInput, 15);
         I.fillField(this.fields.searchInput, productName);
     },
 
@@ -57,7 +55,7 @@ module.exports = {
      * @returns {void}
      */
     searchProduct(productName) {
-        I.waitForElement(this.fields.searchInput, 10);
+        I.waitForElement(this.fields.searchInput, 15);
         I.fillField(this.fields.searchInput, productName);
         I.pressKey('Enter');
     }
