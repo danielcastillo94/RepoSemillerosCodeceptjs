@@ -32,7 +32,7 @@ jobs:
         run: npx playwright install chromium
 
       - name: Ejecutar pruebas
-        run: npx codeceptjs run --features --grep '@episodios' --steps
+        run: npx codeceptjs run --features 
 
       - name: Obtener historial de Allure
         uses: actions/checkout@v4
