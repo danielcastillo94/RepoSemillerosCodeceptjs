@@ -1,5 +1,10 @@
-@liverpool
+@NoEjecutables
 Feature: Casos no disponibles actualmente en la pagina de liverpool
+
+    #Feature: Detalles de productos (De momento la pagina no cuenta con la opcion de crear una opinion con reseña por ende no se puede realizar el caso TC-028)
+
+    @TC-028: 
+    Scenario: Ver fotos en reviews
     
     #Feature: Comparar Productos (De momento la pagina no cuenta con opcion para comparar productos por ende no se pueden realizar los casos TC038 -TC040)
     #Background: 

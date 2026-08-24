@@ -1,4 +1,14 @@
-const { I } = inject(); /**Definimos al actor "I" como constante y inject busca y pone a disposicion los objetos de I */
+const { busquedaProductosPage,
+        carritoPage,
+        checkoutPage,
+        codigoPromocionalPage,
+        detalleProductoPage,
+        filtrosProductosPage,
+        loginCuentaPage,
+        navegacionCategoriasPage,
+        ordenamientoResultadosPage,
+        smokePage,
+        wishlistPage, I } = inject(); /**Definimos al actor "I" como constante y inject busca y pone a disposicion los objetos de I */
 
 class flujoE2EPage{
 
@@ -56,6 +66,39 @@ class flujoE2EPage{
     };
 
     //Metodos Flujo E2E
+
+    async agregarTresProductosAlCarrito() {
+    await busquedaProductosPage.clicBarraBusqueda();
+    await busquedaProductosPage.ingresarProducto('luffy');
+    await busquedaProductosPage.presionarEnter();
+    await detalleProductoPage.clicProducto('Funko POP! Animation One Piece Monkey D. Luffy');
+
+    await carritoPage.desplazarseAgregarBolsa();
+    await carritoPage.clicAgregarBolsa();
+    await carritoPage.verificarArticuloAgregado();
+
+    // Zoro
+    await busquedaProductosPage.clicBarraBusqueda();
+    await carritoPage.limpiarBarraBusqueda();
+    await busquedaProductosPage.ingresarProducto('zoro');
+    await busquedaProductosPage.presionarEnter();
+    await detalleProductoPage.clicProducto('POP! Animation One Piece Roronoa Zoro');
+
+    await carritoPage.desplazarseAgregarBolsa();
+    await carritoPage.clicAgregarBolsa();
+    await carritoPage.verificarArticuloAgregado();
+    
+    // Sanji
+    await busquedaProductosPage.clicBarraBusqueda();
+    await carritoPage.limpiarBarraBusqueda();
+    await busquedaProductosPage.ingresarProducto('sanji');
+    await busquedaProductosPage.presionarEnter();
+    await detalleProductoPage.clicProducto('POP! Animation One Piece Sanji');
+
+    await carritoPage.desplazarseAgregarBolsa();
+    await carritoPage.clicAgregarBolsa();
+    await carritoPage.verificarArticuloAgregado();
+    }
 
 }
 

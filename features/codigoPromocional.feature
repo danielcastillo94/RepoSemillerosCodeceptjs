@@ -1,4 +1,6 @@
 Feature: Código Promocional
+    Background: 
+        Given el usuario ha iniciado sesion
 
     @TC-047: 
     Scenario: Aplicar código promocional válido

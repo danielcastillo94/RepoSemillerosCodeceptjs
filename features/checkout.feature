@@ -1,4 +1,6 @@
 Feature: Checkout
+    Background: 
+        Given el usuario ha iniciado sesion
     
     @TC-053: 
     Scenario: Seleccionar dirección guardada

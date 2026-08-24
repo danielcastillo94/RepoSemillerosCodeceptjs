@@ -1,3 +1,4 @@
+require('dotenv').config();
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
   tests: './steps/*_steps.js', /** Indica donde se encuentran las pruebas a ejecutar */
