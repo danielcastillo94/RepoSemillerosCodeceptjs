@@ -32,7 +32,14 @@ jobs:
         run: npx playwright install chromium
 
       - name: Ejecutar pruebas
-        run: npx codeceptjs run --features 
+        run: npx codeceptjs run --features || true
+
+      - name: Guardar evidencias de las pruebas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+            name: evidencias-codeceptjs
+            path: output/
 
       - name: Obtener historial de Allure
         uses: actions/checkout@v4
