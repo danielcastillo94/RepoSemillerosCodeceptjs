@@ -21,7 +21,7 @@ exports.config = {
     Playwright: {
       browser: 'chromium',
       url: process.env.BASE_URL,
-      show: true,
+      show: process.env.HEADLESS !== 'true',
       restart: 'context',
       waitForNavigation: 'domcontentloaded',
       waitForTimeout: 15000,
