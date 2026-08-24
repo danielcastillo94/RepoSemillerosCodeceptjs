@@ -7,8 +7,9 @@ class livFilterPage {
         urlCalzado: 'https://www.liverpool.com.mx/tienda?s=calzado',
         urlpagina2Calzado: 'https://www.liverpool.com.mx/tienda/N-a55H%2BwvpGpiXn5TAkYDIhBNe8hVTD0RkMz8eLpj%2B7eo%3D/page-2?s=calzado',
         urlTallaPantalon: 'https://www.liverpool.com.mx/tienda/pdp/pantalon-gap-877625-su26-baggy-algodon/1195133890?skuid=1195134410',
-        urlColorCamisa: 'https://www.liverpool.com.mx/tienda/pdp/playera-aeropostale-manga-corta-para-hombre/1193552241?skuid=1197369007',
-        urlVestido: 'https://www.liverpool.com.mx/tienda/pdp/vestido-midi-casual-para-mujer/1197915917?skuid=1197917535'
+        urlColorCamisa: 'https://www.liverpool.com.mx/tienda/pdp/playera-tipo-polo-american-eagle-para-hombre/1196665933',
+        urlVestido: 'https://www.liverpool.com.mx/tienda/pdp/short-american-eagle-para-mujer/1184679051',
+        urlTallaHollister: 'https://www.liverpool.com.mx/tienda/pdp/jeans-chico-s-570408808-liso/1192374225',
 
     };
     fields = {
@@ -29,15 +30,15 @@ class livFilterPage {
         resultado24H: '//*[contains(text(),"24 HORAS")]',
         resultadoAdidas: '//*[contains(text(),"ADIDAS")]',
         etnia: '//h3[contains(text(),"Zapato para mujer")]',
-        filtroTalla: '//input[@value="2X-Chico"]',
-        opcionTallaPantalon: '//img[@data-testid="1195133890-image-slider-image-0"]',
-        resultadoTallaPantalon: '//span[contains(text(), "GAP")]',
+        filtroTalla: '//input[@value="00"]',
+        opcionTallaPantalon: '//img[@data-testid="1192374225-image-slider-image-0"]',
+        resultadoTallaPantalon: '//span[contains(text(), "CHICO\'S")]',
         filtroColor: '//input[@value="Azul Claro~~#0480ed"]',
-        opcionColorCamisa: '//img[@data-testid="1193552241-image-slider-image-0"]',
-        resultadoColorCamisa: '//span[contains(text(), "AÉROPOSTALE")]',
-        colorTallaVestido: '//img[@data-testid="1197915917-image-slider-image-0"]',
-        resultadoTallaVestido: '//span[contains(text(), "GAP")]',
-        resultadoColorVestido: '//img[@data-testid="pdp-1197915917-gallery__gallery-0__image__image"]'
+        opcionColorCamisa: '//img[@data-testid="1196665933-image-slider-image-0"]',
+        resultadoColorCamisa: '//span[contains(text(), "AMERICAN EAGLE")]',
+        colorTallaVestido: '//img[@data-testid="1184679051-image-slider-image-0"]',
+        resultadoTallaVestido: '//span[contains(text(), "AMERICAN EAGLE")]',
+        resultadoColorVestido: '//img[@data-testid="pdp-1184679051-gallery__gallery-1__image__image"]'
 
     };
 
@@ -180,7 +181,7 @@ class livFilterPage {
         I.scrollTo(this.fields.filtroColor);
         I.click(this.fields.filtroColor);
         I.wait(4);
-        I.waitForElement(this.fields.colorTallaVestido, 5);
+        I.waitForElement(this.fields.colorTallaVestido, 5); //Short
         I.scrollTo(this.fields.colorTallaVestido);
         I.click(this.fields.colorTallaVestido);
     }

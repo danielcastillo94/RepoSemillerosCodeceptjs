@@ -1,9 +1,9 @@
-name: Ejecutar Pruebas Liverpool
+name: CI — Framework CodeceptJS Leonel Perez Reto Liverpool
 
 on:
   push:
     branches:
-      - 'Leonelp_Reto_Liverpool'
+      - '**'
 
 permissions:
   contents: write
@@ -11,6 +11,9 @@ permissions:
 jobs:
   pruebas:
     runs-on: ubuntu-latest
+
+    container:
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
 
     steps:
       - name: Clonar repositorio
@@ -23,13 +26,13 @@ jobs:
           cache: 'npm'
 
       - name: Instalar dependencias
-        run: npm ci
+        run: npm install
 
       - name: Instalar navegadores de Playwright
-        run: node_modules/.bin/playwright install --with-deps chromium
+        run: npx playwright install chromium
 
       - name: Ejecutar pruebas
-        run: npx codeceptjs run features/BN.feature --steps
+        run: npx codeceptjs run --features --grep '@episodios' --steps
 
       - name: Obtener historial de Allure
         uses: actions/checkout@v4
@@ -38,6 +41,12 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
       - name: Generar reporte de Allure
         if: always()

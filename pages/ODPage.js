@@ -15,10 +15,12 @@ class ODPage {
         opcionMenorPrecio: '//li[contains(text(),"Menor precio")]',  // Ya lo tenías
         resultadoMenor: '//img[@data-testid="1181697899-image-slider-image-0"]',
         opcionMayorPrecio: '//li[contains(text(),"Mayor precio")]',   // Ej: '//li[contains(text(),"Mayor precio")]'
-        resultadoMayor: '//img[@data-testid="1187774361-image-slider-image-0"]',
+        resultadoMayor: '//img[@data-testid="1123162753-image-slider-image-0"]',
         opcionLoMasNuevo: '//li[contains(text(),"Novedades")]',    // Ej: '//li[contains(text(),"Lo más nuevo")]'
         resultadoNuevo: '//img[@data-testid="1170197151-image-slider-image-0"]',
-        SamsumgS25UltraDynamic: '//img[@data-testid="1170197151-image-slider-image-0"]',   // Ej: '(//div[contains(@data-testid, "plp-grid-item")])[1]'
+        SamsumgS25UltraDynamic: '//img[@data-testid="1157663379-image-slider-image-0"]',   // Ej: '(//div[contains(@data-testid, "plp-grid-item")])[1]'
+        SamsumgA16: '//img[@data-testid="1169885983-image-slider-image-0"]',
+        tituloCelularA16: '//h1[contains(text(),"Galaxy A16 Super AMOLED 6.7 pulgadas")]',
 
         // --- Detalle de Producto (GalaxydescripcionGalaxy) ---
         tituloCelular: '//h1[contains(text(),"Galaxy S25 Ultra Dynamic AMOLED 2X 6.9 pulgadas")]',            // Ej: '//h1[contains(@class, "a-product__information--title")]'
@@ -102,15 +104,15 @@ class ODPage {
         I.amOnPage(this.urls.urlCelulares);
     }
     seleccionarProducto() {
-        I.waitForElement(this.fields.SamsumgS25UltraDynamic, 5);
-        I.scrollTo(this.fields.SamsumgS25UltraDynamic);
-        I.click(this.fields.SamsumgS25UltraDynamic);
+        I.waitForElement(this.fields.SamsumgA16, 5);
+        I.scrollTo(this.fields.SamsumgA16);
+        I.click(this.fields.SamsumgA16);
     }
 
     validarGalaxydescripcion() {
         I.wait(2);
-        I.waitForElement(this.fields.tituloCelular, 10);
-        I.seeElement(this.fields.tituloCelular);
+        I.waitForElement(this.fields.tituloCelularA16, 10);
+        I.seeElement(this.fields.tituloCelularA16);
     }
 
     // TC0021 -------------------------------------------------------------------

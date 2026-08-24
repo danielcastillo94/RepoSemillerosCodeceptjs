@@ -1,25 +1,7 @@
 const { CarritoPage } = inject();
 
 //TC0029----------------------------------------------------------------------------
-Given(/^El usuario se encuentra en la página de detalle de un producto$/, () => {
-    CarritoPage.homePDP();
-});
-
-When(/^El usuario selecciona el producto y hace clic en "Agregar al carrito"$/, () => {
-    CarritoPage.agregarProductoAlCarrito();
-});
-
-When(/^El usuario confirma si quiere o no el seguro para su producto$/, () => {
-    CarritoPage.agregarProductoConSeguroOpcional();
-
-});
-
-Then(/^El usuario valida que el GalaxyS25 se haya agregado correctamente al carrito$/, () => {
-    CarritoPage.validarProductoAgregado();
-});
-
-//TC0030----------------------------------------------------------------------------
-Given(/^El usuario se encuentra en la página de detalle de un producto$/, () => {
+Given(/^El usuario se encuentra en la página del Samsung Galaxy S16$/, () => {
     CarritoPage.homePDP();
 });
 
@@ -30,6 +12,15 @@ When(/^El usuario selecciona el producto y hace clic en "Agregar al carrito"$/, 
 When(/^El usuario confirma si quiere o no el seguro para su producto$/, async () => {
     await CarritoPage.agregarProductoConSeguroOpcional();
 
+});
+
+Then(/^El usuario valida que el GalaxyS25 se haya agregado correctamente al carrito$/, () => {
+    CarritoPage.validarProductoAgregado();
+});
+
+//TC0030----------------------------------------------------------------------------
+Given(/^El usuario se encuentra en la página de detalle del samsung Galxy S16Ultra$/, () => {
+    CarritoPage.homePDP();
 });
 
 When(/^El usuario va a la página de carrito$/, () => {
@@ -79,20 +70,21 @@ When(/^El usuario se encuentra en la página de detalle de un producto$/, async 
     await CarritoPage.homeCelularesLiverpool();
 });
 
-When(/^El usuario selecciona un producto del listado que es Apple$/, async () => {
-    await CarritoPage.agregarUnProductoAFavoritos("Apple");
+When(/^El usuario selecciona un producto del listado que es "([^"]*)$/, async (producto) => {
+    await CarritoPage.seleccionarProducto(producto);
 });
 
 When(/^El usuario selecciona el icono de favoritos$/, async () => {
     await CarritoPage.agregarAFavoritos();
 });
 
-Then(/^El usuario valida que el producto se haya agregado a su lista de favoritos$/, async () => {
-    await CarritoPage.validarProductoEnFavoritos();
-});
 
 When(/^El usuario se navega a la página de favoritos$/, async () => {
     await CarritoPage.homeWishlist();
+});
+
+Then(/^El usuario valida que el producto se haya agregado a su lista de favoritos sea "([^"]*)"$/, async (cantidad) => {
+    await CarritoPage.validarProductoEnFavoritos(cantidad);
 });
 
 Then(/^El usuario valida que la cantidad de productos en favoritos sea "([^"]*)"$/, async (cantidad) => {
@@ -112,19 +104,10 @@ Then(/^El usuario valida que el producto se haya removido correctamente de favor
 // (Usados por TC0033, TC0034 y TC0035)
 // ==========================================
 
-Given(/^El usuario se encuentra en la página de celulares$/, async () => {
-    await CarritoPage.homeCelularesLiverpool();
-});
-
 Given(/^El usuario agrega los productos Apple al carrito$/, async () => {
     await CarritoPage.agregarMultiplesProductos("Apple");
 
 });
-
-Given(/^El usuario se encuentra en la página del carrito$/, async () => {
-    await CarritoPage.irAlCarrito();
-});
-
 
 // ==========================================
 // TC0033: AUMENTAR CANTIDAD DE UN PRODUCTO
@@ -161,7 +144,7 @@ When(/^El usuario disminuye la cantidad del producto a "([^"]*)"$/, async (canti
 
 // Acción de TC0035
 When(/^El usuario elimina el producto del carrito$/, async () => {
-    await CarritoPage.removerProductoDelCarrito();
+    await CarritoPage.removerDelCarrito();
 });
 
 // Validación de TC0035
@@ -170,12 +153,21 @@ Then(/^El usuario valida que el carrito se encuentre vacío$/, async () => {
 });
 
 
-//TC0040----------------------------------------------------------------------------
-Then(/^El usuario valida que los impuestos del carrito sean correctos y correspondan a los productos agregados$/, () => {
-    CarritoPage.validarImpuestos();
+//TC0036----------------------------------------------------------------------------
+// Step Definitions para el flujo de montos
+Given(/El usuario se encuentra en la página de celulares de Liverpool$/, () => {
+    CarritoPage.homeCelularesLiverpool();
 });
 
-//TC0041----------------------------------------------------------------------------
-Then(/^El usuario valida que el total del carrito sea correcto y corresponda a los productos agregados, incluyendo impuestos y descuentos aplicables$/, () => {
-    CarritoPage.validarTotalFinal();
+Then(/^Que el usuario agrega productos al carrito de compras como lo es Apple$/, async () => {
+    // Usamos tu función previa para cargar los ítems necesarios
+    await CarritoPage.agregarMultiplesProductos("Apple");
+});
+
+When(/^El usuario navega a la página del carrito$/, async () => {
+    await CarritoPage.irAlCarrito();
+});
+
+Then(/^El usuario valida que el total sea igual al subtotal menos el descuento$/, async () => {
+    await CarritoPage.validarCalculoTotal();
 });

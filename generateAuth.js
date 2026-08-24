@@ -1,21 +1,39 @@
 const { chromium } = require('playwright');
-const fs = require('fs');
 
 (async () => {
-    const browser = await chromium.launch({ headless: false });
+
+    const browser = await chromium.launch({
+        headless: false
+    });
+
     const context = await browser.newContext();
     const page = await context.newPage();
 
-    // 1. Ve a la página e inicia sesión manualmente o con credenciales
+    console.log('Navegando a Liverpool...');
+
     await page.goto('https://www.liverpool.com.mx/tienda/home');
+
     console.log('Por favor inicia sesión manualmente en la ventana del navegador...');
+    console.log('Tienes hasta 5 minutos para completar el login y el SMS.');
 
-    // 2. Espera a que el saludo de usuario esté presente
-    await page.waitForSelector('//span[contains(text(),"Hola,")]', { timeout: 60000 });
+    await page.waitForSelector(
+        '//span[contains(text(),"Leonel Perez")] | //span[contains(text(),"Hola,")]',
+        {
+            timeout: 300000
+        }
+    );
 
-    // 3. Guarda el estado actualizado
-    await context.storageState({ path: './storageState.json' });
-    console.log('¡storageState.json guardado con éxito!');
+    console.log('¡Login detectado!');
+
+    await page.waitForTimeout(5000);
+
+    await context.storageState({
+        path: './storageState.json',
+        indexedDB: true
+    });
+
+    console.log('¡Sesión guardada con éxito en storageState.json!');
 
     await browser.close();
+
 })();

@@ -1,4 +1,5 @@
 const { I } = inject();
+const { assert } = require('chai');
 
 class CarritoPage {
     urls = {
@@ -28,8 +29,11 @@ class CarritoPage {
         itemProductoCarrito: '//a[contains(text(),"Samsung Galaxy S26 Ultra Dynamic AMOLED 2X 6.9 pulgadas")]',
         lblCantidadItems: '//p[contains(text(), "Subtotal") or contains(., "Subtotal")]',
         btnAumentarCantidad: '//button[@aria-label="increase"]',
-        btnDisminuirCantidad: '//button[@aria-label="decrease"]',
-        btnEliminarProducto: '//button[contains(text(),"Eliminar")] | //button[contains(@class,"btn-remove")]',
+        btnDisminuirCantidadRespuesta: '//button[@aria-label="decrease" and not(@disabled)]',
+        btnDisminuirCantidad: '//button[@aria-label="decrease"]//span[text()="remove"]',
+        controlCantidadProducto: '//button[@aria-label="increase"]/parent::*',
+        btnEliminarProducto: '//button[span[text()="Eliminar"]]',
+        btnaceptar: '//button[span[text()="Aceptar"]]',
         resultadoCarrito: '//h1[contains(text(),"Mi bolsa")]',
         samsung: '//img[@data-testid="1203150314-image-slider-image-0"]',
         apple: '//a[@data-testid="9956148790-card-card-link"]',
@@ -39,16 +43,20 @@ class CarritoPage {
         inputEmail: '//input[@inputmode="email"]',
         inputPassword: '//input[@name="password"]',
         btnIniciarSesionSubmit: '//div[@class="cf0eb74dd"]',
+        usuarioLogueado: '//span[contains(text(),"Leonel Perez")]',
 
 
         // Totales Carrito
-        lblSubtotal: '//div[contains(text(),"Total")]',
-        lblImpuestos: '//p[contains(text(),"IVA")]/following-sibling::p | //p[contains(text(),"Impuestos")]',
-        lblTotal: '//p[contains(text(),"Total")]/following-sibling::p | //span[contains(@class,"total-amount")]',
+        lblSubtotal: '//div[@data-testid="checkout-payment-summary-subtotal"]/span',
+        lblDescuento: '//div[@data-testid="checkout-payment-summary-discount"]/span',
+        lblTotal: '//div[@data-testid="checkout-payment-summary-total"]/span',
 
         // Favoritos (Wishlist)
         itemFavorito: '//div[contains(@class,"wishlist-item")] | //div[contains(@class,"m-product")]',
-        btnRemoverFavorito: '//button[contains(text(),"Eliminar")] | //i[contains(@class,"icon-close")]'
+        btnRemoverFavorito: '//button[contains(text(),"Eliminar")] | //i[contains(@class,"icon-close")]',
+
+        //Impuestos 
+
     };
 
 
@@ -64,31 +72,95 @@ class CarritoPage {
 
     homeCart() {
         I.amOnPage(this.urls.urlCart);
-        I.waitForElement(this.fields.itemProductoCarrito, 10);
+        I.waitForElement(this.fields.resultadoCarrito, 10);
 
     }
 
     homeWishlist() {
         I.amOnPage(this.urls.urlWishlist);
-        I.waitForElement(this.fields.itemFavorito, 10);
+
     }
 
     async iniciarSesion() {
-        // 1. Inyectamos las cookies directamente al contexto de Playwright
-        I.usePlaywrightTo('Cargar cookies de sesión', async ({ context }) => {
-            const fs = require('fs');
-            if (fs.existsSync('./storageState.json')) {
-                const state = JSON.parse(fs.readFileSync('./storageState.json', 'utf8'));
-                await context.addCookies(state.cookies);
-            }
-        });
-
-        // 2. Navegamos al Home
         I.amOnPage(this.urls.urlHome);
-        I.wait(2);
 
-        // 3. Validamos que el header muestre tu sesión activa
-        I.waitForElement('//span[contains(text(),"Leonel Perez")] | //span[contains(text(),"Hola,")]', 15);
+        I.wait(5);
+
+        const sesionActiva = await I.usePlaywrightTo(
+            'Verificar sesión',
+            async ({ page }) => {
+
+                const usuario = page.locator(
+                    this.fields.usuarioLogueado
+                );
+
+                return await usuario.isVisible().catch(() => false);
+            }
+        );
+
+        // Si ya está logueado, continuamos
+        if (sesionActiva) {
+
+            console.log('✅ Sesión ya iniciada.');
+
+            return;
+        }
+
+        console.log('⚠️ No hay una sesión activa.');
+        console.log('Iniciando sesión...');
+
+        // Aquí necesitamos los selectores reales
+        I.waitForElement(this.fields.btnIniciarSesionHeader, 10);
+        I.click(this.fields.btnIniciarSesionHeader);
+
+        I.waitForElement(this.fields.inputEmail, 10);
+
+        I.fillField(
+            this.fields.inputEmail,
+            process.env.LIVERPOOL_USER
+        );
+
+        I.fillField(
+            this.fields.inputPassword,
+            process.env.LIVERPOOL_PASSWORD
+        );
+
+        I.click(this.fields.btnIniciarSesionSubmit);
+
+        console.log('📱 Liverpool debería solicitar ahora el código SMS.');
+        console.log('👉 Introduce el código manualmente en el navegador.');
+
+        // Pausamos CodeceptJS
+        await I.usePlaywrightTo(
+            'Esperar código SMS',
+            async ({ page }) => {
+
+                await new Promise(resolve => {
+
+                    process.stdin.resume();
+
+                    process.stdin.once('data', () => {
+
+                        process.stdin.pause();
+
+                        resolve();
+
+                    });
+
+                });
+
+            }
+        );
+
+        console.log('Continuando prueba...');
+
+        // Verificamos que realmente haya iniciado sesión
+        I.waitForElement(
+            '//span[contains(text(),"Leonel Perez")] | //span[contains(text(),"Hola,")]',
+            30
+        );
+
+        console.log('✅ Sesión iniciada correctamente.');
 
     }
 
@@ -130,7 +202,6 @@ class CarritoPage {
     }
 
     async validarCantidadCarrito(cantidadEsperada) {
-
         const selector = this.fields.lblCantidadItems;
 
         I.waitForElement(selector, 5);
@@ -184,7 +255,8 @@ class CarritoPage {
         I.waitForElement(selector, 10); // Esperar a que la lista cargue antes de continuar
     }
 
-    async agregarUnProductoAFavoritos(producto) {
+    async seleccionarProducto(producto) {
+
         const productos = {
             apple: this.fields.apple,
             samsung: this.fields.samsung,
@@ -192,19 +264,16 @@ class CarritoPage {
         };
 
         producto = producto.toLowerCase();
+
         const selector = productos[producto];
 
         if (!selector) {
             throw new Error(`Producto no reconocido: ${producto}`);
         }
-        // 1. Entrar al detalle del producto desde el catálogo
+
         I.waitForElement(selector, 5);
         I.click(selector);
 
-        // 2. Dar clic en el botón de favoritos dentro de la PDP
-        I.waitForElement(this.fields.btnFavoritosPDP, 5);
-        I.click(this.fields.btnFavoritosPDP);
-        I.wait(2);
     }
 
     validarSubtotalActualizado() {
@@ -219,50 +288,70 @@ class CarritoPage {
     }
 
     validarProductoEnFavoritos() {
-        I.amOnPage(this.fields.urlWishlist);
+
         I.waitForElement(this.fields.itemFavorito, 5);
         I.seeElement(this.fields.itemFavorito);
     }
 
-    validarCantidadFavoritos() {
+    validarCantidadFavoritos(cantidad) {
         I.waitForElement(this.fields.itemFavorito, 5);
-        I.seeElement(this.fields.itemFavorito);
+
+        I.seeNumberOfVisibleElements(
+            this.fields.itemFavorito,
+            parseInt(cantidad)
+        );
     }
 
     removerDeFavoritos() {
         I.waitForElement(this.fields.btnRemoverFavorito, 5);
         I.click(this.fields.btnRemoverFavorito);
         I.wait(2);
+        I.waitForElement();
     }
 
     validarFavoritoRemovido() {
+        I.wait(2);
         I.dontSeeElement(this.fields.itemFavorito);
     }
 
     aumentarCantidadProducto(cantidad) {
         I.waitForElement(this.fields.btnAumentarCantidad, 10);
 
-        // Convertimos la cantidad recibida desde Gherkin ("2") a un entero numérico (2)
         const objetivo = parseInt(cantidad, 10);
 
-        // Como el carrito ya inicia con 1 producto, damos los clics necesarios para subir hasta el objetivo
         for (let i = 1; i < objetivo; i++) {
             I.click(this.fields.btnAumentarCantidad);
-            I.wait(2); // Pausa fundamental para que el botón de React vuelva a habilitarse tras el click
+            I.wait(2);
         }
 
-        I.wait(3); // Espera final a que la SPA recalcule el subtotal
+        I.wait(3);
     }
 
-    disminuirCantidadProducto() {
+    async disminuirCantidadProducto(cantidad) {
+        I.usePlaywrightTo('Verificar botones disminuir', async ({ page }) => {
+
+            const botones = page.locator('button[aria-label="decrease"]');
+
+            console.log('Botones decrease encontrados:', await botones.count());
+
+            for (let i = 0; i < await botones.count(); i++) {
+                console.log(
+                    `Botón ${i}: visible=${await botones.nth(i).isVisible()}, habilitado=${await botones.nth(i).isEnabled()}`
+                );
+            }
+
+        });
+
         I.waitForElement(this.fields.btnDisminuirCantidad, 10);
 
-        // Convertimos la cantidad de string a número
-        const objetivo = parseInt(cantidad, 10);
-
-        // Nota: Si solo necesitas dar 1 clic de restar para bajar de 2 a 1:
         I.click(this.fields.btnDisminuirCantidad);
-        I.wait(4); // Esperar a que la UI actualice la vista
+
+        I.wait(4);
+    }
+
+    extraerCantidad(texto) {
+        const coincidencia = texto.match(/\d+/);
+        return coincidencia ? parseInt(coincidencia[0], 10) : 0;
     }
 
     validarCantidadActualizada() {
@@ -274,6 +363,9 @@ class CarritoPage {
         I.waitForElement(this.fields.btnEliminarProducto, 5);
         I.click(this.fields.btnEliminarProducto);
         I.wait(2);
+        I.waitForElement(this.fields.btnaceptar);
+        I.click(this.fields.btnaceptar);
+        I.wait(3);
     }
 
     validarCarritoVacio() {
@@ -288,6 +380,34 @@ class CarritoPage {
     validarTotalFinal() {
         I.waitForElement(this.fields.lblTotal, 5);
         I.seeElement(this.fields.lblTotal);
+    }
+
+    // En tu CarritoPage.js
+    async validarCalculoTotal() {
+        // 1. Obtener los textos de la interfaz
+        const subtotalText = await I.grabTextFrom(this.fields.lblSubtotal);
+        const descuentoText = await I.grabTextFrom(this.fields.lblDescuento);
+        const totalText = await I.grabTextFrom(this.fields.lblTotal);
+
+
+        // 2. Limpiar cadenas a números (ej: "$22,499.00" -> 22499.00)
+        const parseMoneda = (texto) =>
+            parseFloat(texto.replace(/[^0-9.-]+/g, "")) || 0;
+
+        const subtotal = parseMoneda(subtotalText);
+        const descuento = parseMoneda(descuentoText);
+        const totalUI = parseMoneda(totalText);
+
+        // 3. Calcular el total esperado
+        const totalCalculado = subtotal - descuento;
+
+        // 4. Aserción con margen por redondeos
+        const esCorrecto = Math.abs(totalUI - totalCalculado) < 0.01;
+
+        assert.isTrue(
+            esCorrecto,
+            `El cálculo del total es incorrecto. Subtotal: ${subtotal}, Descuento: ${descuento}, Total en UI: ${totalUI}, Esperado: ${totalCalculado}`
+        );
     }
 }
 
