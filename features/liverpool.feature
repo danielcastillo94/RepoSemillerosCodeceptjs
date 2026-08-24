@@ -27,13 +27,13 @@ Feature: Validación de funcionalidades principales del portal de Liverpool
 
     @TC005
     Scenario: Acceder a una subcategoría específica
-        Given El usuario está en el menú de "Categorías"
+        Given El usuario visualiza el menú de "Categorías"
         When El usuario selecciona la subcategoría "Electrónica"
-        Then El usuario puede ver una página con los tipos de productos relacionados a la subcategoría seleccionada
+        Then El usuario puede ver una página con los tipos de productos relacionados a "Electrónica"
 
     @TC006
     Scenario: Validar productos de la subcategoría seleccionada
-        Given El usuario está en la página de la subcategoría "Electrónica"
+        Given El usuario visualiza la página de la subcategoría "Electrónica"
         When El usuario selecciona el tipo de producto "Pantallas"
         Then El usuario puede ver resultados del tipo de producto seleccionado, con imágenes, nombre y precio de los artículos
 

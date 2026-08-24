@@ -7,7 +7,7 @@ exports.config = {
     Playwright: {
       browser: "chromium",
       url: 'https://www.liverpool.com.mx',
-      show: true,
+      show: false,
       locale: "es-MX",
       video: true,
       pressKeyDelay: 100,
@@ -21,13 +21,17 @@ exports.config = {
 
   include: {
     I: "./steps_file.js",
-    karelPage: "./pages/karelPage.js"
+    resultsPage: "./pages/resultsPage.js",
+    categoryPage: "./pages/categoryPage.js",
+    filterPage: "./pages/filterPage.js"
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
-      "./steps/karelSteps.js",
+      "./steps/resultsSteps.js",
+      "./steps/categorySteps.js",
+      "./steps/filterSteps.js"
     ],
   },
 
