@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","742","Buscar producto existente @TC-001","","Sun Aug 23 20:25:33 UTC 2026","failed","Sun Aug 23 20:25:34 UTC 2026","","Búsqueda de productos en Liverpool. @JesusCLiverpool:","Búsqueda de productos en Liverpool. @JesusCLiverpool:","Buscar producto existente @TC-001"
-"","259","Buscar producto inexistente @TC-002","","Sun Aug 23 20:25:34 UTC 2026","failed","Sun Aug 23 20:25:34 UTC 2026","","Búsqueda de productos en Liverpool. @JesusCLiverpool:","Búsqueda de productos en Liverpool. @JesusCLiverpool:","Buscar producto inexistente @TC-002"
-"","294","Validar resultados mostrados @TC-003","","Sun Aug 23 20:25:34 UTC 2026","failed","Sun Aug 23 20:25:34 UTC 2026","","Búsqueda de productos en Liverpool. @JesusCLiverpool:","Búsqueda de productos en Liverpool. @JesusCLiverpool:","Validar resultados mostrados @TC-003"
