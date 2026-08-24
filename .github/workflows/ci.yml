@@ -1,9 +1,7 @@
 name: CI — Framework CodeceptJS
 
 on:
-  push:
-    branches:
-      - '**'
+  workflow_dispatch:
 
 permissions:
   contents: write
