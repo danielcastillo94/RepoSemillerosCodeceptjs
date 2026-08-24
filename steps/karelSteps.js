@@ -2,17 +2,17 @@ const { karelPage } = inject();
 
 
 Given(/^El usuario esta en la pagina principal$/, () => {
-  karelPage.login();
+karelPage.login();
 });
 //TC001--------------------------------------------------------------------------------------------------------------------
 Then(/^El usuario valida la pagina principal$/, () => {
-  karelPage.validacion();
+karelPage.validacion();
 });
 
 //TC002---------------------------------------------------------------------------------------------------------------------
 
 When(/^El usuario da click en Menú, muestra el submenú y selecciona "Plan de Renta"$/, () => { // interaccion con el menú
-  karelPage.accedermenu();
+karelPage.accedermenu();
 });
 
 When(/^El usuario da click en algun plan$/, () => { //selecciona algun plan
@@ -107,11 +107,11 @@ Then(/^El usuario ve la seccion de Preguntas frecuentes$/, () =>{
 //TC009-----------------------------------------------------------------------------------------------------------------------
 
 When(/^El usuario cambia de region a Guerrero$/, () => {
-  karelPage.SeleccionarRegion();
+    karelPage.SeleccionarRegion();
 });
 
 Then(/^El usuario ve el cambio de region$/, () => {
-  karelPage.Cambioderegion();
+    karelPage.Cambioderegion();
 });
 
 //TC010----------------------------------------------------------------------------------------------------------------------
@@ -165,13 +165,13 @@ Then(/^Puede ver todas las opciones$/, () =>{
 
 //TC012--------------------------------------------------------------------------------------------------------------------
 When(/^El usuario se desplaza hasta el final de la pagina$/, () => {
-  karelPage.goToPageEnd();
+    karelPage.goToPageEnd();
 });
 
 Then(/^El usuario hace click en terminos y condiciones$/, () => {
-  karelPage.clickLink();
+    karelPage.clickLink();
 });
 
 Then(/^El usuario debe ver Terminos y condiciones$/, () => {
-  karelPage.seeResults();
+    karelPage.seeResults();
 });
