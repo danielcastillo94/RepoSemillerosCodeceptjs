@@ -3,3 +3,7 @@ output/
 allure-results/
 allure-report/
 .env
+.env2
+.env
+Jenkinsfile
+Jenkinsfile_Documentado

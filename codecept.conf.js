@@ -48,7 +48,7 @@ exports.config = {
   plugins: { /**Son las funcionalidades extra */
     allure: { /** Generador de reportes */
       enabled: true,
-      require: '@codeceptjs/allure-legacy',
+      require: 'allure-codeceptjs',
       outputDir: './output/allure-results'
     }
   },
