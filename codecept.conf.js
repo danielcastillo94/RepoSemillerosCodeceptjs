@@ -1,12 +1,12 @@
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './steps/*_steps.js', /** Indica donde se encuentran las pruebas a ejecutar */
+  tests: './steps/*Steps.js', /** Indica donde se encuentran las pruebas a ejecutar */
   output: './output', /** indica donde se guardaran los resultados de las pruebas*/
 
   helpers: { /** Ayudantes para realizar las acciones, configura el motor de automatizacion */
     Playwright: {
       browser: "chromium", /** Navegador que se va a utilizar */
-      url: 'https://www.telcel.com', /** Url de los casos a probar */
+      url: 'https://rickandmortyapi.com', /** Url de los casos a probar */
       show: !process.env.CI, /** En local muestra el navegador; en CI (GitHub Actions) corre headless */
       locale: "es-MX" /** Configuracion regional */
     }
@@ -16,6 +16,7 @@ exports.config = {
     I: "./steps_file.js", /** Crear al actor, quien va a realizar las acciones */
     karelPage: "./pages/karelPage.js", /** Creacion de la page Object */
     rickMortyMockPage: "./pages/rickMortyMockPage.js", /** Page Object para demo de Network Mocking */
+    rickMortyEpisodiosPage: "./pages/rickMortyEpisodiosPage.js"  /** Page Object para demo de Network Mocking de Reto4-Framework*/
   },
 
   gherkin: {
@@ -23,6 +24,7 @@ exports.config = {
     steps: [
       "./steps/karelSteps.js", /** Ubicaciones de los archivos que traducen Given,When y Then a javascript */
       "./steps/rickMortyMockSteps.js", /** Steps para demo de Network Mocking */
+      "./steps/rickMortyEpisodiosSteps.js", /** Steps para demo de Network Mocking de Reto4-Framework*/
     ],
   },
 
