@@ -27,9 +27,9 @@ exports.config = {
   },
 
   plugins: { /**Son las funcionalidades extra */
-    allure: { /** Generador de reportes */
+    stepByStepReport: { /** Genera reporte HTML automático */
       enabled: true,
-      outputDir: './output/allure-results'
+      deleteBeforeSuite: false
     }
   },
 
