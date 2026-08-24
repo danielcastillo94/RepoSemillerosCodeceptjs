@@ -8,6 +8,7 @@ const SELECTORES = {
 };
 
 class SearchPage extends BasePage {
+  //TC-001
   async abrirHome() {
     contexto.limpiar();
     I.amOnPage('/');
@@ -15,7 +16,7 @@ class SearchPage extends BasePage {
     await this.descartarModales();
   }
 
-async buscarProducto(producto) {
+  async buscarProducto(producto) {
     this.esperarElemento(SELECTORES.campoBusqueda);
 
     await I.usePlaywrightTo(`buscar "${producto}"`, async ({ page }) => {
@@ -33,6 +34,7 @@ async buscarProducto(producto) {
           return;
         } catch (e) {
           // el header se re-renderizó y perdió el input; reintentar
+          console.warn(`[SearchPage] Intento ${intento}/3 falló para "${producto}"; reintentando`)
         }
       }
 

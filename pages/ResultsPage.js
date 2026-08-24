@@ -38,6 +38,7 @@ class ResultsPage extends BasePage {
       try {
         await page.waitForSelector(selector, { state: 'attached', timeout: 20000 })
       } catch (e) {
+        console.warn(`[ResultsPage] PLP no detectada en 20s; continuando. ${e.message}`)
         await page.waitForLoadState('domcontentloaded')
       }
     })

@@ -8,6 +8,7 @@ Given(/^que el usuario se encuentra en la página principal de Liverpool$/, () =
   searchPage.abrirHome()
 )
 
+//@TC-001
 When(/^busca el producto "([^"]*)"$/, (producto) =>
   searchPage.buscarProducto(producto)
 )
