@@ -26,12 +26,16 @@ module.exports = {
   },
 
   seleccionarRopa() {
-    I.waitForElement(this.subcategoriaRopa, 10);
-    I.wait(2);
-    I.forceClick(this.subcategoriaRopa);
-  },
+  I.waitForElement(this.subcategoriaRopa, 10);
+  I.wait(2);
+  I.forceClick(this.subcategoriaRopa);
+},
 
-  validarPaginaRopa() {
-    I.seeInCurrentUrl('/tienda/ropa/catst4003074');
-  }
+validarSubcategoriaRopa() {
+  I.see('Ropa');
+},
+
+validarPaginaRopa() {
+  I.seeInCurrentUrl('/tienda/ropa/catst4003074');
+}
 };

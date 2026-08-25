@@ -1,4 +1,7 @@
-const { I, liverpoolSearchPage, liverpoolResultsPage, liverpoolMenuPage } = inject();
+const { I } = inject();
+const liverpoolSearchPage = require('../pages/liverpoolSearchPage');
+const liverpoolResultsPage = require('../pages/liverpoolResultsPage');
+const liverpoolMenuPage = require('../pages/liverpoolMenuPage');
 
 Given('El usuario se encuentra en la página principal de Liverpool', () => {
   I.amOnPage('/');
@@ -18,10 +21,6 @@ Then('El usuario visualiza el mensaje de producto no encontrado', () => {
 
 Then('El usuario visualiza productos con nombre y precio', () => {
   liverpoolResultsPage.validarNombreYPrecio();
-});
-
-When('El usuario abre el menú principal', () => {
-  liverpoolMenuPage.abrirMenu();
 });
 
 When('El usuario abre el menú de "Categorías"', () => {
