@@ -18,7 +18,7 @@ class carritoPage{
         cantidadTotalProductos: '//p[contains(normalize-space(), "Subtotal") and contains(normalize-space(), "productos")]',
         totalCarrito: '[data-testid="checkout-payment-summary-total"]',
         subtotalCarrito: '[data-testid="checkout-payment-summary-subtotal"]',
-        preciosProductos: '[data-testid="original"]',
+        preciosProductos: '[data-testid$="-input-cart-item-price"]',
         botonEliminarProducto: '[data-testid$="-input-cart-item-quantity-decrease"]',
         botonAceptarEliminarProducto: '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]',
         mensajeConfirmacionEliminar:'[data-testid="delete-product-modal-modal-modal-message"]',

@@ -1,3 +1,4 @@
+@login
 Feature: Login y Cuenta de Usuario
 
     @TC-065
@@ -21,7 +22,7 @@ Feature: Login y Cuenta de Usuario
         And da clic en el boton continuar
         Then el usuario se encuentra en la página principal de Liverpool
 
-    @TC-067
+    #@TC-067
     Scenario: Ver perfil y direcciones guardadas
         Given el usuario ha iniciado sesion
         When da clic en el icono o nombre de su perfil

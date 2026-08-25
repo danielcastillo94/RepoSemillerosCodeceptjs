@@ -1,3 +1,4 @@
+@flujoE2E
 Feature: Flujo Completo E2E (Búsqueda → Compra)
 
     @TC-062: 

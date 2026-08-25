@@ -1,3 +1,4 @@
+@checkout
 Feature: Checkout
     Background: 
         Given el usuario ha iniciado sesion

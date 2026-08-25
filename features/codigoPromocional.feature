@@ -1,3 +1,4 @@
+@codigoPromocional
 Feature: Código Promocional
     Background: 
         Given el usuario ha iniciado sesion

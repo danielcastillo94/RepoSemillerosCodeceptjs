@@ -24,34 +24,34 @@ Feature: Filtros de productos
     Scenario: Seleccionar 1 marca
     Given el usuario busca el producto "batman"
     When se desplaza en el submenu del lado izquierdo buscando el apartado marcas
-    And selecciona la marca "DC COMICS"
-    Then la pagina carga los productos de la marca "DC COMICS"
+    And selecciona la marca "BATMAN"
+    Then la pagina carga los productos de la marca "BATMAN"
 
     @TC-011: 
     Scenario: Seleccionar múltiples marcas
     Given el usuario busca el producto "batman"
     When se desplaza en el submenu del lado izquierdo buscando el apartado marcas
-    And selecciona la marca "DC COMICS"
+    And selecciona la marca "BATMAN"
     And da clic en "Ver más" de marcas
     And selecciona la marca "FUNKO"
-    Then la pagina carga los productos de las marcas "DC COMICS" y "FUNKO"
+    Then la pagina carga los productos de las marcas "BATMAN" y "FUNKO"
 
     @TC-012: 
     Scenario: Deseleccionar marca
         Given el usuario busca el producto "batman"
         And se desplaza en el submenu del lado izquierdo buscando el apartado marcas
-        And selecciona la marca "DC COMICS"
+        And selecciona la marca "BATMAN"
         And da clic en "Ver más" de marcas
         And selecciona la marca "FUNKO"
-        When da clic en la marca "DC COMICS" para eliminarla
+        When da clic en la marca "BATMAN" para eliminarla
         Then la pagina carga los productos de la marca "FUNKO" 
 
     @TC-013: 
     Scenario: Filtrar por talla (XS, S, M, L, XL)
     Given el usuario busca el producto "aeropostal"
-    When se desplaza en el submenu del lado izquierdo buscando el apartado "Talla"
-    And selecciona la talla "Grande"
-    Then la pagina carga los productos de la talla "Grande"
+    When se desplaza en el submenu del lado izquierdo buscando el apartado "Tamaño"
+    And selecciona la talla "2X"
+    Then la pagina carga los productos de la talla "2X"
 
     @TC-014: 
     Scenario: Filtrar por color
@@ -63,8 +63,8 @@ Feature: Filtros de productos
     @TC-015: 
     Scenario: Combinar filtros talla + color
         Given el usuario busca el producto "aeropostal"
-        When se desplaza en el submenu del lado izquierdo buscando el apartado "Talla"
-        And selecciona la talla "Grande"
+        When se desplaza en el submenu del lado izquierdo buscando el apartado "Tamaño"
+        And selecciona la talla "2X"
         And se desplaza en el submenu del lado izquierdo buscando el apartado "Color"
         And selecciona el color "Negro"
-        Then la pagina carga los productos del color "Negro" y talla "Grande"
+        Then la pagina carga los productos del color "Negro" y talla "2X"

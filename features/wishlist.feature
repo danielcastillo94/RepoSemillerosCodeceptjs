@@ -1,3 +1,4 @@
+@wishlist
 Feature: Wishlist
     Background: 
         Given el usuario ha iniciado sesion

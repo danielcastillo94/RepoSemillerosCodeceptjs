@@ -1,3 +1,4 @@
+@liverpool @carrito
 Feature: carrito
     
     Background:
@@ -48,7 +49,6 @@ Feature: carrito
         And el boton de "agregar a mi bolsa" aparece
         And el usuario da clic en agregar a mi bolsa
         And limpia la barra de búsqueda
-
         Then el boton de bolsa indica el numero de productos agregados
 
     @TC-033

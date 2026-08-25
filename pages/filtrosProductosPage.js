@@ -18,7 +18,7 @@ class filtrosProductosPage{
         botonFiltrarPrecio: '[data-testid="chevron-right-icon-btn"]',
         marcas: '//span[normalize-space(.)="Marcas"]',
         mostrarMas:'[data-testid="plp-page-plp-filter-brand-filter-brand-checkbox-group-show-all-items-btn"]',
-        talla: '//span[normalize-space(.)="Talla"]',
+        talla: '//span[normalize-space(.)="Tamaño"]',
         color: '//span[normalize-space(.)="Color"]',
     };
 

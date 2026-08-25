@@ -18,10 +18,9 @@ class busquedaProductosPage{
 
     // TC-001 Busqueda
     
-    async clicBarraBusqueda() {
-        await I.waitForElement(this.fields.barraBusqueda, 10);
-        await I.seeElement(this.fields.barraBusqueda);
-        await I.click(this.fields.barraBusqueda);
+    clicBarraBusqueda() {
+        I.waitForElement(this.fields.barraBusqueda, 10);
+        I.click(this.fields.barraBusqueda);
     }
 
     ingresarProducto(producto) {

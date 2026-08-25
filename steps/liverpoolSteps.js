@@ -160,7 +160,7 @@ Then('la pagina carga los productos de la marca restante {string}', (marca) => {
 
 //TC013--------------------------------------------------------------------------------------------------------------------
 
-When('se desplaza en el submenu del lado izquierdo buscando el apartado "Talla"', async () => {
+When('se desplaza en el submenu del lado izquierdo buscando el apartado "Tamaño"', async () => {
     await filtrosProductosPage.desplazarseASeccionTalla();
 });
 
