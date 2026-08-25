@@ -1,0 +1,96 @@
+{
+  "info": {
+    "_postman_id": "5a3c761e-e9d8-484c-a43d-109c3d2758a2",
+    "name": "Rickandmortyapi",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43732592",
+    "_collection_link": "https://go.postman.co/collection/43732592-5a3c761e-e9d8-484c-a43d-109c3d2758a2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "head examp recurso existe",
+      "request": {
+        "method": "HEAD",
+        "header": [],
+        "url": {
+          "raw": "https://rickandmortyapi.com/api/character",
+          "protocol": "https",
+          "host": [
+            "rickandmortyapi",
+            "com"
+          ],
+          "path": [
+            "api",
+            "character"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get por paginado",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://rickandmortyapi.com/api/character?page=10",
+          "protocol": "https",
+          "host": [
+            "rickandmortyapi",
+            "com"
+          ],
+          "path": [
+            "api",
+            "character"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "10",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get por filtros por parametros",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://rickandmortyapi.com/api/character/?name=rick&status=unknown",
+          "protocol": "https",
+          "host": [
+            "rickandmortyapi",
+            "com"
+          ],
+          "path": [
+            "api",
+            "character",
+            ""
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "rick"
+            },
+            {
+              "key": "status",
+              "value": "unknown"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "https://reqres.in",
+      "type": "default"
+    }
+  ]
+}

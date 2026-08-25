@@ -17,6 +17,11 @@ exports.config = {
     },
     PlaywrightVideoAllure:{
       require: './utils/playwrightVideoAllure_helper.js'
+    REST: {
+      endpoint: 'https://rickandmortyapi.com',
+      defaultHeaders: {
+        'Content-Type': 'application/json'
+      }
     }
   },
 
@@ -42,6 +47,8 @@ exports.config = {
     steps: [
       "./steps/karelSteps.js", /** Ubicaciones de los archivos que traducen Given,When y Then a javascript */
       "./steps/liverpoolSteps.js",
+      "./steps/rickMortyMockSteps.js", /** Steps para demo de Network Mocking */
+      "./steps/rickMortyApiSteps.js", /** Steps para demo de pruebas de API */
     ],
   },
 
