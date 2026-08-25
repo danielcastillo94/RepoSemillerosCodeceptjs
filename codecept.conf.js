@@ -9,6 +9,12 @@ exports.config = {
       url: 'https://www.telcel.com', /** Url de los casos a probar */
       show: !process.env.CI, /** En local muestra el navegador; en CI (GitHub Actions) corre headless */
       locale: "es-MX" /** Configuracion regional */
+    },
+    REST: {
+      endpoint: 'https://rickandmortyapi.com',
+      defaultHeaders: {
+        'Content-Type': 'application/json'
+      }
     }
   },
 
@@ -23,6 +29,7 @@ exports.config = {
     steps: [
       "./steps/karelSteps.js", /** Ubicaciones de los archivos que traducen Given,When y Then a javascript */
       "./steps/rickMortyMockSteps.js", /** Steps para demo de Network Mocking */
+      "./steps/rickMortyApiSteps.js", /** Steps para demo de pruebas de API */
     ],
   },
 
