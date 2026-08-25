@@ -29,10 +29,12 @@ class FilterPage {
 
         hrefplayeras: '//a[@data-testid="blt83f3cb6dcb412235-card"]',
         headerplayeras: '//h1[@data-testid="plp-page-heading-title-title"]',
-        spantallagrande: '//span[@data-testid="plp-page-plp-filter-attributes.rzlv_tallaRopa-attributes.rzlv_tallaRopa-checkbox-group-4-checkbox"]',
-        btnborrartalla: '//button[@data-testid="Grande"]',
+        tamanio: '//span[contains(text(),"Tamaño")]',
+        color: '//span[contains(text(),"Color")]',
+        spantallagrande: '//span[@data-testid="plp-page-plp-filter-sizes-filter-sizes-checkbox-group-4-checkbox"]',
+        btnborrartalla: '//button[@data-testid="2X"]',
         btnmastallas: '//button[@data-testid="plp-page-plp-filter-attributes.rzlv_tallaRopa-attributes.rzlv_tallaRopa-checkbox-group-show-all-items-btn"]',
-        spancolorazuloscuro: '//span[@data-testid="plp-page-plp-filter-colors-filter-:R1csl48pb9utsq:-color-checkbox-group-3-checkbox"]',
+        spancolorazuloscuro: '//input[@value="Azul Oscuro~~#031970"]',
         btnborrarcolor: '//button[@data-testid="Azul Oscuro"]'
     };
 
@@ -118,12 +120,14 @@ class FilterPage {
 
     //TC013---------------
     filtrotalla(){
+        I.scrollTo(this.locator.tamanio); //seccion de tallas
         I.click(this.locator.spantallagrande);
         I.waitForVisible(this.locator.btnborrartalla, 10);
     }
 
     //TC014---------------
     filtrocolor(){
+        I.scrollTo(this.locator.color);
         I.click(this.locator.spancolorazuloscuro);
         I.waitForVisible(this.locator.btnborrarcolor, 10);
     }
@@ -138,9 +142,9 @@ class FilterPage {
     //metodo compartido para revisar los resultados de cada filtro
     revisarresultados(){
         I.scrollPageToBottom();
-        I.click(this.locator.btnsiguientepagina);
-        I.wait(5); //tiempo de espera para que carge la pagina
-        I.scrollPageToBottom();
+        //I.click(this.locator.btnsiguientepagina);
+        //I.wait(5); //tiempo de espera para que carge la pagina
+        //I.scrollPageToBottom();
     }
 }
 

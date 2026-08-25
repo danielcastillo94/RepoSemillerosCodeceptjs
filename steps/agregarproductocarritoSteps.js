@@ -1,16 +1,16 @@
 const {ProductDetailPage, StockPage, CartPage} = inject();
 
 Given(/^El usuario se encuentar en la categora de playeres$/, () => {
-    ProductDetailPage.iniciocatplayera();
+    CartPage.categoriaplayera();
 });
 When(/^El usuario aplica filtros$/, () => {
-    ProductDetailPage.aplicacionfiltros();
+    CartPage.filtros();
 });
 When(/^El usuario da clic en un producto de su agrado$/, () => {
-    ProductDetailPage.productoelejido();
+    CartPage.productoseleccionado();
 });
 When(/^El usuario escoge la talla de su agrado$/, () => {
-    StockPage.selecciontalla();
+    CartPage.tallaplayera();
 });
 
 //TC029-------------------

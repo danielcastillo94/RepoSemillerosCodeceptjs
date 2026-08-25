@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  pruebas:
+  pruebas-Liverpool:
     runs-on: ubuntu-latest
 
     steps:

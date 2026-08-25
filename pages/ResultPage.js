@@ -4,7 +4,7 @@ require('dotenv').config();
 class ResultPage {
     urls = {
         urlpantalo: 'https://www.liverpool.com.mx/tienda?s=pantalon%20hombre',
-        urlinfopantalon: 'https://www.liverpool.com.mx/tienda/pdp/jeans-slim-aeropostale-lavado-stone-wash-para-hombre/1180850367',
+        urlinfopantalon: 'https://www.liverpool.com.mx/tienda/pdp/jeans-straight-aeropostale-lavado-stone-wash-para-hombre/1201023081',
         urlzapatos: 'https://www.liverpool.com.mx/tienda/zapatos/cat5040004',
         urlzapatosconfiltro: 'https://www.liverpool.com.mx/tienda/tenis-casuales-de-hombre/N-iT46Ie4aAvzNe8M90pRVO5cDsozXlN996IBB7goqY12UpmVpE6wGWVOM1JHMYWOG',
     };
@@ -12,12 +12,12 @@ class ResultPage {
     locator = {
         searchbar: '//input[@placeholder="Buscar por producto, categoría y más..."]',
         headerresult: '//h1[contains(text(), "Pantalon hombre")]',
-        headeroptionresult: '//h1[contains(text(), "Jeans slim")]',
-        imgresult: '//img[@data-testid="1180850367-image-slider-image-0"]',////img[@data-testid="1180850367-image-slider-image-0"]
-        imgdetalle: '//img[@data-testid="pdp-1180850367-gallery__gallery-1__image__image"]',
+        headeroptionresult: '//h1[contains(text(), "Jeans")]',
+        imgresult: '//a[@data-testid="1201023081-card-card-link"]',////img[@data-testid="1180850367-image-slider-image-0"]
+        imgdetalle: '//img[@data-testid="pdp-1201023081-gallery__gallery-0__image__image"]',
         precioresult: '//span[@class="text-heading-2xl font-bold text-price-primary font-bold"]',
         colorresult: '//p[contains(text(), "Color")]',
-        tamanioresult: '//button[@data-testid="selection-button-simple-picker-undefined-button-selection"]',
+        tamanioresult: '//p[contains(text(),"Tamaño")]',
         btnenvio: '//span[contains(text(), "Recibe a domicilio")]',
         btnrecoger: '//span[contains(text(), "Recoge en tienda")]',
         btncomprar: '//button[@data-testid="buy-now-button"]',

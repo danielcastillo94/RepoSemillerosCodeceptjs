@@ -1,4 +1,4 @@
-const { I, ProductDetailPage } = inject();
+const { I, ProductDetailPage, StockPage } = inject();
 
 class CartPage {
     urls = {
@@ -41,10 +41,20 @@ class CartPage {
     //metodo de navegacion para el TC032
     regresarinicio(){
         I.amOnPage(this.urls.urlcatplayera);
-        I.click(this.locator.spantallagrande);
-        I.waitForVisible(this.locator.btnborrartalla, 10);
-        I.click(this.locator.spancolorazuloscuro);
-        I.waitForVisible(this.locator.btnborrarcolor, 10);
+        this.filtros();
+    }
+    //Given-----------------------------------
+    categoriaplayera(){
+        ProductDetailPage.iniciocatplayera();
+    }
+    filtros(){
+        ProductDetailPage.aplicacionfiltros();
+    }
+    productoseleccionado(){
+        ProductDetailPage.productoelejido();
+    }
+    tallaplayera(){
+        StockPage.selecciontalla();
     }
     //TC029------------------
     agregarbolsa(){

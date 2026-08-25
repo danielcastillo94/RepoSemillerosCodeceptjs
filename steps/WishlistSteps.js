@@ -1,17 +1,13 @@
-const {ProductDetailPage,StockPage,WishlistPage, CartPage} = inject();
+const {WishlistPage} = inject();
 
-Given(/^El usuario tiene una sesion iniciada$/, () => {
-    WishlistPage.iniciarsesion();
-})
-When(/^El usuario tiene un producto en su carrito$/, () => {
-    ProductDetailPage.iniciocatplayera();
-    ProductDetailPage.aplicacionfiltros();
-    ProductDetailPage.productoelejido();
-    StockPage.selecciontalla();
-    CartPage.agregarbolsa();
-})
+Given(/^El usuario inicia sesion con su cuenta activa$/, () => {
+    WishlistPage.iniciarsesionvalida();
+});
 
 //TC035----------------------------
+When(/^El usuario tiene un producto en su carrito$/, () => {
+    WishlistPage.agregaracarrito();
+});
 When(/^El usuario da clic en "mover a"$/, () => {
     WishlistPage.agregarwishlist();
 });

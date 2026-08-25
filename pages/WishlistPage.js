@@ -1,4 +1,4 @@
-const {I} = inject();
+const {I, ProductDetailPage, StockPage, CartPage, LoginPage} = inject();
 require('dotenv').config();
 
 class WishlistPage {
@@ -16,26 +16,33 @@ class WishlistPage {
         btnwishlist: '(//a[@data-testid="blt26617d4f2e17657d-header-shopping-cart-favourites-link"])[1]',
         btnmovera: '//span[contains(text(),"Mover a Wishlist")]',
         btnwishelejida: '//button[@class="flex gap-5 px-4 py-3 bg-white rounded cursor-pointer h-32"]',
-        miwishlist: '//a[@data-testid="wishlist-6a8269b012b4e26773f6c85b-button"]',
+        miwishlist: '//a[@data-testid="wishlist-6a8269b012b4e26773f6c85b-button"] | //p[contains(text(),"Mi Wishlist")]',
         btnopcion: '(//button[@class="flex items-center"])[2]',
         lieliminar: '//li[contains(text(),"Eliminar")]',
         btnconfitmareliminar: '(//span[contains(text(),"Eliminar")])[2]',
         msjconfirmareliminar: '//span[contains(text(),"Eliminar lista")]',
     };
 
-    iniciarsesion(){
-        I.amOnPage('/');
-        I.wait(5); //tiempo de espera que que carge bien la pagina
-        I.click(this.locator.btniniciosesion);
-        I.wait(2); //tiempo de espera para cargar el inicio de sesion
-        I.fillField(this.locator.inputcorreo, process.env.EMAIL);
-        I.fillField(this.locator.inputcontrasenia, process.env.PASSWORD);
-        I.click(this.locator.btniniciarsesion);
-        I.wait(30);
-        I.click(this.locator.btnaceptarsms);
+    iniciarsesionvalida(){
+        LoginPage.iniciarsesion();
+        // I.wait(5); //tiempo de espera que que carge bien la pagina
+        // I.click(this.locator.btniniciosesion);
+        // I.wait(2); //tiempo de espera para cargar el inicio de sesion
+        // I.fillField(this.locator.inputcorreo, process.env.EMAIL);
+        // I.fillField(this.locator.inputcontrasenia, process.env.PASSWORD);
+        // I.click(this.locator.btniniciarsesion);
+        // I.wait(30);
+        // I.click(this.locator.btnaceptarsms);
     }
 
     //TC035----------------------------
+    agregaracarrito(){
+        ProductDetailPage.iniciocatplayera();
+        ProductDetailPage.aplicacionfiltros();
+        ProductDetailPage.productoelejido();
+        StockPage.selecciontalla();
+        CartPage.agregarbolsa();
+    }
     agregarwishlist(){ //utiliza el mismo producto para todos los casos
         I.click(this.locator.btncarrito);
         I.waitForURL(this.urls.urlcarrito);
@@ -48,6 +55,7 @@ class WishlistPage {
     verwishlist(){
         I.click(this.locator.btnwishlist);
         I.waitForURL(this.urls.urlwishlist);
+        I.wait(2);
         I.click(this.locator.miwishlist);
     }
 

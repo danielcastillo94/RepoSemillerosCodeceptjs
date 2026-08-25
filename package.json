@@ -19,7 +19,7 @@
     "features:multicard": "codeceptjs run --features --grep \"@multicarrito\" --steps --verbose",
     "features:editarcarrito": "codeceptjs run --features --grep \"@multicarrito\" --steps --verbose",
     "features:impuestos": "codeceptjs run --features --grep \"@validarimpuestos\" --steps --verbose",
-    "features:whishlist": "codeceptjs run --features --grep \"@TC037\" --steps --verbose",
+    "features:wishlist": "codeceptjs run --features --grep \"@wishlist\" --steps --verbose",
     "features:cupon": "codeceptjs run --features --grep \"@promocion\" --steps --verbose",
     "features:checkout": "codeceptjs run --features --grep \"@checkout\" --steps --verbose",
     "features:crearcuenta": "codeceptjs run --features --grep \"@crearcuenta\" --steps --verbose",

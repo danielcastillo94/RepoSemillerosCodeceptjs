@@ -1,10 +1,10 @@
 const {ProductDetailPage, StockPage, CartPage} = inject();
 
 Given(/^El usuario se encuentar en la categora de playeres$/, () => {
-    ProductDetailPage.iniciocatplayera();
+    CartPage.categoriaplayera();
 });
 When(/^El usuario aplica filtros$/, () => {
-    ProductDetailPage.aplicacionfiltros();
+    CartPage.filtros();
 });
 
 //TC032-------------------

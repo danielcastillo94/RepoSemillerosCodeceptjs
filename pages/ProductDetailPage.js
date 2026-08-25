@@ -1,4 +1,4 @@
-const {I} = inject();
+const {I, FilterPage, CategoryPage, MenuPage} = inject();
 
 class ProductDetailPage{
     url = {
@@ -35,13 +35,13 @@ class ProductDetailPage{
 
     //Given--------------------------------
     iniciocatplayera(){
-        I.amOnPage(this.url.urlcatplayera);
+        MenuPage.inicio();
+        MenuPage.categorias();
+        CategoryPage.categoria();
+        FilterPage.inicifiltroropa();
     }
     aplicacionfiltros(){
-        I.click(this.locator.spantallagrande);
-        I.waitForVisible(this.locator.btnborrartalla, 10);
-        I.click(this.locator.spancolorazuloscuro);
-        I.waitForVisible(this.locator.btnborrarcolor, 10);
+        FilterPage.filtrocolor();
     }
     productoelejido(){
         
