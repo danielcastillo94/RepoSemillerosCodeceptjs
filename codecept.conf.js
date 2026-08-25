@@ -1,42 +1,54 @@
+const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+
+setHeadlessWhen(process.env.HEADLESS === 'true');
+setCommonPlugins();
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './steps/*_steps.js',
+  tests: './steps/*.js',
   output: './output',
 
   helpers: {
     Playwright: {
-      browser: "chromium",
-      url: 'https://www.telcel.com',
+      url: 'https://www.liverpool.com.mx/tienda/home',
       show: true,
-      locale: "es-MX",
-      waitForNavigation: "domcontentloaded",
-      getPageTimeout: 60000,
-      restart: true 
+      browser: 'chromium',
+      restart: 'context',
+      windowSize: '1440x900',
+      locale: 'es-MX',
+      video: true,
+      keepVideoForPassedTests: true,
+      trace: true,
+      keepTraceForPassedTests: true,
+      waitForNavigation: 'domcontentloaded',
+      getPageTimeout: 60000
+    },
+    PlaywrightVideoAllure: {
+      require: './utils/playwrightVideoAllure_helper.js'
     }
   },
 
   include: {
-    I: "./steps_file.js",
-    karelPage: "./pages/karelPage.js"
+    I: './steps_file.js',
+    liverpoolPage: './pages/liverpoolPage.js'
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
-      "./steps/karelSteps.js",
-    ],
+      './steps/liverpoolSteps.js'
+    ]
   },
 
   plugins: {
     allure: {
       enabled: true,
-      require: '@codeceptjs/allure-legacy',
-      outputDir: './output/allure-results'
-      
+      require: 'allure-codeceptjs',
+      resultsDir: './output/allure-results'
     }
   },
 
   bootstrap: null,
   mocha: {},
-  name: "Actividad youtube y Telcel"
+  name: 'RepoSemillerosCodeceptjs'
 };
