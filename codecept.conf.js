@@ -11,7 +11,7 @@ exports.config = {
   helpers: {
     Playwright: {
       url: 'https://www.liverpool.com.mx/tienda/home',
-      show: true,
+      show: !process.env.CI,
       browser: 'chromium',
       restart: 'context',
       windowSize: '1440x900',
@@ -23,20 +23,28 @@ exports.config = {
       waitForNavigation: 'domcontentloaded',
       getPageTimeout: 60000
     },
-    PlaywrightVideoAllure: {
-      require: './utils/playwrightVideoAllure_helper.js'
+    REST: {
+      endpoint: 'https://rickandmortyapi.com',
+      defaultHeaders: {
+        'Content-Type': 'application/json'
+      }
     }
   },
 
   include: {
     I: './steps_file.js',
-    liverpoolPage: './pages/liverpoolPage.js'
+    liverpoolPage: './pages/liverpoolPage.js',
+    karelPage: './pages/karelPage.js',
+    rickMortyMockPage: './pages/rickMortyMockPage.js'
   },
 
   gherkin: {
     features: './features/*.feature',
     steps: [
-      './steps/liverpoolSteps.js'
+      './steps/liverpoolSteps.js',
+      './steps/karelSteps.js',
+      './steps/rickMortyMockSteps.js',
+      './steps/rickMortyApiSteps.js'
     ]
   },
 
