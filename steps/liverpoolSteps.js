@@ -22,7 +22,6 @@ Then(/^no se muestran productos para "([^"]*)"$/, (producto) => {
 
 Then(/^los resultados muestran productos relacionados con "([^"]*)"$/, (producto) => {
     liverpoolPage.validarProductoRelacionado(producto);
-
 });
 
 When(/^abre el menú de categorías$/, () => {
@@ -76,7 +75,6 @@ When(/^abre el filtro de marcas$/, () => {
 When(/^busca la marca "([^"]*)"$/, (marca) => {
     liverpoolPage.buscarMarca(marca);
 });
-
 
 When(/^selecciona las marcas "PS5" y "PS4"$/, () => {
     liverpoolPage.seleccionarMultiplesMarcas();
@@ -198,7 +196,6 @@ Then(/^el producto se agrega correctamente a la bolsa$/, () => {
     liverpoolPage.validarProductoAgregado();
 });
 
-
 Then(/^el carrito muestra "([^"]*)" producto$/, (cantidad) => {
     liverpoolPage.validarCantidadCarrito(cantidad);
 });
@@ -237,10 +234,6 @@ When(/^disminuye la cantidad del producto en el carrito$/, () => {
 
 Then(/^la cantidad del producto en el carrito es "([^"]*)"$/, (cantidad) => {
     liverpoolPage.validarCantidadCarritoProducto(cantidad);
-});
-
-When(/^disminuye la cantidad del producto en el carrito$/, () => {
-    liverpoolPage.disminuirCantidadCarrito();
 });
 
 When(/^remueve el producto del carrito$/, () => {

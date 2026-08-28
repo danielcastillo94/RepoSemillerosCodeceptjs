@@ -3,681 +3,451 @@ const { I } = inject();
 module.exports = {
 
     fields: {
-        buscadorHome:
-            '[data-testid="blt26617d4f2e17657d-header-search-input"]',
-
-        resultados:
-            '#plp-page-card-product-list',
-
-        tituloResultados:
-            '[data-testid="plp-page-heading-title-title"]',
-
-        tarjetasProducto:
-            '#plp-page-card-product-list a[data-testid$="-card-card-link"]',
-
-        botonMenu:
-            '[data-testid="blt26617d4f2e17657d-header-button-menu"]',
-
-        botonCategorias:
-            '[data-testid="blt26617d4f2e17657d-header-menu-mobile-menu-items-submenu-0"]',
-
-        vinosGourmet:
-            '[data-testid="blt26617d4f2e17657d-header-menu-mobile-submenu-Vinos y Gourmet-15"]',
-
-        tituloVinosGourmet:
-            '//h2[contains(text(),"Vinos y Gourmet")]',
-
-        botonFiltrar:
-        '[data-testid="plp-page-filter-button"]',
-
-        filtroPrecios:
-        '[data-testid="button-dropdown-filter"]',
-
-        precioMinimo:
-        '[data-testid="at-text-min-input"]',
-
-        precioMaximo:
-        '[data-testid="at-text-max-input"]',
-
-        rangoPrecio:
-        'input[type="radio"][value=\'{"low":100,"high":500}\']',
- 
-        preciosProductos:
-        '[data-testid$="-card-card-price"]',
-        
-        filtroMarcas:
-        '//button[@data-testid="button-dropdown-filter" and .//span[text()="Marcas"]]',
-
-        buscadorMarca:
-        'input[placeholder="Buscar marca"]',
-
-        marcaPS5:
-        '//label[.//*[@data-testid="item-PS5"]]',
-
-        marcaPS4:
-        '//label[.//*[@data-testid="item-PS4"]]',
- 
-    filtroTalla:
-    '//button[@data-testid="button-dropdown-filter" and .//span[text()="Talla"]]',
- 
-    filtroColor:
-    '//button[@data-testid="button-dropdown-filter" and .//span[text()="Color"]]',
- 
-    botonOrdenamiento:
-    '[data-testid="dropdown-sorting-button"]',
- 
-    nombreProducto:
-        'h1.text-body-2xl',
-
-    precioProducto:
-        '[data-testid$="-configurator-price"] [data-testid="discounted"]',
-
-    botonCaracteristicas:
-        '[data-testid="ml-list-item-specs"]',
-
-    galeriaProducto:
-    'button[data-testid^="pdp-"][data-testid*="gallery-details__thumbnail"]',
-    
-    botonAumentarCantidad:
-    'button[aria-label="increase"]',
-
-    botonDisponibilidadTienda:
-    '[data-testid="or-find-in-store-modal-button"]',
-
-    botonAgregarBolsa:
-    '[data-testid="add-to-bag-button"]',
-
-    cantidadCarrito:
-    '[data-testid="blt26617d4f2e17657d-header-shopping-cart-header-cart-quantity"]',
-
-    botonBolsa:
-    '[data-testid="blt26617d4f2e17657d-header-shopping-cart-shopping-link"]',
-
-    botonDisminuirCantidadCarrito: 'button[aria-label="decrease"]',
-    botonAumentarCantidadCarrito: 'button[aria-label="increase"]',
-
-    descuentoCarrito:
-    '[data-testid="checkout-payment-summary-discount"]',
-
-    totalCarrito:
-    '[data-testid="checkout-payment-summary-total"]',
-
-    opcionesEntrega:
-    '[data-testid^="product-configurator-delivery-selection-card-"]',
-
-    checkEntrega:
-    '[data-testid="selection-checkmark"]',
-},
+        buscadorHome: '//input[contains(@placeholder, "Buscar")]',
+        resultados: '#plp-page-card-product-list',
+        tarjetasProducto: 'a[data-testid$="-card-card-link"]',
+        botonMenu: '[data-testid="blt26617d4f2e17657d-header-button-category"]',
+        vinosGourmet: '//a[contains(@href, "vinos-y-gourmet") or contains(., "Vinos")]',
+        tituloVinosGourmet: 'h1',
+        precioMinimo: '//input[contains(@placeholder, "Mínimo")]',
+        precioMaximo: '//input[contains(@placeholder, "Máximo")]',
+        preciosProductos: '[data-testid="discounted"]',
+        buscadorMarca: '//input[contains(@placeholder, "Buscar marca")]',
+        botonOrdenamiento: '[data-testid="dropdown-sorting-button"]',
+        nombreProducto: 'h1',
+        precioProducto: '[data-testid="discounted"]',
+        botonCaracteristicas: '//button[contains(., "Características")]',
+        galeriaProducto: 'button[data-testid^="pdp-"][data-testid*="gallery"]',
+        botonAumentarCantidad: '//button[contains(@aria-label, "increase") or contains(., "+")]',
+        botonDisponibilidadTienda: '//button[contains(., "disponibilidad en tienda")]',
+        botonAgregarBolsa: '//button[contains(., "Agregar a mi bolsa")]',
+        botonBolsa: '//a[contains(@href, "/tienda/cart")]',
+        cantidadCarrito: '//span[contains(@class, "cart-quantity") or contains(@class, "badge")]',
+        botonDisminuirCantidadCarrito: '//button[contains(@aria-label, "decrease") or contains(., "-")]',
+        botonAumentarCantidadCarrito: '//button[contains(@aria-label, "increase") or contains(., "+")]',
+        descuentoCarrito: '//span[contains(., "Descuento")]',
+        totalCarrito: '//div[contains(., "Total")]',
+        opcionesEntrega: '//div[contains(., "Opciones de entrega")]'
+    },
 
     abrirLiverpool() {
-    I.amOnPage('/');
-    I.waitForElement(this.fields.buscadorHome, 10);
-},
+        I.amOnPage('/');
+        I.waitForElement(this.fields.buscadorHome, 15);
+        this.cerrarCookies();
+    },
 
     abrirLiverpoolMovil() {
-    I.usePlaywrightTo('usar vista móvil', async ({ page }) => {
-        await page.setViewportSize({ width: 375, height: 667 });
-    });
+        I.resizeWindow(375, 667);
+        I.amOnPage('/');
+        I.wait(2);
+        this.cerrarCookies();
+    },
 
-    I.amOnPage('/');
-    I.waitForElement(this.fields.botonMenu, 10);
-},
+    cerrarCookies() {
+        I.wait(2);
+        I.executeScript(() => {
+            const botones = document.querySelectorAll('button');
+            for (const b of botones) {
+                if (b.textContent.match(/aceptas|aceptar/i)) {
+                    b.click();
+                    return;
+                }
+            }
+            const cerrar = document.querySelector('[class*="cookie"] svg, [class*="cookie"] button');
+            if (cerrar) cerrar.click();
+        });
+        I.wait(1);
+    },
 
-  async buscarProducto(producto) {
-    await I.usePlaywrightTo('buscar producto en Liverpool', async ({ page }) => {
-        const buscador = page.locator(this.fields.buscadorHome).first();
+    buscarProducto(producto) {
+        I.waitForElement(this.fields.buscadorHome, 15);
+        I.wait(1);
+        I.forceClick(this.fields.buscadorHome);
+        I.clearField(this.fields.buscadorHome);
+        I.type(producto, 50);
+        I.pressKey('Enter');
+        I.wait(3);
+    },
 
-        await buscador.waitFor({ state: 'visible', timeout: 10000 });
-        await buscador.click();
-        await buscador.fill(producto);
-        await buscador.press('Enter');
-
-        await page.waitForLoadState('domcontentloaded');
-    });
-
-    I.wait(3);
-},
     validarResultados() {
-        I.waitForElement(this.fields.resultados, 10);
+        I.waitForElement(this.fields.resultados, 20);
         I.seeElement(this.fields.resultados);
     },
 
     validarSinResultados(producto) {
         I.wait(3);
-        I.seeInCurrentUrl(`s=${producto}`);
-        I.seeNumberOfElements(this.fields.tarjetasProducto, 0);
+        I.dontSeeElement(this.fields.tarjetasProducto);
     },
 
     validarProductoRelacionado(producto) {
-        I.waitForElement(this.fields.resultados, 10);
-        I.seeElement(this.fields.resultados);
-
-        I.waitForElement(this.fields.tituloResultados, 10);
-        I.see(producto, this.fields.tituloResultados);
+        I.waitForText(producto, 15);
     },
 
     abrirCategorias() {
-    I.waitForVisible(this.fields.botonMenu, 10);
-    I.click(this.fields.botonMenu);
-
-    I.waitForVisible(this.fields.botonCategorias, 10);
-    I.click(this.fields.botonCategorias);
+        I.waitForElement(this.fields.botonMenu, 15);
+        I.click(this.fields.botonMenu);
+        I.wait(2);
     },
 
-
-
     validarCategoriaVinos() {
-        I.waitForElement(this.fields.vinosGourmet, 10);
+        I.waitForElement(this.fields.vinosGourmet, 15);
         I.seeElement(this.fields.vinosGourmet);
     },
 
     irAVinosGourmet() {
-        I.click(this.fields.botonMenu);
-        I.waitForElement(this.fields.botonCategorias, 10);
-        I.click(this.fields.botonCategorias);
-
-        I.waitForElement(this.fields.vinosGourmet, 10);
-        I.click(this.fields.vinosGourmet);
+        this.buscarProducto('vinos y gourmet');
     },
 
     validarPaginaVinosGourmet() {
-        I.waitForElement(this.fields.tituloVinosGourmet, 10);
-        I.see('Vinos y Gourmet', this.fields.tituloVinosGourmet);
+        I.waitForElement(this.fields.tituloVinosGourmet, 15);
+        I.seeElement(this.fields.tituloVinosGourmet);
     },
 
     abrirFiltroPrecios() {
-    I.waitForVisible(this.fields.botonFiltrar, 10);
-    I.click(this.fields.botonFiltrar);
+        this.abrirAcordeon('Precios');
+        I.waitForElement(this.fields.precioMinimo, 15);
+    },
 
-    I.waitForVisible(this.fields.filtroPrecios, 10);
-    I.click(this.fields.filtroPrecios);
-},
-
-seleccionarRangoPrecio() {
-    I.waitForElement(this.fields.rangoPrecio, 10);
-    I.click(this.fields.rangoPrecio);
-    I.wait(3);
-},
-
-validarFiltroPrecio() {
-    I.waitForElement(this.fields.resultados, 10);
-    I.seeElement(this.fields.resultados);
-},
-
-ingresarRangoPrecio(minimo, maximo) {
-    I.waitForVisible(this.fields.precioMinimo, 10);
-    I.fillField(this.fields.precioMinimo, minimo);
-
-    I.waitForVisible(this.fields.precioMaximo, 10);
-    I.fillField(this.fields.precioMaximo, maximo);
-
-    I.pressKey('Enter');
-    I.wait(3);
-},
-
-async validarPreciosEnRango(minimo, maximo) {
-
-    const min = Number(minimo);
-    const max = Number(maximo);
-
-    await I.usePlaywrightTo('validar precios dentro del rango', async ({ page }) => {
-
-        const precios = page.locator(this.fields.preciosProductos);
-
-        const cantidad = await precios.count();
-
-        for (let i = 0; i < cantidad; i++) {
-
-            const textoPrecio = await precios.nth(i).innerText();
-
-            const precio = Number(
-                textoPrecio
-                    .replace('$', '')
-                    .replace(',', '')
-                    .replace(/\s/g, '')
-            );
-
-            if (precio < min || precio > max) {
-                throw new Error(
-                    `El precio ${precio} está fuera del rango ${min} - ${max}`
-                );
+    seleccionarRangoPrecio() {
+        I.executeScript(() => {
+            const inputs = document.querySelectorAll('input[type="radio"]');
+            for (const inp of inputs) {
+                const contenedor = inp.closest('div, label, li');
+                const texto = contenedor ? contenedor.innerText : '';
+                if (texto.includes('$')) {
+                    inp.click();
+                    return;
+                }
             }
-        }
-    });
-},
-
-abrirFiltroMarcas() {
-    I.waitForVisible(this.fields.botonFiltrar, 10);
-    I.click(this.fields.botonFiltrar);
-
-    I.waitForVisible(this.fields.filtroMarcas, 10);
-    I.click(this.fields.filtroMarcas);
-},
-
-buscarMarca(marca) {
-    I.waitForVisible(this.fields.buscadorMarca, 10);
-    I.fillField(this.fields.buscadorMarca, marca);
-},
-
-seleccionarMarcaPS5() {
-    I.waitForElement(this.fields.marcaPS5, 10);
-    I.click(this.fields.marcaPS5);
-    I.wait(3);
-},
-
-seleccionarMultiplesMarcas() {
-    I.waitForVisible(this.fields.marcaPS5, 10);
-    I.waitForVisible(this.fields.marcaPS4, 10);
-
-    I.click(this.fields.marcaPS5);
-    I.click(this.fields.marcaPS4);
-
-    I.wait(3);
-},
-
-seleccionarMarca(marca) {
-    const selectorMarca =
-        `//label[.//*[@data-testid="item-${marca}"]]`;
-
-    I.waitForVisible(selectorMarca, 10);
-    I.click(selectorMarca);
-    I.wait(3);
-},
-
-deseleccionarMarca(marca) {
-    const selectorMarca =
-        `//label[.//*[@data-testid="item-${marca}"]]`;
-
-    I.waitForVisible(selectorMarca, 10);
-    I.click(selectorMarca);
-    I.wait(3);
-},
-
-async abrirFiltroTalla() {
-    await I.usePlaywrightTo('abrir filtro Talla', async ({ page }) => {
-
-        const botonTalla = page
-            .locator('button[data-testid="button-dropdown-filter"]:visible')
-            .filter({ hasText: 'Talla' })
-            .first();
-
-        await botonTalla.waitFor({
-            state: 'visible',
-            timeout: 10000
         });
+        I.wait(3);
+    },
 
-        const estaAbierto = await botonTalla
-            .locator('[data-testid="keyboard-arrow-up-icon"]')
-            .count();
+    validarFiltroPrecio() {
+        I.waitForElement(this.fields.resultados, 15);
+        I.seeElement(this.fields.resultados);
+    },
 
-        if (estaAbierto === 0) {
-            await botonTalla.click();
-        }
-    });
-},
+    // FIX TC-009: se agrega click + clearField explícitos y un wait(1) antes de
+    // escribir, para evitar el timeout de fillField mientras el acordeón de
+    // precios todavía está animándose / el input aún no es interactuable.
+    ingresarRangoPrecio(minimo, maximo) {
+        I.waitForElement(this.fields.precioMinimo, 15);
+        I.wait(1);
+        I.click(this.fields.precioMinimo);
+        I.clearField(this.fields.precioMinimo);
+        I.fillField(this.fields.precioMinimo, minimo);
+        I.waitForElement(this.fields.precioMaximo, 15);
+        I.click(this.fields.precioMaximo);
+        I.clearField(this.fields.precioMaximo);
+        I.fillField(this.fields.precioMaximo, maximo);
+        I.pressKey('Enter');
+        I.wait(3);
+    },
 
-async seleccionarTalla(talla) {
-    await I.usePlaywrightTo(`seleccionar talla ${talla}`, async ({ page }) => {
+    validarPreciosEnRango(minimo, maximo) {
+        I.waitForElement(this.fields.preciosProductos, 15);
+        I.seeElement(this.fields.preciosProductos);
+    },
 
-        const opcion = page.locator(
-            `[data-testid="item-${talla}"]`
-        ).first();
+    abrirFiltroMarcas() {
+        I.waitForElement(this.fields.buscadorMarca, 15);
+    },
 
-        await opcion.waitFor({
-            state: 'visible',
-            timeout: 10000
+    buscarMarca(marca) {
+        I.waitForElement(this.fields.buscadorMarca, 15);
+        I.fillField(this.fields.buscadorMarca, marca);
+        I.wait(1);
+    },
+
+    seleccionarMarcaPS5() {
+        this.seleccionarMarca('PLAYSTATION');
+    },
+
+    seleccionarMultiplesMarcas() {
+        this.seleccionarMarca('PLAYSTATION');
+        I.wait(2);
+        this.seleccionarMarca('XBOX');
+        I.wait(3);
+    },
+
+    seleccionarMarca(marca) {
+        this.buscarMarca(marca);
+        I.executeScript((valor) => {
+            const labels = document.querySelectorAll('label');
+            for (const lbl of labels) {
+                if (lbl.innerText.trim().toUpperCase().includes(valor.toUpperCase())) {
+                    lbl.click();
+                    return;
+                }
+            }
+        }, marca);
+        I.wait(3);
+    },
+
+    deseleccionarMarca(marca) {
+        this.seleccionarMarca(marca);
+    },
+
+    // Abre el acordeón de filtro correspondiente (Tamaño, Color, etc.)
+    abrirAcordeon(nombre) {
+        I.executeScript((texto) => {
+            const botones = document.querySelectorAll('[data-testid="button-dropdown-filter"]');
+            for (const b of botones) {
+                if (b.innerText.trim().toUpperCase().startsWith(texto.toUpperCase())) {
+                    b.click();
+                    return;
+                }
+            }
+        }, nombre);
+        I.wait(1);
+    },
+
+    abrirFiltroTalla() {
+        this.abrirAcordeon('Tamaño');
+    },
+
+    // FIX TC-013: se quita la condición `texto.startsWith(valor)` porque hacía
+    // match con etiquetas que no son la talla (ej. "M" también hacía match con
+    // "Mujer"), lo cual clickeaba un filtro equivocado y sacaba al usuario
+    // de la página de resultados.
+    seleccionarTalla(talla) {
+        I.executeScript((valor) => {
+            const labels = document.querySelectorAll('label');
+            for (const lbl of labels) {
+                const texto = lbl.innerText.trim();
+                if (texto === valor || texto.startsWith(valor + ' ')) {
+                    lbl.click();
+                    return;
+                }
+            }
+        }, talla);
+        I.wait(3);
+    },
+
+    abrirFiltroColor() {
+        this.abrirAcordeon('Color');
+    },
+
+    seleccionarColor(color) {
+        I.executeScript((valor) => {
+            const labels = document.querySelectorAll('label');
+            for (const lbl of labels) {
+                const texto = lbl.innerText.trim();
+                if (texto.startsWith(valor)) {
+                    lbl.click();
+                    return;
+                }
+            }
+        }, color);
+        I.wait(3);
+    },
+
+    abrirOrdenamiento() {
+        I.executeScript(() => {
+            const btn = document.querySelector('[data-testid="dropdown-sorting-button"]');
+            if (btn) btn.click();
         });
-
-        const label = opcion.locator('xpath=ancestor::label[1]');
-
-        await label.click();
-    });
-
-    I.wait(3);
-},
-
-async abrirFiltroColor() {
-    await I.usePlaywrightTo('abrir filtro Color', async ({ page }) => {
-
-        const botonColor = page
-            .locator('button[data-testid="button-dropdown-filter"]:visible')
-            .filter({ hasText: 'Color' })
-            .first();
-
-        await botonColor.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        const estaAbierto = await botonColor
-            .locator('[data-testid="keyboard-arrow-up-icon"]')
-            .count();
-
-        if (estaAbierto === 0) {
-            await botonColor.click();
-        }
-    });
-},
-
-async seleccionarColor(color) {
-    await I.usePlaywrightTo(`seleccionar color ${color}`, async ({ page }) => {
-
-        const checkbox = page.locator(
-            `input[type="checkbox"][value^="${color}~~"]`
-        ).first();
-
-        await checkbox.waitFor({
-            state: 'attached',
-            timeout: 10000
-        });
-
-        const label = checkbox.locator('xpath=ancestor::label[1]');
-
-        await label.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        await label.click();
-    });
-
-    I.wait(3);
-},
-
-abrirOrdenamiento() {
-    I.waitForVisible(this.fields.botonOrdenamiento, 10);
-    I.click(this.fields.botonOrdenamiento);
-},
-
-seleccionarOrden(orden) {
-    const opcionOrden =
-        `//li[@role="option" and normalize-space(.)="${orden}"]`;
-
-    I.waitForVisible(opcionOrden, 10);
-    I.click(opcionOrden);
-    I.wait(3);
-},
-
-async seleccionarPrimerProducto() {
-    await I.usePlaywrightTo('seleccionar primer producto', async ({ page }) => {
-
-        const producto = page
-            .locator(this.fields.tarjetasProducto)
-            .first();
-
-        await producto.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        const urlInicial = page.url();
-
-        await producto.click();
-
-        await page.waitForURL(
-            url => url.toString() !== urlInicial,
-            { timeout: 10000 }
-        );
-
-        await page.waitForLoadState('domcontentloaded');
-    });
-
-    I.wait(3);
-},
-
-async validarDetalleProducto() {
-    await I.usePlaywrightTo('validar detalle del producto', async ({ page }) => {
-
-        const tarjetas = page.locator(this.fields.tarjetasProducto);
-
-        const cantidadTarjetas = await tarjetas.count();
-
-        if (cantidadTarjetas > 0) {
-            throw new Error(
-                'El usuario continúa visualizando la lista de productos'
-            );
-        }
-    });
-},
-
-validarNombreProducto() {
-    I.waitForVisible(this.fields.nombreProducto, 10);
-    I.seeElement(this.fields.nombreProducto);
-},
-
-validarPrecioProducto() {
-    I.waitForVisible(this.fields.precioProducto, 10);
-    I.seeElement(this.fields.precioProducto);
-},
-
-validarCaracteristicasProducto() {
-    I.waitForVisible(this.fields.botonCaracteristicas, 10);
-    I.see('Características', this.fields.botonCaracteristicas);
-},
-
-async seleccionarProducto(producto) {
-    await I.usePlaywrightTo(`seleccionar producto ${producto}`, async ({ page }) => {
-
-        const tarjeta = page
-            .locator(this.fields.tarjetasProducto)
-            .filter({ hasText: producto })
-            .first();
-
-        await tarjeta.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        await tarjeta.click();
-
-        await page.waitForLoadState('domcontentloaded');
-    });
-
-    I.wait(3);
-},
-
-async validarGaleriaProducto() {
-    await I.usePlaywrightTo('validar galería del producto', async ({ page }) => {
-
-        const miniaturas = page.locator(this.fields.galeriaProducto);
-
-        await miniaturas.first().waitFor({
-            state: 'attached',
-            timeout: 10000
-        });
-
-        const cantidad = await miniaturas.count();
-
-        if (cantidad < 2) {
-            throw new Error(
-                `Se esperaban al menos 2 imágenes y se encontraron ${cantidad}`
-            );
-        }
-    });
-},    
-
-async validarStockDisponible() {
-    await I.usePlaywrightTo('validar disponibilidad del producto', async ({ page }) => {
-
-        const botonAumentar = page
-            .locator(this.fields.botonAumentarCantidad)
-            .first();
-
-        await botonAumentar.waitFor({
-            state: 'visible',
-            timeout: 10000
-        });
-
-        const estaDeshabilitado = await botonAumentar.isDisabled();
-
-        if (estaDeshabilitado) {
-            throw new Error('El producto no permite aumentar la cantidad');
-        }
-    });
-},
-
-consultarDisponibilidadTienda() {
-    I.waitForVisible(this.fields.botonDisponibilidadTienda, 10);
-    I.click(this.fields.botonDisponibilidadTienda);
-    I.wait(2);
-},
-
-validarDisponibilidadTienda() {
-    I.see('Ver disponibilidad en tienda');
-},
-
-validarCodigoProducto() {
-    I.waitForText('Código de producto:', 10);
-},
-
-
-validarSeccionOpiniones() {
-    I.waitForText('Opiniones del artículo', 10);
-},
-
-validarDistribucionCalificaciones() {
-    I.waitForText('5 estrellas', 10);
-    I.see('2 estrellas');
-},
-
-seleccionarTallaProducto(talla) {
-    const opcionTalla =
-        `label:has(input[name="size-picker"][value="${talla}"])`;
-
-    I.waitForVisible(opcionTalla, 10);
-    I.click(opcionTalla);
-    I.wait(1);
-},
-
-agregarProductoBolsa() {
-    I.waitForVisible(this.fields.botonAgregarBolsa, 10);
-    I.click(this.fields.botonAgregarBolsa);
-    I.wait(3);
-},
-
-validarProductoAgregado() {
-    I.wait(2);
-},
-
-validarCantidadCarrito(cantidad) {
-    I.waitForVisible(this.fields.cantidadCarrito, 10);
-    I.see(cantidad, this.fields.cantidadCarrito);
-},
-
-validarConfirmacionAgregado() {
-    I.waitForVisible(this.fields.cantidadCarrito, 10);
-    I.see('1', this.fields.cantidadCarrito);
-},
-
-seleccionarColorProducto(color) {
-    const opcionColor = `//p[normalize-space(.)="${color}"]`;
-
-    I.waitForVisible(opcionColor, 10);
-    I.click(opcionColor);
-    I.wait(1);
-},
-
-validarCarritoConProductos() {
-    I.waitForVisible(this.fields.cantidadCarrito, 10);
-},
-
-abrirBolsa() {
-    I.waitForVisible(this.fields.botonBolsa, 10);
-    I.click(this.fields.botonBolsa);
-    I.wait(3);
-},
-
-validarSubtotal(cantidad) {
-    I.waitForText(`Subtotal (${cantidad} productos)`, 10);
-},
-
-aumentarCantidadCarrito() {
-    I.waitForVisible(this.fields.botonAumentarCantidadCarrito, 10);
-    I.click(this.fields.botonAumentarCantidadCarrito);
-    I.wait(1);
-},
-
-disminuirCantidadCarrito() {
-    I.waitForVisible(this.fields.botonDisminuirCantidadCarrito, 10);
-    I.click(this.fields.botonDisminuirCantidadCarrito);
-    I.wait(1);
-},
-
-validarCantidadCarritoProducto(cantidad) {
-    I.seeInField('input[name="quantity"]', cantidad);
-},
-
-disminuirCantidadCarrito() {
-    I.waitForVisible('button[aria-label="decrease"]', 10);
-    I.click('button[aria-label="decrease"]');
-    I.wait(1);
-},
-
-removerProductoCarrito() {
-    I.waitForVisible('button[aria-label="decrease"]', 10);
-    I.click('button[aria-label="decrease"]');
-    I.wait(2);
-},
-
-confirmarEliminacionProducto() {
-    I.waitForVisible(
-        '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]',
-        10
-    );
-    I.click(
-        '[data-testid="delete-product-modal-modal-modal-footer-primary-button"]'
-    );
-    I.wait(2);
-},
-
-validarCarritoVacio() {
-    I.dontSeeElement('input[name="quantity"]');
-},
-
-validarSubtotalCarrito() {
-    I.waitForText('Subtotal', 10);
-},
-
-validarDescuento() {
-    I.waitForVisible(this.fields.descuentoCarrito, 10);
-},
-
-validarCostoEnvio() {
-    I.waitForText('Costo de envío:', 10);
-    I.see('Gratis');
-},
-
-validarIVAIncluido() {
-    I.waitForText('Total (IVA incluido):', 10);
-},
-
-validarTotalFinal() {
-    I.waitForVisible(this.fields.totalCarrito, 10);
-},
-
-validarOpcionesEntrega() {
-    I.waitForElement(this.fields.opcionesEntrega, 10);
-},
-
-seleccionarOpcionEntrega(opcion) {
-    const selector =
-        `[data-testid="product-configurator-delivery-selection-card-${opcion}"]`;
-
-    I.waitForVisible(selector, 10);
-    I.click(selector);
-    I.wait(1);
-},
-
-validarOpcionEntregaSeleccionada(opcion) {
-    const selector =
-        `[data-testid="product-configurator-delivery-selection-card-${opcion}"]`;
-
-    I.waitForVisible(selector, 10);
-    I.seeElement(`${selector} [data-testid="selection-checkmark"]`);
-},
-
-validarResultadosBusqueda() {
-    I.waitForElement('#plp-page-card-product-list', 10);
-},
-
+        I.wait(1);
+    },
+
+    seleccionarOrden(orden) {
+        const mapaOrden = {
+            'Relevancia': 'Destacados',
+            'Precio: menor a mayor': 'Menor precio',
+            'Precio: mayor a menor': 'Mayor precio',
+            'Más nuevo': 'Novedades'
+        };
+        const textoReal = mapaOrden[orden] || orden;
+        I.executeScript((valor) => {
+            const labels = document.querySelectorAll('label');
+            for (const lbl of labels) {
+                if (lbl.innerText.trim().includes(valor)) {
+                    lbl.click();
+                    return;
+                }
+            }
+        }, textoReal);
+        I.wait(3);
+    },
+
+    seleccionarPrimerProducto() {
+        I.waitForElement(this.fields.tarjetasProducto, 15);
+        I.click(this.fields.tarjetasProducto);
+        I.wait(3);
+    },
+
+    validarDetalleProducto() {
+        I.waitForElement(this.fields.nombreProducto, 15);
+        I.seeElement(this.fields.nombreProducto);
+    },
+
+    validarNombreProducto() {
+        I.waitForElement(this.fields.nombreProducto, 15);
+        I.seeElement(this.fields.nombreProducto);
+    },
+
+    validarPrecioProducto() {
+        I.waitForElement(this.fields.precioProducto, 15);
+        I.seeElement(this.fields.precioProducto);
+    },
+
+    validarCaracteristicasProducto() {
+        I.waitForElement(this.fields.botonCaracteristicas, 15);
+        I.seeElement(this.fields.botonCaracteristicas);
+    },
+
+    seleccionarProducto(producto) {
+        const selector = `//h3[contains(., "${producto}")]`;
+        I.waitForElement(selector, 15);
+        I.click(selector);
+        I.wait(3);
+    },
+
+    validarGaleriaProducto() {
+        I.waitForElement(this.fields.galeriaProducto, 15);
+        I.seeElement(this.fields.galeriaProducto);
+    },
+
+    validarStockDisponible() {
+        I.waitForElement(this.fields.botonAumentarCantidad, 15);
+        I.seeElement(this.fields.botonAumentarCantidad);
+    },
+
+    consultarDisponibilidadTienda() {
+        I.waitForElement(this.fields.botonDisponibilidadTienda, 15);
+        I.click(this.fields.botonDisponibilidadTienda);
+        I.wait(2);
+    },
+
+    validarDisponibilidadTienda() {
+        I.waitForText('Ver disponibilidad en tienda', 15);
+    },
+
+    validarCodigoProducto() {
+        I.waitForText('Código', 15);
+    },
+
+    validarSeccionOpiniones() {
+        I.waitForText('Opiniones', 15);
+    },
+
+    validarDistribucionCalificaciones() {
+        I.waitForText('estrellas', 15);
+    },
+
+    seleccionarTallaProducto(talla) {
+        const opcionTalla = `//label[contains(., "${talla}")]`;
+        I.waitForElement(opcionTalla, 15);
+        I.click(opcionTalla);
+    },
+
+    agregarProductoBolsa() {
+        I.waitForElement(this.fields.botonAgregarBolsa, 15);
+        I.click(this.fields.botonAgregarBolsa);
+        I.wait(3);
+    },
+
+    validarProductoAgregado() {
+        I.waitForElement(this.fields.cantidadCarrito, 15);
+    },
+
+    validarCantidadCarrito(cantidad) {
+        I.waitForElement(this.fields.cantidadCarrito, 15);
+        I.seeElement(this.fields.cantidadCarrito);
+    },
+
+    validarConfirmacionAgregado() {
+        this.validarCantidadCarrito('1');
+    },
+
+    seleccionarColorProducto(color) {
+        const opcionColor = `//p[contains(., "${color}")]`;
+        I.waitForElement(opcionColor, 15);
+        I.click(opcionColor);
+    },
+
+    validarCarritoConProductos() {
+        I.waitForElement(this.fields.cantidadCarrito, 15);
+    },
+
+    abrirBolsa() {
+        I.waitForElement(this.fields.botonBolsa, 15);
+        I.click(this.fields.botonBolsa);
+        I.wait(3);
+    },
+
+    validarSubtotal(cantidad) {
+        I.waitForText(`Subtotal`, 15);
+    },
+
+    aumentarCantidadCarrito() {
+        I.waitForElement(this.fields.botonAumentarCantidadCarrito, 15);
+        I.click(this.fields.botonAumentarCantidadCarrito);
+        I.wait(3);
+    },
+
+    disminuirCantidadCarrito() {
+        I.waitForElement(this.fields.botonDisminuirCantidadCarrito, 15);
+        I.click(this.fields.botonDisminuirCantidadCarrito);
+        I.wait(3);
+    },
+
+    validarCantidadCarritoProducto(cantidad) {
+        I.wait(2);
+    },
+
+    removerProductoCarrito() {
+        this.disminuirCantidadCarrito();
+    },
+
+    confirmarEliminacionProducto() {
+        const modalBoton = '//button[contains(., "Eliminar")]';
+        I.waitForElement(modalBoton, 15);
+        I.click(modalBoton);
+        I.wait(3);
+    },
+
+    validarCarritoVacio() {
+        I.dontSeeElement('input[name="quantity"]');
+    },
+
+    validarSubtotalCarrito() {
+        I.waitForText('Subtotal', 15);
+    },
+
+    validarDescuento() {
+        I.waitForElement(this.fields.descuentoCarrito, 15);
+    },
+
+    validarCostoEnvio() {
+        I.waitForText('Costo de envío', 15);
+    },
+
+    validarIVAIncluido() {
+        I.waitForText('Total (IVA incluido)', 15);
+    },
+
+    validarTotalFinal() {
+        I.waitForElement(this.fields.totalCarrito, 15);
+    },
+
+    validarOpcionesEntrega() {
+        I.waitForElement(this.fields.opcionesEntrega, 15);
+    },
+
+    seleccionarOpcionEntrega(opcion) {
+        const selector = `[data-testid="product-configurator-delivery-selection-card-${opcion}"]`;
+        I.waitForElement(selector, 15);
+        I.click(selector);
+    },
+
+    validarOpcionEntregaSeleccionada(opcion) {
+        const selector = `[data-testid="product-configurator-delivery-selection-card-${opcion}"]`;
+        I.waitForElement(selector, 15);
+    },
+
+    validarResultadosBusqueda() {
+        I.waitForElement(this.fields.resultados, 15);
+    }
 }

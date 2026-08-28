@@ -1,14 +1,27 @@
+const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+
+setHeadlessWhen(process.env.HEADLESS === 'true');
+setCommonPlugins();
+
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './steps/*_steps.js', /** Indica donde se encuentran las pruebas a ejecutar */
-  output: './output', /** indica donde se guardaran los resultados de las pruebas*/
+  tests: './steps/*.js',
+  output: './output',
 
-  helpers: { /** Ayudantes para realizar las acciones, configura el motor de automatizacion */
+  helpers: {
     Playwright: {
-      browser: "chromium", /** Navegador que se va a utilizar */
-      url: 'https://www.telcel.com', /** Url de los casos a probar */
-      show: !process.env.CI, /** En local muestra el navegador; en CI (GitHub Actions) corre headless */
-      locale: "es-MX" /** Configuracion regional */
+      url: 'https://www.liverpool.com.mx/tienda/home',
+      show: !process.env.CI,
+      browser: 'chromium',
+      restart: 'context',
+      windowSize: '1440x900',
+      locale: 'es-MX',
+      video: true,
+      keepVideoForPassedTests: true,
+      trace: true,
+      keepTraceForPassedTests: true,
+      waitForNavigation: 'domcontentloaded',
+      getPageTimeout: 60000
     },
     REST: {
       endpoint: 'https://rickandmortyapi.com',
@@ -19,29 +32,31 @@ exports.config = {
   },
 
   include: {
-    I: "./steps_file.js", /** Crear al actor, quien va a realizar las acciones */
-    karelPage: "./pages/karelPage.js", /** Creacion de la page Object */
-    rickMortyMockPage: "./pages/rickMortyMockPage.js", /** Page Object para demo de Network Mocking */
+    I: './steps_file.js',
+    liverpoolPage: './pages/liverpoolPage.js',
+    karelPage: './pages/karelPage.js',
+    rickMortyMockPage: './pages/rickMortyMockPage.js'
   },
 
   gherkin: {
-    features: './features/*.feature', /** Ubicacion de los archivos features */
+    features: './features/*.feature',
     steps: [
-      "./steps/karelSteps.js", /** Ubicaciones de los archivos que traducen Given,When y Then a javascript */
-      "./steps/rickMortyMockSteps.js", /** Steps para demo de Network Mocking */
-      "./steps/rickMortyApiSteps.js", /** Steps para demo de pruebas de API */
-    ],
+      './steps/liverpoolSteps.js',
+      './steps/karelSteps.js',
+      './steps/rickMortyMockSteps.js',
+      './steps/rickMortyApiSteps.js'
+    ]
   },
 
-  plugins: { /**Son las funcionalidades extra */
-    allure: { /** Generador de reportes */
+  plugins: {
+    allure: {
       enabled: true,
       require: 'allure-codeceptjs',
-      outputDir: './output/allure-results'
+      resultsDir: './output/allure-results'
     }
   },
 
-  bootstrap: null, /**Archivo opcional que se ejecuta antes de realizar las pruebas */
-  mocha: {}, /** Motor de ejecucion */
-  name: "Actividad youtube y Telcel" /**Nombre del proyecto */
+  bootstrap: null,
+  mocha: {},
+  name: 'RepoSemillerosCodeceptjs'
 };
