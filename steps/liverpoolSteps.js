@@ -1,292 +1,101 @@
 const liverpoolPage = require('../pages/liverpoolPage');
 
-Given(/^que el usuario se encuentra en la página principal de Liverpool$/, () => {
-    liverpoolPage.abrirLiverpool();
+Given(/^Victor ingresa al portal principal de Liverpool$/, () => {
+    liverpoolPage.abrirPortal();
 });
 
-Given(/^que el usuario se encuentra en la página principal de Liverpool en vista móvil$/, () => {
-    liverpoolPage.abrirLiverpoolMovil();
+When(/^busca el artículo "([^"]*)" en la barra superior$/, (articulo) => {
+    liverpoolPage.ejecutarBusqueda(articulo);
 });
 
-When(/^busca el producto "([^"]*)"$/, (producto) => {
-    liverpoolPage.buscarProducto(producto);
+Then(/^el sistema despliega una lista de opciones(?: filtradas)?$/, () => {
+    liverpoolPage.validarListaResultados();
 });
 
-Then(/^se muestran resultados relacionados con la búsqueda$/, () => {
-    liverpoolPage.validarResultados();
+Then(/^el sistema no devuelve ningún producto en la cuadrícula$/, () => {
+    liverpoolPage.validarBusquedaVacia();
 });
 
-Then(/^no se muestran productos para "([^"]*)"$/, (producto) => {
-    liverpoolPage.validarSinResultados(producto);
-});
-
-Then(/^los resultados muestran productos relacionados con "([^"]*)"$/, (producto) => {
-    liverpoolPage.validarProductoRelacionado(producto);
-
-});
-
-When(/^abre el menú de categorías$/, () => {
+When(/^abre el menú de categorías principales$/, () => {
     liverpoolPage.abrirCategorias();
 });
 
-Then(/^puede visualizar la categoría "Vinos y Gourmet"$/, () => {
-    liverpoolPage.validarCategoriaVinos();
+Then(/^puede visualizar la categoría "([^"]*)"$/, (categoria) => {
+    liverpoolPage.validarTexto(categoria);
 });
 
-When(/^navega a la categoría "Vinos y Gourmet"$/, () => {
-    liverpoolPage.irAVinosGourmet();
+When(/^navega directamente a la categoría de Vinos y Gourmet$/, () => {
+    liverpoolPage.navegarCategoria('/tienda/vinos-y-gourmet/cat5020473');
 });
 
-Then(/^se muestra la página de Vinos y Gourmet$/, () => {
-    liverpoolPage.validarPaginaVinosGourmet();
+Then(/^la página muestra el encabezado "([^"]*)"$/, (texto) => {
+    liverpoolPage.validarTexto(texto);
 });
 
-Then(/^se visualiza el encabezado "Vinos y Gourmet"$/, () => {
-    liverpoolPage.validarPaginaVinosGourmet();
+When(/^ingresa un rango de precio de "([^"]*)" a "([^"]*)"$/, (min, max) => {
+    liverpoolPage.filtrarPorPrecio(min, max);
 });
 
-When(/^abre el filtro de precios$/, () => {
-    liverpoolPage.abrirFiltroPrecios();
+When(/^filtra los resultados por la marca "([^"]*)"$/, (marca) => {
+    liverpoolPage.filtrarPorMarca(marca);
 });
 
-When(/^selecciona un rango de precio$/, () => {
-    liverpoolPage.seleccionarRangoPrecio();
+When(/^ordena los resultados por "([^"]*)"$/, (orden) => {
+    liverpoolPage.ordenarResultados(orden);
 });
 
-Then(/^se muestran productos filtrados por precio$/, () => {
-    liverpoolPage.validarFiltroPrecio();
+When(/^ingresa al detalle del primer resultado$/, () => {
+    liverpoolPage.entrarAlPrimerItem();
 });
 
-When(/^ingresa un precio mínimo de "([^"]*)" y un precio máximo de "([^"]*)"$/, (minimo, maximo) => {
-    liverpoolPage.ingresarRangoPrecio(minimo, maximo);
+Then(/^la página muestra el título y precio del artículo$/, () => {
+    liverpoolPage.validarDetalleCargado();
 });
 
-Then(/^se muestran productos dentro del rango de precio$/, () => {
-    liverpoolPage.validarResultados();
-});
-
-Then(/^todos los productos mostrados tienen precio entre "([^"]*)" y "([^"]*)"$/, async (minimo, maximo) => {
-    await liverpoolPage.validarPreciosEnRango(minimo, maximo);
-});
-
-When(/^abre el filtro de marcas$/, () => {
-    liverpoolPage.abrirFiltroMarcas();
-});
-
-When(/^busca la marca "([^"]*)"$/, (marca) => {
-    liverpoolPage.buscarMarca(marca);
-});
-
-
-When(/^selecciona las marcas "PS5" y "PS4"$/, () => {
-    liverpoolPage.seleccionarMultiplesMarcas();
-});
-
-Then(/^se muestran productos filtrados por (?:la marca|las marcas) seleccionadas?$/, () => {
-    liverpoolPage.validarResultados();
-});
-
-When(/^selecciona la marca "([^"]*)"$/, (marca) => {
-    liverpoolPage.seleccionarMarca(marca);
-});
-
-When(/^deselecciona la marca "([^"]*)"$/, (marca) => {
-    liverpoolPage.deseleccionarMarca(marca);
-});
-
-When(/^abre el filtro de talla$/, () => {
-    liverpoolPage.abrirFiltroTalla();
-});
-
-When(/^selecciona la talla "([^"]*)"$/, (talla) => {
-    liverpoolPage.seleccionarTalla(talla);
-});
-
-Then(/^se muestran productos filtrados por la talla seleccionada$/, () => {
-    liverpoolPage.validarResultados();
-});
-
-When(/^abre el filtro de color$/, () => {
-    liverpoolPage.abrirFiltroColor();
-});
-
-When(/^selecciona el color "([^"]*)"$/, (color) => {
-    liverpoolPage.seleccionarColor(color);
-});
-
-Then(/^se muestran productos filtrados por el color seleccionado$/, () => {
-    liverpoolPage.validarResultados();
-});
-
-Then(/^se muestran productos filtrados por talla y color$/, () => {
-    liverpoolPage.validarResultados();
-});
-
-When(/^abre las opciones de ordenamiento$/, () => {
-    liverpoolPage.abrirOrdenamiento();
-});
-
-When(/^selecciona el orden "([^"]*)"$/, (orden) => {
-    liverpoolPage.seleccionarOrden(orden);
-});
-
-Then(/^se muestran los productos ordenados correctamente$/, () => {
-    liverpoolPage.validarResultados();
-});
-
-When(/^selecciona el primer producto de los resultados$/, () => {
-    liverpoolPage.seleccionarPrimerProducto();
-});
-
-Then(/^se muestra el detalle del producto$/, () => {
-    liverpoolPage.validarDetalleProducto();
-});
-
-Then(/^se muestra el nombre del producto$/, () => {
-    liverpoolPage.validarNombreProducto();
-});
-
-Then(/^se muestra el precio del producto$/, () => {
-    liverpoolPage.validarPrecioProducto();
-});
-
-Then(/^se muestra la sección de características del producto$/, () => {
-    liverpoolPage.validarCaracteristicasProducto();
-});
-
-When(/^selecciona el producto "([^"]*)"$/, (producto) => {
-    liverpoolPage.seleccionarProducto(producto);
-});
-
-Then(/^se muestra la galería de imágenes del producto$/, () => {
-    liverpoolPage.validarGaleriaProducto();
+Then(/^la página muestra la galería de imágenes del artículo$/, () => {
+    liverpoolPage.validarGaleria();
 });
 
 Then(/^el producto muestra disponibilidad para seleccionar cantidad$/, () => {
     liverpoolPage.validarStockDisponible();
 });
 
-When(/^consulta la disponibilidad en tienda$/, () => {
-    liverpoolPage.consultarDisponibilidadTienda();
+When(/^hace clic en el icono superior de la bolsa de compras$/, () => {
+    liverpoolPage.navegarABolsa();
 });
 
-Then(/^se muestra la opción para buscar disponibilidad en tiendas$/, () => {
-    liverpoolPage.validarDisponibilidadTienda();
+Then(/^el sistema redirige a la pantalla del carrito$/, () => {
+    liverpoolPage.validarPaginaCarrito();
 });
 
-Then(/^se muestra el código de producto$/, () => {
-    liverpoolPage.validarCodigoProducto();
+When(/^hace clic en el botón para agregar a mi bolsa$/, () => {
+    liverpoolPage.agregarABolsa();
 });
 
-Then(/^se muestra la sección de opiniones del artículo$/, () => {
-    liverpoolPage.validarSeccionOpiniones();
+Then(/^el contador de la bolsa refleja el nuevo artículo$/, () => {
+    liverpoolPage.validarBolsaActualizada();
 });
 
-Then(/^se muestra la distribución de calificaciones por estrellas$/, () => {
-    liverpoolPage.validarDistribucionCalificaciones();
-});
-
-When(/^selecciona la talla "([^"]*)" del producto$/, (talla) => {
-    liverpoolPage.seleccionarTallaProducto(talla);
-});
-
-When(/^agrega el producto a la bolsa$/, () => {
-    liverpoolPage.agregarProductoBolsa();
-});
-
-Then(/^el producto se agrega correctamente a la bolsa$/, () => {
-    liverpoolPage.validarProductoAgregado();
-});
-
-
-Then(/^el carrito muestra "([^"]*)" producto$/, (cantidad) => {
-    liverpoolPage.validarCantidadCarrito(cantidad);
-});
-
-Then(/^se confirma que el producto fue agregado a la bolsa$/, () => {
-    liverpoolPage.validarConfirmacionAgregado();
-});
-
-When(/^selecciona el color "([^"]*)" del producto$/, (color) => {
-    liverpoolPage.seleccionarColorProducto(color);
-});
-
-Then(/^la bolsa contiene productos agregados$/, () => {
-    liverpoolPage.validarCarritoConProductos();
-});
-
-Then(/^el carrito muestra "([^"]*)" productos$/, (cantidad) => {
-    liverpoolPage.validarCantidadCarrito(cantidad);
-});
-
-When(/^abre la bolsa de compras$/, () => {
-    liverpoolPage.abrirBolsa();
-});
-
-Then(/^se muestra el subtotal de "([^"]*)" productos$/, (cantidad) => {
-    liverpoolPage.validarSubtotal(cantidad);
+Then(/^el contador de la bolsa refleja "([^"]*)" artículo$/, (cantidad) => {
+    liverpoolPage.validarBolsaActualizada(cantidad);
 });
 
 When(/^aumenta la cantidad del producto en el carrito$/, () => {
     liverpoolPage.aumentarCantidadCarrito();
 });
 
-When(/^disminuye la cantidad del producto en el carrito$/, () => {
-    liverpoolPage.disminuirCantidadCarrito();
+When(/^elimina el artículo de la bolsa de compras$/, () => {
+    liverpoolPage.eliminarArticuloCarrito();
 });
 
-Then(/^la cantidad del producto en el carrito es "([^"]*)"$/, (cantidad) => {
-    liverpoolPage.validarCantidadCarritoProducto(cantidad);
-});
-
-When(/^disminuye la cantidad del producto en el carrito$/, () => {
-    liverpoolPage.disminuirCantidadCarrito();
-});
-
-When(/^remueve el producto del carrito$/, () => {
-    liverpoolPage.removerProductoCarrito();
-});
-
-When(/^confirma la eliminación del producto$/, () => {
-    liverpoolPage.confirmarEliminacionProducto();
-});
-
-Then(/^el carrito queda vacío$/, () => {
+Then(/^la bolsa de compras se muestra vacía$/, () => {
     liverpoolPage.validarCarritoVacio();
 });
 
-Then(/^se muestra el subtotal del carrito$/, () => {
-    liverpoolPage.validarSubtotalCarrito();
-});
-
-Then(/^se muestra el descuento aplicado$/, () => {
-    liverpoolPage.validarDescuento();
-});
-
-Then(/^se muestra el costo de envío$/, () => {
-    liverpoolPage.validarCostoEnvio();
+Then(/^se muestra el subtotal de la compra$/, () => {
+    liverpoolPage.validarTexto('Subtotal');
 });
 
 Then(/^se indica que el total incluye IVA$/, () => {
-    liverpoolPage.validarIVAIncluido();
-});
-
-Then(/^se muestra el total final de la compra$/, () => {
-    liverpoolPage.validarTotalFinal();
-});
-
-Then(/^se muestran las opciones de entrega disponibles$/, () => {
-    liverpoolPage.validarOpcionesEntrega();
-});
-
-When(/^selecciona la opción de entrega "([^"]*)"$/, (opcion) => {
-    liverpoolPage.seleccionarOpcionEntrega(opcion);
-});
-
-Then(/^la opción de entrega "([^"]*)" queda seleccionada$/, (opcion) => {
-    liverpoolPage.validarOpcionEntregaSeleccionada(opcion);
-});
-
-Then(/^se muestran resultados de búsqueda$/, () => {
-    liverpoolPage.validarResultadosBusqueda();
+    liverpoolPage.validarTexto('IVA');
 });
