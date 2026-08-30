@@ -1,292 +1,613 @@
-const liverpoolPage = require('../pages/liverpoolPage');
+const { busquedaProductosPage,
+        carritoPage,
+        checkoutPage,
+        codigoPromocionalPage,
+        detalleProductoPage,
+        filtrosProductosPage,
+        flujoE2EPage,
+        loginCuentaPage,
+        navegacionCategoriasPage,
+        ordenamientoResultadosPage,
+        smokePage,
+        wishlistPage
+} = inject();
 
-Given(/^que el usuario se encuentra en la página principal de Liverpool$/, () => {
-    liverpoolPage.abrirLiverpool();
+Given(/^el usuario se encuentra en la página principal de Liverpool$/, () => {
+    smokePage.abrirHome();
 });
 
-Given(/^que el usuario se encuentra en la página principal de Liverpool en vista móvil$/, () => {
-    liverpoolPage.abrirLiverpoolMovil();
+Then(/^los elementos principales del home son visibles$/, () => {
+    smokePage.verificarElementosHome();
 });
 
-When(/^busca el producto "([^"]*)"$/, (producto) => {
-    liverpoolPage.buscarProducto(producto);
+//TC001--------------------------------------------------------------------------------------------------------------------
+
+When(/^el usuario da clic en la barra de busqueda$/, () => {
+    busquedaProductosPage.clicBarraBusqueda();
+});
+
+When(/^el usuario ingresa "(.*)"$/, (producto) => {
+    busquedaProductosPage.ingresarProducto(producto);
+});
+
+When(/^da enter$/, () => {
+    busquedaProductosPage.presionarEnter();
+});
+
+Then(/^la pagina carga y muestra los resultados relacionados a "(.*)"$/, (producto) => {
+    busquedaProductosPage.verificarResultados(producto);
+});
+
+//TC002--------------------------------------------------------------------------------------------------------------------
+
+Then(/^la pagina muestra el mensaje de producto no encontrado para "(.*)"$/, (producto) => {
+    busquedaProductosPage.verificarMensajeSinResultados(producto);
+});
+
+//TC003--------------------------------------------------------------------------------------------------------------------
+
+Then(/^la URL contiene "(.*)"$/, (producto) => {
+    busquedaProductosPage.verificarURL(producto);
+});
+
+//TC004--------------------------------------------------------------------------------------------------------------------
+
+When(/^el usuario da clic en categorias$/, () => {
+    navegacionCategoriasPage.clicCategorias();
+});
+
+Then(/^el submenu de categorias carga al lado izquierdo de la pagina$/, () => {
+    navegacionCategoriasPage.verificarSubmenuCategorias();
+});
+
+//TC005--------------------------------------------------------------------------------------------------------------------
+
+When('da clic en "Videojuegos"', () => {
+    navegacionCategoriasPage.clicVideojuegos();
+});
+
+Then('la pagina carga y muestra la categoria "Videojuegos"', () => {
+    navegacionCategoriasPage.verificarCategoriaVideojuegos();
+});
+
+//TC006--------------------------------------------------------------------------------------------------------------------
+
+Then('podemos ver las opciones de productos de "Videojuegos"', () => {
+    navegacionCategoriasPage.verificarOpcionesVideojuegos();
+});
+
+//TC007--------------------------------------------------------------------------------------------------------------------
+
+Given('el usuario busca el producto {string}', async (producto) => {
+    await busquedaProductosPage.clicBarraBusqueda();
+    await busquedaProductosPage.ingresarProducto(producto);
+    await busquedaProductosPage.presionarEnter();
+    await ordenamientoResultadosPage.guardarURLResultados();
+});
+
+When('da clic en el boton "Ordenar por:"', async () => {
+    await ordenamientoResultadosPage.clicOrdenarPor();
+});
+
+When('selecciona "Menor precio"', async () => {
+    await ordenamientoResultadosPage.seleccionarMenorPrecio();
+});
+
+Then('los resultados se ordenan de precio menor a mayor', async () => {
+    await ordenamientoResultadosPage.verificarOrdenPrecioMenorMayor();
+});
+
+
+//TC008--------------------------------------------------------------------------------------------------------------------
+
+When('se desplaza en el submenu del lado izquierdo buscando el apartado precios', async () => {
+    await filtrosProductosPage.desplazarseASeccionPrecios();
+});
+
+When('coloca el rango $500 - $2000', async () => {
+    await filtrosProductosPage.ingresarRangoPrecio('500', '2000');
+});
+
+When('da clic en el botón para aplicar el rango', async () => {
+    await filtrosProductosPage.aplicarRangoPrecio();
+});
+
+Then('los resultados se actualizan aplicando el rango de $500 a $2000', async () => {
+    await filtrosProductosPage.verificarRangoPrecio('500', '2000');
+});
+
+//TC009--------------------------------------------------------------------------------------------------------------------
+
+Then('la pagina muestra unicamente productos entre $500 y $2000', async () => {
+    await filtrosProductosPage.verificarProductosEnRango('500', '2000');
+});
+
+//TC010--------------------------------------------------------------------------------------------------------------------
+
+When('se desplaza en el submenu del lado izquierdo buscando el apartado marcas', async () => {
+    await filtrosProductosPage.desplazarseASeccionMarcas();
+});
+
+When('selecciona la marca {string}', async (marca) => {
+    await filtrosProductosPage.seleccionarMarca(marca);
+});
+
+Then('la pagina carga los productos de la marca {string}', async (marca) => {
+    await filtrosProductosPage.verificarMarcaSeleccionada(marca);
+});
+
+//TC011--------------------------------------------------------------------------------------------------------------------
+
+When('da clic en "Ver más" de marcas', async () => {
+    await filtrosProductosPage.mostrarMasMarcas();
+});
+
+Then('la pagina carga los productos de las marcas {string} y {string}', async (marca1, marca2) => {
+    await filtrosProductosPage.verificarMarcasSeleccionadas([marca1, marca2]);
+    smokePage.volverAlInicio();
+});
+
+//TC012--------------------------------------------------------------------------------------------------------------------
+
+When('da clic en la marca {string} para eliminarla', (marca) => {
+    filtrosProductosPage.eliminarMarca(marca);
+});
+
+Then('la pagina carga los productos de la marca restante {string}', (marca) => {
+    filtrosProductosPage.verificarMarcasSeleccionadas([marca]);
+    smokePage.volverAlInicio();
+});
+
+//TC013--------------------------------------------------------------------------------------------------------------------
+
+When('se desplaza en el submenu del lado izquierdo buscando el apartado "Tamaño"', async () => {
+    await filtrosProductosPage.desplazarseASeccionTalla();
+});
+
+When('selecciona la talla {string}', async (talla) => {
+    await filtrosProductosPage.seleccionarTalla(talla);
+});
+
+Then('la pagina carga los productos de la talla {string}', async (talla) => {
+    await filtrosProductosPage.verificarTallaSeleccionada(talla);
+    smokePage.volverAlInicio();
+});
+
+//TC014--------------------------------------------------------------------------------------------------------------------
+
+When('se desplaza en el submenu del lado izquierdo buscando el apartado "Color"', async () => {
+    await filtrosProductosPage.desplazarseASeccionColor();
+});
+
+When('selecciona el color {string}', async (color) => {
+    await filtrosProductosPage.seleccionarColor(color);
+});
+
+Then('la pagina carga los productos del color {string}', async (color) => {
+    await filtrosProductosPage.verificarColorSeleccionado(color);
+    smokePage.volverAlInicio();
+});
+
+//TC015--------------------------------------------------------------------------------------------------------------------
+
+Then('la pagina carga los productos del color {string} y talla {string}', async (color, talla) => {
+    await filtrosProductosPage.verificarTallaYColorSeleccionados(talla, color);
+    smokePage.volverAlInicio();
+});
+
+//TC016--------------------------------------------------------------------------------------------------------------------
+
+When('selecciona "Destacados"', () => {
+    ordenamientoResultadosPage.seleccionarDestacados();
+});
+
+Then('los resultados se ordenan por relevancia', () => {
+    smokePage.volverAlInicio();
+    ordenamientoResultadosPage.verificarOrdenDestacados();
+});
+
+//TC017--------------------------------------------------------------------------------------------------------------------
+
+//Ya existe la funcion de este caso en TC-007
+
+//TC018--------------------------------------------------------------------------------------------------------------------
+
+When('selecciona "Mayor precio"', () => {
+    ordenamientoResultadosPage.seleccionarMayorPrecio();
+});
+
+Then('los resultados se ordenan de precio mayor a menor', () => {
+    ordenamientoResultadosPage.verificarOrdenPrecioMayor();
+});
+
+//TC019--------------------------------------------------------------------------------------------------------------------
+
+When('selecciona "Novedades"', () => {
+    ordenamientoResultadosPage.seleccionarNovedades();
+});
+
+Then('los resultados se ordenan de más nuevo a más antiguo', () => {
+    ordenamientoResultadosPage.verificarOrdenNovedades();
+});
+
+//TC020--------------------------------------------------------------------------------------------------------------------
+
+When('da clic sobre el producto {string}', async (producto) => {
+    await detalleProductoPage.clicProducto(producto);
+});
+
+Then('la página de detalle del producto se muestra', async () => {
+    await detalleProductoPage.verificarDetalleProducto();
+});
+
+//TC021--------------------------------------------------------------------------------------------------------------------
+
+Then('la pagina carga y se muestran los detalles del producto', async () => {
+    await detalleProductoPage.verificarDetallesProducto();
+});
+
+//TC022--------------------------------------------------------------------------------------------------------------------
+
+Then('desplazamos la pagina para ver la galeria de imagenes', async () => {
+    await detalleProductoPage.desplazarseAGaleria();
+    await detalleProductoPage.verificarGaleria();
+});
+
+// TC023--------------------------------------------------------------------------------------------------------------------
+
+When('se desplaza hasta el boton de comprar ahora', () => {
+    detalleProductoPage.desplazarseAComprarAhora();
 });
 
-Then(/^se muestran resultados relacionados con la búsqueda$/, () => {
-    liverpoolPage.validarResultados();
+Then('si el boton esta habilitado hay stock disponible', async () => {
+    await detalleProductoPage.verificarStockDisponible();
 });
 
-Then(/^no se muestran productos para "([^"]*)"$/, (producto) => {
-    liverpoolPage.validarSinResultados(producto);
+// TC-024--------------------------------------------------------------------------------------------------------------------
+
+When('da clic en el boton de ver disponibilidad en tienda', async () => {
+    await detalleProductoPage.clicDisponibilidadTienda();
 });
 
-Then(/^los resultados muestran productos relacionados con "([^"]*)"$/, (producto) => {
-    liverpoolPage.validarProductoRelacionado(producto);
+When('el submenu de la derecha se habilita', async () => {
+    await detalleProductoPage.verificarSubmenuDisponibilidad();
+});
 
+When('se desplaza hasta el estado {string}', async (estado) => {
+    await detalleProductoPage.desplazarseHastaEstado(estado);
 });
 
-When(/^abre el menú de categorías$/, () => {
-    liverpoolPage.abrirCategorias();
+When(/^da clic en el estado "(.*)"$/, async (estado) => {
+    await detalleProductoPage.seleccionarEstado(estado);
 });
 
-Then(/^puede visualizar la categoría "Vinos y Gourmet"$/, () => {
-    liverpoolPage.validarCategoriaVinos();
+Then('se muestran tiendas con stock disponible en {string}', async () => {
+    await detalleProductoPage.verificarTiendasConStock();
 });
 
-When(/^navega a la categoría "Vinos y Gourmet"$/, () => {
-    liverpoolPage.irAVinosGourmet();
+// TC-025--------------------------------------------------------------------------------------------------------------------
+
+Then('el usuario verifica que el producto muestre su código', async () => {
+    await detalleProductoPage.verificarCodigoProducto();
 });
+
+// TC-026--------------------------------------------------------------------------------------------------------------------
 
-Then(/^se muestra la página de Vinos y Gourmet$/, () => {
-    liverpoolPage.validarPaginaVinosGourmet();
+When(/^desliza la pagina$/, () => {
+    detalleProductoPage.desplazarseAOpiniones();
 });
 
-Then(/^se visualiza el encabezado "Vinos y Gourmet"$/, () => {
-    liverpoolPage.validarPaginaVinosGourmet();
+Then(/^aparecen las opiniones del producto$/, () => {
+    detalleProductoPage.verificarOpinionesProducto();
 });
 
-When(/^abre el filtro de precios$/, () => {
-    liverpoolPage.abrirFiltroPrecios();
+// TC-027--------------------------------------------------------------------------------------------------------------------
+
+When(/^el boton de "ordenar por" aparece en el lado derecho y el usuario da clic$/, () => {
+    detalleProductoPage.clicOrdenarOpiniones();
 });
 
-When(/^selecciona un rango de precio$/, () => {
-    liverpoolPage.seleccionarRangoPrecio();
+When(/^el submenu de filtros aparece$/, () => {
+    detalleProductoPage.verificarSubmenuFiltros();
 });
 
-Then(/^se muestran productos filtrados por precio$/, () => {
-    liverpoolPage.validarFiltroPrecio();
+When(/^el usuario da clic en: mayor calificación$/, () => {
+    detalleProductoPage.seleccionarMayorCalificacion();
 });
 
-When(/^ingresa un precio mínimo de "([^"]*)" y un precio máximo de "([^"]*)"$/, (minimo, maximo) => {
-    liverpoolPage.ingresarRangoPrecio(minimo, maximo);
+Then(/^las opiniones se actualizan de mayor a menor calificación$/, () => {
+    detalleProductoPage.verificarOrdenEstrellas();
 });
 
-Then(/^se muestran productos dentro del rango de precio$/, () => {
-    liverpoolPage.validarResultados();
+// TC-029--------------------------------------------------------------------------------------------------------------------
+
+Then(/^el boton de "agregar a mi bolsa" aparece$/, () => {
+    carritoPage.desplazarseAgregarBolsa();
 });
 
-Then(/^todos los productos mostrados tienen precio entre "([^"]*)" y "([^"]*)"$/, async (minimo, maximo) => {
-    await liverpoolPage.validarPreciosEnRango(minimo, maximo);
+When(/^el usuario da clic en agregar a mi bolsa$/, () => {
+    carritoPage.clicAgregarBolsa();
 });
 
-When(/^abre el filtro de marcas$/, () => {
-    liverpoolPage.abrirFiltroMarcas();
+Then(/^el articulo se agrega al carrito$/, () => {
+    carritoPage.verificarArticuloAgregado();
 });
+
+// TC-030--------------------------------------------------------------------------------------------------------------------
 
-When(/^busca la marca "([^"]*)"$/, (marca) => {
-    liverpoolPage.buscarMarca(marca);
+Then(/^el badge del carrito muestra la cantidad de productos agregados$/, async () => {
+    await carritoPage.verificarBadgeCarrito();
 });
 
+//TC031--------------------------------------------------------------------------------------------------------------------
 
-When(/^selecciona las marcas "PS5" y "PS4"$/, () => {
-    liverpoolPage.seleccionarMultiplesMarcas();
+//Ya existe la funcion de este caso en TC-029
+
+//TC032--------------------------------------------------------------------------------------------------------------------
+
+Then(/^el boton de bolsa indica el numero de productos agregados$/, async () => {
+    await carritoPage.verificarCantidadProductosTresOMas();
 });
 
-Then(/^se muestran productos filtrados por (?:la marca|las marcas) seleccionadas?$/, () => {
-    liverpoolPage.validarResultados();
+When(/^limpia la barra de búsqueda$/, () => {
+    carritoPage.limpiarBarraBusqueda();
 });
 
-When(/^selecciona la marca "([^"]*)"$/, (marca) => {
-    liverpoolPage.seleccionarMarca(marca);
+//TC033--------------------------------------------------------------------------------------------------------------------
+
+Given(/^el usuario ya agrego productos a su bolsa$/, async () => {
+    await flujoE2EPage.agregarTresProductosAlCarrito();
 });
 
-When(/^deselecciona la marca "([^"]*)"$/, (marca) => {
-    liverpoolPage.deseleccionarMarca(marca);
+When(/^da clic en el boton del carrito al lado derecho de la pagina$/, async () => {
+    await carritoPage.clicBolsa();
 });
 
-When(/^abre el filtro de talla$/, () => {
-    liverpoolPage.abrirFiltroTalla();
+When(/^la pagina del carrito carga$/, async () => {
+    await carritoPage.verificarPaginaCarrito();
 });
 
-When(/^selecciona la talla "([^"]*)"$/, (talla) => {
-    liverpoolPage.seleccionarTalla(talla);
+Then(/^el carrito muestra la cantidad total de productos agregados$/, async () => {
+    await carritoPage.verificarCantidadTotalProductos();
 });
 
-Then(/^se muestran productos filtrados por la talla seleccionada$/, () => {
-    liverpoolPage.validarResultados();
+// TC-034--------------------------------------------------------------------------------------------------------------------
+
+When(/^el subtotal inicial aparece$/, async () => {
+    await carritoPage.guardarSubtotalInicial();
 });
 
-When(/^abre el filtro de color$/, () => {
-    liverpoolPage.abrirFiltroColor();
+When(/^el usuario da clic en el boton de eliminar de un producto$/, async () => {
+    await carritoPage.eliminarProducto();
 });
 
-When(/^selecciona el color "([^"]*)"$/, (color) => {
-    liverpoolPage.seleccionarColor(color);
+When(/^el mensaje de confirmacion aparece$/, async () => {
+    await carritoPage.verificarModalConfirmacion();
 });
 
-Then(/^se muestran productos filtrados por el color seleccionado$/, () => {
-    liverpoolPage.validarResultados();
+When(/^el usuario da clic en aceptar eliminacion$/, async () => {
+    await carritoPage.aceptarEliminacion();
 });
 
-Then(/^se muestran productos filtrados por talla y color$/, () => {
-    liverpoolPage.validarResultados();
+When(/^el articulo eliminado muestra el mensaje de confirmacion$/, async () => {
+    await carritoPage.verificarProductoEliminado();
 });
 
-When(/^abre las opciones de ordenamiento$/, () => {
-    liverpoolPage.abrirOrdenamiento();
+Then(/^el subtotal se actualiza correctamente$/, async () => {
+    await carritoPage.verificarSubtotalActualizado();
 });
+
+// TC-035--------------------------------------------------------------------------------------------------------------------
 
-When(/^selecciona el orden "([^"]*)"$/, (orden) => {
-    liverpoolPage.seleccionarOrden(orden);
+When(/^da clic en el boton de: Mover a wishlist junto a la imagen del producto$/, async () => {
+    await wishlistPage.clicMoverWishlist();
 });
 
-Then(/^se muestran los productos ordenados correctamente$/, () => {
-    liverpoolPage.validarResultados();
+When(/^el submenu del lado derecho aparece$/, async () => {
+    await wishlistPage.verificarSubmenuWishlist();
 });
 
-When(/^selecciona el primer producto de los resultados$/, () => {
-    liverpoolPage.seleccionarPrimerProducto();
+When(/^selecciona una lista$/, async () => {
+    await wishlistPage.seleccionarWishlist();
 });
 
-Then(/^se muestra el detalle del producto$/, () => {
-    liverpoolPage.validarDetalleProducto();
+Then(/^aparece un mensaje de confirmacion que indica que el producto fue movido a la lista de deseos$/, async () => {
+    await wishlistPage.verificarMensajeWishlistMovida();
 });
 
-Then(/^se muestra el nombre del producto$/, () => {
-    liverpoolPage.validarNombreProducto();
+// TC-036--------------------------------------------------------------------------------------------------------------------
+
+When(/^el usuario da clic en el icono de perfil$/, async () => {
+    await wishlistPage.clicPerfil();
 });
 
-Then(/^se muestra el precio del producto$/, () => {
-    liverpoolPage.validarPrecioProducto();
+When(/^da clic en wishlist$/, async () => {
+    await wishlistPage.clicWishlist();
 });
 
-Then(/^se muestra la sección de características del producto$/, () => {
-    liverpoolPage.validarCaracteristicasProducto();
+When(/^se muestra una de sus listas$/, async () => {
+    await wishlistPage.verificarListaWishlist();
 });
 
-When(/^selecciona el producto "([^"]*)"$/, (producto) => {
-    liverpoolPage.seleccionarProducto(producto);
+When(/^da clic sobre ella$/, async () => {
+    await wishlistPage.abrirListaWishlist();
 });
 
-Then(/^se muestra la galería de imágenes del producto$/, () => {
-    liverpoolPage.validarGaleriaProducto();
+Then(/^la pagina se actualiza y se muestran los productos de la lista de deseos$/, async () => {
+    await wishlistPage.verificarProductoWishlist();
 });
+
+// TC-037--------------------------------------------------------------------------------------------------------------------
 
-Then(/^el producto muestra disponibilidad para seleccionar cantidad$/, () => {
-    liverpoolPage.validarStockDisponible();
+When(/^el usuario da clic en los 3 puntitos que aparecen en el lado derecho del producto$/, async () => {
+    await wishlistPage.clicTresPuntosProducto();
 });
 
-When(/^consulta la disponibilidad en tienda$/, () => {
-    liverpoolPage.consultarDisponibilidadTienda();
+When(/^da clic en eliminar$/, async () => {
+    await wishlistPage.clicEliminar();
 });
 
-Then(/^se muestra la opción para buscar disponibilidad en tiendas$/, () => {
-    liverpoolPage.validarDisponibilidadTienda();
+When(/^aparece el mensaje de confirmacion para eliminar el producto$/, async () => {
+    await wishlistPage.verificarModalEliminacion();
 });
 
-Then(/^se muestra el código de producto$/, () => {
-    liverpoolPage.validarCodigoProducto();
+When(/^el usuario da clic en el boton eliminar$/, async () => {
+    await wishlistPage.confirmarEliminacion();
 });
 
-Then(/^se muestra la sección de opiniones del artículo$/, () => {
-    liverpoolPage.validarSeccionOpiniones();
+Then(/^la pagina se actualiza y desaparece el producto$/, async () => {
+    await wishlistPage.verificarMensajeEliminacion();
 });
 
-Then(/^se muestra la distribución de calificaciones por estrellas$/, () => {
-    liverpoolPage.validarDistribucionCalificaciones();
+// TC-041--------------------------------------------------------------------------------------------------------------------
+
+When(/^el usuario aumenta en uno la cantidad de un producto$/, async () => {
+    await carritoPage.guardarCantidadInicial();
+    await carritoPage.aumentarCantidadProducto();
 });
 
-When(/^selecciona la talla "([^"]*)" del producto$/, (talla) => {
-    liverpoolPage.seleccionarTallaProducto(talla);
+Then(/^la cantidad del producto aumenta en uno$/, async () => {
+    await carritoPage.verificarCantidadAumentada();
 });
 
-When(/^agrega el producto a la bolsa$/, () => {
-    liverpoolPage.agregarProductoBolsa();
+// TC-042-------------------------------------------------------------------------------------------------------------------
+
+When(/^el usuario disminuye en uno la cantidad del producto$/, async () => {
+    await carritoPage.guardarCantidadDespuesDeAumentar();
+    await carritoPage.disminuirCantidadProducto();
 });
 
-Then(/^el producto se agrega correctamente a la bolsa$/, () => {
-    liverpoolPage.validarProductoAgregado();
+Then(/^la cantidad del producto disminuye$/, async () => {
+    await carritoPage.verificarCantidadDisminuida();
 });
 
+// TC-044-------------------------------------------------------------------------------------------------------------------
 
-Then(/^el carrito muestra "([^"]*)" producto$/, (cantidad) => {
-    liverpoolPage.validarCantidadCarrito(cantidad);
+When(/^el usuario obtiene los precios de los productos$/, async () => {
+    await carritoPage.obtenerPreciosProductos();
 });
 
-Then(/^se confirma que el producto fue agregado a la bolsa$/, () => {
-    liverpoolPage.validarConfirmacionAgregado();
+Then(/^la suma de los precios coincide con el subtotal mostrado$/, async () => {
+    await carritoPage.verificarSubtotalCorrecto();
 });
+
+// TC-046-------------------------------------------------------------------------------------------------------------------
 
-When(/^selecciona el color "([^"]*)" del producto$/, (color) => {
-    liverpoolPage.seleccionarColorProducto(color);
+When(/^el subtotal y descuento aparecen$/, async () => {
+    await carritoPage.obtenerSubtotalYDescuento();
 });
 
-Then(/^la bolsa contiene productos agregados$/, () => {
-    liverpoolPage.validarCarritoConProductos();
+Then(/^el total final se calcula correctamente$/, async () => {
+    await carritoPage.verificarTotalFinal();
 });
 
-Then(/^el carrito muestra "([^"]*)" productos$/, (cantidad) => {
-    liverpoolPage.validarCantidadCarrito(cantidad);
+// TC-047-------------------------------------------------------------------------------------------------------------------
+
+
+// TC-048-------------------------------------------------------------------------------------------------------------------
+
+
+// TC-049-------------------------------------------------------------------------------------------------------------------
+
+// TC-053-------------------------------------------------------------------------------------------------------------------
+
+// TC-054-------------------------------------------------------------------------------------------------------------------
+
+// TC-055-------------------------------------------------------------------------------------------------------------------
+
+// TC-056-------------------------------------------------------------------------------------------------------------------
+
+// TC-059-------------------------------------------------------------------------------------------------------------------
+
+// TC-060-------------------------------------------------------------------------------------------------------------------
+
+// TC-061-------------------------------------------------------------------------------------------------------------------
+
+// TC-062-------------------------------------------------------------------------------------------------------------------
+
+// TC-063-------------------------------------------------------------------------------------------------------------------
+
+// TC-064-------------------------------------------------------------------------------------------------------------------
+
+// TC-065-------------------------------------------------------------------------------------------------------------------
+
+When(/^el usuario visualiza la pagina de login$/, async () => {
+    await loginCuentaPage.abrirLogin();
 });
 
-When(/^abre la bolsa de compras$/, () => {
-    liverpoolPage.abrirBolsa();
+When(/^da clic en "Crear cuenta"$/, async () => {
+    await loginCuentaPage.abrirRegistro();
 });
 
-Then(/^se muestra el subtotal de "([^"]*)" productos$/, (cantidad) => {
-    liverpoolPage.validarSubtotal(cantidad);
+Then(/^la pagina de registro se muestra$/, async () => {
+    await loginCuentaPage.verificarPaginaRegistro();
 });
 
-When(/^aumenta la cantidad del producto en el carrito$/, () => {
-    liverpoolPage.aumentarCantidadCarrito();
+Then(/^el usuario ve el formulario "Crear cuenta"$/, async () => {
+    await loginCuentaPage.verificarPaginaRegistro();
 });
 
-When(/^disminuye la cantidad del producto en el carrito$/, () => {
-    liverpoolPage.disminuirCantidadCarrito();
+When(/^el usuario ingresa su correo de registro$/, async () => {
+    await loginCuentaPage.ingresarCorreoRegistro();
 });
 
-Then(/^la cantidad del producto en el carrito es "([^"]*)"$/, (cantidad) => {
-    liverpoolPage.validarCantidadCarritoProducto(cantidad);
+When(/^ingresa su contraseña de registro$/, async () => {
+    await loginCuentaPage.ingresarContrasenaRegistro();
 });
 
-When(/^disminuye la cantidad del producto en el carrito$/, () => {
-    liverpoolPage.disminuirCantidadCarrito();
+When(/^da clic en el boton "Crear cuenta"$/, async () => {
+    await loginCuentaPage.clicCrearCuenta();
 });
 
-When(/^remueve el producto del carrito$/, () => {
-    liverpoolPage.removerProductoCarrito();
+Then(/^el formulario de datos personales se muestra$/, async () => {
+    await loginCuentaPage.verificarFormularioDatosPersonales();
 });
 
-When(/^confirma la eliminación del producto$/, () => {
-    liverpoolPage.confirmarEliminacionProducto();
+// TC-066-------------------------------------------------------------------------------------------------------------------
+
+Given(/^el usuario se encuentra en la pagina de login$/, () => {
+    loginCuentaPage.abrirLogin();
 });
 
-Then(/^el carrito queda vacío$/, () => {
-    liverpoolPage.validarCarritoVacio();
+When(/^ingresa su correo electronico$/, async () => {
+    await loginCuentaPage.ingresarCorreo();
 });
 
-Then(/^se muestra el subtotal del carrito$/, () => {
-    liverpoolPage.validarSubtotalCarrito();
+When(/^ingresa su contraseña$/, async () => {
+    await loginCuentaPage.ingresarContrasena();
 });
 
-Then(/^se muestra el descuento aplicado$/, () => {
-    liverpoolPage.validarDescuento();
+When(/^da clic en el boton de iniciar sesion$/, async () => {
+    await loginCuentaPage.clicIniciarSesion();
 });
 
-Then(/^se muestra el costo de envío$/, () => {
-    liverpoolPage.validarCostoEnvio();
+When(/^el usuario ingresa manualmente el codigo de verificacion$/, async () => {
+    await loginCuentaPage.ingresarCodigoVerificacion();
 });
 
-Then(/^se indica que el total incluye IVA$/, () => {
-    liverpoolPage.validarIVAIncluido();
+When(/^da clic en el boton continuar$/, async () => {
+    await loginCuentaPage.clicContinuarVerificacion();
 });
 
-Then(/^se muestra el total final de la compra$/, () => {
-    liverpoolPage.validarTotalFinal();
+// TC-067-------------------------------------------------------------------------------------------------------------------
+
+Given(/^el usuario ha iniciado sesion$/, async () => {
+    await loginCuentaPage.iniciarSesion();
 });
 
-Then(/^se muestran las opciones de entrega disponibles$/, () => {
-    liverpoolPage.validarOpcionesEntrega();
+When(/^da clic en el icono o nombre de su perfil$/, async () => {
+    await loginCuentaPage.clicPerfil();
 });
 
-When(/^selecciona la opción de entrega "([^"]*)"$/, (opcion) => {
-    liverpoolPage.seleccionarOpcionEntrega(opcion);
+When(/^la pagina de mi cuenta se muestra$/, async () => {
+    await loginCuentaPage.verificarPaginaMiCuenta();
 });
 
-Then(/^la opción de entrega "([^"]*)" queda seleccionada$/, (opcion) => {
-    liverpoolPage.validarOpcionEntregaSeleccionada(opcion);
+When(/^da clic en direcciones$/, async () => {
+    await loginCuentaPage.clicDirecciones();
 });
 
-Then(/^se muestran resultados de búsqueda$/, () => {
-    liverpoolPage.validarResultadosBusqueda();
+Then(/^las direcciones guardadas aparecen$/, async () => {
+    await loginCuentaPage.verificarDirecciones();
 });
+

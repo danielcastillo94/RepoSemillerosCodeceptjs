@@ -6,8 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:workers": "codeceptjs run-workers 2",
     "features": "codeceptjs run --features --plugins allure",
-    "allure:generate": "allure generate output --clean",
-    "allure:report": "allure open"
+    "allure:generate": "allure generate ./output/allure-results -o ./allure-report --clean",
+    "allure:open": "allure open ./allure-report"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +19,10 @@
     "allure-commandline": "^2.34.1",
     "chai": "^4.5.0",
     "codeceptjs": "^3.7.3",
-    "playwright": "^1.62.1"
+    "playwright": "^1.52.0"
   },
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "@playwright/test": "^1.56.0",
+    "dotenv": "^17.4.2"
   }
 }
